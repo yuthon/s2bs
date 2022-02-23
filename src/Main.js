@@ -34,6 +34,7 @@ import AbilityEffect from './AbilityEffectComponents/AbilityEffect';
 
 import Head from './HeadComponents/Head';
 import Clothes from './ClothesComponents/Clothes';
+// クツ
 import Shoes from './ShoesComponents/Shoes';
 
 import ThreeComponent from './ThreeComponent';
