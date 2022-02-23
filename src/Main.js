@@ -8,19 +8,19 @@ import HeadGearModal from './ModalComponents/HeadGearModal';
 import ClothesGearModal from './ModalComponents/ClothesGearModal';
 import ShoesGearModal from './ModalComponents/ShoesGearModal';
 //MainSlotのモーダル
-import MainSlotModal0 from './ModalComponents/MainSlotModal0';
-import MainSlotModal1 from './ModalComponents/MainSlotModal1';
-import MainSlotModal2 from './ModalComponents/MainSlotModal2';
+import MainSlotModal0 from './SlotComponents/MainSlotModal0';
+import MainSlotModal1 from './SlotComponents/MainSlotModal1';
+import MainSlotModal2 from './SlotComponents/MainSlotModal2';
 //SubSlotのアビリティ選択のモーダル
-import SubSlotModal0 from './ModalComponents/SubSlotModal0';
-import SubSlotModal1 from './ModalComponents/SubSlotModal1';
-import SubSlotModal2 from './ModalComponents/SubSlotModal2';
-import SubSlotModal3 from './ModalComponents/SubSlotModal3';
-import SubSlotModal4 from './ModalComponents/SubSlotModal4';
-import SubSlotModal5 from './ModalComponents/SubSlotModal5';
-import SubSlotModal6 from './ModalComponents/SubSlotModal6';
-import SubSlotModal7 from './ModalComponents/SubSlotModal7';
-import SubSlotModal8 from './ModalComponents/SubSlotModal8';
+import SubSlotModal0 from './SlotComponents/SubSlotModal0';
+import SubSlotModal1 from './SlotComponents/SubSlotModal1';
+import SubSlotModal2 from './SlotComponents/SubSlotModal2';
+import SubSlotModal3 from './SlotComponents/SubSlotModal3';
+import SubSlotModal4 from './SlotComponents/SubSlotModal4';
+import SubSlotModal5 from './SlotComponents/SubSlotModal5';
+import SubSlotModal6 from './SlotComponents/SubSlotModal6';
+import SubSlotModal7 from './SlotComponents/SubSlotModal7';
+import SubSlotModal8 from './SlotComponents/SubSlotModal8';
 //キャラクターの詳細設定モーダル
 import CharacterTypeModal from './ModalComponents/CharacterTypeModal';
 import SkinColorModal from './ModalComponents/SkinColorModal';
