@@ -37,7 +37,7 @@ import Clothes from './ClothesComponents/Clothes';
 // クツ
 import Shoes from './ShoesComponents/Shoes';
 
-// import ThreeComponent from './ThreeComponent';
+import ThreeComponent from './ThreeComponent';
 //初期表示用の画像
 import WakabaIkaT from './images/gear/Clt_FST001.png';
 import Canvas_White from './images/gear/Shs_FST000.png';
@@ -257,7 +257,7 @@ const Main = () => {
           />
         </div>
         <div>
-          {/* <ThreeComponent 
+          <ThreeComponent 
             chosenHeadGear={chosenHeadGear}
             chosenClothesGear={chosenClothesGear}
             chosenShoesGear={chosenShoesGear}
@@ -267,7 +267,7 @@ const Main = () => {
             hairStyle={hairStyle}
             bottoms={bottoms}
             teamColor={teamColor}
-          /> */}
+          />
         </div>
         <div>
           <AbilityEffect
