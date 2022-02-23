@@ -4,8 +4,8 @@ import Weapon from './WeaponComponents/Weapon';
 import WeaponModal from './WeaponComponents/WeaponModal';
 
 //ギア選択のモーダル
-import HeadGearModal from './ModalComponents/HeadGearModal';
-import ClothesGearModal from './ModalComponents/ClothesGearModal';
+import HeadGearModal from './HeadComponents/HeadGearModal';
+import ClothesGearModal from './ClothesComponents/ClothesGearModal';
 import ShoesGearModal from './ShoesComponents/ShoesGearModal';
 //MainSlotのモーダル
 import MainSlotModal0 from './SlotComponents/MainSlotModal0';
