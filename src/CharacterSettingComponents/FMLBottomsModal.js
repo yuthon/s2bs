@@ -35,7 +35,7 @@ const FMLBottomsModal = (props) => {
   };
   
   return (
-    <div className="modal fade" id="FMLBottomsModal" aria-hidden="true" aria-labelledby="FMLBottomsModalToggleLabel" tabindex="-1">
+    <div className="modal fade" id="FMLBottomsModal" aria-hidden="true" aria-labelledby="FMLBottomsModalToggleLabel" tabIndex="-1">
       <div className="modal-dialog">
         <div className="modal-content container">
           <div className="FML-Btm-btn FML-Btm-0" id="FML-Btm-0">  

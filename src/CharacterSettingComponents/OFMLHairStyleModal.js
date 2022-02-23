@@ -25,7 +25,7 @@ const OFMLHairStyleModal = (props) => {
   };
   
   return (
-    <div className="modal fade" id="OFMLHairStyleModal" aria-hidden="true" aria-labelledby="OFMLHairStyleModalLabel" tabindex="-1">  
+    <div className="modal fade" id="OFMLHairStyleModal" aria-hidden="true" aria-labelledby="OFMLHairStyleModalLabel" tabIndex="-1">  
       <div className="modal-dialog">
         <div className="modal-content bg-dark">  
           <div className="OFML-HS-btn OFML-HS-0" id="OFML-HS-0">  

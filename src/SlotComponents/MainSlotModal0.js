@@ -20,7 +20,7 @@ import comeback from '../images/ability/CB.png';
 
 const MainSlotModal0 = (props) => {
   return (
-    <div className="modal fade" id="mainSlotModal0">
+    <div className="modal fade" id="mainSlotModal0" tabIndex="-1" aria-labelledby="MainSlotModal0Label" aria-hidden="true">
       <div className="modal-dialog">
         <div className="modal-content container">
           <div className="ability-list">

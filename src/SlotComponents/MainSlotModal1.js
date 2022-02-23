@@ -21,7 +21,7 @@ import abilityDoubler from '../images/ability/AD.png';
 
 const MainSlotModal1 = (props) => {
   return (
-    <div className="modal fade" id="mainSlotModal1">
+    <div className="modal fade" id="mainSlotModal1" tabIndex="-1" aria-labelledby="MainSlotModal1Label" aria-hidden="true">
       <div className="modal-dialog">  
         <div className="modal-content container">  
           <div className="ability-list">

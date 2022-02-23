@@ -25,7 +25,7 @@ const OMLHairStyleModal = (props) => {
   };
   
   return (
-    <div className="modal fade" id="OMLHairStyleModal" aria-hidden="true" aria-labelledby="OMLHairStyleModalLabel" tabindex="-1">  
+    <div className="modal fade" id="OMLHairStyleModal" aria-hidden="true" aria-labelledby="OMLHairStyleModalLabel" tabIndex="-1">  
       <div className="modal-dialog">
         <div className="modal-content bg-dark">  
           <div className="OML-HS-btn OML-HS-0" id="OML-HS-0">  

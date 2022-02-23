@@ -35,7 +35,7 @@ const MLBottomsModal = (props) => {
   };
   
   return (
-    <div className="modal fade" id="MLBottomsModal" aria-hidden="true" aria-labelledby="MLBottomsModalToggleLabel" tabindex="-1">
+    <div className="modal fade" id="MLBottomsModal" aria-hidden="true" aria-labelledby="MLBottomsModalToggleLabel" tabIndex="-1">
       <div className="modal-dialog">
         <div className="modal-content container">
           <div className="ML-Btm-btn ML-Btm-0" id="ML-Btm-0">

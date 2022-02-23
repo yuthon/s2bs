@@ -554,7 +554,7 @@ const ClothesGearModal = (props) => {
   };
   
   return(
-    <div className="modal fade" id="clothesGearModal" tabindex="-1" aria-labelledby="clothesGearModalLabel" aria-hidden="true">  
+    <div className="modal fade" id="clothesGearModal" tabIndex="-1" aria-labelledby="clothesGearModalLabel" aria-hidden="true">  
       <div className="modal-dialog modal-lg">
         <div className="modal-content clothesGearModalBg">
           <div className="modal-header">
@@ -568,7 +568,7 @@ const ClothesGearModal = (props) => {
               </div>
               <div className="selectbox">  
                 <select className="form-select" aria-label="sort" id="select-box" onClick={()=>{selectBox();}}>
-                    <option value="brand" selected>ブランド</option>
+                    <option value="brand" defaultValue>ブランド</option>
                     <option value="name">名前</option>
                 </select>
               </div>

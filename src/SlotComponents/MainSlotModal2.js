@@ -19,7 +19,7 @@ import dropRoller from '../images/ability/DR.png';
 
 const MainSlotModal2 = (props) => {
   return (
-    <div className="modal fade" id="mainSlotModal2">
+    <div className="modal fade" id="mainSlotModal2" tabIndex="-1" aria-labelledby="MainSlotModal2Label" aria-hidden="true">
       <div className="modal-dialog">  
         <div className="modal-content container">  
           <div className="ability-list">

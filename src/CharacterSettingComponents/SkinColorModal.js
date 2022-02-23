@@ -65,7 +65,7 @@ const SkinColorModal = (props) => {
   );
   
   return (
-    <div className="modal fade" id="skinColorModal">
+    <div className="modal fade" id="skinColorModal" tabIndex="-1" aria-labelledby="SkinColorModalLabel" aria-hidden="true">
       <div className="modal-dialog">
         <div className="modal-content container">  
           <div className="SC-btn SC-0" id="SC-0">  

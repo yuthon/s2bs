@@ -37,7 +37,7 @@ const IMLHairStyleModal = (props) => {
     target.className = "rotate";
   };
   return (
-    <div className="modal fade" id="IMLHairStyleModal" aria-hidden="true" aria-labelledby="IMLHairStyleModalLabel" tabindex="-1">  
+    <div className="modal fade" id="IMLHairStyleModal" aria-hidden="true" aria-labelledby="IMLHairStyleModalLabel" tabIndex="-1">  
       <div className="modal-dialog">
         <div className="modal-content bg-dark">  
           <div className="IML-HS-btn IML-HS-0" id="IML-HS-0">  

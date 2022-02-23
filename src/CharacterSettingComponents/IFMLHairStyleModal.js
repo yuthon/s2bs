@@ -38,7 +38,7 @@ const IFMLHairStyleModal = (props) => {
   };
   
   return (
-    <div className="modal fade" id="IFMLHairStyleModal" aria-hidden="true" aria-labelledby="IFMLHairStyleModalLabel" tabindex="-1">  
+    <div className="modal fade" id="IFMLHairStyleModal" aria-hidden="true" aria-labelledby="IFMLHairStyleModalLabel" tabIndex="-1">  
       <div className="modal-dialog">
         <div className="modal-content bg-dark">  
           <div className="IFML-HS-btn IFML-HS-0" id="IFML-HS-0">  

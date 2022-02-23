@@ -235,6 +235,7 @@ const Model = (props) => {
     }
   }
   
+
   
   return (
       <primitive object={gltf.scene} />
@@ -280,6 +281,7 @@ const ThreeComponent = (props) => {
       </div>
     );
 };
+
 
 
 export default ThreeComponent;

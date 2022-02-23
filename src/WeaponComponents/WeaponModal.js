@@ -421,7 +421,7 @@ const WeaponModal = (props) => {
   
   
   return (
-    <div className="modal fade" id="weaponModal"  tabindex="-1" aria-labelledby="weaponModalLabel" aria-hidden="true">
+    <div className="modal fade" id="weaponModal" tabIndex="-1" aria-labelledby="weaponModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-lg">
         <div className="modal-content wpModalbg text-white bg-secondary">
           <div className="modal-header">
@@ -435,7 +435,7 @@ const WeaponModal = (props) => {
               </div>
               <div className="selectbox">  
                 <select className="form-select" aria-label="sort" id="select-box" onClick={()=>{selectBox();}}>
-                    <option value="main" selected>メインウェポン</option>
+                    <option value="main" defaultValue>メインウェポン</option>
                     <option value="sub">サブウェポン</option>
                     <option value="spe">スペシャルウェポン</option>
                     <option value="name">名前</option>

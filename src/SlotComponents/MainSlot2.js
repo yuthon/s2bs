@@ -1,7 +1,7 @@
 
 const MainSlot2 = (props) => {
     return(
-      <div  ClassName="btn" data-bs-toggle="tooltip" data-bs-placement="top" title="クリックでギアパワーを変更">
+      <div  className="btn" data-bs-toggle="tooltip" data-bs-placement="top" title="クリックでギアパワーを変更">
         <div
           className="ability-icon main-slot slot"
           data-bs-toggle="modal"

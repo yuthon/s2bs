@@ -33,7 +33,7 @@ const CharacterSettingModal = (props) => {
   };
   
   return (
-    <div className="modal fade" id="characterTypeModal" aria-hidden="true" aria-labelledby="characterTypeModalToggleLabel" tabindex="-1">
+    <div className="modal fade" id="characterTypeModal" aria-hidden="true" aria-labelledby="characterTypeModalToggleLabel" tabIndex="-1">
       <div className="modal-dialog">
         <div className="modal-content container">
           <div className="CT-btn IFML" id="IFML">

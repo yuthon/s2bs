@@ -16,7 +16,7 @@ import mpu from '../images/ability/MPU.png';
 
 const SubSlotModal3 = (props) => {
   return (
-    <div className="modal fade" id="subSlotModal3">
+    <div className="modal fade" id="subSlotModal3" tabIndex="-1" aria-labelledby="SubSlotModal3Label" aria-hidden="true">
       <div className="modal-dialog">
         <div className="modal-content container">
           <div className="ability-list">
