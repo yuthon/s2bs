@@ -6,7 +6,7 @@ import WeaponModal from './WeaponComponents/WeaponModal';
 //ギア選択のモーダル
 import HeadGearModal from './ModalComponents/HeadGearModal';
 import ClothesGearModal from './ModalComponents/ClothesGearModal';
-import ShoesGearModal from './ModalComponents/ShoesGearModal';
+import ShoesGearModal from './ShoesComponents/ShoesGearModal';
 //MainSlotのモーダル
 import MainSlotModal0 from './SlotComponents/MainSlotModal0';
 import MainSlotModal1 from './SlotComponents/MainSlotModal1';
@@ -22,14 +22,14 @@ import SubSlotModal6 from './SlotComponents/SubSlotModal6';
 import SubSlotModal7 from './SlotComponents/SubSlotModal7';
 import SubSlotModal8 from './SlotComponents/SubSlotModal8';
 //キャラクターの詳細設定モーダル
-import CharacterTypeModal from './ModalComponents/CharacterTypeModal';
-import SkinColorModal from './ModalComponents/SkinColorModal';
-import IFMLHairStyleModal from './ModalComponents/IFMLHairStyleModal';
-import IMLHairStyleModal from './ModalComponents/IMLHairStyleModal';
-import OFMLHairStyleModal from './ModalComponents/OFMLHairStyleModal';
-import OMLHairStyleModal from './ModalComponents/OMLHairStyleModal';
-import MLBottomsModal from './ModalComponents/MLBottomsModal';
-import FMLBottomsModal from './ModalComponents/FMLBottomsModal';
+import CharacterTypeModal from './CharacterSettingComponents/CharacterTypeModal';
+import SkinColorModal from './CharacterSettingComponents/SkinColorModal';
+import IFMLHairStyleModal from './CharacterSettingComponents/IFMLHairStyleModal';
+import IMLHairStyleModal from './CharacterSettingComponents/IMLHairStyleModal';
+import OFMLHairStyleModal from './CharacterSettingComponents/OFMLHairStyleModal';
+import OMLHairStyleModal from './CharacterSettingComponents/OMLHairStyleModal';
+import MLBottomsModal from './CharacterSettingComponents/MLBottomsModal';
+import FMLBottomsModal from './CharacterSettingComponents/FMLBottomsModal';
 import AbilityEffect from './AbilityEffectComponents/AbilityEffect';
 
 import Head from './HeadComponents/Head';
