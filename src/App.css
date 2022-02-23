@@ -36,3 +36,735 @@
     transform: rotate(360deg);
   }
 }
+
+/**/
+/*ブキ関連*/
+/**/
+.select-index {
+  margin-left: 10px;
+  margin-right: 2px;
+}
+
+.selectbox {
+  margin-left: 2px;
+}
+
+.weapon-icon {
+  width: 150px;
+  height: 182px;
+  border-radius: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fafae2,
+    #fafae2 20px,
+    #e6e7c7 20px,
+    #e6e7c7 40px
+  );
+
+  cursor: pointer;
+}
+
+.weapon-outer {
+  padding: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-weapon {
+  width: 128px;
+  height: 128px;
+}
+
+.sub-sp-bg {
+  width: 150px;
+  height: 54px;
+  background: repeating-linear-gradient(
+    45deg,
+    #dbe826,
+    #dbe826 20px,
+    #c4d412 20px,
+    #c4d412 40px
+  );
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.sub-sp {
+  position: relative;
+  width: 56px;
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 13px;
+}
+
+.img-sub-sp {
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+/*ギアパワーのスイッチ*/
+
+.turned-on,
+.turned-off {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  margin: auto;
+}
+
+.switch-base {
+  /*position: absolute;*/
+  left: 0;
+  top: 0;
+  /*width: 100%;*/
+  /*height: 100%;*/
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  background: #ddba2c;
+  position: relative;
+  display: inline-block;
+  border-radius: 46px;
+  transition: 0.4s;
+  box-sizing: border-box;
+}
+
+.turned-off .switch-base {
+  border-color: #ccc;
+  background: #ccc;
+}
+
+.turned-on #switch-circle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  top: 1px;
+  left: 21px;
+  border-radius: 9px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.turned-off #switch-circle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 1px;
+  left: 1px;
+  border-radius: 9px;
+  transition: 0.2s;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/*アタマ、フク、クツのコンポーネントを縦並びにする*/
+
+/*スロット部分の高さ指定*/
+.slot-row {
+  height: 60px;
+}
+
+/*それぞれのスロットを横並びにする*/
+.slot {
+  float: left;
+}
+
+/*ギアアビリティを表示するときのスタイルをスロット、アイコン共に指定*/
+.ability-icon {
+  /*  z-index: 2 !important;*/
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  background: #000;
+  /*立体感演出のために明るい影をつける*/
+  border: 2px solid #888;
+  border-right: 0px;
+  border-bottom: 0px;
+  /*background-size:100%;*/
+  /*要素のフレームの周囲にシャドウ効果*/
+  box-shadow: 0 0 0 1px #000;
+}
+
+/*メインスロットの大きさを調整*/
+.ability-icon.main-slot {
+  height: 50px;
+  width: 50px;
+}
+
+/*メインスロットの画像の大きさ調整*/
+.main-slot img {
+  height: 50px;
+  width: 50px;
+}
+
+/*サブスロットの大きさ調整*/
+.ability-icon.sub-slot {
+  height: 40px;
+  width: 40px;
+}
+
+.sub-slot img {
+  height: 40px;
+  width: 40px;
+}
+
+.ability img {
+  height: 56px;
+  width: 56px;
+}
+
+/*モーダルの表示中にモーダル以外を操作できないようにする*/
+/*.modal {*/
+/*  z-index: 2;*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  right: 0;*/
+/*  bottom: 0;*/
+/*  left: 0;*/
+/*  background-color: rgba(255, 255, 255, 0.8);*/
+/*  overflow:hidden;*/
+/*}*/
+
+/*モーダルの中身*/
+.modal-inner {
+  position: absolute;
+  top: 8%;
+  right: 0;
+  left: 0;
+  width: 1000px;
+  height: 500px;
+  padding-bottom: 60px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  overflow-y: auto;
+  overflow-y: scroll;
+}
+
+.ability {
+  float: left;
+}
+
+.weapon {
+  float: left;
+}
+
+.modal-close-btn {
+  cursor: pointer;
+  padding: 0px;
+  background: transparent;
+  border-color: transparent;
+}
+
+.modal-close-btn svg {
+  opacity: 0.6;
+}
+
+.modal-close-btn:hover {
+  transition: 0.001s;
+  transform: scale(1.6, 1.6);
+}
+
+/*とじるボタン*/
+.close-btn-svg {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.close-btn-svg:hover {
+  transition-duration: 0.1s;
+  transform: scale(1.05, 1.05);
+}
+
+.close-btn-svg:hover .close-btn-default {
+  fill: none;
+}
+
+.close-btn-svg:hover .close-btn-hover {
+  fill: #d9dc20;
+}
+
+/*とじるボタンのsvg内のテキスト要素*/
+.svg-text-default {
+  font-size: 150px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.svg-text-hover {
+  user-select: none;
+}
+
+.close-btn-svg:hover .svg-text-hover {
+  fill: white;
+  font-size: 190px;
+  font-weight: bold;
+}
+.close-btn-svg:hover .svg-text-default {
+  fill: none;
+}
+
+/*skincolorボタンのスタイル*/
+/*.skincolor-btn {*/
+/*  width: 100px;*/
+/*  height:70px;*/
+/*}*/
+
+/*SCボタン*/
+.SC-btn-svg {
+  cursor: pointer;
+}
+
+.SC-btn-svg:hover,
+#SC-0.selected .SC-btn-svg,
+#SC-1.selected .SC-btn-svg,
+#SC-2.selected .SC-btn-svg,
+#SC-3.selected .SC-btn-svg,
+#SC-4.selected .SC-btn-svg,
+#SC-5.selected .SC-btn-svg,
+#SC-6.selected .SC-btn-svg {
+  transition-duration: 0.1s;
+  transform: scale(1.05, 1.05);
+}
+
+.SC-btn-svg:hover .SC-btn-default {
+  fill: none;
+}
+
+.SC-svg-0:hover .SC-btn-hover,
+.SC-svg-0:active .SC-btn-default,
+#SC-0.selected .SC-btn-svg .SC-btn-hover {
+  fill: #fddfdb;
+}
+
+.SC-svg-1:hover .SC-btn-hover,
+.SC-svg-1:active .SC-btn-default,
+#SC-1.selected .SC-btn-svg .SC-btn-hover {
+  fill: #ffcabb;
+}
+
+.SC-svg-2:hover .SC-btn-hover,
+.SC-svg-2:active .SC-btn-default,
+#SC-2.selected .SC-btn-svg .SC-btn-hover {
+  fill: #ffc29e;
+}
+
+.SC-svg-3:hover .SC-btn-hover,
+.SC-svg-3:active .SC-btn-default,
+#SC-3.selected .SC-btn-svg .SC-btn-hover {
+  fill: #f58d70;
+}
+
+.SC-svg-4:hover .SC-btn-hover,
+.SC-svg-4:active .SC-btn-default,
+#SC-4.selected .SC-btn-svg .SC-btn-hover {
+  fill: #b44f37;
+}
+
+.SC-svg-5:hover .SC-btn-hover,
+.SC-svg-5:active .SC-btn-default,
+#SC-5.selected .SC-btn-svg .SC-btn-hover {
+  fill: #592a20;
+}
+
+.SC-svg-6:hover .SC-btn-hover,
+.SC-svg-6:active .SC-btn-default,
+#SC-6.selected .SC-btn-svg .SC-btn-hover {
+  fill: #331110;
+}
+
+.SC-btn-svg:active .SC-btn-hover {
+  fill: none;
+}
+
+#SC-0.selected .SC-btn-svg .SC-btn-default,
+#SC-1.selected .SC-btn-svg .SC-btn-default,
+#SC-2.selected .SC-btn-svg .SC-btn-default,
+#SC-3.selected .SC-btn-svg .SC-btn-default,
+#SC-4.selected .SC-btn-svg .SC-btn-default,
+#SC-5.selected .SC-btn-svg .SC-btn-default,
+#SC-6.selected .SC-btn-svg .SC-btn-default {
+  fill: none;
+}
+
+/*
+CTボタン
+*/
+/*ボタン内のテキスト*/
+.CT-text-default {
+  font-size: 130px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.CT-text-hover {
+  user-select: none;
+}
+
+.CT-btn-svg:hover .CT-text-hover {
+  fill: white;
+  font-size: 160px;
+  font-weight: bold;
+}
+/*CTボタンのアニメーション*/
+.CT-btn-svg {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.CT-btn-svg:hover {
+  transition: 0.1s;
+  transform: scale(1.05, 1.05);
+}
+
+.CT-btn-svg:hover .CT-btn-default,
+.CT-btn-svg:hover .CT-text-default,
+.CT-btn-svg:active .CT-btn-hover {
+  fill: none;
+}
+
+.CT-btn-svg:hover .CT-btn-hover,
+.CT-btn-svg:active .CT-btn-default,
+.CT-btn-svg:active .CT-btn-default {
+  fill: #d9dc20;
+}
+
+.CT-btn-svg:active .CT-btn-hover {
+  fill: none;
+}
+
+#IFML.selected .CT-btn-svg,
+#IML.selected .CT-btn-svg,
+#OFML.selected .CT-btn-svg,
+#OML.selected .CT-btn-svg {
+  transform: scale(1.05, 1.05);
+}
+
+#IFML.selected .CT-btn-svg .CT-btn-default,
+#IML.selected .CT-btn-svg .CT-btn-default,
+#OFML.selected .CT-btn-svg .CT-btn-default,
+#OML.selected .CT-btn-svg .CT-btn-default {
+  fill: none;
+}
+
+#IFML.selected .CT-btn-svg .CT-btn-hover,
+#IML.selected .CT-btn-svg .CT-btn-hover,
+#OFML.selected .CT-btn-svg .CT-btn-hover,
+#OML.selected .CT-btn-svg .CT-btn-hover {
+  fill: #d9dc20;
+}
+
+#IFML.selected .CT-btn-svg .CT-text-default,
+#IML.selected .CT-btn-svg .CT-text-default,
+#OFML.selected .CT-btn-svg .CT-text-default,
+#OML.selected .CT-btn-svg .CT-text-default {
+  fill: none;
+}
+
+#IFML.selected .CT-btn-svg .CT-text-hover,
+#IML.selected .CT-btn-svg .CT-text-hover,
+#OFML.selected .CT-btn-svg .CT-text-hover,
+#OML.selected .CT-btn-svg .CT-text-hover {
+  fill: white;
+  font-size: 160px;
+  font-weight: bold;
+}
+/*
+HSボタン
+*/
+.HS-btn-svg {
+  cursor: pointer;
+}
+
+.HS-btn-svg:hover {
+  transition: 0.1s;
+  transform: rotate(-15deg) scale(1.1, 1.1);
+}
+
+.IFML-HS-btn .HS-btn-svg:hover .HS-btn-hair {
+  fill: #0cd900;
+}
+
+.IFML-HS-3 .HS-btn-svg:hover .HS-btn-geso-0,
+#IFML-HS-3.rotate .HS-btn-svg:hover .HS-btn-geso-0,
+#IFML-HS-3.selected .HS-btn-svg .HS-btn-geso-0,
+.IFML-HS-4 .HS-btn-svg:hover .HS-btn-geso,
+#IFML-HS-4.rotate .HS-btn-svg:hover .HS-btn-geso,
+#IFML-HS-4.selected .HS-btn-svg .HS-btn-geso {
+  fill: #cff4db;
+}
+
+.IFML-HS-3 .HS-btn-svg:hover .HS-btn-geso-1,
+#IFML-HS-3.rotate .HS-btn-svg:hover .HS-btn-geso-1,
+#IFML-HS-3.selected .HS-btn-svg .HS-btn-geso-1 {
+  fill: #63e398;
+}
+
+.IFML-HS-4 .HS-btn-svg:hover .HS-btn-hairband,
+#IFML-HS-4.rotate .HS-btn-svg:hover .HS-btn-hairband,
+#IFML-HS-4.selected .HS-btn-svg .HS-btn-hairband {
+  fill: #66e569;
+}
+
+#IFML-HS-0.rotate .HS-btn-svg:hover,
+#IFML-HS-1.rotate .HS-btn-svg:hover,
+#IFML-HS-2.rotate .HS-btn-svg:hover,
+#IFML-HS-3.rotate .HS-btn-svg:hover,
+#IFML-HS-4.rotate .HS-btn-svg:hover,
+#IFML-HS-5.rotate .HS-btn-svg:hover {
+  transition: 0.03s;
+  transform: rotate(-15deg);
+}
+
+#IFML-HS-0.rotate .HS-btn-svg:hover .HS-btn-hair,
+#IFML-HS-0.selected .HS-btn-svg .HS-btn-hair,
+#IFML-HS-1.rotate .HS-btn-svg:hover .HS-btn-hair,
+#IFML-HS-1.selected .HS-btn-svg .HS-btn-hair,
+#IFML-HS-2.rotate .HS-btn-svg:hover .HS-btn-hair,
+#IFML-HS-2.selected .HS-btn-svg .HS-btn-hair,
+#IFML-HS-3.rotate .HS-btn-svg:hover .HS-btn-hair,
+#IFML-HS-3.selected .HS-btn-svg .HS-btn-hair,
+#IFML-HS-4.rotate .HS-btn-svg:hover .HS-btn-hair,
+#IFML-HS-4.selected .HS-btn-svg .HS-btn-hair,
+#IFML-HS-5.rotate .HS-btn-svg:hover .HS-btn-hair,
+#IFML-HS-5.selected .HS-btn-svg .HS-btn-hair {
+  fill: #ffb23d;
+}
+
+#IFML-HS-0.selected .HS-btn-svg,
+#IFML-HS-1.selected .HS-btn-svg,
+#IFML-HS-2.selected .HS-btn-svg,
+#IFML-HS-3.selected .HS-btn-svg,
+#IFML-HS-4.selected .HS-btn-svg,
+#IFML-HS-5.selected .HS-btn-svg {
+  transform: rotate(-15deg) scale(1.1, 1.1);
+}
+
+.OFML-HS-btn .HS-btn-svg:hover .HS-btn-hair {
+  fill: #ffb23d;
+}
+
+.OFML-HS-0 .HS-btn-svg:hover .HS-btn-geso,
+#OFML-HS-0.rotate .HS-btn-svg:hover .HS-btn-geso,
+#OFML-HS-0.selected .HS-btn-svg .HS-btn-geso,
+.OFML-HS-0 .HS-btn-svg:hover .HS-btn-suc,
+#OFML-HS-0.rotate .HS-btn-svg:hover .HS-btn-suc,
+#OFML-HS-0.selected .HS-btn-svg .HS-btn-suc,
+.OFML-HS-1 .HS-btn-svg:hover .HS-btn-geso,
+#OFML-HS-1.rotate .HS-btn-svg:hover .HS-btn-geso,
+#OFML-HS-1.selected .HS-btn-svg .HS-btn-geso,
+.OFML-HS-1 .HS-btn-svg:hover .HS-btn-suc,
+#OFML-HS-1.rotate .HS-btn-svg:hover .HS-btn-suc,
+#OFML-HS-1.selected .HS-btn-svg .HS-btn-suc {
+  fill: #cff4db;
+}
+
+.OFML-HS-1 .HS-btn-svg:hover .HS-btn-hairband,
+#OFML-HS-1.rotate .HS-btn-svg:hover .HS-btn-hairband,
+#OFML-HS-1.selected .HS-btn-svg .HS-btn-hairband {
+  fill: #66e569;
+}
+
+#OFML-HS-0.rotate .HS-btn-svg:hover,
+#OFML-HS-1.rotate .HS-btn-svg:hover {
+  transition: 0.03s;
+  transform: rotate(-15deg);
+}
+
+#OFML-HS-0.rotate .HS-btn-svg:hover .HS-btn-hair,
+#OFML-HS-0.selected .HS-btn-svg .HS-btn-hair,
+#OFML-HS-1.rotate .HS-btn-svg:hover .HS-btn-hair,
+#OFML-HS-1.selected .HS-btn-svg .HS-btn-hair {
+  fill: #ffb23d;
+}
+
+#OFML-HS-0.selected .HS-btn-svg,
+#OFML-HS-1.selected .HS-btn-svg {
+  transform: rotate(-15deg) scale(1.1, 1.1);
+}
+
+.IML-HS-btn .HS-btn-svg:hover .HS-btn-hair {
+  fill: #ff00b3;
+}
+
+.IML-HS-2 .HS-btn-svg:hover .HS-btn-geso,
+#IML-HS-2.rotate .HS-btn-svg:hover .HS-btn-geso,
+#IML-HS-2.selected .HS-btn-svg .HS-btn-geso,
+.IML-HS-3 .HS-btn-svg:hover .HS-btn-geso,
+#IML-HS-3.rotate .HS-btn-svg:hover .HS-btn-geso,
+#IML-HS-3.selected .HS-btn-svg .HS-btn-geso,
+.IML-HS-4 .HS-btn-svg:hover .HS-btn-geso,
+#IML-HS-4.rotate .HS-btn-svg:hover .HS-btn-geso,
+#IML-HS-4.selected .HS-btn-svg .HS-btn-geso,
+.IML-HS-5 .HS-btn-svg:hover .HS-btn-geso,
+#IML-HS-5.rotate .HS-btn-svg:hover .HS-btn-geso,
+#IML-HS-5.selected .HS-btn-svg .HS-btn-geso {
+  fill: #fecddd;
+}
+
+#IML-HS-0.rotate .HS-btn-svg:hover,
+#IML-HS-1.rotate .HS-btn-svg:hover,
+#IML-HS-2.rotate .HS-btn-svg:hover,
+#IML-HS-3.rotate .HS-btn-svg:hover,
+#IML-HS-4.rotate .HS-btn-svg:hover,
+#IML-HS-5.rotate .HS-btn-svg:hover {
+  transition: 0.03s;
+  transform: rotate(-15deg);
+}
+
+#IML-HS-0.rotate .HS-btn-svg:hover .HS-btn-hair,
+#IML-HS-0.selected .HS-btn-svg .HS-btn-hair,
+#IML-HS-1.rotate .HS-btn-svg:hover .HS-btn-hair,
+#IML-HS-1.selected .HS-btn-svg .HS-btn-hair,
+#IML-HS-2.rotate .HS-btn-svg:hover .HS-btn-hair,
+#IML-HS-2.selected .HS-btn-svg .HS-btn-hair,
+#IML-HS-3.rotate .HS-btn-svg:hover .HS-btn-hair,
+#IML-HS-3.selected .HS-btn-svg .HS-btn-hair,
+#IML-HS-4.rotate .HS-btn-svg:hover .HS-btn-hair,
+#IML-HS-4.selected .HS-btn-svg .HS-btn-hair,
+#IML-HS-5.rotate .HS-btn-svg:hover .HS-btn-hair,
+#IML-HS-5.selected .HS-btn-svg .HS-btn-hair {
+  fill: #ff00b3;
+}
+
+#IML-HS-0.selected .HS-btn-svg,
+#IML-HS-1.selected .HS-btn-svg,
+#IML-HS-2.selected .HS-btn-svg,
+#IML-HS-3.selected .HS-btn-svg,
+#IML-HS-4.selected .HS-btn-svg,
+#IML-HS-5.selected .HS-btn-svg {
+  transform: rotate(-15deg) scale(1.1, 1.1);
+}
+
+#IML-HS-4.IML-HS-btn .HS-btn-svg:hover .HS-btn-hair-1,
+#IML-HS-4.rotate .HS-btn-svg:hover .HS-btn-hair-1,
+#IML-HS-4.selected .HS-btn-svg .HS-btn-hair-1 {
+  fill: #fd48ba;
+}
+
+.OML-HS-btn .HS-btn-svg:hover .HS-btn-hair {
+  fill: #ff00b3;
+}
+
+.OML-HS-0 .HS-btn-svg:hover .HS-btn-suc,
+#OML-HS-0.rotate .HS-btn-svg:hover .HS-btn-suc,
+#OML-HS-0.selected .HS-btn-svg .HS-btn-suc {
+  fill: #fecddd;
+}
+
+.OML-HS-0 .HS-btn-svg:hover .HS-btn-geso,
+#OML-HS-0.rotate .HS-btn-svg:hover .HS-btn-geso,
+#OML-HS-0.selected .HS-btn-svg .HS-btn-geso {
+  fill: #ffa1d2;
+}
+
+#OML-HS-0.rotate .HS-btn-svg:hover,
+#OML-HS-1.rotate .HS-btn-svg:hover {
+  transition: 0.03s;
+  transform: rotate(-15deg);
+}
+
+#OML-HS-0.rotate .HS-btn-svg:hover .HS-btn-hair,
+#OML-HS-0.selected .HS-btn-svg .HS-btn-hair,
+#OML-HS-1.rotate .HS-btn-svg:hover .HS-btn-hair,
+#OML-HS-1.selected .HS-btn-svg .HS-btn-hair {
+  fill: #ff00b3;
+}
+
+#OML-HS-0.selected .HS-btn-svg,
+#OML-HS-1.selected .HS-btn-svg {
+  transform: rotate(-15deg) scale(1.1, 1.1);
+}
+
+/*
+Btmボタン
+*/
+.Btm-btn-svg {
+  cursor: pointer;
+}
+
+.Btm-btn-svg:hover {
+  transition: 0.1s;
+  transform: rotate(-15deg) scale(1.1, 1.1);
+}
+
+.FML-Btm-btn .Btm-btn-svg:hover .Btm-btn-color {
+  fill: #0cd900;
+}
+
+#FML-Btm-0.rotate .Btm-btn-svg:hover,
+#FML-Btm-1.rotate .Btm-btn-svg:hover,
+#FML-Btm-2.rotate .Btm-btn-svg:hover,
+#FML-Btm-3.rotate .Btm-btn-svg:hover,
+#FML-Btm-4.rotate .Btm-btn-svg:hover {
+  transition: 0.03s;
+  transform: rotate(-15deg);
+}
+
+#FML-Btm-0.rotate .Btm-btn-svg:hover .Btm-btn-color,
+#FML-Btm-0.selected .Btm-btn-svg .Btm-btn-color,
+#FML-Btm-1.rotate .Btm-btn-svg:hover .Btm-btn-color,
+#FML-Btm-1.selected .Btm-btn-svg .Btm-btn-color,
+#FML-Btm-2.rotate .Btm-btn-svg:hover .Btm-btn-color,
+#FML-Btm-2.selected .Btm-btn-svg .Btm-btn-color,
+#FML-Btm-3.rotate .Btm-btn-svg:hover .Btm-btn-color,
+#FML-Btm-3.selected .Btm-btn-svg .Btm-btn-color,
+#FML-Btm-4.rotate .Btm-btn-svg:hover .Btm-btn-color,
+#FML-Btm-4.selected .Btm-btn-svg .Btm-btn-color {
+  fill: #0cd900;
+}
+
+#FML-Btm-0.selected .Btm-btn-svg,
+#FML-Btm-1.selected .Btm-btn-svg,
+#FML-Btm-2.selected .Btm-btn-svg,
+#FML-Btm-3.selected .Btm-btn-svg,
+#FML-Btm-4.selected .Btm-btn-svg {
+  transform: rotate(-15deg) scale(1.1, 1.1);
+}
+
+.ML-Btm-btn .Btm-btn-svg:hover .Btm-btn-color {
+  fill: #ff00b3;
+}
+
+#ML-Btm-0.rotate .Btm-btn-svg:hover,
+#ML-Btm-1.rotate .Btm-btn-svg:hover,
+#ML-Btm-2.rotate .Btm-btn-svg:hover,
+#ML-Btm-3.rotate .Btm-btn-svg:hover,
+#ML-Btm-4.rotate .Btm-btn-svg:hover {
+  transition: 0.03s;
+  transform: rotate(-15deg);
+}
+
+#ML-Btm-0.rotate .Btm-btn-svg:hover .Btm-btn-color,
+#ML-Btm-0.selected .Btm-btn-svg .Btm-btn-color,
+#ML-Btm-1.rotate .Btm-btn-svg:hover .Btm-btn-color,
+#ML-Btm-1.selected .Btm-btn-svg .Btm-btn-color,
+#ML-Btm-2.rotate .Btm-btn-svg:hover .Btm-btn-color,
+#ML-Btm-2.selected .Btm-btn-svg .Btm-btn-color,
+#ML-Btm-3.rotate .Btm-btn-svg:hover .Btm-btn-color,
+#ML-Btm-3.selected .Btm-btn-svg .Btm-btn-color,
+#ML-Btm-4.rotate .Btm-btn-svg:hover .Btm-btn-color,
+#ML-Btm-4.selected .Btm-btn-svg .Btm-btn-color {
+  fill: #ff00b3;
+}
+
+#ML-Btm-0.selected .Btm-btn-svg,
+#ML-Btm-1.selected .Btm-btn-svg,
+#ML-Btm-2.selected .Btm-btn-svg,
+#ML-Btm-3.selected .Btm-btn-svg,
+#ML-Btm-4.selected .Btm-btn-svg {
+  transform: rotate(-15deg) scale(1.1, 1.1);
+}
+
+/*AEのスタイル*/
+.AE-container {
+  height: 600px;
+  width: 600px;
+}
+
+.ability-effect {
+}
