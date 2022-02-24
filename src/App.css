@@ -193,22 +193,9 @@
   float: left;
 }
 
-/* ツールチップとモーダルのtoggleを1つのdiv要素にまとめられないため
-  tooltip表示用にスロットボタンに同じ大きさの要素を被せる
-*/
-/* .btn-main-slot {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-
-  cursor: pointer;
-} */
-
 /*ギアアビリティを表示するときのスタイルをスロット、アイコン共に指定*/
 .ability-icon {
   border-radius: 50%;
-  /* width: 56px;
-  height: 56px; */
   background: #000;
   /*立体感演出のために明るい影をつける*/
   border: 2px solid #888;
@@ -220,71 +207,58 @@
 }
 
 /*メインスロットの大きさを調整*/
-.ability-icon.main-slot {
+.main-slot {
   height: 50px;
   width: 50px;
   position: relative;
 }
 
-.slot-tooltip {
+/* メインスロットのsvgの位置調整 */
+.mainslot-tooltip {
   position: absolute;
   z-index: 5;
   top: -6px;
   left: -6px;
 }
 
-/*メインスロットの画像の大きさ調整*/
-.main-slot .slot-img {
-  height: 50px;
-  width: 50px;
+/*メインスロットの画像の大きさと位置調整*/
+.mainslot-img {
+  height: 45px;
+  width: 45px;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 1px;
+  left: 1px;
   z-index: 4;
 }
 
-/*サブスロットの大きさ調整*/
-.ability-icon.sub-slot {
-  height: 40px;
-  width: 40px;
+/* サブスロットのsvgの位置調整 */
+.subslot-tooltip {
+  position: absolute;
+  z-index: 5;
+  top: -6px;
+  left: -6px;
 }
 
-.sub-slot img {
+/*サブスロットの大きさ調整*/
+.sub-slot {
   height: 40px;
   width: 40px;
+  position: relative;
+}
+
+/*サブスロットの画像の大きさと位置調整*/
+.subslot-img {
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  top: 0px;
+  left: 1px;
+  z-index: 4;
 }
 
 .ability img {
   height: 56px;
   width: 56px;
-}
-
-/*モーダルの表示中にモーダル以外を操作できないようにする*/
-/*.modal {*/
-/*  z-index: 2;*/
-/*  position: fixed;*/
-/*  top: 0;*/
-/*  right: 0;*/
-/*  bottom: 0;*/
-/*  left: 0;*/
-/*  background-color: rgba(255, 255, 255, 0.8);*/
-/*  overflow:hidden;*/
-/*}*/
-
-/*モーダルの中身*/
-.modal-inner {
-  position: absolute;
-  top: 8%;
-  right: 0;
-  left: 0;
-  width: 1000px;
-  height: 500px;
-  padding-bottom: 60px;
-  margin: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 8px;
-  overflow-y: auto;
-  overflow-y: scroll;
 }
 
 .ability {

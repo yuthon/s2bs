@@ -108,98 +108,100 @@ const Main = () => {
             weaponStatus={weaponStatus}
           />
         </div>
-        <div>
-          <Head
-            //ギアモーダルからStateを経由して受け取った画像のパスをpropsで渡す
-            passHeadGearImagePath={headImagePath}
-            //SubSlotModal1から受け取ったアビリティの画像のパスを渡す
-            passSubAbilityImagePath0={subAbilityImagePath0}
-            //2,3についても同様
-            passSubAbilityImagePath1={subAbilityImagePath1}
-            passSubAbilityImagePath2={subAbilityImagePath2}
-            //メインスロットも同様
-            passMainAbilityImagePath={mainAbilityImagePath0}
-          />
-          <MainSlotModal0 
-            passImagePath={passMainAbilityImagePath0}
-            passAbilityName={passMainAbilityName0}
-          />
-          <HeadGearModal 
-            //モーダルで選択されたギアの名前を受け取る
-            passChosenGear = {passChosenHeadGear}
-            //ギア画像のパスを受け取る
-            passImagePath = {passHeadImagePath}
-          />
-          <SubSlotModal0
-            passAbilityName={passSubAbilityName0}
-            passImagePath={passSubAbilityImagePath0}
-          />
-          <SubSlotModal1
-            passAbilityName={passSubAbilityName1}
-            passImagePath={passSubAbilityImagePath1}
-          />
-          <SubSlotModal2
-            passAbilityName={passSubAbilityName2}
-            passImagePath={passSubAbilityImagePath2}
-          />
-        </div>
-        <div>
-          <Clothes 
-            passClothesGearImagePath={clothesImagePath}
-            passSubAbilityImagePath3={subAbilityImagePath3}
-            passSubAbilityImagePath4={subAbilityImagePath4}
-            passSubAbilityImagePath5={subAbilityImagePath5}
-            passMainAbilityImagePath={mainAbilityImagePath1}
-          />
-          <ClothesGearModal 
-            passChosenGear = {passChosenClothesGear}
-            passImagePath = {passClothesImagePath}
-          />
-          <MainSlotModal1
-            passImagePath={passMainAbilityImagePath1}
-            passAbilityName={passMainAbilityName1}
-          />
-          <SubSlotModal3
-            passAbilityName={passSubAbilityName3}
-            passImagePath={passSubAbilityImagePath3}
-          />
-          <SubSlotModal4
-            passAbilityName={passSubAbilityName4}
-            passImagePath={passSubAbilityImagePath4}
-          />
-          <SubSlotModal5
-            passAbilityName={passSubAbilityName5}
-            passImagePath={passSubAbilityImagePath5}
-          />
-        </div>
-        <div>
-          <Shoes 
-            passShoesGearImagePath={shoesImagePath}
-            passSubAbilityImagePath6={subAbilityImagePath6}
-            passSubAbilityImagePath7={subAbilityImagePath7}
-            passSubAbilityImagePath8={subAbilityImagePath8}
-            passMainAbilityImagePath={mainAbilityImagePath2}
-          />
-          <ShoesGearModal 
-            passChosenGear = {passChosenShoesGear}
-            passImagePath = {passShoesImagePath}
-          />
-          <MainSlotModal2
-            passImagePath={passMainAbilityImagePath2}
-            passAbilityName={passMainAbilityName2}
-          />
-          <SubSlotModal6
-            passAbilityName={passSubAbilityName6}
-            passImagePath={passSubAbilityImagePath6}
-          />
-          <SubSlotModal7
-            passAbilityName={passSubAbilityName7}
-            passImagePath={passSubAbilityImagePath7}
-          />
-          <SubSlotModal8
-            passAbilityName={passSubAbilityName8}
-            passImagePath={passSubAbilityImagePath8}
-          />
+        <div className="gear-components container ">  
+          <div>
+            <Head
+              //ギアモーダルからStateを経由して受け取った画像のパスをpropsで渡す
+              passHeadGearImagePath={headImagePath}
+              //SubSlotModal1から受け取ったアビリティの画像のパスを渡す
+              passSubAbilityImagePath0={subAbilityImagePath0}
+              //2,3についても同様
+              passSubAbilityImagePath1={subAbilityImagePath1}
+              passSubAbilityImagePath2={subAbilityImagePath2}
+              //メインスロットも同様
+              passMainAbilityImagePath={mainAbilityImagePath0}
+            />
+            <MainSlotModal0 
+              passImagePath={passMainAbilityImagePath0}
+              passAbilityName={passMainAbilityName0}
+            />
+            <HeadGearModal 
+              //モーダルで選択されたギアの名前を受け取る
+              passChosenGear = {passChosenHeadGear}
+              //ギア画像のパスを受け取る
+              passImagePath = {passHeadImagePath}
+            />
+            <SubSlotModal0
+              passAbilityName={passSubAbilityName0}
+              passImagePath={passSubAbilityImagePath0}
+            />
+            <SubSlotModal1
+              passAbilityName={passSubAbilityName1}
+              passImagePath={passSubAbilityImagePath1}
+            />
+            <SubSlotModal2
+              passAbilityName={passSubAbilityName2}
+              passImagePath={passSubAbilityImagePath2}
+            />
+          </div>
+          <div>
+            <Clothes 
+              passClothesGearImagePath={clothesImagePath}
+              passSubAbilityImagePath3={subAbilityImagePath3}
+              passSubAbilityImagePath4={subAbilityImagePath4}
+              passSubAbilityImagePath5={subAbilityImagePath5}
+              passMainAbilityImagePath={mainAbilityImagePath1}
+            />
+            <ClothesGearModal 
+              passChosenGear = {passChosenClothesGear}
+              passImagePath = {passClothesImagePath}
+            />
+            <MainSlotModal1
+              passImagePath={passMainAbilityImagePath1}
+              passAbilityName={passMainAbilityName1}
+            />
+            <SubSlotModal3
+              passAbilityName={passSubAbilityName3}
+              passImagePath={passSubAbilityImagePath3}
+            />
+            <SubSlotModal4
+              passAbilityName={passSubAbilityName4}
+              passImagePath={passSubAbilityImagePath4}
+            />
+            <SubSlotModal5
+              passAbilityName={passSubAbilityName5}
+              passImagePath={passSubAbilityImagePath5}
+            />
+          </div>
+          <div>
+            <Shoes 
+              passShoesGearImagePath={shoesImagePath}
+              passSubAbilityImagePath6={subAbilityImagePath6}
+              passSubAbilityImagePath7={subAbilityImagePath7}
+              passSubAbilityImagePath8={subAbilityImagePath8}
+              passMainAbilityImagePath={mainAbilityImagePath2}
+            />
+            <ShoesGearModal 
+              passChosenGear = {passChosenShoesGear}
+              passImagePath = {passShoesImagePath}
+            />
+            <MainSlotModal2
+              passImagePath={passMainAbilityImagePath2}
+              passAbilityName={passMainAbilityName2}
+            />
+            <SubSlotModal6
+              passAbilityName={passSubAbilityName6}
+              passImagePath={passSubAbilityImagePath6}
+            />
+            <SubSlotModal7
+              passAbilityName={passSubAbilityName7}
+              passImagePath={passSubAbilityImagePath7}
+            />
+            <SubSlotModal8
+              passAbilityName={passSubAbilityName8}
+              passImagePath={passSubAbilityImagePath8}
+            />
+          </div>
         </div>
         <div>
           <button type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
