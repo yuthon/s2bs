@@ -37,6 +37,28 @@
   }
 }
 
+@font-face {
+  font-family: 'splType01';
+  src: url(./Splatfont.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'splType02';
+  src: url(./Splatfont2.woff) format('woff');
+}
+
+.tooltip {
+  font-family: splType02;
+}
+
+.font-type1 {
+  font-family: splType01;
+}
+
+.font-type2 {
+  font-family: splType02;
+}
+
 /**/
 /*ブキ関連*/
 /**/

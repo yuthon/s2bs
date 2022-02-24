@@ -24,3 +24,9 @@ yarn-error.log*
 
 #glbはファイルサイズが大きいので無視
 *.glb
+
+#otf拡張子を無視
+*.otf
+
+#.woff拡張子を無視
+*.woff

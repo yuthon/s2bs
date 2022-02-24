@@ -7,7 +7,7 @@ import SubSlot5 from '../SlotComponents/SubSlot5';
 const Clothes = (props) => {
   return(
     <div className="ability-wrapper clothes">
-      <div className="row cardheader">
+      <div className="font-type1">
         <h1>フク</h1>
       </div>
       <ClothesGear

@@ -8,12 +8,12 @@ const Head = (props) => {
   return(
     <div className="">
       <div className="">
-        <div className="">
+        <div className="font-type1">
           <h1>アタマ</h1>
         </div>
         <div className="">
           <div className="">
-            <div className="gear-wrapper">  
+            <div className="">  
               <HeadGear 
                 passImagePath={props.passHeadGearImagePath}
               />
