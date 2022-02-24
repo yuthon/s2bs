@@ -6,30 +6,34 @@ import SubSlot8 from '../SlotComponents/SubSlot8';
 
 const Shoes = (props) => {
   return(
-    <div className="ability-wrapper shoes">
-        <div className="font-type1">
-          <h1>クツ</h1>
+    <div className="shoesgear-card">
+      <div className="container px-0">
+        <div className="gear-header"> 
+          <div className="font-type1 text-white">
+            <span className="h1 my-0">クツ</span>
+          </div>
         </div>
-      <ShoesGear
-        passImagePath={props.passShoesGearImagePath}
-      />
-      <div className="slot-row">
-        <MainSlot2
-          controlModal={props.passControlMainSlotModal}
-          imagePath={props.passMainAbilityImagePath}
+        <ShoesGear
+          passImagePath={props.passShoesGearImagePath}
         />
-        <SubSlot6
-          controlModal={props.passControlSubSlotModal6}
-          imagePath={props.passSubAbilityImagePath6}
-        />
-        <SubSlot7
-          controlModal={props.passControlSubSlotModal7}
-          imagePath={props.passSubAbilityImagePath7}
-        />
-        <SubSlot8
-          controlModal={props.passControlSubSlotModal8}
-          imagePath={props.passSubAbilityImagePath8}
-        />
+        <div className="slot-row">
+          <MainSlot2
+            controlModal={props.passControlMainSlotModal}
+            imagePath={props.passMainAbilityImagePath}
+          />
+          <SubSlot6
+            controlModal={props.passControlSubSlotModal6}
+            imagePath={props.passSubAbilityImagePath6}
+          />
+          <SubSlot7
+            controlModal={props.passControlSubSlotModal7}
+            imagePath={props.passSubAbilityImagePath7}
+          />
+          <SubSlot8
+            controlModal={props.passControlSubSlotModal8}
+            imagePath={props.passSubAbilityImagePath8}
+          />
+        </div>
       </div>
     </div>
   );

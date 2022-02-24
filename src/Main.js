@@ -99,7 +99,8 @@ const Main = () => {
   const [teamColor, passTeamColor] = useState("ffb23d");
   
     return(
-      <div>
+      <div className="container">
+        
         <div>
           <WeaponModal 
             weaponStatus={passWeaponStatus}
@@ -108,7 +109,8 @@ const Main = () => {
             weaponStatus={weaponStatus}
           />
         </div>
-        <div className="gear-components container ">  
+        <div className="row">
+        <div className="gear-components container col-3">  
           <div>
             <Head
               //ギアモーダルからStateを経由して受け取った画像のパスをpropsで渡す
@@ -203,8 +205,9 @@ const Main = () => {
             />
           </div>
         </div>
+        <div className="col-4">
         <div>
-          <button type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
+          <button type="button" className="btn btn-dark font-type1" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
             キャラクターの設定
           </button>
           <CharacterTypeModal
@@ -234,7 +237,7 @@ const Main = () => {
             passBottoms={passBottoms}
           />
         </div>
-        <div>
+        <div className="">
           <ThreeComponent 
             chosenHeadGear={chosenHeadGear}
             chosenClothesGear={chosenClothesGear}
@@ -247,7 +250,8 @@ const Main = () => {
             teamColor={teamColor}
           />
         </div>
-        <div>
+        </div>
+        <div className="col-5 font-type2">
           <AbilityEffect
             weaponStatus={weaponStatus}
             passMainAbilityName0={mainAbilityName0}
@@ -263,6 +267,7 @@ const Main = () => {
             passSubAbilityName7={subAbilityName7}
             passSubAbilityName8={subAbilityName8}
           />
+        </div>
         </div>
       </div>  
     );

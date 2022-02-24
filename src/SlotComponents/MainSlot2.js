@@ -1,8 +1,6 @@
 
 const MainSlot2 = (props) => {
     return(
-      <div className="">
-          
         <div
           className="ability-icon main-slot slot"
           data-bs-toggle="modal"
@@ -17,7 +15,6 @@ const MainSlot2 = (props) => {
           </div>
           <img className="mainslot-img" src={props.imagePath} alt=""/>
         </div>
-      </div>
     );
   };
 

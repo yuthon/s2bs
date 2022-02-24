@@ -2,7 +2,7 @@
 const SubSlot4 = (props) => {
   
   return(
-    <div>
+    <div className="subslot-mid">
       <div
         className="ability-icon sub-slot slot"
         data-bs-toggle="modal"
