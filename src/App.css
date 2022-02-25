@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   /* background-color: #f0f0e0; */
+  position: relative;
 }
 
 .App-logo {
@@ -48,6 +49,14 @@
   src: url(./Splatfont2.woff) format('woff');
 }
 
+/* 3dモデルの表示領域 */
+
+.main {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
 .tooltip {
   font-family: splType02;
 }
@@ -63,6 +72,8 @@
 /*  */
 /* ギア関連  */
 /*  */
+
+/* アタマ部分 */
 .headgear-card {
   height: 250px;
   width: 210px;
@@ -74,8 +85,11 @@
     #f0624a 20px,
     #f0624a 40px
   );
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
+/* フク部分 */
 .clothesgear-card {
   height: 250px;
   width: 210px;
@@ -87,8 +101,11 @@
     #06be8a 20px,
     #06be8a 40px
   );
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
+/* クツ部分 */
 .shoesgear-card {
   height: 250px;
   width: 210px;
@@ -100,6 +117,8 @@
     #d25012 20px,
     #d25012 40px
   );
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .gear-header {
@@ -163,7 +182,6 @@
   border-bottom: 0px;
   /*要素のフレームの周囲にシャドウ効果*/
   box-shadow: 0 0 0 1px #000;
-  position: ;
 }
 
 /*メインスロットの大きさを調整*/

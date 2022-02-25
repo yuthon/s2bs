@@ -110,48 +110,8 @@ const Main = () => {
   const [teamColor, passTeamColor] = useState("ffb23d");
   
   return(
-    <div>
-      <div style={{ height: '100vh', width: '100vw' }}>
-        <Canvas
-          style={{ background: '#f0f0e0' }}
-          camera={{ position: [0, 11, 20] }}
-        >
-          <ambientLight
-            color={0xffffff}
-            intensity={0.8} />
-          <directionalLight
-            color={0xffffff}
-            intensity={0.6} />
-          <pointLight
-            position={[0, 11, 20]}
-            intensity={0.7} />
-          <pointLight
-            position={[0, 11, -20]}
-            intensity={0.7} />
-          <Orbit />
-          <axesHelper args={[5]} />
-          <Suspense fallback={null}>
-            <Model
-              headGear={chosenHeadGear}
-              clothesGear={chosenClothesGear}
-              shoesGear={chosenShoesGear}
-              CT={characterType}
-              skinColor={skinColor}
-              eyeColor={eyeColor}
-              hairStyle={hairStyle}
-              bottoms={bottoms}
-              teamColor={teamColor} />
-          </Suspense>
-        </Canvas>
-        <div className="container">
-          <div>
-            <WeaponModal
-              weaponStatus={passWeaponStatus} />
-            <Weapon
-              weaponStatus={weaponStatus} />
-          </div>
-        <div className="row">
-          <div className="gear-components container col-3">
+    <div className="container">
+      <div className="gear-components">
             <div>
               <Head
                 //ギアモーダルからStateを経由して受け取った画像のパスをpropsで渡す
@@ -228,7 +188,41 @@ const Main = () => {
                 passImagePath={passSubAbilityImagePath8} />
             </div>
           </div>
-          <div className="col-4">
+      <div style={{ height: '1000px', width: '500px' }}>
+        <Canvas
+          style={{ background: '#f0f0e0' }}
+          camera={{ position: [0, 11, 20] }}
+        >
+          <ambientLight
+            color={0xffffff}
+            intensity={0.8} />
+          <directionalLight
+            color={0xffffff}
+            intensity={0.6} />
+          <pointLight
+            position={[0, 11, 20]}
+            intensity={0.7} />
+          <pointLight
+            position={[0, 11, -20]}
+            intensity={0.7} />
+          <Orbit />
+          <axesHelper args={[5]} />
+          <Suspense fallback={null}>
+            <Model
+              headGear={chosenHeadGear}
+              clothesGear={chosenClothesGear}
+              shoesGear={chosenShoesGear}
+              CT={characterType}
+              skinColor={skinColor}
+              eyeColor={eyeColor}
+              hairStyle={hairStyle}
+              bottoms={bottoms}
+              teamColor={teamColor} />
+          </Suspense>
+        </Canvas>
+          
+          
+          <div className="">
             <button type="button" className="btn btn-dark font-type1" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
               キャラクターの設定
             </button>
@@ -251,7 +245,13 @@ const Main = () => {
             <FMLBottomsModal
               passBottoms={passBottoms} />
           </div>
-          <div className="col-5 font-type2">
+          <div className="font-type2">
+            <div>
+              <WeaponModal
+                weaponStatus={passWeaponStatus} />
+              <Weapon
+                weaponStatus={weaponStatus} />
+            </div>
             <AbilityEffect
               weaponStatus={weaponStatus}
               passMainAbilityName0={mainAbilityName0}
@@ -267,8 +267,6 @@ const Main = () => {
               passSubAbilityName7={subAbilityName7}
               passSubAbilityName8={subAbilityName8} />
           </div>
-        </div>
-      </div>
       </div>
     </div>
   );

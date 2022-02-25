@@ -6,7 +6,7 @@ import SubSlot2 from '../SlotComponents/SubSlot2';
 
 const Head = (props) => {
   return(
-    <div className="headgear-card head">
+    <div className="headgear-card">
       <div className="container px-0">
         <div className="gear-header"> 
           <div className="font-type1 text-white">
