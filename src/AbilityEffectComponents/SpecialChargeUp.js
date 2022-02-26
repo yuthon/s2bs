@@ -1,3 +1,5 @@
+import specialCharge from '../images/ability/SCU.png';
+
 const SpecialChargeUp = (props) => {
   let specialPoints;
   let abilityPoint = props.abilityPoint;
@@ -79,8 +81,21 @@ const SpecialChargeUp = (props) => {
   }
   
   return (
-    <div className="ability-effect">
-      <p>スペシャル必要ポイント : {specialPoints}</p>
+    <div className="ae-card border col-6 d-flex align-items-center">
+      <div className="ae-icon">  
+        <div className="ability-icon sub-slot slot my-2">
+          <img className="subslot-img" src={specialCharge} alt=""/>
+        </div>
+      </div>
+      <div className="ae-text-md ability-effect">
+        <p>スペシャル必要ポイント</p>
+      </div>
+      <div className="ae-colon-lg ability-effect">
+        <p>:</p>
+      </div>
+      <div className="ae-effect ability-effect">
+        <p>{specialPoints}</p>
+      </div>
     </div>
   )
 };

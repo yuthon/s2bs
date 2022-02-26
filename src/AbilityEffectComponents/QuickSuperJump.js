@@ -1,3 +1,5 @@
+import quickSuperJump from '../images/ability/QSJ.png';
+
 const QuickSuperJump = (props) => {
   let abilityPoint = props.abilityPoint;
   let superJumpFrame;
@@ -21,9 +23,24 @@ const QuickSuperJump = (props) => {
     }
   }
   return (
-    <div className="ability-effect">
-      <p>スーパージャンプ時間 : {superJumpFrame}フレーム（{superJumpSecond}秒）</p>
-      <p>入力からジャンプ開始までの時間: {onGroundFrame}フレーム（{onGroundSecond}秒）</p>
+    <div className="ae-card border col-6 d-flex align-items-center">
+      <div className="ae-icon">  
+        <div className="ability-icon sub-slot slot">
+          <img className="subslot-img" src={quickSuperJump} alt=""/>
+        </div>
+      </div>
+      <div className="ae-text-md ability-effect">
+        <p>スーパージャンプ時間</p>
+        <p>ボタン入力からジャンプ開始まで</p>
+      </div>
+      <div className="ae-colon-lg ability-effect">
+        <p>:</p>
+        <p>:</p>
+      </div>
+      <div className="ae-effect ability-effect">
+        <p>{superJumpFrame}F（{superJumpSecond}秒）</p>
+        <p>{onGroundFrame}F（{onGroundSecond}秒）</p>
+      </div>
     </div>
   );
 };

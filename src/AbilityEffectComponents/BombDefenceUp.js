@@ -1,3 +1,5 @@
+import bombDefenceUp from '../images/ability/BDU.png';
+
 const BombDefenceUp = (props) => {
   let abilityPoint = props.abilityPoint
   
@@ -63,10 +65,25 @@ const BombDefenceUp = (props) => {
     }
   }
   return (
-    <div className="ability-effect">
-      <p>敵センサーの持続時間 : {markingDuration}％</p>
-      <p>敵スペシャルの爆風ダメージ : {specialDamage}％</p>
-      <p>敵のボムの爆風ダメージ : {farHitSubDamage}％</p>
+    <div className="ae-card border col-6 d-flex align-items-center">
+      <div className="ability-icon sub-slot slot">
+        <img className="subslot-img" src={bombDefenceUp} alt=""/>
+      </div>
+      <div className="ae-text-md ability-effect">
+        <p>敵センサーの持続時間</p>
+        <p>敵スペシャルの爆風ダメージ</p>
+        <p>敵のボムの爆風ダメージ</p>
+      </div>
+      <div className="ae-colon-lg ability-effect">
+        <p>:</p>
+        <p>:</p>
+        <p>:</p>
+      </div>
+      <div className="ae-effect ability-effect">
+        <p>{markingDuration}％</p>
+        <p>{specialDamage}％</p>
+        <p>{farHitSubDamage}％</p>
+      </div>
     </div>
   );
 };

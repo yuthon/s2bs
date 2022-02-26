@@ -1,3 +1,6 @@
+
+import swimSpeedImg from '../images/ability/SSU.png';
+
 const SwimSpeed = (props) => {
   let swimSpeed;
   let swimSpeedNinja;
@@ -67,8 +70,21 @@ const SwimSpeed = (props) => {
     }
   }
   return (
-    <div className="ability-effect">
-      <p>イカ移動速度 : {swimSpeed}DU/F</p>
+    <div className="ae-card border col-6 d-flex align-items-center">
+      <div className="ae-icon">  
+        <div className="ability-icon sub-slot slot my-2">
+          <img className="subslot-img" src={swimSpeedImg} alt=""/>
+        </div>
+      </div>
+      <div className="ae-text-md ability-effect">
+        <p>イカ移動速度</p>
+      </div>
+      <div className="ae-colon-lg ability-effect">
+        <p>:</p>
+      </div>
+      <div className="ae-effect ability-effect">
+        <p>{swimSpeed}DU/F</p>
+      </div>
     </div>
   )
 }

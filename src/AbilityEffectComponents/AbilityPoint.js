@@ -473,67 +473,83 @@ const AbilityPoint = (props) => {
   
   return(
     <div className="AE-container">
+      <div className="container">
       <div className="special-ability">
         {btnComeback}
         {btnOpeningGanbit}
         {btnLastDitchEffort}
         {btnDropRoller}
       </div>
-      <InkSaverMain 
-        abilityPoint={inkSaverMainAP}
-        weaponStatus={props.weaponStatus}
-      />
-      <InkSaverSub 
-        abilityPoint={inkSaverSubAP}
-        weaponStatus={props.weaponStatus}
-      />
-      <InkRecovery 
-        abilityPoint={inkRecoveryAP}
-      />
-      <RunSpeed 
-        abilityPoint={runSpeedAP}
-        weaponStatus={props.weaponStatus}
-      />
-      <SwimSpeed
-        abilityPoint={swimSpeedAP}
-        weaponStatus={props.weaponStatus}
-        abilityName={mainAbilityName[1]}
-      />
-      <SpecialChargeUp 
-        abilityPoint={specialChargeAP}
-        weaponStatus={props.weaponStatus}
-      />
-      <SpecialSaver 
-        abilityPoint={specialSaverAP}
-        weaponStatus={props.weaponStatus}
-        abilityName={mainAbilityName[1]}
-      />
-      <SpecialPower
-        abilityPoint={specialPowerAP}
-        weaponStatus={props.weaponStatus}
-      />
-      <QuickRespawn 
-        abilityPoint={qrAP}
-        abilityName={mainAbilityName[1]}
-      />
-      <QuickSuperJump 
-        abilityPoint={quickSuperJumpAP}
-      />
-      <SubPowerUp 
-        SPUabilityPoint={subPowerAP}
-        QSJabilityPoint={quickSuperJumpAP}
-        weaponStatus={props.weaponStatus}
-      />
-      <InkResistance 
-        abilityPoint={inkResAP}
-      />
-      <BombDefenceUp 
-        abilityPoint={bombDefenceAP}
-      />
-      <MainPowerUp 
-        abilityPoint={mpuAP}
-        weaponStatus={props.weaponStatus}
-      />
+      <div className="row">
+        <InkSaverMain 
+          abilityPoint={inkSaverMainAP}
+          weaponStatus={props.weaponStatus}
+        />
+        <InkSaverSub 
+          abilityPoint={inkSaverSubAP}
+          weaponStatus={props.weaponStatus}
+        />
+      </div>
+      <div className="row">  
+        <InkRecovery 
+          abilityPoint={inkRecoveryAP}
+        />
+        <RunSpeed 
+          abilityPoint={runSpeedAP}
+          weaponStatus={props.weaponStatus}
+        />
+      </div>
+      <div className="row">  
+        <SwimSpeed
+          abilityPoint={swimSpeedAP}
+          weaponStatus={props.weaponStatus}
+          abilityName={mainAbilityName[1]}
+        />
+        <SpecialChargeUp 
+          abilityPoint={specialChargeAP}
+          weaponStatus={props.weaponStatus}
+        />
+      </div>
+      <div className="row">  
+        <SpecialSaver 
+          abilityPoint={specialSaverAP}
+          weaponStatus={props.weaponStatus}
+          abilityName={mainAbilityName[1]}
+        />
+        <SpecialPower
+          abilityPoint={specialPowerAP}
+          weaponStatus={props.weaponStatus}
+        />
+      </div>
+      <div className="row">  
+        <QuickRespawn 
+          abilityPoint={qrAP}
+          abilityName={mainAbilityName[1]}
+        />
+        <QuickSuperJump 
+          abilityPoint={quickSuperJumpAP}
+        />
+      </div>
+      <div className="row">  
+        <SubPowerUp 
+          SPUabilityPoint={subPowerAP}
+          QSJabilityPoint={quickSuperJumpAP}
+          weaponStatus={props.weaponStatus}
+        />
+        <BombDefenceUp 
+          abilityPoint={bombDefenceAP}
+        />
+      </div>
+      <div className="row">  
+        <InkResistance 
+          abilityPoint={inkResAP}
+        />
+        <MainPowerUp
+          abilityPoint={mpuAP}
+          weaponStatus={props.weaponStatus}
+        />
+      </div>
+      </div>
     </div>
   );
 };

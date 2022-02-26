@@ -1,3 +1,6 @@
+
+import inkSaverMain from '../images/ability/ISMain.png';
+
 const InkSaverMain = (props) => {
   // 式を簡単に書くためにxに代入する
   let abilityPoint = props.abilityPoint;
@@ -347,7 +350,7 @@ const InkSaverMain = (props) => {
     bullets = Math.floor(1 / inkConsumption);
     // 数値を％になおす
     inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("スプラローラー") > -1) {
+  } else if (weaponStatus.name.indexOf("スプラローラー") > -1 || weaponStatus.name.indexOf("ヒーローローラー") > -1) {
     for (let i=0; i < 40; i++) {
       if (SplatRoller[i].AP === abilityPoint) {
         inkConsumption = SplatRoller[i].IC;
@@ -388,14 +391,26 @@ const InkSaverMain = (props) => {
     // 数値を％になおす
     inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
     element = (
-       <div className="ability-effect">
-        <p>1振りのインク消費量（横振り）{inkConsumption}％</p>
-        <p>インク満タン時の弾数 （横振り）: {bullets}振り</p>
-        <p>1振りのインク消費量（縦振り）{inkConsumption*1.5}％</p>
-        <p>インク満タン時の弾数 （縦振り）: {Math.floor(bullets / 1.5)}振り</p>
+      <><div className="ae-text-lg ability-effect">
+        <p>1振りのインク消費量（横振り）</p>
+        <p>インク満タン時の弾数 （横振り）</p>
+        <p>1振りのインク消費量（縦振り）</p>
+        <p>インク満タン時の弾数 （縦振り）</p>
       </div>
+      <div className="ae-colon-lg ability-effect">
+        <p>:</p>
+        <p>:</p>
+        <p>:</p>
+        <p>:</p>
+      </div>
+      <div className="ae-effect-xsm ability-effect">
+        <p>{inkConsumption}％</p>
+        <p>{bullets}振り</p>
+        <p>{inkConsumption * 1.5}％</p>
+        <p>{Math.floor(bullets / 1.5)}振り</p>
+      </div></>
     );
-  } else if (weaponStatus.name.indexOf("ホクサイ") > -1) {
+  } else if (weaponStatus.name.indexOf("ホクサイ") > -1 || weaponStatus.name.indexOf("ヒーローブラシ") > -1) {
     for (let i=0; i < 40; i++) {
       if (Octobrush[i].AP === abilityPoint) {
         inkConsumption = Octobrush[i].IC;
@@ -415,7 +430,7 @@ const InkSaverMain = (props) => {
     bullets = Math.floor(1 / inkConsumption);
     // 数値を％になおす
     inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("スプラチャージャー") > -1 || weaponStatus.name.indexOf("スプラスコープ") > -1) {
+  } else if (weaponStatus.name.indexOf("スプラチャージャー") > -1 || weaponStatus.name.indexOf("スプラスコープ") > -1 || weaponStatus.name.indexOf("ヒーローチャージャー") > -1) {
     for (let i=0; i < 40; i++) {
       if (ChargerMin[i].AP === abilityPoint) {
         inkConsumption = ChargerMax[i].IC;
@@ -465,7 +480,7 @@ const InkSaverMain = (props) => {
     bullets = Math.floor(1 / inkConsumption);
     // 数値を％になおす
     inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("バケットスロッシャー") > -1) {
+  } else if (weaponStatus.name.indexOf("バケットスロッシャー") > -1 || weaponStatus.name.indexOf("ヒーロースロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Slosher[i].AP === abilityPoint) {
         inkConsumption = Slosher[i].IC;
@@ -615,7 +630,7 @@ const InkSaverMain = (props) => {
     bullets = Math.floor(1 / inkConsumption);
     // 数値を％になおす
     inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("パラシェルター") > -1) {
+  } else if (weaponStatus.name.indexOf("パラシェルター") > -1 || weaponStatus.name.indexOf("ヒーローシェルター") > -1) {
     for (let i=0; i < 40; i++) {
       if (SplatBrella[i].AP === abilityPoint) {
         inkConsumption = SplatBrella[i].IC;
@@ -649,42 +664,87 @@ const InkSaverMain = (props) => {
   // 武器種の判定
   if (weaponType === "shooter" || weaponType === "blaster" || weaponType === "dualies" || weaponType === "brella") {
     element = (
-      <div className="ability-effect">
-        <p>1発のインク消費量 {inkConsumption}％</p>
-        <p>インク満タン時の弾数 : {bullets}発</p>
+      <><div className="ae-text-md ability-effect">
+        <p>1発のインク消費量</p>
+        <p>インク満タン時の弾数</p>
       </div>
+      <div className="ae-colon-lg ability-effect">
+        <p>:</p>
+        <p>:</p>
+      </div>
+      <div className="ae-effect ability-effect">
+        <p>{inkConsumption}％</p>
+        <p>{bullets}発</p>
+      </div></>
     );
   } else if (weaponType === "roller" || weaponType === "brush"  || weaponType === "slosher") {
     element = (
-      <div className="ability-effect">
-        <p>1振りのインク消費量 {inkConsumption}％</p>
-        <p>インク満タン時の弾数 : {bullets}振り</p>
+      <><div className="ae-text-md ability-effect">
+        <p>1振りのインク消費量</p>
+        <p>インク満タン時の弾数</p>
       </div>
+      <div className="ae-colon-lg ability-effect">
+        <p>:</p>
+        <p>:</p>
+      </div>
+      <div className="ae-effect ability-effect">
+        <p>{inkConsumption}％</p>
+        <p>{bullets}振り</p>
+      </div></>
     );
   } else if (weaponType === "charger") {
     element = (
-      <div className="ability-effect">
-        <p>1発（フルチャージ）のインク消費量 {inkConsumption}％</p>
-        <p>インク満タン時の弾数 : {bullets}発</p>
+      <><div className="ae-text-lg ability-effect">
+        <p>1発（フルチャージ）のインク消費量</p>
+        <p>インク満タン時の弾数</p>
       </div>
+      <div className="ae-colon-lg ability-effect">
+        <p>:</p>
+        <p>:</p>
+      </div>
+      <div className="ae-effect ability-effect">
+        <p>{inkConsumption}％</p>
+        <p>{bullets}発</p>
+      </div></>
     );
   } else if (weaponType === "nozzle") {
     element = (
-      <div className="ability-effect">
-        <p>1発（フルチャージ）のインク消費量 {inkConsumption}％</p>
-        <p>インク満タン時の弾数 : {bullets}発（{Math.floor(bullets / 3)}トリガー）</p>
+      <><div className="ae-text-md ability-effect">
+        <p>1発のインク消費量</p>
+        <p>インク満タン時の弾数</p>
       </div>
+      <div className="ae-colon-md ability-effect">
+        <p>:</p>
+        <p>:</p>
+      </div>
+      <div className="ae-effect ability-effect">
+        <p>{inkConsumption}％</p>
+        <p>{bullets}発（{Math.floor(bullets / 3)}トリガー）</p>
+      </div></>
     );
   } else if (weaponType === "splatling") {
     element = (
-      <div className="ability-effect">
-        <p>フルチャージでの射撃1回のインク消費量 {inkConsumption}％</p>
-        <p>インク満タン時の弾数 : {bullets}回</p>
+      <><div className="ae-text-md ability-effect">
+        <p>フルチャージ1回のインク消費量</p>
+        <p>フルチャージで射撃可能な回数</p>
       </div>
+      <div className="ae-colon-lg ability-effect">
+        <p>:</p>
+        <p>:</p>
+      </div>
+      <div className="ae-effect ability-effect">
+        <p>{inkConsumption}％</p>
+        <p>{bullets}回</p>
+      </div></>
     );
   } 
   return (
-    <div>
+    <div className="ae-card border col-xs-6 d-flex align-items-center">
+      <div className="ae-icon">
+        <div className="ability-icon sub-slot slot">
+          <img className="subslot-img" src={inkSaverMain} alt=""/>
+        </div>
+      </div>
       {element}
     </div>
   );

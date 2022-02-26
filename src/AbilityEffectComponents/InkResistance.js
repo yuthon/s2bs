@@ -1,3 +1,5 @@
+import InkResImg from '../images/ability/RES.png';
+
 const InkResistance = (props) => {
   const InkRes = [
     {AP:0,FBTD:0,DPF:0.3,DL:0.4,RS:	0.24},
@@ -62,11 +64,30 @@ const InkResistance = (props) => {
   }
   
   return (
-    <div className="ability-effect">
-      <p>相手インクを踏んでからダメージを受けるまでの時間 : {framesBeforeTakingDamage}F（{secondsBeforeTakingDamage}秒）</p>
-      <p>相手インクを踏むことで受けるダメージ : {damagePerFrame}ダメージ/F（{damagePerSecond}ダメージ/秒）</p>
-      <p>相手インクから受けるダメージの上限 : {damageLimit}ダメージ</p>
-      <p>相手インク上でのヒト移動速度の低減率 : {runSpeed}％減</p>
+    <div className="ae-card border col-6 d-flex align-items-center">
+      <div className="ae-icon">  
+        <div className="ability-icon sub-slot slot">
+          <img className="subslot-img" src={InkResImg} alt=""/>
+        </div>
+      </div>
+      <div className="ae-text-lg3 ability-effect">
+        <p>相手インクを踏んでからダメージ発生まで </p>
+        <p>相手インクを踏むことで受けるダメージ</p>
+        <p>相手インクから受けるダメージの上限</p>
+        <p>相手インク上でのヒト移動速度の低減率</p>
+      </div>
+      <div className="ae-colon-xsm ability-effect">
+        <p>:</p>
+        <p>:</p>
+        <p>:</p>
+        <p>:</p>
+      </div>
+      <div className="ae-effect ability-effect">
+        <p>{framesBeforeTakingDamage}F（{secondsBeforeTakingDamage}秒）</p>
+        <p>{damagePerFrame}ダメージ/F</p>
+        <p>{damageLimit}ダメージ</p>
+        <p>{runSpeed}％減</p>
+      </div>
     </div>
   );
 };

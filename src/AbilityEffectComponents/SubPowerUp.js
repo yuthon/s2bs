@@ -1,7 +1,23 @@
+import subPowerImg from '../images/ability/SubPU.png';
+import CurlingBombImg from '../images/subSP/Wsb_Bomb_Curling.png';
+import FizzyBombImg from '../images/subSP/Wsb_Bomb_Fizzy.png';
+import BurstBombImg from '../images/subSP/Wsb_Bomb_Burst.png';
+import AutoBombImg from '../images/subSP/Wsb_Bomb_Auto.png';
+import SplatBombImg from '../images/subSP/Wsb_Bomb_Splat.png';
+import SuctionBombImg from '../images/subSP/Wsb_Bomb_Suction.png';
+import TorpedoImg from '../images/subSP/Wsb_Torpedo.png';
+import SquidBeakonImg from '../images/subSP/Wsb_SquidBeakon.png';
+import PointSensorImg from '../images/subSP/Wsb_PointSensor.png';
+import ToxicMistImg from '../images/subSP/Wsb_ToxicMist.png';
+import SplashWallImg from '../images/subSP/Wsb_SplashWall.png';
+import SprinklerImg from '../images/subSP/Wsb_Sprinkler.png';
+import InkMineImg from '../images/subSP/Wsb_InkMine.png';
+
 const SubPowerUp = (props) => {
   let name = props.weaponStatus.sub;
   let abilityPoint = props.SPUabilityPoint;
   let element;
+  let subWeaponImg
   
   // ビーコン
   let superJumpFrame;
@@ -108,10 +124,16 @@ const SubPowerUp = (props) => {
     superJumpSecond = Math.floor(superJumpFrame / 60 * 100) / 100;
     onGroundSecond = Math.floor(onGroundFrame /60 * 100) / 100;
     element = (
-      <div className="ability-effect">
-        <p>ビーコンへのスーパージャンプ時間 : {superJumpFrame}F（{superJumpSecond}秒）</p>
-        <p>入力からビーコンへのジャンプ開始までの時間: {onGroundFrame}F（{onGroundSecond}秒）</p>
-      </div>
+      <><div className="ae-text-lg3 ability-effect">
+        <p>ビーコンへのスーパージャンプ時間</p>
+        <p>ボタン入力からビーコンへのジャンプ開始まで</p>
+      </div><div className="ae-colon-xsm ability-effect">
+        <p>:</p>
+        <p>:</p>
+      </div><div className="ae-effect ability-effect">
+        <p>{superJumpFrame}F（{superJumpSecond}秒）</p>
+        <p>{onGroundFrame}F（{onGroundSecond}秒）</p>
+      </div></>
     );
   } else if (name === "SuctionBomb" || name === "AutoBomb" || name === "SplatBomb" || name === "BurstBomb" || name === "ToxicMist") {
     for (let i=0; i<40; i++) {
@@ -121,32 +143,58 @@ const SubPowerUp = (props) => {
     }
     if (name === "SuctionBomb") {
       subName = "キューバンボム";
+      subWeaponImg = SuctionBombImg;
     } else if (name === "SplatBomb") {
       subName = "スプラッシュボム";
+      subWeaponImg = SplatBombImg;
     } else if (name === "BurstBomb") {
-      subName = "クイックボム"; 
+      subName = "クイックボム";
+      subWeaponImg = BurstBombImg;
     } else if (name === "AutoBomb") {
       subName = "ロボットボム";
+      subWeaponImg = AutoBombImg;
     } else if (name === "ToxicMist") {
       subName = "ポイズンミスト";
+      subWeaponImg = ToxicMist
     }
     element = (
-      <div className="ability-effect">
-        <p>{subName}の飛距離 : {bombRange}％</p>
+      <>
+      <div className="ae-sub-img">
+          <img src={subWeaponImg} className="img-sub-sp" alt=""/>
       </div>
+      <div className="ae-text-sm ability-effect">
+        <p>ボムの飛距離</p>
+      </div><div className="ae-colon-lg ability-effect">
+        <p>:</p>
+      </div><div className="ae-effect ability-effect">
+        <p>{bombRange}％</p>
+      </div>
+      </>
     );
   } else if (name === "CurlingBomb") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === CurlingBomb[i].AP) {
         velocity = Math.floor(2.2 * CurlingBomb[i].velocity * 10000) / 10000;
         bombRange = Math.floor(CurlingBomb[i].velocity * 10000) / 100;
+        subWeaponImg = CurlingBombImg;
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>カーリングボムの初速 : {velocity}DU/F</p>
-        <p>カーリングボムの移動距離 : {bombRange}％</p>
+      <>
+      <div className="ae-sub-img">
+          <img src={subWeaponImg} className="img-sub-sp" alt=""/>
       </div>
+      <div className="ae-text-sm ability-effect">
+        <p>ボムの初速</p>
+        <p>ボムの移動距離</p>
+      </div><div className="ae-colon-lg ability-effect">
+        <p>:</p>
+        <p>:</p>
+      </div><div className="ae-effect ability-effect">
+        <p>{velocity}DU/F</p>
+        <p>{bombRange}％</p>
+      </div>
+      </>
     );
   } else if (name === "Sprinkler") {
     for (let i=0; i<40; i++) {
@@ -155,13 +203,23 @@ const SubPowerUp = (props) => {
         firstPhaseSecond = Math.floor(firstPhaseFrame / 60 * 100) / 100;
         secondPhaseFrame = Sprinkler[i].SF;
         secondPhaseSecond = Math.floor(secondPhaseFrame / 60 * 100) / 100;
+        subWeaponImg = SprinklerImg;
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>スプリンクラー持続時間（大） : {firstPhaseFrame}F（{firstPhaseSecond}秒）</p>
-        <p>スプリンクラー持続時間（中） : {secondPhaseFrame}F（{secondPhaseSecond}秒）</p>
+      <><div className="ae-sub-img">
+          <img src={subWeaponImg} className="img-sub-sp" alt=""/>
       </div>
+      <div className="ae-text-sm ability-effect">
+        <p>最大出力の持続時間</p>
+        <p>中出力の持続時間</p>
+      </div><div className="ae-colon-lg ability-effect">
+        <p>:</p>
+        <p>:</p>
+      </div><div className="ae-effect ability-effect">
+        <p>{firstPhaseFrame}F（{firstPhaseSecond}秒）</p>
+        <p>{secondPhaseFrame}F（{secondPhaseSecond}秒）</p>
+      </div></>
     );
   } else if (name === "Sencor") {
     for (let i=0; i<40; i++) {
@@ -169,13 +227,23 @@ const SubPowerUp = (props) => {
         bombRange = Math.floor(PointSencorVelocity[i].velocity / PointSencorVelocity[0].velocity * 10000) / 100;
         markingFrame = PointSencorMarkingTime[i].MT
         markingSecond = Math.floor(markingFrame / 60 * 100) / 100;
+        subWeaponImg = PointSensorImg;
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>飛距離 : {bombRange}％</p>
-        <p>マーキング時間 : {markingFrame}F（{markingSecond}秒）</p>
+      <><div className="ae-sub-img">
+        <img src={subWeaponImg} className="img-sub-sp" alt=""/>
       </div>
+      <div className="ae-text-sm ability-effect">
+        <p>飛距離</p>
+        <p>マーキング時間</p>
+      </div><div className="ae-colon-lg ability-effect">
+        <p>:</p>
+        <p>:</p>
+      </div><div className="ae-effect ability-effect">
+        <p>{bombRange}％</p>
+        <p>{markingFrame}F（{markingSecond}秒）</p>
+      </div></>
     );
   } else if (name === "InkMine") {
     for (let i=0; i<40; i++) {
@@ -183,39 +251,70 @@ const SubPowerUp = (props) => {
         explosionRadius = Math.floor(InkMine[i].ER * 10000) / 100;
         markingFrame = InkMine[i].DT
         markingSecond = Math.floor(markingFrame / 60 * 100) / 100;
+        subWeaponImg = InkMineImg;
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>爆風とマーキングの範囲 : {explosionRadius}％</p>
-        <p>マーキング時間 : {markingFrame}F（{markingSecond}秒）</p>
+      <><div className="ae-sub-img">
+        <img src={subWeaponImg} className="img-sub-sp" alt=""/>
       </div>
+      <div className="ae-text-md ability-effect">
+        <p>爆風とマーキングの範囲</p>
+        <p>マーキング時間</p>
+      </div><div className="ae-colon-md ability-effect">
+        <p>:</p>
+        <p>:</p>
+      </div><div className="ae-effect ability-effect">
+        <p>{explosionRadius}％</p>
+        <p>{markingFrame}F（{markingSecond}秒）</p>
+      </div></>
     );
   } else if (name === "FizzyBomb" || name === "Torpedo") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === FizzyBomb[i].AP) {
-        bombRange = Math.floor(FizzyBomb[i].velocity / FizzyBomb[0].velocity * 10000) / 100; 
+        bombRange = Math.floor(FizzyBomb[i].velocity / FizzyBomb[0].velocity * 10000) / 100;
+        subWeaponImg = FizzyBombImg;
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>飛距離 : {bombRange}％</p>
+      <><div className="ae-sub-img">
+        <img src={subWeaponImg} className="img-sub-sp" alt=""/>
       </div>
+      <div className="ae-text-sm ability-effect">
+        <p>ボムの飛距離</p>
+      </div><div className="ae-colon-lg ability-effect">
+        <p>:</p>
+      </div><div className="ae-effect ability-effect">
+        <p>{bombRange}％</p>
+      </div></>
     );
   } else if (name === "SplashWall") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === SplashWall[i].AP) {
-        wallHP = SplashWall[i].HP
+        wallHP = SplashWall[i].HP;
+        subWeaponImg = SplashWallImg;
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>シールドの耐久値 : {wallHP}</p>
+      <><div className="ae-sub-img">
+        <img src={subWeaponImg} className="img-sub-sp" alt=""/>
       </div>
+      <div className="ae-text-sm ability-effect">
+        <p>シールドの耐久値</p>
+      </div><div className="ae-colon-lg ability-effect">
+        <p>:</p>
+      </div><div className="ae-effect ability-effect">
+        <p>{wallHP}</p>
+      </div></>
     );
   }
   return (
-    <div>
+    <div className="ae-card border col-6 d-flex align-items-center">
+      <div className="ae-icon">  
+        <div className="ability-icon sub-slot slot my-2">
+          <img className="subslot-img" src={subPowerImg} alt=""/>
+        </div>
+      </div>
       {element}
     </div>
   );

@@ -1,3 +1,5 @@
+import specialPower from '../images/ability/SpecialPU.png';
+
 const SpecialPower = (props) => {
   let element;
   let abilityPoint = props.abilityPoint;
@@ -72,10 +74,17 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>180ダメージの範囲 : {hitbox180}％</p>
-        <p>70ダメージの範囲 : {hitbox70}％</p>
+      <><div className="ae-text-md ability-effect">
+        <p>180ダメージの範囲</p>
+        <p>70ダメージの範囲</p>
+      </div><div className="ae-colon-lg ability-effect">
+        <p>:</p>
+        <p>:</p>
       </div>
+      <div className="ae-effect ability-effect">
+        <p>{hitbox180}％</p>
+        <p>{hitbox70}％</p>
+      </div></>
     );
   } else if (name === "Missiles") {
     for (let i=0; i<40; i++) {
@@ -87,10 +96,17 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>ロックオンの範囲 : {circleRadiusPercent}％</p>
-        <p>着弾点の塗り範囲 : {paintRadius}DU（{paintRadiusPercent}％）</p>
+      <><div className="ae-text-md ability-effect">
+        <p>ロックオンの範囲</p>
+        <p>着弾点の塗り範囲</p>
+      </div><div className="ae-colon-lg ability-effect">
+        <p>:</p>
+        <p>:</p>
       </div>
+      <div className="ae-effect ability-effect">
+        <p>{circleRadiusPercent}％</p>
+        <p>{paintRadius}DU（{paintRadiusPercent}％）</p>
+      </div></>
     );
   } else if (name === "Armor") {
     for (let i=0; i<40; i++) {
@@ -102,10 +118,17 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>アーマー発動から有効化までの時間 : {armorActivationFrames}フレーム（{armorActivationSeconds}秒）</p>
-        <p>アーマー持続時間 : {durationFrames}フレーム（{durationSeconds}秒）</p>
+      <><div className="ae-text-lg ability-effect">
+        <p>アーマー発動から有効化までの時間</p>
+        <p>アーマー持続時間</p>
+      </div><div className="ae-colon-sm ability-effect">
+        <p>:</p>
+        <p>:</p>
       </div>
+      <div className="ae-effect ability-effect">
+        <p>{armorActivationFrames}フレーム（{armorActivationSeconds}秒）</p>
+        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+      </div></>
     );
   } else if (name === "CurlingRush") {
     for (let i=0; i<40; i++) {
@@ -115,9 +138,14 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>ボムピッチャー持続時間 : {durationFrames}フレーム（{durationSeconds}秒）</p>
+      <><div className="ae-text-md ability-effect">
+        <p>ボムピッチャー持続時間</p>
+      </div><div className="ae-colon-sm ability-effect">
+        <p>:</p>
       </div>
+      <div className="ae-effect ability-effect">
+        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+      </div></>
     );
   } else if (name === "SplatRush") {
     for (let i=0; i<40; i++) {
@@ -127,9 +155,14 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>ボムピッチャー持続時間 : {durationFrames}フレーム（{durationSeconds}秒）</p>
+      <><div className="ae-text-md ability-effect">
+      <p>ボムピッチャー持続時間</p>
+      </div><div className="ae-colon-sm ability-effect">
+        <p>:</p>
       </div>
+      <div className="ae-effect ability-effect">
+        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+      </div></>
     );
   } else if (name === "SuctionRush") {
     for (let i=0; i<40; i++) {
@@ -139,9 +172,14 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>ボムピッチャー持続時間 : {durationFrames}フレーム（{durationSeconds}秒）</p>
+      <><div className="ae-text-md ability-effect">
+      <p>ボムピッチャー持続時間</p>
+      </div><div className="ae-colon-sm ability-effect">
+        <p>:</p>
       </div>
+      <div className="ae-effect ability-effect">
+        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+      </div></>
     );
   } else if (name === "BurstRush") {
     for (let i=0; i<40; i++) {
@@ -151,9 +189,14 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>ボムピッチャー持続時間 : {durationFrames}フレーム（{durationSeconds}秒）</p>
+      <><div className="ae-text-md ability-effect">
+      <p>ボムピッチャー持続時間</p>
+      </div><div className="ae-colon-sm ability-effect">
+        <p>:</p>
       </div>
+      <div className="ae-effect ability-effect">
+        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+      </div></>
     );
   } else if (name === "AutoRush") {
     for (let i=0; i<40; i++) {
@@ -163,11 +206,16 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>ボムピッチャー持続時間 : {durationFrames}フレーム（{durationSeconds}秒）</p>
+      <><div className="ae-text-md ability-effect">
+      <p>ボムピッチャー持続時間</p>
+      </div><div className="ae-colon-sm ability-effect">
+        <p>:</p>
       </div>
+      <div className="ae-effect ability-effect">
+        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+      </div></>
     );
-  } else if (name === "StingRay") {
+  } else if (name === "Stingray") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === StingRay[i].AP) {
         durationFrames = StingRay[i].DT;
@@ -175,9 +223,14 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>ハイパープレッサー持続時間 : {durationFrames}フレーム（{durationSeconds}秒）</p>
+      <><div className="ae-text-md ability-effect">
+      <p>ハイパープレッサー持続時間</p>
+      </div><div className="ae-colon-sm ability-effect">
+        <p>:</p>
       </div>
+      <div className="ae-effect ability-effect">
+        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+      </div></>
     );
   } else if (name === "InkStorm") {
     for (let i=0; i<40; i++) {
@@ -187,9 +240,14 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>アメフラシ持続時間 : {durationFrames}フレーム（{durationSeconds}秒）</p>
+      <><div className="ae-text-md ability-effect">
+      <p>アメフラシ持続時間</p>
+      </div><div className="ae-colon-sm ability-effect">
+        <p>:</p>
       </div>
+      <div className="ae-effect ability-effect">
+        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+      </div></>
     );
   } else if (name === "BooyahBomb") {
     for (let i=0; i<40; i++) {
@@ -199,9 +257,14 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>ナイスダマチャージ時間（ナイスを押さないとき）: {chargeSpeedFrames}フレーム（{chargeSpeedSeconds}秒）</p>
+      <><div className="ae-text-lg ability-effect">
+      <p>ナイスダマチャージ時間（ナイス無し）</p>
+      </div><div className="ae-colon-sm ability-effect">
+        <p>:</p>
       </div>
+      <div className="ae-effect ability-effect">
+        <p>{chargeSpeedFrames}F（{chargeSpeedSeconds}秒）</p>
+      </div></>
     );
   } else if (name === "Baller") {
     for (let i=0; i<40; i++) {
@@ -211,12 +274,19 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>55ダメージ爆風の範囲 : {explosionRadius}DU</p>
-        <p>スフィアの耐久値 : {ballerHealth}</p>
+      <><div className="ae-text-md ability-effect">
+      <p>55ダメージ爆風の範囲</p>
+      <p>スフィアの耐久値</p>
+      </div><div className="ae-colon-lg ability-effect">
+        <p>:</p>
+        <p>:</p>
       </div>
+      <div className="ae-effect ability-effect">
+        <p>{explosionRadius}DU</p>
+        <p>{ballerHealth}</p>
+      </div></>
     );
-  } else if (name === "InkJet") {
+  } else if (name === "Inkjet") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === InkJet[i].AP) {
         durationFrames = InkJet[i].DT;
@@ -226,11 +296,20 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>ジェットパックの持続時間 : {durationFrames}フレーム（{durationSeconds}秒）</p>
-        <p>着弾点の塗り半径 : {paintRadius}DU</p>
-        <p>爆風範囲（50ダメージと30ダメージの両方が変化） : {blastRadius}％</p>
+      <><div className="ae-text-lg2 ability-effect">
+      <p>ジェットパックの持続時間</p>
+      <p>着弾点の塗り半径</p>
+      <p>爆風範囲（50ダメージ{'&'}30ダメージ）</p>
+      </div><div className="ae-colon-xsm ability-effect">
+        <p>:</p>
+        <p>:</p>
+        <p>:</p>
       </div>
+      <div className="ae-effect ability-effect">
+        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+        <p>{paintRadius}DU</p>
+        <p>{blastRadius}％</p>
+      </div></>
     );
   } else if (name === "Bubbles") {
     for (let i=0; i<40; i++) {
@@ -241,11 +320,20 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>爆発の塗り範囲 : {paintRadius}DU</p>
-        <p>バブルの大きさ : {bubbleSize}％</p>
-        <p>爆風の範囲 : {blastRadius}％</p>
+      <><div className="ae-text-md ability-effect">
+      <p>爆発の塗り範囲</p>
+      <p>バブルの大きさ</p>
+      <p>爆風の範囲</p>
+      </div><div className="ae-colon-lg ability-effect">
+        <p>:</p>
+        <p>:</p>
+        <p>:</p>
       </div>
+      <div className="ae-effect ability-effect">
+        <p>{paintRadius}DU</p>
+        <p>{bubbleSize}％</p>
+        <p>{blastRadius}％</p>
+      </div></>
     );
   } else if (name === "Hammer") {
     for (let i=0; i<40; i++) {
@@ -255,14 +343,24 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ability-effect">
-        <p>ウルトラハンコ持続時間 : {durationFrames}フレーム（{durationSeconds}秒）</p>
+      <><div className="ae-text-lg ability-effect">
+      <p>ウルトラハンコ持続時間</p>
+      </div><div className="ae-colon-armor ability-effect">
+        <p>:</p>
       </div>
+      <div className="ae-effect-qs ability-effect">
+        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+      </div></>
     );
   }
   
   return (
-    <div>
+    <div className="ae-card border col-6 d-flex align-items-center">
+      <div className="ae-icon">  
+        <div className="ability-icon sub-slot slot">
+          <img className="subslot-img" src={specialPower} alt=""/>
+        </div>
+      </div>
       {element}
     </div>
   );

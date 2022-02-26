@@ -1,3 +1,5 @@
+import runSpeedImg from '../images/ability/RSU.png';
+
 const RunSpeed = (props) => {
   let weaponStatus = props.weaponStatus;
   let abilityPoint = props.abilityPoint;
@@ -432,9 +434,24 @@ const RunSpeed = (props) => {
     }
   }
   return (
-    <div className="ability-effect">
-      <p>ヒト移動速度 : {runSpeed}DU/F</p>
-      <p>ヒト移動速度（射撃中） : {runSpeedShooting}DU/F</p>
+    <div className="ae-card border col-6 d-flex align-items-center">
+      <div className="ae-icon">  
+        <div className="ability-icon sub-slot slot">
+          <img className="subslot-img" src={runSpeedImg} alt=""/>
+        </div>
+      </div>
+      <div className="ae-text-md ability-effect">
+        <p>ヒト移動速度</p>
+        <p>ヒト移動速度（射撃中）</p>
+      </div>
+      <div className="ae-colon-lg ability-effect">
+        <p>:</p>
+        <p>:</p>
+      </div>
+      <div className="ae-effect ability-effect">
+        <p>{runSpeed}DU/F</p>
+        <p>{runSpeedShooting}DU/F</p>
+      </div>
     </div>
   )
 }

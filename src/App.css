@@ -878,8 +878,136 @@ Btmボタン
   transform: rotate(-15deg) scale(1.1, 1.1);
 }
 
+/*  */
 /*AEのスタイル*/
-.AE-container {
-  height: 600px;
-  width: 600px;
+/*  */
+
+.ae-card {
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.ability-effect p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+/* ギアパワーのアイコン */
+.ae-icon {
+  width: 45px;
+}
+
+.ae-text {
+  width: 200px;
+  text-align: right;
+}
+
+.ae-text-sm {
+  width: 140px;
+  text-align: right;
+}
+
+.ae-text-md {
+  width: 180px;
+  text-align: right;
+}
+
+.ae-text-lg {
+  width: 200px;
+  text-align: right;
+}
+
+.ae-text-lg2 {
+  width: 205px;
+  text-align: right;
+}
+
+.ae-text-lg3 {
+  width: 230px;
+  text-align: right;
+}
+
+.ae-text-xl {
+  width: 290px;
+  text-align: right;
+}
+
+.ae-text-xxl {
+  width: 350px;
+  text-align: right;
+}
+
+.ae-text-qr {
+  width: 180px;
+  text-align: right;
+}
+
+.ae-text-armor {
+  width: 190px;
+  text-align: right;
+}
+
+.ae-colon-xsm {
+  width: 20px;
+}
+
+.ae-colon-sm {
+  width: 30px;
+}
+
+.ae-colon-md {
+  width: 50px;
+}
+
+.ae-colon-lg {
+  width: 70px;
+}
+
+.ae-colon-armor {
+  width: 30px;
+}
+
+.ae-effect {
+  text-align: left;
+}
+
+.ae-effect-xsm {
+  text-align: left;
+}
+
+.ae-effect-sm {
+  width: 100px;
+  text-align: left;
+}
+
+.ae-effect-md {
+  width: 110px;
+  text-align: left;
+}
+
+.ae-effect-lg {
+  width: 130px;
+  text-align: left;
+}
+
+.ae-effect-qr {
+  width: 120px;
+  text-align: left;
+}
+
+.ae-effect-armor {
+  width: 120px;
+  text-align: left;
+}
+
+.ae-effect-nozzle {
+  width: 110px;
+  text-align: left;
+}
+
+.ae-sub-img {
+  position: relative;
+  height: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
