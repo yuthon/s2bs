@@ -25,9 +25,9 @@ const QuickRespawn = (props) => {
     respawnSeconds = respawnSeconds + 1.13;
   }
   return (
-    <div className="ae-card border col-6 d-flex align-items-center">
+    <div className="ae-card border d-flex align-items-center">
       <div className="ae-icon">  
-        <div className="ability-icon sub-slot slot my-2">
+        <div className="ability-icon sub-slot slot my-1">
           <img className="subslot-img" src={qr} alt=""/>
         </div>
       </div>

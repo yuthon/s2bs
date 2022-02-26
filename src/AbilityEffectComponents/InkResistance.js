@@ -64,17 +64,17 @@ const InkResistance = (props) => {
   }
   
   return (
-    <div className="ae-card border col-6 d-flex align-items-center">
+    <div className="ae-card border d-flex align-items-center">
       <div className="ae-icon">  
         <div className="ability-icon sub-slot slot">
           <img className="subslot-img" src={InkResImg} alt=""/>
         </div>
       </div>
       <div className="ae-text-lg3 ability-effect">
-        <p>相手インクを踏んでからダメージ発生まで </p>
-        <p>相手インクを踏むことで受けるダメージ</p>
-        <p>相手インクから受けるダメージの上限</p>
-        <p>相手インク上でのヒト移動速度の低減率</p>
+        <p>敵インクからダメージを受けるまで </p>
+        <p>敵インクからのダメージ</p>
+        <p>敵インクからのダメージの上限</p>
+        <p>敵インク上でのヒト速度の低減率</p>
       </div>
       <div className="ae-colon-xsm ability-effect">
         <p>:</p>

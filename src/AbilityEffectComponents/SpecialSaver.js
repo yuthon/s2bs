@@ -92,9 +92,9 @@ const SpecialSaver = (props) => {
   lostPercent = (1000000 - remainingPercent * 10000) / 10000;
   
   return (
-    <div className="ae-card border col-6 d-flex align-items-center">
+    <div className="ae-card border d-flex align-items-center">
       <div className="ae-icon">  
-        <div className="ability-icon sub-slot slot my-2">
+        <div className="ability-icon sub-slot slot my-1">
           <img className="subslot-img" src={specialSaver} alt=""/>
         </div>
       </div>

@@ -189,7 +189,7 @@ const Main = () => {
               passImagePath={passSubAbilityImagePath8} />
           </div>
         </div>
-      <div className="col-4">
+      <div className="col-5">
         <div className="">
           <button type="button" className="btn btn-dark font-type1" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
             キャラクターの設定
@@ -247,7 +247,7 @@ const Main = () => {
           </Canvas>
         </div>
       </div>
-      <div className="font-type2 col-6">
+      <div className="font-type2 col-5 overflow-auto" style={{ height: '100vh'}}>
         <div>
           <WeaponModal
             weaponStatus={passWeaponStatus} />

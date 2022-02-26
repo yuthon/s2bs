@@ -472,7 +472,7 @@ const AbilityPoint = (props) => {
   
   
   return(
-    <div className="AE-container">
+    <div className="d-flex">
       <div className="container">
       <div className="special-ability">
         {btnComeback}
