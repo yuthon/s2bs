@@ -195,7 +195,7 @@ const RunSpeed = (props) => {
          runSpeedShooting = Clash[i].RS;
       }
     }
-  } else if (weaponStatus.name.indexOf("スプラシューター") > -1 || weaponStatus.name.indexOf("ヒーローシューター") > -1) {
+  } else if (weaponStatus.name.indexOf("スプラシューター") > -1 || weaponStatus.name.indexOf("ヒーローシューター") > -1 || weaponStatus.name.indexOf("オクタシューター") > -1) {
     for (let i=0; i < 40; i++) {
       if (SplatterShot[i].AP === abilityPoint) {
          runSpeedShooting = SplatterShot[i].RS;

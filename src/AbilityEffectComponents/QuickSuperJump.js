@@ -38,8 +38,8 @@ const QuickSuperJump = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{superJumpFrame}F（{superJumpSecond}秒）</p>
-        <p>{onGroundFrame}F（{onGroundSecond}秒）</p>
+        <p>{superJumpFrame}F</p>
+        <p>{onGroundFrame}F</p>
       </div>
     </div>
   );

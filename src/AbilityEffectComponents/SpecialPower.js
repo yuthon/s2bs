@@ -69,8 +69,8 @@ const SpecialPower = (props) => {
   if (name === "SplashDown") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === SplashDown[i].AP) {
-        hitbox180 = SplashDown[i].HS180;
-        hitbox70 = SplashDown[i].HS70;
+        hitbox180 = Math.floor(SplashDown[i].HS180 * 100) / 100;
+        hitbox70 = Math.floor(SplashDown[i].HS70 * 100) / 100;
       }
     }
     element = (
@@ -105,7 +105,7 @@ const SpecialPower = (props) => {
       </div>
       <div className="ae-effect ability-effect">
         <p>{circleRadiusPercent}％</p>
-        <p>{paintRadius}DU（{paintRadiusPercent}％）</p>
+        <p>{paintRadiusPercent}％</p>
       </div></>
     );
   } else if (name === "Armor") {
@@ -126,8 +126,8 @@ const SpecialPower = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{armorActivationFrames}フレーム（{armorActivationSeconds}秒）</p>
-        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+        <p>{armorActivationFrames}F</p>
+        <p>{durationFrames}F</p>
       </div></>
     );
   } else if (name === "CurlingRush") {
@@ -144,7 +144,7 @@ const SpecialPower = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+        <p>{durationFrames}F</p>
       </div></>
     );
   } else if (name === "SplatRush") {
@@ -161,7 +161,7 @@ const SpecialPower = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+        <p>{durationFrames}F</p>
       </div></>
     );
   } else if (name === "SuctionRush") {
@@ -178,7 +178,7 @@ const SpecialPower = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+        <p>{durationFrames}F</p>
       </div></>
     );
   } else if (name === "BurstRush") {
@@ -195,7 +195,7 @@ const SpecialPower = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+        <p>{durationFrames}F</p>
       </div></>
     );
   } else if (name === "AutoRush") {
@@ -212,7 +212,7 @@ const SpecialPower = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+        <p>{durationFrames}F</p>
       </div></>
     );
   } else if (name === "Stingray") {
@@ -229,7 +229,7 @@ const SpecialPower = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+        <p>{durationFrames}F</p>
       </div></>
     );
   } else if (name === "InkStorm") {
@@ -246,7 +246,7 @@ const SpecialPower = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+        <p>{durationFrames}F</p>
       </div></>
     );
   } else if (name === "BooyahBomb") {
@@ -263,13 +263,13 @@ const SpecialPower = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{chargeSpeedFrames}F（{chargeSpeedSeconds}秒）</p>
+        <p>{chargeSpeedFrames}F</p>
       </div></>
     );
   } else if (name === "Baller") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === Baller[i].AP) {
-        explosionRadius = Baller[i].ER;
+        explosionRadius = Math.floor(Baller[i].ER * 100) / 100;
         ballerHealth = Baller[i].HP;
       }
     }
@@ -291,8 +291,8 @@ const SpecialPower = (props) => {
       if (abilityPoint === InkJet[i].AP) {
         durationFrames = InkJet[i].DT;
         durationSeconds = Math.floor(durationFrames / 60 * 100) / 100;
-        paintRadius = InkJet[i].PR;
-        blastRadius = InkJet[i].BR;
+        paintRadius = Math.floor(InkJet[i].PR * 100)/ 100;
+        blastRadius = Math.floor(InkJet[i].BR * 100) / 100;
       }
     }
     element = (
@@ -306,7 +306,7 @@ const SpecialPower = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+        <p>{durationFrames}F</p>
         <p>{paintRadius}DU</p>
         <p>{blastRadius}％</p>
       </div></>
@@ -314,8 +314,8 @@ const SpecialPower = (props) => {
   } else if (name === "Bubbles") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === Bubbles[i].AP) {
-        paintRadius = Bubbles[i].PR;
-        bubbleSize = Bubbles[i].BS;
+        paintRadius = Math.floor(Bubbles[i].PR * 100) / 100;
+        bubbleSize = Math.floor(Bubbles[i].BS * 100) / 100;
         blastRadius = Math.floor(Bubbles[i].EH / Bubbles[0].EH * 10000) / 100;
       }
     }
@@ -349,7 +349,7 @@ const SpecialPower = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect-qs ability-effect">
-        <p>{durationFrames}フレーム（{durationSeconds}秒）</p>
+        <p>{durationFrames}F</p>
       </div></>
     );
   }

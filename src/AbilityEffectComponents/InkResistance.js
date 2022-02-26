@@ -83,7 +83,7 @@ const InkResistance = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{framesBeforeTakingDamage}F（{secondsBeforeTakingDamage}秒）</p>
+        <p>{framesBeforeTakingDamage}F</p>
         <p>{damagePerFrame}ダメージ/F</p>
         <p>{damageLimit}ダメージ</p>
         <p>{runSpeed}％減</p>

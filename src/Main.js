@@ -112,7 +112,7 @@ const Main = () => {
   return(
     <div className="container">
       <div className="row">  
-        <div className="gear-components col-3">
+        <div className="gear-components col-2">
           <div>
             <Head
               //ギアモーダルからStateを経由して受け取った画像のパスをpropsで渡す
@@ -189,7 +189,7 @@ const Main = () => {
               passImagePath={passSubAbilityImagePath8} />
           </div>
         </div>
-      <div className="col-5">
+      <div className="col-4">
         <div className="">
           <button type="button" className="btn btn-dark font-type1" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
             キャラクターの設定
@@ -213,7 +213,7 @@ const Main = () => {
           <FMLBottomsModal
             passBottoms={passBottoms} />
         </div>
-        <div style={{ height: '1000px', width: '500px' }}>
+        <div style={{ height: '900px', width: '430px' }}>
           <Canvas
             style={{ background: '#f0f0e0' }}
             camera={{ position: [0, 11, 20] }}
@@ -246,28 +246,28 @@ const Main = () => {
             </Suspense>
           </Canvas>
         </div>
-        <div className="font-type2 col-4">
-          <div>
-            <WeaponModal
-              weaponStatus={passWeaponStatus} />
-            <Weapon
-              weaponStatus={weaponStatus} />
-          </div>
-          <AbilityEffect
-            weaponStatus={weaponStatus}
-            passMainAbilityName0={mainAbilityName0}
-            passMainAbilityName1={mainAbilityName1}
-            passMainAbilityName2={mainAbilityName2}
-            passSubAbilityName0={subAbilityName0}
-            passSubAbilityName1={subAbilityName1}
-            passSubAbilityName2={subAbilityName2}
-            passSubAbilityName3={subAbilityName3}
-            passSubAbilityName4={subAbilityName4}
-            passSubAbilityName5={subAbilityName5}
-            passSubAbilityName6={subAbilityName6}
-            passSubAbilityName7={subAbilityName7}
-            passSubAbilityName8={subAbilityName8} />
+      </div>
+      <div className="font-type2 col-6">
+        <div>
+          <WeaponModal
+            weaponStatus={passWeaponStatus} />
+          <Weapon
+            weaponStatus={weaponStatus} />
         </div>
+        <AbilityEffect
+          weaponStatus={weaponStatus}
+          passMainAbilityName0={mainAbilityName0}
+          passMainAbilityName1={mainAbilityName1}
+          passMainAbilityName2={mainAbilityName2}
+          passSubAbilityName0={subAbilityName0}
+          passSubAbilityName1={subAbilityName1}
+          passSubAbilityName2={subAbilityName2}
+          passSubAbilityName3={subAbilityName3}
+          passSubAbilityName4={subAbilityName4}
+          passSubAbilityName5={subAbilityName5}
+          passSubAbilityName6={subAbilityName6}
+          passSubAbilityName7={subAbilityName7}
+          passSubAbilityName8={subAbilityName8} />
         </div>
       </div>
     </div>

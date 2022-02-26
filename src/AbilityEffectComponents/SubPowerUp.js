@@ -131,8 +131,8 @@ const SubPowerUp = (props) => {
         <p>:</p>
         <p>:</p>
       </div><div className="ae-effect ability-effect">
-        <p>{superJumpFrame}F（{superJumpSecond}秒）</p>
-        <p>{onGroundFrame}F（{onGroundSecond}秒）</p>
+        <p>{superJumpFrame}F</p>
+        <p>{onGroundFrame}F</p>
       </div></>
     );
   } else if (name === "SuctionBomb" || name === "AutoBomb" || name === "SplatBomb" || name === "BurstBomb" || name === "ToxicMist") {
@@ -155,7 +155,7 @@ const SubPowerUp = (props) => {
       subWeaponImg = AutoBombImg;
     } else if (name === "ToxicMist") {
       subName = "ポイズンミスト";
-      subWeaponImg = ToxicMist
+      subWeaponImg = ToxicMistImg;
     }
     element = (
       <>
@@ -163,7 +163,7 @@ const SubPowerUp = (props) => {
           <img src={subWeaponImg} className="img-sub-sp" alt=""/>
       </div>
       <div className="ae-text-sm ability-effect">
-        <p>ボムの飛距離</p>
+        <p>飛距離</p>
       </div><div className="ae-colon-lg ability-effect">
         <p>:</p>
       </div><div className="ae-effect ability-effect">
@@ -174,7 +174,7 @@ const SubPowerUp = (props) => {
   } else if (name === "CurlingBomb") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === CurlingBomb[i].AP) {
-        velocity = Math.floor(2.2 * CurlingBomb[i].velocity * 10000) / 10000;
+        velocity = Math.floor(2.2 * CurlingBomb[i].velocity * 100) / 100;
         bombRange = Math.floor(CurlingBomb[i].velocity * 10000) / 100;
         subWeaponImg = CurlingBombImg;
       }
@@ -185,8 +185,8 @@ const SubPowerUp = (props) => {
           <img src={subWeaponImg} className="img-sub-sp" alt=""/>
       </div>
       <div className="ae-text-sm ability-effect">
-        <p>ボムの初速</p>
-        <p>ボムの移動距離</p>
+        <p>初速</p>
+        <p>移動距離</p>
       </div><div className="ae-colon-lg ability-effect">
         <p>:</p>
         <p>:</p>
@@ -217,8 +217,8 @@ const SubPowerUp = (props) => {
         <p>:</p>
         <p>:</p>
       </div><div className="ae-effect ability-effect">
-        <p>{firstPhaseFrame}F（{firstPhaseSecond}秒）</p>
-        <p>{secondPhaseFrame}F（{secondPhaseSecond}秒）</p>
+        <p>{firstPhaseFrame}F</p>
+        <p>{secondPhaseFrame}F</p>
       </div></>
     );
   } else if (name === "Sencor") {
@@ -242,7 +242,7 @@ const SubPowerUp = (props) => {
         <p>:</p>
       </div><div className="ae-effect ability-effect">
         <p>{bombRange}％</p>
-        <p>{markingFrame}F（{markingSecond}秒）</p>
+        <p>{markingFrame}F</p>
       </div></>
     );
   } else if (name === "InkMine") {
@@ -266,7 +266,7 @@ const SubPowerUp = (props) => {
         <p>:</p>
       </div><div className="ae-effect ability-effect">
         <p>{explosionRadius}％</p>
-        <p>{markingFrame}F（{markingSecond}秒）</p>
+        <p>{markingFrame}F</p>
       </div></>
     );
   } else if (name === "FizzyBomb" || name === "Torpedo") {
@@ -281,7 +281,7 @@ const SubPowerUp = (props) => {
         <img src={subWeaponImg} className="img-sub-sp" alt=""/>
       </div>
       <div className="ae-text-sm ability-effect">
-        <p>ボムの飛距離</p>
+        <p>飛距離</p>
       </div><div className="ae-colon-lg ability-effect">
         <p>:</p>
       </div><div className="ae-effect ability-effect">

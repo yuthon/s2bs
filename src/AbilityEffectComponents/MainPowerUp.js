@@ -196,7 +196,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
+        <p>{damage}</p>
       </div></>
     );
   } else if (name.indexOf("シャープマーカー") > -1) {
@@ -214,13 +214,13 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
+        <p>{damage}</p>
       </div></>
     );
   } else if (name.indexOf("わかば") > -1 || name.indexOf("もみじ") > -1 || name.indexOf("おちば") > -1) {
     for (let i=0; i < 40; i++) {
       if (Jr[i].AP === abilityPoint) {
-        paintRadius = Math.floor(Jr[i].PR / Jr[0].PR * 100000) / 1000;
+        paintRadius = Math.floor(Jr[i].PR / Jr[0].PR * 10000) / 100;
       }
     }
     element = (
@@ -237,7 +237,7 @@ const MainPowerUp = (props) => {
   } else if (name.indexOf("プロモデラー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Aerospray[i].AP === abilityPoint) {
-        paintRadius = Math.floor(Aerospray[i].PR / Aerospray[0].PR * 100000) / 1000;
+        paintRadius = Math.floor(Aerospray[i].PR / Aerospray[0].PR * 10000) / 100;
       }
     }
     element = (
@@ -258,8 +258,8 @@ const MainPowerUp = (props) => {
         rngJump = SplatterShot[i].DRJ;
       }
     }
-    rngInPercent = Math.floor(rng / SplatterShot[0].DR * 100000) / 1000;
-    rngJumpInPercent = Math.floor(rngJump / SplatterShot[0].DRJ * 100000) / 1000;
+    rngInPercent = Math.floor(rng / SplatterShot[0].DR * 10000) / 100;
+    rngJumpInPercent = Math.floor(rngJump / SplatterShot[0].DRJ * 10000) / 100;
     element = (
       <><div className="ae-text-xxl ability-effect">
         <p>弾の拡散（歩き撃ち）</p>
@@ -270,8 +270,8 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{rng}（{rngInPercent}％）</p>
-        <p>{rngJump}（{rngJumpInPercent}％）</p>
+        <p>{rngInPercent}％</p>
+        <p>{rngJumpInPercent}％</p>
       </div></>
     );
   } else if (name.indexOf("52ガロン") > -1) {
@@ -293,8 +293,8 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{rng}（{rngInPercent}％）</p>
-        <p>{rngJump}（{rngJumpInPercent}％）</p>
+        <p>{rngInPercent}％</p>
+        <p>{rngJumpInPercent}％</p>
       </div></>
     );
   } else if (name.indexOf("N-ZAP") > -1) {
@@ -315,7 +315,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{rng}（{rngInPercent}％）</p>
+        <p>{rngInPercent}％</p>
         <p>{paintRadius}％</p>
       </div></>
     );
@@ -334,14 +334,14 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
+        <p>{damage}</p>
       </div></>
     );
   } else if (name.indexOf("ジェットスイーパー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Jet[i].AP === abilityPoint) {
         rng = Jet[i].DR;
-        initVelocityRate = Math.floor(Jet[i].IVR * 100000) / 1000;
+        initVelocityRate = Math.floor(Jet[i].IVR * 10000) / 100;
       }
     }
     rngInPercent = Math.floor(rng / Jet[0].DR * 100000) / 1000;
@@ -355,7 +355,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{rng}（{rngInPercent}％）</p>
+        <p>{rngInPercent}％</p>
         <p>{initVelocityRate}％</p>
       </div></>
     );
@@ -374,14 +374,14 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
+        <p>{damage}</p>
       </div></>
     );
   } else if (name.indexOf("ノヴァブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Luna[i].AP === abilityPoint) {
-        paintRadius = Math.floor(Luna[i].PR / Luna[0].PR * 100000) / 1000;
-        explosionHitbox = Math.floor(28.01 / Luna[0].EH * Luna[i].EH * 1000) / 1000;
+        paintRadius = Math.floor(Luna[i].PR / Luna[0].PR * 10000) / 100;
+        explosionHitbox = Math.floor(28.01 / Luna[0].EH * Luna[i].EH * 100) / 100;
       }
     }
     element = (
@@ -404,7 +404,7 @@ const MainPowerUp = (props) => {
         rngJump = Blaster[i].DRJ;
       }
     }
-    rngJumpInPercent = Math.floor(rngJump / Blaster[0].DRJ * 100000) / 1000;
+    rngJumpInPercent = Math.floor(rngJump / Blaster[0].DRJ * 10000) / 100;
     element = (
       <><div className="ae-text-xxl ability-effect">
         <p>弾の拡散（ジャンプ撃ち）</p>
@@ -413,7 +413,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{rngJump}（{rngJumpInPercent}％）</p>
+        <p>{rngJumpInPercent}％</p>
       </div></>
     );
     } else if (name.indexOf("ロングブラスター") > -1) {
@@ -422,7 +422,7 @@ const MainPowerUp = (props) => {
         rngJump = Range[i].DRJ;
       }
     }
-    rngJumpInPercent = Math.floor(rngJump / Range[0].DRJ * 100000) / 1000;
+    rngJumpInPercent = Math.floor(rngJump / Range[0].DRJ * 10000) / 100;
     element = (
       <><div className="ae-text-xxl ability-effect">
         <p>弾の拡散（ジャンプ撃ち）</p>
@@ -431,7 +431,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{rngJump}（{rngJumpInPercent}％）</p>
+        <p>{rngJumpInPercent}％</p>
       </div></>
     );
   } else if (name.indexOf("クラッシュブラスター") > -1) {
@@ -440,7 +440,7 @@ const MainPowerUp = (props) => {
         rngJump = Clash[i].DRJ;
       }
     }
-    rngJumpInPercent = Math.floor(rngJump / Clash[0].DRJ * 100000) / 1000;
+    rngJumpInPercent = Math.floor(rngJump / Clash[0].DRJ * 10000) / 100;
     element = (
       <><div className="ae-text-xxl ability-effect">
         <p>弾の拡散（ジャンプ撃ち）</p>
@@ -449,17 +449,17 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{rngJump}（{rngJumpInPercent}％）</p>
+        <p>{rngJumpInPercent}％</p>
       </div></>
     );
   } else if (name.indexOf("ラピッドブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Rapid[i].AP === abilityPoint) {
         rngJump = Rapid[i].DRJ;
-        explosionHitbox = Math.floor(Rapid[i].EH / Rapid[0].EH * 100000) / 1000;
+        explosionHitbox = Math.floor(Rapid[i].EH / Rapid[0].EH * 10000) / 100;
       }
     }
-    rngJumpInPercent = Math.floor(rngJump / Rapid[0].DRJ * 100000) / 1000;
+    rngJumpInPercent = Math.floor(rngJump / Rapid[0].DRJ * 10000) / 100;
     element = (
       <><div className="ae-text-xxl ability-effect">
         <p>弾の拡散（ジャンプ撃ち）</p>
@@ -470,7 +470,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{rngJump}（{rngJumpInPercent}％）</p>
+        <p>{rngJumpInPercent}％</p>
         <p>{explosionHitbox}％</p>
       </div></>
     );
@@ -478,10 +478,10 @@ const MainPowerUp = (props) => {
     for (let i=0; i < 40; i++) {
       if (RapidPro[i].AP === abilityPoint) {
         rngJump = RapidPro[i].DRJ;
-        explosionHitbox = Math.floor(Rapid[i].EH / RapidPro[0].EH * 100000) / 1000;
+        explosionHitbox = Math.floor(Rapid[i].EH / RapidPro[0].EH * 10000) / 100;
       }
     }
-    rngJumpInPercent = Math.floor(rngJump / RapidPro[0].DRJ * 100000) / 1000;
+    rngJumpInPercent = Math.floor(rngJump / RapidPro[0].DRJ * 10000) / 100;
     element = (
       <><div className="ae-text-xxl ability-effect">
         <p>弾の拡散（ジャンプ撃ち）</p>
@@ -492,7 +492,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{rngJump}（{rngJumpInPercent}％）</p>
+        <p>{rngJumpInPercent}％</p>
         <p>{explosionHitbox}％</p>
       </div></>
     );
@@ -511,7 +511,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
+        <p>{damage}</p>
       </div></>
     );
   } else if (name.indexOf("H-3") > -1) {
@@ -529,7 +529,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
+        <p>{damage}</p>
       </div></>
     );
   } else if (name.indexOf("ボトルカイザー") > -1) {
@@ -547,7 +547,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
+        <p>{damage}</p>
       </div></>
     );
   } else if (name.indexOf("スプラローラー") > -1) {
@@ -675,7 +675,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
+        <p>{damage}</p>
       </div></>
     );
   } else if (name.indexOf("スクイックリン") > -1) {
@@ -735,7 +735,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
+        <p>{damage}</p>
       </div></>
     );
   } else if (name.indexOf("ソイチューバー") > -1) {
@@ -753,7 +753,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
+        <p>{damage}</p>
       </div></>
     );
   } else if (name.indexOf("バケットスロッシャー") > -1) {
@@ -858,7 +858,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{bullets}発（{extraBullets}発増）</p>
+        <p>{bullets}発</p>
       </div></>
     );
   } else if (name.indexOf("バレルスピナー") > -1 || name.indexOf("ヒーロースピナー") > -1) {
@@ -876,7 +876,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{bullets}発（{extraBullets}発増）</p>
+        <p>{bullets}発</p>
       </div></>
     );
   } else if (name.indexOf("ハイドラント") > -1) {
@@ -898,8 +898,8 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
-        <p>{damageFar}（{damageFarInPercent}％）</p>
+        <p>{damage}</p>
+        <p>{damageFar}</p>
       </div></>
     );
   } else if (name.indexOf("クーゲルシュライバー") > -1) {
@@ -917,7 +917,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
+        <p>{damage}</p>
       </div></>
     );
   } else if (name.indexOf("ノーチラス") > -1) {
@@ -935,7 +935,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{bullets}発（{extraBullets}発増）</p>
+        <p>{bullets}発</p>
       </div></>
     );
   } else if (name.indexOf("スパッタリー") > -1) {
@@ -953,7 +953,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
+        <p>{damage}</p>
       </div></>
     );
   } else if (name.indexOf("マニューバー") > -1) {
@@ -971,7 +971,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
+        <p>{damage}</p>
       </div></>
     );
   } else if (name.indexOf("ケルビン") > -1) {
@@ -993,8 +993,8 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
-        <p>{damageFar}（{damageFarInPercent}％）</p>
+        <p>{damage}</p>
+        <p>{damageFar}</p>
       </div></>
     );
   } else if (name.indexOf("デュアル") > -1) {
@@ -1012,7 +1012,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
+        <p>{damage}</p>
       </div></>
     );
   } else if (name.indexOf("クアッドホッパー") > -1) {
@@ -1030,7 +1030,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{damage}（{damageInPercent}％）</p>
+        <p>{damage}</p>
       </div></>
     );
   } else if (name.indexOf("パラシェルター") > -1) {
@@ -1048,7 +1048,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{recorveryFrame}F（{recorverySecond}）秒</p>
+        <p>{recorveryFrame}F</p>
       </div></>
     );
   } else if (name.indexOf("キャンピングシェルター") > -1) {
@@ -1066,7 +1066,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{hp}（+{extraHP}）</p>
+        <p>{hp}</p>
       </div></>
     );
   } else if (name.indexOf("スパイガジェット") > -1) {
@@ -1084,7 +1084,7 @@ const MainPowerUp = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{recorveryFrame}F（{recorverySecond}）秒</p>
+        <p>{recorveryFrame}F</p>
       </div></>
     );
   }
