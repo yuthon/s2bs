@@ -126,289 +126,289 @@ const RunSpeed = (props) => {
   if (weaponStatus.name.indexOf("ボールドマーカー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Sploosh[i].AP === abilityPoint) {
-        runSpeedShooting = Sploosh[i].RS;
+        runSpeedShooting = Math.floor(Sploosh[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("シャープマーカー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Splash[i].AP === abilityPoint) {
-         runSpeedShooting = Splash[i].RS;
+         runSpeedShooting = Math.floor(Splash[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("わかば") > -1 || weaponStatus.name.indexOf("もみじ") > -1 || weaponStatus.name.indexOf("おちば") > -1) {
     for (let i=0; i < 40; i++) {
       if (Jr[i].AP === abilityPoint) {
-         runSpeedShooting = Jr[i].RS;
+         runSpeedShooting = Math.floor(Jr[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("プロモデラー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Aerospray[i].AP === abilityPoint) {
-         runSpeedShooting = Aerospray[i].RS;
+         runSpeedShooting = Math.floor(Aerospray[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("52ガロン") > -1) {
     for (let i=0; i < 40; i++) {
       if (Gal52[i].AP === abilityPoint) {
-         runSpeedShooting = Gal52[i].RS;
+         runSpeedShooting = Math.floor(Gal52[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("N-ZAP") > -1) {
     for (let i=0; i < 40; i++) {
       if (Nzap[i].AP === abilityPoint) {
-         runSpeedShooting = Nzap[i].RS;
+         runSpeedShooting = Math.floor(Nzap[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("プライムシューター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Pro[i].AP === abilityPoint) {
-         runSpeedShooting = Pro[i].RS;
+         runSpeedShooting = Math.floor(Pro[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("ジェットスイーパー") > -1) {
     for (let i=0; i < 40; i++) {
       if (JetSquelcher[i].AP === abilityPoint) {
-         runSpeedShooting = JetSquelcher[i].RS;
+         runSpeedShooting = Math.floor(JetSquelcher[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("96ガロン") > -1) {
     for (let i=0; i < 40; i++) {
       if (Gal96[i].AP === abilityPoint) {
-         runSpeedShooting = Gal96[i].RS;
+         runSpeedShooting = Math.floor(Gal96[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("ノヴァブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Luna[i].AP === abilityPoint) {
-         runSpeedShooting = Luna[i].RS;
+         runSpeedShooting = Math.floor(Luna[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("ホットブラスター") > -1 || weaponStatus.name.indexOf("ヒーローブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Blaster[i].AP === abilityPoint) {
-         runSpeedShooting = Blaster[i].RS;
+         runSpeedShooting = Math.floor(Blaster[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("クラッシュブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Clash[i].AP === abilityPoint) {
-         runSpeedShooting = Clash[i].RS;
+         runSpeedShooting = Math.floor(Clash[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("スプラシューター") > -1 || weaponStatus.name.indexOf("ヒーローシューター") > -1 || weaponStatus.name.indexOf("オクタシューター") > -1) {
     for (let i=0; i < 40; i++) {
       if (SplatterShot[i].AP === abilityPoint) {
-         runSpeedShooting = SplatterShot[i].RS;
+         runSpeedShooting = Math.floor(SplatterShot[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("ラピッドブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Rapid[i].AP === abilityPoint) {
-         runSpeedShooting = Rapid[i].RS;
+         runSpeedShooting = Math.floor(Rapid[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("ダイナモローラー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Dynamo[i].AP === abilityPoint) {
-         runSpeedShooting = Dynamo[i].RS;
+         runSpeedShooting = Math.floor(Dynamo[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("L-3") > -1) {
     for (let i=0; i < 40; i++) {
       if (L3[i].AP === abilityPoint) {
-         runSpeedShooting = L3[i].RS;
+         runSpeedShooting = Math.floor(L3[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("H-3") > -1) {
     for (let i=0; i < 40; i++) {
       if (H3[i].AP === abilityPoint) {
-         runSpeedShooting = H3[i].RS;
+         runSpeedShooting = Math.floor(H3[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("Rブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (RapidPro[i].AP === abilityPoint) {
-         runSpeedShooting = RapidPro[i].RS;
+         runSpeedShooting = Math.floor(RapidPro[i].RS * 100) /100;
       }
     }
   } else if (weaponStatus.name.indexOf("ボトルカイザー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Squeezer[i].AP === abilityPoint) {
-         runSpeedShooting = Squeezer[i].RS;
+         runSpeedShooting = Math.floor(Squeezer[i].RS * 100) /100;
       }
     }
   } else if (weaponStatus.name.indexOf("スプラローラー") > -1) {
     for (let i=0; i < 40; i++) {
       if (SplatRoller[i].AP === abilityPoint) {
-         runSpeedShooting = SplatRoller[i].RS;
+         runSpeedShooting = Math.floor(SplatRoller[i].RS * 100) /100;
       }
     }
   } else if (weaponStatus.name.indexOf("カーボン") > -1) {
     for (let i=0; i < 40; i++) {
       if (Carbon[i].AP === abilityPoint) {
-         runSpeedShooting = Carbon[i].RS;
+         runSpeedShooting = Math.floor(Carbon[i].RS * 100) /100;
       }
     }
   } else if (weaponStatus.name.indexOf("ロングブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Range[i].AP === abilityPoint) {
-         runSpeedShooting = Range[i].RS;
+         runSpeedShooting = Math.floor(Range[i].RS * 100) /100;
       }
     }
   } else if (weaponStatus.name.indexOf("ヴァリアブルローラー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Flingza[i].AP === abilityPoint) {
-         runSpeedShooting = Flingza[i].RS;
+         runSpeedShooting = Math.floor(Flingza[i].RS * 100) /100;
       }
     }
   } else if (weaponStatus.name.indexOf("ホクサイ") > -1) {
     for (let i=0; i < 40; i++) {
       if (Octobrush[i].AP === abilityPoint) {
-         runSpeedShooting = Octobrush[i].RS;
+         runSpeedShooting = Math.floor(Octobrush[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("パブロ") > -1) {
     for (let i=0; i < 40; i++) {
       if (Inkbrush[i].AP === abilityPoint) {
-         runSpeedShooting = Inkbrush[i].RS;
+         runSpeedShooting = Math.floor(Inkbrush[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("スプラチャージャー") > -1 || weaponStatus.name.indexOf("スプラスコープ") > -1) {
     for (let i=0; i < 40; i++) {
       if (Charger[i].AP === abilityPoint) {
-         runSpeedShooting = Charger[i].RS;
+         runSpeedShooting = Math.floor(Charger[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("スクイックリン") > -1) {
     for (let i=0; i < 40; i++) {
       if (Squiffer[i].AP === abilityPoint) {
-         runSpeedShooting = Squiffer[i].RS;
+         runSpeedShooting = Math.floor(Squiffer[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("リッター") > -1 || weaponStatus.name.indexOf("4Kスコープ") > -1) {
     for (let i=0; i < 40; i++) {
       if (Eliter[i].AP === abilityPoint) {
-         runSpeedShooting = Eliter[i].RS;
+         runSpeedShooting = Math.floor(Eliter[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("竹") > -1) {
     for (let i=0; i < 40; i++) {
       if (Bamboo[i].AP === abilityPoint) {
-         runSpeedShooting = Bamboo[i].RS;
+         runSpeedShooting = Math.floor(Bamboo[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("ソイチューバー") > -1) {
     for (let i=0; i < 40; i++) {
       if (GooTuber[i].AP === abilityPoint) {
-         runSpeedShooting = GooTuber[i].RS;
+         runSpeedShooting = Math.floor(GooTuber[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("バケットスロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Slosher[i].AP === abilityPoint) {
-         runSpeedShooting = Slosher[i].RS;
+         runSpeedShooting = Math.floor(Slosher[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("ヒッセン") > -1) {
     for (let i=0; i < 40; i++) {
       if (Tri[i].AP === abilityPoint) {
-         runSpeedShooting = Tri[i].RS;
+         runSpeedShooting = Math.floor(Tri[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("スクリュー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Machine[i].AP === abilityPoint) {
-         runSpeedShooting = Machine[i].RS;
+         runSpeedShooting = Math.floor(Machine[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("オーバーフロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Blob[i].AP === abilityPoint) {
-         runSpeedShooting = Blob[i].RS;
+         runSpeedShooting = Math.floor(Blob[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("エクスプロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Explo[i].AP === abilityPoint) {
-         runSpeedShooting = Explo[i].RS;
+         runSpeedShooting = Math.floor(Explo[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("スプラスピナー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Mini[i].AP === abilityPoint) {
-         runSpeedShooting = Mini[i].RS;
+         runSpeedShooting = Math.floor(Mini[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("バレルスピナー") > -1 || weaponStatus.name.indexOf("ヒーロースピナー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Heavy[i].AP === abilityPoint) {
-         runSpeedShooting = Heavy[i].RS;
+         runSpeedShooting = Math.floor(Heavy[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("ハイドラント") > -1) {
     for (let i=0; i < 40; i++) {
       if (Hydra[i].AP === abilityPoint) {
-         runSpeedShooting = Hydra[i].RS;
+         runSpeedShooting = Math.floor(Hydra[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("クーゲルシュライバー") > -1) {
     for (let i=0; i < 40; i++) {
       if (BallPoint[i].AP === abilityPoint) {
-         runSpeedShooting = BallPoint[i].RS;
+         runSpeedShooting = Math.floor(BallPoint[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("ノーチラス") > -1) {
     for (let i=0; i < 40; i++) {
       if (Nautilus[i].AP === abilityPoint) {
-         runSpeedShooting = Nautilus[i].RS;
+         runSpeedShooting = Math.floor(Nautilus[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("スパッタリー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Dapples[i].AP === abilityPoint) {
-         runSpeedShooting = Dapples[i].RS;
+         runSpeedShooting = Math.floor(Dapples[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("マニューバー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Dualies[i].AP === abilityPoint) {
-         runSpeedShooting = Dualies[i].RS;
+         runSpeedShooting = Math.floor(Dualies[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("ケルビン") > -1) {
     for (let i=0; i < 40; i++) {
       if (Glooga[i].AP === abilityPoint) {
-         runSpeedShooting = Glooga[i].RS;
+         runSpeedShooting = Math.floor(Glooga[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("デュアル") > -1) {
     for (let i=0; i < 40; i++) {
       if (DualieSquelcher[i].AP === abilityPoint) {
-         runSpeedShooting = DualieSquelcher[i].RS;
+         runSpeedShooting = Math.floor(DualieSquelcher[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("クアッドホッパー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Tetras[i].AP === abilityPoint) {
-         runSpeedShooting = Tetras[i].RS;
+         runSpeedShooting = Math.floor(Tetras[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("パラシェルター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Brella[i].AP === abilityPoint) {
-         runSpeedShooting = Brella[i].RS;
+         runSpeedShooting = Math.floor(Brella[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("キャンピングシェルター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Tenta[i].AP === abilityPoint) {
-         runSpeedShooting = Tenta[i].RS;
+         runSpeedShooting = Math.floor(Tenta[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.name.indexOf("スパイガジェット") > -1) {
     for (let i=0; i < 40; i++) {
       if (Undercover[i].AP === abilityPoint) {
-         runSpeedShooting = Undercover[i].RS;
+         runSpeedShooting = Math.floor(Undercover[i].RS * 100) / 100;
       }
     }
   }
@@ -417,19 +417,19 @@ const RunSpeed = (props) => {
   if (weaponStatus.weight === "light") {
     for (let i=0; i < 40; i++) {
       if (lightClass[i].AP === abilityPoint) {
-        runSpeed = lightClass[i].RS;
+        runSpeed = Math.floor(lightClass[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.weight === "middle") {
     for (let i=0; i < 40; i++) {
       if (middleClass[i].AP === abilityPoint) {
-        runSpeed = middleClass[i].RS;
+        runSpeed = Math.floor(middleClass[i].RS * 100) / 100;
       }
     }
   } else if (weaponStatus.weight === "heavy") {
     for (let i=0; i < 40; i++) {
       if (heavyClass[i].AP === abilityPoint) {
-        runSpeed = heavyClass[i].RS;
+        runSpeed = Math.floor(heavyClass[i].RS * 100) / 100;
       }
     }
   }
@@ -449,8 +449,8 @@ const RunSpeed = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{runSpeed}DU/F</p>
-        <p>{runSpeedShooting}DU/F</p>
+        <p>{runSpeed} DU/F</p>
+        <p>{runSpeedShooting} DU/F</p>
       </div>
     </div>
   )
