@@ -68,6 +68,7 @@ const SwimSpeed = (props) => {
       }
     }
   }
+  console.log(abilityPoint)
   return (
     <div className="ae-card border d-flex align-items-center">
       <div className="ae-icon">  

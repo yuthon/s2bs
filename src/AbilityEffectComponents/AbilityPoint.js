@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+// コンポーネント
 import InkSaverMain from './InkSaverMain';
 import InkSaverSub from './InkSaverSub';
 import InkRecovery from './InkRecovery';
@@ -14,6 +14,11 @@ import SubPowerUp from './SubPowerUp';
 import InkResistance from './InkResistance';
 import BombDefenceUp from './BombDefenceUp';
 import MainPowerUp from './MainPowerUp';
+// アビリティの画像
+import ComebackImg from '../images/ability/CB.png';
+import LastDitchEffortImg from '../images/ability/LDE.png';
+import OpeningGanbitImg from '../images/ability/OG.png';
+import DropRollerImg from '../images/ability/DR.png';
 
 
 const AbilityPoint = (props) => {
@@ -255,40 +260,15 @@ const AbilityPoint = (props) => {
     }
   };
   
+  // カムバック
   let btnComeback;
-  
+  let toggleComeback;
   if (mainAbilityName[0] === "comeback") {
     if (isComebackActive) {
-      // 切り替えスイッチのJSX
-      btnComeback = (
+      // ONの時の切り替えスイッチのJSX
+      toggleComeback = (
         <div 
-        className="turned-on"
-        id="switch-comeback"
-        onClick={()=>{
-          btnToggle("comeback");
-          if (isComebackActive) {
-            Comeback(false);
-          } else {
-            Comeback(true);
-          }
-        }}
-      >
-        <div className="switch-base"></div>
-        <div id="switch-circle"></div>
-      </div>
-      );
-      // APを加算
-      inkSaverMainAP = inkSaverMainAP + 10;
-      inkSaverSubAP = inkSaverSubAP + 10;
-      inkRecoveryAP = inkRecoveryAP + 10;
-      runSpeedAP = runSpeedAP + 10;
-      swimSpeedAP = swimSpeedAP + 10;
-      specialChargeAP = specialChargeAP + 10;
-      
-    } else {
-      btnComeback = (
-        <div 
-          className="turned-off"
+          className="turned-on"
           id="switch-comeback"
           onClick={()=>{
             btnToggle("comeback");
@@ -302,17 +282,56 @@ const AbilityPoint = (props) => {
           <div className="switch-base"></div>
           <div id="switch-circle"></div>
         </div>
+      )
+      // APを加算
+      inkSaverMainAP = inkSaverMainAP + 10;
+      inkSaverSubAP = inkSaverSubAP + 10;
+      inkRecoveryAP = inkRecoveryAP + 10;
+      runSpeedAP = runSpeedAP + 10;
+      swimSpeedAP = swimSpeedAP + 10;
+      specialChargeAP = specialChargeAP + 10;
+      
+    } else {
+      // OFFの時の切り替えスイッチのJSX
+      toggleComeback = (
+        <div
+          className="turned-off"
+          id="switch-comeback"
+          onClick={() => {
+            btnToggle("comeback");
+            if (isComebackActive) {
+              Comeback(false);
+            } else {
+              Comeback(true);
+            }
+          } }
+        >
+          <div className="switch-base"></div>
+          <div id="switch-circle"></div>
+        </div>
       );
     }
+    // 最終的に表示するJSX
+    btnComeback = (
+      <div className="ae-card border d-flex align-items-center">
+        <div className="ae-icon">  
+          <div className="ability-icon sub-slot slot my-1">
+            <img className="subslot-img" src={ComebackImg} alt=""/>
+          </div>
+        </div>
+        {toggleComeback}
+      </div>
+    );
   }
   
   // スタートダッシュ
   let btnOpeningGanbit;
-  
+  let toggleOpeningGanbit;
+
   if (mainAbilityName[0] === "openingGanbit") {
     if (isOpeningGanbitActive) {
-      // 切り替えスイッチのJSX
-      btnOpeningGanbit = (
+      // ONの時の切り替えスイッチのJSX
+      toggleOpeningGanbit = (
         <div 
           className="turned-on"
           id="switch-openingGanbit"
@@ -334,7 +353,8 @@ const AbilityPoint = (props) => {
       swimSpeedAP = swimSpeedAP + 30;
       inkResAP = inkResAP + 30;
     } else {
-      btnOpeningGanbit = (
+      // OFFの時の切り替えスイッチのJSX
+      toggleOpeningGanbit = (
         <div 
           className="turned-off"
           id="switch-openingGanbit"
@@ -352,15 +372,27 @@ const AbilityPoint = (props) => {
         </div>
       )
     }
+    // 最終的に表示するJSX
+    btnOpeningGanbit = (
+      <div className="ae-card border d-flex align-items-center">
+        <div className="ae-icon">  
+          <div className="ability-icon sub-slot slot my-1">
+            <img className="subslot-img" src={OpeningGanbitImg} alt=""/>
+          </div>
+        </div>
+        {toggleOpeningGanbit}
+      </div>
+    );
   }
   
   // ラストスパート
   let btnLastDitchEffort;
+  let toggleLastDitchEffort;
   
   if (mainAbilityName[0] === "lde") {
     if (isLastDitchEffortActive) {
       // 切り替えスイッチのJSX
-      btnLastDitchEffort = (
+      toggleLastDitchEffort = (
         <div 
           className="turned-on"
           id="switch-lastDitchEffort"
@@ -382,7 +414,7 @@ const AbilityPoint = (props) => {
       inkSaverSubAP = inkSaverSubAP + 24;
       inkRecoveryAP = inkRecoveryAP + 24;
     } else {
-      btnLastDitchEffort = (
+      toggleLastDitchEffort = (
         <div 
           className="turned-off"
           id="switch-lastDitchEffort"
@@ -400,15 +432,27 @@ const AbilityPoint = (props) => {
         </div>
       )
     }
+    // 最終的に表示するJSX
+    btnLastDitchEffort = (
+      <div className="ae-card border d-flex align-items-center">
+        <div className="ae-icon">  
+          <div className="ability-icon sub-slot slot my-1">
+            <img className="subslot-img" src={LastDitchEffortImg} alt=""/>
+          </div>
+        </div>
+        {toggleLastDitchEffort}
+      </div>
+    );
   }
   
   // 受け身
   let btnDropRoller;
+  let toggleDropRoller;
   
   if (mainAbilityName[2] === "dropRoller") {
     if (isDropRollerActive) {
       // 切り替えスイッチのJSX
-      btnDropRoller = (
+      toggleDropRoller = (
         <div 
           className="turned-on"
           id="switch-dropRoller"
@@ -430,7 +474,7 @@ const AbilityPoint = (props) => {
       swimSpeedAP = swimSpeedAP + 30;
       inkResAP = inkResAP + 30;
     } else {
-      btnDropRoller = (
+      toggleDropRoller = (
         <div 
           className="turned-off"
           id="switch-dropRoller"
@@ -448,13 +492,24 @@ const AbilityPoint = (props) => {
         </div>
       )
     }
+    // 最終的に表示するJSX
+    btnDropRoller = (
+      <div className="ae-card border d-flex align-items-center">
+        <div className="ae-icon">  
+          <div className="ability-icon sub-slot slot my-1">
+            <img className="subslot-img" src={DropRollerImg} alt=""/>
+          </div>
+        </div>
+        {toggleDropRoller}
+      </div>
+    );
   }
   
   // APの上限は57なので特殊ギアによってそれ以上になった場合は強制的に57にする
   if (inkSaverMainAP > 57) {
     inkSaverMainAP = 57;
   }
-  if (inkSaverSubAP) {
+  if (inkSaverSubAP > 57) {
     inkSaverSubAP = 57;
   }
   if (inkRecoveryAP > 57) {
