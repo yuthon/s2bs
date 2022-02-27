@@ -3,7 +3,6 @@ import swimSpeedImg from '../images/ability/SSU.png';
 
 const SwimSpeed = (props) => {
   let swimSpeed;
-  let swimSpeedNinja;
   let abilityPoint = props.abilityPoint
   let weight = props.weaponStatus.weight
   let abilityName = props.abilityName
@@ -32,19 +31,19 @@ const SwimSpeed = (props) => {
     if (weight === "light") {
       for (let i=0; i < 40; i++) {
         if (light[i].AP === abilityPoint) {
-          swimSpeed = light[i].SS;
+          swimSpeed = Math.floor(light[i].SS * 100) / 100;
         }
       }
     } else if (weight === "middle") {
       for (let i=0; i < 40; i++) {
         if (middle[i].AP === abilityPoint) {
-          swimSpeed = middle[i].SS;
+          swimSpeed = Math.floor(middle[i].SS * 100) / 100;
         }
       }
     } else if (weight === "heavy") {
       for (let i=0; i < 40; i++) {
         if (heavy[i].AP === abilityPoint) {
-          swimSpeed = heavy[i].SS;
+          swimSpeed = Math.floor(heavy[i].SS * 100) / 100;
         }
       }
     }
@@ -52,19 +51,19 @@ const SwimSpeed = (props) => {
     if (weight === "light") {
       for (let i=0; i < 30; i++) {
         if (lightNinja[i].AP === abilityPoint) {
-          swimSpeed = lightNinja[i].SS;
+          swimSpeed = Math.floor(lightNinja[i].SS * 100) / 100;
         }
       }
     } else if (weight === "middle") {
       for (let i=0; i < 30; i++) {
         if (middleNinja[i].AP === abilityPoint) {
-          swimSpeed = middleNinja[i].SS;
+          swimSpeed = Math.floor(middleNinja[i].SS * 100) / 100;
         }
       }
     } else if (weight === "heavy") {
       for (let i=0; i < 30; i++) {
         if (heavyNinja[i].AP === abilityPoint) {
-          swimSpeed = heavyNinja[i].SS;
+          swimSpeed = Math.floor(heavyNinja[i].SS * 100) / 100;
         }
       }
     }
@@ -83,7 +82,7 @@ const SwimSpeed = (props) => {
         <p>:</p>
       </div>
       <div className="ae-effect ability-effect">
-        <p>{swimSpeed}DU/F</p>
+        <p>{swimSpeed} DU/F</p>
       </div>
     </div>
   )
