@@ -213,7 +213,7 @@ const Main = () => {
           <FMLBottomsModal
             passBottoms={passBottoms} />
         </div>
-        <div style={{ height: '900px', width: '430px' }}>
+        <div style={{ height: '800px', width: '430px' }}>
           <Canvas
             style={{ background: '#f0f0e0' }}
             camera={{ position: [0, 11, 20] }}
@@ -247,7 +247,7 @@ const Main = () => {
           </Canvas>
         </div>
       </div>
-      <div className="font-type2 col-5 overflow-auto" style={{ height: '100vh'}}>
+      <div className="font-type2 col-5 overflow-auto" id="ae-section">
         <div>
           <WeaponModal
             weaponStatus={passWeaponStatus} />
