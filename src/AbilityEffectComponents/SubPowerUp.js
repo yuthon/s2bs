@@ -1,23 +1,10 @@
 import subPowerImg from '../images/ability/SubPU.png';
-import CurlingBombImg from '../images/subSP/Wsb_Bomb_Curling.png';
-import FizzyBombImg from '../images/subSP/Wsb_Bomb_Fizzy.png';
-import BurstBombImg from '../images/subSP/Wsb_Bomb_Burst.png';
-import AutoBombImg from '../images/subSP/Wsb_Bomb_Auto.png';
-import SplatBombImg from '../images/subSP/Wsb_Bomb_Splat.png';
-import SuctionBombImg from '../images/subSP/Wsb_Bomb_Suction.png';
-import TorpedoImg from '../images/subSP/Wsb_Torpedo.png';
-import SquidBeakonImg from '../images/subSP/Wsb_SquidBeakon.png';
-import PointSensorImg from '../images/subSP/Wsb_PointSensor.png';
-import ToxicMistImg from '../images/subSP/Wsb_ToxicMist.png';
-import SplashWallImg from '../images/subSP/Wsb_SplashWall.png';
-import SprinklerImg from '../images/subSP/Wsb_Sprinkler.png';
-import InkMineImg from '../images/subSP/Wsb_InkMine.png';
 
 const SubPowerUp = (props) => {
   let name = props.weaponStatus.sub;
   let abilityPoint = props.SPUabilityPoint;
   let element;
-  let subWeaponImg
+  let subWeaponImg = props.weaponStatus.pathSub
   
   // ビーコン
   let superJumpFrame;
@@ -46,8 +33,7 @@ const SubPowerUp = (props) => {
   ];
   
   let bombRange;
-  
-  let subName;
+
   
   // カーリングボム
   const CurlingBomb = [
@@ -97,7 +83,7 @@ const SubPowerUp = (props) => {
   
   let wallHP;
   
-  if (name === "Beakon") {
+  if (name === "ジャンプビーコン") {
     if (QSJabilityPoint === 0 && abilityPoint >= 0) {
       for (let i=0; i<40; i++) {
         if (abilityPoint === prepareTime[i].AP) {
@@ -135,27 +121,11 @@ const SubPowerUp = (props) => {
         <p>{onGroundFrame}F</p>
       </div></>
     );
-  } else if (name === "SuctionBomb" || name === "AutoBomb" || name === "SplatBomb" || name === "BurstBomb" || name === "ToxicMist") {
+  } else if (name === "キューバンボム" || name === "ロボットボム" || name === "スプラッシュボム" || name === "クイックボム" || name === "ポイントセンサー") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === BombsAndMist[i].AP) {
         bombRange = Math.floor(BombsAndMist[i].velocity / BombsAndMist[0].velocity * 10000) / 100;
       }
-    }
-    if (name === "SuctionBomb") {
-      subName = "キューバンボム";
-      subWeaponImg = SuctionBombImg;
-    } else if (name === "SplatBomb") {
-      subName = "スプラッシュボム";
-      subWeaponImg = SplatBombImg;
-    } else if (name === "BurstBomb") {
-      subName = "クイックボム";
-      subWeaponImg = BurstBombImg;
-    } else if (name === "AutoBomb") {
-      subName = "ロボットボム";
-      subWeaponImg = AutoBombImg;
-    } else if (name === "ToxicMist") {
-      subName = "ポイズンミスト";
-      subWeaponImg = ToxicMistImg;
     }
     element = (
       <>
@@ -171,12 +141,11 @@ const SubPowerUp = (props) => {
       </div>
       </>
     );
-  } else if (name === "CurlingBomb") {
+  } else if (name === "カーリングボム") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === CurlingBomb[i].AP) {
         velocity = Math.floor(2.2 * CurlingBomb[i].velocity * 100) / 100;
         bombRange = Math.floor(CurlingBomb[i].velocity * 10000) / 100;
-        subWeaponImg = CurlingBombImg;
       }
     }
     element = (
@@ -196,14 +165,13 @@ const SubPowerUp = (props) => {
       </div>
       </>
     );
-  } else if (name === "Sprinkler") {
+  } else if (name === "スプリンクラー") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === Sprinkler[i].AP) {
         firstPhaseFrame = Sprinkler[i].FF;
         firstPhaseSecond = Math.floor(firstPhaseFrame / 60 * 100) / 100;
         secondPhaseFrame = Sprinkler[i].SF;
         secondPhaseSecond = Math.floor(secondPhaseFrame / 60 * 100) / 100;
-        subWeaponImg = SprinklerImg;
       }
     }
     element = (
@@ -221,13 +189,12 @@ const SubPowerUp = (props) => {
         <p>{secondPhaseFrame}F</p>
       </div></>
     );
-  } else if (name === "Sencor") {
+  } else if (name === "ポイントセンサー") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === PointSencorMarkingTime[i].AP) {
         bombRange = Math.floor(PointSencorVelocity[i].velocity / PointSencorVelocity[0].velocity * 10000) / 100;
         markingFrame = PointSencorMarkingTime[i].MT
         markingSecond = Math.floor(markingFrame / 60 * 100) / 100;
-        subWeaponImg = PointSensorImg;
       }
     }
     element = (
@@ -245,13 +212,12 @@ const SubPowerUp = (props) => {
         <p>{markingFrame}F</p>
       </div></>
     );
-  } else if (name === "InkMine") {
+  } else if (name === "トラップ") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === InkMine[i].AP) {
         explosionRadius = Math.floor(InkMine[i].ER * 10000) / 100;
         markingFrame = InkMine[i].DT
         markingSecond = Math.floor(markingFrame / 60 * 100) / 100;
-        subWeaponImg = InkMineImg;
       }
     }
     element = (
@@ -269,11 +235,10 @@ const SubPowerUp = (props) => {
         <p>{markingFrame}F</p>
       </div></>
     );
-  } else if (name === "FizzyBomb" || name === "Torpedo") {
+  } else if (name === "タンサンボム" || name === "トーピード") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === FizzyBomb[i].AP) {
         bombRange = Math.floor(FizzyBomb[i].velocity / FizzyBomb[0].velocity * 10000) / 100;
-        subWeaponImg = FizzyBombImg;
       }
     }
     element = (
@@ -288,11 +253,10 @@ const SubPowerUp = (props) => {
         <p>{bombRange}％</p>
       </div></>
     );
-  } else if (name === "SplashWall") {
+  } else if (name === "スプラッシュシールド") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === SplashWall[i].AP) {
         wallHP = SplashWall[i].HP;
-        subWeaponImg = SplashWallImg;
       }
     }
     element = (

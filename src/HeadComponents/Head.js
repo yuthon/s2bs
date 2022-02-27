@@ -8,7 +8,7 @@ const Head = (props) => {
   return(
     <div className="headgear-card">
       <div className="container px-0">
-        <div className="gear-header"> 
+        <div className="gear-header">
           <div className="font-type1 text-white">
             <span className="h1 my-0">アタマ</span>
           </div>

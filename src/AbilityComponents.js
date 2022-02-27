@@ -27,10 +27,12 @@ import Shoes from './ShoesComponents/Shoes';
 //初期表示用の画像
 import empty from './images/ability/empty.png';
 import Jr_0 from './images/weapon/Splattershot Jr.png';
+import SplatBomb from './images/subSP/Wsb_Bomb_Splat.png';
+import InkArmor from './images/subSP/Wsp_InkArmor.png';
 
 const AbilityComponents = (props) => {
   //ブキの名前とその他の情報を管理
-  const [weaponStatus, passWeaponStatus] = useState({name:"わかばシューター", sub:"SplatBomb", special:"Armor", sp:180, weight:"light", path:Jr_0});
+  const [weaponStatus, passWeaponStatus] = useState({name:"わかばシューター", sub:"スプラッシュボム", special:"インクアーマー", sp:180, weight:"light", path:Jr_0, pathSub:SplatBomb,pathSpecial:InkArmor});
   //メインスロットのアビリティの画像のpathを管理
   const [mainAbilityImagePath0, passMainAbilityImagePath0] = useState(empty);
   const [mainAbilityImagePath1, passMainAbilityImagePath1] = useState(empty);
@@ -135,14 +137,12 @@ const AbilityComponents = (props) => {
       </div>
     </div>
     <div className="font-type2 col-5 order-3" id="ae-section">
-      <div>
         <WeaponModal
           weaponStatus={passWeaponStatus} 
         />
         <Weapon
           weaponStatus={weaponStatus} 
         />
-      </div>
       <AbilityEffect
         weaponStatus={weaponStatus}
         passMainAbilityName0={mainAbilityName0}

@@ -66,7 +66,7 @@ const SpecialPower = (props) => {
     {AP:0,DT:540},{AP:3,DT:552},{AP:6,DT:563},{AP:9,DT:574},{AP:10,DT:577},{AP:12,DT:583},{AP:13,DT:587},{AP:15,DT:593},{AP:16,DT:596},{AP:18,DT:601},{AP:19,DT:604},{AP:20,DT:607},{AP:21,DT:609},{AP:22,DT:612},{AP:23,DT:614},{AP:24,DT:617},{AP:25,DT:619},{AP:26,DT:622},{AP:27,DT:624},{AP:28,DT:626},{AP:29,DT:628},{AP:30,DT:630},{AP:31,DT:632},{AP:32,DT:634},{AP:33,DT:636},{AP:34,DT:638},{AP:35,DT:639},{AP:36,DT:641},{AP:37,DT:643},{AP:38,DT:644},{AP:39,DT:646},{AP:41,DT:648},{AP:42,DT:650},{AP:44,DT:652},{AP:45,DT:653},{AP:47,DT:655},{AP:48,DT:656},{AP:51,DT:658},{AP:54,DT:660},{AP:57,DT:660} 
   ];
   
-  if (name === "SplashDown") {
+  if (name === "スーパーチャクチ") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === SplashDown[i].AP) {
         hitbox180 = Math.floor(SplashDown[i].HS180 * 100) / 100;
@@ -86,7 +86,7 @@ const SpecialPower = (props) => {
         <p>{hitbox70}％</p>
       </div></>
     );
-  } else if (name === "Missiles") {
+  } else if (name === "マルチミサイル") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === Missiles[i].AP) {
         paintRadius = Missiles[i].PR;
@@ -108,7 +108,7 @@ const SpecialPower = (props) => {
         <p>{paintRadiusPercent}％</p>
       </div></>
     );
-  } else if (name === "Armor") {
+  } else if (name === "インクアーマー") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === InkArmor[i].AP) {
         armorActivationFrames = InkArmor[i].WT;
@@ -130,7 +130,7 @@ const SpecialPower = (props) => {
         <p>{durationFrames}F</p>
       </div></>
     );
-  } else if (name === "CurlingRush") {
+  } else if (name === "カーリングボムピッチャー") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === CurlingRush[i].AP) {
         durationFrames = CurlingRush[i].DT;
@@ -147,7 +147,7 @@ const SpecialPower = (props) => {
         <p>{durationFrames}F</p>
       </div></>
     );
-  } else if (name === "SplatRush") {
+  } else if (name === "スプラッシュボムピッチャー") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === SplatRush[i].AP) {
         durationFrames = SplatRush[i].DT;
@@ -164,7 +164,7 @@ const SpecialPower = (props) => {
         <p>{durationFrames}F</p>
       </div></>
     );
-  } else if (name === "SuctionRush") {
+  } else if (name === "キューバンボムピッチャー") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === SuctionRush[i].AP) {
         durationFrames = SuctionRush[i].DT;
@@ -181,7 +181,7 @@ const SpecialPower = (props) => {
         <p>{durationFrames}F</p>
       </div></>
     );
-  } else if (name === "BurstRush") {
+  } else if (name === "クイックボムピッチャー") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === BurstRush[i].AP) {
         durationFrames = BurstRush[i].DT;
@@ -198,7 +198,7 @@ const SpecialPower = (props) => {
         <p>{durationFrames}F</p>
       </div></>
     );
-  } else if (name === "AutoRush") {
+  } else if (name === "ロボットボムピッチャー") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === AutoRush[i].AP) {
         durationFrames = AutoRush[i].DT;
@@ -215,7 +215,7 @@ const SpecialPower = (props) => {
         <p>{durationFrames}F</p>
       </div></>
     );
-  } else if (name === "Stingray") {
+  } else if (name === "ハイパープレッサー") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === StingRay[i].AP) {
         durationFrames = StingRay[i].DT;
@@ -232,7 +232,7 @@ const SpecialPower = (props) => {
         <p>{durationFrames}F</p>
       </div></>
     );
-  } else if (name === "InkStorm") {
+  } else if (name === "アメフラシ") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === InkStorm[i].AP) {
         durationFrames = InkStorm[i].DT;
@@ -249,7 +249,7 @@ const SpecialPower = (props) => {
         <p>{durationFrames}F</p>
       </div></>
     );
-  } else if (name === "BooyahBomb") {
+  } else if (name === "ナイスダマ") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === BooyahBomb[i].AP) {
         chargeSpeedFrames = Math.floor(1 / BooyahBomb[i].CS * 100) / 100;
@@ -266,7 +266,7 @@ const SpecialPower = (props) => {
         <p>{chargeSpeedFrames}F</p>
       </div></>
     );
-  } else if (name === "Baller") {
+  } else if (name === "イカスフィア") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === Baller[i].AP) {
         explosionRadius = Math.floor(Baller[i].ER * 100) / 100;
@@ -286,7 +286,7 @@ const SpecialPower = (props) => {
         <p>{ballerHealth}</p>
       </div></>
     );
-  } else if (name === "Inkjet") {
+  } else if (name === "ジェットパック") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === InkJet[i].AP) {
         durationFrames = InkJet[i].DT;
@@ -311,7 +311,7 @@ const SpecialPower = (props) => {
         <p>{blastRadius}％</p>
       </div></>
     );
-  } else if (name === "Bubbles") {
+  } else if (name === "バブルランチャー") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === Bubbles[i].AP) {
         paintRadius = Math.floor(Bubbles[i].PR * 100) / 100;
@@ -335,7 +335,7 @@ const SpecialPower = (props) => {
         <p>{blastRadius}％</p>
       </div></>
     );
-  } else if (name === "Hammer") {
+  } else if (name === "ウルトラハンコ") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === Hammer[i].AP) {
         durationFrames = Hammer[i].DT;

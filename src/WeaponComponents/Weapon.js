@@ -29,12 +29,35 @@ import UltraStamp from '../images/subSP/Wsp_UltraStamp.png';
 import Stingray from '../images/subSP/Wsp_Stingray.png';
 
 const Weapon = (props) => {
+
   return (
-    <div className="btn weapon-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="クリックでブキを変更">  
-      <div className="btn btn-sm" data-bs-toggle="modal" data-bs-target="#weaponModal">
-          <img src={props.weaponStatus.path} alt=""/>
-          <p className="font-type1">{props.weaponStatus.name}</p>
+    <div className="container mb-2" id="weapon-container">
+      <div id="weapon-card">
+      <div className="weapon-tooltip row" data-bs-toggle="tooltip" data-bs-placement="bottom" title="クリックでブキを変更">
+        <div className="btn btn-sm col-5" data-bs-toggle="modal" data-bs-target="#weaponModal">
+            <img src={props.weaponStatus.path} alt=""/>
+        </div>
+        <div className="col-7 py-2">
+          <div className="weapon-sub-sp row">
+            <div className="col-2">  
+              <img src={props.weaponStatus.pathSub} className="img-sub-sp" alt=""/>
+            </div>
+            <p className="h5 text-white col-10">{props.weaponStatus.sub}</p>
+          </div>
+          <div className="weapon-sub-sp row my-1">
+            <div className="col-2">  
+              <img src={props.weaponStatus.pathSpecial} className="img-sub-sp" alt=""/>
+            </div>
+            <p className="h5 text-white col-10">{props.weaponStatus.special}</p>
+          </div>
+        </div>
       </div>
+      <div id="weapon-footer">
+        <div className="font-type1 text-white">
+          <span className="h5 my-0">{props.weaponStatus.name}</span>
+        </div>
+      </div>
+    </div>
     </div>
   );
 };
