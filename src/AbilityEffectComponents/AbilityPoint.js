@@ -528,14 +528,13 @@ const AbilityPoint = (props) => {
   
   return(
     <div className="d-flex">
-      <div className="container">
-      <div className="special-ability">
-        {btnComeback}
-        {btnOpeningGanbit}
-        {btnLastDitchEffort}
-        {btnDropRoller}
-      </div>
-      <div className="row">
+      <div className="container" id="ae-container">
+        <div className="special-ability">
+          {btnComeback}
+          {btnOpeningGanbit}
+          {btnLastDitchEffort}
+          {btnDropRoller}
+        </div>
         <InkSaverMain 
           abilityPoint={inkSaverMainAP}
           weaponStatus={props.weaponStatus}
@@ -543,18 +542,14 @@ const AbilityPoint = (props) => {
         <InkSaverSub 
           abilityPoint={inkSaverSubAP}
           weaponStatus={props.weaponStatus}
-        />
-      </div>
-      <div className="row">  
+        />  
         <InkRecovery 
           abilityPoint={inkRecoveryAP}
         />
         <RunSpeed 
           abilityPoint={runSpeedAP}
           weaponStatus={props.weaponStatus}
-        />
-      </div>
-      <div className="row">  
+        /> 
         <SwimSpeed
           abilityPoint={swimSpeedAP}
           weaponStatus={props.weaponStatus}
@@ -564,8 +559,6 @@ const AbilityPoint = (props) => {
           abilityPoint={specialChargeAP}
           weaponStatus={props.weaponStatus}
         />
-      </div>
-      <div className="row">  
         <SpecialSaver 
           abilityPoint={specialSaverAP}
           weaponStatus={props.weaponStatus}
@@ -575,8 +568,6 @@ const AbilityPoint = (props) => {
           abilityPoint={specialPowerAP}
           weaponStatus={props.weaponStatus}
         />
-      </div>
-      <div className="row">  
         <QuickRespawn 
           abilityPoint={qrAP}
           abilityName={mainAbilityName[1]}
@@ -584,8 +575,6 @@ const AbilityPoint = (props) => {
         <QuickSuperJump 
           abilityPoint={quickSuperJumpAP}
         />
-      </div>
-      <div className="row">  
         <SubPowerUp 
           SPUabilityPoint={subPowerAP}
           QSJabilityPoint={quickSuperJumpAP}
@@ -594,8 +583,6 @@ const AbilityPoint = (props) => {
         <BombDefenceUp 
           abilityPoint={bombDefenceAP}
         />
-      </div>
-      <div className="row">  
         <InkResistance 
           abilityPoint={inkResAP}
         />
@@ -603,7 +590,6 @@ const AbilityPoint = (props) => {
           abilityPoint={mpuAP}
           weaponStatus={props.weaponStatus}
         />
-      </div>
       </div>
     </div>
   );

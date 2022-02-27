@@ -1015,6 +1015,8 @@ Btmボタン
 
 #ae-section {
   height: 100vh;
+  overflow: auto;
+  padding-left: 0px;
 }
 
 #ae-section::-webkit-scrollbar {
@@ -1032,4 +1034,21 @@ Btmボタン
   background: #ccc;
   border-radius: 10px;
   box-shadow: none;
+}
+
+#ae-container {
+  padding-left: 0px;
+}
+
+#three-section {
+  padding-left: 0px;
+  padding-right: 0px;
+  position: relative;
+}
+
+#character-btn {
+  position: absolute;
+  top: 10px;
+  left: 300px;
+  z-index: 1;
 }

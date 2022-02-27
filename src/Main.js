@@ -45,7 +45,7 @@ import Headband_White from './images/gear/Hed_FST000.png';
 import empty from './images/ability/empty.png';
 import Jr_0 from './images/weapon/Splattershot Jr.png';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 // 3dモデル
 import Model from './ThreeComponents/Model';
 import Orbit from './ThreeComponents/Orbit';
@@ -189,8 +189,10 @@ const Main = () => {
               passImagePath={passSubAbilityImagePath8} />
           </div>
         </div>
-      <div className="col-5">
-        <div className="">
+      <div className="col-5" id="three-section">
+        
+        <div style={{ height: '100vh', width: '100%' }}>
+        <div id="character-btn">
           <button type="button" className="btn btn-dark font-type1" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
             キャラクターの設定
           </button>
@@ -213,7 +215,6 @@ const Main = () => {
           <FMLBottomsModal
             passBottoms={passBottoms} />
         </div>
-        <div style={{ height: '800px', width: '430px' }}>
           <Canvas
             style={{ background: '#f0f0e0' }}
             camera={{ position: [0, 11, 20] }}
@@ -247,12 +248,14 @@ const Main = () => {
           </Canvas>
         </div>
       </div>
-      <div className="font-type2 col-5 overflow-auto" id="ae-section">
+      <div className="font-type2 col-5" id="ae-section">
         <div>
           <WeaponModal
-            weaponStatus={passWeaponStatus} />
+            weaponStatus={passWeaponStatus} 
+          />
           <Weapon
-            weaponStatus={weaponStatus} />
+            weaponStatus={weaponStatus} 
+          />
         </div>
         <AbilityEffect
           weaponStatus={weaponStatus}
