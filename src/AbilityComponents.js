@@ -4,10 +4,6 @@ import Weapon from './WeaponComponents/Weapon';
 import WeaponModal from './WeaponComponents/WeaponModal';
 // アビリティ効果コンポーネント
 import AbilityEffect from './AbilityEffectComponents/AbilityEffect';
-//ギア選択のモーダル
-import HeadGearModal from './HeadComponents/HeadGearModal';
-import ClothesGearModal from './ClothesComponents/ClothesGearModal';
-import ShoesGearModal from './ShoesComponents/ShoesGearModal';
 //MainSlotのモーダル
 import MainSlotModal0 from './SlotComponents/MainSlotModal0';
 import MainSlotModal1 from './SlotComponents/MainSlotModal1';
@@ -29,27 +25,12 @@ import Clothes from './ClothesComponents/Clothes';
 // クツ
 import Shoes from './ShoesComponents/Shoes';
 //初期表示用の画像
-import WakabaIkaT from './images/gear/Clt_FST001.png';
-import Canvas_White from './images/gear/Shs_FST000.png';
-import Headband_White from './images/gear/Hed_FST000.png';
 import empty from './images/ability/empty.png';
 import Jr_0 from './images/weapon/Splattershot Jr.png';
 
-const AbilityComponents = () => {
+const AbilityComponents = (props) => {
   //ブキの名前とその他の情報を管理
   const [weaponStatus, passWeaponStatus] = useState({name:"わかばシューター", sub:"SplatBomb", special:"Armor", sp:180, weight:"light", path:Jr_0});
-  //選択されたアタマの画像のパスを管理
-  const [headImagePath, passHeadImagePath] = useState(Headband_White);
-  //選択されたフクの画像のパスを管理
-  const [clothesImagePath, passClothesImagePath] = useState(WakabaIkaT);
-  //選択されたクツの画像のパスを管理
-  const [shoesImagePath, passShoesImagePath] = useState(Canvas_White);
-  //選択されたアタマの名前を管理
-  const [chosenHeadGear, passChosenHeadGear] = useState("HB_Headband_White");
-  //選択されたフクの名前を管理
-  const [chosenClothesGear, passChosenClothesGear] = useState("WakabaIkaT");
-  //選択されたクツの名前を管理
-  const [chosenShoesGear, passChosenShoesGear] = useState("Canvas_White");
   //メインスロットのアビリティの画像のpathを管理
   const [mainAbilityImagePath0, passMainAbilityImagePath0] = useState(empty);
   const [mainAbilityImagePath1, passMainAbilityImagePath1] = useState(empty);
@@ -84,42 +65,40 @@ const AbilityComponents = () => {
       <div>
         <Head
           //ギアモーダルからStateを経由して受け取った画像のパスをpropsで渡す
-          passHeadGearImagePath={headImagePath}
+          passHeadGearImagePath={props.headImagePath}
           //SubSlotModal1から受け取ったアビリティの画像のパスを渡す
           passSubAbilityImagePath0={subAbilityImagePath0}
           //2,3についても同様
           passSubAbilityImagePath1={subAbilityImagePath1}
           passSubAbilityImagePath2={subAbilityImagePath2}
           //メインスロットも同様
-          passMainAbilityImagePath={mainAbilityImagePath0} />
+          passMainAbilityImagePath={mainAbilityImagePath0}
+        />
         <MainSlotModal0
           passImagePath={passMainAbilityImagePath0}
-          passAbilityName={passMainAbilityName0} />
-        <HeadGearModal
-          //モーダルで選択されたギアの名前を受け取る
-          passChosenGear={passChosenHeadGear}
-          //ギア画像のパスを受け取る
-          passImagePath={passHeadImagePath} />
+          passAbilityName={passMainAbilityName0}
+        />
         <SubSlotModal0
           passAbilityName={passSubAbilityName0}
-          passImagePath={passSubAbilityImagePath0} />
+          passImagePath={passSubAbilityImagePath0}
+        />
         <SubSlotModal1
           passAbilityName={passSubAbilityName1}
-          passImagePath={passSubAbilityImagePath1} />
+          passImagePath={passSubAbilityImagePath1}
+        />
         <SubSlotModal2
           passAbilityName={passSubAbilityName2}
-          passImagePath={passSubAbilityImagePath2} />
+          passImagePath={passSubAbilityImagePath2}
+        />
       </div>
       <div>
         <Clothes
-          passClothesGearImagePath={clothesImagePath}
+          passClothesGearImagePath={props.clothesImagePath}
           passSubAbilityImagePath3={subAbilityImagePath3}
           passSubAbilityImagePath4={subAbilityImagePath4}
           passSubAbilityImagePath5={subAbilityImagePath5}
           passMainAbilityImagePath={mainAbilityImagePath1} />
-        <ClothesGearModal
-          passChosenGear={passChosenClothesGear}
-          passImagePath={passClothesImagePath} />
+        
         <MainSlotModal1
           passImagePath={passMainAbilityImagePath1}
           passAbilityName={passMainAbilityName1} />
@@ -135,14 +114,12 @@ const AbilityComponents = () => {
       </div>
       <div>
         <Shoes
-          passShoesGearImagePath={shoesImagePath}
+          passShoesGearImagePath={props.shoesImagePath}
           passSubAbilityImagePath6={subAbilityImagePath6}
           passSubAbilityImagePath7={subAbilityImagePath7}
           passSubAbilityImagePath8={subAbilityImagePath8}
-          passMainAbilityImagePath={mainAbilityImagePath2} />
-        <ShoesGearModal
-          passChosenGear={passChosenShoesGear}
-          passImagePath={passShoesImagePath} />
+          passMainAbilityImagePath={mainAbilityImagePath2}
+        />
         <MainSlotModal2
           passImagePath={passMainAbilityImagePath2}
           passAbilityName={passMainAbilityName2} />

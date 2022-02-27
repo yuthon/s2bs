@@ -1,27 +1,10 @@
 // アビリティ関連のコンポーネント
 import AbilityComponents from './AbilityComponents';
-//ブキ
-import Weapon from './WeaponComponents/Weapon';
-import WeaponModal from './WeaponComponents/WeaponModal';
 
 //ギア選択のモーダル
 import HeadGearModal from './HeadComponents/HeadGearModal';
 import ClothesGearModal from './ClothesComponents/ClothesGearModal';
 import ShoesGearModal from './ShoesComponents/ShoesGearModal';
-//MainSlotのモーダル
-import MainSlotModal0 from './SlotComponents/MainSlotModal0';
-import MainSlotModal1 from './SlotComponents/MainSlotModal1';
-import MainSlotModal2 from './SlotComponents/MainSlotModal2';
-//SubSlotのアビリティ選択のモーダル
-import SubSlotModal0 from './SlotComponents/SubSlotModal0';
-import SubSlotModal1 from './SlotComponents/SubSlotModal1';
-import SubSlotModal2 from './SlotComponents/SubSlotModal2';
-import SubSlotModal3 from './SlotComponents/SubSlotModal3';
-import SubSlotModal4 from './SlotComponents/SubSlotModal4';
-import SubSlotModal5 from './SlotComponents/SubSlotModal5';
-import SubSlotModal6 from './SlotComponents/SubSlotModal6';
-import SubSlotModal7 from './SlotComponents/SubSlotModal7';
-import SubSlotModal8 from './SlotComponents/SubSlotModal8';
 //キャラクターの詳細設定モーダル
 import CharacterTypeModal from './CharacterSettingComponents/CharacterTypeModal';
 import SkinColorModal from './CharacterSettingComponents/SkinColorModal';
@@ -31,19 +14,10 @@ import OFMLHairStyleModal from './CharacterSettingComponents/OFMLHairStyleModal'
 import OMLHairStyleModal from './CharacterSettingComponents/OMLHairStyleModal';
 import MLBottomsModal from './CharacterSettingComponents/MLBottomsModal';
 import FMLBottomsModal from './CharacterSettingComponents/FMLBottomsModal';
-import AbilityEffect from './AbilityEffectComponents/AbilityEffect';
-
-import Head from './HeadComponents/Head';
-import Clothes from './ClothesComponents/Clothes';
-// クツ
-import Shoes from './ShoesComponents/Shoes';
-
-import ThreeComponent from './ThreeComponent';
 //初期表示用の画像
 import WakabaIkaT from './images/gear/Clt_FST001.png';
 import Canvas_White from './images/gear/Shs_FST000.png';
 import Headband_White from './images/gear/Hed_FST000.png';
-import empty from './images/ability/empty.png';
 import Jr_0 from './images/weapon/Splattershot Jr.png';
 
 import { useState } from 'react';
@@ -61,45 +35,17 @@ const Main = () => {
   //ブキの名前とその他の情報を管理
   const [weaponStatus, passWeaponStatus] = useState({name:"わかばシューター", sub:"SplatBomb", special:"Armor", sp:180, weight:"light", path:Jr_0});
   //選択されたアタマの画像のパスを管理
-  const [headImagePath, passHeadImagePath] = useState(Headband_White);
+  const [headImagePath, setHeadImagePath] = useState(Headband_White);
   //選択されたフクの画像のパスを管理
-  const [clothesImagePath, passClothesImagePath] = useState(WakabaIkaT);
+  const [clothesImagePath, setClothesImagePath] = useState(WakabaIkaT);
   //選択されたクツの画像のパスを管理
-  const [shoesImagePath, passShoesImagePath] = useState(Canvas_White);
+  const [shoesImagePath, setShoesImagePath] = useState(Canvas_White);
   //選択されたアタマの名前を管理
-  const [chosenHeadGear, passChosenHeadGear] = useState("HB_Headband_White");
+  const [headGear, setHeadGear] = useState("HB_Headband_White");
   //選択されたフクの名前を管理
-  const [chosenClothesGear, passChosenClothesGear] = useState("WakabaIkaT");
+  const [clothesGear, setClothesGear] = useState("WakabaIkaT");
   //選択されたクツの名前を管理
-  const [chosenShoesGear, passChosenShoesGear] = useState("Canvas_White");
-  //メインスロットのアビリティの画像のpathを管理
-  const [mainAbilityImagePath0, passMainAbilityImagePath0] = useState(empty);
-  const [mainAbilityImagePath1, passMainAbilityImagePath1] = useState(empty);
-  const [mainAbilityImagePath2, passMainAbilityImagePath2] = useState(empty);
-  //メインスロットのアビリティの名前を管理
-  const [mainAbilityName0, passMainAbilityName0] = useState(null);
-  const [mainAbilityName1, passMainAbilityName1] = useState(null);
-  const [mainAbilityName2, passMainAbilityName2] = useState(null);
-  //サブスロットモーダルで選択されたアビリティの画像のパスを管理
-  const [subAbilityImagePath0, passSubAbilityImagePath0] = useState(empty);
-  const [subAbilityImagePath1, passSubAbilityImagePath1] = useState(empty);
-  const [subAbilityImagePath2, passSubAbilityImagePath2] = useState(empty);
-  const [subAbilityImagePath3, passSubAbilityImagePath3] = useState(empty);
-  const [subAbilityImagePath4, passSubAbilityImagePath4] = useState(empty);
-  const [subAbilityImagePath5, passSubAbilityImagePath5] = useState(empty);
-  const [subAbilityImagePath6, passSubAbilityImagePath6] = useState(empty);
-  const [subAbilityImagePath7, passSubAbilityImagePath7] = useState(empty);
-  const [subAbilityImagePath8, passSubAbilityImagePath8] = useState(empty);
-  //サブスロットモーダルで選択されたアビリティの名前を管理
-  const [subAbilityName0, passSubAbilityName0] = useState(null);
-  const [subAbilityName1, passSubAbilityName1] = useState(null);
-  const [subAbilityName2, passSubAbilityName2] = useState(null);
-  const [subAbilityName3, passSubAbilityName3] = useState(null);
-  const [subAbilityName4, passSubAbilityName4] = useState(null);
-  const [subAbilityName5, passSubAbilityName5] = useState(null);
-  const [subAbilityName6, passSubAbilityName6] = useState(null);
-  const [subAbilityName7, passSubAbilityName7] = useState(null);
-  const [subAbilityName8, passSubAbilityName8] = useState(null);
+  const [shoesGear, setShoesGear] = useState("Canvas_White");
   //キャラ設定モーダルを管理
   const [characterType, passCharacterType] = useState("IML");
   const [skinColor, passSkinColor] = useState("#ffd1cc");
@@ -112,26 +58,50 @@ const Main = () => {
   
   return(
     <div className="container">
+      <HeadGearModal
+        passChosenGear={setHeadGear}
+        passImagePath={setHeadImagePath}
+      />
+      <ClothesGearModal
+        passChosenGear={setClothesGear}
+        passImagePath={setClothesImagePath}
+      />
+      <ShoesGearModal
+        passChosenGear={setShoesGear}
+        passImagePath={setShoesImagePath}
+      />
       <CharacterTypeModal
         passCharacterType={passCharacterType}
-        characterType={characterType} />
+        characterType={characterType}
+      />
       <SkinColorModal
         passSkinColor={passSkinColor}
-        characterType={characterType} />
+        characterType={characterType}
+      />
       <IFMLHairStyleModal
-        passHairStyle={passHairStyle} />
+        passHairStyle={passHairStyle}
+      />
       <IMLHairStyleModal
-        passHairStyle={passHairStyle} />
+        passHairStyle={passHairStyle}
+      />
       <OFMLHairStyleModal
-        passHairStyle={passHairStyle} />
+        passHairStyle={passHairStyle}
+      />
       <OMLHairStyleModal
-        passHairStyle={passHairStyle} />
+        passHairStyle={passHairStyle}
+      />
       <MLBottomsModal
-        passBottoms={passBottoms} />
+        passBottoms={passBottoms}
+      />
       <FMLBottomsModal
-        passBottoms={passBottoms} />
+        passBottoms={passBottoms}
+      />
       <div className="row">  
-        <AbilityComponents />
+        <AbilityComponents 
+          headImagePath={headImagePath}
+          clothesImagePath={clothesImagePath}
+          shoesImagePath={shoesImagePath}
+        />
         <div className="col-5 order-2" id="three-section">
           <div style={{ height: '100vh', width: '100%' }}>
             <div id="character-btn">
@@ -159,9 +129,9 @@ const Main = () => {
               <axesHelper args={[5]} />
               <Suspense fallback={null}>
                 <Model
-                  headGear={chosenHeadGear}
-                  clothesGear={chosenClothesGear}
-                  shoesGear={chosenShoesGear}
+                  headGear={headGear}
+                  clothesGear={clothesGear}
+                  shoesGear={shoesGear}
                   CT={characterType}
                   skinColor={skinColor}
                   eyeColor={eyeColor}
