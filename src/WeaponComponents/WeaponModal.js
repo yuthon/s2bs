@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Gal52_0 from '../images/weapon/52 Gal.png';
 import Gal52_1 from '../images/weapon/52 Gal Deco.png';
 import Gal52_2 from '../images/weapon/Kensa 52 Gal.png';
@@ -340,9 +340,11 @@ const WeaponModal = (props) => {
     [howToSort]
   );
   
+  const ref = useRef();
+
   // 選択された並び順に応じてstateを変更
   const selectBox = function() {
-    let target = document.getElementById("select-box");
+    let target = ref.current;
     if (target.value === "main" && howToSort !== "byMain") {
       setSort("byMain");
     } else if (target.value === "name" && howToSort !== "byName") {
@@ -353,7 +355,7 @@ const WeaponModal = (props) => {
       setSort("bySpe");
     }
   };
-  
+
   return (
     <div className="modal fade" id="weaponModal" tabIndex="-1" aria-labelledby="weaponModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-lg">
@@ -367,8 +369,8 @@ const WeaponModal = (props) => {
               <div className="select-index">  
                 <span className="align-middle">並び替え :</span>
               </div>
-              <div className="selectbox">  
-                <select className="form-select" aria-label="sort" id="select-box" onClick={()=>{selectBox();}}>
+              <div className="selectbox">
+                <select className="form-select" ref = {ref} aria-label="sort" id="select-box" onClick={()=>{selectBox();}}>
                     <option value="main" defaultValue>メインウェポン</option>
                     <option value="sub">サブウェポン</option>
                     <option value="spe">スペシャルウェポン</option>
