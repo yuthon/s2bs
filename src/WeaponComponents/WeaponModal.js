@@ -354,72 +354,6 @@ const WeaponModal = (props) => {
     }
   };
   
-  // サブウェポンをstringで受け取ってpathを返す
-  const subWeapon = function(sub) {
-    if (sub === "CurlingBomb") {
-      return CurlingBomb
-    } else if (sub === "SplatBomb") {
-      return SplatBomb
-    } else if (sub === "SuctionBomb") {
-      return SuctionBomb
-    } else if (sub === "AutoBomb") {
-      return AutoBomb
-    } else if (sub === "BurstBomb") {
-      return BurstBomb
-    } else if (sub === "FizzyBomb") {
-      return FizzyBomb
-    } else if (sub === "InkMine") {
-      return InkMine
-    } else if (sub === "Sprinkler") {
-      return Sprinkler
-    } else if (sub === "Torpedo") {
-      return Torpedo
-    } else if (sub === "Beakon") {
-      return SquidBeakon
-    } else if (sub === "SplashWall") {
-      return SplashWall
-    } else if (sub === "Sencor") {
-      return PointSensor
-    } else if (sub === "ToxicMist") {
-      return ToxicMist
-    } 
-  }
-  // スペシャルウェポンをstringで受け取ってpathを返す
-  const spWeapon = function(sp) {
-    if (sp === "SplashDown") {
-      return SplashDown
-    } else if (sp === "SplatRush") {
-      return SplatRush
-    } else if (sp === "SuctionRush") {
-      return SuctionRush
-    } else if (sp === "AutoRush") {
-      return AutoRush
-    } else if (sp === "BurstRush") {
-      return BurstRush
-    } else if (sp === "Missiles") {
-      return TentaMissile
-    } else if (sp === "Baller") {
-      return Baller
-    } else if (sp === "CurlingRush") {
-      return CurlingRush
-    } else if (sp === "InkStorm") {
-      return InkStorm
-    } else if (sp === "Inkjet") {
-      return Inkjet
-    } else if (sp === "Stingray") {
-      return Stingray
-    } else if (sp === "BooyahBomb") {
-      return BooyahBomb
-    } else if (sp === "Armor") {
-      return InkArmor
-    } else if (sp === "Hammer") {
-      return UltraStamp
-    } else if (sp === "Bubbles") {
-      return BubbleBlower
-    } 
-  }
-  
-  
   return (
     <div className="modal fade" id="weaponModal" tabIndex="-1" aria-labelledby="weaponModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-lg">
@@ -462,10 +396,10 @@ const WeaponModal = (props) => {
                   </div>
                   <div className="row align-items-center justify-content-around sub-sp-bg">
                     <div className="sub-sp">
-                      <img src={subWeapon(weaponArray[0].sub)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[0].pathSub} className="img-sub-sp" alt=""/>
                     </div>
                     <div className="sub-sp">
-                      <img src={spWeapon(weaponArray[0].special)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[0].pathSpecial} className="img-sub-sp" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -489,10 +423,10 @@ const WeaponModal = (props) => {
                   </div>
                   <div className="row align-items-center justify-content-around sub-sp-bg">
                     <div className="sub-sp">
-                      <img src={subWeapon(weaponArray[1].sub)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[1].pathSub} className="img-sub-sp" alt=""/>
                     </div>
                     <div className="sub-sp">
-                      <img src={spWeapon(weaponArray[1].special)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[1].pathSpecial} className="img-sub-sp" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -516,10 +450,10 @@ const WeaponModal = (props) => {
                   </div>
                   <div className="row align-items-center justify-content-around sub-sp-bg">
                     <div className="sub-sp">
-                      <img src={subWeapon(weaponArray[2].sub)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[2].pathSub} className="img-sub-sp" alt=""/>
                     </div>
                     <div className="sub-sp">
-                      <img src={spWeapon(weaponArray[2].special)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[2].pathSpecial} className="img-sub-sp" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -543,10 +477,10 @@ const WeaponModal = (props) => {
                   </div>
                   <div className="row align-items-center justify-content-around sub-sp-bg">
                     <div className="sub-sp">
-                      <img src={subWeapon(weaponArray[3].sub)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[3].pathSub} className="img-sub-sp" alt=""/>
                     </div>
                     <div className="sub-sp">
-                      <img src={spWeapon(weaponArray[3].special)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[3].pathSpecial} className="img-sub-sp" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -570,10 +504,10 @@ const WeaponModal = (props) => {
                   </div>
                   <div className="row align-items-center justify-content-around sub-sp-bg">
                     <div className="sub-sp">
-                      <img src={subWeapon(weaponArray[4].sub)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[4].pathSub} className="img-sub-sp" alt=""/>
                     </div>
                     <div className="sub-sp">
-                      <img src={spWeapon(weaponArray[4].special)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[4].pathSpecial} className="img-sub-sp" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -597,10 +531,10 @@ const WeaponModal = (props) => {
                   </div>
                   <div className="row align-items-center justify-content-around sub-sp-bg">
                     <div className="sub-sp">
-                      <img src={subWeapon(weaponArray[5].sub)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[5].pathSub} className="img-sub-sp" alt=""/>
                     </div>
                     <div className="sub-sp">
-                      <img src={spWeapon(weaponArray[5].special)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[5].pathSpecial} className="img-sub-sp" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -624,10 +558,10 @@ const WeaponModal = (props) => {
                   </div>
                   <div className="row align-items-center justify-content-around sub-sp-bg">
                     <div className="sub-sp">
-                      <img src={subWeapon(weaponArray[6].sub)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[6].pathSub} className="img-sub-sp" alt=""/>
                     </div>
                     <div className="sub-sp">
-                      <img src={spWeapon(weaponArray[6].special)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[6].pathSpecial} className="img-sub-sp" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -651,10 +585,10 @@ const WeaponModal = (props) => {
                   </div>
                   <div className="row align-items-center justify-content-around sub-sp-bg">
                     <div className="sub-sp">
-                      <img src={subWeapon(weaponArray[7].sub)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[7].pathSub} className="img-sub-sp" alt=""/>
                     </div>
                     <div className="sub-sp">
-                      <img src={spWeapon(weaponArray[7].special)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[7].pathSpecial} className="img-sub-sp" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -678,10 +612,10 @@ const WeaponModal = (props) => {
                   </div>
                   <div className="row align-items-center justify-content-around sub-sp-bg">
                     <div className="sub-sp">
-                      <img src={subWeapon(weaponArray[8].sub)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[8].pathSub} className="img-sub-sp" alt=""/>
                     </div>
                     <div className="sub-sp">
-                      <img src={spWeapon(weaponArray[8].special)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[8].pathSpecial} className="img-sub-sp" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -705,10 +639,10 @@ const WeaponModal = (props) => {
                   </div>
                   <div className="row align-items-center justify-content-around sub-sp-bg">
                     <div className="sub-sp">
-                      <img src={subWeapon(weaponArray[9].sub)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[9].pathSub} className="img-sub-sp" alt=""/>
                     </div>
                     <div className="sub-sp">
-                      <img src={spWeapon(weaponArray[9].special)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[9].pathSpecial} className="img-sub-sp" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -732,10 +666,10 @@ const WeaponModal = (props) => {
                   </div>
                   <div className="row align-items-center justify-content-around sub-sp-bg">
                     <div className="sub-sp">
-                      <img src={subWeapon(weaponArray[10].sub)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[10].pathSub} className="img-sub-sp" alt=""/>
                     </div>
                     <div className="sub-sp">
-                      <img src={spWeapon(weaponArray[10].special)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[10].pathSpecial} className="img-sub-sp" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -759,10 +693,10 @@ const WeaponModal = (props) => {
                   </div>
                   <div className="row align-items-center justify-content-around sub-sp-bg">
                     <div className="sub-sp">
-                      <img src={subWeapon(weaponArray[11].sub)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[11].pathSub} className="img-sub-sp" alt=""/>
                     </div>
                     <div className="sub-sp">
-                      <img src={spWeapon(weaponArray[11].special)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[11].pathSpecial} className="img-sub-sp" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -786,10 +720,10 @@ const WeaponModal = (props) => {
                   </div>
                   <div className="row align-items-center justify-content-around sub-sp-bg">
                     <div className="sub-sp">
-                      <img src={subWeapon(weaponArray[12].sub)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[12].pathSub} className="img-sub-sp" alt=""/>
                     </div>
                     <div className="sub-sp">
-                      <img src={spWeapon(weaponArray[12].special)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[12].pathSpecial} className="img-sub-sp" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -813,10 +747,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[13].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[13].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[13].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[13].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -840,10 +774,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[14].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[14].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[14].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[14].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -867,10 +801,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[15].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[15].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[15].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[15].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -894,10 +828,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[16].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[16].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[16].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[16].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -921,10 +855,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[17].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[17].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[17].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[17].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -948,10 +882,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[18].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[18].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[18].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[18].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -975,10 +909,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[19].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[19].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[19].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[19].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1002,10 +936,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[20].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[20].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[20].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[20].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1029,10 +963,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[21].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[21].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[21].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[21].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1056,10 +990,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[22].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[22].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[22].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[22].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1083,10 +1017,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[23].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[23].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[23].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[23].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1110,10 +1044,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[24].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[24].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[24].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[24].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1137,10 +1071,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[25].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[25].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[25].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[25].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1164,10 +1098,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[26].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[26].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[26].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[26].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1191,10 +1125,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[27].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[27].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[27].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[27].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1218,10 +1152,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[28].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[28].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[28].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[28].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1245,10 +1179,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[29].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[29].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[29].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[29].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1272,10 +1206,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[30].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[30].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[30].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[30].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1299,10 +1233,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[31].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[31].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[31].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[31].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1326,10 +1260,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[32].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[32].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[32].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[32].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1353,10 +1287,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[33].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[33].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[33].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[33].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1380,10 +1314,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[34].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[34].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[34].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[34].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1407,10 +1341,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[35].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[35].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[35].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[35].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1434,10 +1368,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[36].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[36].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[36].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[36].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1461,10 +1395,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[37].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[37].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[37].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[37].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1488,10 +1422,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[38].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[38].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[38].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[38].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1515,10 +1449,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[39].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[39].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[39].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[39].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1542,10 +1476,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[40].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[40].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[40].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[40].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1569,10 +1503,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[41].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[41].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[41].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[41].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1596,10 +1530,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[42].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[42].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[42].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[42].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1623,10 +1557,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[43].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[43].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[43].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[43].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1650,10 +1584,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[44].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[44].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[44].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[44].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1677,10 +1611,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[45].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[45].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[45].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[45].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1704,10 +1638,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[46].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[46].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[46].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[46].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1731,10 +1665,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[47].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[47].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[47].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[47].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1758,10 +1692,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[48].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[48].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[48].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[48].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1785,10 +1719,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[49].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[49].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[49].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[49].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1812,10 +1746,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[50].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[50].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[50].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[50].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1839,10 +1773,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[51].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[51].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[51].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[51].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1866,10 +1800,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[52].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[52].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[52].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[52].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1893,10 +1827,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[53].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[53].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[53].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[53].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1920,10 +1854,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[54].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[54].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[54].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[54].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1947,10 +1881,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[55].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[55].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[55].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[55].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -1974,10 +1908,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[56].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[56].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[56].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[56].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2001,10 +1935,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[57].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[57].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[57].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[57].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2028,10 +1962,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[58].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[58].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[58].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[58].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2055,10 +1989,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[59].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[59].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[59].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[59].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2082,10 +2016,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[60].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[60].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[60].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[60].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2109,10 +2043,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[61].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[61].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[61].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[61].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2136,10 +2070,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[62].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[62].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[62].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[62].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2163,10 +2097,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[63].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[63].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[63].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[63].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2190,10 +2124,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[64].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[64].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[64].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[64].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2217,10 +2151,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[65].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[65].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[65].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[65].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2244,10 +2178,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[66].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[66].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[66].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[66].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2271,10 +2205,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[67].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[67].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[67].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[67].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2298,10 +2232,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[68].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[68].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[68].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[68].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2325,10 +2259,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[69].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[69].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[69].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[69].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2352,10 +2286,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[70].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[70].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[70].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[70].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2379,10 +2313,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[71].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[71].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[71].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[71].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2406,10 +2340,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[72].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[72].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[72].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[72].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2433,10 +2367,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[73].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[73].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[73].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[73].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2460,10 +2394,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[74].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[74].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[74].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[74].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2487,10 +2421,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[75].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[75].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[75].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[75].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2514,10 +2448,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[76].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[76].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[76].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[76].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2541,10 +2475,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[77].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[77].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[77].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[77].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2568,10 +2502,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[78].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[78].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[78].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[78].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2595,10 +2529,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[79].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[79].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[79].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[79].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2622,10 +2556,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[80].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[80].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[80].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[80].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2649,10 +2583,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[81].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[81].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[81].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[81].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2676,10 +2610,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[82].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[82].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[82].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[82].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2703,10 +2637,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[83].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[83].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[83].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[83].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2730,10 +2664,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[84].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[84].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[84].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[84].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2757,10 +2691,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[85].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[85].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[85].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[85].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2784,10 +2718,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[86].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[86].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[86].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[86].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2811,10 +2745,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[87].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[87].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[87].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[87].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2838,10 +2772,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[88].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[88].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[88].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[88].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2865,10 +2799,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[89].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[89].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[89].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[89].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2892,10 +2826,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[90].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[90].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[90].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[90].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2919,10 +2853,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[91].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[91].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[91].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[91].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2946,10 +2880,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[92].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[92].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[92].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[92].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -2973,10 +2907,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[93].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[93].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[93].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[93].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3000,10 +2934,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[94].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[94].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[94].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[94].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3027,10 +2961,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[95].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[95].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[95].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[95].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3054,10 +2988,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[96].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[96].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[96].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[96].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3081,10 +3015,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[97].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[97].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[97].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[97].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3108,10 +3042,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[98].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[98].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[98].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[98].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3135,10 +3069,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[99].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[99].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[99].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[99].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3162,10 +3096,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[100].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[100].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[100].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[100].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3189,10 +3123,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[101].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[101].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[101].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[101].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3216,10 +3150,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[102].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[102].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[102].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[102].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3243,10 +3177,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[103].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[103].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[103].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[103].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3270,10 +3204,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[104].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[104].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[104].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[104].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3297,10 +3231,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[105].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[105].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[105].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[105].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3324,10 +3258,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[106].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[106].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[106].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[106].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3351,10 +3285,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[107].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[107].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[107].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[107].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3378,10 +3312,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[108].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[108].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[108].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[108].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3405,10 +3339,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[109].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[109].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[109].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[109].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3432,10 +3366,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[110].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[110].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[110].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[110].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3459,10 +3393,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[111].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[111].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[111].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[111].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3486,10 +3420,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[112].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[112].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[112].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[112].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3513,10 +3447,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[113].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[113].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[113].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[113].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3540,10 +3474,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[114].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[114].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[114].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[114].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3567,10 +3501,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[115].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[115].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[115].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[115].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3594,10 +3528,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[116].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[116].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[116].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[116].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3621,10 +3555,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[117].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[117].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[117].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[117].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3648,10 +3582,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[118].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[118].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[118].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[118].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3675,10 +3609,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[119].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[119].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[119].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[119].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3702,10 +3636,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[120].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[120].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[120].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[120].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3729,10 +3663,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[121].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[121].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[121].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[121].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3756,10 +3690,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[122].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[122].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[122].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[122].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3783,10 +3717,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[123].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[123].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[123].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[123].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3810,10 +3744,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[124].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[124].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[124].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[124].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3837,10 +3771,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[125].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[125].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[125].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[125].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3864,10 +3798,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[126].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[126].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[126].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[126].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3891,10 +3825,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[127].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[127].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[127].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[127].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3918,10 +3852,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[128].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[128].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[128].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[128].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3945,10 +3879,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[129].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[129].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[129].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[129].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3972,10 +3906,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[130].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[130].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[130].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[130].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -3999,10 +3933,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[131].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[131].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[131].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[131].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -4026,10 +3960,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[132].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[132].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[132].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[132].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -4053,10 +3987,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[133].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[133].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[133].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[133].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -4080,10 +4014,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[134].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[134].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[134].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[134].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -4107,10 +4041,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[135].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[135].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[135].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[135].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -4134,10 +4068,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[136].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[136].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[136].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[136].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -4161,10 +4095,10 @@ const WeaponModal = (props) => {
                 </div>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
-                    <img src={subWeapon(weaponArray[137].sub)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[137].pathSub} className="img-sub-sp" alt=""/>
                   </div>
                   <div className="sub-sp">
-                    <img src={spWeapon(weaponArray[137].special)} className="img-sub-sp" alt=""/>
+                    <img src={weaponArray[137].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -4188,10 +4122,10 @@ const WeaponModal = (props) => {
                   </div>
                   <div className="row align-items-center justify-content-around sub-sp-bg">
                     <div className="sub-sp">
-                      <img src={subWeapon(weaponArray[138].sub)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[138].pathSub} className="img-sub-sp" alt=""/>
                     </div>
                     <div className="sub-sp">
-                      <img src={spWeapon(weaponArray[138].special)} className="img-sub-sp" alt=""/>
+                      <img src={weaponArray[138].pathSpecial} className="img-sub-sp" alt=""/>
                     </div>
                   </div>
                 </div>
