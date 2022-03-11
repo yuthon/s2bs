@@ -6,11 +6,10 @@ import SubSlot5 from '../SlotComponents/SubSlot5';
 
 const Clothes = (props) => {
   return(
-    <div className="clothesgear-card">
-      <div className="container px-0">
+    <div className="container px-0 gear-card" id="clothesgear-card">
         <div className="gear-header"> 
-          <div className="font-type1 text-white d-inline-block">
-          <span className="h1 my-0">フク</span>
+          <div className="font-type1 text-white">
+          <span className="h3 my-0">フク</span>
           </div>
           <ClothesGear
             passImagePath={props.passClothesGearImagePath}
@@ -33,8 +32,7 @@ const Clothes = (props) => {
             />
           </div>
         </div>
-      </div>  
-    </div>
+      </div>
   );
 };
 

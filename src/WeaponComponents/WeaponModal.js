@@ -186,7 +186,7 @@ const weaponStatus = [
   {name:"ヒーローシューターレプリカ", sub:"クイックボム", special:"スーパーチャクチ", sp:170, weight:"middle", path:HeroShot, pathSub:BurstBomb, pathSpecial:SplashDown},
   {name:"スプラシューターコラボ", sub:"スプラッシュボム", special:"ジェットパック", sp:200, weight:"middle", path:SplatterShot_1, pathSub:SplatBomb, pathSpecial:Inkjet},
   {name:"スプラシューターベッチュー", sub:"キューバンボム", special:"マルチミサイル", sp:180, weight:"middle", path:SplatterShot_2, pathSub:SuctionBomb, pathSpecial:TentaMissile},
-  {name:"オクタシューター", sub:"スプラッシュボム", special:"ジェットパック", sp:200, weight:"middle", path:OctoShot, pathSub:SplatBomb, pathSpecial:Inkjet},
+  {name:"オクタシューターレプリカ", sub:"スプラッシュボム", special:"ジェットパック", sp:200, weight:"middle", path:OctoShot, pathSub:SplatBomb, pathSpecial:Inkjet},
   {name:".52ガロン", sub:"ポイントセンサー", special:"イカスフィア", sp:170, weight:"middle", path:Gal52_0, pathSub:PointSensor, pathSpecial:Baller},
   {name:".52ガロンデコ", sub:"カーリングボム", special:"ハイパープレッサー", sp:190, weight:"middle", path:Gal52_1, pathSub:CurlingBomb, pathSpecial:Stingray},
   {name:".52ガロンベッチュー", sub:"スプラッシュシールド", special:"ナイスダマ", sp:190, weight:"middle", path:Gal52_2, pathSub:SplashWall, pathSpecial:BooyahBomb},

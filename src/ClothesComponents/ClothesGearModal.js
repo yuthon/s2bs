@@ -280,12 +280,12 @@ const gears = [
     {name:"デカロTキウイ",path:DekaroTKiwi,id:"DekaroTKiwi"},
     {name:"デカロTゴールデン",path:DekaroTGolden,id:"DekaroTGolden"},
     {name:"デカロゴT シロ",path:DekaLogoT_Shiro,id:"DekaLogoT_Shiro"},
-    {name:"デカロゴT ノーコン",path:DekaLogoT_Nokon,id:"DekaLogoT_Nokon"},
+    {name:"デカロゴT ノーコン",path:DekaLogoT_Nokon,id:"DekaLogoT_No-kon"},
     {name:"トビウォーズHKユニ",path:TobiUo$zuHKYuni,id:"TobiUo-zuHKYuni"},
-    {name:"バスケジャージ アウェイ",path:BasukeJergey_Away,id:"BasukeJergey_Away"},
+    {name:"バスケジャージ アウェイ",path:BasukeJergey_Away,id:"BasukeJersey_Away"},
     {name:"スクールジャージー",path:SchoolJergey,id:"SchoolJergey"},
     {name:"テッカサイクルシャツ",path:TekkaCycleShirt,id:"TekkaCycleShirt"},
-    {name:"バスケジャージ ホーム",path:BasukeJergey_Home,id:"BasukeJergey_Home"},
+    {name:"バスケジャージ ホーム",path:BasukeJergey_Home,id:"BasukeJersey_Home"},
     {name:"FCジャージー",path:FCJergey,id:"FCJergey"},
     {name:"アナアキニット アオソデ",path:AnaakiKnit_Aosode,id:"AnaakiKnit_Aosode"},
     {name:"アナアキニット アカソデ",path:AnaakiKnit_Akasode,id:"AnaakiKnit_Akasode"},
@@ -299,7 +299,7 @@ const gears = [
     {name:"パラシューター プルーン",path:ParaShooter_Prune,id:"ParaShooter_Prune"},
     {name:"ピーターパンクタイ ブラッド",path:PeterPunkTie_Blood,id:"PeterPunkTie_Blood"},
     {name:"ロッケンブレイクジャケット",path:RockenBreakJacket,id:"RockenBreakJacket"},
-    {name:"イカノメT ブラック",path:IkanomeT_Black,id:"IkanomeT_Black"},
+    // {name:"イカノメT ブラック",path:IkanomeT_Black,id:"IkanomeT_Black"},
     {name:"イカノメT ライトブルー",path:IkanomeT_LightBlue,id:"IkanomeT_LightBlue"},
     {name:"かくれパイレーツ",path:KakurePirate,id:"KakurePirate"},
     {name:"アロメスローガンT",path:AromeSloganT,id:"AromeSloganT"},
@@ -331,7 +331,7 @@ const gears = [
     {name:"キングオクトTミドリベロア",path:KingOctoTMidoriVelour,id:"KingOctoTMidoriVelour"},
     {name:"キングタンク スラッシュ",path:KingTank_Slash,id:"KingTank_Slash"},
     {name:"キングタンク ホワイト",path:KingTank_White,id:"KingTank_White"},
-    {name:"キングタンク マリン",path:KingTank_Marine,id:"KingTank_Marine"},
+    // {name:"キングタンク マリン",path:KingTank_Marine,id:"KingTank_Marine"},
     {name:"キングパーカー グレープ",path:KingParka_Grape,id:"KingParka_Grape"},
     {name:"キングHKシャツ",path:KingHKShirt,id:"KingHKShirt"},
     {name:"キングオクトHKシャツ",path:KingOctoHKShirt,id:"KingOctoHKShirt"},
@@ -378,30 +378,30 @@ const gears = [
     {name:"タイツキベイビークラゲ",path:TieTsukiBabyKurage,id:"TieTsukiBabyKurage"},
     {name:"ブロックストライプシャツ",path:BlockStripeShirt,id:"BlockStripeShirt"},
     {name:"ボーダーホワイト",path:BorderWhite,id:"BorderWhite"},
-    {name:"ゆとりボーダー ピンク",path:YutoriBorder_Pink,id:"YutoriBorder_Pink"},
+    // {name:"ゆとりボーダー ピンク",path:YutoriBorder_Pink,id:"YutoriBorder_Pink"},
     {name:"ゆとりボーダー ライム",path:YutoriBorder_Lime,id:"YutoriBorder_Lime"},
     {name:"レタード グリーン",path:Lettered_Green,id:"Lettered_Green"},
     {name:"シロシャツ",path:ShiroShirt,id:"ShiroShirt"},
     {name:"タイシャツ",path:TieShirt,id:"TieShirt"},
     {name:"ハウスタグホエールニット",path:HouseTagWhaleKnit,id:"HouseTagWhaleKnit"},
     {name:"スウェットT ゴブ",path:SweatT_Gobu,id:"SweatT_Gobu"},
-    {name:"スミカケシャツ",path:SumiKakeShirt,id:"SumiKakeShirt"},
-    {name:"スミヌキシャツ",path:SumiNukiShirt,id:"SumiNukiShirt"},
+    {name:"スミカケシャツ",path:SumiKakeShirt,id:"SumikakeShirt"},
+    {name:"スミヌキシャツ",path:SumiNukiShirt,id:"SuminukiShirt"},
     {name:"フロントジップベスト",path:FrontZipVest,id:"FrontZipVest"},
     {name:"クンフージャージ",path:KungFuJergey,id:"KungFuJergey"},
     {name:"クンフーパンジャージ",path:KungFuPanJergey,id:"KungFuPanJergey"},
     {name:"ケンサキコーチ",path:KensakiCoach,id:"KensakiCoach"},
-    {name:"ショートニットカサネ",path:ShortKnitGasane,id:"ShortKnitGasane"},
-    {name:"タタキBBBシャツ",path:TatakiBBBshirt,id:"TatakiBBBshirt"},
+    {name:"ショートニットカサネ",path:ShortKnitGasane,id:"ShortKnitKasane"},
+    {name:"タタキBBBシャツ",path:TatakiBBBshirt,id:"TatakiBBBShirt"},
     {name:"ドロップスウェット ネガ",path:DropSweat_Nega,id:"DropSweat_Nega"},
     {name:"ドロップスウェット ポジ",path:DropSweat_Pozi,id:"DropSweat_Pozi"},
-    {name:"プルオーバーコート",path:PullOverCoat,id:"PullOverCoat"},
+    {name:"プルオーバーコート",path:PullOverCoat,id:"PulloverCoat"},
     {name:"ボンバージャケット ネガ",path:BomberJacket_Nega,id:"BomberJacket_Nega"},
     {name:"ボンバージャケット ポジ",path:BomberJacket_Pozi,id:"BomberJacket_Pozi"},
     {name:"イカバッテン マスタード",path:IkaBatten_Mustard,id:"IkaBatten_Mustard"},
     {name:"イカバッテンロング",path:IkaBattenLong,id:"IkaBattenLong"},
-    {name:"イカブラック",path:IkaBlack,id:"IkaBlack"},
-    {name:"イカホワイト",path:IkaWhite,id:"IkaWhite"},
+    {name:"イカブラック",path:IkaBlack,id:"IKABLACK"},
+    {name:"イカホワイト",path:IkaWhite,id:"IKAWHITE"},
     {name:"カモガサネ",path:KamoGasane,id:"KamoGasane"},
     {name:"バトロング ホワイト",path:BatoLong_White,id:"BatoLong_White"},
     {name:"フレンドT",path:FriendT,id:"FriendT"},
@@ -412,14 +412,14 @@ const gears = [
     {name:"イカイエローVガサネ",path:IkaYellowVGasane,id:"IkaYellowVGasane"},
     {name:"イカグリーンV コラボ",path:IkaGreenV_Collabo,id:"IkaGreenV_Collabo"},
     {name:"イカブラックV",path:IkaBlackV,id:"IkaBlackV"},
-    {name:"イカホワイトV",path:IkaWhite,id:"IkaWhite"},
+    {name:"イカホワイトV",path:IkaWhite,id:"IkaWhiteV"},
     {name:"イカリスウェット",path:IkariSweat,id:"IkariSweat"},
     {name:"イカレッドV コラボ",path:IkaRedV_Collabo,id:"IkaRedV_Collabo"},
     {name:"ガチガサネ",path:GatiGasane,id:"GatiGasane"},
     {name:"ガチブラック",path:GatiBlack,id:"GatiBlack"},
     {name:"ガチホワイト",path:GatiWhite,id:"GatiWhite"},
     {name:"リーグT",path:LeagueT,id:"LeagueT"},
-    {name:"SWCロゴT",path:SWCLogoT,id:"SWCLogoT"},
+    // {name:"SWCロゴT",path:SWCLogoT,id:"SWCLogoT"},
     {name:"おうえんパーカー(タコver.)",path:OuenParka$TakoVer$$,id:"OuenParka(TakoVer.)"},
     // {name:"フェスT",path:FesT,id:"FesT"},
     {name:"フェスT レプリカ",path:FesT_Replica,id:"FesT_Replica"},
@@ -434,8 +434,8 @@ const gears = [
     {name:"イカセーラー ホワイト",path:IkaSailor_White,id:"IkaSailor_White"},
     {name:"F-3 ペイントカスタム",path:F$3_PaintCustom,id:"F-3_PaintCustom"},
     {name:"F-3 ホワイトレザー",path:F$3_WhiteLeather,id:"F-3_WhiteLeather"},
-    {name:"FA-01ウラ",path:FA$01Ura,id:"FA$01Ura"},
-    {name:"FA-01オモテ",path:FA$01Omote,id:"FA$01Omote"},
+    {name:"FA-01ウラ",path:FA$01Ura,id:"FA-01Ura"},
+    {name:"FA-01オモテ",path:FA$01Omote,id:"FA-01Omote"},
     {name:"イカセーラー ブルー",path:IkaSailor_Blue,id:"IkaSailor_Blue"},
     // {name:"モイストギリースーツ",path:MoistGillieSuit,id:"MoistGillieSuit"},
     {name:"アイスグラデT",path:IceGuradeT,id:"IceGuradeT"},
@@ -467,7 +467,7 @@ const gears = [
     {name:"アオサドーレ",path:AosaDo$re,id:"AosaDo-re"},
     {name:"カモフラパープル",path:CamouflaPurple,id:"CamouflaPurple"},
     {name:"チョコガサネ",path:ChocoGasane,id:"ChocoGasane"},
-    {name:"トリコロールラガー",path:ToricorollRugger,id:"ToricorollRugger"},
+    {name:"トリコロールラガー",path:ToricorollRugger,id:"TricorollRugger"},
     {name:"ベクトルパターン グレー",path:VectorPattern_Gray,id:"VectorPattern_Gray"},
     {name:"ベクトルパターン レッド",path:VectorPattern_Red,id:"VectorPattern_Red"},
     {name:"ベクトルラインガサネ",path:VectorLineGasane,id:"VectorLineGasane"},
@@ -486,7 +486,7 @@ const gears = [
     {name:"ハラシロラグラン",path:HaraShiroRaglan,id:"HaraShiroRaglan"},
     {name:"バンドT ABXY",path:BandT_ABXY,id:"BandT_ABXY"},
     {name:"バンドT HIGHTIDEERA",path:BandT_HIGHTIDEERA,id:"BandT_HIGHTIDEERA"},
-    {name:"バンドT SQUIDSQUAD",path:BandT_SQUIDSDUAD,id:"BandT_SQUIDSDUAD"},
+    {name:"バンドT SQUIDSQUAD",path:BandT_SQUIDSDUAD,id:"BandT_SQUIDSQUAD"},
     {name:"バンドT WETFLOOR",path:BandT_WETFLOOR,id:"BandT_WETFLOOR"},
     {name:"ロッケンベルグT ブラック",path:RockenbergT_Black,id:"RockenbergT_Black"},
     {name:"マルエリシャツ",path:MaruEriShirt,id:"MaruEriShirt"},
@@ -518,9 +518,9 @@ const gears = [
     // {name:"オクトガサネ",path:OctoGasane,id:"OctoGasane"},
     // {name:"センニュースーツ",path:Sennyu$Suit,id:"Sennyu-Suit"},
     {name:"タコT",path:TakoT,id:"TakoT"},
-    {name:"BBシャツ プレミアム",path:BBshirt_Premium,id:"BBshirt_Premium"},
+    {name:"BBシャツ プレミアム",path:BBshirt_Premium,id:"BBShirt_Premium"},
     {name:"アカシックコート",path:AkashicCoat,id:"AkashicCoat"},
-    {name:"アゲアゲ・10・プラーXXL",path:AgeAge$10$Pura$XXL,id:"AgeAge・10・Pura-XXL"},
+    {name:"アゲアゲ・10・プラーXXL",path:AgeAge$10$Pura$XXL,id:"Ageage・10・Pura-XXL"},
     {name:"アンカーベスト",path:AnchorVest,id:"AnchorVest"},
     {name:"イカテンくんポロ",path:IkatenKunPolo,id:"IkatenKunPolo"},
     {name:"ジムパーソンアーマー",path:ZimuPersonArmor,id:"ZimuPersonArmor"},
@@ -3251,54 +3251,7 @@ const ClothesGearModal = (props) => {
                 <img src= {gearsArray[222].path} alt={gearsArray[222].name}/>
               </div>
             </div>
-            <div className="gear-list">
-              <div
-                className="gear-image"
-                onClick={()=>{
-                  props.passChosenGear(gearsArray[223].id);
-                  props.passImagePath(gearsArray[223].path);
-                  }
-                }
-              >
-                <img src= {gearsArray[223].path} alt={gearsArray[223].name}/>
-              </div>
-            </div>
-            <div className="gear-list">
-              <div
-                className="gear-image"
-                onClick={()=>{
-                  props.passChosenGear(gearsArray[224].id);
-                  props.passImagePath(gearsArray[224].path);
-                  }
-                }
-              >
-                <img src= {gearsArray[224].path} alt={gearsArray[224].name}/>
-              </div>
-            </div>
-            <div className="gear-list">
-              <div
-                className="gear-image"
-                onClick={()=>{
-                  props.passChosenGear(gearsArray[225].id);
-                  props.passImagePath(gearsArray[225].path);
-                  }
-                }
-              >
-                <img src= {gearsArray[225].path} alt={gearsArray[225].name}/>
-              </div>
-            </div>
-            <div className="gear-list">
-              <div
-                className="gear-image"
-                onClick={()=>{
-                  props.passChosenGear(gearsArray[226].id);
-                  props.passImagePath(gearsArray[226].path);
-                  }
-                }
-              >
-                <img src= {gearsArray[226].path} alt={gearsArray[226].name}/>
-              </div>
-            </div>
+            
           </div>
         </div>
         <button

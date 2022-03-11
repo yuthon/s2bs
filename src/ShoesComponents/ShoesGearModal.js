@@ -51,7 +51,7 @@ import Gurittyo_Green_GENTEIBAN from '../images/gear/Shs_SLO002.png';
 import Eging5_HaniOre from '../images/gear/Shs_SHI026.png';
 import EnPacerAg from '../images/gear/Shs_SHT016.png';
 import EnPacerCao from '../images/gear/Shs_SHT015.png';
-import Eging4_AoKuro from '../images/gear/Shs_SHT018.png';
+import Eging4_AoKuro from '../images/gear/Shs_SHI018.png';
 import Eging4_AkaKuro from '../images/gear/Shs_SHI017.png';
 // import Eging4_Iimari from '../images/gear/Shs_HAP005.png';
 import Eging4_KiiKon from '../images/gear/Shs_SHI027.png';
@@ -115,7 +115,7 @@ import OrcaHiPassion from '../images/gear/Shs_SHI039.png';
 import CrazyArrows from '../images/gear/Shs_SHT008.png';
 import PowerStrip_AoAshi from '../images/gear/Shs_SHI035.png';
 import PowerStrip_AkaAshi from '../images/gear/Shs_SHI034.png';
-import WhiteArrows from '../images/gear/Shs_SHI003.png';
+import WhiteArrows from '../images/gear/Shs_SHT003.png';
 // import AkatsukiArrows from '../images/gear/Shs_HAP003.png';
 // import PowerStrip_Trooper from '../images/gear/Shs_HAP006.png';
 import YudeSupaika from '../images/gear/Shs_SLO010.png';
@@ -123,7 +123,7 @@ import ReaSupaika from '../images/gear/Shs_SLO011.png';
 // ロッケンベルグ
 import IkaSumiTip from '../images/gear/Shs_LTS003.png';
 import IkaYakiTip from '../images/gear/Shs_LTS004.png';
-import RubberSole_White from '../images/gear/Shs_LTS003.png';
+import RubberSole_White from '../images/gear/Shs_LTS000.png';
 import GrayTip_YellowSole from '../images/gear/Shs_LTS008.png';
 import ShinryokuLeatherBoots from '../images/gear/Shs_BOT017.png';
 import NubuckBoots_Yellow from '../images/gear/Shs_BOT001.png';
@@ -168,14 +168,14 @@ import BankaraKoron from '../images/gear/Shs_COP106.png';
 import MudRubber from '../images/gear/Shs_COP101.png';
 
 const gears = [
-    {name:"シーホース ホワイト",path:SeaHorse_White,id:"SeaHorse_White"},
-    {name:"シーホースHi ゾンビ",path:SeaHorseHi_Zombie,id:"SeaHorseHi_Zombie"},
-    {name:"シーホースHi パープル",path:SeaHorseHi_Purple,id:"SeaHorseHi_Purple"},
-    {name:"シーホースHi レッド",path:SeaHorseHi_Red,id:"SeaHorseHi_Red"},
+    {name:"シーホース ホワイト",path:SeaHorse_White,id:"Seahorse_White"},
+    {name:"シーホースHi ゾンビ",path:SeaHorseHi_Zombie,id:"SeahorseHi_Zombie"},
+    {name:"シーホースHi パープル",path:SeaHorseHi_Purple,id:"SeahorseHi_Purple"},
+    {name:"シーホースHi レッド",path:SeaHorseHi_Red,id:"SeahorseHi_Red"},
     {name:"デカロニックミント",path:DekaronicMint,id:"DekaronicMint"},
     {name:"デカロノーレース ブルー",path:DekaroNoLace_Blue,id:"DekaroNoLace_Blue"},
-    {name:"シーホース イエロー",path:SeaHorse_Yellow,id:"SeaHorse_Yellow"},
-    {name:"シーホース ブラックレザー",path:SeaHorse_BlackLeather,id:"SeaHorse_BlackLeather"},
+    {name:"シーホース イエロー",path:SeaHorse_Yellow,id:"Seahorse_Yellow"},
+    {name:"シーホース ブラックレザー",path:SeaHorse_BlackLeather,id:"Seahorse_BlackLeather"},
     // {name:"デカロニックチョコレート",path:DekaronicChocolate,id:"DekaronicChocolate"},
     {name:"デカロニックブラック",path:DekaronicBlack,id:"DekaronicBlack"},
     {name:"デカロノーレース ホワイト",path:DekaroNoLace_White,id:"DekaroNoLace_White"},
@@ -188,7 +188,7 @@ const gears = [
     {name:"イロマキ750 オレンジ",path:Iromaki750_Orange,id:"Iromaki750_Orange"},
     {name:"イロマキ750 グリーン",path:Iromaki750_Green,id:"Iromaki750_Green"},
     {name:"イロマキ750 パープル",path:Iromaki750_Purple,id:"Iromaki750_Purple"},
-    {name:"イロマキ750 ブルー",path:Iromaki750_Blue,id:"Iromaki750_Blue"},
+    // {name:"イロマキ750 ブルー",path:Iromaki750_Blue,id:"Iromaki750_Blue"},
     {name:"イロマキ750 レッド",path:Iromaki750_Red,id:"Iromaki750_Red"},
     {name:"ウミウシイエロー",path:UmiushiYellow,id:"UmiushiYellow"},
     {name:"ウミウシブルー",path:UmiushiBlue,id:"UmiushiBlue"},
@@ -198,10 +198,10 @@ const gears = [
     {name:"ピンクビーンズ",path:PinkBeans,id:"PinkBeans"},
     {name:"ブラックビーンズ",path:BlackBeans,id:"BlackBeans"},
     {name:"アロメッシュバーミリオン",path:AromeshVermillion,id:"AromeshVermillion"},
-    {name:"ウミウシパープル",path:UmiushiPuerple,id:"UmiushiPuerple"},
+    {name:"ウミウシパープル",path:UmiushiPuerple,id:"UmiushiPurple"},
     // {name:"ウミウシボルト95",path:UmiushiVolt95,id:"UmiushiVolt95"},
     // {name:"ゴマシオ270",path:GomaShio270,id:"GomaShio270"},
-    {name:"ノリマキ750 ホワイト",path:Norimaki750_White,id:"Norimaki750_White"},
+    // {name:"ノリマキ750 ホワイト",path:Norimaki750_White,id:"Norimaki750_White"},
     {name:"アイスダウンブーツ",path:IceDownBoots,id:"IceDownBoots"},
     {name:"ウミウシタウンHi アンバー",path:UmiushiTownHi_Amber,id:"UmiushiTownHi_Amber"},
     {name:"ウミウシタウンHi グレー",path:UmiushiTownHi_Gray,id:"UmiushiTownHi_Gray"},
@@ -230,7 +230,7 @@ const gears = [
     {name:"エギング5 プレミアム",path:Eging5_Premium,id:"Eging5_Premium"},
     {name:"エンペーサーAu",path:EnPacerAu,id:"EnPacerAu"},
     {name:"エンペリアルNV",path:EnperrialNV,id:"EnperrialNV"},
-    {name:"エンペリアルカイザー",path:EnperrialKaiser,id:"EnperrialKaiser"},
+    // {name:"エンペリアルカイザー",path:EnperrialKaiser,id:"EnperrialKaiser"},
     {name:"オイスタークロッグ",path:OysterClog,id:"OysterClog"},
     {name:"キャンバス クマノミ",path:Canvas_Kumanomi,id:"Canvas_Kumanomi"},
     {name:"キャンバス バナナ",path:Canvas_Banana,id:"Canvas_Banana"},
@@ -246,7 +246,7 @@ const gears = [
     {name:"スリッポン チドリ",path:Slippon_Chidori,id:"Slippon_Chidori"},
     {name:"スリッポン ポルカ",path:Slippon_Polka,id:"Slippon_Polka"},
     {name:"チョコクロッグ",path:ChocoClog,id:"ChocoClog"},
-    {name:"ミッドナイトスリッポン",path:MidnightSlippon,id:"MidnightSlippon"},
+    // {name:"ミッドナイトスリッポン",path:MidnightSlippon,id:"MidnightSlippon"},
     {name:"フジツボペタサン",path:FujitsuboPetaSan,id:"FujitsuboPetaSan"},
     {name:"ボルダーシューズ ハザクラ",path:BoulderShoes_Hazakura,id:"BoulderShoes_Hazakura"},
     {name:"レイニーアセロラ",path:RainyAcerola,id:"RainyAcerola"},
@@ -276,9 +276,9 @@ const gears = [
     {name:"ヤキフグシャワサン キ",path:YakifuguSyawaSan_Ki,id:"YakifuguSyawaSan_Ki"},
     {name:"アスレチックアローズ",path:AthleticArrows,id:"AthleticArrows"},
     {name:"オレンジアローズ",path:OrangeArrows,id:"OrangeArrows"},
-    {name:"オルカHi",path:OrcaHi,id:"OrcaHi"},
+    {name:"オルカHi",path:OrcaHi,id:"ORCAHI"},
     {name:"オルカHiウーブン",path:OrcaHiWoven,id:"OrcaHiWoven"},
-    {name:"オルカHiサンセット",path:OrcaHiSunSet,id:"OrcaHiSunSet"},
+    {name:"オルカHiサンセット",path:OrcaHiSunSet,id:"OrcaHiSunset"},
     {name:"オルカHiパッション",path:OrcaHiPassion,id:"OrcaHiPassion"},
     {name:"クレイジーアローズ",path:CrazyArrows,id:"CrazyArrows"},
     {name:"パワーストリップ アオアシ",path:PowerStrip_AoAshi,id:"PowerStrip_AoAshi"},
@@ -289,7 +289,7 @@ const gears = [
     {name:"ユデスパイカ",path:YudeSupaika,id:"YudeSupaika"},
     {name:"レアスパイカ",path:ReaSupaika,id:"ReaSupaika"},
     {name:"イカスミチップ",path:IkaSumiTip,id:"IkaSumiTip"},
-    {name:"イカヤキチップ",path:IkaYakiTip,id:"IkaYakiTip"},
+    // {name:"イカヤキチップ",path:IkaYakiTip,id:"IkaYakiTip"},
     {name:"ラバーソール ホワイト",path:RubberSole_White,id:"RubberSole_White"},
     {name:"グレーチップ イエローソール",path:GrayTip_YellowSole,id:"GrayTip_YellowSole"},
     {name:"シンリョクレザーブーツ",path:ShinryokuLeatherBoots,id:"ShinryokuLeatherBoots"},
@@ -1913,66 +1913,7 @@ const ShoesGearModal = (props) => {
                 <img src= {gearsArray[127].path} alt={gearsArray[127].name}/>
               </div>
             </div>
-            <div className="gear-list">
-              <div
-                className="gear-image"
-                onClick={()=>{
-                  props.passChosenGear(gearsArray[128].id);
-                  props.passImagePath(gearsArray[128].path);
-                  }
-                }
-              >
-                <img src= {gearsArray[128].path} alt={gearsArray[128].name}/>
-              </div>
-            </div>
-            <div className="gear-list">
-              <div
-                className="gear-image"
-                onClick={()=>{
-                  props.passChosenGear(gearsArray[129].id);
-                  props.passImagePath(gearsArray[129].path);
-                  }
-                }
-              >
-                <img src= {gearsArray[129].path} alt={gearsArray[129].name}/>
-              </div>
-            </div>
-            <div className="gear-list">
-              <div
-                className="gear-image"
-                onClick={()=>{
-                  props.passChosenGear(gearsArray[130].id);
-                  props.passImagePath(gearsArray[130].path);
-                  }
-                }
-              >
-                <img src= {gearsArray[130].path} alt={gearsArray[130].name}/>
-              </div>
-            </div>
-            <div className="gear-list">
-              <div
-                className="gear-image"
-                onClick={()=>{
-                  props.passChosenGear(gearsArray[131].id);
-                  props.passImagePath(gearsArray[131].path);
-                  }
-                }
-              >
-                <img src= {gearsArray[131].path} alt={gearsArray[131].name}/>
-              </div>
-            </div>
-            <div className="gear-list">
-              <div
-                className="gear-image"
-                onClick={()=>{
-                  props.passChosenGear(gearsArray[132].id);
-                  props.passImagePath(gearsArray[132].path);
-                  }
-                }
-              >
-                <img src= {gearsArray[132].path} alt={gearsArray[132].name}/>
-              </div>
-            </div>
+            
           </div>
         </div>
         <button

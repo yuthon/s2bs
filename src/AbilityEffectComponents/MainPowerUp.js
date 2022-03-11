@@ -251,7 +251,7 @@ const MainPowerUp = (props) => {
         <p>{paintRadius}％</p>
       </div></>
     );
-  } else if (name.indexOf("スプラシューター") > -1 || name.indexOf("ヒーローシューター") > -1) {
+  } else if (name.indexOf("スプラシューター") > -1 || name.indexOf("ヒーローシューター") > -1 || name.indexOf("オクタシューター") > -1) {
     for (let i=0; i < 40; i++) {
       if (SplatterShot[i].AP === abilityPoint) {
         rng = SplatterShot[i].DR;

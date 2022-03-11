@@ -8,7 +8,7 @@ import { useFrame, useLoader } from '@react-three/fiber';
 const Model = (props) => {
   const gltf = useLoader(
     GLTFLoader,
-    'splModel033.glb',
+    'splModel038.glb',
     loader => {
       const dracoLoader = new DRACOLoader();
       dracoLoader.setDecoderPath("/draco-gltf/");
@@ -31,12 +31,16 @@ const Model = (props) => {
       const action = mixer.clipAction(gltf.animations[0]);
       action.play();
     }
-    else if (props.CT === "IML" || props.CT === "OML") {
+    else if (props.CT === "IML") {
       const action = mixer.clipAction(gltf.animations[1]);
       action.play();
     }
     else if (props.CT === "OFML") {  
       const action = mixer.clipAction(gltf.animations[2]);
+      action.play();
+    }
+    else if (props.CT === "OML") {  
+      const action = mixer.clipAction(gltf.animations[3]);
       action.play();
     }
     

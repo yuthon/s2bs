@@ -280,7 +280,7 @@ const InkSaverMain = (props) => {
     bullets = Math.floor(1 / inkConsumption);
     // 数値を％になおす
     inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("スプラシューター") > -1 || weaponStatus.name.indexOf("ヒーローシューター") > -1) {
+  } else if (weaponStatus.name.indexOf("スプラシューター") > -1 || weaponStatus.name.indexOf("ヒーローシューター") > -1 || weaponStatus.name.indexOf("オクタシューター") > -1) {
     for (let i=0; i < 40; i++) {
       if (SplatterShot[i].AP === abilityPoint) {
         inkConsumption = SplatterShot[i].IC;

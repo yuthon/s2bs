@@ -63,7 +63,7 @@ const AbilityComponents = (props) => {
   const [subAbilityName8, passSubAbilityName8] = useState(null);
   
   return (
-    <><div className="gear-components col-2 order-1">
+    <><div className="col-2 order-1 px-0" id="gear-components">
       <div>
         <Head
           //ギアモーダルからStateを経由して受け取った画像のパスをpropsで渡す

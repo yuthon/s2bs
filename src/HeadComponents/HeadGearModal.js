@@ -26,7 +26,7 @@ import BackwardCap from '../images/gear/Hed_CAP009.png';
 import RunningBand from '../images/gear/Hed_HBD004.png';
 import FIVEPanelCap from '../images/gear/Hed_CAP007.png';
 import ArrowBand_Black from '../images/gear/Hed_EYE004.png';
-import EzokkoFlipper from '../images/gear/Hed_EYE013.png';
+// import EzokkoFlipper from '../images/gear/Hed_EYE013.png';
 import DoubleEggSunglass from '../images/gear/Hed_EYE012.png';
 import ArrowBand_White from '../images/gear/Hed_EYE006.png';
 import TsuyaKeshiMTBMet from '../images/gear/Hed_MET008.png';
@@ -180,121 +180,122 @@ import MarilynHatWithPins from '../images/gear/Hed_COP109.png';
 import LegendNoBoushi from '../images/gear/Hed_COP105.png';
 
 
+
 // デフォルトはブランド順
 let gears = [
-  {name:"キャディ サンバイザー", path:Cady_Sunvisor, id:"V0_Cady_Sunvisor"},
-  {name:"スカッシュバンド", path:SquashBand, id:"HB_SquashBand"},
-  {name:"テッカサイクルキャップ", path:TekkaCycleCap, id:"C1_TekkaCycleCap"},
-  {name:"バスケバンド", path:BasukeBand, id:"HB_BasukeBand"},
-  {name:"アナアキマスク", path:AnaakiMask, id:"BS_AnaakiMask"},
-  {name:"アナアキピンベレー", path:AnaakiAnPinBeret, id:"H1_AnaakiAnPinBeret"},
-  {name:"アナアキバスクベレー", path:AnaakiBuskBeret, id:"H1_AnaakiBuskBeret"},
-  {name:"テニスバンド", path:TennisBand, id:"HB_TennisBand"},
-  {name:"サッカーバンド", path:SoccerBand, id:"BS_SoccerBand"},
-  {name:"サンサンサンバイザー", path:SanSanSunvisor, id:"V1_SanSanSunvisor"},
-  {name:"ダテコンタクト", path:DateContact, id:"DateContact"},
-  {name:"チャリキング帽", path:ChariKingBou, id:"C1_ChariKingBou"},
-  {name:"イロメガネ", path:IroMegane, id:"BS_IroMegane"},
-  {name:"エゾッコメッシュ", path:EzokkoMesh, id:"C0_EzokkoMesh"},
-  {name:"バックワードキャップ", path:BackwardCap, id:"C1_BackwardCap"},
-  {name:"ランニングバンド", path:RunningBand, id:"HB_RunningBand"},
-  {name:"5パネルキャップ", path:FIVEPanelCap, id:"C0_5PanelCap"},
-  {name:"アローバンド ブラック", path:ArrowBand_Black, id:"BS_ArrowBand_Black"},
-  {name:"エゾッコフリッパー", path:EzokkoFlipper, id:"M0_EzokkoFlipper"},
-  {name:"ダブルエッグサングラス", path:DoubleEggSunglass, id:"BS_DoubleEggSunglass"},
-  {name:"アローバンド ホワイト", path:ArrowBand_White, id:"BS_ArrowBand_White"},
-  {name:"ツヤケシMTBメット", path:TsuyaKeshiMTBMet, id:"M0_TsuyaKeshiMTBMet"},
-  {name:"ロゴヅクシMTBメット", path:LogoZukushiMTBMet, id:"M0_LogoZukushiMTBMet"},
-  {name:"キングオブマスク", path:KingOfMask, id:"BS_KingOfMask"},
-  {name:"キングタコスターマスク", path:KingTakoStarMask, id:"BS_KingTakoStarMask"},
-  {name:"キングフリップメッシュ", path:KingFlipMesh, id:"C0_KingFlipMesh"},
-  {name:"カイザーカフ", path:KaiserCuff, id:"C0_KingFlipMesh"},
-  {name:"2ラインメッシュ", path:TWOLineMesh, id:"C0_2LineMesh"},
-  {name:"エイズリーバンダナ", path:Eizuri$Bandana, id:"BN_Eizuri-Bandana"},
-  {name:"マルベッコー", path:MaruBekko$, id:"BS_MaruBekko-"},
-  {name:"ウールウーニーズクラシック", path:WoolU$ni$zuClassic, id:"C1_WoolU-ni-zuClassic"},
-  {name:"ヒッコリーワークキャップ", path:Hikkori$WorkCap, id:"C0_Hikkori-WorkCap"},
-  {name:"ロングビルキャップ", path:LongBillCap, id:"C0_LongBillCap"},
-  {name:"キャンプキャップ", path:CampCap, id:"C0_CampCap"},
-  {name:"キャンプハット", path:CampHat, id:"H0_CampHat"},
-  {name:"ショートビーニー", path:ShortBeanie, id:"M0_ShortBeanie"},
-  {name:"ヤマギリビーニー", path:YamagiriBeanie, id:"KN_YamagiriBeanie"},
-  {name:"カイガラスゲ", path:KaigaraSuge, id:"H1_KaigaraSuge"},
-  {name:"スゲ", path:Suge, id:"H0_Suge"},
-  {name:"クロブチ レトロ", path:Kurobuchi_Retro, id:"BS_Kurobuchi_Retro"},
-  {name:"ボーダービーニー", path:BorderBeanie, id:"M0_BorderBeanie"},
-  {name:"セルブロウ", path:SeruBurou, id:"BS_SeruBurou"},
-  {name:"ハウスタグデニムCAP", path:HouseTagDenimCAP, id:"C0_HouseTagDenimCAP"},
-  {name:"ボンボンニット", path:BonBonKnit, id:"KN_BonBonKnit"},
-  {name:"センニュークロブチ", path:Sennyu$Kurobuchi, id:"BS_Sennyu-Kurobuchi"},
-  {name:"センニューボンボン", path:Sennyu$BonBon, id:"KN_Sennyu-BonBon"},
-  {name:"フライトぼう", path:FlightBou, id:"KN_FlightBou"},
-  {name:"スミガードゴーグル", path:SumiGuardGoggle, id:"BS_SumiGuardGoggle"},
-  {name:"フェイスバイザー", path:FaceVisor, id:"FaceVisor"},
-  {name:"イカバケット", path:IkaBucket, id:"M0_IkaBucket"},
-  {name:"イカバッテンガード", path:IkaBattenGuard, id:"BS_IkaBattenGuard"},
-  {name:"ヘッドバンド ホワイト", path:HeadBand_White, id:"HB_Headband_White"},
-  {name:"ペインターマスク", path:PainterMask, id:"BS_PainterMask"},
-  {name:"アンコウラバーマスク", path:AnkouRubberMask, id:"M1_AnkouRubberMask"},
-  {name:"キョンキョンぼう", path:KyonKyonBou, id:"H2_KyonKyonBou"},
-  {name:"こうしえんバンダナ", path:KoushienBandana, id:"BN_KoushienBandana"},
-  {name:"コズミックアンテナ", path:CozmicAntenna, id:"BS_CozmicAntenna"},
-  {name:"ニューイヤーグラスDX", path:NewYearGlassDX, id:"BS_NewYearGlassDX"},
-  {name:"バーニングブロイラー", path:BurningBroiler, id:"M1_BurningBroiler"},
-  {name:"ハッピーチンアナゴハット", path:HappyChinAnagoHat, id:"H1_HappyChinAnagoHat"},
-  {name:"フォーリマスク", path:Fo$riMask, id:"BS_Fo-riMask"},
-  {name:"エンペラフックHDP", path:EnperaHookHDP, id:"BS_EnperaHookHDP"},
-  {name:"オーロラヘッドホン", path:AuroraHeadphone, id:"HP_AuroraHeadPhone"},
-  {name:"スタジオヘッドホン", path:StudioHeadphone, id:"HP_StudioHeadphone"},
-  {name:"スプラッシュゴーグル", path:SplashGoggle, id:"BS_SplashGoggle"},
-  {name:"ダイバーゴーグル", path:DiverGoggle, id:"BS_DiverGoggle"},
-  {name:"トレジャーメット", path:TreasureMet, id:"H2_TreasureMet"},
-  {name:"パイロットゴーグル", path:PilotGoggle, id:"HB_PilotGoggle"},
-  {name:"ロブスターブーニー", path:RobstarBoonie, id:"H1_RobstarBoonie"},
-  {name:"イカスカルマスク", path:IkaSkullMask, id:"BN_IkaSkullMask"},
-  {name:"イカロスHKメット", path:IcarusHKMet, id:"M0_IcarusHKMet"},
-  {name:"イヤーマフ", path:EarMuff, id:"HP_EarMuff"},
-  {name:"オクトメットプライズデコ", path:OctoMetPrizeDeko, id:"M1_OctoMetPrizeDeko"},
-  {name:"ステカセヘッドホン", path:SutekaseHeadphone, id:"HP_SutekaseHeadphone"},
-  {name:"センニューゴーグル", path:Sennyu$Goggle, id:"HB_Sennyu-Goggle"},
-  {name:"センニューヘッドホン", path:Sennyu$Headphone, id:"HP_Sennyu-Headphone"},
-  {name:"タコマスク", path:TakoMask, id:"BS_TakoMask"},
-  {name:"デカメットアイシールド", path:DekaMetEyeshield, id:"M1_DekaMetEyeshield"},
-  {name:"ナイトビジョン", path:NightVision, id:"M1_NightVision"},
-  {name:"ノーズガードモトクロス", path:NoseGuardMotoCross, id:"BS_NoseGuardMotoCross"},
-  {name:"フェイスゴーグル", path:FaceGoggle, id:"BS_FaceGoggle"},
-  {name:"モンゴウベレー", path:MongouBeret, id:"H0_MongouBeret"},
-  {name:"イカベーダーキャップ", path:IkaVaderCap, id:"C1_IkaVaderCap"},
-  {name:"イカンカン", path:Ikankan, id:"H2_Ikankan"},
-  {name:"ウーニーズBBキャップ", path:U$ni$zuBBCap, id:"C0_U-ni-zuBBCap"},
-  {name:"ウインターボンボン", path:WinterBonBon, id:"KN_WinterBonBon"},
-  {name:"ビバレッジキャップ", path:BeverageCap, id:"C1_BeverageCap"},
+  {name:"キャディ サンバイザー", path:Cady_Sunvisor, id:"V0_Cady_Sunvisor", brand:"アイロニック"},
+  {name:"スカッシュバンド", path:SquashBand, id:"HB_SquashBand", brand:"アイロニック"},
+  {name:"テッカサイクルキャップ", path:TekkaCycleCap, id:"C1_TekkaCycleCap", brand:"アイロニック"},
+  {name:"バスケバンド", path:BasukeBand, id:"HB_BasukeBand", brand:"アイロニック"},
+  {name:"アナアキマスク", path:AnaakiMask, id:"BS_AnaakiMask", brand:"アナアキ"},
+  {name:"アナアキピンベレー", path:AnaakiAnPinBeret, id:"H1_AnaakiAnPinBeret", brand:"アナアキ"},
+  {name:"アナアキバスクベレー", path:AnaakiBuskBeret, id:"H1_AnaakiBuskBeret", brand:"アナアキ"},
+  {name:"テニスバンド", path:TennisBand, id:"HB_TennisBand", brand:"アロメ"},
+  {name:"サッカーバンド", path:SoccerBand, id:"BS_SoccerBand", brand:"アロメ"},
+  {name:"サンサンサンバイザー", path:SanSanSunvisor, id:"V1_SanSanSunvisor", brand:"アロメ"},
+  {name:"ダテコンタクト", path:DateContact, id:"DateContact", brand:"アロメ"},
+  {name:"チャリキング帽", path:ChariKingBou, id:"C1_ChariKingBou", brand:"アロメ"},
+  {name:"イロメガネ", path:IroMegane, id:"BS_IroMegane", brand:"エゾッコ"},
+  {name:"エゾッコメッシュ", path:EzokkoMesh, id:"C0_EzokkoMesh", brand:"エゾッコ"},
+  {name:"バックワードキャップ", path:BackwardCap, id:"C1_BackwardCap", brand:"エゾッコ"},
+  {name:"ランニングバンド", path:RunningBand, id:"HB_RunningBand", brand:"エゾッコ"},
+  {name:"5パネルキャップ", path:FIVEPanelCap, id:"C0_5PanelCap", brand:"エゾッコ"},
+  {name:"アローバンド ブラック", path:ArrowBand_Black, id:"BS_ArrowBand_Black", brand:"エゾッコ"},
+  // {name:"エゾッコフリッパー", path:EzokkoFlipper, id:"M0_EzokkoFlipper", brand:"エゾッコ"},
+  {name:"ダブルエッグサングラス", path:DoubleEggSunglass, id:"BS_DoubleEggSunglass", brand:"エゾッコ"},
+  {name:"アローバンド ホワイト", path:ArrowBand_White, id:"BS_ArrowBand_White", brand:"エゾッコ"},
+  {name:"ツヤケシMTBメット", path:TsuyaKeshiMTBMet, id:"M0_TsuyaKeshiMTBMet", brand:"エゾッコ"},
+  {name:"ロゴヅクシMTBメット", path:LogoZukushiMTBMet, id:"M0_LogoZukushiMTBMet", brand:"エゾッコ"},
+  {name:"キングオブマスク", path:KingOfMask, id:"BS_KingOfMask", brand:"エンペリー"},
+  {name:"キングタコスターマスク", path:KingTakoStarMask, id:"BS_KingTakoStarMask", brand:"エンペリー"},
+  {name:"キングフリップメッシュ", path:KingFlipMesh, id:"C0_KingFlipMesh", brand:"エンペリー"},
+  // {name:"カイザーカフ", path:KaiserCuff, id:"C0_KingFlipMesh", brand:"エンペリー"},
+  {name:"2ラインメッシュ", path:TWOLineMesh, id:"C0_2LineMesh", brand:"クラーゲス"},
+  {name:"エイズリーバンダナ", path:Eizuri$Bandana, id:"BN_Eizuri-Bandana", brand:"クラーゲス"},
+  {name:"マルベッコー", path:MaruBekko$, id:"BS_MaruBekko-", brand:"クラーゲス"},
+  {name:"ウールウーニーズクラシック", path:WoolU$ni$zuClassic, id:"C1_WoolU-ni-zuClassic", brand:"クラーゲス"},
+  {name:"ヒッコリーワークキャップ", path:Hikkori$WorkCap, id:"C0_Hikkori-WorkCap", brand:"クラーゲス"},
+  {name:"ロングビルキャップ", path:LongBillCap, id:"C0_LongBillCap", brand:"クラーゲス"},
+  {name:"キャンプキャップ", path:CampCap, id:"C0_CampCap", brand:"シグレ二"},
+  {name:"キャンプハット", path:CampHat, id:"H0_CampHat", brand:"シグレ二"},
+  {name:"ショートビーニー", path:ShortBeanie, id:"M0_ShortBeanie", brand:"シグレ二"},
+  {name:"ヤマギリビーニー", path:YamagiriBeanie, id:"KN_YamagiriBeanie", brand:"シグレ二"},
+  {name:"カイガラスゲ", path:KaigaraSuge, id:"H1_KaigaraSuge", brand:"シグレ二"},
+  {name:"スゲ", path:Suge, id:"H0_Suge", brand:"シグレ二"},
+  {name:"クロブチ レトロ", path:Kurobuchi_Retro, id:"BS_Kurobuchi_Retro", brand:"ジモン"},
+  {name:"ボーダービーニー", path:BorderBeanie, id:"M0_BorderBeanie", brand:"ジモン"},
+  {name:"セルブロウ", path:SeruBurou, id:"BS_SeruBurou", brand:"ジモン"},
+  {name:"ハウスタグデニムCAP", path:HouseTagDenimCAP, id:"C0_HouseTagDenimCAP", brand:"ジモン"},
+  {name:"ボンボンニット", path:BonBonKnit, id:"KN_BonBonKnit", brand:"ジモン"},
+  {name:"センニュークロブチ", path:Sennyu$Kurobuchi, id:"BS_Sennyu-Kurobuchi", brand:"ジモン"},
+  {name:"センニューボンボン", path:Sennyu$BonBon, id:"KN_Sennyu-BonBon", brand:"ジモン"},
+  {name:"フライトぼう", path:FlightBou, id:"KN_FlightBou", brand:"ジモン"},
+  {name:"スミガードゴーグル", path:SumiGuardGoggle, id:"BS_SumiGuardGoggle", brand:"タタキケンサキ"},
+  // {name:"フェイスバイザー", path:FaceVisor, id:"FaceVisor", brand:"タタキケンサキ"},
+  {name:"イカバケット", path:IkaBucket, id:"M0_IkaBucket", brand:"バトロイカ"},
+  {name:"イカバッテンガード", path:IkaBattenGuard, id:"BS_IkaBattenGuard", brand:"バトロイカ"},
+  {name:"ヘッドバンド ホワイト", path:HeadBand_White, id:"HB_Headband_White", brand:"バトロイカ"},
+  {name:"ペインターマスク", path:PainterMask, id:"BS_PainterMask", brand:"バトロイカ"},
+  {name:"アンコウラバーマスク", path:AnkouRubberMask, id:"M1_AnkouRubberMask", brand:"バトロイカ"},
+  {name:"キョンキョンぼう", path:KyonKyonBou, id:"H2_KyonKyonBou", brand:"バトロイカ"},
+  {name:"こうしえんバンダナ", path:KoushienBandana, id:"BN_KoushienBandana", brand:"バトロイカ"},
+  {name:"コズミックアンテナ", path:CozmicAntenna, id:"BS_CozmicAntenna", brand:"バトロイカ"},
+  {name:"ニューイヤーグラスDX", path:NewYearGlassDX, id:"BS_NewYearGlassDX", brand:"バトロイカ"},
+  {name:"バーニングブロイラー", path:BurningBroiler, id:"M1_BurningBroiler", brand:"バトロイカ"},
+  {name:"ハッピーチンアナゴハット", path:HappyChinAnagoHat, id:"H1_HappyChinanagoHat", brand:"バトロイカ"},
+  {name:"フォーリマスク", path:Fo$riMask, id:"BS_Fo-riMask", brand:"フォーリマ"},
+  {name:"エンペラフックHDP", path:EnperaHookHDP, id:"BS_EnperaHookHDP", brand:"フォーリマ"},
+  {name:"オーロラヘッドホン", path:AuroraHeadphone, id:"HP_AuroraHeadphone", brand:"フォーリマ"},
+  {name:"スタジオヘッドホン", path:StudioHeadphone, id:"HP_StudioHeadphone", brand:"フォーリマ"},
+  {name:"スプラッシュゴーグル", path:SplashGoggle, id:"BS_SplashGoggle", brand:"フォーリマ"},
+  {name:"ダイバーゴーグル", path:DiverGoggle, id:"BS_DiverGoggle", brand:"フォーリマ"},
+  {name:"トレジャーメット", path:TreasureMet, id:"H2_TreasureMet", brand:"フォーリマ"},
+  {name:"パイロットゴーグル", path:PilotGoggle, id:"HB_PilotGoggle", brand:"フォーリマ"},
+  {name:"ロブスターブーニー", path:RobstarBoonie, id:"H1_RobstarBoonie", brand:"フォーリマ"},
+  {name:"イカスカルマスク", path:IkaSkullMask, id:"BN_IkaSkullMask", brand:"フォーリマ"},
+  // {name:"イカロスHKメット", path:IcarusHKMet, id:"M0_IcarusHKMet", brand:"フォーリマ"},
+  {name:"イヤーマフ", path:EarMuff, id:"HP_EarMuff", brand:"フォーリマ"},
+  {name:"オクトメットプライズデコ", path:OctoMetPrizeDeko, id:"M1_OctoMetPrizeDeco", brand:"フォーリマ"},
+  {name:"ステカセヘッドホン", path:SutekaseHeadphone, id:"HP_SutekaseHeadphone", brand:"フォーリマ"},
+  {name:"センニューゴーグル", path:Sennyu$Goggle, id:"HB_Sennyu-Goggle", brand:"フォーリマ"},
+  {name:"センニューヘッドホン", path:Sennyu$Headphone, id:"HP_Sennyu-Headphone", brand:"フォーリマ"},
+  {name:"タコマスク", path:TakoMask, id:"BS_TakoMask", brand:"フォーリマ"},
+  // {name:"デカメットアイシールド", path:DekaMetEyeshield, id:"M1_DekaMetEyeshield", brand:"フォーリマ"},
+  {name:"ナイトビジョン", path:NightVision, id:"M1_NightVision", brand:"フォーリマ"},
+  {name:"ノーズガードモトクロス", path:NoseGuardMotoCross, id:"BS_NoseGuardMotoCross", brand:"フォーリマ"},
+  {name:"フェイスゴーグル", path:FaceGoggle, id:"BS_FaceGoggle", brand:"フォーリマ"},
+  {name:"モンゴウベレー", path:MongouBeret, id:"H0_MongouBeret", brand:"フォーリマ"},
+  {name:"イカベーダーキャップ", path:IkaVaderCap, id:"C1_IkavaderCap", brand:"ホタックス"},
+  {name:"イカンカン", path:Ikankan, id:"H2_Ikankan", brand:"ホタックス"},
+  {name:"ウーニーズBBキャップ", path:U$ni$zuBBCap, id:"C0_U-ni-zuBBCap", brand:"ホタックス"},
+  {name:"ウインターボンボン", path:WinterBonBon, id:"KN_WinterBonBon", brand:"ホタックス"},
+  {name:"ビバレッジキャップ", path:BeverageCap, id:"C1_BeverageCap", brand:"ホタックス"},
   // {name:"イカンカン クラシック", path:Ikankan_Classic, id:"Ikankan_Classic"},
-  {name:"オシノビニット", path:OshinobiKnit, id:"KN_OshinobiKnit"},
-  {name:"サイクルメット", path:CycleMet, id:"H1_CycleMet"},
-  {name:"スケボーメット", path:Sukebo$Met, id:"M1_Sukebo-Met"},
-  {name:"パッチハット", path:PatchHat, id:"M0_PatchHat"},
-  {name:"イカノルディック", path:IkaNordic, id:"KN_IkaNordic"},
-  {name:"クラゲーダーキャップ", path:KuragaderCap, id:"C1_KuragaderCap"},
-  {name:"チドリキャップ", path:ChidoriCap, id:"C1_ChidoriCap"},
-  {name:"ドゥーラグキャップガサネ", path:DoRagCapGasane, id:"H3_DoRagCapGasane"},
-  {name:"バイザーメット", path:VisorMet, id:"M1_VisorMet"},
-  {name:"カモメッシュ", path:KamoMesh, id:"C0_KamoMesh"},
-  {name:"クロヤキフグバンダナ", path:KuroYakifuguBandana, id:"HB_KuroYakifuguBandana"},
-  {name:"ジェットキャップ", path:JetCap, id:"C0_JetCap"},
-  {name:"フグベルハット", path:FuguBellHat, id:"H2_FuguBellHat"},
-  {name:"マスクドホッコリー", path:MaskedHokkori$, id:"BS_MaskedHokkori-"},
-  {name:"ヤキフグ サンバイザー", path:Yakifugu_Sunvisor, id:"V3_Yakifugu_Sunvisor"},
-  {name:"ヤキフグビスケットバンダナ", path:YakifuguBiscuitBandana, id:"HB_YakifuguBiscuitBandana"},
-  {name:"リブニット", path:RibKnit, id:"KN_RibKnit"},
-  {name:"フグハンチング", path:FuguHanching, id:"C1_FuguHanching"},
-  {name:"フグベルベルハット", path:FuguBellBellHat, id:"H2_FuguBellBellHat"},
-  {name:"オクタグラス", path:OctaGlass, id:"BS_OctaGlass"},
-  {name:"サファリハット", path:SafariHat, id:"H1_SafariHat"},
-  {name:"ヤコメッシュ", path:YakoMesh, id:"C0_YakoMesh"},
-  {name:"ヤコバイザー", path:YakoVisor, id:"V2_YakoVisor"},
-  {name:"タレサン18K", path:TareSan18K, id:"BS_TareSan18K"},
-  {name:"マルサンSV925", path:MaruSanSV925, id:"BS_MaruSanSV925"},
+  {name:"オシノビニット", path:OshinobiKnit, id:"KN_OshinobiKnit", brand:"ホタックス"},
+  {name:"サイクルメット", path:CycleMet, id:"H1_CycleMet", brand:"ホタックス"},
+  {name:"スケボーメット", path:Sukebo$Met, id:"M1_Sukebo-Met", brand:"ホタックス"},
+  {name:"パッチハット", path:PatchHat, id:"M0_PatchHat", brand:"ホタックス"},
+  {name:"イカノルディック", path:IkaNordic, id:"KN_IkaNordic", brand:"ホタックス"},
+  {name:"クラゲーダーキャップ", path:KuragaderCap, id:"C1_KuragaderCap", brand:"ホタックス"},
+  {name:"チドリキャップ", path:ChidoriCap, id:"C1_ChidoriCap", brand:"ホタックス"},
+  {name:"ドゥーラグキャップガサネ", path:DoRagCapGasane, id:"H3_DoRagCapGasane", brand:"ホタックス"},
+  {name:"バイザーメット", path:VisorMet, id:"M1_VisorMet", brand:"ホタックス"},
+  {name:"カモメッシュ", path:KamoMesh, id:"C0_KamoMesh", brand:"ホッコリー"},
+  {name:"クロヤキフグバンダナ", path:KuroYakifuguBandana, id:"HB_KuroYakifuguBandana", brand:"ホッコリー"},
+  {name:"ジェットキャップ", path:JetCap, id:"C0_JetCap", brand:"ホッコリー"},
+  {name:"フグベルハット", path:FuguBellHat, id:"H2_FuguBellHat", brand:"ホッコリー"},
+  {name:"マスクドホッコリー", path:MaskedHokkori$, id:"BS_MaskedHokkori-", brand:"ホッコリー"},
+  {name:"ヤキフグ サンバイザー", path:Yakifugu_Sunvisor, id:"V3_Yakifugu_Sunvisor", brand:"ホッコリー"},
+  {name:"ヤキフグビスケットバンダナ", path:YakifuguBiscuitBandana, id:"HB_YakifuguBiscuitBandana", brand:"ホッコリー"},
+  {name:"リブニット", path:RibKnit, id:"KN_RibKnit", brand:"ホッコリー"},
+  {name:"フグハンチング", path:FuguHanching, id:"C1_FuguHanching", brand:"ホッコリー"},
+  {name:"フグベルベルハット", path:FuguBellBellHat, id:"H2_FuguBellBellHat", brand:"ホッコリー"},
+  {name:"オクタグラス", path:OctaGlass, id:"BS_OctaGlass", brand:"ホッコリー"},
+  {name:"サファリハット", path:SafariHat, id:"H1_SafariHat", brand:"ホッコリー"},
+  {name:"ヤコメッシュ", path:YakoMesh, id:"C0_YakoMesh", brand:"ヤコ"},
+  {name:"ヤコバイザー", path:YakoVisor, id:"V2_YakoVisor", brand:"ヤコ"},
+  {name:"タレサン18K", path:TareSan18K, id:"BS_TareSan18K", brand:"ロッケンベルグ"},
+  {name:"マルサンSV925", path:MaruSanSV925, id:"BS_MaruSanSV925", brand:"ロッケンベルグ"},
   // {name:"イイダチヘッドホン", path:IidachiHeadphone, id:"IidachiHeadphone"},
   // {name:"イカカゲマスク", path:IkaKageMask, id:"IkaKageMask"},
   // {name:"イカクリップ", path:IkaClip, id:"IkaClip"},
@@ -315,16 +316,16 @@ let gears = [
   // {name:"メトロぼう", path:MetroBou, id:"MetroBou"},
   // {name:"スタジオオクトホン", path:StudioOctoHon, id:"StudioOctoHon"},
   // {name:"金のつまようじ", path:KinNoTumayoji, id:"KinNoTumayoji"},
-  {name:"アイアンマスカレイド", path:AianMaskarade, id:"V4_AianMaskarade"},
-  {name:"アセストップソシナ", path:AsesuTopSoshina, id:""},
-  {name:"オーシャンズヘルム", path:OceansHelm, id:"H2_OceansHelm"},
-  {name:"ガーディアンアーミーハット", path:GuardianArmyHat, id:""},
-  {name:"スペボウ レプリカ", path:Supebou_Replica, id:"Supebou_Replica"},
-  {name:"ゾネスティックスコープ", path:ZonesticScope, id:"ZonesticScope"},
-  {name:"ダストブロッカー 2.5", path:DustBlocker_25, id:"DustBlocker_25"},
-  {name:"ヘッドライトヘルム", path:HeadLightHelm, id:"HeadLightHelm"},
-  {name:"マリリンハットウィズピンズ", path:MarilynHatWithPins, id:"MarilynHatWithPins"},
-  {name:"レジェンドのぼうし", path:LegendNoBoushi, id:"H3_LegendNoBoushi"}
+  {name:"アイアンマスカレイド", path:AianMaskarade, id:"V4_AianMaskaRade", brand:"クマサン商会"},
+  // {name:"アセストップソシナ", path:AsesuTopSoshina, id:""},
+  // {name:"オーシャンズヘルム", path:OceansHelm, id:"H2_OceansHelm", brand:"クマサン商会"},
+  // {name:"ガーディアンアーミーハット", path:GuardianArmyHat, id:""},
+  // {name:"スペボウ レプリカ", path:Supebou_Replica, id:"Supebou_Replica", brand:"クマサン商会"},
+  {name:"ゾネスティックスコープ", path:ZonesticScope, id:"ZonesticScope", brand:"クマサン商会"},
+  {name:"ダストブロッカー 2.5", path:DustBlocker_25, id:"DustBlocker_25", brand:"クマサン商会"},
+  {name:"ヘッドライトヘルム", path:HeadLightHelm, id:"HeadLightHelm", brand:"クマサン商会"},
+  {name:"マリリンハットウィズピンズ", path:MarilynHatWithPins, id:"MarilynHatWithPins", brand:"クマサン商会"},
+  {name:"レジェンドのぼうし", path:LegendNoBoushi, id:"H3_LegendNoBoushi", brand:"クマサン商会"}
 ];
 
 // 名前順に整列した配列を新たに定義
@@ -370,7 +371,7 @@ const HeadGearModal = (props) => {
             </div>
           </div>
           <div className="container d-flex flex-wrap px-0 px-lg-5">
-              <div className="gear-list">
+              <div className="gear-list gear-icon">
                 <div
                   className="gear-image"
                   onClick={()=>{
@@ -1726,115 +1727,6 @@ const HeadGearModal = (props) => {
                   <img src= {gearsArray[112].path} alt={gearsArray[112].name}/>
                 </div>
               </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[113].id);
-                    props.passImagePath(gearsArray[113].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[113].path} alt={gearsArray[113].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[114].id);
-                    props.passImagePath(gearsArray[114].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[114].path} alt={gearsArray[114].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[115].id);
-                    props.passImagePath(gearsArray[115].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[115].path} alt={gearsArray[115].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[116].id);
-                    props.passImagePath(gearsArray[116].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[116].path} alt={gearsArray[116].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[117].id);
-                    props.passImagePath(gearsArray[117].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[117].path} alt={gearsArray[117].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[118].id);
-                    props.passImagePath(gearsArray[118].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[118].path} alt={gearsArray[118].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[119].id);
-                    props.passImagePath(gearsArray[119].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[119].path} alt={gearsArray[119].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[120].id);
-                    props.passImagePath(gearsArray[120].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[120].path} alt={gearsArray[120].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[121].id);
-                    props.passImagePath(gearsArray[121].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[121].path} alt={gearsArray[121].name}/>
-                </div>
-              </div>
-              
           </div>
         </div>
         <button
