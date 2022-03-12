@@ -1,5 +1,6 @@
 import React, { useState }from 'react';
-
+import ArrowUpSVG from '../SVGComponents/ArrowUpSVG';
+import ArrowDownSVG from '../SVGComponents/ArrowDownSVG';
 // 変数名の$は-の代用
 
 
@@ -178,8 +179,40 @@ import DustBlocker_25 from '../images/gear/Hed_COP101.png';
 import HeadLightHelm from '../images/gear/Hed_COP100.png';
 import MarilynHatWithPins from '../images/gear/Hed_COP109.png';
 import LegendNoBoushi from '../images/gear/Hed_COP105.png';
-
-
+// ブランドの画像
+import Batoroika from '../images/brands/B00.png';
+import Aironic from '../images/brands/B01.png';
+import Kuragesu from '../images/brands/B02.png';
+import Rockenberg from '../images/brands/B03.png';
+import Ezokko from '../images/brands/B04.png';
+import Forima from '../images/brands/B05.png';
+import Hokkori from '../images/brands/B06.png';
+import Hotakkusu from '../images/brands/B07.png';
+import Zimon from '../images/brands/B08.png';
+import Sigureni from '../images/brands/B09.png';
+import Arome from '../images/brands/B10.png';
+import Yako from '../images/brands/B11.png';
+import Anaaki from '../images/brands/B15.png';
+import Enperry from '../images/brands/B16.png';
+import Tatakikensaki from '../images/brands/B17.png';
+import Kumasan from '../images/brands/B97.png';
+import Atarimeido from '../images/brands/B98.png';
+// ギアパワーの画像
+import inkSaverMain from '../images/ability/ISMain.png';
+import inkSaverSub from '../images/ability/ISSub.png';
+import inkRecovery from '../images/ability/REC.png';
+import runSpeed from '../images/ability/RSU.png';
+import swimSpeed from '../images/ability/SSU.png';
+import specialCharge from '../images/ability/SCU.png';
+import specialSaver from '../images/ability/SS.png';
+import specialPower from '../images/ability/SpecialPU.png';
+import qr from '../images/ability/QR.png';
+import quickSuperJump from '../images/ability/QSJ.png';
+import subPower from '../images/ability/SubPU.png';
+import inkRes from '../images/ability/RES.png';
+import bombDefence from '../images/ability/BDU.png';
+import mpu from '../images/ability/MPU.png';
+import empty from '../images/ability/empty.png';
 
 // デフォルトはブランド順
 let gears = [
@@ -331,6 +364,203 @@ let gears = [
 // 名前順に整列した配列を新たに定義
 const gearsSortedByName = gears.slice().sort((a, b) => (a.name > b.name) ? 1 : -1);
 
+const brandImagePath = function(brand) {
+  if (brand === "バトロイカ") {
+    return Batoroika
+  } else if (brand === "アイロニック") {
+    return Aironic
+  } else if (brand === "クラーゲス") {
+    return Kuragesu
+  } else if (brand === "ロッケンベルグ") {
+    return Rockenberg
+  } else if (brand === "エゾッコ") {
+    return Ezokko
+  } else if (brand === "フォーリマ") {
+    return Forima
+  } else if (brand === "ホッコリー") {
+    return Hokkori
+  } else if (brand === "ホタックス") {
+    return Hotakkusu
+  } else if (brand === "ジモン") {
+    return Zimon
+  } else if (brand === "シグレ二") {
+    return Sigureni
+  } else if (brand === "アロメ") {
+    return Arome
+  } else if (brand === "ヤコ") {
+    return Yako
+  } else if (brand === "アナアキ") {
+    return Anaaki
+  } else if (brand === "エンペリー") {
+    return Enperry
+  } else if (brand === "タタキケンサキ") {
+    return Tatakikensaki
+  } else if (brand === "クマサン商会") {
+    return Kumasan
+  } else if (brand === "アタリメイド") {
+    return Atarimeido
+  } 
+}
+
+let favoredAbility;
+let unfavoredAbility;
+
+
+const brandDependentAbility = function(brand) {
+  if (brand === "アイロニック") {
+    favoredAbility = quickSuperJump;
+    unfavoredAbility = qr;
+  } else if (brand === "クラーゲス") {
+    favoredAbility = swimSpeed;
+    unfavoredAbility = bombDefence;
+  } else if (brand === "ロッケンベルグ") {
+    favoredAbility = runSpeed;
+    unfavoredAbility = swimSpeed;
+  } else if (brand === "エゾッコ") {
+    favoredAbility = specialSaver;
+    unfavoredAbility = specialCharge;
+  } else if (brand === "フォーリマ") {
+    favoredAbility = specialPower;
+    unfavoredAbility = inkSaverSub;
+  } else if (brand === "ホッコリー") {
+    favoredAbility = inkSaverSub;
+    unfavoredAbility = inkRecovery;
+  } else if (brand === "ホタックス") {
+    favoredAbility = qr;
+    unfavoredAbility = specialSaver;
+  } else if (brand === "ジモン") {
+    favoredAbility = inkSaverMain;
+    unfavoredAbility = runSpeed;
+  } else if (brand === "シグレ二") {
+    favoredAbility = bombDefence;
+    unfavoredAbility = mpu;
+  } else if (brand === "アロメ") {
+    favoredAbility = inkRecovery;
+    unfavoredAbility = quickSuperJump;
+  } else if (brand === "ヤコ") {
+    favoredAbility = specialCharge;
+    unfavoredAbility = specialPower;
+  } else if (brand === "アナアキ") {
+    favoredAbility = mpu;
+    unfavoredAbility = specialSaver;
+  } else if (brand === "エンペリー") {
+    favoredAbility = subPower;
+    unfavoredAbility = inkRes;
+  } else if (brand === "タタキケンサキ") {
+    favoredAbility = mpu;
+    unfavoredAbility = subPower;
+  } else if (brand === "クマサン商会" || brand === "アタリメイド") {
+    favoredAbility = empty;
+    unfavoredAbility = empty;
+  }
+}  
+
+const GearIconFooter = (props) => {
+
+  if (props.brand === "アイロニック") {
+    favoredAbility = quickSuperJump;
+    unfavoredAbility = qr;
+  } else if (props.brand === "クラーゲス") {
+    favoredAbility = swimSpeed;
+    unfavoredAbility = bombDefence;
+  } else if (props.brand === "ロッケンベルグ") {
+    favoredAbility = runSpeed;
+    unfavoredAbility = swimSpeed;
+  } else if (props.brand === "エゾッコ") {
+    favoredAbility = specialSaver;
+    unfavoredAbility = specialCharge;
+  } else if (props.brand === "フォーリマ") {
+    favoredAbility = specialPower;
+    unfavoredAbility = inkSaverSub;
+  } else if (props.brand === "ホッコリー") {
+    favoredAbility = inkSaverSub;
+    unfavoredAbility = inkRecovery;
+  } else if (props.brand === "ホタックス") {
+    favoredAbility = qr;
+    unfavoredAbility = specialSaver;
+  } else if (props.brand === "ジモン") {
+    favoredAbility = inkSaverMain;
+    unfavoredAbility = runSpeed;
+  } else if (props.brand === "シグレ二") {
+    favoredAbility = bombDefence;
+    unfavoredAbility = mpu;
+  } else if (props.brand === "アロメ") {
+    favoredAbility = inkRecovery;
+    unfavoredAbility = quickSuperJump;
+  } else if (props.brand === "ヤコ") {
+    favoredAbility = specialCharge;
+    unfavoredAbility = specialPower;
+  } else if (props.brand === "アナアキ") {
+    favoredAbility = mpu;
+    unfavoredAbility = specialSaver;
+  } else if (props.brand === "エンペリー") {
+    favoredAbility = subPower;
+    unfavoredAbility = inkRes;
+  } else if (props.brand === "タタキケンサキ") {
+    favoredAbility = mpu;
+    unfavoredAbility = subPower;
+  } else if (props.brand === "クマサン商会" || props.brand === "アタリメイド") {
+    favoredAbility = empty;
+    unfavoredAbility = empty;
+  }
+  return (
+    <div className="headgear-icon-footer">
+      <div 
+        className="brand-ability"
+        data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        title="つきやすいギアパワー"
+      >
+        <ArrowUpSVG />
+        <img className="img-gear-icon-ability" src={favoredAbility} alt=""/>
+      </div>
+      <div
+        className="brand-ability"
+        data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        title="つきにくいギアパワー"
+      >
+        <ArrowDownSVG />
+        <img className="img-gear-icon-ability" src={unfavoredAbility} alt=""/>
+      </div>
+    </div>
+  )
+}
+
+const GearIcon = (props) => {
+  return (
+    <div className="gear-icon-outer">
+      <div
+        className="gear-icon"
+        onClick={()=>{
+          props.passChosenGear(props.gear.id);
+          props.passImagePath(props.gear.path);
+          }
+        }
+        data-bs-dismiss="modal"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title={props.gear.name}
+      > 
+        <div className="gear-icon-img">
+          <img className="gear-icon-img" src={props.gear.path} alt=""/>
+        </div>
+        <div
+          className="brand-img"
+          data-bs-toggle="tooltip"
+          data-bs-placement="left"
+          title={props.gear.brand}
+        >
+          <img className="brand-img" src={brandImagePath(props.gear.brand)} alt=""/>
+        </div>
+        <GearIconFooter 
+          brand={props.gear.brand}
+        />
+      </div>
+    </div>
+  )
+}
+
 
 
 const HeadGearModal = (props) => {
@@ -352,7 +582,7 @@ const HeadGearModal = (props) => {
   return (
     <div className="modal fade" id="headGearModal" tabIndex="-1" aria-labelledby="headGearModalLabel" aria-hidden="true">  
       <div className="modal-dialog modal-lg">
-        <div className="modal-content headGearModalBg">
+        <div className="modal-content headGearModalBg font-type2 bg-secondary text-white">
           <div className="modal-header">
             <h5 className="modal-title" id="weaponModalLabel">ギアを選択</h5>
             <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -371,18 +601,21 @@ const HeadGearModal = (props) => {
             </div>
           </div>
           <div className="container d-flex flex-wrap px-0 px-lg-5">
-              <div className="gear-list gear-icon">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[0].id);
-                    props.passImagePath(gearsArray[0].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[0].path} alt={gearsArray[0].name}/>
-                </div>
-              </div>
+              <GearIcon 
+                gear={gearsArray[0]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[1]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[2]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
               <div className="gear-list">
                 <div
                   className="gear-image"
