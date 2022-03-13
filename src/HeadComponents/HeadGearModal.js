@@ -542,7 +542,7 @@ const GearIcon = (props) => {
         var tooltip = new Tooltip(tooltipRef.current, {
             title: props.gear.name,
             placement: 'top',
-            trigger: 'hover'
+            trigger: 'hover',
         })
     })
   
@@ -556,6 +556,7 @@ const GearIcon = (props) => {
           }
         }
         ref={tooltipRef}
+        data-bs-dismiss="modal"
         // data-bs-toggle="tooltip"
         // data-bs-placement="top"
         // title={props.gear.name}
@@ -587,8 +588,19 @@ const HeadGearModal = (props) => {
   // 表示する配列の管理
   const [gearsArray, setArray] = useState(gears);
   
+  const selectBoxRef = useRef();
+
+  const tooltipRef = useRef();  
+
+  useEffect(()=>{
+    console.log("delayed")
+    // tooltip.enable();
+  },[howToSort]) 
+
   const selectBox = function() {
     let target = document.getElementById("select-box");
+    console.log("excuted")
+    console.log(selectBoxRef.current.value);
     if (target.value === "brand" && howToSort === "byName") {
       setSort("byBrand");
       setArray(gears);
@@ -598,12 +610,23 @@ const HeadGearModal = (props) => {
     }
   };
 
+  
+  const disableTooltip = function() {
+    if(selectBoxRef.current.value !== howToSort) {
+      // tooltip.disable();]
+      
+    }
+  }
+  // 再レンダーのときにツールチップが残ってしまった場合それを非表示
   useEffect(() => {
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new Tooltip(tooltipTriggerEl);
-    });
-  },[howToSort]);
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[role="tooltip"]'));
+    if (tooltipTriggerList.length) {
+      console.log(tooltipTriggerList[0]);
+      for (let i = 0; i < tooltipTriggerList.length; i++) {
+        tooltipTriggerList[i].style.display = "none"
+      }
+    }
+  });
   return (
     <div className="modal fade" id="headGearModal" tabIndex="-1" aria-labelledby="headGearModalLabel" aria-hidden="true">  
       <div className="modal-dialog modal-lg">
@@ -618,7 +641,16 @@ const HeadGearModal = (props) => {
                 <span className="align-middle">並び替え :</span>
               </div>
               <div className="selectbox">  
-                <select className="form-select" aria-label="sort" id="select-box" onClick={()=>{selectBox();}}>
+                <select
+                  className="form-select"
+                  aria-label="sort"
+                  ref = {selectBoxRef}
+                  id="select-box"
+                  onClick={()=>{
+                    disableTooltip();
+                    selectBox();
+                  }}
+                >
                     <option value="brand" defaultValue>ブランド</option>
                     <option value="name">名前</option>
                 </select>
@@ -631,6 +663,7 @@ const HeadGearModal = (props) => {
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
                 state={howToSort}
+                tooltipRef={tooltipRef}
               />
               <GearIcon 
                 gear={gearsArray[1]}
