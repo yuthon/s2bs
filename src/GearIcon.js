@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { Tooltip } from 'bootstrap';
-import GearIconFooter from './GearIconFooter';
+import GearIconFooter from './HeadComponents/GearIconFooter';
 // ブランドの画像
 import Batoroika from './images/brands/B00.png';
 import Aironic from './images/brands/B01.png';
@@ -135,6 +135,15 @@ const GearIcon = (props) => {
     })
   })
 
+  const ref = useRef();
+  
+  // どの部分のギアかに応じて違ったスタイルを適用するためにクラス名を変更
+  if (props.part === "clothes") {
+    ref.current.className = "clothesgear-icon-footer"
+  } else if (props.part === "shoes") {
+    ref.current.className = "shoesgear-icon-foooter"
+  }
+  
   return (
     <div className="gear-icon-outer">
       <div
@@ -156,10 +165,12 @@ const GearIcon = (props) => {
         >
           <img className="brand-img" src={brandImagePath} alt=""/>
         </div>
-        <GearIconFooter
-          favoredAbility={favoredAbility}
-          unfavoredAbility={unfavoredAbility}
-        />
+        <div className="headgear-icon-footer" ref={ref}>
+          <GearIconFooter
+            favoredAbility={favoredAbility}
+            unfavoredAbility={unfavoredAbility}
+          />
+        </div>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Tooltip } from 'bootstrap';
-import ArrowUpSVG from './SVGComponents/ArrowUpSVG';
-import ArrowDownSVG from './SVGComponents/ArrowDownSVG';
+import ArrowUpSVG from '../SVGComponents/ArrowUpSVG';
+import ArrowDownSVG from '../SVGComponents/ArrowDownSVG';
 
 const GearIconFooter = (props) => {
 
@@ -26,22 +26,22 @@ const GearIconFooter = (props) => {
   })
 
   return (
-    <div className="headgear-icon-footer">
-      <div 
-        className="brand-ability"
-        ref={favoredAbilityTooltip}
-      >
-        <ArrowUpSVG />
-        <img className="img-gear-icon-ability" src={props.favoredAbility} alt=""/>
-      </div>
-      <div
-        className="brand-ability"
-        ref={unfavoredAbilityTooltip}
-      >
-        <ArrowDownSVG />
-        <img className="img-gear-icon-ability" src={props.unfavoredAbility} alt=""/>
-      </div>
+    <>
+    <div 
+      className="brand-ability"
+      ref={favoredAbilityTooltip}
+    >
+      <ArrowUpSVG />
+      <img className="img-gear-icon-ability" src={props.favoredAbility} alt=""/>
     </div>
+    <div
+      className="brand-ability"
+      ref={unfavoredAbilityTooltip}
+    >
+      <ArrowDownSVG />
+      <img className="img-gear-icon-ability" src={props.unfavoredAbility} alt=""/>
+    </div>
+    </>
   )
 }
 

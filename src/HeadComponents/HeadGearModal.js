@@ -393,566 +393,679 @@ const HeadGearModal = (props) => {
                 gear={gearsArray[0]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[1]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[2]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[3]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[4]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[5]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[6]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[7]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[8]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[9]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[10]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[11]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[12]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[13]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[14]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[15]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[16]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[17]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[18]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[19]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[20]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[21]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[22]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[23]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[24]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[25]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[26]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[27]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[28]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[29]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[30]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[31]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[32]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[33]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[34]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[35]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[36]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[37]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[38]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[39]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[40]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[41]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[42]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[43]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[44]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[45]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[46]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[47]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[48]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[49]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[50]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[51]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[52]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[53]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[54]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[55]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[56]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[57]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[58]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[59]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[60]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[61]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[62]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[63]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[64]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[65]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[66]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[67]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[68]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[69]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[70]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[71]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[72]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[73]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[74]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[75]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[76]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[77]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[78]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[79]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[80]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[81]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[82]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[83]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[84]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[85]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[86]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[87]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[88]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[89]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[90]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[91]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[92]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[93]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[94]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[95]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[96]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[97]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[98]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[99]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[100]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[101]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[102]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[103]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[104]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[105]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[106]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[107]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[108]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[109]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[110]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[111]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
               <GearIcon 
                 gear={gearsArray[112]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                part="head"
               />
           </div>
         </div>
