@@ -1,6 +1,7 @@
-import React, { useState }from 'react';
+import React, { useState, useEffect, useRef}from 'react';
 import ArrowUpSVG from '../SVGComponents/ArrowUpSVG';
 import ArrowDownSVG from '../SVGComponents/ArrowDownSVG';
+import { Tooltip } from 'bootstrap';
 // 変数名の$は-の代用
 
 
@@ -528,6 +529,23 @@ const GearIconFooter = (props) => {
 }
 
 const GearIcon = (props) => {
+  const tooltipRef = useRef();  
+    
+  // useEffect(() => {
+  //   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  //   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  //     return new Tooltip(tooltipTriggerEl);
+  //   });
+  // },[props.state]);
+
+    useEffect(() => {
+        var tooltip = new Tooltip(tooltipRef.current, {
+            title: props.gear.name,
+            placement: 'top',
+            trigger: 'hover'
+        })
+    })
+  
   return (
     <div className="gear-icon-outer">
       <div
@@ -537,16 +555,16 @@ const GearIcon = (props) => {
           props.passImagePath(props.gear.path);
           }
         }
-        data-bs-dismiss="modal"
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title={props.gear.name}
+        ref={tooltipRef}
+        // data-bs-toggle="tooltip"
+        // data-bs-placement="top"
+        // title={props.gear.name}
       > 
         <div className="gear-icon-img">
           <img className="gear-icon-img" src={props.gear.path} alt=""/>
         </div>
         <div
-          className="brand-img"
+          className="brand-img-container"
           data-bs-toggle="tooltip"
           data-bs-placement="left"
           title={props.gear.brand}
@@ -579,6 +597,13 @@ const HeadGearModal = (props) => {
       setArray(gearsSortedByName);
     }
   };
+
+  useEffect(() => {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new Tooltip(tooltipTriggerEl);
+    });
+  },[howToSort]);
   return (
     <div className="modal fade" id="headGearModal" tabIndex="-1" aria-labelledby="headGearModalLabel" aria-hidden="true">  
       <div className="modal-dialog modal-lg">
@@ -605,6 +630,7 @@ const HeadGearModal = (props) => {
                 gear={gearsArray[0]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
+                state={howToSort}
               />
               <GearIcon 
                 gear={gearsArray[1]}
@@ -616,1350 +642,556 @@ const HeadGearModal = (props) => {
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
               />
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[1].id);
-                    props.passImagePath(gearsArray[1].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[1].path} alt={gearsArray[1].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[2].id);
-                    props.passImagePath(gearsArray[2].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[2].path} alt={gearsArray[2].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[3].id);
-                    props.passImagePath(gearsArray[3].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[3].path} alt={gearsArray[3].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[4].id);
-                    props.passImagePath(gearsArray[4].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[4].path} alt={gearsArray[4].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[5].id);
-                    props.passImagePath(gearsArray[5].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[5].path} alt={gearsArray[5].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[6].id);
-                    props.passImagePath(gearsArray[6].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[6].path} alt={gearsArray[6].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[7].id);
-                    props.passImagePath(gearsArray[7].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[7].path} alt={gearsArray[7].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[8].id);
-                    props.passImagePath(gearsArray[8].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[8].path} alt={gearsArray[8].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[9].id);
-                    props.passImagePath(gearsArray[9].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[9].path} alt={gearsArray[9].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[10].id);
-                    props.passImagePath(gearsArray[10].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[10].path} alt={gearsArray[10].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[11].id);
-                    props.passImagePath(gearsArray[11].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[11].path} alt={gearsArray[11].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[12].id);
-                    props.passImagePath(gearsArray[12].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[12].path} alt={gearsArray[12].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[13].id);
-                    props.passImagePath(gearsArray[13].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[13].path} alt={gearsArray[13].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[14].id);
-                    props.passImagePath(gearsArray[14].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[14].path} alt={gearsArray[14].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[15].id);
-                    props.passImagePath(gearsArray[15].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[15].path} alt={gearsArray[15].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[16].id);
-                    props.passImagePath(gearsArray[16].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[16].path} alt={gearsArray[16].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[17].id);
-                    props.passImagePath(gearsArray[17].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[17].path} alt={gearsArray[17].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[18].id);
-                    props.passImagePath(gearsArray[18].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[18].path} alt={gearsArray[18].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[19].id);
-                    props.passImagePath(gearsArray[19].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[19].path} alt={gearsArray[19].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[20].id);
-                    props.passImagePath(gearsArray[20].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[20].path} alt={gearsArray[20].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[21].id);
-                    props.passImagePath(gearsArray[21].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[21].path} alt={gearsArray[21].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[22].id);
-                    props.passImagePath(gearsArray[22].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[22].path} alt={gearsArray[22].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[23].id);
-                    props.passImagePath(gearsArray[23].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[23].path} alt={gearsArray[23].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[24].id);
-                    props.passImagePath(gearsArray[24].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[24].path} alt={gearsArray[24].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[25].id);
-                    props.passImagePath(gearsArray[25].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[25].path} alt={gearsArray[25].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[26].id);
-                    props.passImagePath(gearsArray[26].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[26].path} alt={gearsArray[26].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[27].id);
-                    props.passImagePath(gearsArray[27].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[27].path} alt={gearsArray[27].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[28].id);
-                    props.passImagePath(gearsArray[28].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[28].path} alt={gearsArray[28].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[29].id);
-                    props.passImagePath(gearsArray[29].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[29].path} alt={gearsArray[29].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[30].id);
-                    props.passImagePath(gearsArray[30].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[30].path} alt={gearsArray[30].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[31].id);
-                    props.passImagePath(gearsArray[31].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[31].path} alt={gearsArray[31].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[32].id);
-                    props.passImagePath(gearsArray[32].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[32].path} alt={gearsArray[32].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[33].id);
-                    props.passImagePath(gearsArray[33].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[33].path} alt={gearsArray[33].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[34].id);
-                    props.passImagePath(gearsArray[34].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[34].path} alt={gearsArray[34].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[35].id);
-                    props.passImagePath(gearsArray[35].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[35].path} alt={gearsArray[35].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[36].id);
-                    props.passImagePath(gearsArray[36].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[36].path} alt={gearsArray[36].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[37].id);
-                    props.passImagePath(gearsArray[37].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[37].path} alt={gearsArray[37].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[38].id);
-                    props.passImagePath(gearsArray[38].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[38].path} alt={gearsArray[38].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[39].id);
-                    props.passImagePath(gearsArray[39].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[39].path} alt={gearsArray[39].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[40].id);
-                    props.passImagePath(gearsArray[40].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[40].path} alt={gearsArray[40].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[41].id);
-                    props.passImagePath(gearsArray[41].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[41].path} alt={gearsArray[41].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[42].id);
-                    props.passImagePath(gearsArray[42].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[42].path} alt={gearsArray[42].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[43].id);
-                    props.passImagePath(gearsArray[43].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[43].path} alt={gearsArray[43].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[44].id);
-                    props.passImagePath(gearsArray[44].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[44].path} alt={gearsArray[44].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[45].id);
-                    props.passImagePath(gearsArray[45].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[45].path} alt={gearsArray[45].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[46].id);
-                    props.passImagePath(gearsArray[46].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[46].path} alt={gearsArray[46].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[47].id);
-                    props.passImagePath(gearsArray[47].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[47].path} alt={gearsArray[47].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[48].id);
-                    props.passImagePath(gearsArray[48].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[48].path} alt={gearsArray[48].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[49].id);
-                    props.passImagePath(gearsArray[49].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[49].path} alt={gearsArray[49].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[50].id);
-                    props.passImagePath(gearsArray[50].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[50].path} alt={gearsArray[50].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[51].id);
-                    props.passImagePath(gearsArray[51].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[51].path} alt={gearsArray[51].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[52].id);
-                    props.passImagePath(gearsArray[52].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[52].path} alt={gearsArray[52].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[53].id);
-                    props.passImagePath(gearsArray[53].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[53].path} alt={gearsArray[53].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[54].id);
-                    props.passImagePath(gearsArray[54].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[54].path} alt={gearsArray[54].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[55].id);
-                    props.passImagePath(gearsArray[55].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[55].path} alt={gearsArray[55].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[56].id);
-                    props.passImagePath(gearsArray[56].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[56].path} alt={gearsArray[56].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[57].id);
-                    props.passImagePath(gearsArray[57].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[57].path} alt={gearsArray[57].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[58].id);
-                    props.passImagePath(gearsArray[58].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[58].path} alt={gearsArray[58].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[59].id);
-                    props.passImagePath(gearsArray[59].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[59].path} alt={gearsArray[59].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[60].id);
-                    props.passImagePath(gearsArray[60].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[60].path} alt={gearsArray[60].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[61].id);
-                    props.passImagePath(gearsArray[61].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[61].path} alt={gearsArray[61].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[62].id);
-                    props.passImagePath(gearsArray[62].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[62].path} alt={gearsArray[62].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[63].id);
-                    props.passImagePath(gearsArray[63].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[63].path} alt={gearsArray[63].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[64].id);
-                    props.passImagePath(gearsArray[64].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[64].path} alt={gearsArray[64].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[65].id);
-                    props.passImagePath(gearsArray[65].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[65].path} alt={gearsArray[65].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[66].id);
-                    props.passImagePath(gearsArray[66].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[66].path} alt={gearsArray[66].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[67].id);
-                    props.passImagePath(gearsArray[67].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[67].path} alt={gearsArray[67].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[68].id);
-                    props.passImagePath(gearsArray[68].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[68].path} alt={gearsArray[68].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[69].id);
-                    props.passImagePath(gearsArray[69].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[69].path} alt={gearsArray[69].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[70].id);
-                    props.passImagePath(gearsArray[70].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[70].path} alt={gearsArray[70].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[71].id);
-                    props.passImagePath(gearsArray[71].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[71].path} alt={gearsArray[71].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[72].id);
-                    props.passImagePath(gearsArray[72].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[72].path} alt={gearsArray[72].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[73].id);
-                    props.passImagePath(gearsArray[73].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[73].path} alt={gearsArray[73].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[74].id);
-                    props.passImagePath(gearsArray[74].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[74].path} alt={gearsArray[74].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[75].id);
-                    props.passImagePath(gearsArray[75].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[75].path} alt={gearsArray[75].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[76].id);
-                    props.passImagePath(gearsArray[76].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[76].path} alt={gearsArray[76].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[77].id);
-                    props.passImagePath(gearsArray[77].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[77].path} alt={gearsArray[77].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[78].id);
-                    props.passImagePath(gearsArray[78].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[78].path} alt={gearsArray[78].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[79].id);
-                    props.passImagePath(gearsArray[79].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[79].path} alt={gearsArray[79].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[80].id);
-                    props.passImagePath(gearsArray[80].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[80].path} alt={gearsArray[80].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[81].id);
-                    props.passImagePath(gearsArray[81].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[81].path} alt={gearsArray[81].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[82].id);
-                    props.passImagePath(gearsArray[82].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[82].path} alt={gearsArray[82].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[83].id);
-                    props.passImagePath(gearsArray[83].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[83].path} alt={gearsArray[83].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[84].id);
-                    props.passImagePath(gearsArray[84].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[84].path} alt={gearsArray[84].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[85].id);
-                    props.passImagePath(gearsArray[85].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[85].path} alt={gearsArray[85].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[86].id);
-                    props.passImagePath(gearsArray[86].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[86].path} alt={gearsArray[86].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[87].id);
-                    props.passImagePath(gearsArray[87].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[87].path} alt={gearsArray[87].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[88].id);
-                    props.passImagePath(gearsArray[88].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[88].path} alt={gearsArray[88].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[89].id);
-                    props.passImagePath(gearsArray[89].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[89].path} alt={gearsArray[89].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[90].id);
-                    props.passImagePath(gearsArray[90].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[90].path} alt={gearsArray[90].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[91].id);
-                    props.passImagePath(gearsArray[91].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[91].path} alt={gearsArray[91].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[92].id);
-                    props.passImagePath(gearsArray[92].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[92].path} alt={gearsArray[92].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[93].id);
-                    props.passImagePath(gearsArray[93].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[93].path} alt={gearsArray[93].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[94].id);
-                    props.passImagePath(gearsArray[94].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[94].path} alt={gearsArray[94].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[95].id);
-                    props.passImagePath(gearsArray[95].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[95].path} alt={gearsArray[95].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[96].id);
-                    props.passImagePath(gearsArray[96].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[96].path} alt={gearsArray[96].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[97].id);
-                    props.passImagePath(gearsArray[97].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[97].path} alt={gearsArray[97].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[98].id);
-                    props.passImagePath(gearsArray[98].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[98].path} alt={gearsArray[98].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[99].id);
-                    props.passImagePath(gearsArray[99].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[99].path} alt={gearsArray[99].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[100].id);
-                    props.passImagePath(gearsArray[100].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[100].path} alt={gearsArray[100].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[101].id);
-                    props.passImagePath(gearsArray[101].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[101].path} alt={gearsArray[101].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[102].id);
-                    props.passImagePath(gearsArray[102].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[102].path} alt={gearsArray[102].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[103].id);
-                    props.passImagePath(gearsArray[103].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[103].path} alt={gearsArray[103].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[104].id);
-                    props.passImagePath(gearsArray[104].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[104].path} alt={gearsArray[104].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[105].id);
-                    props.passImagePath(gearsArray[105].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[105].path} alt={gearsArray[105].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[106].id);
-                    props.passImagePath(gearsArray[106].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[106].path} alt={gearsArray[106].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[107].id);
-                    props.passImagePath(gearsArray[107].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[107].path} alt={gearsArray[107].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[108].id);
-                    props.passImagePath(gearsArray[108].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[108].path} alt={gearsArray[108].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[109].id);
-                    props.passImagePath(gearsArray[109].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[109].path} alt={gearsArray[109].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[110].id);
-                    props.passImagePath(gearsArray[110].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[110].path} alt={gearsArray[110].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[111].id);
-                    props.passImagePath(gearsArray[111].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[111].path} alt={gearsArray[111].name}/>
-                </div>
-              </div>
-              <div className="gear-list">
-                <div
-                  className="gear-image"
-                  onClick={()=>{
-                    props.passChosenGear(gearsArray[112].id);
-                    props.passImagePath(gearsArray[112].path);
-                    }
-                  }
-                >
-                  <img src= {gearsArray[112].path} alt={gearsArray[112].name}/>
-                </div>
-              </div>
+              <GearIcon 
+                gear={gearsArray[3]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[4]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[5]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[6]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[7]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[8]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[9]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[10]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[11]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[12]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[13]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[14]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[15]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[16]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[17]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[18]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[19]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[20]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[21]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[22]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[23]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[24]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[25]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[26]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[27]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[28]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[29]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[30]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[31]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[32]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[33]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[34]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[35]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[36]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[37]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[38]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[39]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[40]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[41]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[42]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[43]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[44]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[45]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[46]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[47]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[48]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[49]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[50]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[51]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[52]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[53]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[54]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[55]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[56]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[57]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[58]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[59]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[60]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[61]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[62]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[63]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[64]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[65]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[66]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[67]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[68]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[69]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[70]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[71]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[72]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[73]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[74]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[75]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[76]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[77]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[78]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[79]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[80]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[81]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[82]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[83]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[84]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[85]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[86]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[87]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[88]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[89]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[90]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[91]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[92]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[93]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[94]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[95]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[96]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[97]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[98]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[99]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[100]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[101]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[102]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[103]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[104]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[105]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[106]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[107]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[108]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[109]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[110]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[111]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
+              <GearIcon 
+                gear={gearsArray[112]}
+                passChosenGear={props.passChosenGear}
+                passImagePath={props.passImagePath}
+              />
           </div>
         </div>
         <button
