@@ -365,187 +365,151 @@ let gears = [
 // 名前順に整列した配列を新たに定義
 const gearsSortedByName = gears.slice().sort((a, b) => (a.name > b.name) ? 1 : -1);
 
-const brandImagePath = function(brand) {
-  if (brand === "バトロイカ") {
-    return Batoroika
-  } else if (brand === "アイロニック") {
-    return Aironic
-  } else if (brand === "クラーゲス") {
-    return Kuragesu
-  } else if (brand === "ロッケンベルグ") {
-    return Rockenberg
-  } else if (brand === "エゾッコ") {
-    return Ezokko
-  } else if (brand === "フォーリマ") {
-    return Forima
-  } else if (brand === "ホッコリー") {
-    return Hokkori
-  } else if (brand === "ホタックス") {
-    return Hotakkusu
-  } else if (brand === "ジモン") {
-    return Zimon
-  } else if (brand === "シグレ二") {
-    return Sigureni
-  } else if (brand === "アロメ") {
-    return Arome
-  } else if (brand === "ヤコ") {
-    return Yako
-  } else if (brand === "アナアキ") {
-    return Anaaki
-  } else if (brand === "エンペリー") {
-    return Enperry
-  } else if (brand === "タタキケンサキ") {
-    return Tatakikensaki
-  } else if (brand === "クマサン商会") {
-    return Kumasan
-  } else if (brand === "アタリメイド") {
-    return Atarimeido
-  } 
-}
-
-let favoredAbility;
-let unfavoredAbility;
 
 
-const brandDependentAbility = function(brand) {
-  if (brand === "アイロニック") {
-    favoredAbility = quickSuperJump;
-    unfavoredAbility = qr;
-  } else if (brand === "クラーゲス") {
-    favoredAbility = swimSpeed;
-    unfavoredAbility = bombDefence;
-  } else if (brand === "ロッケンベルグ") {
-    favoredAbility = runSpeed;
-    unfavoredAbility = swimSpeed;
-  } else if (brand === "エゾッコ") {
-    favoredAbility = specialSaver;
-    unfavoredAbility = specialCharge;
-  } else if (brand === "フォーリマ") {
-    favoredAbility = specialPower;
-    unfavoredAbility = inkSaverSub;
-  } else if (brand === "ホッコリー") {
-    favoredAbility = inkSaverSub;
-    unfavoredAbility = inkRecovery;
-  } else if (brand === "ホタックス") {
-    favoredAbility = qr;
-    unfavoredAbility = specialSaver;
-  } else if (brand === "ジモン") {
-    favoredAbility = inkSaverMain;
-    unfavoredAbility = runSpeed;
-  } else if (brand === "シグレ二") {
-    favoredAbility = bombDefence;
-    unfavoredAbility = mpu;
-  } else if (brand === "アロメ") {
-    favoredAbility = inkRecovery;
-    unfavoredAbility = quickSuperJump;
-  } else if (brand === "ヤコ") {
-    favoredAbility = specialCharge;
-    unfavoredAbility = specialPower;
-  } else if (brand === "アナアキ") {
-    favoredAbility = mpu;
-    unfavoredAbility = specialSaver;
-  } else if (brand === "エンペリー") {
-    favoredAbility = subPower;
-    unfavoredAbility = inkRes;
-  } else if (brand === "タタキケンサキ") {
-    favoredAbility = mpu;
-    unfavoredAbility = subPower;
-  } else if (brand === "クマサン商会" || brand === "アタリメイド") {
-    favoredAbility = empty;
-    unfavoredAbility = empty;
-  }
-}  
 
 const GearIconFooter = (props) => {
 
-  if (props.brand === "アイロニック") {
-    favoredAbility = quickSuperJump;
-    unfavoredAbility = qr;
-  } else if (props.brand === "クラーゲス") {
-    favoredAbility = swimSpeed;
-    unfavoredAbility = bombDefence;
-  } else if (props.brand === "ロッケンベルグ") {
-    favoredAbility = runSpeed;
-    unfavoredAbility = swimSpeed;
-  } else if (props.brand === "エゾッコ") {
-    favoredAbility = specialSaver;
-    unfavoredAbility = specialCharge;
-  } else if (props.brand === "フォーリマ") {
-    favoredAbility = specialPower;
-    unfavoredAbility = inkSaverSub;
-  } else if (props.brand === "ホッコリー") {
-    favoredAbility = inkSaverSub;
-    unfavoredAbility = inkRecovery;
-  } else if (props.brand === "ホタックス") {
-    favoredAbility = qr;
-    unfavoredAbility = specialSaver;
-  } else if (props.brand === "ジモン") {
-    favoredAbility = inkSaverMain;
-    unfavoredAbility = runSpeed;
-  } else if (props.brand === "シグレ二") {
-    favoredAbility = bombDefence;
-    unfavoredAbility = mpu;
-  } else if (props.brand === "アロメ") {
-    favoredAbility = inkRecovery;
-    unfavoredAbility = quickSuperJump;
-  } else if (props.brand === "ヤコ") {
-    favoredAbility = specialCharge;
-    unfavoredAbility = specialPower;
-  } else if (props.brand === "アナアキ") {
-    favoredAbility = mpu;
-    unfavoredAbility = specialSaver;
-  } else if (props.brand === "エンペリー") {
-    favoredAbility = subPower;
-    unfavoredAbility = inkRes;
-  } else if (props.brand === "タタキケンサキ") {
-    favoredAbility = mpu;
-    unfavoredAbility = subPower;
-  } else if (props.brand === "クマサン商会" || props.brand === "アタリメイド") {
-    favoredAbility = empty;
-    unfavoredAbility = empty;
-  }
+  const favoredAbilityTooltip = useRef();
+  const unfavoredAbilityTooltip = useRef();
+
+  // ツールチップ
+  useEffect(() => {
+    const tooltip = new Tooltip(favoredAbilityTooltip.current, {
+        title: "つきやすいギアパワー",
+        placement: 'bottom',
+        trigger: 'hover',
+    })
+  })
+  // ツールチップ
+  useEffect(() => {
+    const tooltip = new Tooltip(unfavoredAbilityTooltip.current, {
+        title: "つきにくいギアパワー",
+        placement: 'bottom',
+        trigger: 'hover',
+    })
+  })
+
   return (
     <div className="headgear-icon-footer">
       <div 
         className="brand-ability"
-        data-bs-toggle="tooltip"
-        data-bs-placement="bottom"
-        title="つきやすいギアパワー"
+        ref={favoredAbilityTooltip}
       >
         <ArrowUpSVG />
-        <img className="img-gear-icon-ability" src={favoredAbility} alt=""/>
+        <img className="img-gear-icon-ability" src={props.favoredAbility} alt=""/>
       </div>
       <div
         className="brand-ability"
-        data-bs-toggle="tooltip"
-        data-bs-placement="bottom"
-        title="つきにくいギアパワー"
+        ref={unfavoredAbilityTooltip}
       >
         <ArrowDownSVG />
-        <img className="img-gear-icon-ability" src={unfavoredAbility} alt=""/>
+        <img className="img-gear-icon-ability" src={props.unfavoredAbility} alt=""/>
       </div>
     </div>
   )
 }
 
-const GearIcon = (props) => {
-  const tooltipRef = useRef();  
-    
-  // useEffect(() => {
-  //   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-  //   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  //     return new Tooltip(tooltipTriggerEl);
-  //   });
-  // },[props.state]);
+let brandImagePath;
+let favoredAbility;
+let unfavoredAbility; 
 
-    useEffect(() => {
-        var tooltip = new Tooltip(tooltipRef.current, {
-            title: props.gear.name,
-            placement: 'top',
-            trigger: 'hover',
-        })
-    })
+const GearIcon = (props) => {
   
+  // ブランド名に応じてブランドロゴ、つきにくいギアパワー、つきにくいギアパワーの画像のpathをそれぞれ返す
+  let brand = props.gear.brand;
+
+  if (brand === "バトロイカ") {
+    brandImagePath = Batoroika;
+    favoredAbility = inkRes;
+    unfavoredAbility = inkSaverMain;
+  } else if (brand === "アイロニック") {
+    brandImagePath =  Aironic;
+    favoredAbility = quickSuperJump;
+    unfavoredAbility = qr;
+  } else if (brand === "クラーゲス") {
+    brandImagePath =  Kuragesu;
+    favoredAbility = swimSpeed;
+    unfavoredAbility = bombDefence;
+  } else if (brand === "ロッケンベルグ") {
+    brandImagePath =  Rockenberg;
+    favoredAbility = runSpeed;
+    unfavoredAbility = swimSpeed;
+  } else if (brand === "エゾッコ") {
+    brandImagePath =  Ezokko;
+    favoredAbility = specialSaver;
+    unfavoredAbility = specialCharge;
+  } else if (brand === "フォーリマ") {
+    brandImagePath =  Forima;
+    favoredAbility = specialPower;
+    unfavoredAbility = inkSaverSub;
+  } else if (brand === "ホッコリー") {
+    brandImagePath =  Hokkori;
+    favoredAbility = inkSaverSub;
+    unfavoredAbility = inkRecovery;
+  } else if (brand === "ホタックス") {
+    brandImagePath =  Hotakkusu;
+    favoredAbility = qr;
+    unfavoredAbility = specialSaver;
+  } else if (brand === "ジモン") {
+    brandImagePath =  Zimon;
+    favoredAbility = inkSaverMain;
+    unfavoredAbility = runSpeed;
+  } else if (brand === "シグレ二") {
+    brandImagePath =  Sigureni;
+    favoredAbility = bombDefence;
+    unfavoredAbility = mpu;
+  } else if (brand === "アロメ") {
+    brandImagePath =  Arome;
+    favoredAbility = inkRecovery;
+    unfavoredAbility = quickSuperJump;
+  } else if (brand === "ヤコ") {
+    brandImagePath =  Yako;
+    favoredAbility = specialCharge;
+    unfavoredAbility = specialPower;
+  } else if (brand === "アナアキ") {
+    brandImagePath =  Anaaki;
+    favoredAbility = mpu;
+    unfavoredAbility = specialSaver;
+  } else if (brand === "エンペリー") {
+    brandImagePath =  Enperry;
+    favoredAbility = subPower;
+    unfavoredAbility = inkRes;
+  } else if (brand === "タタキケンサキ") {
+    brandImagePath =  Tatakikensaki;
+    favoredAbility = mpu;
+    unfavoredAbility = subPower;
+  } else if (brand === "クマサン商会") {
+    brandImagePath =  Kumasan;
+    favoredAbility = empty;
+    unfavoredAbility = empty;
+  } else if (brand === "アタリメイド") {
+    brandImagePath =  Atarimeido;
+    favoredAbility = empty;
+    unfavoredAbility = empty;
+  }
+
+  // ギアの名前のツールチップ
+  const tooltipRef = useRef();  
+  
+  useEffect(() => {
+    const tooltip = new Tooltip(tooltipRef.current, {
+        title: props.gear.name,
+        placement: 'top',
+        trigger: 'hover',
+    })
+  })
+  // ブランドロゴのツールチップ
+  const brandImgTooltip = useRef();
+
+  useEffect(() => {
+    const tooltip = new Tooltip(brandImgTooltip.current, {
+      title: props.gear.brand,
+      placement: "left",
+      trigger: "hover"
+    })
+  })
+
   return (
     <div className="gear-icon-outer">
       <div
@@ -557,23 +521,19 @@ const GearIcon = (props) => {
         }
         ref={tooltipRef}
         data-bs-dismiss="modal"
-        // data-bs-toggle="tooltip"
-        // data-bs-placement="top"
-        // title={props.gear.name}
       > 
         <div className="gear-icon-img">
           <img className="gear-icon-img" src={props.gear.path} alt=""/>
         </div>
         <div
           className="brand-img-container"
-          data-bs-toggle="tooltip"
-          data-bs-placement="left"
-          title={props.gear.brand}
+          ref={brandImgTooltip}
         >
-          <img className="brand-img" src={brandImagePath(props.gear.brand)} alt=""/>
+          <img className="brand-img" src={brandImagePath} alt=""/>
         </div>
-        <GearIconFooter 
-          brand={props.gear.brand}
+        <GearIconFooter
+          favoredAbility={favoredAbility}
+          unfavoredAbility={unfavoredAbility}
         />
       </div>
     </div>
@@ -590,17 +550,8 @@ const HeadGearModal = (props) => {
   
   const selectBoxRef = useRef();
 
-  const tooltipRef = useRef();  
-
-  useEffect(()=>{
-    console.log("delayed")
-    // tooltip.enable();
-  },[howToSort]) 
-
   const selectBox = function() {
-    let target = document.getElementById("select-box");
-    console.log("excuted")
-    console.log(selectBoxRef.current.value);
+    let target = selectBoxRef.current;
     if (target.value === "brand" && howToSort === "byName") {
       setSort("byBrand");
       setArray(gears);
@@ -610,23 +561,16 @@ const HeadGearModal = (props) => {
     }
   };
 
-  
-  const disableTooltip = function() {
-    if(selectBoxRef.current.value !== howToSort) {
-      // tooltip.disable();]
-      
-    }
-  }
   // 再レンダーのときにツールチップが残ってしまった場合それを非表示
   useEffect(() => {
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[role="tooltip"]'));
     if (tooltipTriggerList.length) {
-      console.log(tooltipTriggerList[0]);
       for (let i = 0; i < tooltipTriggerList.length; i++) {
         tooltipTriggerList[i].style.display = "none"
       }
     }
   });
+
   return (
     <div className="modal fade" id="headGearModal" tabIndex="-1" aria-labelledby="headGearModalLabel" aria-hidden="true">  
       <div className="modal-dialog modal-lg">
@@ -645,9 +589,7 @@ const HeadGearModal = (props) => {
                   className="form-select"
                   aria-label="sort"
                   ref = {selectBoxRef}
-                  id="select-box"
                   onClick={()=>{
-                    disableTooltip();
                     selectBox();
                   }}
                 >
@@ -662,8 +604,6 @@ const HeadGearModal = (props) => {
                 gear={gearsArray[0]}
                 passChosenGear={props.passChosenGear}
                 passImagePath={props.passImagePath}
-                state={howToSort}
-                tooltipRef={tooltipRef}
               />
               <GearIcon 
                 gear={gearsArray[1]}
