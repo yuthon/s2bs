@@ -278,6 +278,7 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+
 /* フクギアのフッター */
 .clothesgear-icon-footer {
   width: 150px;
@@ -290,6 +291,24 @@
     #19e1ba 20px,
     #06be8a 20px,
     #06be8a 40px
+  );
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* クツギアのフッター */
+.shoesgear-icon-footer {
+  width: 150px;
+  height: 55px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    #f07807,
+    #f07807 20px,
+    #d25012 20px,
+    #d25012 40px
   );
   display: flex;
   padding-left: 10px;

@@ -135,14 +135,8 @@ const GearIcon = (props) => {
     })
   })
 
-  const ref = useRef();
-  
-  // どの部分のギアかに応じて違ったスタイルを適用するためにクラス名を変更
-  if (props.part === "clothes") {
-    ref.current.className = "clothesgear-icon-footer"
-  } else if (props.part === "shoes") {
-    ref.current.className = "shoesgear-icon-foooter"
-  }
+  // どの部分かに応じてフッターに違うクラス名を与える
+  const className = `${props.part}gear-icon-footer`
   
   return (
     <div className="gear-icon-outer">
@@ -165,7 +159,7 @@ const GearIcon = (props) => {
         >
           <img className="brand-img" src={brandImagePath} alt=""/>
         </div>
-        <div className="headgear-icon-footer" ref={ref}>
+        <div className={className}>
           <GearIconFooter
             favoredAbility={favoredAbility}
             unfavoredAbility={unfavoredAbility}
