@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Tooltip } from 'bootstrap';
 import Gal52_0 from '../images/weapon/52 Gal.png';
 import Gal52_1 from '../images/weapon/52 Gal Deco.png';
 import Gal52_2 from '../images/weapon/Kensa 52 Gal.png';
@@ -179,7 +180,7 @@ const weaponStatus = [
   {name:"おちばシューター", sub:"トーピード", special:"バブルランチャー", sp:190, weight:"light", path:Jr_2, pathSub:Torpedo,pathSpecial:BubbleBlower},
   {name:"シャープマーカー", sub:"ポイズンミスト", special:"ジェットパック", sp:170, weight:"light", path:Splash_0, pathSub:ToxicMist,pathSpecial:Inkjet},
   {name:"シャープマーカーネオ", sub:"クイックボム", special:"キューバンボムピッチャー", sp:210, weight:"light", path:Splash_1, pathSub:BurstBomb, pathSpecial:SuctionRush},
-  {name:"プロモデラーMG", sub:"キューバンボム", special:"CurlingRush", sp:160, weight:"light", path:Aerospray_0, pathSub:SuctionBomb, pathSpecial:CurlingRush},
+  {name:"プロモデラーMG", sub:"キューバンボム", special:"カーリングボムピッチャー", sp:160, weight:"light", path:Aerospray_0, pathSub:SuctionBomb, pathSpecial:CurlingRush},
   {name:"プロモデラーRG", sub:"スプリンクラー", special:"イカスフィア", sp:180, weight:"light", path:Aerospray_1, pathSub:Sprinkler, pathSpecial:Baller},
   {name:"プロモデラーPG", sub:"クイックボム", special:"ナイスダマ", sp:190, weight:"light", path:Aerospray_2, pathSub:BurstRush, pathSpecial:BooyahBomb},
   {name:"スプラシューター", sub:"クイックボム", special:"スーパーチャクチ", sp:170, weight:"middle", path:SplatterShot_0, pathSub:BurstBomb, pathSpecial:SplashDown},
@@ -305,7 +306,7 @@ const weaponStatus = [
   {name:"ヒーローシェルターレプリカ", sub:"スプリンクラー", special:"アメフラシ", sp:190, weight:"middle", path:HeroBrella, pathSub:Sprinkler, pathSpecial:InkStorm},
   {name:"パラシェルターソレーラ", sub:"ロボットボム", special:"スプラッシュボムピッチャー", sp:200, weight:"middle", path:Brella_1, pathSub:AutoBomb, pathSpecial:SplatRush},
   {name:"キャンピングシェルター", sub:"ジャンプビーコン", special:"バブルランチャー", sp:200, weight:"heavy", path:TentaBrella_0, pathSub:SquidBeakon, pathSpecial:BubbleBlower},
-  {name:"キャンピングシェルターソレーラ", sub:"スプラッシュシールド", special:"CurlingRush", sp:170, weight:"heavy", path:TentaBrella_1, pathSub:SplashWall, pathSpecial:CurlingRush},
+  {name:"キャンピングシェルターソレーラ", sub:"スプラッシュシールド", special:"カーリングボムピッチャー", sp:170, weight:"heavy", path:TentaBrella_1, pathSub:SplashWall, pathSpecial:CurlingRush},
   {name:"キャンピングシェルターカーモ", sub:"トラップ", special:"ウルトラハンコ", sp:210, weight:"heavy", path:TentaBrella_2, pathSub:InkMine, pathSpecial:UltraStamp},
   {name:"スパイガジェット", sub:"トラップ", special:"スーパーチャクチ", sp:150, weight:"light", path:Undercover_0, pathSub:InkMine, pathSpecial:SplashDown},
   {name:"スパイガジェットソレーラ", sub:"スプラッシュボム", special:"イカスフィア", sp:180, weight:"light", path:Undercover_1, pathSub:SplatBomb, pathSpecial:Baller},
@@ -321,40 +322,37 @@ const weaponSortedBySpe = weaponStatus.slice().sort((a, b) => (a.special > b.spe
 const WeaponModal = (props) => {
   // 表示する配列
   const [weaponArray, setArray] = useState(weaponStatus);
-  //  並び順の管理
-  const [howToSort, setSort] = useState("byMain");
-  
-  // 並び順のstateに対応して表示する配列を変更
-  useEffect(
-    () => {
-      if (howToSort === "byMain") {
-        setArray(weaponStatus);
-      } else if (howToSort === "bySub") {
-        setArray(weaponSortedBySub);
-      } else if (howToSort === "bySpe") {
-        setArray(weaponSortedBySpe);
-      } else if (howToSort === "byName") {
-        setArray(weaponSortedByName);
-      }
-    },
-    [howToSort]
-  );
   
   const ref = useRef();
 
   // 選択された並び順に応じてstateを変更
   const selectBox = function() {
     let target = ref.current;
-    if (target.value === "main" && howToSort !== "byMain") {
-      setSort("byMain");
-    } else if (target.value === "name" && howToSort !== "byName") {
-      setSort("byName");
-    } else if (target.value === "sub" && howToSort !== "bySub") {
-      setSort("bySub");
-    } else if (target.value === "spe" && howToSort !== "bySpe") {
-      setSort("bySpe");
+    if (target.value === "main") {
+      setArray(weaponStatus);
+    } else if (target.value === "name") {
+      setArray(weaponSortedByName);
+    } else if (target.value === "sub") {
+      setArray(weaponSortedBySub);
+    } else if (target.value === "spe") {
+      setArray(weaponSortedBySpe);
     }
   };
+
+  useEffect(() => {
+    var tooltipDeleteList = [].slice.call(document.querySelectorAll('[role="tooltip"]'));
+    if (tooltipDeleteList.length) {
+      for (let i = 0; i < tooltipDeleteList.length; i++) {
+        tooltipDeleteList[i].style.display = "none"
+      }
+    }
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[class="weapon-icon"]'));
+    const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new Tooltip(tooltipTriggerEl);
+    });
+  })
+
+  console.log("WMrendered!")
 
   return (
     <div className="modal fade" id="weaponModal" tabIndex="-1" aria-labelledby="weaponModalLabel" aria-hidden="true">
@@ -370,7 +368,7 @@ const WeaponModal = (props) => {
                 <span className="align-middle">並び替え :</span>
               </div>
               <div className="selectbox">
-                <select className="form-select" ref = {ref} aria-label="sort" id="select-box" onClick={()=>{selectBox();}}>
+                <select className="form-select" ref = {ref} aria-label="sort" id="select-box" onChange={()=>{selectBox();}}>
                     <option value="main" defaultValue>メインウェポン</option>
                     <option value="sub">サブウェポン</option>
                     <option value="spe">スペシャルウェポン</option>
