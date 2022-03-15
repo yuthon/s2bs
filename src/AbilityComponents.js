@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Weapon from './WeaponComponents/Weapon';
 import WeaponModal from './WeaponComponents/WeaponModal';
 // アビリティ効果コンポーネント
-import AbilityEffect from './AbilityEffectComponents/AbilityEffect';
+import AbilityPoint from './AbilityEffectComponents/AbilityPoint';
 //MainSlotのモーダル
 import MainSlotModal0 from './SlotComponents/MainSlotModal0';
 import MainSlotModal1 from './SlotComponents/MainSlotModal1';
@@ -143,7 +143,7 @@ const AbilityComponents = (props) => {
         <Weapon
           weaponStatus={weaponStatus} 
         />
-      <AbilityEffect
+      <AbilityPoint
         weaponStatus={weaponStatus}
         passMainAbilityName0={mainAbilityName0}
         passMainAbilityName1={mainAbilityName1}

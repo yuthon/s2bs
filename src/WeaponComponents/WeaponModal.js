@@ -378,358 +378,279 @@ const WeaponModal = (props) => {
             </div>
           </div>
           <div className="container d-flex flex-wrap px-0 px-lg-5">
-            <div className="weapon-outer">
-              <div
-                className="weapon-icon"
-                onClick={()=>{
-                  props.weaponStatus(weaponArray[0]);
-                  }
+            <div
+              className="weapon-icon"
+              onClick={()=>{
+                props.weaponStatus(weaponArray[0]);
                 }
-                data-bs-dismiss="modal"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title={weaponArray[0].name}
-              >
-                <div className="container px-0">
-                  <div className="justify-content-center">
-                    <img src = {weaponArray[0].path} className="img-weapon" alt=""/>
-                  </div>
-                  <div className="row align-items-center justify-content-around sub-sp-bg">
-                    <div className="sub-sp">
-                      <img src={weaponArray[0].pathSub} className="img-sub-sp" alt=""/>
-                    </div>
-                    <div className="sub-sp">
-                      <img src={weaponArray[0].pathSpecial} className="img-sub-sp" alt=""/>
-                    </div>
-                  </div>
+              }
+              data-bs-dismiss="modal"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title={weaponArray[0].name}
+            >
+              <img src = {weaponArray[0].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[0].pathSub} className="img-sub-sp" alt=""/>
+                </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[0].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            <div className="weapon-outer">
-              <div
-                className="weapon-icon"
-                onClick={()=>{
-                  props.weaponStatus(weaponArray[1]);
-                  }
+            <div
+              className="weapon-icon"
+              onClick={()=>{
+                props.weaponStatus(weaponArray[1]);
                 }
-                data-bs-dismiss="modal"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title={weaponArray[1].name}
-              >
-                <div className="container px-0">
-                  <div className="justify-content-center">
-                    <img src = {weaponArray[1].path} className="img-weapon" alt=""/>
-                  </div>
-                  <div className="row align-items-center justify-content-around sub-sp-bg">
-                    <div className="sub-sp">
-                      <img src={weaponArray[1].pathSub} className="img-sub-sp" alt=""/>
-                    </div>
-                    <div className="sub-sp">
-                      <img src={weaponArray[1].pathSpecial} className="img-sub-sp" alt=""/>
-                    </div>
-                  </div>
+              }
+              data-bs-dismiss="modal"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title={weaponArray[1].name}
+            >
+              <img src = {weaponArray[1].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[1].pathSub} className="img-sub-sp" alt=""/>
+                </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[1].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            <div className="weapon-outer">
-              <div
-                className="weapon-icon"
-                onClick={()=>{
-                  props.weaponStatus(weaponArray[2]);
-                  }
+            <div
+              className="weapon-icon"
+              onClick={()=>{
+                props.weaponStatus(weaponArray[2]);
                 }
-                data-bs-dismiss="modal"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title={weaponArray[2].name}
-              >
-                <div className="container px-0">
-                  <div className="justify-content-center">
-                    <img src = {weaponArray[2].path} className="img-weapon" alt=""/>
-                  </div>
-                  <div className="row align-items-center justify-content-around sub-sp-bg">
-                    <div className="sub-sp">
-                      <img src={weaponArray[2].pathSub} className="img-sub-sp" alt=""/>
-                    </div>
-                    <div className="sub-sp">
-                      <img src={weaponArray[2].pathSpecial} className="img-sub-sp" alt=""/>
-                    </div>
-                  </div>
+              }
+              data-bs-dismiss="modal"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title={weaponArray[2].name}
+            >
+              <img src = {weaponArray[2].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[2].pathSub} className="img-sub-sp" alt=""/>
+                </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[2].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            <div className="weapon-outer">
-              <div
-                className="weapon-icon"
-                onClick={()=>{
-                  props.weaponStatus(weaponArray[3]);
-                  }
+            <div
+              className="weapon-icon"
+              onClick={()=>{
+                props.weaponStatus(weaponArray[3]);
                 }
-                data-bs-dismiss="modal"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title={weaponArray[3].name}
-              >
-                <div className="container px-0">
-                  <div className="justify-content-center">
-                    <img src = {weaponArray[3].path} className="img-weapon" alt=""/>
-                  </div>
-                  <div className="row align-items-center justify-content-around sub-sp-bg">
-                    <div className="sub-sp">
-                      <img src={weaponArray[3].pathSub} className="img-sub-sp" alt=""/>
-                    </div>
-                    <div className="sub-sp">
-                      <img src={weaponArray[3].pathSpecial} className="img-sub-sp" alt=""/>
-                    </div>
-                  </div>
+              }
+              data-bs-dismiss="modal"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title={weaponArray[3].name}
+            >
+              <img src = {weaponArray[3].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[3].pathSub} className="img-sub-sp" alt=""/>
+                </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[3].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            <div className="weapon-outer">
-              <div
-                className="weapon-icon"
-                onClick={()=>{
-                  props.weaponStatus(weaponArray[4]);
-                  }
+            <div
+              className="weapon-icon"
+              onClick={()=>{
+                props.weaponStatus(weaponArray[4]);
                 }
-                data-bs-dismiss="modal"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title={weaponArray[4].name}
-              >
-                <div className="container px-0">
-                  <div className="justify-content-center">
-                    <img src = {weaponArray[4].path} className="img-weapon" alt=""/>
-                  </div>
-                  <div className="row align-items-center justify-content-around sub-sp-bg">
-                    <div className="sub-sp">
-                      <img src={weaponArray[4].pathSub} className="img-sub-sp" alt=""/>
-                    </div>
-                    <div className="sub-sp">
-                      <img src={weaponArray[4].pathSpecial} className="img-sub-sp" alt=""/>
-                    </div>
-                  </div>
+              }
+              data-bs-dismiss="modal"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title={weaponArray[4].name}
+            >
+              <img src = {weaponArray[4].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[4].pathSub} className="img-sub-sp" alt=""/>
+                </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[4].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            <div className="weapon-outer">
-              <div
-                className="weapon-icon"
-                onClick={()=>{
-                  props.weaponStatus(weaponArray[5]);
-                  }
+            <div
+              className="weapon-icon"
+              onClick={()=>{
+                props.weaponStatus(weaponArray[5]);
                 }
-                data-bs-dismiss="modal"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title={weaponArray[5].name}
-              >
-                <div className="container px-0">
-                  <div className="justify-content-center">
-                    <img src = {weaponArray[5].path} className="img-weapon" alt=""/>
-                  </div>
-                  <div className="row align-items-center justify-content-around sub-sp-bg">
-                    <div className="sub-sp">
-                      <img src={weaponArray[5].pathSub} className="img-sub-sp" alt=""/>
-                    </div>
-                    <div className="sub-sp">
-                      <img src={weaponArray[5].pathSpecial} className="img-sub-sp" alt=""/>
-                    </div>
-                  </div>
+              }
+              data-bs-dismiss="modal"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title={weaponArray[5].name}
+            >
+              <img src = {weaponArray[5].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[5].pathSub} className="img-sub-sp" alt=""/>
+                </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[5].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            <div className="weapon-outer">
-              <div
-                className="weapon-icon"
-                onClick={()=>{
-                  props.weaponStatus(weaponArray[6]);
-                  }
+            <div
+              className="weapon-icon"
+              onClick={()=>{
+                props.weaponStatus(weaponArray[6]);
                 }
-                data-bs-dismiss="modal"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title={weaponArray[6].name}
-              >
-                <div className="container px-0">
-                  <div className="justify-content-center">
-                    <img src = {weaponArray[6].path} className="img-weapon" alt=""/>
-                  </div>
-                  <div className="row align-items-center justify-content-around sub-sp-bg">
-                    <div className="sub-sp">
-                      <img src={weaponArray[6].pathSub} className="img-sub-sp" alt=""/>
-                    </div>
-                    <div className="sub-sp">
-                      <img src={weaponArray[6].pathSpecial} className="img-sub-sp" alt=""/>
-                    </div>
-                  </div>
+              }
+              data-bs-dismiss="modal"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title={weaponArray[6].name}
+            >
+              <img src = {weaponArray[6].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[6].pathSub} className="img-sub-sp" alt=""/>
+                </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[6].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            <div className="weapon-outer">
-              <div
-                className="weapon-icon"
-                onClick={()=>{
-                  props.weaponStatus(weaponArray[7]);
-                  }
+            <div
+              className="weapon-icon"
+              onClick={()=>{
+                props.weaponStatus(weaponArray[7]);
                 }
-                data-bs-dismiss="modal"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title={weaponArray[7].name}
-              >
-                <div className="container px-0">
-                  <div className="justify-content-center">
-                    <img src = {weaponArray[7].path} className="img-weapon" alt=""/>
-                  </div>
-                  <div className="row align-items-center justify-content-around sub-sp-bg">
-                    <div className="sub-sp">
-                      <img src={weaponArray[7].pathSub} className="img-sub-sp" alt=""/>
-                    </div>
-                    <div className="sub-sp">
-                      <img src={weaponArray[7].pathSpecial} className="img-sub-sp" alt=""/>
-                    </div>
-                  </div>
+              }
+              data-bs-dismiss="modal"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title={weaponArray[7].name}
+            >
+              <img src = {weaponArray[7].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[7].pathSub} className="img-sub-sp" alt=""/>
+                </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[7].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            <div className="weapon-outer">
-              <div
-                className="weapon-icon"
-                onClick={()=>{
-                  props.weaponStatus(weaponArray[8]);
-                  }
+            <div
+              className="weapon-icon"
+              onClick={()=>{
+                props.weaponStatus(weaponArray[8]);
                 }
-                data-bs-dismiss="modal"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title={weaponArray[8].name}
-              >
-                <div className="container px-0">
-                  <div className="justify-content-center">
-                    <img src = {weaponArray[8].path} className="img-weapon" alt=""/>
-                  </div>
-                  <div className="row align-items-center justify-content-around sub-sp-bg">
-                    <div className="sub-sp">
-                      <img src={weaponArray[8].pathSub} className="img-sub-sp" alt=""/>
-                    </div>
-                    <div className="sub-sp">
-                      <img src={weaponArray[8].pathSpecial} className="img-sub-sp" alt=""/>
-                    </div>
-                  </div>
+              }
+              data-bs-dismiss="modal"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title={weaponArray[8].name}
+            >
+              <img src = {weaponArray[8].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[8].pathSub} className="img-sub-sp" alt=""/>
+                </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[8].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            <div className="weapon-outer">
-              <div
-                className="weapon-icon"
-                onClick={()=>{
-                  props.weaponStatus(weaponArray[9]);
-                  }
+            <div
+              className="weapon-icon"
+              onClick={()=>{
+                props.weaponStatus(weaponArray[9]);
                 }
-                data-bs-dismiss="modal"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title={weaponArray[9].name}
-              >
-                <div className="container px-0">
-                  <div className="justify-content-center">
-                    <img src = {weaponArray[9].path} className="img-weapon" alt=""/>
-                  </div>
-                  <div className="row align-items-center justify-content-around sub-sp-bg">
-                    <div className="sub-sp">
-                      <img src={weaponArray[9].pathSub} className="img-sub-sp" alt=""/>
-                    </div>
-                    <div className="sub-sp">
-                      <img src={weaponArray[9].pathSpecial} className="img-sub-sp" alt=""/>
-                    </div>
-                  </div>
+              }
+              data-bs-dismiss="modal"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title={weaponArray[9].name}
+            >
+              <img src = {weaponArray[9].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[9].pathSub} className="img-sub-sp" alt=""/>
+                </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[9].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            <div className="weapon-outer">
-              <div
-                className="weapon-icon"
-                onClick={()=>{
-                  props.weaponStatus(weaponArray[10]);
-                  }
+            <div
+              className="weapon-icon"
+              onClick={()=>{
+                props.weaponStatus(weaponArray[10]);
                 }
-                data-bs-dismiss="modal"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title={weaponArray[10].name}
-              >
-                <div className="container px-0">
-                  <div className="justify-content-center">
-                    <img src = {weaponArray[10].path} className="img-weapon" alt=""/>
-                  </div>
-                  <div className="row align-items-center justify-content-around sub-sp-bg">
-                    <div className="sub-sp">
-                      <img src={weaponArray[10].pathSub} className="img-sub-sp" alt=""/>
-                    </div>
-                    <div className="sub-sp">
-                      <img src={weaponArray[10].pathSpecial} className="img-sub-sp" alt=""/>
-                    </div>
-                  </div>
+              }
+              data-bs-dismiss="modal"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title={weaponArray[10].name}
+            >
+              <img src = {weaponArray[10].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[10].pathSub} className="img-sub-sp" alt=""/>
+                </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[10].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            <div className="weapon-outer">
-              <div
-                className="weapon-icon"
-                onClick={()=>{
-                  props.weaponStatus(weaponArray[11]);
-                  }
+            <div
+              className="weapon-icon"
+              onClick={()=>{
+                props.weaponStatus(weaponArray[11]);
                 }
-                data-bs-dismiss="modal"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title={weaponArray[11].name}
-              >
-                <div className="container px-0">
-                  <div className="justify-content-center">
-                    <img src = {weaponArray[11].path} className="img-weapon" alt=""/>
-                  </div>
-                  <div className="row align-items-center justify-content-around sub-sp-bg">
-                    <div className="sub-sp">
-                      <img src={weaponArray[11].pathSub} className="img-sub-sp" alt=""/>
-                    </div>
-                    <div className="sub-sp">
-                      <img src={weaponArray[11].pathSpecial} className="img-sub-sp" alt=""/>
-                    </div>
-                  </div>
+              }
+              data-bs-dismiss="modal"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title={weaponArray[11].name}
+            >
+              <img src = {weaponArray[11].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[11].pathSub} className="img-sub-sp" alt=""/>
+                </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[11].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            <div className="weapon-outer">
-              <div
-                className="weapon-icon"
-                onClick={()=>{
-                  props.weaponStatus(weaponArray[12]);
-                  }
+            <div
+              className="weapon-icon"
+              onClick={()=>{
+                props.weaponStatus(weaponArray[12]);
                 }
-                data-bs-dismiss="modal"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title={weaponArray[12].name}
-              >
-                <div className="container px-0">
-                  <div className="justify-content-center">
-                    <img src = {weaponArray[12].path} className="img-weapon" alt=""/>
-                  </div>
-                  <div className="row align-items-center justify-content-around sub-sp-bg">
-                    <div className="sub-sp">
-                      <img src={weaponArray[12].pathSub} className="img-sub-sp" alt=""/>
-                    </div>
-                    <div className="sub-sp">
-                      <img src={weaponArray[12].pathSpecial} className="img-sub-sp" alt=""/>
-                    </div>
-                  </div>
+              }
+              data-bs-dismiss="modal"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title={weaponArray[12].name}
+            >
+              <img src = {weaponArray[12].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[12].pathSub} className="img-sub-sp" alt=""/>
+                </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[12].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            <div className="weapon-outer">
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -741,22 +662,16 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[13].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[13].path} className="img-weapon" alt=""/>
+              <img src = {weaponArray[13].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[13].pathSub} className="img-sub-sp" alt=""/>
                 </div>
-                <div className="row align-items-center justify-content-around sub-sp-bg">
-                  <div className="sub-sp">
-                    <img src={weaponArray[13].pathSub} className="img-sub-sp" alt=""/>
-                  </div>
-                  <div className="sub-sp">
-                    <img src={weaponArray[13].pathSpecial} className="img-sub-sp" alt=""/>
-                  </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[13].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            </div>
-            <div className="weapon-outer">
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -768,22 +683,16 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[14].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[14].path} className="img-weapon" alt=""/>
+              <img src = {weaponArray[14].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[14].pathSub} className="img-sub-sp" alt=""/>
                 </div>
-                <div className="row align-items-center justify-content-around sub-sp-bg">
-                  <div className="sub-sp">
-                    <img src={weaponArray[14].pathSub} className="img-sub-sp" alt=""/>
-                  </div>
-                  <div className="sub-sp">
-                    <img src={weaponArray[14].pathSpecial} className="img-sub-sp" alt=""/>
-                  </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[14].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            </div>
-            <div className="weapon-outer">
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -795,22 +704,16 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[15].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[15].path} className="img-weapon" alt=""/>
+              <img src = {weaponArray[15].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[15].pathSub} className="img-sub-sp" alt=""/>
                 </div>
-                <div className="row align-items-center justify-content-around sub-sp-bg">
-                  <div className="sub-sp">
-                    <img src={weaponArray[15].pathSub} className="img-sub-sp" alt=""/>
-                  </div>
-                  <div className="sub-sp">
-                    <img src={weaponArray[15].pathSpecial} className="img-sub-sp" alt=""/>
-                  </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[15].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            </div>
-            <div className="weapon-outer">
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -822,22 +725,16 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[16].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[16].path} className="img-weapon" alt=""/>
+              <img src = {weaponArray[16].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[16].pathSub} className="img-sub-sp" alt=""/>
                 </div>
-                <div className="row align-items-center justify-content-around sub-sp-bg">
-                  <div className="sub-sp">
-                    <img src={weaponArray[16].pathSub} className="img-sub-sp" alt=""/>
-                  </div>
-                  <div className="sub-sp">
-                    <img src={weaponArray[16].pathSpecial} className="img-sub-sp" alt=""/>
-                  </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[16].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            </div>
-            <div className="weapon-outer">
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -849,22 +746,16 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[17].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[17].path} className="img-weapon" alt=""/>
+              <img src = {weaponArray[17].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[17].pathSub} className="img-sub-sp" alt=""/>
                 </div>
-                <div className="row align-items-center justify-content-around sub-sp-bg">
-                  <div className="sub-sp">
-                    <img src={weaponArray[17].pathSub} className="img-sub-sp" alt=""/>
-                  </div>
-                  <div className="sub-sp">
-                    <img src={weaponArray[17].pathSpecial} className="img-sub-sp" alt=""/>
-                  </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[17].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            </div>
-            <div className="weapon-outer">
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -876,22 +767,16 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[18].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[18].path} className="img-weapon" alt=""/>
+              <img src = {weaponArray[18].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[18].pathSub} className="img-sub-sp" alt=""/>
                 </div>
-                <div className="row align-items-center justify-content-around sub-sp-bg">
-                  <div className="sub-sp">
-                    <img src={weaponArray[18].pathSub} className="img-sub-sp" alt=""/>
-                  </div>
-                  <div className="sub-sp">
-                    <img src={weaponArray[18].pathSpecial} className="img-sub-sp" alt=""/>
-                  </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[18].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            </div>
-            <div className="weapon-outer">
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -903,22 +788,16 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[19].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[19].path} className="img-weapon" alt=""/>
+              <img src = {weaponArray[19].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[19].pathSub} className="img-sub-sp" alt=""/>
                 </div>
-                <div className="row align-items-center justify-content-around sub-sp-bg">
-                  <div className="sub-sp">
-                    <img src={weaponArray[19].pathSub} className="img-sub-sp" alt=""/>
-                  </div>
-                  <div className="sub-sp">
-                    <img src={weaponArray[19].pathSpecial} className="img-sub-sp" alt=""/>
-                  </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[19].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            </div>
-            <div className="weapon-outer">
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -930,22 +809,16 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[20].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[20].path} className="img-weapon" alt=""/>
+              <img src = {weaponArray[20].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[20].pathSub} className="img-sub-sp" alt=""/>
                 </div>
-                <div className="row align-items-center justify-content-around sub-sp-bg">
-                  <div className="sub-sp">
-                    <img src={weaponArray[20].pathSub} className="img-sub-sp" alt=""/>
-                  </div>
-                  <div className="sub-sp">
-                    <img src={weaponArray[20].pathSpecial} className="img-sub-sp" alt=""/>
-                  </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[20].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            </div>
-            <div className="weapon-outer">
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -957,22 +830,16 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[21].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[21].path} className="img-weapon" alt=""/>
+              <img src = {weaponArray[21].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[21].pathSub} className="img-sub-sp" alt=""/>
                 </div>
-                <div className="row align-items-center justify-content-around sub-sp-bg">
-                  <div className="sub-sp">
-                    <img src={weaponArray[21].pathSub} className="img-sub-sp" alt=""/>
-                  </div>
-                  <div className="sub-sp">
-                    <img src={weaponArray[21].pathSpecial} className="img-sub-sp" alt=""/>
-                  </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[21].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            </div>
-            <div className="weapon-outer">
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -984,22 +851,16 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[22].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[22].path} className="img-weapon" alt=""/>
+              <img src = {weaponArray[22].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[22].pathSub} className="img-sub-sp" alt=""/>
                 </div>
-                <div className="row align-items-center justify-content-around sub-sp-bg">
-                  <div className="sub-sp">
-                    <img src={weaponArray[22].pathSub} className="img-sub-sp" alt=""/>
-                  </div>
-                  <div className="sub-sp">
-                    <img src={weaponArray[22].pathSpecial} className="img-sub-sp" alt=""/>
-                  </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[22].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            </div>
-            <div className="weapon-outer">
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1011,22 +872,16 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[23].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[23].path} className="img-weapon" alt=""/>
+              <img src = {weaponArray[23].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[23].pathSub} className="img-sub-sp" alt=""/>
                 </div>
-                <div className="row align-items-center justify-content-around sub-sp-bg">
-                  <div className="sub-sp">
-                    <img src={weaponArray[23].pathSub} className="img-sub-sp" alt=""/>
-                  </div>
-                  <div className="sub-sp">
-                    <img src={weaponArray[23].pathSpecial} className="img-sub-sp" alt=""/>
-                  </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[23].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            </div>
-            <div className="weapon-outer">
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1038,22 +893,16 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[24].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[24].path} className="img-weapon" alt=""/>
+              <img src = {weaponArray[24].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[24].pathSub} className="img-sub-sp" alt=""/>
                 </div>
-                <div className="row align-items-center justify-content-around sub-sp-bg">
-                  <div className="sub-sp">
-                    <img src={weaponArray[24].pathSub} className="img-sub-sp" alt=""/>
-                  </div>
-                  <div className="sub-sp">
-                    <img src={weaponArray[24].pathSpecial} className="img-sub-sp" alt=""/>
-                  </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[24].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            </div>
-            <div className="weapon-outer">
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1065,22 +914,16 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[25].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[25].path} className="img-weapon" alt=""/>
+              <img src = {weaponArray[25].path} className="img-weapon" alt=""/>
+              <div className="row align-items-center justify-content-around sub-sp-bg">
+                <div className="sub-sp">
+                  <img src={weaponArray[25].pathSub} className="img-sub-sp" alt=""/>
                 </div>
-                <div className="row align-items-center justify-content-around sub-sp-bg">
-                  <div className="sub-sp">
-                    <img src={weaponArray[25].pathSub} className="img-sub-sp" alt=""/>
-                  </div>
-                  <div className="sub-sp">
-                    <img src={weaponArray[25].pathSpecial} className="img-sub-sp" alt=""/>
-                  </div>
+                <div className="sub-sp">
+                  <img src={weaponArray[25].pathSpecial} className="img-sub-sp" alt=""/>
                 </div>
               </div>
             </div>
-            </div>
-            <div className="weapon-outer">
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1092,10 +935,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[26].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[26].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[26].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[26].pathSub} className="img-sub-sp" alt=""/>
@@ -1105,9 +945,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1119,10 +957,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[27].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[27].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[27].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[27].pathSub} className="img-sub-sp" alt=""/>
@@ -1132,9 +967,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1146,10 +979,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[28].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[28].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[28].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[28].pathSub} className="img-sub-sp" alt=""/>
@@ -1159,9 +989,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1173,10 +1001,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[29].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[29].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[29].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[29].pathSub} className="img-sub-sp" alt=""/>
@@ -1186,9 +1011,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1200,10 +1023,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[30].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[30].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[30].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[30].pathSub} className="img-sub-sp" alt=""/>
@@ -1213,9 +1033,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1227,10 +1045,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[31].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[31].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[31].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[31].pathSub} className="img-sub-sp" alt=""/>
@@ -1240,9 +1055,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1254,10 +1067,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[32].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[32].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[32].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[32].pathSub} className="img-sub-sp" alt=""/>
@@ -1267,9 +1077,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1281,10 +1089,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[33].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[33].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[33].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[33].pathSub} className="img-sub-sp" alt=""/>
@@ -1294,9 +1099,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1308,10 +1111,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[34].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[34].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[34].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[34].pathSub} className="img-sub-sp" alt=""/>
@@ -1321,9 +1121,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1335,10 +1133,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[35].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[35].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[35].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[35].pathSub} className="img-sub-sp" alt=""/>
@@ -1348,9 +1143,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1362,10 +1155,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[36].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[36].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[36].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[36].pathSub} className="img-sub-sp" alt=""/>
@@ -1375,9 +1165,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1389,10 +1177,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[37].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[37].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[37].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[37].pathSub} className="img-sub-sp" alt=""/>
@@ -1402,9 +1187,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1416,10 +1199,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[38].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[38].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[38].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[38].pathSub} className="img-sub-sp" alt=""/>
@@ -1429,9 +1209,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1443,10 +1221,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[39].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[39].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[39].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[39].pathSub} className="img-sub-sp" alt=""/>
@@ -1456,9 +1231,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1470,10 +1243,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[40].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[40].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[40].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[40].pathSub} className="img-sub-sp" alt=""/>
@@ -1483,9 +1253,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1497,10 +1265,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[41].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[41].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[41].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[41].pathSub} className="img-sub-sp" alt=""/>
@@ -1510,9 +1275,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1524,10 +1287,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[42].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[42].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[42].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[42].pathSub} className="img-sub-sp" alt=""/>
@@ -1537,9 +1297,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1551,10 +1309,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[43].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[43].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[43].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[43].pathSub} className="img-sub-sp" alt=""/>
@@ -1564,9 +1319,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1578,10 +1331,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[44].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[44].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[44].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[44].pathSub} className="img-sub-sp" alt=""/>
@@ -1591,9 +1341,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1605,10 +1353,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[45].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[45].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[45].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[45].pathSub} className="img-sub-sp" alt=""/>
@@ -1618,9 +1363,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1632,10 +1375,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[46].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[46].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[46].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[46].pathSub} className="img-sub-sp" alt=""/>
@@ -1645,9 +1385,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1659,10 +1397,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[47].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[47].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[47].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[47].pathSub} className="img-sub-sp" alt=""/>
@@ -1672,9 +1407,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1686,10 +1419,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[48].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[48].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[48].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[48].pathSub} className="img-sub-sp" alt=""/>
@@ -1699,9 +1429,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1713,10 +1441,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[49].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[49].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[49].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[49].pathSub} className="img-sub-sp" alt=""/>
@@ -1726,9 +1451,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1740,10 +1463,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[50].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[50].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[50].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[50].pathSub} className="img-sub-sp" alt=""/>
@@ -1753,9 +1473,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1767,10 +1485,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[51].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[51].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[51].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[51].pathSub} className="img-sub-sp" alt=""/>
@@ -1780,9 +1495,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1794,10 +1507,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[52].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[52].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[52].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[52].pathSub} className="img-sub-sp" alt=""/>
@@ -1807,9 +1517,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1821,10 +1529,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[53].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[53].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[53].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[53].pathSub} className="img-sub-sp" alt=""/>
@@ -1834,9 +1539,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1848,10 +1551,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[54].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[54].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[54].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[54].pathSub} className="img-sub-sp" alt=""/>
@@ -1861,9 +1561,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1875,10 +1573,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[55].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[55].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[55].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[55].pathSub} className="img-sub-sp" alt=""/>
@@ -1888,9 +1583,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1902,10 +1595,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[56].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[56].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[56].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[56].pathSub} className="img-sub-sp" alt=""/>
@@ -1915,9 +1605,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1929,10 +1617,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[57].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[57].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[57].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[57].pathSub} className="img-sub-sp" alt=""/>
@@ -1942,9 +1627,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1956,10 +1639,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[58].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[58].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[58].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[58].pathSub} className="img-sub-sp" alt=""/>
@@ -1969,9 +1649,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -1983,10 +1661,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[59].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[59].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[59].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[59].pathSub} className="img-sub-sp" alt=""/>
@@ -1996,9 +1671,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2010,10 +1683,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[60].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[60].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[60].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[60].pathSub} className="img-sub-sp" alt=""/>
@@ -2023,9 +1693,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2037,10 +1705,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[61].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[61].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[61].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[61].pathSub} className="img-sub-sp" alt=""/>
@@ -2050,9 +1715,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2064,10 +1727,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[62].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[62].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[62].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[62].pathSub} className="img-sub-sp" alt=""/>
@@ -2077,9 +1737,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2091,10 +1749,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[63].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[63].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[63].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[63].pathSub} className="img-sub-sp" alt=""/>
@@ -2104,9 +1759,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2118,10 +1771,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[64].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[64].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[64].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[64].pathSub} className="img-sub-sp" alt=""/>
@@ -2131,9 +1781,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2145,10 +1793,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[65].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[65].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[65].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[65].pathSub} className="img-sub-sp" alt=""/>
@@ -2158,9 +1803,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2172,10 +1815,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[66].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[66].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[66].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[66].pathSub} className="img-sub-sp" alt=""/>
@@ -2185,9 +1825,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2199,10 +1837,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[67].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[67].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[67].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[67].pathSub} className="img-sub-sp" alt=""/>
@@ -2212,9 +1847,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2226,10 +1859,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[68].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[68].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[68].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[68].pathSub} className="img-sub-sp" alt=""/>
@@ -2239,9 +1869,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2253,10 +1881,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[69].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[69].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[69].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[69].pathSub} className="img-sub-sp" alt=""/>
@@ -2266,9 +1891,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2280,10 +1903,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[70].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[70].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[70].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[70].pathSub} className="img-sub-sp" alt=""/>
@@ -2293,9 +1913,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2307,10 +1925,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[71].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[71].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[71].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[71].pathSub} className="img-sub-sp" alt=""/>
@@ -2320,9 +1935,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2334,10 +1947,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[72].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[72].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[72].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[72].pathSub} className="img-sub-sp" alt=""/>
@@ -2347,9 +1957,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2361,10 +1969,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[73].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[73].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[73].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[73].pathSub} className="img-sub-sp" alt=""/>
@@ -2374,9 +1979,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2388,10 +1991,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[74].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[74].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[74].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[74].pathSub} className="img-sub-sp" alt=""/>
@@ -2401,9 +2001,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2415,10 +2013,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[75].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[75].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[75].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[75].pathSub} className="img-sub-sp" alt=""/>
@@ -2428,9 +2023,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2442,10 +2035,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[76].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[76].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[76].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[76].pathSub} className="img-sub-sp" alt=""/>
@@ -2455,9 +2045,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2469,10 +2057,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[77].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[77].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[77].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[77].pathSub} className="img-sub-sp" alt=""/>
@@ -2482,9 +2067,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2496,10 +2079,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[78].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[78].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[78].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[78].pathSub} className="img-sub-sp" alt=""/>
@@ -2509,9 +2089,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2523,10 +2101,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[79].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[79].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[79].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[79].pathSub} className="img-sub-sp" alt=""/>
@@ -2536,9 +2111,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2550,10 +2123,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[80].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[80].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[80].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[80].pathSub} className="img-sub-sp" alt=""/>
@@ -2563,9 +2133,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2577,10 +2145,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[81].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[81].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[81].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[81].pathSub} className="img-sub-sp" alt=""/>
@@ -2590,9 +2155,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2604,10 +2167,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[82].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[82].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[82].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[82].pathSub} className="img-sub-sp" alt=""/>
@@ -2617,9 +2177,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2631,10 +2189,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[83].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[83].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[83].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[83].pathSub} className="img-sub-sp" alt=""/>
@@ -2644,9 +2199,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2658,10 +2211,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[84].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[84].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[84].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[84].pathSub} className="img-sub-sp" alt=""/>
@@ -2671,9 +2221,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2685,10 +2233,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[85].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[85].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[85].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[85].pathSub} className="img-sub-sp" alt=""/>
@@ -2698,9 +2243,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2712,10 +2255,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[86].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[86].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[86].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[86].pathSub} className="img-sub-sp" alt=""/>
@@ -2725,9 +2265,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2739,10 +2277,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[87].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[87].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[87].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[87].pathSub} className="img-sub-sp" alt=""/>
@@ -2752,9 +2287,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2766,10 +2299,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[88].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[88].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[88].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[88].pathSub} className="img-sub-sp" alt=""/>
@@ -2779,9 +2309,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2793,10 +2321,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[89].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[89].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[89].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[89].pathSub} className="img-sub-sp" alt=""/>
@@ -2806,9 +2331,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2820,10 +2343,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[90].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[90].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[90].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[90].pathSub} className="img-sub-sp" alt=""/>
@@ -2833,9 +2353,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2847,10 +2365,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[91].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[91].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[91].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[91].pathSub} className="img-sub-sp" alt=""/>
@@ -2860,9 +2375,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2874,10 +2387,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[92].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[92].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[92].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[92].pathSub} className="img-sub-sp" alt=""/>
@@ -2887,9 +2397,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2901,10 +2409,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[93].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[93].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[93].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[93].pathSub} className="img-sub-sp" alt=""/>
@@ -2914,9 +2419,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2928,10 +2431,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[94].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[94].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[94].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[94].pathSub} className="img-sub-sp" alt=""/>
@@ -2941,9 +2441,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2955,10 +2453,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[95].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[95].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[95].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[95].pathSub} className="img-sub-sp" alt=""/>
@@ -2968,9 +2463,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -2982,10 +2475,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[96].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[96].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[96].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[96].pathSub} className="img-sub-sp" alt=""/>
@@ -2995,9 +2485,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3009,10 +2497,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[97].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[97].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[97].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[97].pathSub} className="img-sub-sp" alt=""/>
@@ -3022,9 +2507,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3036,10 +2519,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[98].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[98].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[98].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[98].pathSub} className="img-sub-sp" alt=""/>
@@ -3049,9 +2529,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3063,10 +2541,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[99].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[99].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[99].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[99].pathSub} className="img-sub-sp" alt=""/>
@@ -3076,9 +2551,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3090,10 +2563,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[100].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[100].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[100].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[100].pathSub} className="img-sub-sp" alt=""/>
@@ -3103,9 +2573,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3117,10 +2585,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[101].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[101].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[101].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[101].pathSub} className="img-sub-sp" alt=""/>
@@ -3130,9 +2595,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3144,10 +2607,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[102].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[102].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[102].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[102].pathSub} className="img-sub-sp" alt=""/>
@@ -3157,9 +2617,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3171,10 +2629,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[103].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[103].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[103].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[103].pathSub} className="img-sub-sp" alt=""/>
@@ -3184,9 +2639,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3198,10 +2651,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[104].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[104].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[104].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[104].pathSub} className="img-sub-sp" alt=""/>
@@ -3211,9 +2661,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3225,10 +2673,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[105].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[105].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[105].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[105].pathSub} className="img-sub-sp" alt=""/>
@@ -3238,9 +2683,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3252,10 +2695,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[106].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[106].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[106].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[106].pathSub} className="img-sub-sp" alt=""/>
@@ -3265,9 +2705,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3279,10 +2717,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[107].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[107].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[107].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[107].pathSub} className="img-sub-sp" alt=""/>
@@ -3292,9 +2727,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3306,10 +2739,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[108].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[108].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[108].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[108].pathSub} className="img-sub-sp" alt=""/>
@@ -3319,9 +2749,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3333,10 +2761,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[109].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[109].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[109].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[109].pathSub} className="img-sub-sp" alt=""/>
@@ -3346,9 +2771,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3360,10 +2783,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[110].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[110].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[110].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[110].pathSub} className="img-sub-sp" alt=""/>
@@ -3373,9 +2793,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3387,10 +2805,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[111].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[111].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[111].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[111].pathSub} className="img-sub-sp" alt=""/>
@@ -3400,9 +2815,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3414,10 +2827,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[112].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[112].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[112].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[112].pathSub} className="img-sub-sp" alt=""/>
@@ -3427,9 +2837,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3441,10 +2849,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[113].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[113].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[113].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[113].pathSub} className="img-sub-sp" alt=""/>
@@ -3454,9 +2859,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3468,10 +2871,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[114].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[114].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[114].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[114].pathSub} className="img-sub-sp" alt=""/>
@@ -3481,9 +2881,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3495,10 +2893,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[115].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[115].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[115].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[115].pathSub} className="img-sub-sp" alt=""/>
@@ -3508,9 +2903,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3522,10 +2915,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[116].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[116].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[116].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[116].pathSub} className="img-sub-sp" alt=""/>
@@ -3535,9 +2925,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3549,10 +2937,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[117].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[117].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[117].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[117].pathSub} className="img-sub-sp" alt=""/>
@@ -3562,9 +2947,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3576,10 +2959,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[118].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[118].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[118].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[118].pathSub} className="img-sub-sp" alt=""/>
@@ -3589,9 +2969,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3603,10 +2981,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[119].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[119].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[119].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[119].pathSub} className="img-sub-sp" alt=""/>
@@ -3616,9 +2991,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3630,10 +3003,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[120].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[120].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[120].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[120].pathSub} className="img-sub-sp" alt=""/>
@@ -3643,9 +3013,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3657,10 +3025,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[121].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[121].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[121].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[121].pathSub} className="img-sub-sp" alt=""/>
@@ -3670,9 +3035,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3684,10 +3047,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[122].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[122].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[122].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[122].pathSub} className="img-sub-sp" alt=""/>
@@ -3697,9 +3057,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3711,10 +3069,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[123].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[123].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[123].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[123].pathSub} className="img-sub-sp" alt=""/>
@@ -3724,9 +3079,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3738,10 +3091,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[124].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[124].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[124].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[124].pathSub} className="img-sub-sp" alt=""/>
@@ -3751,9 +3101,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3765,10 +3113,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[125].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[125].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[125].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[125].pathSub} className="img-sub-sp" alt=""/>
@@ -3778,9 +3123,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3792,10 +3135,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[126].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[126].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[126].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[126].pathSub} className="img-sub-sp" alt=""/>
@@ -3805,9 +3145,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3819,10 +3157,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[127].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[127].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[127].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[127].pathSub} className="img-sub-sp" alt=""/>
@@ -3832,9 +3167,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3846,10 +3179,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[128].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[128].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[128].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[128].pathSub} className="img-sub-sp" alt=""/>
@@ -3859,9 +3189,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3873,10 +3201,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[129].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[129].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[129].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[129].pathSub} className="img-sub-sp" alt=""/>
@@ -3886,9 +3211,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3900,10 +3223,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[130].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[130].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[130].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[130].pathSub} className="img-sub-sp" alt=""/>
@@ -3913,9 +3233,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3927,10 +3245,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[131].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[131].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[131].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[131].pathSub} className="img-sub-sp" alt=""/>
@@ -3940,9 +3255,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3954,10 +3267,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[132].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[132].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[132].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[132].pathSub} className="img-sub-sp" alt=""/>
@@ -3967,9 +3277,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -3981,10 +3289,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[133].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[133].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[133].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[133].pathSub} className="img-sub-sp" alt=""/>
@@ -3994,9 +3299,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -4008,10 +3311,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[134].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[134].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[134].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[134].pathSub} className="img-sub-sp" alt=""/>
@@ -4021,9 +3321,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -4035,10 +3333,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[135].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[135].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[135].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[135].pathSub} className="img-sub-sp" alt=""/>
@@ -4048,9 +3343,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -4062,10 +3355,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[136].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[136].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[136].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[136].pathSub} className="img-sub-sp" alt=""/>
@@ -4075,9 +3365,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
             <div
               className="weapon-icon"
               onClick={()=>{
@@ -4089,10 +3377,7 @@ const WeaponModal = (props) => {
               data-bs-placement="top"
               title={weaponArray[137].name}
             >
-              <div className="container px-0">
-                <div className="justify-content-center">
-                  <img src = {weaponArray[137].path} className="img-weapon" alt=""/>
-                </div>
+                <img src = {weaponArray[137].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[137].pathSub} className="img-sub-sp" alt=""/>
@@ -4102,9 +3387,7 @@ const WeaponModal = (props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div className="weapon-outer">
+            
               <div
                 className="weapon-icon"
                 onClick={()=>{
@@ -4116,21 +3399,16 @@ const WeaponModal = (props) => {
                 data-bs-placement="top"
                 title={weaponArray[138].name}
               >
-                <div className="container px-0">
-                  <div className="justify-content-center">
-                    <img src = {weaponArray[138].path} className="img-weapon" alt=""/>
+                <img src = {weaponArray[138].path} className="img-weapon" alt=""/>
+                <div className="row align-items-center justify-content-around sub-sp-bg">
+                  <div className="sub-sp">
+                    <img src={weaponArray[138].pathSub} className="img-sub-sp" alt=""/>
                   </div>
-                  <div className="row align-items-center justify-content-around sub-sp-bg">
-                    <div className="sub-sp">
-                      <img src={weaponArray[138].pathSub} className="img-sub-sp" alt=""/>
-                    </div>
-                    <div className="sub-sp">
-                      <img src={weaponArray[138].pathSpecial} className="img-sub-sp" alt=""/>
-                    </div>
+                  <div className="sub-sp">
+                    <img src={weaponArray[138].pathSpecial} className="img-sub-sp" alt=""/>
                   </div>
                 </div>
               </div>
-            </div>
             <div className="btn close-btn" data-bs-dismiss="modal">
               <svg 
                 className="close-btn-svg" width="240" height="160" viewBox="-500 -142 2300 1300"

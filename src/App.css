@@ -260,6 +260,10 @@
   );
   cursor: pointer;
   position: relative;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* アタマギアのフッター */
 .headgear-icon-footer {
@@ -318,11 +322,6 @@
 .brand-img {
   width: 40px;
   height: 40px;
-}
-
-.brand-img-container {
-  width: 40px;
-  height: 40px;
   position: absolute;
   top: 0px;
   left: 3px;
@@ -350,10 +349,6 @@
   margin: auto;
 }
 
-.gear-icon-outer {
-  padding: 10px;
-}
-
 /**/
 /*ブキ関連*/
 /**/
@@ -377,12 +372,9 @@
     #e6e7c7 20px,
     #e6e7c7 40px
   );
-
   cursor: pointer;
-}
-
-.weapon-outer {
-  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   margin-left: auto;
   margin-right: auto;
 }

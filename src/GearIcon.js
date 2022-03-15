@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { Tooltip } from 'bootstrap';
-import GearIconFooter from './HeadComponents/GearIconFooter';
+import GearIconFooter from './GearIconFooter';
 // ブランドの画像
 import Batoroika from './images/brands/B00.png';
 import Aironic from './images/brands/B01.png';
@@ -139,32 +139,23 @@ const GearIcon = (props) => {
   const className = `${props.part}gear-icon-footer`
   
   return (
-    <div className="gear-icon-outer">
-      <div
-        className="gear-icon"
-        onClick={()=>{
-          props.passChosenGear(props.gear.id);
-          props.passImagePath(props.gear.path);
-          }
+    <div
+      className="gear-icon"
+      onClick={()=>{
+        props.passChosenGear(props.gear.id);
+        props.passImagePath(props.gear.path);
         }
-        ref={tooltipRef}
-        data-bs-dismiss="modal"
-      > 
-        <div className="gear-icon-img">
-          <img className="gear-icon-img" src={props.gear.path} alt=""/>
-        </div>
-        <div
-          className="brand-img-container"
-          ref={brandImgTooltip}
-        >
-          <img className="brand-img" src={brandImagePath} alt=""/>
-        </div>
-        <div className={className}>
-          <GearIconFooter
-            favoredAbility={favoredAbility}
-            unfavoredAbility={unfavoredAbility}
-          />
-        </div>
+      }
+      ref={tooltipRef}
+      data-bs-dismiss="modal"
+    > 
+      <img className="gear-icon-img" src={props.gear.path} alt=""/>
+      <img className="brand-img" ref={brandImgTooltip} src={brandImagePath} alt=""/>
+      <div className={className}>
+        <GearIconFooter
+          favoredAbility={favoredAbility}
+          unfavoredAbility={unfavoredAbility}
+        />
       </div>
     </div>
   )
