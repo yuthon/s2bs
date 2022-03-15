@@ -124,16 +124,7 @@ const GearIcon = (props) => {
         trigger: 'hover',
     })
   })
-  // ブランドロゴのツールチップ
-  const brandImgTooltip = useRef();
-
-  useEffect(() => {
-    const tooltip = new Tooltip(brandImgTooltip.current, {
-      title: props.gear.brand,
-      placement: "left",
-      trigger: "hover"
-    })
-  })
+  
 
   // どの部分かに応じてフッターに違うクラス名を与える
   const className = `${props.part}gear-icon-footer`
@@ -150,7 +141,7 @@ const GearIcon = (props) => {
       data-bs-dismiss="modal"
     > 
       <img className="gear-icon-img" src={props.gear.path} alt=""/>
-      <img className="brand-img" ref={brandImgTooltip} src={brandImagePath} alt=""/>
+      <img className="brand-img" src={brandImagePath} alt=""/>
       <div className={className}>
         <GearIconFooter
           favoredAbility={favoredAbility}
