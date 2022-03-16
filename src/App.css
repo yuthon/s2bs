@@ -155,6 +155,9 @@
   position: absolute;
   top: 6px;
   left: 5px;
+  /* text-align: center; */
+  height: 48px;
+  width: 48px;
 }
 
 .subslot-left {
@@ -186,13 +189,6 @@
   /*要素のフレームの周囲にシャドウ効果*/
   box-shadow: 0 0 0 1px #000;
   cursor: pointer;
-}
-
-/*メインスロットの大きさを調整*/
-.main-slot {
-  height: 48px;
-  width: 48px;
-  /* position: relative; */
 }
 
 /* メインスロットのsvgの位置調整 */
@@ -1248,8 +1244,8 @@ Btmボタン
   height: 1.8rem;
   display: none;
   position: absolute;
-  top: -90%;
-  left: -100%;
+  top: -2.2rem;
+  left: -4.35rem;
   z-index: 2;
   padding: 0.3em 0.5em;
   color: #ffffff;
@@ -1258,17 +1254,21 @@ Btmボタン
   font-size: 0.9rem;
 }
 
-.mainslot-tooltip:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 4.3em;
-  top: 2em;
+/* 上側に表示する場合だと左右の表示位置を */
+/* 固定できないので矢印を別に作る */
+.tooltip-top-arrow {
+  width: 0.5rem;
+  display: none;
+  z-index: 2;
   border-top: 0.4rem solid rgba(0, 0, 0, 0.8);
   border-right: 0.3rem solid transparent;
   border-left: 0.3rem solid transparent;
+  position: absolute;
+  top: -0.85rem;
+  left: 37%;
 }
 
-.ability-icon:hover .mainslot-tooltip {
+.ability-icon:hover .mainslot-tooltip,
+.ability-icon:hover .tooltip-top-arrow {
   display: block;
 }

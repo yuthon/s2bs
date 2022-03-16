@@ -117,13 +117,13 @@ const GearIcon = (props) => {
   // ギアの名前のツールチップ
   const tooltipRef = useRef();  
   
-  // useEffect(() => {
-  //   const tooltip = new Tooltip(tooltipRef.current, {
-  //       title: props.gear.name,
-  //       placement: 'top',
-  //       trigger: 'hover',
-  //   })
-  // })
+  useEffect(() => {
+    const tooltip = new Tooltip(tooltipRef.current, {
+        title: props.gear.name,
+        placement: 'top',
+        trigger: 'hover',
+    })
+  })
   
 
   // どの部分かに応じてフッターに違うクラス名を与える

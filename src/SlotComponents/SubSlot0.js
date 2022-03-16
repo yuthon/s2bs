@@ -2,9 +2,8 @@
 const SubSlot0 = (props) => {
   
   return(
-    <div className="subslot-left">
       <div
-        className="ability-icon sub-slot slot"
+        className="ability-icon sub-slot slot subslot-left"
         data-bs-toggle="modal"
         data-bs-target="#subSlotModal0"
       >
@@ -17,7 +16,6 @@ const SubSlot0 = (props) => {
         </div>
         <img className="subslot-img" src={props.imagePath} alt=""/>
       </div>
-    </div>
   );
 };
 
