@@ -80,6 +80,7 @@
   border-radius: 30px;
   margin-left: 0px;
   margin-right: 0px;
+  position: relative;
 }
 
 /* アタマ部分 */
@@ -150,31 +151,30 @@
   position: relative;
 }
 
-/* スロットの位置調整 */
+/* スロットの位置と大きさ調整 */
 .main-slot {
   position: absolute;
-  top: 6px;
-  left: 5px;
-  /* text-align: center; */
+  bottom: 4px;
+  left: 4px;
   height: 48px;
   width: 48px;
 }
-
+/* 一番左のサブスロット */
 .subslot-left {
   position: absolute;
-  top: 15px;
-  left: 60px;
+  bottom: 4px;
+  left: 59px;
 }
-
+/* 真ん中のサブスロット */
 .subslot-mid {
   position: absolute;
-  top: 15px;
+  bottom: 4px;
   left: 107px;
 }
-
+/* 一番右のサブスロット */
 .subslot-right {
   position: absolute;
-  top: 15px;
+  bottom: 4px;
   left: 154px;
 }
 
@@ -221,7 +221,6 @@
 .sub-slot {
   height: 40px;
   width: 40px;
-  position: relative;
 }
 
 /*サブスロットの画像の大きさと位置調整*/
@@ -1238,8 +1237,8 @@ Btmボタン
   display: block;
 }
 
-/* メインスロットのツールチップ */
-.mainslot-tooltip {
+/* メインスロットとサブスロットのツールチップ */
+.slot-tooltip {
   width: 8.8rem;
   height: 1.8rem;
   display: none;
@@ -1268,7 +1267,7 @@ Btmボタン
   left: 37%;
 }
 
-.ability-icon:hover .mainslot-tooltip,
+.ability-icon:hover .slot-tooltip,
 .ability-icon:hover .tooltip-top-arrow {
   display: block;
 }
