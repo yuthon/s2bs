@@ -24,12 +24,15 @@ import { useState } from 'react';
 // 3dモデル
 import Model from './ThreeComponents/Model';
 import Orbit from './ThreeComponents/Orbit';
-import { Suspense } from 'react';
-import {Canvas, extend } from '@react-three/fiber';
+import React, { Suspense } from 'react';
+import { Canvas, extend } from '@react-three/fiber';
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 extend({ OrbitControls });
 
+// const HeadGearModal = React.lazy(() => import('./HeadComponents/HeadGearModal'))
+// const ClothesGearModal = React.lazy(() => import('./ClothesComponents/ClothesGearModal'))
+// const ShoesGearModal = React.lazy(() => import('./ShoesComponents/ShoesGearModal'))
 
 const Main = () => {
   //ブキの名前とその他の情報を管理
@@ -58,18 +61,24 @@ const Main = () => {
   
   return(
     <div className="container">
-      <HeadGearModal
-        passChosenGear={setHeadGear}
-        passImagePath={setHeadImagePath}
-      />
+      <Suspense fallback={null}>
+        <HeadGearModal
+          passChosenGear={setHeadGear}
+          passImagePath={setHeadImagePath}
+        />
+      </Suspense>
+      <Suspense fallback={null}>
       <ClothesGearModal
         passChosenGear={setClothesGear}
         passImagePath={setClothesImagePath}
       />
+      </Suspense>
+      <Suspense fallback={null}>
       <ShoesGearModal
         passChosenGear={setShoesGear}
         passImagePath={setShoesImagePath}
       />
+      </Suspense>
       <CharacterTypeModal
         passCharacterType={passCharacterType}
         characterType={characterType}

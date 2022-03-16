@@ -358,14 +358,14 @@ const ShoesGearModal = (props) => {
   };
 
   // 再レンダーのときにツールチップが残ってしまった場合それを非表示
-  useEffect(() => {
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[role="tooltip"]'));
-    if (tooltipTriggerList.length) {
-      for (let i = 0; i < tooltipTriggerList.length; i++) {
-        tooltipTriggerList[i].style.display = "none"
-      }
-    }
-  });
+  // useEffect(() => {
+  //   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[role="tooltip"]'));
+  //   if (tooltipTriggerList.length) {
+  //     for (let i = 0; i < tooltipTriggerList.length; i++) {
+  //       tooltipTriggerList[i].style.display = "none"
+  //     }
+  //   }
+  // });
 
   return (
     <div className="modal fade" id="shoesGearModal" tabIndex="-1" aria-labelledby="shoesGearModalLabel" aria-hidden="true">  

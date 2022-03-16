@@ -132,6 +132,9 @@
 .gear-img {
   width: 110px;
   height: 110px;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
 }
 
 .head-tooltip {
@@ -1201,3 +1204,38 @@ Btmボタン
   width: 40px;
   height: 40px;
 } */
+
+/*  */
+/* ツールチップ */
+/*  */
+
+.gear-tooltip {
+  width: 7rem;
+  height: 1.8rem;
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 110%;
+  z-index: 2;
+  padding: 0.3em 0.5em;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0.3em;
+  font-size: 0.9rem;
+}
+
+.gear-tooltip:after {
+  width: 100%;
+  content: '';
+  display: block;
+  position: absolute;
+  left: -7.8em;
+  top: 0.65em;
+  border-top: 0.3rem solid transparent;
+  border-right: 0.35rem solid rgba(0, 0, 0, 0.8);
+  border-bottom: 0.3rem solid transparent;
+}
+
+.gear-img:hover .gear-tooltip {
+  display: block;
+}
