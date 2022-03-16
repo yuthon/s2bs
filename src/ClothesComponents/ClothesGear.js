@@ -1,4 +1,4 @@
-//モーダルで選択されたギアの画像を表示するコンポーネント
+
 const ClothesGear = (props) => {
   return(
     <div className="gear-img" data-bs-toggle="modal" data-bs-target="#clothesGearModal">

@@ -185,21 +185,22 @@
   border-bottom: 0px;
   /*要素のフレームの周囲にシャドウ効果*/
   box-shadow: 0 0 0 1px #000;
+  cursor: pointer;
 }
 
 /*メインスロットの大きさを調整*/
 .main-slot {
   height: 48px;
   width: 48px;
-  position: relative;
+  /* position: relative; */
 }
 
 /* メインスロットのsvgの位置調整 */
-.mainslot-tooltip {
+.mainslot-svg {
   position: absolute;
-  z-index: 5;
   top: -5px;
   left: -5px;
+  cursor: pointer;
 }
 
 /*メインスロットの画像の大きさと位置調整*/
@@ -1209,6 +1210,7 @@ Btmボタン
 /* ツールチップ */
 /*  */
 
+/* ギア表示部分のツールチップ */
 .gear-tooltip {
   width: 7rem;
   height: 1.8rem;
@@ -1237,5 +1239,36 @@ Btmボタン
 }
 
 .gear-img:hover .gear-tooltip {
+  display: block;
+}
+
+/* メインスロットのツールチップ */
+.mainslot-tooltip {
+  width: 8.8rem;
+  height: 1.8rem;
+  display: none;
+  position: absolute;
+  top: -90%;
+  left: -100%;
+  z-index: 2;
+  padding: 0.3em 0.5em;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0.3em;
+  font-size: 0.9rem;
+}
+
+.mainslot-tooltip:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 4.3em;
+  top: 2em;
+  border-top: 0.4rem solid rgba(0, 0, 0, 0.8);
+  border-right: 0.3rem solid transparent;
+  border-left: 0.3rem solid transparent;
+}
+
+.ability-icon:hover .mainslot-tooltip {
   display: block;
 }
