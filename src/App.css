@@ -121,13 +121,17 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+/* ギア表示のヘッダー部分 */
 
 .gear-header {
   width: 200px;
-  height: 34px;
+  height: 2.55rem;
   background-color: rgba(0, 0, 0, 0.7);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  color: white;
+  font-size: 1.75rem;
+  margin: 0px;
 }
 /* ギア画像の大きさ */
 .gear-img {

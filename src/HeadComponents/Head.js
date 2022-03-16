@@ -7,11 +7,7 @@ import SubSlot2 from '../SlotComponents/SubSlot2';
 const Head = (props) => {
   return(
     <div className="container px-0 gear-card" id="headgear-card">
-      <div className="gear-header">
-        <div className="font-type1 text-white">
-          <span className="h3 my-0">アタマ</span>
-        </div>
-      </div>
+      <p className="gear-header font-type1">アタマ</p>
       <HeadGear 
         passImagePath={props.passHeadGearImagePath}
       />
