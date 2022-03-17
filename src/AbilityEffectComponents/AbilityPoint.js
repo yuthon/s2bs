@@ -37,7 +37,8 @@ const AbilityPoint = (props) => {
   const mainAbilityName = [
     props.mainAbilityName0, props.mainAbilityName1, props.mainAbilityName2,
     ];
-  
+  console.log("hello")
+  console.log(subAbilityName)
   //メイン効率
   
   let inkSaverMainAP = 0;

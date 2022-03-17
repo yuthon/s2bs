@@ -8,25 +8,24 @@ const Head = (props) => {
   return(
     <div className="container px-0 gear-card" id="headgear-card">
       <p className="gear-header font-type1">アタマ</p>
-      <HeadGear 
+      <HeadGear
         passImagePath={props.passHeadGearImagePath}
       />
       <MainSlot0
         imagePath={props.passMainAbilityImagePath}
       />
       <SubSlot0
-        controlModal={props.passControlSubSlotModal0}
         imagePath={props.passSubAbilityImagePath0}
+        setSubSlotNumber={props.setSubSlotNumber}
       />
       <SubSlot1
-        //SubSlot1のimg要素がクリックされたときにtrueを受け取る
-        controlModal={props.passControlSubSlotModal1}
         //アビリティの画像のpathを受け取る
         imagePath={props.passSubAbilityImagePath1}
+        setSubSlotNumber={props.setSubSlotNumber}
       />
       <SubSlot2
-        controlModal={props.passControlSubSlotModal2}
         imagePath={props.passSubAbilityImagePath2}
+        setSubSlotNumber={props.setSubSlotNumber}
       />
     </div>
   );

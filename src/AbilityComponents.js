@@ -9,15 +9,7 @@ import MainSlotModal0 from './SlotComponents/MainSlotModal0';
 import MainSlotModal1 from './SlotComponents/MainSlotModal1';
 import MainSlotModal2 from './SlotComponents/MainSlotModal2';
 //SubSlotのアビリティ選択のモーダル
-import SubSlotModal0 from './SlotComponents/SubSlotModal0';
-import SubSlotModal1 from './SlotComponents/SubSlotModal1';
-import SubSlotModal2 from './SlotComponents/SubSlotModal2';
-import SubSlotModal3 from './SlotComponents/SubSlotModal3';
-import SubSlotModal4 from './SlotComponents/SubSlotModal4';
-import SubSlotModal5 from './SlotComponents/SubSlotModal5';
-import SubSlotModal6 from './SlotComponents/SubSlotModal6';
-import SubSlotModal7 from './SlotComponents/SubSlotModal7';
-import SubSlotModal8 from './SlotComponents/SubSlotModal8';
+import SubSlotModal from './SlotComponents/SubSlotModal';
 // アタマ
 import Head from './HeadComponents/Head';
 // フク
@@ -61,9 +53,32 @@ const AbilityComponents = (props) => {
   const [subAbilityName6, passSubAbilityName6] = useState(null);
   const [subAbilityName7, passSubAbilityName7] = useState(null);
   const [subAbilityName8, passSubAbilityName8] = useState(null);
+  // どのサブスロットからモーダルを開いたか管理
+  const [subSlotNumber, setSubSlotNumber] = useState(null);
   
   return (
     <><div className="col-2 order-1 px-0" id="gear-components">
+      <SubSlotModal
+        slotNumber={subSlotNumber}
+        passAbilityName0={passSubAbilityName0}
+        passImagePath0={passSubAbilityImagePath0}
+        passAbilityName1={passSubAbilityName1}
+        passImagePath1={passSubAbilityImagePath1}
+        passAbilityName2={passSubAbilityName2}
+        passImagePath2={passSubAbilityImagePath2}
+        passAbilityName3={passSubAbilityName3}
+        passImagePath3={passSubAbilityImagePath3}
+        passAbilityName4={passSubAbilityName4}
+        passImagePath4={passSubAbilityImagePath4}
+        passAbilityName5={passSubAbilityName5}
+        passImagePath5={passSubAbilityImagePath5}
+        passAbilityName6={passSubAbilityName6}
+        passImagePath6={passSubAbilityImagePath6}
+        passAbilityName7={passSubAbilityName7}
+        passImagePath7={passSubAbilityImagePath7}
+        passAbilityName8={passSubAbilityName8}
+        passImagePath8={passSubAbilityImagePath8}
+      />
       <div>
         <Head
           //ギアモーダルからStateを経由して受け取った画像のパスをpropsで渡す
@@ -75,22 +90,11 @@ const AbilityComponents = (props) => {
           passSubAbilityImagePath2={subAbilityImagePath2}
           //メインスロットも同様
           passMainAbilityImagePath={mainAbilityImagePath0}
+          setSubSlotNumber={setSubSlotNumber}
         />
         <MainSlotModal0
           passImagePath={passMainAbilityImagePath0}
           passAbilityName={passMainAbilityName0}
-        />
-        <SubSlotModal0
-          passAbilityName={passSubAbilityName0}
-          passImagePath={passSubAbilityImagePath0}
-        />
-        <SubSlotModal1
-          passAbilityName={passSubAbilityName1}
-          passImagePath={passSubAbilityImagePath1}
-        />
-        <SubSlotModal2
-          passAbilityName={passSubAbilityName2}
-          passImagePath={passSubAbilityImagePath2}
         />
       </div>
       <div>
@@ -99,20 +103,14 @@ const AbilityComponents = (props) => {
           passSubAbilityImagePath3={subAbilityImagePath3}
           passSubAbilityImagePath4={subAbilityImagePath4}
           passSubAbilityImagePath5={subAbilityImagePath5}
-          passMainAbilityImagePath={mainAbilityImagePath1} />
+          passMainAbilityImagePath={mainAbilityImagePath1}
+          setSubSlotNumber={setSubSlotNumber}  
+        />
         
         <MainSlotModal1
           passImagePath={passMainAbilityImagePath1}
-          passAbilityName={passMainAbilityName1} />
-        <SubSlotModal3
-          passAbilityName={passSubAbilityName3}
-          passImagePath={passSubAbilityImagePath3} />
-        <SubSlotModal4
-          passAbilityName={passSubAbilityName4}
-          passImagePath={passSubAbilityImagePath4} />
-        <SubSlotModal5
-          passAbilityName={passSubAbilityName5}
-          passImagePath={passSubAbilityImagePath5} />
+          passAbilityName={passMainAbilityName1}
+        />
       </div>
       <div>
         <Shoes
@@ -121,19 +119,12 @@ const AbilityComponents = (props) => {
           passSubAbilityImagePath7={subAbilityImagePath7}
           passSubAbilityImagePath8={subAbilityImagePath8}
           passMainAbilityImagePath={mainAbilityImagePath2}
+          setSubSlotNumber={setSubSlotNumber}
         />
         <MainSlotModal2
           passImagePath={passMainAbilityImagePath2}
-          passAbilityName={passMainAbilityName2} />
-        <SubSlotModal6
-          passAbilityName={passSubAbilityName6}
-          passImagePath={passSubAbilityImagePath6} />
-        <SubSlotModal7
-          passAbilityName={passSubAbilityName7}
-          passImagePath={passSubAbilityImagePath7} />
-        <SubSlotModal8
-          passAbilityName={passSubAbilityName8}
-          passImagePath={passSubAbilityImagePath8} />
+          passAbilityName={passMainAbilityName2}
+        />
       </div>
     </div>
     <div className="font-type2 col-5 order-3" id="ae-section">
@@ -145,18 +136,18 @@ const AbilityComponents = (props) => {
         />
       <AbilityPoint
         weaponStatus={weaponStatus}
-        passMainAbilityName0={mainAbilityName0}
-        passMainAbilityName1={mainAbilityName1}
-        passMainAbilityName2={mainAbilityName2}
-        passSubAbilityName0={subAbilityName0}
-        passSubAbilityName1={subAbilityName1}
-        passSubAbilityName2={subAbilityName2}
-        passSubAbilityName3={subAbilityName3}
-        passSubAbilityName4={subAbilityName4}
-        passSubAbilityName5={subAbilityName5}
-        passSubAbilityName6={subAbilityName6}
-        passSubAbilityName7={subAbilityName7}
-        passSubAbilityName8={subAbilityName8} 
+        mainAbilityName0={mainAbilityName0}
+        mainAbilityName1={mainAbilityName1}
+        mainAbilityName2={mainAbilityName2}
+        subAbilityName0={subAbilityName0}
+        subAbilityName1={subAbilityName1}
+        subAbilityName2={subAbilityName2}
+        subAbilityName3={subAbilityName3}
+        subAbilityName4={subAbilityName4}
+        subAbilityName5={subAbilityName5}
+        subAbilityName6={subAbilityName6}
+        subAbilityName7={subAbilityName7}
+        subAbilityName8={subAbilityName8} 
       />
     </div></>
   );

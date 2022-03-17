@@ -5,7 +5,8 @@ const SubSlot6 = (props) => {
     <div
       className="ability-icon sub-slot subslot-left"
       data-bs-toggle="modal"
-      data-bs-target="#subSlotModal6"
+      data-bs-target="#subSlotModal"
+      onClick={()=>{props.setSubSlotNumber(6)}}
     >
       <div className="tooltip-top-arrow">
         <p className="slot-tooltip font-type2">クリックでギアパワーを変更</p>

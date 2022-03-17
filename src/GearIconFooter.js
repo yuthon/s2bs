@@ -14,7 +14,7 @@ const GearIconFooter = (props) => {
           fill="#dfff00"
         />
         </svg>
-      <img className="img-gear-icon-ability" src={props.favoredAbility} alt=""/>
+      {/* <img className="img-gear-icon-ability" src={props.favoredAbility} alt=""/> */}
     </div>
     <div
       className="brand-ability"
@@ -27,7 +27,7 @@ const GearIconFooter = (props) => {
           fill="#ff0000"
         />
         </svg>
-      <img className="img-gear-icon-ability" src={props.unfavoredAbility} alt=""/>
+      {/* <img className="img-gear-icon-ability" src={props.unfavoredAbility} alt=""/> */}
     </div>
     </>
   )

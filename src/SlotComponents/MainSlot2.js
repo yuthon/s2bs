@@ -4,7 +4,7 @@ const MainSlot2 = (props) => {
     <div
       className="ability-icon main-slot"
       data-bs-toggle="modal"
-      data-bs-target="#mainSlotModal0"
+      data-bs-target="#mainSlotModal2"
     >
       <div className="tooltip-top-arrow">
         <p className="slot-tooltip font-type2">クリックでギアパワーを変更</p>

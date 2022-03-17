@@ -14,17 +14,62 @@ import inkRes from '../images/ability/RES.png';
 import bombDefence from '../images/ability/BDU.png';
 import mpu from '../images/ability/MPU.png';
 
-const SubSlotModal2 = (props) => {
+const SubSlotModal = (props) => {
+  
+  const passAbilityName = (ability) => {
+    if (props.slotNumber === 0) {
+      return props.passAbilityName0(ability)
+    } else if (props.slotNumber === 1) {
+      return props.passAbilityName1(ability)
+    } else if (props.slotNumber === 2) {
+      return props.passAbilityName2(ability)
+    } else if (props.slotNumber === 3) {
+      return props.passAbilityName3(ability)
+    } else if (props.slotNumber === 4) {
+      return props.passAbilityName4(ability)
+    } else if (props.slotNumber === 5) {
+      return props.passAbilityName5(ability)
+    } else if (props.slotNumber === 6) {
+      return props.passAbilityName6(ability)
+    } else if (props.slotNumber === 7) {
+      return props.passAbilityName7(ability)
+    } else if (props.slotNumber === 8) {
+      return props.passAbilityName8(ability)
+    }
+  }
+
+  const passImagePath = (path) => {
+    if (props.slotNumber === 0) {
+      return props.passImagePath0(path)
+    } else if (props.slotNumber === 1) {
+      return props.passImagePath1(path)
+    } else if (props.slotNumber === 2) {
+      return props.passImagePath2(path)
+    } else if (props.slotNumber === 3) {
+      return props.passImagePath3(path)
+    } else if (props.slotNumber === 4) {
+      return props.passImagePath4(path)
+    } else if (props.slotNumber === 5) {
+      return props.passImagePath5(path)
+    } else if (props.slotNumber === 6) {
+      return props.passImagePath6(path)
+    } else if (props.slotNumber === 7) {
+      return props.passImagePath7(path)
+    } else if (props.slotNumber === 8) {
+      return props.passImagePath8(path)
+    }
+  }
+
   return (
-    <div className="modal fade" id="subSlotModal2" tabIndex="-1" aria-labelledby="SubSlotModal2Label" aria-hidden="true">
+    <div className="modal fade" id="subSlotModal" tabIndex="-1" aria-labelledby="SubSlotModalLabel" aria-hidden="true">
       <div className="modal-dialog">
         <div className="modal-content container">
           <div className="ability-list">
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passAbilityName("inkSaverMain");
-                props.passImagePath(inkSaverMain);
+                passAbilityName("inkSaverMain");
+                passImagePath(inkSaverMain);
                 }
               }
             >
@@ -33,8 +78,8 @@ const SubSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passAbilityName("inkSaverSub");
-                props.passImagePath(inkSaverSub);
+                passAbilityName("inkSaverSub");
+                passImagePath(inkSaverSub);
                 }
               }
             >
@@ -43,8 +88,8 @@ const SubSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passAbilityName("inkRecovery");
-                props.passImagePath(inkRecovery);
+                passAbilityName("inkRecovery");
+                passImagePath(inkRecovery);
                 }
               }
             >
@@ -53,8 +98,8 @@ const SubSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passAbilityName("runSpeed");
-                props.passImagePath(runSpeed);
+                passAbilityName("runSpeed");
+                passImagePath(runSpeed);
                 }
               }
             >
@@ -63,8 +108,8 @@ const SubSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passAbilityName("swimSpeed");
-                props.passImagePath(swimSpeed);
+                passAbilityName("swimSpeed");
+                passImagePath(swimSpeed);
                 }
               }
             >
@@ -73,8 +118,8 @@ const SubSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passAbilityName("specialCharge");
-                props.passImagePath(specialCharge);
+                passAbilityName("specialCharge");
+                passImagePath(specialCharge);
                 }
               }
             >
@@ -83,8 +128,8 @@ const SubSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passAbilityName("specialSaver");
-                props.passImagePath(specialSaver);
+                passAbilityName("specialSaver");
+                passImagePath(specialSaver);
                 }
               }
             >
@@ -93,8 +138,8 @@ const SubSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passAbilityName("specialPower");
-                props.passImagePath(specialPower);
+                passAbilityName("specialPower");
+                passImagePath(specialPower);
                 }
               }
             >
@@ -103,8 +148,8 @@ const SubSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passAbilityName("qr");
-                props.passImagePath(qr);
+                passAbilityName("qr");
+                passImagePath(qr);
                 }
               }
             >
@@ -113,8 +158,8 @@ const SubSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passAbilityName("quickSuperJump");
-                props.passImagePath(quickSuperJump);
+                passAbilityName("quickSuperJump");
+                passImagePath(quickSuperJump);
                 }
               }
             >
@@ -123,8 +168,8 @@ const SubSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passAbilityName("subPower");
-                props.passImagePath(subPower);
+                passAbilityName("subPower");
+                passImagePath(subPower);
                 }
               }
             >
@@ -133,8 +178,8 @@ const SubSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passAbilityName("inkRes");
-                props.passImagePath(inkRes);
+                passAbilityName("inkRes");
+                passImagePath(inkRes);
                 }
               }
             >
@@ -143,8 +188,8 @@ const SubSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passAbilityName("bombDefence");
-                props.passImagePath(bombDefence);
+                passAbilityName("bombDefence");
+                passImagePath(bombDefence);
                 }
               }
             >
@@ -153,8 +198,8 @@ const SubSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passAbilityName("mpu");
-                props.passImagePath(mpu);
+                passAbilityName("mpu");
+                passImagePath(mpu);
                 }
               }
             >
@@ -163,8 +208,8 @@ const SubSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passAbilityName("empty");
-                props.passImagePath(empty);
+                passAbilityName("empty");
+                passImagePath(empty);
                 }
               }
             >
@@ -182,4 +227,4 @@ const SubSlotModal2 = (props) => {
   );
 };
 
-export default SubSlotModal2;
+export default SubSlotModal;

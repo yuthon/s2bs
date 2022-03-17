@@ -18,14 +18,17 @@ const Shoes = (props) => {
       <SubSlot6
         controlModal={props.passControlSubSlotModal6}
         imagePath={props.passSubAbilityImagePath6}
+        setSubSlotNumber={props.setSubSlotNumber}
       />
       <SubSlot7
         controlModal={props.passControlSubSlotModal7}
         imagePath={props.passSubAbilityImagePath7}
+        setSubSlotNumber={props.setSubSlotNumber}
       />
       <SubSlot8
         controlModal={props.passControlSubSlotModal8}
         imagePath={props.passSubAbilityImagePath8}
+        setSubSlotNumber={props.setSubSlotNumber}
       />
     </div>
   );
