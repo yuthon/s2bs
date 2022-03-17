@@ -556,16 +556,6 @@ const ClothesGearModal = (props) => {
     }
   };
 
-  // 再レンダーのときにツールチップが残ってしまった場合それを非表示
-  // useEffect(() => {
-  //   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[role="tooltip"]'));
-  //   if (tooltipTriggerList.length) {
-  //     for (let i = 0; i < tooltipTriggerList.length; i++) {
-  //       tooltipTriggerList[i].style.display = "none"
-  //     }
-  //   }
-  // });
-
   return (
     <div className="modal fade" id="clothesGearModal" tabIndex="-1" aria-labelledby="clothesGearModalLabel" aria-hidden="true">  
       <div className="modal-dialog modal-lg">
