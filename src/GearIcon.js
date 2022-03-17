@@ -36,94 +36,15 @@ import empty from './images/ability/empty.png';
 
 const GearIcon = (props) => {
   
-  // ブランド名に応じてブランドロゴ、つきにくいギアパワー、つきにくいギアパワーの画像のpathをそれぞれ返す
-  let brand = props.gear.brand;
-  let brandImagePath;
-  let favoredAbility;
-  let unfavoredAbility;
-
-  if (brand === "バトロイカ") {
-    brandImagePath = Batoroika;
-    favoredAbility = inkRes;
-    unfavoredAbility = inkSaverMain;
-  } else if (brand === "アイロニック") {
-    brandImagePath =  Aironic;
-    favoredAbility = quickSuperJump;
-    unfavoredAbility = qr;
-  } else if (brand === "クラーゲス") {
-    brandImagePath =  Kuragesu;
-    favoredAbility = swimSpeed;
-    unfavoredAbility = bombDefence;
-  } else if (brand === "ロッケンベルグ") {
-    brandImagePath =  Rockenberg;
-    favoredAbility = runSpeed;
-    unfavoredAbility = swimSpeed;
-  } else if (brand === "エゾッコ") {
-    brandImagePath =  Ezokko;
-    favoredAbility = specialSaver;
-    unfavoredAbility = specialCharge;
-  } else if (brand === "フォーリマ") {
-    brandImagePath =  Forima;
-    favoredAbility = specialPower;
-    unfavoredAbility = inkSaverSub;
-  } else if (brand === "ホッコリー") {
-    brandImagePath =  Hokkori;
-    favoredAbility = inkSaverSub;
-    unfavoredAbility = inkRecovery;
-  } else if (brand === "ホタックス") {
-    brandImagePath =  Hotakkusu;
-    favoredAbility = qr;
-    unfavoredAbility = specialSaver;
-  } else if (brand === "ジモン") {
-    brandImagePath =  Zimon;
-    favoredAbility = inkSaverMain;
-    unfavoredAbility = runSpeed;
-  } else if (brand === "シグレ二") {
-    brandImagePath =  Sigureni;
-    favoredAbility = bombDefence;
-    unfavoredAbility = mpu;
-  } else if (brand === "アロメ") {
-    brandImagePath =  Arome;
-    favoredAbility = inkRecovery;
-    unfavoredAbility = quickSuperJump;
-  } else if (brand === "ヤコ") {
-    brandImagePath =  Yako;
-    favoredAbility = specialCharge;
-    unfavoredAbility = specialPower;
-  } else if (brand === "アナアキ") {
-    brandImagePath =  Anaaki;
-    favoredAbility = mpu;
-    unfavoredAbility = specialSaver;
-  } else if (brand === "エンペリー") {
-    brandImagePath =  Enperry;
-    favoredAbility = subPower;
-    unfavoredAbility = inkRes;
-  } else if (brand === "タタキケンサキ") {
-    brandImagePath =  Tatakikensaki;
-    favoredAbility = mpu;
-    unfavoredAbility = subPower;
-  } else if (brand === "クマサン商会") {
-    brandImagePath =  Kumasan;
-    favoredAbility = empty;
-    unfavoredAbility = empty;
-  } else if (brand === "アタリメイド") {
-    brandImagePath =  Atarimeido;
-    favoredAbility = empty;
-    unfavoredAbility = empty;
-  }
-  
-  // どの部分かに応じてフッターに違うクラス名を与える
-  const className = `${props.part}gear-icon-footer`
-  
   return (
     <div
       className="gear-icon"
       onClick={()=>{
         props.passChosenGear(props.gear.id);
         props.passImagePath(props.gear.path);
+        props.setGear(props.gear);
         }
       }
-      data-bs-dismiss="modal"
     > 
       <div className="gear-icon-tooltip-arrow">
         <div className="tooltip-container">
@@ -131,13 +52,6 @@ const GearIcon = (props) => {
         </div>
       </div>
       <img className="gear-icon-img" src={props.gear.path} alt=""/>
-      <img className="brand-img" src={brandImagePath} alt=""/>
-      <div className={className}>
-        <GearIconFooter
-          favoredAbility={favoredAbility}
-          unfavoredAbility={unfavoredAbility}
-        />
-      </div>
     </div>
   )
 }

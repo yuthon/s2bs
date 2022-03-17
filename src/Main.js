@@ -61,24 +61,18 @@ const Main = () => {
   
   return(
     <div className="container">
-      <Suspense fallback={null}>
-        <HeadGearModal
-          passChosenGear={setHeadGear}
-          passImagePath={setHeadImagePath}
-        />
-      </Suspense>
-      <Suspense fallback={null}>
+      <HeadGearModal
+        passChosenGear={setHeadGear}
+        passImagePath={setHeadImagePath}
+      />
       <ClothesGearModal
         passChosenGear={setClothesGear}
         passImagePath={setClothesImagePath}
       />
-      </Suspense>
-      <Suspense fallback={null}>
       <ShoesGearModal
         passChosenGear={setShoesGear}
         passImagePath={setShoesImagePath}
       />
-      </Suspense>
       <CharacterTypeModal
         passCharacterType={passCharacterType}
         characterType={characterType}

@@ -128,12 +128,12 @@ const AbilityComponents = (props) => {
       </div>
     </div>
     <div className="font-type2 col-5 order-3" id="ae-section">
-        <WeaponModal
-          weaponStatus={passWeaponStatus} 
-        />
-        <Weapon
-          weaponStatus={weaponStatus} 
-        />
+      <WeaponModal
+        weaponStatus={passWeaponStatus} 
+      />
+      <Weapon
+        weaponStatus={weaponStatus} 
+      />
       <AbilityPoint
         weaponStatus={weaponStatus}
         mainAbilityName0={mainAbilityName0}

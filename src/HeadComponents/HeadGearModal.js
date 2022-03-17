@@ -178,124 +178,160 @@ import DustBlocker_25 from '../images/gear/Hed_COP101.png';
 import HeadLightHelm from '../images/gear/Hed_COP100.png';
 import MarilynHatWithPins from '../images/gear/Hed_COP109.png';
 import LegendNoBoushi from '../images/gear/Hed_COP105.png';
-
-
+// ブランドの画像
+import Batoroika from '../images/brands/B00.png';
+import Aironic from '../images/brands/B01.png';
+import Kuragesu from '../images/brands/B02.png';
+import Rockenberg from '../images/brands/B03.png';
+import Ezokko from '../images/brands/B04.png';
+import Forima from '../images/brands/B05.png';
+import Hokkori from '../images/brands/B06.png';
+import Hotakkusu from '../images/brands/B07.png';
+import Zimon from '../images/brands/B08.png';
+import Sigureni from '../images/brands/B09.png';
+import Arome from '../images/brands/B10.png';
+import Yako from '../images/brands/B11.png';
+import Anaaki from '../images/brands/B15.png';
+import Enperry from '../images/brands/B16.png';
+import Tatakikensaki from '../images/brands/B17.png';
+import Kumasan from '../images/brands/B97.png';
+import Atarimeido from '../images/brands/B98.png';
+// ギアパワーの画像
+import inkSaverMain from '../images/ability/ISMain.png';
+import inkSaverSub from '../images/ability/ISSub.png';
+import inkRecovery from '../images/ability/REC.png';
+import runSpeed from '../images/ability/RSU.png';
+import swimSpeed from '../images/ability/SSU.png';
+import specialCharge from '../images/ability/SCU.png';
+import specialSaver from '../images/ability/SS.png';
+import specialPower from '../images/ability/SpecialPU.png';
+import qr from '../images/ability/QR.png';
+import quickSuperJump from '../images/ability/QSJ.png';
+import subPower from '../images/ability/SubPU.png';
+import inkRes from '../images/ability/RES.png';
+import bombDefence from '../images/ability/BDU.png';
+import mpu from '../images/ability/MPU.png';
+import empty from '../images/ability/empty.png';
+import lastDitchEffort from '../images/ability/LDE.png';
+import openingGanbit from '../images/ability/OG.png';
+import comeback from '../images/ability/CB.png';
+import tenacity from '../images/ability/Tenacity.png';
 
 // デフォルトはブランド順
 let gears = [
-  {name:"キャディ サンバイザー", path:Cady_Sunvisor, id:"V0_Cady_Sunvisor", brand:"アイロニック"},
-  {name:"スカッシュバンド", path:SquashBand, id:"HB_SquashBand", brand:"アイロニック"},
-  {name:"テッカサイクルキャップ", path:TekkaCycleCap, id:"C1_TekkaCycleCap", brand:"アイロニック"},
-  {name:"バスケバンド", path:BasukeBand, id:"HB_BasukeBand", brand:"アイロニック"},
-  {name:"アナアキマスク", path:AnaakiMask, id:"BS_AnaakiMask", brand:"アナアキ"},
-  {name:"アナアキピンベレー", path:AnaakiAnPinBeret, id:"H1_AnaakiAnPinBeret", brand:"アナアキ"},
-  {name:"アナアキバスクベレー", path:AnaakiBuskBeret, id:"H1_AnaakiBuskBeret", brand:"アナアキ"},
-  {name:"テニスバンド", path:TennisBand, id:"HB_TennisBand", brand:"アロメ"},
-  {name:"サッカーバンド", path:SoccerBand, id:"BS_SoccerBand", brand:"アロメ"},
-  {name:"サンサンサンバイザー", path:SanSanSunvisor, id:"V1_SanSanSunvisor", brand:"アロメ"},
-  {name:"ダテコンタクト", path:DateContact, id:"DateContact", brand:"アロメ"},
-  {name:"チャリキング帽", path:ChariKingBou, id:"C1_ChariKingBou", brand:"アロメ"},
-  {name:"イロメガネ", path:IroMegane, id:"BS_IroMegane", brand:"エゾッコ"},
-  {name:"エゾッコメッシュ", path:EzokkoMesh, id:"C0_EzokkoMesh", brand:"エゾッコ"},
-  {name:"バックワードキャップ", path:BackwardCap, id:"C1_BackwardCap", brand:"エゾッコ"},
-  {name:"ランニングバンド", path:RunningBand, id:"HB_RunningBand", brand:"エゾッコ"},
-  {name:"5パネルキャップ", path:FIVEPanelCap, id:"C0_5PanelCap", brand:"エゾッコ"},
-  {name:"アローバンド ブラック", path:ArrowBand_Black, id:"BS_ArrowBand_Black", brand:"エゾッコ"},
-  // {name:"エゾッコフリッパー", path:EzokkoFlipper, id:"M0_EzokkoFlipper", brand:"エゾッコ"},
-  {name:"ダブルエッグサングラス", path:DoubleEggSunglass, id:"BS_DoubleEggSunglass", brand:"エゾッコ"},
-  {name:"アローバンド ホワイト", path:ArrowBand_White, id:"BS_ArrowBand_White", brand:"エゾッコ"},
-  {name:"ツヤケシMTBメット", path:TsuyaKeshiMTBMet, id:"M0_TsuyaKeshiMTBMet", brand:"エゾッコ"},
-  {name:"ロゴヅクシMTBメット", path:LogoZukushiMTBMet, id:"M0_LogoZukushiMTBMet", brand:"エゾッコ"},
-  {name:"キングオブマスク", path:KingOfMask, id:"BS_KingOfMask", brand:"エンペリー"},
-  {name:"キングタコスターマスク", path:KingTakoStarMask, id:"BS_KingTakoStarMask", brand:"エンペリー"},
-  {name:"キングフリップメッシュ", path:KingFlipMesh, id:"C0_KingFlipMesh", brand:"エンペリー"},
-  // {name:"カイザーカフ", path:KaiserCuff, id:"C0_KingFlipMesh", brand:"エンペリー"},
-  {name:"2ラインメッシュ", path:TWOLineMesh, id:"C0_2LineMesh", brand:"クラーゲス"},
-  {name:"エイズリーバンダナ", path:Eizuri$Bandana, id:"BN_Eizuri-Bandana", brand:"クラーゲス"},
-  {name:"マルベッコー", path:MaruBekko$, id:"BS_MaruBekko-", brand:"クラーゲス"},
-  {name:"ウールウーニーズクラシック", path:WoolU$ni$zuClassic, id:"C1_WoolU-ni-zuClassic", brand:"クラーゲス"},
-  {name:"ヒッコリーワークキャップ", path:Hikkori$WorkCap, id:"C0_Hikkori-WorkCap", brand:"クラーゲス"},
-  {name:"ロングビルキャップ", path:LongBillCap, id:"C0_LongBillCap", brand:"クラーゲス"},
-  {name:"キャンプキャップ", path:CampCap, id:"C0_CampCap", brand:"シグレ二"},
-  {name:"キャンプハット", path:CampHat, id:"H0_CampHat", brand:"シグレ二"},
-  {name:"ショートビーニー", path:ShortBeanie, id:"M0_ShortBeanie", brand:"シグレ二"},
-  {name:"ヤマギリビーニー", path:YamagiriBeanie, id:"KN_YamagiriBeanie", brand:"シグレ二"},
-  {name:"カイガラスゲ", path:KaigaraSuge, id:"H1_KaigaraSuge", brand:"シグレ二"},
-  {name:"スゲ", path:Suge, id:"H0_Suge", brand:"シグレ二"},
-  {name:"クロブチ レトロ", path:Kurobuchi_Retro, id:"BS_Kurobuchi_Retro", brand:"ジモン"},
-  {name:"ボーダービーニー", path:BorderBeanie, id:"M0_BorderBeanie", brand:"ジモン"},
-  {name:"セルブロウ", path:SeruBurou, id:"BS_SeruBurou", brand:"ジモン"},
-  {name:"ハウスタグデニムCAP", path:HouseTagDenimCAP, id:"C0_HouseTagDenimCAP", brand:"ジモン"},
-  {name:"ボンボンニット", path:BonBonKnit, id:"KN_BonBonKnit", brand:"ジモン"},
-  {name:"センニュークロブチ", path:Sennyu$Kurobuchi, id:"BS_Sennyu-Kurobuchi", brand:"ジモン"},
-  {name:"センニューボンボン", path:Sennyu$BonBon, id:"KN_Sennyu-BonBon", brand:"ジモン"},
-  {name:"フライトぼう", path:FlightBou, id:"KN_FlightBou", brand:"ジモン"},
-  {name:"スミガードゴーグル", path:SumiGuardGoggle, id:"BS_SumiGuardGoggle", brand:"タタキケンサキ"},
-  // {name:"フェイスバイザー", path:FaceVisor, id:"FaceVisor", brand:"タタキケンサキ"},
-  {name:"イカバケット", path:IkaBucket, id:"M0_IkaBucket", brand:"バトロイカ"},
-  {name:"イカバッテンガード", path:IkaBattenGuard, id:"BS_IkaBattenGuard", brand:"バトロイカ"},
-  {name:"ヘッドバンド ホワイト", path:HeadBand_White, id:"HB_Headband_White", brand:"バトロイカ"},
-  {name:"ペインターマスク", path:PainterMask, id:"BS_PainterMask", brand:"バトロイカ"},
-  {name:"アンコウラバーマスク", path:AnkouRubberMask, id:"M1_AnkouRubberMask", brand:"バトロイカ"},
-  {name:"キョンキョンぼう", path:KyonKyonBou, id:"H2_KyonKyonBou", brand:"バトロイカ"},
-  {name:"こうしえんバンダナ", path:KoushienBandana, id:"BN_KoushienBandana", brand:"バトロイカ"},
-  {name:"コズミックアンテナ", path:CozmicAntenna, id:"BS_CozmicAntenna", brand:"バトロイカ"},
-  {name:"ニューイヤーグラスDX", path:NewYearGlassDX, id:"BS_NewYearGlassDX", brand:"バトロイカ"},
-  {name:"バーニングブロイラー", path:BurningBroiler, id:"M1_BurningBroiler", brand:"バトロイカ"},
-  {name:"ハッピーチンアナゴハット", path:HappyChinAnagoHat, id:"H1_HappyChinanagoHat", brand:"バトロイカ"},
-  {name:"フォーリマスク", path:Fo$riMask, id:"BS_Fo-riMask", brand:"フォーリマ"},
-  {name:"エンペラフックHDP", path:EnperaHookHDP, id:"BS_EnperaHookHDP", brand:"フォーリマ"},
-  {name:"オーロラヘッドホン", path:AuroraHeadphone, id:"HP_AuroraHeadphone", brand:"フォーリマ"},
-  {name:"スタジオヘッドホン", path:StudioHeadphone, id:"HP_StudioHeadphone", brand:"フォーリマ"},
-  {name:"スプラッシュゴーグル", path:SplashGoggle, id:"BS_SplashGoggle", brand:"フォーリマ"},
-  {name:"ダイバーゴーグル", path:DiverGoggle, id:"BS_DiverGoggle", brand:"フォーリマ"},
-  {name:"トレジャーメット", path:TreasureMet, id:"H2_TreasureMet", brand:"フォーリマ"},
-  {name:"パイロットゴーグル", path:PilotGoggle, id:"HB_PilotGoggle", brand:"フォーリマ"},
-  {name:"ロブスターブーニー", path:RobstarBoonie, id:"H1_RobstarBoonie", brand:"フォーリマ"},
-  {name:"イカスカルマスク", path:IkaSkullMask, id:"BN_IkaSkullMask", brand:"フォーリマ"},
-  // {name:"イカロスHKメット", path:IcarusHKMet, id:"M0_IcarusHKMet", brand:"フォーリマ"},
-  {name:"イヤーマフ", path:EarMuff, id:"HP_EarMuff", brand:"フォーリマ"},
-  {name:"オクトメットプライズデコ", path:OctoMetPrizeDeko, id:"M1_OctoMetPrizeDeco", brand:"フォーリマ"},
-  {name:"ステカセヘッドホン", path:SutekaseHeadphone, id:"HP_SutekaseHeadphone", brand:"フォーリマ"},
-  {name:"センニューゴーグル", path:Sennyu$Goggle, id:"HB_Sennyu-Goggle", brand:"フォーリマ"},
-  {name:"センニューヘッドホン", path:Sennyu$Headphone, id:"HP_Sennyu-Headphone", brand:"フォーリマ"},
-  {name:"タコマスク", path:TakoMask, id:"BS_TakoMask", brand:"フォーリマ"},
-  // {name:"デカメットアイシールド", path:DekaMetEyeshield, id:"M1_DekaMetEyeshield", brand:"フォーリマ"},
-  {name:"ナイトビジョン", path:NightVision, id:"M1_NightVision", brand:"フォーリマ"},
-  {name:"ノーズガードモトクロス", path:NoseGuardMotoCross, id:"BS_NoseGuardMotoCross", brand:"フォーリマ"},
-  {name:"フェイスゴーグル", path:FaceGoggle, id:"BS_FaceGoggle", brand:"フォーリマ"},
-  {name:"モンゴウベレー", path:MongouBeret, id:"H0_MongouBeret", brand:"フォーリマ"},
-  {name:"イカベーダーキャップ", path:IkaVaderCap, id:"C1_IkavaderCap", brand:"ホタックス"},
-  {name:"イカンカン", path:Ikankan, id:"H2_Ikankan", brand:"ホタックス"},
-  {name:"ウーニーズBBキャップ", path:U$ni$zuBBCap, id:"C0_U-ni-zuBBCap", brand:"ホタックス"},
-  {name:"ウインターボンボン", path:WinterBonBon, id:"KN_WinterBonBon", brand:"ホタックス"},
-  {name:"ビバレッジキャップ", path:BeverageCap, id:"C1_BeverageCap", brand:"ホタックス"},
-  // {name:"イカンカン クラシック", path:Ikankan_Classic, id:"Ikankan_Classic"},
-  {name:"オシノビニット", path:OshinobiKnit, id:"KN_OshinobiKnit", brand:"ホタックス"},
-  {name:"サイクルメット", path:CycleMet, id:"H1_CycleMet", brand:"ホタックス"},
-  {name:"スケボーメット", path:Sukebo$Met, id:"M1_Sukebo-Met", brand:"ホタックス"},
-  {name:"パッチハット", path:PatchHat, id:"M0_PatchHat", brand:"ホタックス"},
-  {name:"イカノルディック", path:IkaNordic, id:"KN_IkaNordic", brand:"ホタックス"},
-  {name:"クラゲーダーキャップ", path:KuragaderCap, id:"C1_KuragaderCap", brand:"ホタックス"},
-  {name:"チドリキャップ", path:ChidoriCap, id:"C1_ChidoriCap", brand:"ホタックス"},
-  {name:"ドゥーラグキャップガサネ", path:DoRagCapGasane, id:"H3_DoRagCapGasane", brand:"ホタックス"},
-  {name:"バイザーメット", path:VisorMet, id:"M1_VisorMet", brand:"ホタックス"},
-  {name:"カモメッシュ", path:KamoMesh, id:"C0_KamoMesh", brand:"ホッコリー"},
-  {name:"クロヤキフグバンダナ", path:KuroYakifuguBandana, id:"HB_KuroYakifuguBandana", brand:"ホッコリー"},
-  {name:"ジェットキャップ", path:JetCap, id:"C0_JetCap", brand:"ホッコリー"},
-  {name:"フグベルハット", path:FuguBellHat, id:"H2_FuguBellHat", brand:"ホッコリー"},
-  {name:"マスクドホッコリー", path:MaskedHokkori$, id:"BS_MaskedHokkori-", brand:"ホッコリー"},
-  {name:"ヤキフグ サンバイザー", path:Yakifugu_Sunvisor, id:"V3_Yakifugu_Sunvisor", brand:"ホッコリー"},
-  {name:"ヤキフグビスケットバンダナ", path:YakifuguBiscuitBandana, id:"HB_YakifuguBiscuitBandana", brand:"ホッコリー"},
-  {name:"リブニット", path:RibKnit, id:"KN_RibKnit", brand:"ホッコリー"},
-  {name:"フグハンチング", path:FuguHanching, id:"C1_FuguHanching", brand:"ホッコリー"},
-  {name:"フグベルベルハット", path:FuguBellBellHat, id:"H2_FuguBellBellHat", brand:"ホッコリー"},
-  {name:"オクタグラス", path:OctaGlass, id:"BS_OctaGlass", brand:"ホッコリー"},
-  {name:"サファリハット", path:SafariHat, id:"H1_SafariHat", brand:"ホッコリー"},
-  {name:"ヤコメッシュ", path:YakoMesh, id:"C0_YakoMesh", brand:"ヤコ"},
-  {name:"ヤコバイザー", path:YakoVisor, id:"V2_YakoVisor", brand:"ヤコ"},
-  {name:"タレサン18K", path:TareSan18K, id:"BS_TareSan18K", brand:"ロッケンベルグ"},
-  {name:"マルサンSV925", path:MaruSanSV925, id:"BS_MaruSanSV925", brand:"ロッケンベルグ"},
+  {name:"キャディ サンバイザー", path:Cady_Sunvisor, id:"V0_Cady_Sunvisor", brand:"アイロニック",default:runSpeed},
+  {name:"スカッシュバンド", path:SquashBand, id:"HB_SquashBand", brand:"アイロニック",default:specialSaver},
+  {name:"テッカサイクルキャップ", path:TekkaCycleCap, id:"C1_TekkaCycleCap", brand:"アイロニック",default:subPower},
+  {name:"バスケバンド", path:BasukeBand, id:"HB_BasukeBand", brand:"アイロニック",default:openingGanbit},
+  {name:"アナアキマスク", path:AnaakiMask, id:"BS_AnaakiMask", brand:"アナアキ",default:openingGanbit},
+  {name:"アナアキピンベレー", path:AnaakiAnPinBeret, id:"H1_AnaakiAnPinBeret", brand:"アナアキ",default:inkRes},
+  {name:"アナアキバスクベレー", path:AnaakiBuskBeret, id:"H1_AnaakiBuskBeret", brand:"アナアキ",default:inkSaverMain},
+  {name:"テニスバンド", path:TennisBand, id:"HB_TennisBand", brand:"アロメ",default:comeback},
+  {name:"サッカーバンド", path:SoccerBand, id:"BS_SoccerBand", brand:"アロメ",default:tenacity},
+  {name:"サンサンサンバイザー", path:SanSanSunvisor, id:"V1_SanSanSunvisor", brand:"アロメ",default:subPower},
+  {name:"ダテコンタクト", path:DateContact, id:"DateContact", brand:"アロメ",default:specialCharge},
+  {name:"チャリキング帽", path:ChariKingBou, id:"C1_ChariKingBou", brand:"アロメ",default:bombDefence},
+  {name:"イロメガネ", path:IroMegane, id:"BS_IroMegane", brand:"エゾッコ",default:lastDitchEffort},
+  {name:"エゾッコメッシュ", path:EzokkoMesh, id:"C0_EzokkoMesh", brand:"エゾッコ",default:quickSuperJump},
+  {name:"バックワードキャップ", path:BackwardCap, id:"C1_BackwardCap", brand:"エゾッコ",default:qr},
+  {name:"ランニングバンド", path:RunningBand, id:"HB_RunningBand", brand:"エゾッコ",default:inkSaverSub},
+  {name:"5パネルキャップ", path:FIVEPanelCap, id:"C0_5PanelCap", brand:"エゾッコ",default:comeback},
+  {name:"アローバンド ブラック", path:ArrowBand_Black, id:"BS_ArrowBand_Black", brand:"エゾッコ",default:tenacity},
+  // {name:"エゾッコフリッパー", path:EzokkoFlipper, id:"M0_EzokkoFlipper", brand:"エゾッコ",default:openingGanbit},
+  {name:"ダブルエッグサングラス", path:DoubleEggSunglass, id:"BS_DoubleEggSunglass", brand:"エゾッコ",default:runSpeed},
+  {name:"アローバンド ホワイト", path:ArrowBand_White, id:"BS_ArrowBand_White", brand:"エゾッコ",default:specialPower},
+  {name:"ツヤケシMTBメット", path:TsuyaKeshiMTBMet, id:"M0_TsuyaKeshiMTBMet", brand:"エゾッコ",default:subPower},
+  {name:"ロゴヅクシMTBメット", path:LogoZukushiMTBMet, id:"M0_LogoZukushiMTBMet", brand:"エゾッコ",default:tenacity},
+  {name:"キングオブマスク", path:KingOfMask, id:"BS_KingOfMask", brand:"エンペリー",default:inkSaverSub},
+  {name:"キングタコスターマスク", path:KingTakoStarMask, id:"BS_KingTakoStarMask", brand:"エンペリー",default:tenacity},
+  {name:"キングフリップメッシュ", path:KingFlipMesh, id:"C0_KingFlipMesh", brand:"エンペリー",default:runSpeed},
+  // {name:"カイザーカフ", path:KaiserCuff, id:"C0_KingFlipMesh", brand:"エンペリー",default:inkSaverMain},
+  {name:"2ラインメッシュ", path:TWOLineMesh, id:"C0_2LineMesh", brand:"クラーゲス",default:specialSaver},
+  {name:"エイズリーバンダナ", path:Eizuri$Bandana, id:"BN_Eizuri-Bandana", brand:"クラーゲス",default:inkSaverSub},
+  {name:"マルベッコー", path:MaruBekko$, id:"BS_MaruBekko-", brand:"クラーゲス",default:quickSuperJump},
+  {name:"ウールウーニーズクラシック", path:WoolU$ni$zuClassic, id:"C1_WoolU-ni-zuClassic", brand:"クラーゲス",default:comeback},
+  {name:"ヒッコリーワークキャップ", path:Hikkori$WorkCap, id:"C0_Hikkori-WorkCap", brand:"クラーゲス",default:specialPower},
+  {name:"ロングビルキャップ", path:LongBillCap, id:"C0_LongBillCap", brand:"クラーゲス",default:inkRecovery},
+  {name:"キャンプキャップ", path:CampCap, id:"C0_CampCap", brand:"シグレ二",default:swimSpeed},
+  {name:"キャンプハット", path:CampHat, id:"H0_CampHat", brand:"シグレ二",default:specialPower},
+  {name:"ショートビーニー", path:ShortBeanie, id:"M0_ShortBeanie", brand:"シグレ二",default:inkSaverMain},
+  {name:"ヤマギリビーニー", path:YamagiriBeanie, id:"KN_YamagiriBeanie", brand:"シグレ二",default:mpu},
+  {name:"カイガラスゲ", path:KaigaraSuge, id:"H1_KaigaraSuge", brand:"シグレ二",default:qr},
+  {name:"スゲ", path:Suge, id:"H0_Suge", brand:"シグレ二",default:inkSaverMain},
+  {name:"クロブチ レトロ", path:Kurobuchi_Retro, id:"BS_Kurobuchi_Retro", brand:"ジモン",default:qr},
+  {name:"ボーダービーニー", path:BorderBeanie, id:"M0_BorderBeanie", brand:"ジモン",default:openingGanbit},
+  {name:"セルブロウ", path:SeruBurou, id:"BS_SeruBurou", brand:"ジモン",default:specialPower},
+  {name:"ハウスタグデニムCAP", path:HouseTagDenimCAP, id:"C0_HouseTagDenimCAP", brand:"ジモン",default:specialCharge},
+  {name:"ボンボンニット", path:BonBonKnit, id:"KN_BonBonKnit", brand:"ジモン",default:quickSuperJump},
+  {name:"センニュークロブチ", path:Sennyu$Kurobuchi, id:"BS_Sennyu-Kurobuchi", brand:"ジモン",default:swimSpeed},
+  {name:"センニューボンボン", path:Sennyu$BonBon, id:"KN_Sennyu-BonBon", brand:"ジモン",default:inkSaverSub},
+  {name:"フライトぼう", path:FlightBou, id:"KN_FlightBou", brand:"ジモン",default:inkRes},
+  {name:"スミガードゴーグル", path:SumiGuardGoggle, id:"BS_SumiGuardGoggle", brand:"タタキケンサキ",default:runSpeed},
+  // {name:"フェイスバイザー", path:FaceVisor, id:"FaceVisor", brand:"タタキケンサキ",default:bombDefence},
+  {name:"イカバケット", path:IkaBucket, id:"M0_IkaBucket", brand:"バトロイカ",default:specialSaver},
+  {name:"イカバッテンガード", path:IkaBattenGuard, id:"BS_IkaBattenGuard", brand:"バトロイカ",default:inkSaverMain},
+  {name:"ヘッドバンド ホワイト", path:HeadBand_White, id:"HB_Headband_White", brand:"バトロイカ",default:inkRecovery},
+  {name:"ペインターマスク", path:PainterMask, id:"BS_PainterMask", brand:"バトロイカ",default:mpu},
+  {name:"アンコウラバーマスク", path:AnkouRubberMask, id:"M1_AnkouRubberMask", brand:"バトロイカ",default:inkSaverMain},
+  {name:"キョンキョンぼう", path:KyonKyonBou, id:"H2_KyonKyonBou", brand:"バトロイカ",default:runSpeed},
+  {name:"こうしえんバンダナ", path:KoushienBandana, id:"BN_KoushienBandana", brand:"バトロイカ",default:swimSpeed},
+  {name:"コズミックアンテナ", path:CozmicAntenna, id:"BS_CozmicAntenna", brand:"バトロイカ",default:comeback},
+  {name:"ニューイヤーグラスDX", path:NewYearGlassDX, id:"BS_NewYearGlassDX", brand:"バトロイカ",default:specialCharge},
+  {name:"バーニングブロイラー", path:BurningBroiler, id:"M1_BurningBroiler", brand:"バトロイカ",default:runSpeed},
+  {name:"ハッピーチンアナゴハット", path:HappyChinAnagoHat, id:"H1_HappyChinanagoHat", brand:"バトロイカ",default:mpu},
+  {name:"フォーリマスク", path:Fo$riMask, id:"BS_Fo-riMask", brand:"フォーリマ",default:mpu},
+  {name:"エンペラフックHDP", path:EnperaHookHDP, id:"BS_EnperaHookHDP", brand:"フォーリマ",default:inkRes},
+  {name:"オーロラヘッドホン", path:AuroraHeadphone, id:"HP_AuroraHeadphone", brand:"フォーリマ",default:inkSaverSub},
+  {name:"スタジオヘッドホン", path:StudioHeadphone, id:"HP_StudioHeadphone", brand:"フォーリマ",default:inkSaverMain},
+  // {name:"スプラッシュゴーグル", path:SplashGoggle, id:"BS_SplashGoggle", brand:"フォーリマ",default:bombDefence},
+  {name:"ダイバーゴーグル", path:DiverGoggle, id:"BS_DiverGoggle", brand:"フォーリマ",default:inkSaverSub},
+  {name:"トレジャーメット", path:TreasureMet, id:"H2_TreasureMet", brand:"フォーリマ",default:inkRecovery},
+  {name:"パイロットゴーグル", path:PilotGoggle, id:"HB_PilotGoggle", brand:"フォーリマ",default:subPower},
+  {name:"ロブスターブーニー", path:RobstarBoonie, id:"H1_RobstarBoonie", brand:"フォーリマ",default:lastDitchEffort},
+  {name:"イカスカルマスク", path:IkaSkullMask, id:"BN_IkaSkullMask", brand:"フォーリマ",default:specialSaver},
+  // {name:"イカロスHKメット", path:IcarusHKMet, id:"M0_IcarusHKMet", brand:"フォーリマ",default:mpu},
+  {name:"イヤーマフ", path:EarMuff, id:"HP_EarMuff", brand:"フォーリマ",default:qr},
+  {name:"オクトメットプライズデコ", path:OctoMetPrizeDeko, id:"M1_OctoMetPrizeDeco", brand:"フォーリマ",default:bombDefence},
+  {name:"ステカセヘッドホン", path:SutekaseHeadphone, id:"HP_SutekaseHeadphone", brand:"フォーリマ",default:inkRecovery},
+  {name:"センニューゴーグル", path:Sennyu$Goggle, id:"HB_Sennyu-Goggle", brand:"フォーリマ",default:inkRes},
+  {name:"センニューヘッドホン", path:Sennyu$Headphone, id:"HP_Sennyu-Headphone", brand:"フォーリマ",default:inkSaverMain},
+  {name:"タコマスク", path:TakoMask, id:"BS_TakoMask", brand:"フォーリマ",default:tenacity},
+  // {name:"デカメットアイシールド", path:DekaMetEyeshield, id:"M1_DekaMetEyeshield", brand:"フォーリマ",default:subPower},
+  {name:"ナイトビジョン", path:NightVision, id:"M1_NightVision", brand:"フォーリマ",default:swimSpeed},
+  {name:"ノーズガードモトクロス", path:NoseGuardMotoCross, id:"BS_NoseGuardMotoCross", brand:"フォーリマ",default:specialCharge},
+  {name:"フェイスゴーグル", path:FaceGoggle, id:"BS_FaceGoggle", brand:"フォーリマ",default:comeback},
+  {name:"モンゴウベレー", path:MongouBeret, id:"H0_MongouBeret", brand:"フォーリマ",default:openingGanbit},
+  {name:"イカベーダーキャップ", path:IkaVaderCap, id:"C1_IkavaderCap", brand:"ホタックス",default:specialCharge},
+  {name:"イカンカン", path:Ikankan, id:"H2_Ikankan", brand:"ホタックス",default:quickSuperJump},
+  {name:"ウーニーズBBキャップ", path:U$ni$zuBBCap, id:"C0_U-ni-zuBBCap", brand:"ホタックス",default:subPower},
+  {name:"ウインターボンボン", path:WinterBonBon, id:"KN_WinterBonBon", brand:"ホタックス",default:tenacity},
+  {name:"ビバレッジキャップ", path:BeverageCap, id:"C1_BeverageCap", brand:"ホタックス",default:inkSaverSub},
+  // {name:"イカンカン クラシック", path:Ikankan_Classic, id:"Ikankan_Classic", brand:"ホタックス",default:specialPower},
+  {name:"オシノビニット", path:OshinobiKnit, id:"KN_OshinobiKnit", brand:"ホタックス",default:swimSpeed},
+  {name:"サイクルメット", path:CycleMet, id:"H1_CycleMet", brand:"ホタックス",default:inkRecovery},
+  {name:"スケボーメット", path:Sukebo$Met, id:"M1_Sukebo-Met", brand:"ホタックス",default:specialSaver},
+  {name:"パッチハット", path:PatchHat, id:"M0_PatchHat", brand:"ホタックス",default:mpu},
+  {name:"イカノルディック", path:IkaNordic, id:"KN_IkaNordic", brand:"ホタックス",default:comeback},
+  {name:"クラゲーダーキャップ", path:KuragaderCap, id:"C1_KuragaderCap", brand:"ホタックス",default:inkSaverSub},
+  {name:"チドリキャップ", path:ChidoriCap, id:"C1_ChidoriCap", brand:"ホタックス",default:openingGanbit},
+  {name:"ドゥーラグキャップガサネ", path:DoRagCapGasane, id:"H3_DoRagCapGasane", brand:"ホタックス",default:mpu},
+  {name:"バイザーメット", path:VisorMet, id:"M1_VisorMet", brand:"ホタックス",default:lastDitchEffort},
+  {name:"カモメッシュ", path:KamoMesh, id:"C0_KamoMesh", brand:"ホッコリー",default:swimSpeed},
+  {name:"クロヤキフグバンダナ", path:KuroYakifuguBandana, id:"HB_KuroYakifuguBandana", brand:"ホッコリー",default:bombDefence},
+  {name:"ジェットキャップ", path:JetCap, id:"C0_JetCap", brand:"ホッコリー",default:specialSaver},
+  {name:"フグベルハット", path:FuguBellHat, id:"H2_FuguBellHat", brand:"ホッコリー",default:inkRecovery},
+  {name:"マスクドホッコリー", path:MaskedHokkori$, id:"BS_MaskedHokkori-", brand:"ホッコリー",default:runSpeed},
+  {name:"ヤキフグ サンバイザー", path:Yakifugu_Sunvisor, id:"V3_Yakifugu_Sunvisor", brand:"ホッコリー",default:specialCharge},
+  {name:"ヤキフグビスケットバンダナ", path:YakifuguBiscuitBandana, id:"HB_YakifuguBiscuitBandana", brand:"ホッコリー",default:specialPower},
+  {name:"リブニット", path:RibKnit, id:"KN_RibKnit", brand:"ホッコリー",default:inkRes},
+  {name:"フグハンチング", path:FuguHanching, id:"C1_FuguHanching", brand:"ホッコリー",default:quickSuperJump},
+  {name:"フグベルベルハット", path:FuguBellBellHat, id:"H2_FuguBellBellHat", brand:"ホッコリー",default:qr},
+  {name:"オクタグラス", path:OctaGlass, id:"BS_OctaGlass", brand:"ホッコリー",default:lastDitchEffort},
+  {name:"サファリハット", path:SafariHat, id:"H1_SafariHat", brand:"ホッコリー",default:inkSaverMain},
+  {name:"ヤコメッシュ", path:YakoMesh, id:"C0_YakoMesh", brand:"ヤコ",default:bombDefence},
+  {name:"ヤコバイザー", path:YakoVisor, id:"V2_YakoVisor", brand:"ヤコ",default:quickSuperJump},
+  {name:"タレサン18K", path:TareSan18K, id:"BS_TareSan18K", brand:"ロッケンベルグ",default:lastDitchEffort},
+  {name:"マルサンSV925", path:MaruSanSV925, id:"BS_MaruSanSV925", brand:"ロッケンベルグ",default:swimSpeed},
   // {name:"イイダチヘッドホン", path:IidachiHeadphone, id:"IidachiHeadphone"},
   // {name:"イカカゲマスク", path:IkaKageMask, id:"IkaKageMask"},
   // {name:"イカクリップ", path:IkaClip, id:"IkaClip"},
@@ -316,51 +352,87 @@ let gears = [
   // {name:"メトロぼう", path:MetroBou, id:"MetroBou"},
   // {name:"スタジオオクトホン", path:StudioOctoHon, id:"StudioOctoHon"},
   // {name:"金のつまようじ", path:KinNoTumayoji, id:"KinNoTumayoji"},
-  {name:"アイアンマスカレイド", path:AianMaskarade, id:"V4_AianMaskaRade", brand:"クマサン商会"},
+  {name:"アイアンマスカレイド", path:AianMaskarade, id:"V4_AianMaskaRade", brand:"クマサン商会",default:empty},
   // {name:"アセストップソシナ", path:AsesuTopSoshina, id:""},
-  // {name:"オーシャンズヘルム", path:OceansHelm, id:"H2_OceansHelm", brand:"クマサン商会"},
+  // {name:"オーシャンズヘルム", path:OceansHelm, id:"H2_OceansHelm", brand:"クマサン商会",default:empty},
   // {name:"ガーディアンアーミーハット", path:GuardianArmyHat, id:""},
-  // {name:"スペボウ レプリカ", path:Supebou_Replica, id:"Supebou_Replica", brand:"クマサン商会"},
-  {name:"ゾネスティックスコープ", path:ZonesticScope, id:"ZonesticScope", brand:"クマサン商会"},
-  {name:"ダストブロッカー 2.5", path:DustBlocker_25, id:"DustBlocker_25", brand:"クマサン商会"},
-  {name:"ヘッドライトヘルム", path:HeadLightHelm, id:"HeadLightHelm", brand:"クマサン商会"},
-  {name:"マリリンハットウィズピンズ", path:MarilynHatWithPins, id:"MarilynHatWithPins", brand:"クマサン商会"},
-  {name:"レジェンドのぼうし", path:LegendNoBoushi, id:"H3_LegendNoBoushi", brand:"クマサン商会"}
+  // {name:"スペボウ レプリカ", path:Supebou_Replica, id:"Supebou_Replica", brand:"クマサン商会",default:empty},
+  {name:"ゾネスティックスコープ", path:ZonesticScope, id:"ZonesticScope", brand:"クマサン商会",default:empty},
+  {name:"ダストブロッカー 2.5", path:DustBlocker_25, id:"DustBlocker_25", brand:"クマサン商会",default:empty},
+  {name:"ヘッドライトヘルム", path:HeadLightHelm, id:"HeadLightHelm", brand:"クマサン商会",default:empty},
+  {name:"マリリンハットウィズピンズ", path:MarilynHatWithPins, id:"MarilynHatWithPins", brand:"クマサン商会",default:empty},
+  {name:"レジェンドのぼうし", path:LegendNoBoushi, id:"H3_LegendNoBoushi", brand:"クマサン商会",default:empty}
 ];
 
 // 名前順に整列した配列を新たに定義
 const gearsSortedByName = gears.slice().sort((a, b) => (a.name > b.name) ? 1 : -1);
 
 const HeadGearModal = (props) => {
-  //  並び順の管理
-  const [howToSort, setSort] = useState("byBrand");
   // 表示する配列の管理
   const [gearsArray, setArray] = useState(gears);
-  
+  // 選択されているギアの管理
+  const [headGear, setHeadGear] = useState({name:"ヘッドバンド ホワイト", path:HeadBand_White, id:"HB_Headband_White", brand:"バトロイカ",default:inkRecovery})
+
   const selectBoxRef = useRef();
 
   const selectBox = function() {
     let target = selectBoxRef.current;
-    if (target.value === "brand" && howToSort === "byName") {
-      setSort("byBrand");
+    if (target.value === "brand") {
       setArray(gears);
-    } else if (target.value === "name" && howToSort === "byBrand") {
-      setSort("byName");
+    } else if (target.value === "name") {
       setArray(gearsSortedByName);
     }
   };
+  // ブランド名に応じてブランドロゴ、つきにくいギアパワー、つきにくいギアパワーの画像のpathをそれぞれ返す
+  const brandDependency = (brand) => {
+    if (brand === "バトロイカ") {
+      return {brandImgPath:Batoroika, favoredAbility:inkRes, unfavoredAbility:inkSaverMain}
+    } else if (brand === "アイロニック") {
+      return {brandImgPath:Aironic, favoredAbility:quickSuperJump, unfavoredAbility:qr}
+    } else if (brand === "クラーゲス") {
+      return {brandImgPath:Kuragesu, favoredAbility:swimSpeed, unfavoredAbility:bombDefence}
+    } else if (brand === "ロッケンベルグ") {
+      return {brandImgPath:Rockenberg, favoredAbility:runSpeed, unfavoredAbility:swimSpeed}
+    } else if (brand === "エゾッコ") {
+      return {brandImgPath:Ezokko, favoredAbility:specialSaver, unfavoredAbility:specialCharge}
+    } else if (brand === "フォーリマ") {
+      return {brandImgPath:Forima, favoredAbility:specialPower, unfavoredAbility:inkSaverSub}
+    } else if (brand === "ホッコリー") {
+      return {brandImgPath:Hokkori, favoredAbility:inkSaverSub, unfavoredAbility:inkRecovery}
+    } else if (brand === "ホタックス") {
+      return {brandImgPath:Hotakkusu, favoredAbility:qr, unfavoredAbility:specialSaver}
+    } else if (brand === "ジモン") {
+      return {brandImgPath:Zimon, favoredAbility:inkSaverMain, unfavoredAbility:runSpeed}
+    } else if (brand === "シグレ二") {
+      return {brandImgPath:Sigureni, favoredAbility:bombDefence, unfavoredAbility:mpu}
+    } else if (brand === "アロメ") {
+      return {brandImgPath:Arome, favoredAbility:inkRecovery, unfavoredAbility:quickSuperJump}
+    } else if (brand === "ヤコ") {
+      return {brandImgPath:Yako, favoredAbility:specialCharge, unfavoredAbility:specialPower}
+    } else if (brand === "アナアキ") {
+      return {brandImgPath:Anaaki, favoredAbility:mpu, unfavoredAbility:specialSaver}
+    } else if (brand === "エンペリー") {
+      return {brandImgPath:Enperry, favoredAbility:subPower, unfavoredAbility:inkRes}
+    } else if (brand === "タタキケンサキ") {
+      return {brandImgPath:Tatakikensaki, favoredAbility:mpu, unfavoredAbility:subPower}
+    } else if (brand === "クマサン商会") {
+      return {brandImgPath:Kumasan, favoredAbility:empty, unfavoredAbility:empty}
+    } else if (brand === "アタリメイド") {
+      return {brandImgPath:Atarimeido, favoredAbility:empty, unfavoredAbility:empty}
+    }
+  }
 
   return (
     <div className="modal fade" id="headGearModal" tabIndex="-1" aria-labelledby="headGearModalLabel" aria-hidden="true">  
       <div className="modal-dialog modal-lg">
-        <div className="modal-content headGearModalBg font-type2 bg-secondary text-white">
+        <div className="modal-content gear-modal font-type2 bg-secondary">
           <div className="modal-header">
             <h5 className="modal-title" id="weaponModalLabel">ギアを選択</h5>
             <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div className="container pt-2 pb-1">
             <div className="d-flex align-items-center">
-              <div className="select-index">  
+              <div className="select-index"> 
                 <span className="align-middle">並び替え :</span>
               </div>
               <div className="selectbox">  
@@ -368,9 +440,7 @@ const HeadGearModal = (props) => {
                   className="form-select"
                   aria-label="sort"
                   ref = {selectBoxRef}
-                  onClick={()=>{
-                    selectBox();
-                  }}
+                  onChange={()=>{selectBox();}}
                 >
                     <option value="brand" defaultValue>ブランド</option>
                     <option value="name">名前</option>
@@ -378,693 +448,716 @@ const HeadGearModal = (props) => {
               </div>
             </div>
           </div>
-          <div className="container d-flex flex-wrap px-0 px-lg-5">
-              <GearIcon 
-                gear={gearsArray[0]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[1]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[2]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[3]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[4]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[5]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[6]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[7]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[8]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[9]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[10]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[11]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[12]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[13]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[14]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[15]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[16]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[17]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[18]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[19]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[20]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[21]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[22]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[23]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[24]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[25]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[26]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[27]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[28]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[29]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[30]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[31]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[32]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[33]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[34]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[35]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[36]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[37]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[38]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[39]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[40]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[41]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[42]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[43]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[44]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[45]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[46]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[47]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[48]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[49]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[50]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[51]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[52]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[53]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[54]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[55]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[56]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[57]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[58]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[59]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[60]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[61]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[62]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[63]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[64]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[65]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[66]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[67]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[68]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[69]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[70]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[71]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[72]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[73]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[74]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[75]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[76]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[77]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[78]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[79]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[80]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[81]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[82]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[83]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[84]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[85]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[86]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[87]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[88]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[89]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[90]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[91]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[92]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[93]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[94]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[95]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[96]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[97]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[98]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[99]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[100]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[101]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[102]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[103]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[104]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[105]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[106]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[107]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[108]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[109]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[110]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[111]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
-              <GearIcon 
-                gear={gearsArray[112]}
-                passChosenGear={props.passChosenGear}
-                passImagePath={props.passImagePath}
-                part="head"
-              />
+          <div className="px-0 px-lg-5 row gears-display-area">
+            <div className="col-4">
+              <div
+                className="chosen-gear-icon"
+              >
+                <img className="chosen-gear-icon-img" src={headGear.path} alt=""/>
+                <img className="brand-img" src={brandDependency(headGear.brand).brandImgPath} alt=""/>
+                <div className="head-stripe gear-icon-footer">  
+                  <div className="ability-icon default-ability">
+                    <img className="default-ability-img" src={headGear.default} alt=""/>
+                  </div>
+                  <div className="brand-ability">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 384 512">
+                      {/* Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
+                      <path 
+                        d="M54.63 246.6L192 109.3l137.4 137.4C335.6 252.9 343.8 256 352 256s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25l-160-160c-12.5-12.5-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25S42.13 259.1 54.63 246.6zM214.6 233.4c-12.5-12.5-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25s32.75 12.5 45.25 0L192 301.3l137.4 137.4C335.6 444.9 343.8 448 352 448s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25L214.6 233.4z"
+                        fill="#dfff00"
+                      />
+                    </svg>
+                    <img className="img-gear-icon-ability" src={brandDependency(headGear.brand).favoredAbility} alt=""/>
+                  </div>
+                  <div className="brand-ability">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 384 512">
+                      {/* Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
+                      <path
+                        d="M169.4 278.6C175.6 284.9 183.8 288 192 288s16.38-3.125 22.62-9.375l160-160c12.5-12.5 12.5-32.75 0-45.25s-32.75-12.5-45.25 0L192 210.8L54.63 73.38c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L169.4 278.6zM329.4 265.4L192 402.8L54.63 265.4c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25l160 160C175.6 476.9 183.8 480 192 480s16.38-3.125 22.62-9.375l160-160c12.5-12.5 12.5-32.75 0-45.25S341.9 252.9 329.4 265.4z"
+                        fill="#ff0000"
+                      />
+                    </svg>
+                    <img className="img-gear-icon-ability" src={brandDependency(headGear.brand).unfavoredAbility} alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-8 d-flex flex-wrap gearicons-section head-stripe">
+                <GearIcon
+                  gear={gearsArray[0]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[1]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[2]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[3]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[4]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[5]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[6]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[7]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[8]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[9]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[10]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[11]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[12]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[13]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[14]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[15]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[16]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[17]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[18]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[19]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[20]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[21]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[22]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[23]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[24]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[25]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[26]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[27]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[28]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[29]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[30]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[31]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[32]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[33]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[34]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[35]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[36]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[37]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[38]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[39]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[40]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[41]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[42]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[43]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[44]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[45]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[46]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[47]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[48]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[49]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[50]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[51]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[52]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[53]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[54]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[55]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[56]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[57]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[58]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[59]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[60]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[61]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[62]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[63]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[64]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[65]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[66]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[67]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[68]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[69]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[70]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[71]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[72]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[73]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[74]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[75]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[76]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[77]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[78]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[79]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[80]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[81]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[82]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[83]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[84]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[85]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[86]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[87]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[88]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[89]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[90]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[91]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[92]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[93]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[94]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[95]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[96]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[97]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[98]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[99]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[100]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[101]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[102]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[103]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[104]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[105]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[106]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[107]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[108]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[109]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[110]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+                <GearIcon 
+                  gear={gearsArray[111]}
+                  passChosenGear={props.passChosenGear}
+                  passImagePath={props.passImagePath}
+                  setGear={setHeadGear}
+                />
+            </div>
           </div>
         </div>
-        <button
-          className="modal-close-btn"
-          onClick={()=>{props.controlModal(false)}}
-        >
-          とじる
-        </button>
       </div>
     </div>  
   );

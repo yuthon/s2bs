@@ -49,6 +49,39 @@
   src: url(./Splatfont2.woff) format('woff');
 }
 
+/* アタマギア関連に使うストライプ模様 */
+.head-stripe {
+  background: repeating-linear-gradient(
+    45deg,
+    #d63e53,
+    #d63e53 20px,
+    #f0624a 20px,
+    #f0624a 40px
+  );
+}
+
+/* フクギア関連に使うストライプ模様 */
+.clothes-stripe {
+  background: repeating-linear-gradient(
+    45deg,
+    #19e1ba,
+    #19e1ba 20px,
+    #06be8a 20px,
+    #06be8a 40px
+  );
+}
+
+/* クツギア関連に使うストライプ模様 */
+.shoes-stripe {
+  background: repeating-linear-gradient(
+    45deg,
+    #f07807,
+    #f07807 20px,
+    #d25012 20px,
+    #d25012 40px
+  );
+}
+
 /* 3dモデルの表示領域 */
 
 .main {
@@ -243,9 +276,59 @@
 /* アタマギアモーダル */
 /*  */
 
-.gear-icon {
-  width: 150px;
+.chosen-gear-icon {
+  width: 180px;
   height: 182px;
+  border-radius: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fafae2,
+    #fafae2 20px,
+    #e6e7c7 20px,
+    #e6e7c7 40px
+  );
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* アタマ、フク、クツのモーダル全体で共通の高さ */
+.gear-modal {
+  height: 80vh;
+}
+
+.gears-display-area {
+  height: 80%;
+}
+
+.gearicons-section {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* デフォルトのギアパワー */
+.default-ability {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: auto;
+}
+
+.default-ability-img {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 1px;
+  left: 2px;
+}
+
+.gear-icon {
+  width: 115px;
+  height: 110px;
   border-radius: 10px;
   background: repeating-linear-gradient(
     45deg,
@@ -262,22 +345,22 @@
   margin-right: auto;
   position: relative;
 }
-/* アタマギアのフッター */
-.headgear-icon-footer {
-  width: 150px;
+/* ギアの画像 */
+.gear-icon-img {
+  width: 110px;
+  height: 110px;
+}
+
+/* ギアのフッター */
+.gear-icon-footer {
+  width: 180px;
   height: 55px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  background: repeating-linear-gradient(
-    45deg,
-    #d63e53,
-    #d63e53 20px,
-    #f0624a 20px,
-    #f0624a 40px
-  );
   display: flex;
   padding-left: 10px;
   padding-right: 10px;
+  position: relative;
 }
 
 /* フクギアのフッター */
@@ -1130,18 +1213,21 @@ Btmボタン
   padding-left: 0px;
 }
 
-#ae-section::-webkit-scrollbar {
+#ae-section::-webkit-scrollbar,
+.gearicons-section::-webkit-scrollbar {
   width: 10px;
 }
 
-#ae-section::-webkit-scrollbar-track {
+#ae-section::-webkit-scrollbar-track,
+.gearicons-section::-webkit-scrollbar-track {
   background: #fff;
   border: none;
   border-radius: 10px;
   box-shadow: inset 0 0 2px #777;
 }
 
-#ae-section::-webkit-scrollbar-thumb {
+#ae-section::-webkit-scrollbar-thumb,
+.gearicons-section::-webkit-scrollbar-thumb {
   background: #ccc;
   border-radius: 10px;
   box-shadow: none;
