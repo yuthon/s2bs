@@ -57,7 +57,7 @@ const AbilityComponents = (props) => {
   const [subSlotNumber, setSubSlotNumber] = useState(null);
   
   return (
-    <><div className="col-2 order-1 px-0" id="gear-components">
+    <><div className="col-2 px-0" id="gear-components">
       <SubSlotModal
         slotNumber={subSlotNumber}
         passAbilityName0={passSubAbilityName0}
@@ -127,7 +127,7 @@ const AbilityComponents = (props) => {
         />
       </div>
     </div>
-    <div className="font-type2 col-5 order-3" id="ae-section">
+    <div className="font-type2 col-5" id="ae-section">
       <WeaponModal
         weaponStatus={passWeaponStatus} 
       />

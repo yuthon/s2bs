@@ -100,12 +100,7 @@ const Main = () => {
         passBottoms={passBottoms}
       />
       <div className="row">  
-        <AbilityComponents 
-          headImagePath={headImagePath}
-          clothesImagePath={clothesImagePath}
-          shoesImagePath={shoesImagePath}
-        />
-        <div className="col-5 order-2" id="three-section">
+        <div className="col-5" id="three-section">
           <div style={{ height: '100vh', width: '100%' }}>
             <div id="character-btn">
               <button type="button" className="btn btn-dark font-type1" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
@@ -145,6 +140,11 @@ const Main = () => {
             </Canvas>
           </div>
         </div>
+        <AbilityComponents 
+          headImagePath={headImagePath}
+          clothesImagePath={clothesImagePath}
+          shoesImagePath={shoesImagePath}
+        />
       </div>
     </div>
   );
