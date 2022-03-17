@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import { Tooltip } from 'bootstrap';
 import Gal52_0 from '../images/weapon/52 Gal.png';
 import Gal52_1 from '../images/weapon/52 Gal Deco.png';
 import Gal52_2 from '../images/weapon/Kensa 52 Gal.png';
@@ -339,18 +338,18 @@ const WeaponModal = (props) => {
     }
   };
 
-  useEffect(() => {
-    var tooltipDeleteList = [].slice.call(document.querySelectorAll('[role="tooltip"]'));
-    if (tooltipDeleteList.length) {
-      for (let i = 0; i < tooltipDeleteList.length; i++) {
-        tooltipDeleteList[i].style.display = "none"
-      }
-    }
-    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[class="weapon-icon"]'));
-    const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new Tooltip(tooltipTriggerEl);
-    });
-  })
+  // useEffect(() => {
+  //   var tooltipDeleteList = [].slice.call(document.querySelectorAll('[role="tooltip"]'));
+  //   if (tooltipDeleteList.length) {
+  //     for (let i = 0; i < tooltipDeleteList.length; i++) {
+  //       tooltipDeleteList[i].style.display = "none"
+  //     }
+  //   }
+  //   const tooltipTriggerList = [].slice.call(document.querySelectorAll('[class="weapon-icon"]'));
+  //   const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  //     return new Tooltip(tooltipTriggerEl);
+  //   });
+  // })
 
   console.log("WMrendered!")
 
@@ -384,11 +383,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[0]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[0].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[0].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[0].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -405,11 +405,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[1]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[1].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[1].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[1].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -426,11 +427,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[2]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[2].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[2].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[2].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -447,11 +449,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[3]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[3].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[3].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[3].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -468,11 +471,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[4]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[4].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[4].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[4].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -489,11 +493,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[5]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[5].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[5].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[5].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -510,11 +515,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[6]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[6].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[6].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[6].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -531,11 +537,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[7]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[7].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[7].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[7].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -552,11 +559,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[8]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[8].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[8].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[8].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -573,11 +581,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[9]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[9].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[9].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[9].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -594,11 +603,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[10]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[10].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[10].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[10].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -615,11 +625,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[11]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[11].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[11].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[11].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -636,11 +647,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[12]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[12].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[12].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[12].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -657,11 +669,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[13]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[13].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[13].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[13].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -678,11 +691,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[14]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[14].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[14].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[14].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -699,11 +713,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[15]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[15].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[15].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[15].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -720,11 +735,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[16]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[16].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[16].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[16].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -741,11 +757,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[17]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[17].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[17].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[17].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -762,11 +779,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[18]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[18].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[18].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[18].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -783,11 +801,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[19]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[19].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[19].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[19].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -804,11 +823,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[20]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[20].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[20].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[20].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -825,11 +845,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[21]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[21].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[21].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[21].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -846,11 +867,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[22]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[22].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[22].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[22].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -867,11 +889,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[23]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[23].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[23].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[23].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -888,11 +911,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[24]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[24].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[24].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[24].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -909,11 +933,12 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[25]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[25].name}
             >
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[25].name}</span>
+                </div>
+              </div>
               <img src = {weaponArray[25].path} className="img-weapon" alt=""/>
               <div className="row align-items-center justify-content-around sub-sp-bg">
                 <div className="sub-sp">
@@ -930,12 +955,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[26]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[26].name}
             >
-                <img src = {weaponArray[26].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[26].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[26].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[26].pathSub} className="img-sub-sp" alt=""/>
@@ -952,12 +978,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[27]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[27].name}
             >
-                <img src = {weaponArray[27].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[27].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[27].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[27].pathSub} className="img-sub-sp" alt=""/>
@@ -974,12 +1001,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[28]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[28].name}
             >
-                <img src = {weaponArray[28].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[28].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[28].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[28].pathSub} className="img-sub-sp" alt=""/>
@@ -996,12 +1024,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[29]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[29].name}
             >
-                <img src = {weaponArray[29].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[29].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[29].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[29].pathSub} className="img-sub-sp" alt=""/>
@@ -1018,12 +1047,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[30]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[30].name}
             >
-                <img src = {weaponArray[30].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[30].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[30].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[30].pathSub} className="img-sub-sp" alt=""/>
@@ -1040,12 +1070,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[31]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[31].name}
             >
-                <img src = {weaponArray[31].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[31].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[31].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[31].pathSub} className="img-sub-sp" alt=""/>
@@ -1062,12 +1093,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[32]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[32].name}
             >
-                <img src = {weaponArray[32].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[32].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[32].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[32].pathSub} className="img-sub-sp" alt=""/>
@@ -1084,12 +1116,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[33]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[33].name}
             >
-                <img src = {weaponArray[33].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[33].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[33].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[33].pathSub} className="img-sub-sp" alt=""/>
@@ -1106,12 +1139,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[34]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[34].name}
             >
-                <img src = {weaponArray[34].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[34].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[34].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[34].pathSub} className="img-sub-sp" alt=""/>
@@ -1128,12 +1162,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[35]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[35].name}
             >
-                <img src = {weaponArray[35].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[35].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[35].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[35].pathSub} className="img-sub-sp" alt=""/>
@@ -1150,12 +1185,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[36]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[36].name}
             >
-                <img src = {weaponArray[36].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[36].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[36].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[36].pathSub} className="img-sub-sp" alt=""/>
@@ -1172,12 +1208,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[37]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[37].name}
             >
-                <img src = {weaponArray[37].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[37].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[37].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[37].pathSub} className="img-sub-sp" alt=""/>
@@ -1194,12 +1231,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[38]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[38].name}
             >
-                <img src = {weaponArray[38].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[38].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[38].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[38].pathSub} className="img-sub-sp" alt=""/>
@@ -1216,12 +1254,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[39]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[39].name}
             >
-                <img src = {weaponArray[39].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[39].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[39].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[39].pathSub} className="img-sub-sp" alt=""/>
@@ -1238,12 +1277,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[40]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[40].name}
             >
-                <img src = {weaponArray[40].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[40].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[40].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[40].pathSub} className="img-sub-sp" alt=""/>
@@ -1260,12 +1300,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[41]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[41].name}
             >
-                <img src = {weaponArray[41].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[41].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[41].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[41].pathSub} className="img-sub-sp" alt=""/>
@@ -1282,12 +1323,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[42]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[42].name}
             >
-                <img src = {weaponArray[42].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[42].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[42].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[42].pathSub} className="img-sub-sp" alt=""/>
@@ -1304,12 +1346,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[43]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[43].name}
             >
-                <img src = {weaponArray[43].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[43].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[43].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[43].pathSub} className="img-sub-sp" alt=""/>
@@ -1326,12 +1369,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[44]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[44].name}
             >
-                <img src = {weaponArray[44].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[44].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[44].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[44].pathSub} className="img-sub-sp" alt=""/>
@@ -1348,12 +1392,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[45]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[45].name}
             >
-                <img src = {weaponArray[45].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[45].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[45].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[45].pathSub} className="img-sub-sp" alt=""/>
@@ -1370,12 +1415,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[46]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[46].name}
             >
-                <img src = {weaponArray[46].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[46].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[46].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[46].pathSub} className="img-sub-sp" alt=""/>
@@ -1392,12 +1438,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[47]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[47].name}
             >
-                <img src = {weaponArray[47].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[47].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[47].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[47].pathSub} className="img-sub-sp" alt=""/>
@@ -1414,12 +1461,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[48]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[48].name}
             >
-                <img src = {weaponArray[48].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[48].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[48].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[48].pathSub} className="img-sub-sp" alt=""/>
@@ -1436,12 +1484,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[49]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[49].name}
             >
-                <img src = {weaponArray[49].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[49].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[49].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[49].pathSub} className="img-sub-sp" alt=""/>
@@ -1458,12 +1507,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[50]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[50].name}
             >
-                <img src = {weaponArray[50].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[50].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[50].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[50].pathSub} className="img-sub-sp" alt=""/>
@@ -1480,12 +1530,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[51]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[51].name}
             >
-                <img src = {weaponArray[51].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[51].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[51].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[51].pathSub} className="img-sub-sp" alt=""/>
@@ -1502,12 +1553,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[52]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[52].name}
             >
-                <img src = {weaponArray[52].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[52].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[52].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[52].pathSub} className="img-sub-sp" alt=""/>
@@ -1524,12 +1576,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[53]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[53].name}
             >
-                <img src = {weaponArray[53].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[53].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[53].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[53].pathSub} className="img-sub-sp" alt=""/>
@@ -1546,12 +1599,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[54]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[54].name}
             >
-                <img src = {weaponArray[54].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[54].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[54].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[54].pathSub} className="img-sub-sp" alt=""/>
@@ -1568,12 +1622,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[55]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[55].name}
             >
-                <img src = {weaponArray[55].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[55].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[55].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[55].pathSub} className="img-sub-sp" alt=""/>
@@ -1590,12 +1645,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[56]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[56].name}
             >
-                <img src = {weaponArray[56].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[56].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[56].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[56].pathSub} className="img-sub-sp" alt=""/>
@@ -1612,12 +1668,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[57]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[57].name}
             >
-                <img src = {weaponArray[57].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[57].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[57].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[57].pathSub} className="img-sub-sp" alt=""/>
@@ -1634,12 +1691,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[58]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[58].name}
             >
-                <img src = {weaponArray[58].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[58].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[58].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[58].pathSub} className="img-sub-sp" alt=""/>
@@ -1656,12 +1714,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[59]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[59].name}
             >
-                <img src = {weaponArray[59].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[59].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[59].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[59].pathSub} className="img-sub-sp" alt=""/>
@@ -1678,12 +1737,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[60]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[60].name}
             >
-                <img src = {weaponArray[60].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[60].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[60].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[60].pathSub} className="img-sub-sp" alt=""/>
@@ -1700,12 +1760,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[61]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[61].name}
             >
-                <img src = {weaponArray[61].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[61].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[61].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[61].pathSub} className="img-sub-sp" alt=""/>
@@ -1722,12 +1783,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[62]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[62].name}
             >
-                <img src = {weaponArray[62].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[62].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[62].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[62].pathSub} className="img-sub-sp" alt=""/>
@@ -1744,12 +1806,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[63]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[63].name}
             >
-                <img src = {weaponArray[63].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[63].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[63].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[63].pathSub} className="img-sub-sp" alt=""/>
@@ -1766,12 +1829,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[64]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[64].name}
             >
-                <img src = {weaponArray[64].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[64].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[64].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[64].pathSub} className="img-sub-sp" alt=""/>
@@ -1788,12 +1852,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[65]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[65].name}
             >
-                <img src = {weaponArray[65].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[65].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[65].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[65].pathSub} className="img-sub-sp" alt=""/>
@@ -1810,12 +1875,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[66]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[66].name}
             >
-                <img src = {weaponArray[66].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[66].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[66].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[66].pathSub} className="img-sub-sp" alt=""/>
@@ -1832,12 +1898,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[67]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[67].name}
             >
-                <img src = {weaponArray[67].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[67].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[67].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[67].pathSub} className="img-sub-sp" alt=""/>
@@ -1854,12 +1921,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[68]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[68].name}
             >
-                <img src = {weaponArray[68].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[68].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[68].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[68].pathSub} className="img-sub-sp" alt=""/>
@@ -1876,12 +1944,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[69]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[69].name}
             >
-                <img src = {weaponArray[69].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[69].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[69].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[69].pathSub} className="img-sub-sp" alt=""/>
@@ -1898,12 +1967,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[70]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[70].name}
             >
-                <img src = {weaponArray[70].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[70].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[70].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[70].pathSub} className="img-sub-sp" alt=""/>
@@ -1920,12 +1990,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[71]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[71].name}
             >
-                <img src = {weaponArray[71].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[71].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[71].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[71].pathSub} className="img-sub-sp" alt=""/>
@@ -1942,12 +2013,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[72]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[72].name}
             >
-                <img src = {weaponArray[72].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[72].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[72].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[72].pathSub} className="img-sub-sp" alt=""/>
@@ -1964,12 +2036,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[73]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[73].name}
             >
-                <img src = {weaponArray[73].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[73].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[73].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[73].pathSub} className="img-sub-sp" alt=""/>
@@ -1986,12 +2059,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[74]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[74].name}
             >
-                <img src = {weaponArray[74].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[74].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[74].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[74].pathSub} className="img-sub-sp" alt=""/>
@@ -2008,12 +2082,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[75]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[75].name}
             >
-                <img src = {weaponArray[75].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[75].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[75].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[75].pathSub} className="img-sub-sp" alt=""/>
@@ -2030,12 +2105,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[76]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[76].name}
             >
-                <img src = {weaponArray[76].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[76].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[76].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[76].pathSub} className="img-sub-sp" alt=""/>
@@ -2052,12 +2128,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[77]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[77].name}
             >
-                <img src = {weaponArray[77].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[77].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[77].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[77].pathSub} className="img-sub-sp" alt=""/>
@@ -2074,12 +2151,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[78]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[78].name}
             >
-                <img src = {weaponArray[78].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[78].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[78].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[78].pathSub} className="img-sub-sp" alt=""/>
@@ -2096,12 +2174,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[79]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[79].name}
             >
-                <img src = {weaponArray[79].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[79].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[79].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[79].pathSub} className="img-sub-sp" alt=""/>
@@ -2118,12 +2197,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[80]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[80].name}
             >
-                <img src = {weaponArray[80].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[80].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[80].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[80].pathSub} className="img-sub-sp" alt=""/>
@@ -2140,12 +2220,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[81]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[81].name}
             >
-                <img src = {weaponArray[81].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[81].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[81].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[81].pathSub} className="img-sub-sp" alt=""/>
@@ -2162,12 +2243,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[82]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[82].name}
             >
-                <img src = {weaponArray[82].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[82].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[82].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[82].pathSub} className="img-sub-sp" alt=""/>
@@ -2184,12 +2266,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[83]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[83].name}
             >
-                <img src = {weaponArray[83].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[83].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[83].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[83].pathSub} className="img-sub-sp" alt=""/>
@@ -2206,12 +2289,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[84]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[84].name}
             >
-                <img src = {weaponArray[84].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[84].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[84].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[84].pathSub} className="img-sub-sp" alt=""/>
@@ -2228,12 +2312,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[85]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[85].name}
             >
-                <img src = {weaponArray[85].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[85].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[85].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[85].pathSub} className="img-sub-sp" alt=""/>
@@ -2250,12 +2335,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[86]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[86].name}
             >
-                <img src = {weaponArray[86].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[86].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[86].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[86].pathSub} className="img-sub-sp" alt=""/>
@@ -2272,12 +2358,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[87]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[87].name}
             >
-                <img src = {weaponArray[87].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[87].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[87].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[87].pathSub} className="img-sub-sp" alt=""/>
@@ -2294,12 +2381,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[88]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[88].name}
             >
-                <img src = {weaponArray[88].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[88].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[88].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[88].pathSub} className="img-sub-sp" alt=""/>
@@ -2316,12 +2404,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[89]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[89].name}
             >
-                <img src = {weaponArray[89].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[89].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[89].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[89].pathSub} className="img-sub-sp" alt=""/>
@@ -2338,12 +2427,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[90]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[90].name}
             >
-                <img src = {weaponArray[90].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[90].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[90].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[90].pathSub} className="img-sub-sp" alt=""/>
@@ -2360,12 +2450,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[91]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[91].name}
             >
-                <img src = {weaponArray[91].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[91].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[91].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[91].pathSub} className="img-sub-sp" alt=""/>
@@ -2382,12 +2473,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[92]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[92].name}
             >
-                <img src = {weaponArray[92].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[92].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[92].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[92].pathSub} className="img-sub-sp" alt=""/>
@@ -2404,12 +2496,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[93]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[93].name}
             >
-                <img src = {weaponArray[93].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[93].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[93].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[93].pathSub} className="img-sub-sp" alt=""/>
@@ -2426,12 +2519,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[94]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[94].name}
             >
-                <img src = {weaponArray[94].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[94].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[94].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[94].pathSub} className="img-sub-sp" alt=""/>
@@ -2448,12 +2542,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[95]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[95].name}
             >
-                <img src = {weaponArray[95].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[95].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[95].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[95].pathSub} className="img-sub-sp" alt=""/>
@@ -2470,12 +2565,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[96]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[96].name}
             >
-                <img src = {weaponArray[96].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[96].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[96].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[96].pathSub} className="img-sub-sp" alt=""/>
@@ -2492,12 +2588,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[97]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[97].name}
             >
-                <img src = {weaponArray[97].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[97].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[97].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[97].pathSub} className="img-sub-sp" alt=""/>
@@ -2514,12 +2611,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[98]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[98].name}
             >
-                <img src = {weaponArray[98].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[98].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[98].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[98].pathSub} className="img-sub-sp" alt=""/>
@@ -2536,12 +2634,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[99]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[99].name}
             >
-                <img src = {weaponArray[99].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[99].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[99].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[99].pathSub} className="img-sub-sp" alt=""/>
@@ -2558,12 +2657,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[100]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[100].name}
             >
-                <img src = {weaponArray[100].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[100].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[100].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[100].pathSub} className="img-sub-sp" alt=""/>
@@ -2580,12 +2680,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[101]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[101].name}
             >
-                <img src = {weaponArray[101].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[101].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[101].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[101].pathSub} className="img-sub-sp" alt=""/>
@@ -2602,12 +2703,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[102]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[102].name}
             >
-                <img src = {weaponArray[102].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[102].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[102].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[102].pathSub} className="img-sub-sp" alt=""/>
@@ -2624,12 +2726,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[103]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[103].name}
             >
-                <img src = {weaponArray[103].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[103].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[103].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[103].pathSub} className="img-sub-sp" alt=""/>
@@ -2646,12 +2749,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[104]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[104].name}
             >
-                <img src = {weaponArray[104].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[104].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[104].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[104].pathSub} className="img-sub-sp" alt=""/>
@@ -2668,12 +2772,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[105]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[105].name}
             >
-                <img src = {weaponArray[105].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[105].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[105].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[105].pathSub} className="img-sub-sp" alt=""/>
@@ -2690,12 +2795,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[106]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[106].name}
             >
-                <img src = {weaponArray[106].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[106].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[106].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[106].pathSub} className="img-sub-sp" alt=""/>
@@ -2712,12 +2818,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[107]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[107].name}
             >
-                <img src = {weaponArray[107].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[107].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[107].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[107].pathSub} className="img-sub-sp" alt=""/>
@@ -2734,12 +2841,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[108]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[108].name}
             >
-                <img src = {weaponArray[108].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[108].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[108].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[108].pathSub} className="img-sub-sp" alt=""/>
@@ -2756,12 +2864,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[109]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[109].name}
             >
-                <img src = {weaponArray[109].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[109].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[109].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[109].pathSub} className="img-sub-sp" alt=""/>
@@ -2778,12 +2887,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[110]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[110].name}
             >
-                <img src = {weaponArray[110].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[110].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[110].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[110].pathSub} className="img-sub-sp" alt=""/>
@@ -2800,12 +2910,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[111]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[111].name}
             >
-                <img src = {weaponArray[111].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[111].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[111].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[111].pathSub} className="img-sub-sp" alt=""/>
@@ -2822,12 +2933,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[112]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[112].name}
             >
-                <img src = {weaponArray[112].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[112].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[112].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[112].pathSub} className="img-sub-sp" alt=""/>
@@ -2844,12 +2956,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[113]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[113].name}
             >
-                <img src = {weaponArray[113].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[113].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[113].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[113].pathSub} className="img-sub-sp" alt=""/>
@@ -2866,12 +2979,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[114]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[114].name}
             >
-                <img src = {weaponArray[114].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[114].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[114].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[114].pathSub} className="img-sub-sp" alt=""/>
@@ -2888,12 +3002,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[115]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[115].name}
             >
-                <img src = {weaponArray[115].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[115].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[115].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[115].pathSub} className="img-sub-sp" alt=""/>
@@ -2910,12 +3025,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[116]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[116].name}
             >
-                <img src = {weaponArray[116].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[116].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[116].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[116].pathSub} className="img-sub-sp" alt=""/>
@@ -2932,12 +3048,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[117]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[117].name}
             >
-                <img src = {weaponArray[117].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[117].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[117].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[117].pathSub} className="img-sub-sp" alt=""/>
@@ -2954,12 +3071,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[118]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[118].name}
             >
-                <img src = {weaponArray[118].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[118].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[118].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[118].pathSub} className="img-sub-sp" alt=""/>
@@ -2976,12 +3094,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[119]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[119].name}
             >
-                <img src = {weaponArray[119].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[119].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[119].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[119].pathSub} className="img-sub-sp" alt=""/>
@@ -2998,12 +3117,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[120]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[120].name}
             >
-                <img src = {weaponArray[120].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[120].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[120].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[120].pathSub} className="img-sub-sp" alt=""/>
@@ -3020,12 +3140,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[121]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[121].name}
             >
-                <img src = {weaponArray[121].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[121].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[121].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[121].pathSub} className="img-sub-sp" alt=""/>
@@ -3042,12 +3163,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[122]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[122].name}
             >
-                <img src = {weaponArray[122].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[122].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[122].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[122].pathSub} className="img-sub-sp" alt=""/>
@@ -3064,12 +3186,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[123]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[123].name}
             >
-                <img src = {weaponArray[123].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[123].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[123].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[123].pathSub} className="img-sub-sp" alt=""/>
@@ -3086,12 +3209,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[124]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[124].name}
             >
-                <img src = {weaponArray[124].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[124].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[124].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[124].pathSub} className="img-sub-sp" alt=""/>
@@ -3108,12 +3232,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[125]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[125].name}
             >
-                <img src = {weaponArray[125].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[125].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[125].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[125].pathSub} className="img-sub-sp" alt=""/>
@@ -3130,12 +3255,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[126]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[126].name}
             >
-                <img src = {weaponArray[126].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[126].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[126].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[126].pathSub} className="img-sub-sp" alt=""/>
@@ -3152,12 +3278,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[127]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[127].name}
             >
-                <img src = {weaponArray[127].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[127].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[127].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[127].pathSub} className="img-sub-sp" alt=""/>
@@ -3174,12 +3301,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[128]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[128].name}
             >
-                <img src = {weaponArray[128].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[128].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[128].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[128].pathSub} className="img-sub-sp" alt=""/>
@@ -3196,12 +3324,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[129]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[129].name}
             >
-                <img src = {weaponArray[129].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[129].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[129].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[129].pathSub} className="img-sub-sp" alt=""/>
@@ -3218,12 +3347,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[130]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[130].name}
             >
-                <img src = {weaponArray[130].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[130].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[130].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[130].pathSub} className="img-sub-sp" alt=""/>
@@ -3240,12 +3370,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[131]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[131].name}
             >
-                <img src = {weaponArray[131].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[131].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[131].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[131].pathSub} className="img-sub-sp" alt=""/>
@@ -3262,12 +3393,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[132]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[132].name}
             >
-                <img src = {weaponArray[132].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[132].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[132].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[132].pathSub} className="img-sub-sp" alt=""/>
@@ -3284,12 +3416,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[133]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[133].name}
             >
-                <img src = {weaponArray[133].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[133].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[133].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[133].pathSub} className="img-sub-sp" alt=""/>
@@ -3306,12 +3439,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[134]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[134].name}
             >
-                <img src = {weaponArray[134].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[134].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[134].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[134].pathSub} className="img-sub-sp" alt=""/>
@@ -3328,12 +3462,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[135]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[135].name}
             >
-                <img src = {weaponArray[135].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[135].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[135].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[135].pathSub} className="img-sub-sp" alt=""/>
@@ -3350,12 +3485,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[136]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[136].name}
             >
-                <img src = {weaponArray[136].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[136].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[136].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[136].pathSub} className="img-sub-sp" alt=""/>
@@ -3372,12 +3508,13 @@ const WeaponModal = (props) => {
                 props.weaponStatus(weaponArray[137]);
                 }
               }
-              data-bs-dismiss="modal"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title={weaponArray[137].name}
             >
-                <img src = {weaponArray[137].path} className="img-weapon" alt=""/>
+              <div className="weapon-icon-tooltip-arrow">
+                <div className="tooltip-container">
+                  <span className="weapon-icon-tooltip font-type2">{weaponArray[137].name}</span>
+                </div>
+              </div>
+              <img src = {weaponArray[137].path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">
                   <div className="sub-sp">
                     <img src={weaponArray[137].pathSub} className="img-sub-sp" alt=""/>

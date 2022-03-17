@@ -1,5 +1,3 @@
-import { useRef, useEffect } from 'react';
-import { Tooltip } from 'bootstrap';
 import GearIconFooter from './GearIconFooter';
 // ブランドの画像
 import Batoroika from './images/brands/B00.png';
@@ -113,19 +111,7 @@ const GearIcon = (props) => {
     favoredAbility = empty;
     unfavoredAbility = empty;
   }
-
-  // ギアの名前のツールチップ
-  const tooltipRef = useRef();  
   
-  useEffect(() => {
-    const tooltip = new Tooltip(tooltipRef.current, {
-        title: props.gear.name,
-        placement: 'top',
-        trigger: 'hover',
-    })
-  })
-  
-
   // どの部分かに応じてフッターに違うクラス名を与える
   const className = `${props.part}gear-icon-footer`
   
@@ -137,9 +123,13 @@ const GearIcon = (props) => {
         props.passImagePath(props.gear.path);
         }
       }
-      ref={tooltipRef}
       data-bs-dismiss="modal"
     > 
+      <div className="weapon-icon-tooltip-arrow">
+        <div className="tooltip-container">
+          <span className="weapon-icon-tooltip font-type2">{props.gear.name}</span>
+        </div>
+      </div>
       <img className="gear-icon-img" src={props.gear.path} alt=""/>
       <img className="brand-img" src={brandImagePath} alt=""/>
       <div className={className}>

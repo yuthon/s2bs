@@ -267,6 +267,7 @@
   margin-bottom: 8px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 /* アタマギアのフッター */
 .headgear-icon-footer {
@@ -380,6 +381,7 @@
   margin-bottom: 8px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 .img-weapon {
@@ -1230,7 +1232,7 @@ Btmボタン
   content: '';
   display: block;
   position: absolute;
-  left: -7.8em;
+  left: -7.75em;
   top: 0.65em;
   border-top: 0.3rem solid transparent;
   border-right: 0.35rem solid rgba(0, 0, 0, 0.8);
@@ -1257,8 +1259,8 @@ Btmボタン
   font-size: 0.9rem;
 }
 
-/* 上側に表示する場合だと左右の表示位置を */
-/* 固定できないので矢印を別に作る */
+/* 上側に表示する場合だとフォントサイズ変更の際に左右の表示位置が*/
+/* 大きくズレやすくなるので矢印を別に作る */
 .tooltip-top-arrow {
   width: 0.5rem;
   display: none;
@@ -1274,4 +1276,69 @@ Btmボタン
 .ability-icon:hover .slot-tooltip,
 .ability-icon:hover .tooltip-top-arrow {
   display: block;
+}
+
+/* ギアモーダル内のツールチップ */
+.gear-icon-tooltip {
+  height: 1.8rem;
+  display: none;
+  z-index: 2;
+  padding: 0.2rem 0.4rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0.3em;
+  font-size: 0.9rem;
+}
+
+.gear-icon:hover .gear-icon-tooltip-arrow,
+.gear-icon:hover .gear-icon-tooltip {
+  display: inline;
+}
+
+.tooltip-container {
+  position: absolute;
+  top: -2rem;
+  left: -100px;
+  width: 200px;
+}
+
+.gear-icon-tooltip-arrow {
+  width: 0.5rem;
+  display: none;
+  z-index: 2;
+  border-top: 0.4rem solid rgba(0, 0, 0, 0.8);
+  border-right: 0.3rem solid transparent;
+  border-left: 0.3rem solid transparent;
+  position: absolute;
+  top: -0.55rem;
+  left: 47%;
+}
+
+/* ブキモーダルのツールチップ */
+.weapon-icon-tooltip {
+  height: 1.8rem;
+  display: none;
+  z-index: 2;
+  padding: 0.2rem 0.4rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0.3em;
+  font-size: 0.9rem;
+}
+
+.weapon-icon-tooltip-arrow {
+  width: 0.5rem;
+  display: none;
+  z-index: 2;
+  border-top: 0.4rem solid rgba(0, 0, 0, 0.8);
+  border-right: 0.3rem solid transparent;
+  border-left: 0.3rem solid transparent;
+  position: absolute;
+  top: -0.55rem;
+  left: 47%;
+}
+
+.weapon-icon:hover .weapon-icon-tooltip-arrow,
+.weapon-icon:hover .weapon-icon-tooltip {
+  display: inline;
 }
