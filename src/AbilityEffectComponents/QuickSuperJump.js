@@ -1,4 +1,4 @@
-import quickSuperJump from '../images/ability/QSJ.png';
+import quickSuperJumpImg from '../images/ability/QSJ.png';
 
 const QuickSuperJump = (props) => {
   let abilityPoint = props.abilityPoint;
@@ -24,10 +24,8 @@ const QuickSuperJump = (props) => {
   }
   return (
     <div className="ae-card border d-flex align-items-center">
-      <div className="ae-icon">  
-        <div className="ability-icon sub-slot slot">
-          <img className="subslot-img" src={quickSuperJump} alt=""/>
-        </div>
+      <div className="ability-icon ap-ability-icon">
+        <img className="ap-ability-img" src={quickSuperJumpImg} alt=""/>
       </div>
       <div className="ae-text-md ability-effect">
         <p>スーパージャンプ時間</p>

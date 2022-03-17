@@ -1,4 +1,4 @@
-import inkRecovery from '../images/ability/REC.png';
+import inkRecoveryImg from '../images/ability/REC.png';
 
 const InkRecovery = (props) => {
   let abilityPoint = props.abilityPoint
@@ -102,10 +102,8 @@ const InkRecovery = (props) => {
   
   return (
     <div className="ae-card border d-flex align-items-center">
-      <div className="ae-icon">  
-        <div className="ability-icon sub-slot slot">
-          <img className="subslot-img" src={inkRecovery} alt=""/>
-        </div>
+      <div className="ability-icon ap-ability-icon">
+        <img className="ap-ability-img" src={inkRecoveryImg} alt=""/>
       </div>
       <div className="ae-text-xl ability-effect">
         <p>インクタンク100%までの時間（自インク内でイカ状態）</p>

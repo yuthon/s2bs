@@ -1,5 +1,5 @@
 
-import inkSaverMain from '../images/ability/ISMain.png';
+import inkSaverMainImg from '../images/ability/ISMain.png';
 
 const InkSaverMain = (props) => {
   // 式を簡単に書くためにxに代入する
@@ -740,10 +740,8 @@ const InkSaverMain = (props) => {
   } 
   return (
     <div className="ae-card border d-flex align-items-center">
-      <div className="ae-icon">
-        <div className="ability-icon sub-slot slot">
-          <img className="subslot-img" src={inkSaverMain} alt=""/>
-        </div>
+      <div className="ability-icon ap-ability-icon">
+        <img className="ap-ability-img" src={inkSaverMainImg} alt=""/>
       </div>
       {element}
     </div>

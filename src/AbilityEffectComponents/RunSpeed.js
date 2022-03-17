@@ -436,10 +436,8 @@ const RunSpeed = (props) => {
   console.log(abilityPoint)
   return (
     <div className="ae-card border d-flex align-items-center">
-      <div className="ae-icon">  
-        <div className="ability-icon sub-slot slot">
-          <img className="subslot-img" src={runSpeedImg} alt=""/>
-        </div>
+      <div className="ability-icon ap-ability-icon">
+        <img className="ap-ability-img" src={runSpeedImg} alt=""/>
       </div>
       <div className="ae-text-md ability-effect">
         <p>ヒト移動速度</p>

@@ -1,4 +1,4 @@
-import bombDefenceUp from '../images/ability/BDU.png';
+import bombDefenceUpImg from '../images/ability/BDU.png';
 
 const BombDefenceUp = (props) => {
   let abilityPoint = props.abilityPoint
@@ -66,10 +66,8 @@ const BombDefenceUp = (props) => {
   }
   return (
     <div className="ae-card border d-flex align-items-center">
-      <div className="ae-icon">  
-        <div className="ability-icon sub-slot slot">
-          <img className="subslot-img" src={bombDefenceUp} alt=""/>
-        </div>
+      <div className="ability-icon ap-ability-icon">
+        <img className="ap-ability-img" src={bombDefenceUpImg} alt=""/>
       </div>
       <div className="ae-text-md ability-effect">
         <p>敵センサーの持続時間</p>

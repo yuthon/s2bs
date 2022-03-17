@@ -1091,10 +1091,8 @@ const MainPowerUp = (props) => {
   
   return (
     <div className="ae-card border d-flex align-items-center ">
-      <div className="ae-icon">  
-        <div className="ability-icon sub-slot slot my-1">
-          <img className="subslot-img" src={mpuImg} alt=""/>
-        </div>
+      <div className="ability-icon ap-ability-icon">
+        <img className="ap-ability-img" src={mpuImg} alt=""/>
       </div>
       {element}
     </div>

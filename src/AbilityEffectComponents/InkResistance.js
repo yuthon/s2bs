@@ -65,10 +65,8 @@ const InkResistance = (props) => {
   
   return (
     <div className="ae-card border d-flex align-items-center">
-      <div className="ae-icon">  
-        <div className="ability-icon sub-slot slot">
-          <img className="subslot-img" src={InkResImg} alt=""/>
-        </div>
+      <div className="ability-icon ap-ability-icon">
+        <img className="ap-ability-img" src={InkResImg} alt=""/>
       </div>
       <div className="ae-text-lg3 ability-effect">
         <p>敵インクからダメージを受けるまで </p>

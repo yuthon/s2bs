@@ -1002,8 +1002,18 @@ Btmボタン
   color: white;
 }
 /* ギアパワーのアイコン */
-.ae-icon {
-  width: 45px;
+.ap-ability-icon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+/* ギアパワーの画像 */
+.ap-ability-img {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
 }
 
 .ae-text {

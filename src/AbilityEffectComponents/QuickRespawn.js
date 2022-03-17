@@ -1,4 +1,4 @@
-import qr from '../images/ability/QR.png';
+import qrImg from '../images/ability/QR.png';
 
 const QuickRespawn = (props) => {
   let abilityPoint = props.abilityPoint;
@@ -26,10 +26,8 @@ const QuickRespawn = (props) => {
   }
   return (
     <div className="ae-card border d-flex align-items-center">
-      <div className="ae-icon">  
-        <div className="ability-icon sub-slot slot my-1">
-          <img className="subslot-img" src={qr} alt=""/>
-        </div>
+      <div className="ability-icon ap-ability-icon">
+        <img className="ap-ability-img" src={qrImg} alt=""/>
       </div>
       <div className="ae-text-md ability-effect">
         <p>復活までの時間</p>

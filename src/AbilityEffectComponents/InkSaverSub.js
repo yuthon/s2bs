@@ -177,11 +177,9 @@ const InkSaverSub = (props) => {
   }
   return (
     <div className="ae-card border d-flex align-items-center">
-        <div className="ae-icon">  
-          <div className="ability-icon sub-slot slot">
-            <img className="subslot-img" src={inkSaverSubImg} alt=""/>
-          </div>
-        </div>
+        <div className="ability-icon ap-ability-icon">
+        <img className="ap-ability-img" src={inkSaverSubImg} alt=""/>
+      </div>
         <div className="ae-sub-img">
           <img src={subWeaponImg} className="img-sub-sp" alt=""/>
         </div>

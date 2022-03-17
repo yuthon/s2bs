@@ -1,4 +1,4 @@
-import specialSaver from '../images/ability/SS.png';
+import specialSaverImg from '../images/ability/SS.png';
 
 const SpecialSaver = (props) => {
   let remainingPercent;
@@ -93,10 +93,8 @@ const SpecialSaver = (props) => {
   
   return (
     <div className="ae-card border d-flex align-items-center">
-      <div className="ae-icon">  
-        <div className="ability-icon sub-slot slot my-1">
-          <img className="subslot-img" src={specialSaver} alt=""/>
-        </div>
+      <div className="ability-icon ap-ability-icon">
+        <img className="ap-ability-img" src={specialSaverImg} alt=""/>
       </div>
       <div className="ae-text-md ability-effect">
         <p>スペシャル減少量</p>

@@ -1,4 +1,4 @@
-import specialPower from '../images/ability/SpecialPU.png';
+import specialPowerImg from '../images/ability/SpecialPU.png';
 
 const SpecialPower = (props) => {
   let element;
@@ -356,10 +356,8 @@ const SpecialPower = (props) => {
   
   return (
     <div className="ae-card border d-flex align-items-center">
-      <div className="ae-icon">  
-        <div className="ability-icon sub-slot slot">
-          <img className="subslot-img" src={specialPower} alt=""/>
-        </div>
+      <div className="ability-icon ap-ability-icon">
+        <img className="ap-ability-img" src={specialPowerImg} alt=""/>
       </div>
       {element}
     </div>
