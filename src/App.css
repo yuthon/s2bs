@@ -162,6 +162,7 @@
   left: 4px;
   height: 48px;
   width: 48px;
+  cursor: pointer;
 }
 /* 一番左のサブスロット */
 .subslot-left {
@@ -192,15 +193,6 @@
   border-bottom: 0px;
   /*要素のフレームの周囲にシャドウ効果*/
   box-shadow: 0 0 0 1px #000;
-  cursor: pointer;
-}
-
-/* メインスロットのsvgの位置調整 */
-.mainslot-svg {
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  cursor: pointer;
 }
 
 /*メインスロットの画像の大きさと位置調整*/
@@ -225,6 +217,7 @@
 .sub-slot {
   height: 40px;
   width: 40px;
+  cursor: pointer;
 }
 
 /*サブスロットの画像の大きさと位置調整*/
