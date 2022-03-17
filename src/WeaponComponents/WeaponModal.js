@@ -338,19 +338,6 @@ const WeaponModal = (props) => {
     }
   };
 
-  // useEffect(() => {
-  //   var tooltipDeleteList = [].slice.call(document.querySelectorAll('[role="tooltip"]'));
-  //   if (tooltipDeleteList.length) {
-  //     for (let i = 0; i < tooltipDeleteList.length; i++) {
-  //       tooltipDeleteList[i].style.display = "none"
-  //     }
-  //   }
-  //   const tooltipTriggerList = [].slice.call(document.querySelectorAll('[class="weapon-icon"]'));
-  //   const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  //     return new Tooltip(tooltipTriggerEl);
-  //   });
-  // })
-
   console.log("WMrendered!")
 
   return (

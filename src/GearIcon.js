@@ -125,9 +125,9 @@ const GearIcon = (props) => {
       }
       data-bs-dismiss="modal"
     > 
-      <div className="weapon-icon-tooltip-arrow">
+      <div className="gear-icon-tooltip-arrow">
         <div className="tooltip-container">
-          <span className="weapon-icon-tooltip font-type2">{props.gear.name}</span>
+          <span className="gear-icon-tooltip font-type2">{props.gear.name}</span>
         </div>
       </div>
       <img className="gear-icon-img" src={props.gear.path} alt=""/>
