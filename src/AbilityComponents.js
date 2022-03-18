@@ -57,7 +57,7 @@ const AbilityComponents = (props) => {
   const [subSlotNumber, setSubSlotNumber] = useState(null);
   
   return (
-    <><div className="col-2 px-0" id="gear-components">
+    <><div className="col-2" id="gear-components">
       <SubSlotModal
         slotNumber={subSlotNumber}
         passAbilityName0={passSubAbilityName0}
@@ -107,22 +107,20 @@ const AbilityComponents = (props) => {
         passImagePath={passMainAbilityImagePath1}
         passAbilityName={passMainAbilityName1}
       />
-      <div>
-        <Shoes
-          passShoesGearImagePath={props.shoesImagePath}
-          passSubAbilityImagePath6={subAbilityImagePath6}
-          passSubAbilityImagePath7={subAbilityImagePath7}
-          passSubAbilityImagePath8={subAbilityImagePath8}
-          passMainAbilityImagePath={mainAbilityImagePath2}
-          setSubSlotNumber={setSubSlotNumber}
-        />
-        <MainSlotModal2
-          passImagePath={passMainAbilityImagePath2}
-          passAbilityName={passMainAbilityName2}
-        />
-      </div>
+      <Shoes
+        passShoesGearImagePath={props.shoesImagePath}
+        passSubAbilityImagePath6={subAbilityImagePath6}
+        passSubAbilityImagePath7={subAbilityImagePath7}
+        passSubAbilityImagePath8={subAbilityImagePath8}
+        passMainAbilityImagePath={mainAbilityImagePath2}
+        setSubSlotNumber={setSubSlotNumber}
+      />
+      <MainSlotModal2
+        passImagePath={passMainAbilityImagePath2}
+        passAbilityName={passMainAbilityName2}
+      />
     </div>
-    <div className="font-type2 col-5" id="ae-section">
+    <div className="font-type2 col-6" id="ae-section">
       <WeaponModal
         weaponStatus={passWeaponStatus} 
       />

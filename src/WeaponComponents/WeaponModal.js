@@ -338,8 +338,6 @@ const WeaponModal = (props) => {
     }
   };
 
-  console.log("WMrendered!")
-
   return (
     <div className="modal fade" id="weaponModal" tabIndex="-1" aria-labelledby="weaponModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-lg">

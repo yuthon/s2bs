@@ -55,7 +55,7 @@ const Main = () => {
   const [teamColor, passTeamColor] = useState("ffb23d");
   
   return(
-    <div className="container main">
+    <div className="container" id="main">
       <HeadGearModal
         chosenGear={headGear}
         setChosenGear={setHeadGear}
@@ -95,7 +95,7 @@ const Main = () => {
         passBottoms={passBottoms}
       />
       <div className="row">  
-        <div className="col-5" id="three-section">
+        <div className="col-sm-4" id="three-section">
           <div style={{ height: '100vh', width: '100%' }}>
             <div id="character-btn">
               <button type="button" className="btn btn-dark font-type1" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
@@ -104,7 +104,7 @@ const Main = () => {
             </div>
             <Canvas
               style={{ background: '#f0f0e0' }}
-              camera={{ position: [0, 11, 20] }}
+              camera={{ position: [0, 11, 18] }}
             >
               <ambientLight
                 color={0xffffff}

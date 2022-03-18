@@ -105,18 +105,12 @@ const InkRecovery = (props) => {
       <div className="ability-icon ap-ability-icon">
         <img className="ap-ability-img" src={inkRecoveryImg} alt=""/>
       </div>
-      <div className="ae-text-xl ability-effect">
-        <p>インクタンク100%までの時間（自インク内でイカ状態）</p>
-        <p>インクタンク100%までの時間（ヒト状態）</p>
-      </div>
-      <div className="ae-colon-xsm ability-effect">
-        <p>:</p>
-        <p>:</p>
-      </div>
-      <div className="ae-effect-xsm ability-effect">
-        <p>{secondInInk}秒</p>
-        <p>{secondStanding}秒</p>
-      </div>
+      <p>インクタンク100%までの時間（自インク内でイカ状態）</p>
+      <p>:</p>
+      <p>{secondInInk}秒</p>
+      <p>インクタンク100%までの時間（ヒト状態）</p>
+      <p>:</p>
+      <p>{secondStanding}秒</p>
     </div>
   );
 }

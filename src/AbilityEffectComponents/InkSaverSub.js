@@ -1,17 +1,17 @@
 import inkSaverSubImg from '../images/ability/ISSub.png';
-import CurlingBombImg from '../images/subSP/Wsb_Bomb_Curling.png';
-import FizzyBombImg from '../images/subSP/Wsb_Bomb_Fizzy.png';
-import BurstBombImg from '../images/subSP/Wsb_Bomb_Burst.png';
-import AutoBombImg from '../images/subSP/Wsb_Bomb_Auto.png';
-import SplatBombImg from '../images/subSP/Wsb_Bomb_Splat.png';
-import SuctionBombImg from '../images/subSP/Wsb_Bomb_Suction.png';
-import TorpedoImg from '../images/subSP/Wsb_Torpedo.png';
-import SquidBeakonImg from '../images/subSP/Wsb_SquidBeakon.png';
-import PointSensorImg from '../images/subSP/Wsb_PointSensor.png';
-import ToxicMistImg from '../images/subSP/Wsb_ToxicMist.png';
-import SplashWallImg from '../images/subSP/Wsb_SplashWall.png';
-import SprinklerImg from '../images/subSP/Wsb_Sprinkler.png';
-import InkMineImg from '../images/subSP/Wsb_InkMine.png';
+// import CurlingBombImg from '../images/subSP/Wsb_Bomb_Curling.png';
+// import FizzyBombImg from '../images/subSP/Wsb_Bomb_Fizzy.png';
+// import BurstBombImg from '../images/subSP/Wsb_Bomb_Burst.png';
+// import AutoBombImg from '../images/subSP/Wsb_Bomb_Auto.png';
+// import SplatBombImg from '../images/subSP/Wsb_Bomb_Splat.png';
+// import SuctionBombImg from '../images/subSP/Wsb_Bomb_Suction.png';
+// import TorpedoImg from '../images/subSP/Wsb_Torpedo.png';
+// import SquidBeakonImg from '../images/subSP/Wsb_SquidBeakon.png';
+// import PointSensorImg from '../images/subSP/Wsb_PointSensor.png';
+// import ToxicMistImg from '../images/subSP/Wsb_ToxicMist.png';
+// import SplashWallImg from '../images/subSP/Wsb_SplashWall.png';
+// import SprinklerImg from '../images/subSP/Wsb_Sprinkler.png';
+// import InkMineImg from '../images/subSP/Wsb_InkMine.png';
 
 const InkSaverSub = (props) => {
   let subWeaponName = props.weaponStatus.sub;
@@ -61,7 +61,7 @@ const InkSaverSub = (props) => {
     for (let i=0; i < 40; i++) {
       if (Beakon[i].AP === abilityPoint) {
         inkConsumption = Beakon[i].IC;
-        subWeaponImg = SquidBeakonImg;
+        // subWeaponImg = SquidBeakonImg;
       }
     }
     // 数値を％になおす
@@ -70,7 +70,7 @@ const InkSaverSub = (props) => {
     for (let i=0; i < 40; i++) {
       if (InkMine[i].AP === abilityPoint) {
         inkConsumption = InkMine[i].IC;
-        subWeaponImg = InkMineImg;
+        // subWeaponImg = InkMineImg;
       }
     }
     // 数値を％になおす
@@ -79,7 +79,7 @@ const InkSaverSub = (props) => {
     for (let i=0; i < 40; i++) {
       if (ToxicMist[i].AP === abilityPoint) {
         inkConsumption = ToxicMist[i].IC;
-        subWeaponImg = ToxicMistImg;
+        // subWeaponImg = ToxicMistImg;
       }
     }
     // 数値を％になおす
@@ -88,7 +88,7 @@ const InkSaverSub = (props) => {
     for (let i=0; i < 40; i++) {
       if (Sencor[i].AP === abilityPoint) {
         inkConsumption = Sencor[i].IC;
-        subWeaponImg = PointSensorImg;
+        // subWeaponImg = PointSensorImg;
       }
     }
     // 数値を％になおす
@@ -97,7 +97,7 @@ const InkSaverSub = (props) => {
     for (let i=0; i < 40; i++) {
       if (SuctionBomb[i].AP === abilityPoint) {
         inkConsumption = SuctionBomb[i].IC;
-        subWeaponImg = SuctionBombImg;
+        // subWeaponImg = SuctionBombImg;
       }
     }
     // 数値を％になおす
@@ -106,7 +106,7 @@ const InkSaverSub = (props) => {
     for (let i=0; i < 40; i++) {
       if (BurstBomb[i].AP === abilityPoint) {
         inkConsumption = BurstBomb[i].IC;
-        subWeaponImg = BurstBombImg;
+        // subWeaponImg = BurstBombImg;
       }
     }
     // 数値を％になおす
@@ -115,7 +115,7 @@ const InkSaverSub = (props) => {
     for (let i=0; i < 40; i++) {
       if (SplatBomb[i].AP === abilityPoint) {
         inkConsumption = SplatBomb[i].IC;
-        subWeaponImg = SplatBombImg;
+        // subWeaponImg = SplatBombImg;
       }
     }
     // 数値を％になおす
@@ -124,7 +124,7 @@ const InkSaverSub = (props) => {
     for (let i=0; i < 40; i++) {
       if (AutoBomb[i].AP === abilityPoint) {
         inkConsumption = AutoBomb[i].IC;
-        subWeaponImg = AutoBombImg;
+        // subWeaponImg = AutoBombImg;
       }
     }
     // 数値を％になおす
@@ -133,7 +133,7 @@ const InkSaverSub = (props) => {
     for (let i=0; i < 40; i++) {
       if (Sprinkler[i].AP === abilityPoint) {
         inkConsumption = Sprinkler[i].IC;
-        subWeaponImg = SprinklerImg;
+        // subWeaponImg = SprinklerImg;
       }
     }
     // 数値を％になおす
@@ -142,7 +142,7 @@ const InkSaverSub = (props) => {
     for (let i=0; i < 40; i++) {
       if (FizzyBomb[i].AP === abilityPoint) {
         inkConsumption = FizzyBomb[i].IC;
-        subWeaponImg = FizzyBombImg;
+        // subWeaponImg = FizzyBombImg;
       }
     }
     // 数値を％になおす
@@ -151,7 +151,7 @@ const InkSaverSub = (props) => {
     for (let i=0; i < 40; i++) {
       if (CurlingBomb[i].AP === abilityPoint) {
         inkConsumption = CurlingBomb[i].IC;
-        subWeaponImg = CurlingBombImg;
+        // subWeaponImg = CurlingBombImg;
       }
     }
     // 数値を％になおす
@@ -160,7 +160,7 @@ const InkSaverSub = (props) => {
     for (let i=0; i < 40; i++) {
       if (Torpedo[i].AP === abilityPoint) {
         inkConsumption = Torpedo[i].IC;
-        subWeaponImg = TorpedoImg;
+        // subWeaponImg = TorpedoImg;
       }
     }
     // 数値を％になおす
@@ -169,7 +169,7 @@ const InkSaverSub = (props) => {
     for (let i=0; i < 40; i++) {
       if (SplashWall[i].AP === abilityPoint) {
         inkConsumption = SplashWall[i].IC;
-        subWeaponImg = SplashWallImg;
+        // subWeaponImg = SplashWallImg;
       }
     }
     // 数値を％になおす
@@ -177,21 +177,15 @@ const InkSaverSub = (props) => {
   }
   return (
     <div className="ae-card border d-flex align-items-center">
-        <div className="ability-icon ap-ability-icon">
+      <div className="ability-icon ap-ability-icon">
         <img className="ap-ability-img" src={inkSaverSubImg} alt=""/>
       </div>
-      <div className="ae-sub-img">
+      {/* <div className="ae-sub-img">
         <img src={subWeaponImg} className="img-sub-sp" alt=""/>
-      </div>
-      <div className="ae-text-sm ability-effect">
-        <p>インク消費量</p>
-      </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{inkConsumption}％</p>
-      </div>
+      </div> */}
+      <p>インク消費量</p>
+      <p>:</p>
+      <p>{inkConsumption}％</p>
     </div>
   );
 };

@@ -84,8 +84,32 @@
 
 /* 3dモデルの表示領域 */
 
-.main {
+#main {
   position: relative;
+  /* padding-left: 0rem !important; */
+  /* width: 80%; */
+}
+
+#three-section {
+  padding: 0rem;
+  /* width: 38%; */
+  position: relative;
+}
+
+#gear-components {
+  position: relative;
+  padding-top: 3rem;
+}
+
+#weapon-container {
+  padding-left: 0px;
+}
+
+#ae-section {
+  height: 100vh;
+  overflow: auto;
+  padding-left: 4rem;
+  padding-top: 3rem;
 }
 
 .font-type1 {
@@ -100,57 +124,29 @@
 /* ギア関連  */
 /*  */
 
-#gear-components {
-  position: relative;
-}
-
 /* アタマ　フク　クツで共通の大きさ */
 .gear-card {
   height: 205px;
   width: 200px;
   border-radius: 30px;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
 }
 
 /* アタマ部分 */
 #headgear-card {
-  background: repeating-linear-gradient(
-    45deg,
-    #d63e53,
-    #d63e53 20px,
-    #f0624a 20px,
-    #f0624a 40px
-  );
-  margin-top: 20px;
   margin-bottom: 20px;
 }
 
 /* フク部分 */
 #clothesgear-card {
-  background: repeating-linear-gradient(
-    45deg,
-    #19e1ba,
-    #19e1ba 20px,
-    #06be8a 20px,
-    #06be8a 40px
-  );
-  margin-top: 20px;
   margin-bottom: 20px;
 }
 
 /* クツ部分 */
 #shoesgear-card {
-  background: repeating-linear-gradient(
-    45deg,
-    #f07807,
-    #f07807 20px,
-    #d25012 20px,
-    #d25012 40px
-  );
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: auto;
 }
 /* ギア表示のヘッダー部分 */
 
@@ -555,10 +551,6 @@
   transition: 0.2s;
   background: #ffffff;
   cursor: pointer;
-}
-
-.weapon {
-  float: left;
 }
 
 .modal-close-btn {
@@ -1219,12 +1211,6 @@ Btmボタン
   margin-right: 20px;
 }
 
-#ae-section {
-  height: 100vh;
-  overflow: auto;
-  padding-left: 0px;
-}
-
 #ae-section::-webkit-scrollbar,
 .gearicons-section::-webkit-scrollbar {
   width: 10px;
@@ -1247,12 +1233,6 @@ Btmボタン
 
 #ae-container {
   padding-left: 0px;
-}
-
-#three-section {
-  padding-left: 0px;
-  padding-right: 0px;
-  position: relative;
 }
 
 #character-btn {
@@ -1281,11 +1261,6 @@ Btmボタン
   background-color: rgba(0, 0, 0, 0.8);
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-}
-
-#weapon-container {
-  padding-left: 0px;
-  margin-top: 20px;
 }
 
 .weapon-sub-sp {

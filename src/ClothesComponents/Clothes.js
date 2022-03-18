@@ -6,7 +6,7 @@ import SubSlot5 from '../SlotComponents/SubSlot5';
 
 const Clothes = (props) => {
   return(
-    <div className="container px-0 gear-card" id="clothesgear-card">
+    <div className="gear-card clothes-stripe" id="clothesgear-card">
       <p className="gear-header font-type1">フク</p>
       <ClothesGear
         passImagePath={props.passClothesGearImagePath}
