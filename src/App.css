@@ -1467,6 +1467,14 @@ Btmボタン
   padding-top: 10px;
 }
 
+#subSlotModal {
+  height: 280px;
+  position: absolute;
+  left: -40px;
+  top: 245px;
+  z-index: 5;
+}
+
 /* モーダル上部の矢印 */
 #mainSlotModal0:before,
 #mainSlotModal1:before {

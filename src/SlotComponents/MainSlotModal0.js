@@ -29,7 +29,7 @@ const MainSlotModal0 = (props) => {
         <div className="ability-modal" id="mainSlotModal0">
           <button type="button" className="btn-close btn-close-white" onClick={()=>{closeGearModal()}}></button>
           <div className="ability-list d-flex flex-wrap">
-            <div
+          <div
               className="ability-icon ability"
               onClick={()=>{
                 props.passImagePath(empty);

@@ -1,12 +1,18 @@
 
 const SubSlot0 = (props) => {
-  
+  // モーダルを表示する関数
+  const openGearModal = function() {
+    let target = document.getElementById("subSlotModal")
+    target.style.display = "block"
+  }
+
   return(
     <div
       className="ability-icon sub-slot subslot-left"
-      data-bs-toggle="modal"
-      data-bs-target="#subSlotModal"
-      onClick={()=>{props.setSubSlotNumber(0)}}
+      onClick={()=>{
+        props.setSubSlotNumber(0);
+        openGearModal();
+      }}
     >
       <div className="tooltip-top-arrow">
         <p className="slot-tooltip font-type2">クリックでギアパワーを変更</p>
