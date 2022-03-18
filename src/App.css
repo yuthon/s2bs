@@ -1441,22 +1441,52 @@ Btmボタン
 /* アビリティモーダル関連 */
 /*  */
 
-/* モーダルの大きさ */
+/* モーダルの大きさと位置 */
 #mainSlotModal0 {
   width: 200px;
   height: 450px;
   position: absolute;
-  top: 240px;
+  top: 245px;
   z-index: 5;
 }
 
+#mainSlotModal1 {
+  width: 200px;
+  height: 450px;
+  position: absolute;
+  top: 470px;
+  z-index: 5;
+}
+
+#mainSlotModal2 {
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  top: 200px;
+  z-index: 5;
+  padding-top: 10px;
+}
+
 /* モーダル上部の矢印 */
-#mainSlotModal0:before {
+#mainSlotModal0:before,
+#mainSlotModal1:before {
   border-right: 10px solid transparent;
   border-bottom: 20px solid #6b6b6b;
   border-left: 10px solid transparent;
   position: absolute;
   top: -20px;
+  left: 18px;
+  z-index: 6;
+  display: block;
+  content: '';
+}
+
+#mainSlotModal2:after {
+  border-right: 10px solid transparent;
+  border-top: 20px solid #6b6b6b;
+  border-left: 10px solid transparent;
+  position: absolute;
+  bottom: -20px;
   left: 18px;
   z-index: 6;
   display: block;

@@ -20,11 +20,26 @@ import thermalInk from '../images/ability/TI.png';
 import abilityDoubler from '../images/ability/AD.png';
 
 const MainSlotModal1 = (props) => {
+   // モーダルを閉じる関数
+   const closeGearModal = function() {
+    let target = document.getElementById("mainSlotModal1")
+    target.style.display = "none"
+  }
+
   return (
-    <div className="modal fade" id="mainSlotModal1" tabIndex="-1" aria-labelledby="MainSlotModal1Label" aria-hidden="true">
-      <div className="modal-dialog">  
-        <div className="modal-content container">  
-          <div className="ability-list">
+    <div className="ability-modal" id="mainSlotModal1">
+          <button type="button" className="btn-close btn-close-white" onClick={()=>{closeGearModal()}}></button>
+          <div className="ability-list d-flex flex-wrap">
+            <div
+              className="ability-icon ability"
+              onClick={()=>{
+                props.passImagePath(empty);
+                props.passAbilityName("empty");
+                }
+              }
+            >
+              <img className="abilitymodal-img" src={empty} alt="スロットを空にする"/>
+            </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
@@ -33,7 +48,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src = {inkSaverMain} alt="インク効率アップ（メイン）"/>
+              <img className="abilitymodal-img" src = {inkSaverMain} alt="インク効率アップ（メイン）"/>
             </div>
             <div
               className="ability-icon ability"
@@ -43,7 +58,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={inkSaverSub} alt= "インク効率アップ（サブ）"/>
+              <img className="abilitymodal-img" src={inkSaverSub} alt= "インク効率アップ（サブ）"/>
             </div>
             <div
               className="ability-icon ability"
@@ -53,7 +68,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={inkRecorvery} alt= "インク回復アップ"/>
+              <img className="abilitymodal-img" src={inkRecorvery} alt= "インク回復アップ"/>
             </div>
             <div
               className="ability-icon ability"
@@ -63,7 +78,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={runSpeed} alt= "ヒト移動速度アップ"/>
+              <img className="abilitymodal-img" src={runSpeed} alt= "ヒト移動速度アップ"/>
             </div>
             <div
               className="ability-icon ability"
@@ -73,7 +88,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={swimSpeed} alt= "イカ移動速度アップ"/>
+              <img className="abilitymodal-img" src={swimSpeed} alt= "イカ移動速度アップ"/>
             </div>
             <div
               className="ability-icon ability"
@@ -83,7 +98,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={specialCharge} alt= "スペシャル増加アップ"/>
+              <img className="abilitymodal-img" src={specialCharge} alt= "スペシャル増加アップ"/>
             </div>
             <div
               className="ability-icon ability"
@@ -93,7 +108,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={specialSaver} alt= "スペシャル減少量ダウン"/>
+              <img className="abilitymodal-img" src={specialSaver} alt= "スペシャル減少量ダウン"/>
             </div>
             <div
               className="ability-icon ability"
@@ -103,7 +118,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={specialPower} alt= "スペシャル性能アップ"/>
+              <img className="abilitymodal-img" src={specialPower} alt= "スペシャル性能アップ"/>
             </div>
             <div
               className="ability-icon ability"
@@ -113,7 +128,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={qr} alt= "復活時間短縮"/>
+              <img className="abilitymodal-img" src={qr} alt= "復活時間短縮"/>
             </div>
             <div
               className="ability-icon ability"
@@ -123,7 +138,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={quickSuperJump} alt= "スーパージャンプ時間短縮"/>
+              <img className="abilitymodal-img" src={quickSuperJump} alt= "スーパージャンプ時間短縮"/>
             </div>
             <div
               className="ability-icon ability"
@@ -133,7 +148,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={subPower} alt= "サブ性能アップ"/>
+              <img className="abilitymodal-img" src={subPower} alt= "サブ性能アップ"/>
             </div>
             <div
               className="ability-icon ability"
@@ -143,7 +158,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={inkRes} alt= "相手インク影響軽減"/>
+              <img className="abilitymodal-img" src={inkRes} alt= "相手インク影響軽減"/>
             </div>
             <div
               className="ability-icon ability"
@@ -153,7 +168,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={bombDefence} alt= "爆風軽減"/>
+              <img className="abilitymodal-img" src={bombDefence} alt= "爆風軽減"/>
             </div>
             <div
               className="ability-icon ability"
@@ -163,7 +178,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={mpu} alt= "メイン性能アップ"/>
+              <img className="abilitymodal-img" src={mpu} alt= "メイン性能アップ"/>
             </div>
             <div
               className="ability-icon ability"
@@ -173,7 +188,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={ninjaSquid} alt= "イカニンジャ"/>
+              <img className="abilitymodal-img" src={ninjaSquid} alt= "イカニンジャ"/>
             </div>
             <div
               className="ability-icon ability"
@@ -183,7 +198,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={haunt} alt= "リベンジ"/>
+              <img className="abilitymodal-img" src={haunt} alt= "リベンジ"/>
             </div>
             <div
               className="ability-icon ability"
@@ -193,7 +208,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={respawnPunisher} alt= "復活ペナルティアップ"/>
+              <img className="abilitymodal-img" src={respawnPunisher} alt= "復活ペナルティアップ"/>
             </div>
             <div
               className="ability-icon ability"
@@ -203,7 +218,7 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={thermalInk} alt= "サーマルインク"/>
+              <img className="abilitymodal-img" src={thermalInk} alt= "サーマルインク"/>
             </div>
             <div
               className="ability-icon ability"
@@ -213,27 +228,10 @@ const MainSlotModal1 = (props) => {
                 }
               }
             >
-              <img src={abilityDoubler} alt="アビリティ効果2倍"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.passImagePath(empty);
-                props.passAbilityName("empty");
-                }
-              }
-            >
-              <img src={empty} alt="スロットを空にする"/>
+              <img className="abilitymodal-img" src={abilityDoubler} alt="アビリティ効果2倍"/>
             </div>
           </div>
-          <button
-            className="modal-close-btn"
-          >
-            とじる
-          </button>
         </div>
-      </div>
-    </div>
   );
 };
 

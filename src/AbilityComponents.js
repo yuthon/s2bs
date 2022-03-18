@@ -95,21 +95,18 @@ const AbilityComponents = (props) => {
         passImagePath={passMainAbilityImagePath0}
         passAbilityName={passMainAbilityName0}
       />
-      <div>
-        <Clothes
-          passClothesGearImagePath={props.clothesImagePath}
-          passSubAbilityImagePath3={subAbilityImagePath3}
-          passSubAbilityImagePath4={subAbilityImagePath4}
-          passSubAbilityImagePath5={subAbilityImagePath5}
-          passMainAbilityImagePath={mainAbilityImagePath1}
-          setSubSlotNumber={setSubSlotNumber}  
-        />
-        
-        <MainSlotModal1
-          passImagePath={passMainAbilityImagePath1}
-          passAbilityName={passMainAbilityName1}
-        />
-      </div>
+      <Clothes
+        passClothesGearImagePath={props.clothesImagePath}
+        passSubAbilityImagePath3={subAbilityImagePath3}
+        passSubAbilityImagePath4={subAbilityImagePath4}
+        passSubAbilityImagePath5={subAbilityImagePath5}
+        passMainAbilityImagePath={mainAbilityImagePath1}
+        setSubSlotNumber={setSubSlotNumber}  
+      />
+      <MainSlotModal1
+        passImagePath={passMainAbilityImagePath1}
+        passAbilityName={passMainAbilityName1}
+      />
       <div>
         <Shoes
           passShoesGearImagePath={props.shoesImagePath}
