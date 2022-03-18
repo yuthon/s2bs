@@ -19,6 +19,7 @@ import WakabaIkaT from './images/gear/Clt_FST001.png';
 import Canvas_White from './images/gear/Shs_FST000.png';
 import Headband_White from './images/gear/Hed_FST000.png';
 import Jr_0 from './images/weapon/Splattershot Jr.png';
+import inkRecovery from './images/ability/REC.png';
 
 import { useState } from 'react';
 // 3dモデル
@@ -37,18 +38,12 @@ extend({ OrbitControls });
 const Main = () => {
   //ブキの名前とその他の情報を管理
   const [weaponStatus, passWeaponStatus] = useState({name:"わかばシューター", sub:"SplatBomb", special:"Armor", sp:180, weight:"light", path:Jr_0});
-  //選択されたアタマの画像のパスを管理
-  const [headImagePath, setHeadImagePath] = useState(Headband_White);
-  //選択されたフクの画像のパスを管理
-  const [clothesImagePath, setClothesImagePath] = useState(WakabaIkaT);
-  //選択されたクツの画像のパスを管理
-  const [shoesImagePath, setShoesImagePath] = useState(Canvas_White);
-  //選択されたアタマの名前を管理
-  const [headGear, setHeadGear] = useState("HB_Headband_White");
-  //選択されたフクの名前を管理
-  const [clothesGear, setClothesGear] = useState("WakabaIkaT");
-  //選択されたクツの名前を管理
-  const [shoesGear, setShoesGear] = useState("Canvas_White");
+  //選択されたアタマギアを管理
+  const [headGear, setHeadGear] = useState({name:"ヘッドバンド ホワイト", path:Headband_White, id:"HB_Headband_White", brand:"バトロイカ",default:inkRecovery});
+  //選択されたフクギアを管理
+  const [clothesGear, setClothesGear] = useState({name:"わかばイカT",path:WakabaIkaT,id:"WakabaIkaT",brand:"バトロイカ"});
+  //選択されたクツギアを管理
+  const [shoesGear, setShoesGear] = useState({name:"キャンバス ホワイト",path:Canvas_White,id:"Canvas_White",brand:"クラーゲス"});
   //キャラ設定モーダルを管理
   const [characterType, passCharacterType] = useState("IML");
   const [skinColor, passSkinColor] = useState("#ffd1cc");
@@ -60,18 +55,18 @@ const Main = () => {
   const [teamColor, passTeamColor] = useState("ffb23d");
   
   return(
-    <div className="container">
+    <div className="container main">
       <HeadGearModal
-        passChosenGear={setHeadGear}
-        passImagePath={setHeadImagePath}
+        chosenGear={headGear}
+        setChosenGear={setHeadGear}
       />
       <ClothesGearModal
-        passChosenGear={setClothesGear}
-        passImagePath={setClothesImagePath}
+        chosenGear={clothesGear}
+        setChosenGear={setClothesGear}
       />
       <ShoesGearModal
-        passChosenGear={setShoesGear}
-        passImagePath={setShoesImagePath}
+        chosenGear={shoesGear}
+        setChosenGear={setShoesGear}
       />
       <CharacterTypeModal
         passCharacterType={passCharacterType}
@@ -127,9 +122,9 @@ const Main = () => {
               <axesHelper args={[5]} />
               <Suspense fallback={null}>
                 <Model
-                  headGear={headGear}
-                  clothesGear={clothesGear}
-                  shoesGear={shoesGear}
+                  headGear={headGear.id}
+                  clothesGear={clothesGear.id}
+                  shoesGear={shoesGear.id}
                   CT={characterType}
                   skinColor={skinColor}
                   eyeColor={eyeColor}
@@ -141,9 +136,9 @@ const Main = () => {
           </div>
         </div>
         <AbilityComponents 
-          headImagePath={headImagePath}
-          clothesImagePath={clothesImagePath}
-          shoesImagePath={shoesImagePath}
+          headImagePath={headGear.path}
+          clothesImagePath={clothesGear.path}
+          shoesImagePath={shoesGear.path}
         />
       </div>
     </div>

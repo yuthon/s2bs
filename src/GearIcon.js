@@ -1,5 +1,3 @@
-import GearIconFooter from './GearIconFooter';
-// ブランドの画像
 import Batoroika from './images/brands/B00.png';
 import Aironic from './images/brands/B01.png';
 import Kuragesu from './images/brands/B02.png';
@@ -17,32 +15,51 @@ import Enperry from './images/brands/B16.png';
 import Tatakikensaki from './images/brands/B17.png';
 import Kumasan from './images/brands/B97.png';
 import Atarimeido from './images/brands/B98.png';
-// ギアパワーの画像
-import inkSaverMain from './images/ability/ISMain.png';
-import inkSaverSub from './images/ability/ISSub.png';
-import inkRecovery from './images/ability/REC.png';
-import runSpeed from './images/ability/RSU.png';
-import swimSpeed from './images/ability/SSU.png';
-import specialCharge from './images/ability/SCU.png';
-import specialSaver from './images/ability/SS.png';
-import specialPower from './images/ability/SpecialPU.png';
-import qr from './images/ability/QR.png';
-import quickSuperJump from './images/ability/QSJ.png';
-import subPower from './images/ability/SubPU.png';
-import inkRes from './images/ability/RES.png';
-import bombDefence from './images/ability/BDU.png';
-import mpu from './images/ability/MPU.png';
-import empty from './images/ability/empty.png';
 
 const GearIcon = (props) => {
-  
+  // ブランド名に応じてブランドロゴの画像のpathを返す
+  const brandDependency = (brand) => {
+    if (brand === "バトロイカ") {
+      return Batoroika
+    } else if (brand === "アイロニック") {
+      return Aironic
+    } else if (brand === "クラーゲス") {
+      return Kuragesu
+    } else if (brand === "ロッケンベルグ") {
+      return Rockenberg
+    } else if (brand === "エゾッコ") {
+      return Ezokko
+    } else if (brand === "フォーリマ") {
+      return Forima
+    } else if (brand === "ホッコリー") {
+      return Hokkori
+    } else if (brand === "ホタックス") {
+      return Hotakkusu
+    } else if (brand === "ジモン") {
+      return Zimon
+    } else if (brand === "シグレ二") {
+      return Sigureni
+    } else if (brand === "アロメ") {
+      return Arome
+    } else if (brand === "ヤコ") {
+      return Yako
+    } else if (brand === "アナアキ") {
+      return Anaaki
+    } else if (brand === "エンペリー") {
+      return Enperry
+    } else if (brand === "タタキケンサキ") {
+      return Tatakikensaki
+    } else if (brand === "クマサン商会") {
+      return Kumasan
+    } else if (brand === "アタリメイド") {
+      return Atarimeido
+    }
+  }
   return (
     <div
       className="gear-icon"
       onClick={()=>{
-        props.passChosenGear(props.gear.id);
-        props.passImagePath(props.gear.path);
-        props.setGear(props.gear);
+        props.setChosenGear(props.gear);
         }
       }
     > 
@@ -51,6 +68,7 @@ const GearIcon = (props) => {
           <span className="gear-icon-tooltip font-type2">{props.gear.name}</span>
         </div>
       </div>
+      <img className="brand-img-small" src={brandDependency(props.gear.brand)} alt=""/>
       <img className="gear-icon-img" src={props.gear.path} alt=""/>
     </div>
   )

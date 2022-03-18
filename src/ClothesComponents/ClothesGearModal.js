@@ -579,7 +579,6 @@ const gearsSortedByName = gears.slice().sort((a, b) => (a.name > b.name) ? 1 : -
 const ClothesGearModal = (props) => {
   // 表示する配列の管理
   const [gearsArray, setArray] = useState(gears);
-  const [clothesGear, setClothesGear] = useState({name:"わかばイカT",path:WakabaIkaT,id:"WakabaIkaT",brand:"バトロイカ"});
 
   const selectBoxRef = useRef();
 
@@ -631,13 +630,18 @@ const ClothesGearModal = (props) => {
     }
   }
 
+  let target;
+
+  const closeGearModal = function() {
+    target = document.getElementById("clothesGearModal")
+    target.style.display = "none"
+  }
+
   return (
-    <div className="modal fade" id="clothesGearModal" tabIndex="-1" aria-labelledby="clothesGearModalLabel" aria-hidden="true">  
-      <div className="modal-dialog modal-lg">
-        <div className="modal-content gear-modal font-type2 bg-secondary">
+    <div className="gear-modal bg-secondary font-type2 text-white" id="clothesGearModal">
           <div className="modal-header">
             <h5 className="modal-title" id="weaponModalLabel">ギアを選択</h5>
-            <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" className="btn-close btn-close-white" onClick={()=>{closeGearModal()}}></button>
           </div>
           <div className="container pt-2 pb-1">
             <div className="d-flex align-items-center">
@@ -662,11 +666,11 @@ const ClothesGearModal = (props) => {
               <div
                 className="chosen-gear-icon"
               >
-                <img className="chosen-gear-icon-img" src={clothesGear.path} alt=""/>
-                <img className="brand-img" src={brandDependency(clothesGear.brand).brandImgPath} alt=""/>
+                <img className="chosen-gear-icon-img" src={props.chosenGear.path} alt=""/>
+                <img className="brand-img" src={brandDependency(props.chosenGear.brand).brandImgPath} alt=""/>
                 <div className="clothes-stripe gear-icon-footer">  
                   <div className="ability-icon default-ability">
-                    <img className="default-ability-img" src={clothesGear.default} alt=""/>
+                    <img className="default-ability-img" src={props.chosenGear.default} alt=""/>
                   </div>
                   <div className="brand-ability">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 384 512">
@@ -676,7 +680,7 @@ const ClothesGearModal = (props) => {
                         fill="#dfff00"
                       />
                     </svg>
-                    <img className="img-gear-icon-ability" src={brandDependency(clothesGear.brand).favoredAbility} alt=""/>
+                    <img className="img-gear-icon-ability" src={brandDependency(props.chosenGear.brand).favoredAbility} alt=""/>
                   </div>
                   <div className="brand-ability">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 384 512">
@@ -686,7 +690,7 @@ const ClothesGearModal = (props) => {
                         fill="#ff0000"
                       />
                     </svg>
-                    <img className="img-gear-icon-ability" src={brandDependency(clothesGear.brand).unfavoredAbility} alt=""/>
+                    <img className="img-gear-icon-ability" src={brandDependency(props.chosenGear.brand).unfavoredAbility} alt=""/>
                   </div>
                 </div>
               </div>
@@ -694,1347 +698,899 @@ const ClothesGearModal = (props) => {
           <div className="col-8 d-flex flex-wrap gearicons-section clothes-stripe">
             <GearIcon
               gear={gearsArray[0]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[1]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[2]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[3]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[4]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[5]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[6]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[7]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[8]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[9]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[10]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[11]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[12]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[13]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[14]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[15]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[16]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[17]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[18]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[19]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[20]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[21]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[22]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[23]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[24]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[25]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[26]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[27]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[28]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[29]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[30]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[31]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[32]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[33]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[34]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[35]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[36]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[37]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[38]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[39]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[40]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[41]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[42]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[43]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[44]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[45]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[46]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[47]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[48]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[49]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[50]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[51]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[52]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[53]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[54]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[55]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[56]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[57]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[58]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[59]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[60]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[61]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[62]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[63]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[64]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[65]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[66]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[67]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[68]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[69]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[70]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[71]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[72]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[73]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[74]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[75]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[76]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[77]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[78]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[79]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[80]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[81]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[82]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[83]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[84]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[85]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[86]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[87]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[88]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[89]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[90]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[91]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[92]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[93]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[94]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[95]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[96]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[97]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[98]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[99]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[100]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[101]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[102]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[103]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[104]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[105]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[106]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[107]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[108]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[109]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[110]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[111]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[112]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[113]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[114]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[115]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[116]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[117]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[118]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[119]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[120]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[121]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[122]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[123]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[124]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[125]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[126]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[127]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[128]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[129]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[130]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[131]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[132]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[133]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[134]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[135]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[136]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[137]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[138]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[139]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[140]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[141]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[142]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[143]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[144]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[145]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[146]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[147]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[148]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[149]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[150]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[151]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[152]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[153]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[154]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[155]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[156]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[157]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[158]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[159]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[160]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[161]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[162]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[163]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[164]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[165]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[166]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[167]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[168]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[169]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[170]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[171]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[172]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[173]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[174]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[175]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[176]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[177]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[178]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[179]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[180]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[181]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[182]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[183]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[184]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[185]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[186]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[187]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[188]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[189]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[190]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[191]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[192]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[193]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[194]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[195]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[196]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[197]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[198]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[199]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[200]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[201]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[202]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[203]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[204]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[205]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[206]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[207]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[208]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[209]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[210]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[211]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[212]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[213]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[214]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[215]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[216]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[217]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[218]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[219]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[220]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[221]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
             <GearIcon
               gear={gearsArray[222]}
-              passChosenGear={props.passChosenGear}
-              passImagePath={props.passImagePath}
-              setGear={setClothesGear}
+              setChosenGear={props.setChosenGear}
             />
           </div>
           </div>
         </div>
-      </div>
-    </div>  
   );
 };
 
