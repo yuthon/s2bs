@@ -180,16 +180,6 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(empty);
-                props.passAbilityName("empty");
-                }
-              }
-            >
-              <img className="abilitymodal-img" src={empty} alt="スロットを空にする"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
                 props.passImagePath(objectShredder);
                 props.passAbilityName("objectShredder");
                 }
@@ -206,6 +196,16 @@ const MainSlotModal2 = (props) => {
               }
             >
               <img className="abilitymodal-img" src={dropRoller} alt= "受け身"/>
+            </div>
+            <div
+              className="ability-icon ability"
+              onClick={()=>{
+                props.passImagePath(empty);
+                props.passAbilityName("empty");
+                }
+              }
+            >
+              <img className="abilitymodal-img" src={empty} alt="スロットを空にする"/>
             </div>
           </div>
           <button type="button" className="btn-close btn-close-white" onClick={()=>{closeGearModal()}}></button>
