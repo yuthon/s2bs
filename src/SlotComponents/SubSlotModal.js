@@ -19,34 +19,73 @@ const SubSlotModal = (props) => {
   // 矢印とモーダルが適切な位置に表示されるようにする
   let passAbilityName;
   let passImagePath;
+  let target = document.getElementById("subSlotModal");
+  let arrow = document.getElementById("subSlotModal-arrow");
+  let arrowDown = document.getElementById("subSlotModal-arrow-down")
 
   if (props.slotNumber === 0) {
     passAbilityName = props.passAbilityName0;
     passImagePath = props.passImagePath0;
+    target.style.top = "245px"
+    arrow.style.left = "110px"
+    arrow.style.display = "block"
+    arrowDown.style.display = "none"
   } else if (props.slotNumber === 1) {
     passAbilityName = props.passAbilityName1;
     passImagePath = props.passImagePath1;
+    target.style.top = "245px"
+    arrow.style.left = "158px"
+    arrow.style.display = "block"
+    arrowDown.style.display = "none"
   } else if (props.slotNumber === 2) {
     passAbilityName = props.passAbilityName2;
     passImagePath = props.passImagePath2;
+    target.style.top = "245px"
+    arrow.style.left = "205px"
+    arrow.style.display = "block"
+    arrowDown.style.display = "none"
   } else if (props.slotNumber === 3) {
     passAbilityName = props.passAbilityName3;
     passImagePath = props.passImagePath3;
+    target.style.top = "470px"
+    arrow.style.left = "110px"
+    arrow.style.display = "block"
+    arrowDown.style.display = "none"
   } else if (props.slotNumber === 4) {
     passAbilityName = props.passAbilityName4;
     passImagePath = props.passImagePath4;
+    target.style.top = "470px"
+    arrow.style.left = "158px"
+    arrow.style.display = "block"
+    arrowDown.style.display = "none"
   } else if (props.slotNumber === 5) {
     passAbilityName = props.passAbilityName5;
     passImagePath = props.passImagePath5;
+    target.style.top = "470px"
+    arrow.style.left = "205px"
+    arrow.style.display = "block"
+    arrowDown.style.display = "none"
   } else if (props.slotNumber === 6) {
     passAbilityName = props.passAbilityName6;
     passImagePath = props.passImagePath6;
+    target.style.top = "330px"
+    arrowDown.style.left = "110px"
+    arrow.style.display = "none"
+    arrowDown.style.display = "block"
   } else if (props.slotNumber === 7) {
     passAbilityName = props.passAbilityName7;
     passImagePath = props.passImagePath7;
+    target.style.top = "330px"
+    arrowDown.style.left = "158px"
+    arrow.style.display = "none"
+    arrowDown.style.display = "block"
   } else if (props.slotNumber === 8) {
     passAbilityName = props.passAbilityName8;
     passImagePath = props.passImagePath8;
+    target.style.top = "330px"
+    arrowDown.style.left = "205px"
+    arrow.style.display = "none"
+    arrowDown.style.display = "block"
   } 
 
 
@@ -102,6 +141,8 @@ const SubSlotModal = (props) => {
 
   return (
     <div className="ability-modal" id="subSlotModal">
+      <div id="subSlotModal-arrow"></div>
+      <div id="subSlotModal-arrow-down"></div>
           <button type="button" className="btn-close btn-close-white" onClick={()=>{closeGearModal()}}></button>
           <div className="ability-list d-flex flex-wrap">
           

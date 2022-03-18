@@ -1534,3 +1534,23 @@ Btmボタン
   top: 1px;
   left: 1px;
 }
+/* サブスロットモーダルの矢印部分 */
+#subSlotModal-arrow {
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #6b6b6b;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: -20px;
+  left: 110px;
+  z-index: 6;
+}
+
+#subSlotModal-arrow-down {
+  border-right: 10px solid transparent;
+  border-top: 20px solid #6b6b6b;
+  border-left: 10px solid transparent;
+  position: absolute;
+  bottom: -20px;
+  left: 110px;
+  z-index: 6;
+}
