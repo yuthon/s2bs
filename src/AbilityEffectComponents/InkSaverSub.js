@@ -180,19 +180,19 @@ const InkSaverSub = (props) => {
         <div className="ability-icon ap-ability-icon">
         <img className="ap-ability-img" src={inkSaverSubImg} alt=""/>
       </div>
-        <div className="ae-sub-img">
-          <img src={subWeaponImg} className="img-sub-sp" alt=""/>
-        </div>
-        <div className="ae-text-sm ability-effect">
-          <p>インク消費量</p>
-        </div>
-        <div className="ae-colon-lg ability-effect">
-          <p>:</p>
-        </div>
-        <div className="ae-effect ability-effect">
-          <p>{inkConsumption}％</p>
-        </div>
+      <div className="ae-sub-img">
+        <img src={subWeaponImg} className="img-sub-sp" alt=""/>
       </div>
+      <div className="ae-text-sm ability-effect">
+        <p>インク消費量</p>
+      </div>
+      <div className="ae-colon-lg ability-effect">
+        <p>:</p>
+      </div>
+      <div className="ae-effect ability-effect">
+        <p>{inkConsumption}％</p>
+      </div>
+    </div>
   );
 };
 

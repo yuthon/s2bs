@@ -315,10 +315,8 @@ const AbilityPoint = (props) => {
     // 最終的に表示するJSX
     btnComeback = (
       <div className="ae-card border d-flex align-items-center">
-        <div className="ae-icon">  
-          <div className="ability-icon sub-slot slot my-1">
-            <img className="subslot-img" src={ComebackImg} alt=""/>
-          </div>
+        <div className="ability-icon ap-ability-icon">
+          <img className="ap-ability-img" src={ComebackImg} alt=""/>
         </div>
         {toggleComeback}
       </div>
@@ -376,10 +374,8 @@ const AbilityPoint = (props) => {
     // 最終的に表示するJSX
     btnOpeningGanbit = (
       <div className="ae-card border d-flex align-items-center">
-        <div className="ae-icon">  
-          <div className="ability-icon sub-slot slot my-1">
-            <img className="subslot-img" src={OpeningGanbitImg} alt=""/>
-          </div>
+        <div className="ability-icon ap-ability-icon">
+          <img className="ap-ability-img" src={OpeningGanbitImg} alt=""/>
         </div>
         {toggleOpeningGanbit}
       </div>
@@ -436,10 +432,8 @@ const AbilityPoint = (props) => {
     // 最終的に表示するJSX
     btnLastDitchEffort = (
       <div className="ae-card border d-flex align-items-center">
-        <div className="ae-icon">  
-          <div className="ability-icon sub-slot slot my-1">
-            <img className="subslot-img" src={LastDitchEffortImg} alt=""/>
-          </div>
+        <div className="ability-icon ap-ability-icon">
+          <img className="ap-ability-img" src={LastDitchEffortImg} alt=""/>
         </div>
         {toggleLastDitchEffort}
       </div>
@@ -496,10 +490,8 @@ const AbilityPoint = (props) => {
     // 最終的に表示するJSX
     btnDropRoller = (
       <div className="ae-card border d-flex align-items-center">
-        <div className="ae-icon">  
-          <div className="ability-icon sub-slot slot my-1">
-            <img className="subslot-img" src={DropRollerImg} alt=""/>
-          </div>
+        <div className="ability-icon ap-ability-icon">
+          <img className="ap-ability-img" src={DropRollerImg} alt=""/>
         </div>
         {toggleDropRoller}
       </div>
