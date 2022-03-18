@@ -562,12 +562,18 @@
 }
 
 .modal-close-btn {
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  padding: 0px;
-  background: transparent;
-  border-color: transparent;
+  margin: 2px 0px 0px 270px;
 }
 
+.modal-close-btn:hover path,
+.modal-close-btn-btm:hover path {
+  fill: #fff;
+}
+
+/* 
 .modal-close-btn svg {
   opacity: 0.6;
 }
@@ -575,7 +581,7 @@
 .modal-close-btn:hover {
   transition: 0.001s;
   transform: scale(1.6, 1.6);
-}
+} */
 
 /*とじるボタン*/
 .close-btn-svg {
@@ -1443,34 +1449,33 @@ Btmボタン
 
 /* モーダルの大きさと位置 */
 #mainSlotModal0 {
-  height: 340px;
+  height: 280px;
   position: absolute;
-  left: -40px;
+  left: -110px;
   top: 245px;
   z-index: 5;
 }
 
 #mainSlotModal1 {
-  height: 340px;
+  height: 280px;
   position: absolute;
-  left: -40px;
+  left: -110px;
   top: 470px;
   z-index: 5;
 }
 
 #mainSlotModal2 {
-  height: 340px;
+  height: 280px;
   position: absolute;
-  left: -40px;
-  top: 260px;
+  left: -110px;
+  top: 320px;
   z-index: 5;
-  padding-top: 10px;
 }
 
 #subSlotModal {
-  height: 280px;
+  height: 220px;
   position: absolute;
-  left: -40px;
+  left: -110px;
   top: 245px;
   z-index: 5;
 }
@@ -1483,7 +1488,7 @@ Btmボタン
   border-left: 10px solid transparent;
   position: absolute;
   top: -20px;
-  left: 58px;
+  left: 128px;
   z-index: 6;
   display: block;
   content: '';
@@ -1495,7 +1500,7 @@ Btmボタン
   border-left: 10px solid transparent;
   position: absolute;
   bottom: -20px;
-  left: 58px;
+  left: 128px;
   z-index: 6;
   display: block;
   content: '';
@@ -1503,7 +1508,7 @@ Btmボタン
 
 /* アビリティモーダルにおいて共通のスタイル */
 .ability-modal {
-  width: 250px;
+  width: 320px;
   border-radius: 10px;
   margin-left: 0px;
   margin-right: 0px;
@@ -1515,7 +1520,7 @@ Btmボタン
     #6b6b6b 40px
   );
   display: none;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 /* アビリティアイコンの大きさ */
 
@@ -1541,7 +1546,7 @@ Btmボタン
   border-left: 10px solid transparent;
   position: absolute;
   top: -20px;
-  left: 110px;
+  left: 140px;
   z-index: 6;
 }
 
