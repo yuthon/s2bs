@@ -420,10 +420,8 @@ const HeadGearModal = (props) => {
     }
   }
 
-  let target;
-
   const closeGearModal = function() {
-    target = document.getElementById("headGearModal")
+    let target = document.getElementById("headGearModal")
     target.style.display = "none"
   }
 

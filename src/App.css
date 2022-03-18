@@ -100,6 +100,10 @@
 /* ギア関連  */
 /*  */
 
+#gear-conponents {
+  position: relative;
+}
+
 /* アタマ　フク　クツで共通の大きさ */
 .gear-card {
   height: 205px;
@@ -229,7 +233,6 @@
   position: absolute;
   top: 1px;
   left: 1px;
-  z-index: 4;
 }
 
 /* サブスロットのsvgの位置調整 */
@@ -255,15 +258,6 @@
   top: 1px;
   left: 1px;
   z-index: 4;
-}
-
-.ability img {
-  height: 56px;
-  width: 56px;
-}
-
-.ability {
-  float: left;
 }
 
 /*  */
@@ -297,7 +291,7 @@
   position: absolute;
   top: 10px;
   left: 41.5%;
-  z-index: 5;
+  z-index: 6;
   border-radius: 2%;
 }
 
@@ -1441,4 +1435,62 @@ Btmボタン
 .weapon-icon:hover .weapon-icon-tooltip-arrow,
 .weapon-icon:hover .weapon-icon-tooltip {
   display: inline;
+}
+
+/*  */
+/* アビリティモーダル関連 */
+/*  */
+
+/* モーダルの大きさ */
+#mainSlotModal0 {
+  width: 200px;
+  height: 450px;
+  position: absolute;
+  top: 240px;
+  z-index: 5;
+}
+
+/* モーダル上部の矢印 */
+#mainSlotModal0:before {
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #6b6b6b;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: -20px;
+  left: 18px;
+  z-index: 6;
+  display: block;
+  content: '';
+}
+
+/* アビリティモーダルにおいて共通のスタイル */
+.ability-modal {
+  border-radius: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  background: repeating-linear-gradient(
+    45deg,
+    #808080,
+    #808080 20px,
+    #6b6b6b 20px,
+    #6b6b6b 40px
+  );
+  display: none;
+  padding-left: 10px;
+}
+/* アビリティアイコンの大きさ */
+
+.ability {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin: 5px;
+}
+
+.abilitymodal-img {
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
 }

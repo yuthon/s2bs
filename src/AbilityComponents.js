@@ -79,24 +79,22 @@ const AbilityComponents = (props) => {
         passAbilityName8={passSubAbilityName8}
         passImagePath8={passSubAbilityImagePath8}
       />
-      <div>
-        <Head
-          //ギアモーダルからStateを経由して受け取った画像のパスをpropsで渡す
-          passHeadGearImagePath={props.headImagePath}
-          //SubSlotModal1から受け取ったアビリティの画像のパスを渡す
-          passSubAbilityImagePath0={subAbilityImagePath0}
-          //2,3についても同様
-          passSubAbilityImagePath1={subAbilityImagePath1}
-          passSubAbilityImagePath2={subAbilityImagePath2}
-          //メインスロットも同様
-          passMainAbilityImagePath={mainAbilityImagePath0}
-          setSubSlotNumber={setSubSlotNumber}
-        />
-        <MainSlotModal0
-          passImagePath={passMainAbilityImagePath0}
-          passAbilityName={passMainAbilityName0}
-        />
-      </div>
+      <Head
+        //ギアモーダルからStateを経由して受け取った画像のパスをpropsで渡す
+        passHeadGearImagePath={props.headImagePath}
+        //SubSlotModal1から受け取ったアビリティの画像のパスを渡す
+        passSubAbilityImagePath0={subAbilityImagePath0}
+        //2,3についても同様
+        passSubAbilityImagePath1={subAbilityImagePath1}
+        passSubAbilityImagePath2={subAbilityImagePath2}
+        //メインスロットも同様
+        passMainAbilityImagePath={mainAbilityImagePath0}
+        setSubSlotNumber={setSubSlotNumber}
+      />
+      <MainSlotModal0
+        passImagePath={passMainAbilityImagePath0}
+        passAbilityName={passMainAbilityName0}
+      />
       <div>
         <Clothes
           passClothesGearImagePath={props.clothesImagePath}

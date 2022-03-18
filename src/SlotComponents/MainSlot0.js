@@ -1,11 +1,13 @@
 
 const MainSlot0 = (props) => {
+  // モーダルを表示する関数
+  const openGearModal = function() {
+    let target = document.getElementById("mainSlotModal0")
+    target.style.display = "block"
+  }
+  
   return(
-    <div
-      className="ability-icon main-slot"
-      data-bs-toggle="modal"
-      data-bs-target="#mainSlotModal0"
-    >
+    <div className="ability-icon main-slot" onClick={()=>{openGearModal()}}>
       <div className="tooltip-top-arrow">
         <p className="slot-tooltip font-type2">クリックでギアパワーを変更</p>
       </div>
