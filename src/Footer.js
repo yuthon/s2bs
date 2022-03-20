@@ -34,12 +34,12 @@ const Footer = () => {
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content bg-secondary text-white">
             <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">当ページについて</h5>
+              <h4 className="modal-title" id="exampleModalLabel">当ページについて</h4>
             </div>
             <div className="modal-body text-start">
               <p>「スプラトゥーン2」は任天堂株式会社の商標かつ著作物であり、当ページは任天堂株式会社とは一切関係のない非公式のものです。</p>
               <p>制作に当たって<a className="text-white" href="https://leanny.github.io/">Leanさんの収集したデータ</a>を参考にしています。</p>
-              <p>使用している3Dモデルの素材は<a className="text-white" href="https://www.models-resource.com/nintendo_switch/splatoon2/s">こちらのサイト</a>でご覧いただけます。</p>
+              <p>使用している3Dモデルの素材は<a className="text-white" href="https://www.models-resource.com/nintendo_switch/splatoon2/">こちらのサイト</a>で配布されています。</p>
               <p>何かご連絡の際は、お手数ですが<a className="text-white" href="https://twitter.com/PP5rtm">Twitter</a>の方までお願いいたします。</p>
             </div>
             <div className="modal-footer">

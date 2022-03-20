@@ -72,7 +72,9 @@
   margin-right: auto;
   padding-top: 0.5rem;
 }
+/*  */
 /* フッター */
+/*  */
 footer {
   height: 2.25rem;
   background: #343a40;
@@ -102,6 +104,9 @@ footer {
 }
 .about:hover {
   color: #dee2e6;
+}
+#aboutModal p {
+  font-size: 1.25rem;
 }
 
 /* アタマギア関連に使うストライプ模様 */
