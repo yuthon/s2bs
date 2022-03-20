@@ -9,7 +9,7 @@ const ClothesGear = (props) => {
   return(
     <div className="gear-img" onClick={()=>{openClothesGearModal()}}>
       <p className="gear-tooltip font-type2">クリックでギアを変更</p>
-      <img className="gear-img" src={props.passImagePath} alt=""/>
+      <img className="gear-img" src={props.imagePath} alt=""/>
     </div>
   );
 };

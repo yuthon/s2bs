@@ -159,12 +159,12 @@ footer {
 
 #canvas-container {
   width: 100%;
-  height: calc(100vh - 6.2525rem);
+  height: calc(100vh - 6.25rem);
 }
 
 #gear-components {
   position: relative;
-  padding-top: 3rem;
+  height: 900px;
 }
 
 #weapon-container {
@@ -173,10 +173,8 @@ footer {
 
 #ae-section {
   height: calc(100vh - 8rem);
-  overflow: auto;
-  padding-top: 3rem;
-  padding-left: 2.5rem;
-  padding-right: 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .font-type1 {
@@ -202,19 +200,19 @@ footer {
 }
 
 /* アタマ部分 */
-#headgear-card {
+/* #headgear-card {
   margin-bottom: 20px;
-}
+} */
 
 /* フク部分 */
-#clothesgear-card {
+/* #clothesgear-card {
   margin-bottom: 20px;
-}
+} */
 
 /* クツ部分 */
-#shoesgear-card {
+/* #shoesgear-card {
   margin-bottom: auto;
-}
+} */
 /* ギア表示のヘッダー部分 */
 
 .gear-header {
@@ -1143,6 +1141,8 @@ Btmボタン
   padding: 5px;
   position: relative;
   width: 100%;
+  margin-right: 0rem;
+  margin-left: 0rem;
 }
 
 .ae-part {
@@ -1352,7 +1352,6 @@ Btmボタン
 }
 
 .ae-container {
-  padding-right: 3rem;
 }
 
 #character-btn {
@@ -1568,13 +1567,89 @@ Btmボタン
   top: 320px;
   z-index: 5;
 }
-
-#subSlotModal {
+/* サブスロットモーダル */
+.subSlotModal {
   height: 220px;
-  position: absolute;
-  left: -110px;
-  top: 245px;
   z-index: 5;
+  left: -120px;
+  top: 225px;
+  position: absolute;
+}
+.subSlotModal-upper {
+  height: 220px;
+  z-index: 5;
+  left: -120px;
+  top: -80px;
+  position: absolute;
+}
+#subSlotModal0:before,
+#subSlotModal3:before {
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #6b6b6b;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: -20px;
+  left: 190px;
+  z-index: 6;
+  display: block;
+  content: '';
+}
+#subSlotModal1:before,
+#subSlotModal4:before {
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #6b6b6b;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: -20px;
+  left: 238px;
+  z-index: 6;
+  display: block;
+  content: '';
+}
+#subSlotModal2:before,
+#subSlotModal5:before {
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #6b6b6b;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: -20px;
+  left: 284px;
+  z-index: 6;
+  display: block;
+  content: '';
+}
+#subSlotModal6:before {
+  border-right: 10px solid transparent;
+  border-top: 20px solid #6b6b6b;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: 220px;
+  left: 190px;
+  z-index: 6;
+  display: block;
+  content: '';
+}
+#subSlotModal7:before {
+  border-right: 10px solid transparent;
+  border-top: 20px solid #6b6b6b;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: 220px;
+  left: 238px;
+  z-index: 6;
+  display: block;
+  content: '';
+}
+#subSlotModal8:before {
+  border-right: 10px solid transparent;
+  border-top: 20px solid #6b6b6b;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: 220px;
+  left: 284px;
+  z-index: 6;
+  display: block;
+  content: '';
 }
 
 /* モーダル上部の矢印 */
@@ -1637,7 +1712,7 @@ Btmボタン
   left: 1px;
 }
 /* サブスロットモーダルの矢印部分 */
-#subSlotModal-arrow {
+/* #subSlotModal-arrow {
   border-right: 10px solid transparent;
   border-bottom: 20px solid #6b6b6b;
   border-left: 10px solid transparent;
@@ -1655,4 +1730,4 @@ Btmボタン
   bottom: -20px;
   left: 110px;
   z-index: 6;
-}
+} */
