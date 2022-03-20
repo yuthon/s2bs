@@ -31,7 +31,7 @@ import Stingray from '../images/subSP/Wsp_Stingray.png';
 const Weapon = (props) => {
 
   return (
-    <div className="container mb-2" id="weapon-container">
+    <div className="mb-2" id="weapon-container">
       <div id="weapon-card">
       <div className="weapon-tooltip row" data-bs-toggle="tooltip" data-bs-placement="bottom" title="クリックでブキを変更">
         <div className="btn btn-sm col-5" data-bs-toggle="modal" data-bs-target="#weaponModal">

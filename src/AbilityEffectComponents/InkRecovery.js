@@ -101,16 +101,28 @@ const InkRecovery = (props) => {
   }
   
   return (
-    <div className="ae-card border d-flex align-items-center">
-      <div className="ability-icon ap-ability-icon">
-        <img className="ap-ability-img" src={inkRecoveryImg} alt=""/>
+    <div className="ae-card border row">
+      <div className="col-2 px-0 my-auto">
+        <div className="ability-icon ap-ability-icon">
+          <img className="ap-ability-img" src={inkRecoveryImg} alt=""/>
+        </div>
       </div>
-      <p>インクタンク100%までの時間（自インク内でイカ状態）</p>
-      <p>:</p>
-      <p>{secondInInk}秒</p>
-      <p>インクタンク100%までの時間（ヒト状態）</p>
-      <p>:</p>
-      <p>{secondStanding}秒</p>
+      <div className="ae-part col-10 p-0 row">
+        <div className="col-lg-9 col-xl-7 px-0 m-auto">
+          <p className="ae-text-first">インクタンク100%までの時間</p>
+          <p className="ae-text-second">（自インク内でイカ状態）</p>
+          <p className="ae-text-first">インクタンク100%までの時間</p>
+          <p className="ae-text-second">（ヒト状態）</p>
+        </div>
+        <div className="col-lg-1 col-xl-2 px-0 m-auto">
+          <p className="ae-colon-double">:</p>
+          <p className="ae-colon-double">:</p>
+        </div>
+        <div className="col-lg-2 col-xl-3 px-0 m-auto">
+          <p className="ae-effect-double">{secondInInk} 秒</p>
+          <p className="ae-effect-double">{secondStanding} 秒</p>
+        </div>
+      </div>
     </div>
   );
 }

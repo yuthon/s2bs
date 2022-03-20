@@ -23,21 +23,25 @@ const QuickSuperJump = (props) => {
     }
   }
   return (
-    <div className="ae-card border d-flex align-items-center">
-      <div className="ability-icon ap-ability-icon">
-        <img className="ap-ability-img" src={quickSuperJumpImg} alt=""/>
+    <div className="ae-card border row">
+      <div className="col-lg-2 px-0 my-auto">
+        <div className="ability-icon ap-ability-icon">
+          <img className="ap-ability-img" src={quickSuperJumpImg} alt=""/>
+        </div>
       </div>
-      <div className="ae-text-md ability-effect">
-        <p>スーパージャンプ時間</p>
-        <p>ボタン入力からジャンプ開始まで</p>
-      </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{superJumpFrame}F</p>
-        <p>{onGroundFrame}F</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text-single">スーパージャンプ時間</p>
+          <p className="ae-text-single">ボタン入力からジャンプ開始まで</p>
+        </div>
+        <div className="col-2 m-auto">
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+        </div>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{superJumpFrame} F</p>
+          <p className="ae-effect">{onGroundFrame} F</p>
+        </div>
       </div>
     </div>
   );

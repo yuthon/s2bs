@@ -86,8 +86,8 @@
 
 #main {
   position: relative;
-  /* padding-left: 0rem !important; */
-  /* width: 80%; */
+  margin: 0rem;
+  width: 100%;
 }
 
 #three-section {
@@ -108,8 +108,9 @@
 #ae-section {
   height: 100vh;
   overflow: auto;
-  padding-left: 4rem;
   padding-top: 3rem;
+  padding-left: 2.5rem;
+  padding-right: 1rem;
 }
 
 .font-type1 {
@@ -1074,6 +1075,12 @@ Btmボタン
   border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.ae-part {
+  padding: 0rem;
 }
 
 .ability-effect p {
@@ -1096,9 +1103,56 @@ Btmボタン
   left: 2px;
 }
 
-.ae-text {
-  width: 200px;
+/* 1行のみの場合 */
+.ae-text-single {
   text-align: right;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+/* １つの効果を2行で書く場合の1行目 */
+.ae-text-first {
+  margin-top: 0.5rem;
+  margin-bottom: 0rem;
+  text-align: right;
+}
+/* １つの効果を2行で書く場合の2行目 */
+.ae-text-second {
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+  text-align: right;
+}
+
+.ae-colon-single {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ae-colon-double {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ae-effect {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ae-effect-double {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.ae-colon-second {
+  position: absolute;
+  right: 14rem;
+  top: 20px;
+}
+
+.ae-effect-second {
+  position: absolute;
+  top: 24px;
+  left: 22rem;
 }
 
 .ae-text-sm {
@@ -1231,8 +1285,8 @@ Btmボタン
   box-shadow: none;
 }
 
-#ae-container {
-  padding-left: 0px;
+.ae-container {
+  padding-right: 3rem;
 }
 
 #character-btn {

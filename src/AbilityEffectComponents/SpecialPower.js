@@ -74,17 +74,20 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-md ability-effect">
-        <p>180ダメージの範囲</p>
-        <p>70ダメージの範囲</p>
-      </div><div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text-single">180ダメージの範囲</p>
+          <p className="ae-text-single">70ダメージの範囲</p>
+        </div>
+        <div className="col-2 m-auto">
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+        </div>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{hitbox180} ％</p>
+          <p className="ae-effect">{hitbox70} ％</p>
+        </div>
       </div>
-      <div className="ae-effect ability-effect">
-        <p>{hitbox180}％</p>
-        <p>{hitbox70}％</p>
-      </div></>
     );
   } else if (name === "マルチミサイル") {
     for (let i=0; i<40; i++) {
@@ -96,17 +99,20 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-md ability-effect">
-        <p>ロックオンの範囲</p>
-        <p>着弾点の塗り範囲</p>
-      </div><div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text-single">ロックオンの範囲</p>
+          <p className="ae-text-single">着弾点の塗り範囲</p>
+        </div>
+        <div className="col-2 m-auto">
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+        </div>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{circleRadiusPercent} ％</p>
+          <p className="ae-effect">{paintRadiusPercent} ％</p>
+        </div>
       </div>
-      <div className="ae-effect ability-effect">
-        <p>{circleRadiusPercent}％</p>
-        <p>{paintRadiusPercent}％</p>
-      </div></>
     );
   } else if (name === "インクアーマー") {
     for (let i=0; i<40; i++) {
@@ -118,17 +124,20 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-lg ability-effect">
-        <p>アーマー発動から有効化までの時間</p>
-        <p>アーマー持続時間</p>
-      </div><div className="ae-colon-sm ability-effect">
-        <p>:</p>
-        <p>:</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text-single">アーマー発動から有効化までの時間</p>
+          <p className="ae-text-single">アーマー持続時間</p>
+        </div>
+        <div className="col-2 m-auto">
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+        </div>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{armorActivationFrames} F</p>
+          <p className="ae-effect">{durationFrames} F</p>
+        </div>
       </div>
-      <div className="ae-effect ability-effect">
-        <p>{armorActivationFrames}F</p>
-        <p>{durationFrames}F</p>
-      </div></>
     );
   } else if (name === "カーリングボムピッチャー") {
     for (let i=0; i<40; i++) {
@@ -138,14 +147,15 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-md ability-effect">
-        <p>ボムピッチャー持続時間</p>
-      </div><div className="ae-colon-sm ability-effect">
-        <p>:</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">
+          <p className="ae-text-single">ボムピッチャー持続時間</p>
+        </div>
+        <p className="col-2 ae-colon-single">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{durationFrames} F</p>
+        </div>
       </div>
-      <div className="ae-effect ability-effect">
-        <p>{durationFrames}F</p>
-      </div></>
     );
   } else if (name === "スプラッシュボムピッチャー") {
     for (let i=0; i<40; i++) {
@@ -155,14 +165,15 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-md ability-effect">
-      <p>ボムピッチャー持続時間</p>
-      </div><div className="ae-colon-sm ability-effect">
-        <p>:</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">
+          <p className="ae-text-single">ボムピッチャー持続時間</p>
+        </div>
+        <p className="col-2 ae-colon-single">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{durationFrames} F</p>
+        </div>
       </div>
-      <div className="ae-effect ability-effect">
-        <p>{durationFrames}F</p>
-      </div></>
     );
   } else if (name === "キューバンボムピッチャー") {
     for (let i=0; i<40; i++) {
@@ -172,14 +183,15 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-md ability-effect">
-      <p>ボムピッチャー持続時間</p>
-      </div><div className="ae-colon-sm ability-effect">
-        <p>:</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">
+          <p className="ae-text-single">ボムピッチャー持続時間</p>
+        </div>
+        <p className="col-2 ae-colon-single">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{durationFrames} F</p>
+        </div>
       </div>
-      <div className="ae-effect ability-effect">
-        <p>{durationFrames}F</p>
-      </div></>
     );
   } else if (name === "クイックボムピッチャー") {
     for (let i=0; i<40; i++) {
@@ -189,14 +201,15 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-md ability-effect">
-      <p>ボムピッチャー持続時間</p>
-      </div><div className="ae-colon-sm ability-effect">
-        <p>:</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">
+          <p className="ae-text-single">ボムピッチャー持続時間</p>
+        </div>
+        <p className="col-2 ae-colon-single">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{durationFrames} F</p>
+        </div>
       </div>
-      <div className="ae-effect ability-effect">
-        <p>{durationFrames}F</p>
-      </div></>
     );
   } else if (name === "ロボットボムピッチャー") {
     for (let i=0; i<40; i++) {
@@ -206,14 +219,15 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-md ability-effect">
-      <p>ボムピッチャー持続時間</p>
-      </div><div className="ae-colon-sm ability-effect">
-        <p>:</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">
+          <p className="ae-text-single">ボムピッチャー持続時間</p>
+        </div>
+        <p className="col-2 ae-colon-single">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{durationFrames} F</p>
+        </div>
       </div>
-      <div className="ae-effect ability-effect">
-        <p>{durationFrames}F</p>
-      </div></>
     );
   } else if (name === "ハイパープレッサー") {
     for (let i=0; i<40; i++) {
@@ -223,14 +237,15 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-md ability-effect">
-      <p>ハイパープレッサー持続時間</p>
-      </div><div className="ae-colon-sm ability-effect">
-        <p>:</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">
+          <p className="ae-text-single">ハイパープレッサー持続時間</p>
+        </div>
+        <p className="col-2 ae-colon-single">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{durationFrames} F</p>
+        </div>
       </div>
-      <div className="ae-effect ability-effect">
-        <p>{durationFrames}F</p>
-      </div></>
     );
   } else if (name === "アメフラシ") {
     for (let i=0; i<40; i++) {
@@ -240,14 +255,15 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-md ability-effect">
-      <p>アメフラシ持続時間</p>
-      </div><div className="ae-colon-sm ability-effect">
-        <p>:</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">
+          <p className="ae-text-single">アメフラシ持続時間</p>
+        </div>
+        <p className="col-2 ae-colon-single">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{durationFrames} F</p>
+        </div>
       </div>
-      <div className="ae-effect ability-effect">
-        <p>{durationFrames}F</p>
-      </div></>
     );
   } else if (name === "ナイスダマ") {
     for (let i=0; i<40; i++) {
@@ -257,14 +273,16 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-lg ability-effect">
-      <p>ナイスダマチャージ時間（ナイス無し）</p>
-      </div><div className="ae-colon-sm ability-effect">
-        <p>:</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">
+          <p className="ae-text-first">ナイスダマチャージ時間</p>
+          <p className="ae-text-second">（味方と自分のナイスなし）</p>
+        </div>
+        <p className="col-2 ae-colon-double">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect-double">{chargeSpeedFrames} F</p>
+        </div>
       </div>
-      <div className="ae-effect ability-effect">
-        <p>{chargeSpeedFrames}F</p>
-      </div></>
     );
   } else if (name === "イカスフィア") {
     for (let i=0; i<40; i++) {
@@ -274,17 +292,20 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-md ability-effect">
-      <p>55ダメージ爆風の範囲</p>
-      <p>スフィアの耐久値</p>
-      </div><div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text-single">55ダメージ爆風の範囲</p>
+          <p className="ae-text-single">スフィアの耐久値</p>
+        </div>
+        <div className="col-2 m-auto">
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+        </div>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{explosionRadius} DU</p>
+          <p className="ae-effect">{ballerHealth}</p>
+        </div>
       </div>
-      <div className="ae-effect ability-effect">
-        <p>{explosionRadius}DU</p>
-        <p>{ballerHealth}</p>
-      </div></>
     );
   } else if (name === "ジェットパック") {
     for (let i=0; i<40; i++) {
@@ -296,20 +317,23 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-lg2 ability-effect">
-      <p>ジェットパックの持続時間</p>
-      <p>着弾点の塗り半径</p>
-      <p>爆風範囲（50ダメージ{'&'}30ダメージ）</p>
-      </div><div className="ae-colon-xsm ability-effect">
-        <p>:</p>
-        <p>:</p>
-        <p>:</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-7 px-0 m-auto">  
+          <p className="ae-text-single">ジェットパックの持続時間</p>
+          <p className="ae-text-single">着弾点の塗り半径</p>
+          <p className="ae-text-single">爆風範囲（50ダメージ{'&'}30ダメージ）</p>
+        </div>
+        <div className="col-2 m-auto">
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+        </div>
+        <div className="col-3 px-0 m-auto">
+          <p className="ae-effect">{durationFrames} F</p>
+          <p className="ae-effect">{paintRadius} DU</p>
+          <p className="ae-effect">{blastRadius} ％</p>
+        </div>
       </div>
-      <div className="ae-effect ability-effect">
-        <p>{durationFrames}F</p>
-        <p>{paintRadius}DU</p>
-        <p>{blastRadius}％</p>
-      </div></>
     );
   } else if (name === "バブルランチャー") {
     for (let i=0; i<40; i++) {
@@ -320,20 +344,23 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-md ability-effect">
-      <p>爆発の塗り範囲</p>
-      <p>バブルの大きさ</p>
-      <p>爆風の範囲</p>
-      </div><div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
-        <p>:</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text-single">爆発の塗り範囲</p>
+          <p className="ae-text-single">バブルの大きさ</p>
+          <p className="ae-text-single">爆風の範囲</p>
+        </div>
+        <div className="col-2 m-auto">
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+        </div>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{paintRadius} DU</p>
+          <p className="ae-effect">{bubbleSize} ％</p>
+          <p className="ae-effect">{blastRadius} ％</p>
+        </div>
       </div>
-      <div className="ae-effect ability-effect">
-        <p>{paintRadius}DU</p>
-        <p>{bubbleSize}％</p>
-        <p>{blastRadius}％</p>
-      </div></>
     );
   } else if (name === "ウルトラハンコ") {
     for (let i=0; i<40; i++) {
@@ -343,23 +370,26 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-lg ability-effect">
-      <p>ウルトラハンコ持続時間</p>
-      </div><div className="ae-colon-armor ability-effect">
-        <p>:</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">
+          <p className="ae-text-single">ウルトラハンコ持続時間</p>
+        </div>
+        <p className="col-2 ae-colon-single">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{durationFrames} F</p>
+        </div>
       </div>
-      <div className="ae-effect-qs ability-effect">
-        <p>{durationFrames}F</p>
-      </div></>
     );
   }
   
   return (
-    <div className="ae-card border d-flex align-items-center">
-      <div className="ability-icon ap-ability-icon">
-        <img className="ap-ability-img" src={specialPowerImg} alt=""/>
-      </div>
-      {element}
+    <div className="ae-card border row">
+        <div className="col-lg-2 px-0 my-auto">
+          <div className="ability-icon ap-ability-icon">
+            <img className="ap-ability-img" src={specialPowerImg} alt=""/>
+          </div>
+        </div>
+        {element}
     </div>
   );
 };

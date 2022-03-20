@@ -64,27 +64,31 @@ const InkResistance = (props) => {
   }
   
   return (
-    <div className="ae-card border d-flex align-items-center">
-      <div className="ability-icon ap-ability-icon">
-        <img className="ap-ability-img" src={InkResImg} alt=""/>
+    <div className="ae-card border row">
+      <div className="col-lg-1 px-0 my-auto">
+        <div className="ability-icon ap-ability-icon">
+          <img className="ap-ability-img" src={InkResImg} alt=""/>
+        </div>
       </div>
-      <div className="ae-text-lg3 ability-effect">
-        <p>敵インクからダメージを受けるまで </p>
-        <p>敵インクからのダメージ</p>
-        <p>敵インクからのダメージの上限</p>
-        <p>敵インク上でのヒト速度の低減率</p>
-      </div>
-      <div className="ae-colon-xsm ability-effect">
-        <p>:</p>
-        <p>:</p>
-        <p>:</p>
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{framesBeforeTakingDamage}F</p>
-        <p>{damagePerFrame}ダメージ/F</p>
-        <p>{damageLimit}ダメージ</p>
-        <p>{runSpeed}％減</p>
+      <div className="ae-part col-lg-11 row">
+        <div className="col-8 px-0 m-auto">  
+          <p className="ae-text-single">敵インクを踏んでからダメージを受けるまで</p>
+          <p className="ae-text-single">敵インクからのダメージ</p>
+          <p className="ae-text-single">敵インクからのダメージの上限</p>
+          <p className="ae-text-single">敵インク上でのヒト速度の低減率</p>
+        </div>
+        <div className="col-1 m-auto">
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+        </div>
+        <div className="col-3 px-0 m-auto">
+          <p className="ae-effect">{framesBeforeTakingDamage} F</p>
+          <p className="ae-effect">{damagePerFrame} ダメージ/F</p>
+          <p className="ae-effect">{damageLimit} ダメージ</p>
+          <p className="ae-effect">{runSpeed} ％減</p>
+        </div>
       </div>
     </div>
   );

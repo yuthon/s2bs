@@ -25,18 +25,20 @@ const QuickRespawn = (props) => {
     respawnSeconds = respawnSeconds + 1.13;
   }
   return (
-    <div className="ae-card border d-flex align-items-center">
-      <div className="ability-icon ap-ability-icon">
-        <img className="ap-ability-img" src={qrImg} alt=""/>
+    <div className="ae-card border row">
+      <div className="col-lg-2 px-0 my-auto">
+        <div className="ability-icon ap-ability-icon">
+          <img className="ap-ability-img" src={qrImg} alt=""/>
+        </div>
       </div>
-      <div className="ae-text-md ability-effect">
-        <p>復活までの時間</p>
-      </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{respawnFrames + 150}F</p>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">
+          <p className="ae-text-single">復活までの時間</p>
+        </div>
+        <p className="col-2 ae-colon-single">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{respawnFrames + 150} F</p>
+        </div>
       </div>
     </div>
   );

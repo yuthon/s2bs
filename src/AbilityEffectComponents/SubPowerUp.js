@@ -110,36 +110,37 @@ const SubPowerUp = (props) => {
     superJumpSecond = Math.floor(superJumpFrame / 60 * 100) / 100;
     onGroundSecond = Math.floor(onGroundFrame /60 * 100) / 100;
     element = (
-      <><div className="ae-text-lg3 ability-effect">
-        <p>ビーコンへのスーパージャンプ時間</p>
-        <p>ボタン入力からビーコンへのジャンプ開始まで</p>
-      </div><div className="ae-colon-xsm ability-effect">
-        <p>:</p>
-        <p>:</p>
-      </div><div className="ae-effect ability-effect">
-        <p>{superJumpFrame}F</p>
-        <p>{onGroundFrame}F</p>
-      </div></>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-8 px-0 m-auto">  
+          <p className="ae-text-single">ビーコンへのスーパージャンプ時間</p>
+          <p className="ae-text-single">ボタン入力からビーコンへのジャンプ開始まで</p>
+        </div>
+        <div className="col-2 m-auto">
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+        </div>
+        <div className="col-2 px-0 m-auto">
+          <p className="ae-effect">{superJumpFrame} F</p>
+          <p className="ae-effect">{onGroundFrame} F</p>
+        </div>
+      </div>
     );
-  } else if (name === "キューバンボム" || name === "ロボットボム" || name === "スプラッシュボム" || name === "クイックボム" || name === "ポイントセンサー") {
+  } else if (name === "キューバンボム" || name === "ロボットボム" || name === "スプラッシュボム" || name === "クイックボム") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === BombsAndMist[i].AP) {
         bombRange = Math.floor(BombsAndMist[i].velocity / BombsAndMist[0].velocity * 10000) / 100;
       }
     }
     element = (
-      <>
-      <div className="ae-sub-img">
-          <img src={subWeaponImg} className="img-sub-sp" alt=""/>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">
+          <p className="ae-text-single">投げられる距離</p>
+        </div>
+        <p className="col-2 ae-colon-single">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{bombRange} ％</p>
+        </div>
       </div>
-      <div className="ae-text-sm ability-effect">
-        <p>飛距離</p>
-      </div><div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div><div className="ae-effect ability-effect">
-        <p>{bombRange}％</p>
-      </div>
-      </>
     );
   } else if (name === "カーリングボム") {
     for (let i=0; i<40; i++) {
@@ -149,21 +150,20 @@ const SubPowerUp = (props) => {
       }
     }
     element = (
-      <>
-      <div className="ae-sub-img">
-          <img src={subWeaponImg} className="img-sub-sp" alt=""/>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text-single">カーリングボムの初速</p>
+          <p className="ae-text-single">カーリングボムの移動距離</p>
+        </div>
+        <div className="col-2 m-auto">
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+        </div>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{velocity} DU/F</p>
+          <p className="ae-effect">{bombRange} ％</p>
+        </div>
       </div>
-      <div className="ae-text-sm ability-effect">
-        <p>初速</p>
-        <p>移動距離</p>
-      </div><div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
-      </div><div className="ae-effect ability-effect">
-        <p>{velocity}DU/F</p>
-        <p>{bombRange}％</p>
-      </div>
-      </>
     );
   } else if (name === "スプリンクラー") {
     for (let i=0; i<40; i++) {
@@ -175,19 +175,20 @@ const SubPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-sub-img">
-          <img src={subWeaponImg} className="img-sub-sp" alt=""/>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text-single">最大出力の持続時間</p>
+          <p className="ae-text-single">中間出力の持続時間</p>
+        </div>
+        <div className="col-2 m-auto">
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+        </div>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{firstPhaseFrame} F</p>
+          <p className="ae-effect">{secondPhaseFrame} F</p>
+        </div>
       </div>
-      <div className="ae-text-sm ability-effect">
-        <p>最大出力の持続時間</p>
-        <p>中出力の持続時間</p>
-      </div><div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
-      </div><div className="ae-effect ability-effect">
-        <p>{firstPhaseFrame}F</p>
-        <p>{secondPhaseFrame}F</p>
-      </div></>
     );
   } else if (name === "ポイントセンサー") {
     for (let i=0; i<40; i++) {
@@ -198,19 +199,20 @@ const SubPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-sub-img">
-        <img src={subWeaponImg} className="img-sub-sp" alt=""/>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text-single">投げられる距離</p>
+          <p className="ae-text-single">マーキング時間</p>
+        </div>
+        <div className="col-2 m-auto">
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+        </div>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{bombRange} ％</p>
+          <p className="ae-effect">{markingFrame} F</p>
+        </div>
       </div>
-      <div className="ae-text-sm ability-effect">
-        <p>飛距離</p>
-        <p>マーキング時間</p>
-      </div><div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
-      </div><div className="ae-effect ability-effect">
-        <p>{bombRange}％</p>
-        <p>{markingFrame}F</p>
-      </div></>
     );
   } else if (name === "トラップ") {
     for (let i=0; i<40; i++) {
@@ -221,19 +223,20 @@ const SubPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-sub-img">
-        <img src={subWeaponImg} className="img-sub-sp" alt=""/>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text-single">爆風とマーキングの範囲</p>
+          <p className="ae-text-single">マーキング時間</p>
+        </div>
+        <div className="col-2 m-auto">
+          <p className="ae-colon-single">:</p>
+          <p className="ae-colon-single">:</p>
+        </div>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{explosionRadius} ％</p>
+          <p className="ae-effect">{markingFrame} F</p>
+        </div>
       </div>
-      <div className="ae-text-md ability-effect">
-        <p>爆風とマーキングの範囲</p>
-        <p>マーキング時間</p>
-      </div><div className="ae-colon-md ability-effect">
-        <p>:</p>
-        <p>:</p>
-      </div><div className="ae-effect ability-effect">
-        <p>{explosionRadius}％</p>
-        <p>{markingFrame}F</p>
-      </div></>
     );
   } else if (name === "タンサンボム" || name === "トーピード") {
     for (let i=0; i<40; i++) {
@@ -242,16 +245,15 @@ const SubPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-sub-img">
-        <img src={subWeaponImg} className="img-sub-sp" alt=""/>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">
+          <p className="ae-text-single">投げられる距離</p>
+        </div>
+        <p className="col-2 ae-colon-single">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{bombRange} ％</p>
+        </div>
       </div>
-      <div className="ae-text-sm ability-effect">
-        <p>飛距離</p>
-      </div><div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div><div className="ae-effect ability-effect">
-        <p>{bombRange}％</p>
-      </div></>
     );
   } else if (name === "スプラッシュシールド") {
     for (let i=0; i<40; i++) {
@@ -260,22 +262,23 @@ const SubPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-sub-img">
-        <img src={subWeaponImg} className="img-sub-sp" alt=""/>
+      <div className="ae-part col-lg-10 row">
+        <div className="col-6 px-0 m-auto">
+          <p className="ae-text-single">シールドの耐久値</p>
+        </div>
+        <p className="col-2 ae-colon-single">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{wallHP}</p>
+        </div>
       </div>
-      <div className="ae-text-sm ability-effect">
-        <p>シールドの耐久値</p>
-      </div><div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div><div className="ae-effect ability-effect">
-        <p>{wallHP}</p>
-      </div></>
     );
   }
   return (
-    <div className="ae-card border d-flex align-items-center">
-      <div className="ability-icon ap-ability-icon">
-        <img className="ap-ability-img" src={subPowerImg} alt=""/>
+    <div className="ae-card border row">
+      <div className="col-lg-2 px-0 my-auto">
+        <div className="ability-icon ap-ability-icon">
+          <img className="ap-ability-img" src={subPowerImg} alt=""/>
+        </div>
       </div>
       {element}
     </div>
