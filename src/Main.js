@@ -1,3 +1,6 @@
+// ヘッダー画像
+import HeaderImg from './images/nc113873.png';
+import Footer from './Footer';
 // アビリティ関連のコンポーネント
 import AbilityComponents from './AbilityComponents';
 
@@ -31,6 +34,7 @@ import { Canvas, extend } from '@react-three/fiber';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 extend({ OrbitControls });
 
+
 // const HeadGearModal = React.lazy(() => import('./HeadComponents/HeadGearModal'))
 // const ClothesGearModal = React.lazy(() => import('./ClothesComponents/ClothesGearModal'))
 // const ShoesGearModal = React.lazy(() => import('./ShoesComponents/ShoesGearModal'))
@@ -55,6 +59,14 @@ const Main = () => {
   const [teamColor, passTeamColor] = useState("ffb23d");
   
   return(
+    <>
+    <header className="" id="header">
+      <div className="d-flex header-title">
+        <img className="header-image" src={HeaderImg} alt=""/>
+        <p className="font-type1 header-name">スプラ2ギアプランナー</p>
+        <img className="header-image" src={HeaderImg} alt=""/>
+      </div>
+    </header>
     <div className="container-xl px-sm-0 px-lg-auto">
       <HeadGearModal
         chosenGear={headGear}
@@ -96,7 +108,7 @@ const Main = () => {
       />
       <div className="row" id="main">  
         <div className="col-sm-4 col-lg-5" id="three-section">
-          <div style={{ height: '100vh', width: '100%' }}>
+          <div id="canvas-container">
             <div id="character-btn">
               <button type="button" className="btn btn-dark font-type1" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
                 キャラクターの設定
@@ -142,6 +154,8 @@ const Main = () => {
         />
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

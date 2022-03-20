@@ -49,6 +49,61 @@
   src: url(./Splatfont2.woff) format('woff');
 }
 
+/* ヘッダー */
+#header {
+  height: 4rem;
+  background: #343a40;
+  position: relative;
+}
+/* ヘッダー画像 */
+.header-image {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-top: 0.25rem;
+}
+/* サイト名 */
+.header-name {
+  font-size: 2rem;
+  color: white;
+}
+.header-title {
+  width: 27rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.5rem;
+}
+/* フッター */
+footer {
+  height: 2.25rem;
+  background: #343a40;
+  padding-top: 0.25rem;
+}
+
+.twitter-link {
+  text-decoration: none;
+  color: white;
+}
+.twitter-link:hover {
+  color: #dee2e6;
+}
+.github-link {
+  text-decoration: none;
+  color: white;
+  margin-right: 1rem;
+}
+.github-link:hover {
+  color: #dee2e6;
+}
+.about {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+.about:hover {
+  color: #dee2e6;
+}
+
 /* アタマギア関連に使うストライプ模様 */
 .head-stripe {
   background: repeating-linear-gradient(
@@ -88,12 +143,18 @@
   position: relative;
   margin: 0rem;
   width: 100%;
+  height: calc(100vh - 6.25rem);
 }
 
 #three-section {
   padding: 0rem;
   /* width: 38%; */
   position: relative;
+}
+
+#canvas-container {
+  width: 100%;
+  height: calc(100vh - 6.2525rem);
 }
 
 #gear-components {
@@ -106,7 +167,7 @@
 }
 
 #ae-section {
-  height: 100vh;
+  height: calc(100vh - 8rem);
   overflow: auto;
   padding-top: 3rem;
   padding-left: 2.5rem;
