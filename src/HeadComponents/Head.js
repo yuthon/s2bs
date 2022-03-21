@@ -10,7 +10,7 @@ import MainSlotModal0 from '../SlotComponents/MainSlotModal0';
 
 const Head = (props) => {
   return(
-    <div className="gear-card head-stripe my-lg-auto" id="headgear-card">
+    <div className="gear-card head-stripe mt-xl-4" id="headgear-card">
       <p className="gear-header font-type1">アタマ</p>
       <HeadGear
         passImagePath={props.headImagePath}
@@ -44,6 +44,7 @@ const Head = (props) => {
         setAbilityName={props.setSubAbilityName2}
         setImagePath={props.setSubAbilityImagePath2}
       />
+      <div style={{height:"30px"}}></div>
     </div>
   );
 };

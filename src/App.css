@@ -147,8 +147,8 @@ footer {
 #main {
   position: relative;
   margin: 0rem;
-  width: 100%;
-  height: calc(100vh - 6.25rem);
+  /* width: 100%; */
+  /* height: calc(100vh - 6.25rem); */
 }
 
 #three-section {
@@ -163,6 +163,9 @@ footer {
 }
 
 #gear-components {
+  height: calc(100vh - 6.25rem);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #weapon-container {
@@ -170,7 +173,7 @@ footer {
 }
 
 #ae-section {
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 6.25rem);
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -197,20 +200,6 @@ footer {
   position: relative;
 }
 
-/* アタマ部分 */
-/* #headgear-card {
-  margin-bottom: 20px;
-} */
-
-/* フク部分 */
-/* #clothesgear-card {
-  margin-bottom: 20px;
-} */
-
-/* クツ部分 */
-/* #shoesgear-card {
-  margin-bottom: auto;
-} */
 /* ギア表示のヘッダー部分 */
 
 .gear-header {

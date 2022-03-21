@@ -49,8 +49,8 @@ const AbilityComponents = (props) => {
   const [subAbilityName8, setSubAbilityName8] = useState(null);
   
   return (
-    <>
-      <div className="col-lg-3 col-xl-3 col-xxl-2 px-0 d-flex flex-column" id="gear-components">
+    <>  
+      <div className="col-sm-6 col-lg-3 col-xl-3 col-xxl-2 px-0 d-flex flex-column" id="gear-components">
       <Head
         headImagePath={props.headImagePath}
         subAbilityImagePath0={subAbilityImagePath0}

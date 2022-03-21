@@ -10,7 +10,7 @@ import MainSlotModal2 from '../SlotComponents/MainSlotModal2';
 
 const Shoes = (props) => {
   return(
-    <div className="gear-card shoes-stripe my-lg-auto" id="shoesgear-card">
+    <div className="gear-card shoes-stripe" id="shoesgear-card">
       <p className="gear-header font-type1">クツ</p>
       <ShoesGear
         imagePath={props.shoesImagePath}
@@ -43,6 +43,7 @@ const Shoes = (props) => {
         setAbilityName={props.setSubAbilityName8}
         setImagePath={props.setSubAbilityImagePath8}
       />
+      <div style={{height:"30px"}}></div>
     </div>
   );
 };
