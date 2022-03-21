@@ -6,16 +6,21 @@ import SubSlot5 from '../SlotComponents/SubSlot5';
 import SubSlotModal3 from '../SlotComponents/SubSlotModal3';
 import SubSlotModal4 from '../SlotComponents/SubSlotModal4';
 import SubSlotModal5 from '../SlotComponents/SubSlotModal5';
+import MainSlotModal1 from '../SlotComponents/MainSlotModal1';
 
 const Clothes = (props) => {
   return(
-    <div className="gear-card clothes-stripe my-xxl-auto" id="clothesgear-card">
+    <div className="gear-card clothes-stripe my-auto" id="clothesgear-card">
       <p className="gear-header font-type1">フク</p>
       <ClothesGear
         imagePath={props.clothesImagePath}
       />
       <MainSlot1
         imagePath={props.mainAbilityImagePath}
+      />
+      <MainSlotModal1
+        setImagePath={props.setMainAbilityImagePath}
+        setAbilityName={props.setMainAbilityName}
       />
       <SubSlot3
         imagePath={props.subAbilityImagePath3}

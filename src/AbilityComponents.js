@@ -4,12 +4,6 @@ import Weapon from './WeaponComponents/Weapon';
 import WeaponModal from './WeaponComponents/WeaponModal';
 // アビリティ効果コンポーネント
 import AbilityPoint from './AbilityEffectComponents/AbilityPoint';
-//MainSlotのモーダル
-import MainSlotModal0 from './SlotComponents/MainSlotModal0';
-import MainSlotModal1 from './SlotComponents/MainSlotModal1';
-import MainSlotModal2 from './SlotComponents/MainSlotModal2';
-//SubSlotのアビリティ選択のモーダル
-import SubSlotModal from './SlotComponents/SubSlotModal0';
 // アタマ
 import Head from './HeadComponents/Head';
 // フク
@@ -55,13 +49,16 @@ const AbilityComponents = (props) => {
   const [subAbilityName8, setSubAbilityName8] = useState(null);
   
   return (
-    <><div className="col-lg-3 col-xl-3 col-xxl-2 px-0" id="gear-components">
+    <>
+      <div className="col-lg-3 col-xl-3 col-xxl-2 px-0 d-flex flex-column" id="gear-components">
       <Head
         headImagePath={props.headImagePath}
         subAbilityImagePath0={subAbilityImagePath0}
         subAbilityImagePath1={subAbilityImagePath1}
         subAbilityImagePath2={subAbilityImagePath2}
         mainAbilityImagePath={mainAbilityImagePath0}
+        setMainAbilityImagePath={setMainAbilityImagePath0}
+        setMainAbilityName={setMainAbilityName0}
         setSubAbilityName0={setSubAbilityName0}
         setSubAbilityImagePath0={setSubAbilityImagePath0}
         setSubAbilityName1={setSubAbilityName1}
@@ -69,16 +66,14 @@ const AbilityComponents = (props) => {
         setSubAbilityName1={setSubAbilityName2}
         setSubAbilityImagePath1={setSubAbilityImagePath2}
       />
-      <MainSlotModal0
-        setImagePath={setMainAbilityImagePath0}
-        setAbilityName={setMainAbilityName0}
-      />
       <Clothes
         clothesImagePath={props.clothesImagePath}
         subAbilityImagePath3={subAbilityImagePath3}
         subAbilityImagePath4={subAbilityImagePath4}
         subAbilityImagePath5={subAbilityImagePath5}
         mainAbilityImagePath={mainAbilityImagePath1}
+        setMainAbilityImagePath={setMainAbilityImagePath1}
+        setMainAbilityName={setMainAbilityName1}
         setSubAbilityName3={setSubAbilityName3}
         setSubAbilityImagePath3={setSubAbilityImagePath3}
         setSubAbilityName4={setSubAbilityName4}
@@ -86,26 +81,20 @@ const AbilityComponents = (props) => {
         setSubAbilityName5={setSubAbilityName5}
         setSubAbilityImagePath5={setSubAbilityImagePath5}
       />
-      <MainSlotModal1
-        setImagePath={setMainAbilityImagePath1}
-        setAbilityName={setMainAbilityName1}
-      />
       <Shoes
         shoesImagePath={props.shoesImagePath}
         subAbilityImagePath6={subAbilityImagePath6}
         subAbilityImagePath7={subAbilityImagePath7}
         subAbilityImagePath8={subAbilityImagePath8}
         mainAbilityImagePath={mainAbilityImagePath2}
+        setMainAbilityImagePath={setMainAbilityImagePath2}
+        setMainAbilityName={setMainAbilityName2}
         setSubAbilityName6={setSubAbilityName6}
         setSubAbilityImagePath6={setSubAbilityImagePath6}
         setSubAbilityName7={setSubAbilityName7}
         setSubAbilityImagePath7={setSubAbilityImagePath7}
         setSubAbilityName8={setSubAbilityName8}
         setSubAbilityImagePath8={setSubAbilityImagePath8}
-      />
-      <MainSlotModal2
-        setImagePath={setMainAbilityImagePath2}
-        setAbilityName={setMainAbilityName2}
       />
     </div>
     <div className="col-lg-5 col-xl-4 col-xxl-4 ae-container">

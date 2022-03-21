@@ -25,7 +25,7 @@ const MainSlotModal2 = (props) => {
   }
   
   return (
-    <div className="ability-modal" id="mainSlotModal2">
+    <div className="ability-modal mainSlotModal-upper" id="mainSlotModal2">
           <svg className="modal-close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" onClick={()=>{closeGearModal()}}>
           {/* <!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
             <path 
@@ -37,8 +37,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(inkSaverMain);
-                props.passAbilityName("inkSaverMain");
+                props.setImagePath(inkSaverMain);
+                props.setAbilityName("inkSaverMain");
                 }
               }
             >
@@ -47,8 +47,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(inkSaverSub);
-                props.passAbilityName("inkSaverSub");
+                props.setImagePath(inkSaverSub);
+                props.setAbilityName("inkSaverSub");
                 }
               }
             >
@@ -57,8 +57,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(inkRecorvery);
-                props.passAbilityName("inkRecorvery");
+                props.setImagePath(inkRecorvery);
+                props.setAbilityName("inkRecorvery");
                 }
               }
             >
@@ -67,8 +67,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(runSpeed);
-                props.passAbilityName("runSpeed");
+                props.setImagePath(runSpeed);
+                props.setAbilityName("runSpeed");
                 }
               }
             >
@@ -77,8 +77,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(swimSpeed);
-                props.passAbilityName("swimSpeed");
+                props.setImagePath(swimSpeed);
+                props.setAbilityName("swimSpeed");
                 }
               }
             >
@@ -87,8 +87,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(specialCharge);
-                props.passAbilityName("specialCharge");
+                props.setImagePath(specialCharge);
+                props.setAbilityName("specialCharge");
                 }
               }
             >
@@ -97,8 +97,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(specialSaver);
-                props.passAbilityName("specialSaver");
+                props.setImagePath(specialSaver);
+                props.setAbilityName("specialSaver");
                 }
               }
             >
@@ -107,8 +107,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(specialPower);
-                props.passAbilityName("specialPower");
+                props.setImagePath(specialPower);
+                props.setAbilityName("specialPower");
                 }
               }
             >
@@ -117,8 +117,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(qr);
-                props.passAbilityName("qr");
+                props.setImagePath(qr);
+                props.setAbilityName("qr");
                 }
               }
             >
@@ -127,8 +127,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(quickSuperJump);
-                props.passAbilityName("quickSuperJump");
+                props.setImagePath(quickSuperJump);
+                props.setAbilityName("quickSuperJump");
                 }
               }
             >
@@ -137,8 +137,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(subPower);
-                props.passAbilityName("subPower");
+                props.setImagePath(subPower);
+                props.setAbilityName("subPower");
                 }
               }
             >
@@ -147,8 +147,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(inkRes);
-                props.passAbilityName("inkRes");
+                props.setImagePath(inkRes);
+                props.setAbilityName("inkRes");
                 }
               }
             >
@@ -157,8 +157,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(bombDefence);
-                props.passAbilityName("bombDefence");
+                props.setImagePath(bombDefence);
+                props.setAbilityName("bombDefence");
                 }
               }
             >
@@ -167,8 +167,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(mpu);
-                props.passAbilityName("mpu");
+                props.setImagePath(mpu);
+                props.setAbilityName("mpu");
                 }
               }
             >
@@ -177,8 +177,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(stealthJump);
-                props.passAbilityName("stealthJump");
+                props.setImagePath(stealthJump);
+                props.setAbilityName("stealthJump");
                 }
               }
             >
@@ -187,8 +187,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(objectShredder);
-                props.passAbilityName("objectShredder");
+                props.setImagePath(objectShredder);
+                props.setAbilityName("objectShredder");
                 }
               }
             >
@@ -197,8 +197,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(dropRoller);
-                props.passAbilityName("dropRoller");
+                props.setImagePath(dropRoller);
+                props.setAbilityName("dropRoller");
                 }
               }
             >
@@ -207,8 +207,8 @@ const MainSlotModal2 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.passImagePath(empty);
-                props.passAbilityName("empty");
+                props.setImagePath(empty);
+                props.setAbilityName("empty");
                 }
               }
             >

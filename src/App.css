@@ -163,8 +163,6 @@ footer {
 }
 
 #gear-components {
-  position: relative;
-  height: 900px;
 }
 
 #weapon-container {
@@ -1542,30 +1540,45 @@ Btmボタン
 /*  */
 /* アビリティモーダル関連 */
 /*  */
-
-/* モーダルの大きさと位置 */
-#mainSlotModal0 {
+/* メインスロットモーダル */
+.mainSlotModal {
   height: 280px;
   position: absolute;
-  left: -110px;
-  top: 245px;
+  left: -120px;
+  top: 225px;
   z-index: 5;
 }
-
-#mainSlotModal1 {
+.mainSlotModal-upper {
   height: 280px;
   position: absolute;
-  left: -110px;
-  top: 470px;
+  left: -120px;
+  top: -150px;
   z-index: 5;
 }
-
-#mainSlotModal2 {
-  height: 280px;
+/* モーダル上部の矢印 */
+#mainSlotModal0:before,
+#mainSlotModal1:before {
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #6b6b6b;
+  border-left: 10px solid transparent;
   position: absolute;
-  left: -110px;
-  top: 320px;
-  z-index: 5;
+  top: -20px;
+  left: 138px;
+  z-index: 6;
+  display: block;
+  content: '';
+}
+
+#mainSlotModal2:after {
+  border-right: 10px solid transparent;
+  border-top: 20px solid #6b6b6b;
+  border-left: 10px solid transparent;
+  position: absolute;
+  bottom: -20px;
+  left: 138px;
+  z-index: 6;
+  display: block;
+  content: '';
 }
 /* サブスロットモーダル */
 .subSlotModal {
@@ -1647,32 +1660,6 @@ Btmボタン
   position: absolute;
   top: 220px;
   left: 284px;
-  z-index: 6;
-  display: block;
-  content: '';
-}
-
-/* モーダル上部の矢印 */
-#mainSlotModal0:before,
-#mainSlotModal1:before {
-  border-right: 10px solid transparent;
-  border-bottom: 20px solid #6b6b6b;
-  border-left: 10px solid transparent;
-  position: absolute;
-  top: -20px;
-  left: 128px;
-  z-index: 6;
-  display: block;
-  content: '';
-}
-
-#mainSlotModal2:after {
-  border-right: 10px solid transparent;
-  border-top: 20px solid #6b6b6b;
-  border-left: 10px solid transparent;
-  position: absolute;
-  bottom: -20px;
-  left: 128px;
   z-index: 6;
   display: block;
   content: '';

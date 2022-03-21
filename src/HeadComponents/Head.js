@@ -6,16 +6,21 @@ import SubSlot2 from '../SlotComponents/SubSlot2';
 import SubSlotModal0 from '../SlotComponents/SubSlotModal0';
 import SubSlotModal1 from '../SlotComponents/SubSlotModal1';
 import SubSlotModal2 from '../SlotComponents/SubSlotModal2';
+import MainSlotModal0 from '../SlotComponents/MainSlotModal0';
 
 const Head = (props) => {
   return(
-    <div className="gear-card head-stripe my-xxl-auto" id="headgear-card">
+    <div className="gear-card head-stripe my-lg-auto" id="headgear-card">
       <p className="gear-header font-type1">アタマ</p>
       <HeadGear
         passImagePath={props.headImagePath}
       />
       <MainSlot0
         imagePath={props.mainAbilityImagePath}
+      />
+      <MainSlotModal0
+        setImagePath={props.setMainAbilityImagePath}
+        setAbilityName={props.setMainAbilityName}
       />
       <SubSlot0
         imagePath={props.subAbilityImagePath0}
