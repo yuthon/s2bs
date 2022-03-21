@@ -49,8 +49,8 @@ const AbilityComponents = (props) => {
   const [subAbilityName8, setSubAbilityName8] = useState(null);
   
   return (
-    <>  
-      <div className="col-sm-6 col-lg-3 col-xl-3 col-xxl-2 px-0 d-flex flex-column" id="gear-components">
+    <div className="col-sm-6 col-md-8 col-lg-8 col-xxl-6 px-0" id="gaer-and-ability">
+      <div className="px-0 d-flex flex-md-row flex-wrap" id="gear-components">
       <Head
         headImagePath={props.headImagePath}
         subAbilityImagePath0={subAbilityImagePath0}
@@ -97,7 +97,6 @@ const AbilityComponents = (props) => {
         setSubAbilityImagePath8={setSubAbilityImagePath8}
       />
     </div>
-    <div className="col-lg-5 col-xl-4 col-xxl-4 ae-container">
     <div className="font-type2 text-white" id="ae-section">
       <WeaponModal
         weaponStatus={setWeaponStatus} 
@@ -122,7 +121,6 @@ const AbilityComponents = (props) => {
       />
     </div>
     </div>
-    </>
   );
 }
 

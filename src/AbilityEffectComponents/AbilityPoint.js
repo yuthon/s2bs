@@ -520,7 +520,7 @@ const AbilityPoint = (props) => {
   
   
   return(
-      <>  
+      <div className="d-flex flex-wrap">  
         <div className="special-ability">
           {btnComeback}
           {btnOpeningGanbit}
@@ -582,7 +582,7 @@ const AbilityPoint = (props) => {
           abilityPoint={mpuAP}
           weaponStatus={props.weaponStatus}
         />
-      </>
+      </div>
   );
 };
 

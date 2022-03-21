@@ -10,7 +10,7 @@ import MainSlotModal1 from '../SlotComponents/MainSlotModal1';
 
 const Clothes = (props) => {
   return(
-    <div className="gear-card clothes-stripe my-xl-2" id="clothesgear-card">
+    <div className="gear-card clothes-stripe my-lg-2" id="clothesgear-card">
       <p className="gear-header font-type1">フク</p>
       <ClothesGear
         imagePath={props.clothesImagePath}

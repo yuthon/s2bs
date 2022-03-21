@@ -107,7 +107,7 @@ const Main = () => {
         passBottoms={passBottoms}
       />
       <div className="row" id="main">  
-        <div className="col-sm-6 col-lg-4 col-xxl-6" id="three-section">
+        <div className="col-sm-6 col-md-4 col-lg-4 col-xxl-6" id="three-section">
           <div id="canvas-container">
             <div id="character-btn">
               <button type="button" className="btn btn-dark font-type1" data-bs-toggle="modal" data-bs-target="#characterTypeModal">

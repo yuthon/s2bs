@@ -14,6 +14,21 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+/* bootstrapで実現不可能なレスポンシブ対応を手書き */
+/* @media (max-width: 991.98px) {
+  #ae-section {
+    height: 100%;
+    width: 180%;
+    margin-left: -100%;
+  }
+} */
+@media (min-width: 992px) {
+  #ae-section {
+    height: calc(100vh - 1rem - 6.25rem - 205px);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
 
 .App-header {
   background-color: #282c34;
@@ -162,21 +177,23 @@ footer {
   height: calc(100vh - 6.25rem);
 }
 
-#gear-components {
-  height: calc(100vh - 6.25rem);
+#gear-and-ability {
+  height: 100vh;
+}
+/* #gear-components {
   overflow-y: auto;
   overflow-x: hidden;
-}
+} */
 
 #weapon-container {
   padding-left: 0px;
 }
 
-#ae-section {
-  height: calc(100vh - 6.25rem);
+/* #ae-section {
+  height: calc(100vh - 1rem - 6.25rem - 205px);
   overflow-y: auto;
   overflow-x: hidden;
-}
+} */
 
 .font-type1 {
   font-family: splType01;
@@ -1127,7 +1144,7 @@ Btmボタン
   background-color: rgba(0, 0, 0, 0.6);
   padding: 5px;
   position: relative;
-  width: 100%;
+  width: 324px;
   margin-right: 0rem;
   margin-left: 0rem;
 }
@@ -1338,8 +1355,9 @@ Btmボタン
   box-shadow: none;
 }
 
-.ae-container {
-}
+/* .ae-container {
+  height: 100%;
+} */
 
 #character-btn {
   position: absolute;
