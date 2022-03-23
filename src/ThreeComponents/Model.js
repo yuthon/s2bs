@@ -279,6 +279,248 @@ const Model = (props) => {
       }
     }
   }
+  if (characterType === "IFML") {
+    for (let i = 0; i < armature.children.length; i++) {
+      // モデル
+      let model = armature.children[i];
+      // モデル名
+      let modelName = model.name;
+      
+      // アタマギア
+      // ガール限定
+      if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") > -1) {
+        model.visible = true;
+      }
+      // 性別不問
+      else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") === -1) {
+        model.visible = true;
+      }
+      // フクギア
+      // ガール限定
+      else if (modelName.indexOf(clothesGear) > -1 && modelName.indexOf("Female") > -1) {
+        model.visible = true;
+      }
+      // 性別不問
+      else if (modelName.indexOf(clothesGear) > -1 && modelName.indexOf("All") > -1) {
+        model.visible = true;
+      }
+      // クツギアは全て性別不問
+      else if (modelName.indexOf(shoesGear) > -1) {
+        model.visible = true;
+      }
+      // 髪型
+      else if (modelName.indexOf(`IFML_${hairStyle}`)> -1) {
+        // PT（ポニーテール）が設定されている場合
+        if (headGear.indexOf("PT") > -1 && modelName.indexOf("PT") > -1) {
+          model.visible = true;
+        }
+        // モデル名にALLが設定されている場合
+        else if (headGearType.indexOf("V") > -1 && modelName.indexOf("VALL") > -1) {
+          model.visible = true;
+        } else if (headGearType.indexOf("H") > -1 && modelName.indexOf("HALL") > -1) {
+          model.visible = true;
+        } else if (modelName.indexOf(headGearType) > -1) {
+          model.visible = true;
+        } else {
+          model.visible = false;
+        }
+      }
+      // ボトムス
+      else if (modelName.indexOf(`Female_${bottoms}`)> -1) {
+        model.visible = true;
+      }
+      // カラダ
+      else if (modelName.indexOf("IFML_M_Body")> -1) {
+        // アタマギアにEFが設定されている場合
+        if (headGear.indexOf("EF") > -1 && modelName.indexOf("EarFolded") > -1) {
+          model.visible = true;
+          // 肌の色
+          model.material.color.setRGB(skinColor.r,skinColor.g,skinColor.b);
+        } else if (headGear.indexOf("EF") === -1 && modelName.indexOf("EarFolded") === -1) {
+          model.visible = true;
+          // 肌の色
+          model.material.color.setRGB(skinColor.r,skinColor.g,skinColor.b);
+        } else {
+          model.visible = false;
+        }
+      }
+      // 目周辺
+      else if (modelName.indexOf("IFML_Eye") > -1) {
+        model.visible = true;
+        if (modelName.indexOf("IFML_Eyelid_Outer") > -1) {
+          // 肌の色
+          model.material.color.setRGB(skinColor.r,skinColor.g,skinColor.b);
+        }
+      }
+      else {
+        model.visible = false;
+      }
+    }
+  }
+  if (characterType === "OFML") {
+    // 髪型が2種類のみのため、Stateの値が合致しない場合はHair0に入れ替える
+    if (hairStyle !== "Hair_0" && hairStyle !== "Hair_1") {
+      hairStyle = "Hair_0"
+    }
+    for (let i = 0; i < armature.children.length; i++) {
+      // モデル
+      let model = armature.children[i];
+      // モデル名
+      let modelName = model.name;
+      
+      // アタマギア
+      // ガール限定
+      if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") > -1) {
+        model.visible = true;
+      }
+      // 性別不問
+      else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") === -1) {
+        model.visible = true;
+      }
+      // フクギア
+      // ガール限定
+      else if (modelName.indexOf(clothesGear) > -1 && modelName.indexOf("Female") > -1) {
+        model.visible = true;
+      }
+      // 性別不問
+      else if (modelName.indexOf(clothesGear) > -1 && modelName.indexOf("All") > -1) {
+        model.visible = true;
+      }
+      // クツギアは全て性別不問
+      else if (modelName.indexOf(shoesGear) > -1) {
+        model.visible = true;
+      }
+      // 髪型
+      else if (modelName.indexOf(`OFML_${hairStyle}`)> -1) {
+        // PT（ポニーテール）が設定されている場合
+        if (headGear.indexOf("PT") > -1 && modelName.indexOf("PT") > -1) {
+          model.visible = true;
+        }
+        // モデル名にALLが設定されている場合
+        else if (headGearType.indexOf("V") > -1 && modelName.indexOf("VALL") > -1) {
+          model.visible = true;
+        } else if (headGearType.indexOf("H") > -1 && modelName.indexOf("HALL") > -1) {
+          model.visible = true;
+        } else if (modelName.indexOf(headGearType) > -1) {
+          model.visible = true;
+        } else {
+          model.visible = false;
+        }
+      }
+      // ボトムス
+      else if (modelName.indexOf(`Female_${bottoms}`)> -1) {
+        model.visible = true;
+      }
+      // カラダ
+      else if (modelName.indexOf("OFML_M_Body")> -1) {
+        // アタマギアにEFが設定されている場合
+        if (headGear.indexOf("EF") > -1 && modelName.indexOf("EarFolded") > -1) {
+          model.visible = true;
+          // 肌の色
+          model.material.color.setRGB(skinColor.r,skinColor.g,skinColor.b);
+        } else if (headGear.indexOf("EF") === -1 && modelName.indexOf("EarFolded") === -1) {
+          model.visible = true;
+          // 肌の色
+          model.material.color.setRGB(skinColor.r,skinColor.g,skinColor.b);
+        } else {
+          model.visible = false;
+        }
+      }
+      // 目周辺
+      else if (modelName.indexOf("OFML_Eye") > -1) {
+        model.visible = true;
+        if (modelName.indexOf("OFML_Eyelid_Outer") > -1) {
+          // 肌の色
+          model.material.color.setRGB(skinColor.r,skinColor.g,skinColor.b);
+        }
+      }
+      else {
+        model.visible = false;
+      }
+    }
+  }
+  if (characterType === "OML") {
+    // 髪型が2種類のみのため、Stateの値が合致しない場合はHair0に入れ替える
+    if (hairStyle !== "Hair_0" && hairStyle !== "Hair_1") {
+      hairStyle = "Hair_0"
+    }
+    for (let i = 0; i < armature.children.length; i++) {
+      // モデル
+      let model = armature.children[i];
+      // モデル名
+      let modelName = model.name;
+      
+      // アタマギア
+      // ボーイ限定
+      if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") > -1) {
+        model.visible = true;
+      }
+      // 性別不問
+      else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") === -1) {
+        model.visible = true;
+      }
+      // アフロのオクトリング限定
+      else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("OML") > -1 && hairStyle === "Hair_1") {
+        model.visible = true;
+      }
+      // フクギア
+      // ボーイ限定
+      else if (modelName.indexOf(clothesGear) > -1 && modelName.indexOf("Male") > -1) {
+        model.visible = true;
+      }
+      // 性別不問
+      else if (modelName.indexOf(clothesGear) > -1 && modelName.indexOf("All") > -1) {
+        model.visible = true;
+      }
+      // クツギアは全て性別不問
+      else if (modelName.indexOf(shoesGear) > -1) {
+        model.visible = true;
+      }
+      // 髪型
+      else if (modelName.indexOf(`OML_${hairStyle}`)> -1) {
+        // モデル名にALLが設定されている場合
+        if (headGearType.indexOf("V") > -1 && modelName.indexOf("VALL") > -1) {
+          model.visible = true;
+        } else if (headGearType.indexOf("H") > -1 && modelName.indexOf("HALL") > -1) {
+          model.visible = true;
+        } else if (modelName.indexOf(headGearType) > -1) {
+          model.visible = true;
+        } else {
+          model.visible = false;
+        }
+      }
+      // ボトムス
+      else if (modelName.indexOf(`Male_${bottoms}`)> -1) {
+        model.visible = true;
+      }
+      // カラダ
+      else if (modelName.indexOf("OML_M_Body")> -1) {
+        // アタマギアにEFが設定されている場合
+        if (headGear.indexOf("EF") > -1 && modelName.indexOf("EarFolded") > -1) {
+          model.visible = true;
+          // 肌の色
+          model.material.color.setRGB(skinColor.r,skinColor.g,skinColor.b);
+        } else if (headGear.indexOf("EF") === -1 && modelName.indexOf("EarFolded") === -1) {
+          model.visible = true;
+          // 肌の色
+          model.material.color.setRGB(skinColor.r,skinColor.g,skinColor.b);
+        } else {
+          model.visible = false;
+        }
+      }
+      // 目周辺
+      else if (modelName.indexOf("OML_Eye") > -1) {
+        model.visible = true;
+        if (modelName.indexOf("OML_Eyelid_Outer") > -1) {
+          // 肌の色
+          model.material.color.setRGB(skinColor.r,skinColor.g,skinColor.b);
+        }
+      }
+      else {
+        model.visible = false;
+      }
+    }
+  }
 
   for (let i = 0; i < armature.children.length; i++) {
     let model = armature.children[i];
