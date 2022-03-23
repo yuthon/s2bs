@@ -460,7 +460,7 @@ const gears = [
     {name:"ガチホワイト",path:GatiWhite,id:"GatiWhite",brand:"バトロイカ"},
     {name:"リーグT",path:LeagueT,id:"LeagueT",brand:"バトロイカ"},
     // {name:"SWCロゴT",path:SWCLogoT,id:"SWCLogoT",brand:"バトロイカ"},
-    {name:"おうえんパーカー(タコver.)",path:OuenParka$TakoVer$$,id:"OuenParka(TakoVer.)",brand:"バトロイカ"},
+    {name:"おうえんパーカー(タコver.)",path:OuenParka$TakoVer$$,id:"OuenParka",brand:"バトロイカ"},
     // {name:"フェスT",path:FesT,id:"FesT",brand:"バトロイカ"},
     {name:"フェスT レプリカ",path:FesT_Replica,id:"FesT_Replica",brand:"バトロイカ"},
     // {name:"メカボディ・AKM",path:MechaBody$AKM,id:"MechaBody・AKM",brand:"バトロイカ"},

@@ -72,7 +72,7 @@ const SkinColorModal = (props) => {
             <svg
               className="SC-btn-svg SC-svg-0" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.passSkinColor("#ffd1cc");
+                props.passSkinColor({r:1,g:0.638,b:0.604});
                 btnSelected("SC-0")
               }}
               onMouseDown={()=>{
@@ -97,7 +97,7 @@ const SkinColorModal = (props) => {
             <svg
               className="SC-btn-svg SC-svg-1" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.passSkinColor("#ffaea6");
+                props.passSkinColor({r:1,g:0.423,b:0.381});
                 btnSelected("SC-1")
               }}
               onMouseDown={()=>{
@@ -122,7 +122,7 @@ const SkinColorModal = (props) => {
             <svg
               className="SC-btn-svg SC-svg-2" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.passSkinColor("#ffac88");
+                props.passSkinColor({r:1,g:0.413,b:0.246});
                 btnSelected("SC-2");
               }}
               onMouseDown={()=>{
@@ -147,7 +147,7 @@ const SkinColorModal = (props) => {
             <svg
               className="SC-btn-svg SC-svg-3" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.passSkinColor("#ff917b");
+                props.passSkinColor({r:1,g:0.283,b:0.198});
                 btnSelected("SC-3");
               }}
               onMouseDown={()=>{
@@ -172,7 +172,7 @@ const SkinColorModal = (props) => {
             <svg
               className="SC-btn-svg SC-svg-4" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.passSkinColor("#d36a51");
+                props.passSkinColor({r:0.651,g:0.144,b:0.082});
                 btnSelected("SC-4");
               }}
               onMouseDown={()=>{
@@ -197,7 +197,7 @@ const SkinColorModal = (props) => {
             <svg
               className="SC-btn-svg SC-svg-5" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.passSkinColor("#5c2200");
+                props.passSkinColor({r:0.107,g:0.016,b:0});
                 btnSelected("SC-5");
               }}
               onMouseDown={()=>{
@@ -222,7 +222,7 @@ const SkinColorModal = (props) => {
             <svg
               className="SC-btn-svg SC-svg-6" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.passSkinColor("#2b1000");
+                props.passSkinColor({r:0.024,g:0.005,b:0});
                 btnSelected("SC-6");
               }}
               onMouseDown={()=>{

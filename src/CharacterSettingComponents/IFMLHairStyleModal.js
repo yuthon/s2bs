@@ -41,7 +41,7 @@ const IFMLHairStyleModal = (props) => {
     <div className="modal fade" id="IFMLHairStyleModal" aria-hidden="true" aria-labelledby="IFMLHairStyleModalLabel" tabIndex="-1">  
       <div className="modal-dialog">
         <div className="modal-content bg-dark">  
-          <div className="IFML-HS-btn IFML-HS-0" id="IFML-HS-0">  
+          {/* <div className="IFML-HS-btn IFML-HS-0" id="IFML-HS-0">  
             <svg
               className="HS-btn-svg HS-svg" width="110" height="180" viewBox="0 -10 240 310"
               onClick={()=>{
@@ -66,7 +66,7 @@ const IFMLHairStyleModal = (props) => {
               />
               
             </svg>
-          </div>
+          </div> */}
           <div className="IFML-HS-btn IFML-HS-1" id="IFML-HS-1">  
             <svg
               className="HS-btn-svg HS-svg" width="110" height="180" viewBox="0 -10 240 310"

@@ -50,7 +50,7 @@ const Main = () => {
   const [shoesGear, setShoesGear] = useState({name:"キャンバス ホワイト",path:Canvas_White,id:"Canvas_White",brand:"クラーゲス"});
   //キャラ設定モーダルを管理
   const [characterType, passCharacterType] = useState("IML");
-  const [skinColor, passSkinColor] = useState("#ffd1cc");
+  const [skinColor, passSkinColor] = useState({r:1,g:0.638,b:0.604});
   const [hairStyle, passHairStyle] = useState("Hair_0");
   const [eyeColor, passEyeColor] = useState("#1617ff");
   const [isMLBottomsModalOpen, controlMLBottomsModal] = useState(false);
