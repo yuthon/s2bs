@@ -137,7 +137,7 @@ const Main = () => {
                   headGear={headGear.id}
                   clothesGear={clothesGear.id}
                   shoesGear={shoesGear.id}
-                  CT={characterType}
+                  characterType={characterType}
                   skinColor={skinColor}
                   eyeColor={eyeColor}
                   hairStyle={hairStyle}
