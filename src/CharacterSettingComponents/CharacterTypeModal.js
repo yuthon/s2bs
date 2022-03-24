@@ -20,8 +20,6 @@ const CharacterSettingModal = (props) => {
   useEffect(()=>{
     //選択されているキャラクタータイプのボタンのクラス名を変更
     let target = document.getElementById(props.characterType);
-    console.log(props.characterType)
-    console.log(target)
     target.className="selected"
     // 別のキャラクタータイプが選択されていればクラス名を戻す
     if (IFMLRef.current.className === "selected" && props.characterType !== "IFML") {

@@ -53,7 +53,7 @@ const Main = () => {
   const [shoesGear, setShoesGear] = useState({name:"キャンバス ホワイト",path:Canvas_White,id:"Canvas_White",brand:"クラーゲス"});
   //キャラ設定モーダルを管理
   const [characterType, setCharacterType] = useState("IML");
-  const [skinColor, passSkinColor] = useState({r:1,g:0.638,b:0.604});
+  const [skinColor, setSkinColor] = useState("SC-0");
   const [hairStyle, passHairStyle] = useState("Hair_0");
   const [eyeColor, setEyeColor] = useState("#1617ff");
   const [isMLBottomsModalOpen, controlMLBottomsModal] = useState(false);
@@ -90,8 +90,8 @@ const Main = () => {
         characterType={characterType}
       />
       <SkinColorModal
-        passSkinColor={passSkinColor}
-        characterType={characterType}
+        setSkinColor={setSkinColor}
+        skinColor={skinColor}
       />
       <TeamColorModal
         setTeamColor={setTeamColor}

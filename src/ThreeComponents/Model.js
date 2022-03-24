@@ -84,8 +84,28 @@ const Model = (props) => {
   let shoesGear = props.shoesGear;
   // 髪型
   let hairStyle = props.hairStyle;
-  // 肌の色を変更
-  let skinColor = props.skinColor;
+  // 肌の色
+  
+  const SkinColor = function(skinColor) {
+    if (skinColor === "SC-0") {
+      return {r:1,g:0.638,b:0.604}
+    } else if (skinColor === "SC-1") {
+      return {r:1,g:0.423,b:0.381}
+    } else if (skinColor === "SC-2") {
+      return {r:1,g:0.413,b:0.246}
+    } else if (skinColor === "SC-3") {
+      return {r:1,g:0.283,b:0.198}
+    } else if (skinColor === "SC-4") {
+      return {r:0.651,g:0.144,b:0.082}
+    } else if (skinColor === "SC-5") {
+      return {r:0.107,g:0.016,b:0}
+    } else if (skinColor === "SC-6") {
+      return {r:0.024,g:0.005,b:0}
+    }
+  }
+
+  let skinColor = SkinColor(props.skinColor);
+
   // ボトムス
   let bottoms = props.bottoms
 
