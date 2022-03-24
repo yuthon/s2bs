@@ -212,10 +212,13 @@ const SkinColorModal = (props) => {
           </div>
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn-lg btn-dark font-type1 ms-auto" data-bs-dismiss="modal" aria-hidden="Close">
+            <button type="button" className="btn-lg btn-dark font-type1 ms-auto" data-bs-toggle="modal" data-bs-target="#characterTypeModal" data-bs-dismiss="modal">
+              もどる
+            </button>
+            <button type="button" className="btn-lg btn-dark font-type1 mx-auto" data-bs-dismiss="modal">
               とじる
             </button>
-            <button type="button" className="btn-lg btn-dark font-type1 me-auto" data-bs-toggle="modal" data-bs-target="#EyeColorModal" data-bs-dismiss="modal">
+            <button type="button" className="btn-lg btn-dark font-type1 me-auto" data-bs-toggle="modal" data-bs-target="#eyeColorModal" data-bs-dismiss="modal">
               つぎへ
             </button>
           </div>

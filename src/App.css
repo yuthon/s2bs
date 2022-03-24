@@ -739,6 +739,19 @@ footer {
 /*
 CTボタン
 */
+.CT-btn,
+.CT-selected {
+  width: 240px;
+  height: 165px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.CT-btn-svg {
+  width: 235px;
+  height: 155px;
+}
+
 /*ボタン内のテキスト*/
 .CT-text-default {
   font-size: 10rem;
@@ -773,7 +786,6 @@ CTボタン
 }
 
 .CT-btn-svg:hover .CT-btn-hover,
-.CT-btn-svg:active .CT-btn-default,
 .CT-btn-svg:active .CT-btn-default {
   fill: #d9dc20;
 }
@@ -782,38 +794,23 @@ CTボタン
   fill: none;
 }
 
-#IFML.selected .CT-btn-svg,
-#IML.selected .CT-btn-svg,
-#OFML.selected .CT-btn-svg,
-#OML.selected .CT-btn-svg {
+.CT-selected .CT-btn-svg {
   transform: scale(1.05, 1.05);
 }
 
-#IFML.selected .CT-btn-svg .CT-btn-default,
-#IML.selected .CT-btn-svg .CT-btn-default,
-#OFML.selected .CT-btn-svg .CT-btn-default,
-#OML.selected .CT-btn-svg .CT-btn-default {
+.CT-selected .CT-btn-svg .CT-btn-default {
   fill: none;
 }
 
-#IFML.selected .CT-btn-svg .CT-btn-hover,
-#IML.selected .CT-btn-svg .CT-btn-hover,
-#OFML.selected .CT-btn-svg .CT-btn-hover,
-#OML.selected .CT-btn-svg .CT-btn-hover {
+.CT-selected .CT-btn-svg .CT-btn-hover {
   fill: #d9dc20;
 }
 
-#IFML.selected .CT-btn-svg .CT-text-default,
-#IML.selected .CT-btn-svg .CT-text-default,
-#OFML.selected .CT-btn-svg .CT-text-default,
-#OML.selected .CT-btn-svg .CT-text-default {
+.CT-selected .CT-btn-svg .CT-text-default {
   fill: none;
 }
 
-#IFML.selected .CT-btn-svg .CT-text-hover,
-#IML.selected .CT-btn-svg .CT-text-hover,
-#OFML.selected .CT-btn-svg .CT-text-hover,
-#OML.selected .CT-btn-svg .CT-text-hover {
+.CT-selected .CT-btn-svg .CT-text-hover {
   fill: white;
   font-size: 13rem;
   font-weight: bold;

@@ -95,7 +95,7 @@ const EyeColorModal = (props) => {
   })
 
   return (
-    <div className="modal fade" id="EyeColorModal" tabIndex="-1" aria-labelledby="SkinColorModalLabel" aria-hidden="true">
+    <div className="modal fade" id="eyeColorModal" tabIndex="-1" aria-labelledby="SkinColorModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-md modal-dialog-centered">
         <div className="modal-content font-type1 bg-secondary text-white">  
           <div className="modal-header">
@@ -399,10 +399,13 @@ const EyeColorModal = (props) => {
           </div>
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn-lg btn-dark font-type1 ms-auto" data-bs-dismiss="modal" aria-hidden="Close">
+            <button type="button" className="btn-lg btn-dark font-type1 ms-auto" data-bs-toggle="modal" data-bs-target="#skinColorModal" data-bs-dismiss="modal">
+              もどる
+            </button>
+            <button type="button" className="btn-lg btn-dark font-type1 mx-auto" data-bs-dismiss="modal" aria-hidden="Close">
               とじる
             </button>
-            <button type="button" className="btn-lg btn-dark font-type1 me-auto" data-bs-toggle="modal" data-bs-target="#EyeColorModal" data-bs-dismiss="modal">
+            <button type="button" className="btn-lg btn-dark font-type1 me-auto" data-bs-toggle="modal" data-bs-target="#hairStyleModal" data-bs-dismiss="modal">
               つぎへ
             </button>
           </div>
