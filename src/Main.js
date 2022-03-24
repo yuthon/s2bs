@@ -11,12 +11,15 @@ import ShoesGearModal from './ShoesComponents/ShoesGearModal';
 //キャラクターの詳細設定モーダル
 import CharacterTypeModal from './CharacterSettingComponents/CharacterTypeModal';
 import SkinColorModal from './CharacterSettingComponents/SkinColorModal';
+import TeamColorModal from './CharacterSettingComponents/TeamColorModal';
 import IFMLHairStyleModal from './CharacterSettingComponents/IFMLHairStyleModal';
 import IMLHairStyleModal from './CharacterSettingComponents/IMLHairStyleModal';
 import OFMLHairStyleModal from './CharacterSettingComponents/OFMLHairStyleModal';
 import OMLHairStyleModal from './CharacterSettingComponents/OMLHairStyleModal';
 import MLBottomsModal from './CharacterSettingComponents/MLBottomsModal';
 import FMLBottomsModal from './CharacterSettingComponents/FMLBottomsModal';
+import EyeColorModal from './CharacterSettingComponents/EyeColorModal';
+
 //初期表示用の画像
 import WakabaIkaT from './images/gear/Clt_FST001.png';
 import Canvas_White from './images/gear/Shs_FST000.png';
@@ -52,11 +55,12 @@ const Main = () => {
   const [characterType, passCharacterType] = useState("IML");
   const [skinColor, passSkinColor] = useState({r:1,g:0.638,b:0.604});
   const [hairStyle, passHairStyle] = useState("Hair_0");
-  const [eyeColor, passEyeColor] = useState("#1617ff");
+  const [eyeColor, setEyeColor] = useState("#1617ff");
   const [isMLBottomsModalOpen, controlMLBottomsModal] = useState(false);
   const [isFMLBottomsModalOpen, controlFMLBottomsModal] = useState(false);
   const [bottoms, passBottoms] = useState("Btm_0");
-  const [teamColor, passTeamColor] = useState("ffb23d");
+  const [teamColor, setTeamColor] = useState("ffb23d");
+  const [darkColor, setDarkColor] = useState(null)
   
   return(
     <>
@@ -88,6 +92,10 @@ const Main = () => {
         passSkinColor={passSkinColor}
         characterType={characterType}
       />
+      <TeamColorModal
+        setTeamColor={setTeamColor}
+        setDarkColor={setDarkColor}
+      />
       <IFMLHairStyleModal
         passHairStyle={passHairStyle}
       />
@@ -105,6 +113,9 @@ const Main = () => {
       />
       <FMLBottomsModal
         passBottoms={passBottoms}
+      />
+      <EyeColorModal 
+        setEyeColor={setEyeColor}
       />
       <div className="row" id="main">  
         <div className="col-sm-6 col-md-4 col-lg-4 col-xxl-6" id="three-section">
@@ -142,7 +153,9 @@ const Main = () => {
                   eyeColor={eyeColor}
                   hairStyle={hairStyle}
                   bottoms={bottoms}
-                  teamColor={teamColor} />
+                  teamColor={teamColor}
+                  darkColor={darkColor}  
+                />
               </Suspense>
             </Canvas>
           </div>

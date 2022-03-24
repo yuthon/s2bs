@@ -8,7 +8,7 @@ import { useFrame, useLoader } from '@react-three/fiber';
 const Model = (props) => {
   const gltf = useLoader(
     GLTFLoader,
-    'splModel043.glb',
+    'splModel049.glb',
     loader => {
       const dracoLoader = new DRACOLoader();
       dracoLoader.setDecoderPath("/draco-gltf/");
@@ -131,79 +131,8 @@ const Model = (props) => {
   };
   let headGearType = defineHeadGearType();
 
-  // イカガール
-  // Eyelid
-  // armature.children[535].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[536].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[537].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[538].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[539].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // // Body
-  // armature.children[599].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[600].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-
-  // // イカボーイ
-  // // Eyelid
-  // armature.children[609].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[610].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[611].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // // Body
-  // armature.children[674].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[675].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-
-  // // オクトガール
-  // // Eyelid
-  // armature.children[815].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[816].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[817].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // // Body
-  // armature.children[834].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[835].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-
-  // // オクトボーイ
-  // // Eyelid
-  // armature.children[845].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[846].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[847].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // // Body
-  // armature.children[893].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[894].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-
-
   // キャラクタータイプを変更
   let characterType = props.characterType;
-  // // イカガール
-  // if (characterType === "IFML" && headGear.indexOf("EF") > -1) {
-  //   armature.children[600].visible = true;
-  //   armature.children[599].visible = false;
-  // } else {
-  //   armature.children[600].visible = false;
-  //   armature.children[599].visible = true;
-  // }
-  // // イカボーイ
-  // if (characterType === "IML" && headGear.indexOf("EF") > -1) {
-  //   armature.children[675].visible = true;
-  //   armature.children[674].visible = false;
-  // } else {
-  //   armature.children[675].visible = false;
-  //   armature.children[674].visible = true;
-  // }
-  // // オクトガール
-  // if (characterType === "OFML" && headGear.indexOf("EF") > -1) {
-  //   armature.children[835].visible = true;
-  //   armature.children[834].visible = false;
-  // } else {
-  //   armature.children[835].visible = false;
-  //   armature.children[834].visible = true;
-  // }
-  // // オクトボーイ
-  // if (characterType === "OML" && headGear.indexOf("EF") > -1) {
-  //   armature.children[894].visible = true;
-  //   armature.children[893].visible = false;
-  // } else {
-  //   armature.children[894].visible = false;
-  //   armature.children[893].visible = true;
-  // }
   
   if (characterType === "IML") {
     for (let i = 0; i < armature.children.length; i++) {
@@ -214,11 +143,11 @@ const Model = (props) => {
       
       // アタマギア
       // ボーイ限定
-      if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") > -1) {
+      if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") > -1 && modelName.indexOf("OML") === -1) {
         model.visible = true;
       }
       // 性別不問
-      else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") === -1) {
+      else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") === -1 && modelName.indexOf("OML") === -1) {
         model.visible = true;
       }
       // フクギア
@@ -288,11 +217,11 @@ const Model = (props) => {
       
       // アタマギア
       // ガール限定
-      if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") > -1) {
+      if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") > -1 && modelName.indexOf("OML") === -1) {
         model.visible = true;
       }
       // 性別不問
-      else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") === -1) {
+      else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") === -1 && modelName.indexOf("OML") === -1) {
         model.visible = true;
       }
       // フクギア
@@ -370,11 +299,11 @@ const Model = (props) => {
       
       // アタマギア
       // ガール限定
-      if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") > -1) {
+      if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") > -1 && modelName.indexOf("OML") === -1) {
         model.visible = true;
       }
       // 性別不問
-      else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") === -1) {
+      else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") === -1 && modelName.indexOf("OML") === -1) {
         model.visible = true;
       }
       // フクギア
@@ -450,19 +379,22 @@ const Model = (props) => {
       // モデル名
       let modelName = model.name;
       
-      // アタマギア
       // ボーイ限定
-      if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") > -1) {
+      if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") > -1 && modelName.indexOf("OML") === -1 && hairStyle === "Hair_0") {
         model.visible = true;
       }
       // 性別不問
-      else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") === -1) {
+      else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") === -1 && modelName.indexOf("OML") === -1 && hairStyle === "Hair_0") {
         model.visible = true;
       }
-      // アフロのオクトリング限定
-      else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("OML") > -1 && hairStyle === "Hair_1") {
+      else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") > -1 && hairStyle === "Hair_1") {
         model.visible = true;
       }
+      // 性別不問
+      else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") === -1 && hairStyle === "Hair_1") {
+        model.visible = true;
+      }
+      
       // フクギア
       // ボーイ限定
       else if (modelName.indexOf(clothesGear) > -1 && modelName.indexOf("Male") > -1) {
@@ -516,8 +448,27 @@ const Model = (props) => {
           model.material.color.setRGB(skinColor.r,skinColor.g,skinColor.b);
         }
       }
+      else if (modelName.indexOf("OML_Hed_C0_EzokkoMesh") > -1) {
+        model.visible = true;
+      }
       else {
         model.visible = false;
+      }
+
+      if (hairStyle === "Hair_1") {
+        for (let i = 0; i < armature.children.length; i++) {
+          let model = armature.children[i];
+          let modelName = model.name
+          if (model.visible && modelName.indexOf(headGear) > -1 && modelName.indexOf("OML") > -1) {
+            for (let n = 0; n < armature.children.length; n++) {
+              let model = armature.children[n];
+              let modelName = model.name
+              if (model.visible && modelName.indexOf(headGear) > -1 && modelName.indexOf("OML") === -1){
+                model.visible = false;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -530,262 +481,7 @@ const Model = (props) => {
       
     }
   }
-  // if (props.CT === "IML" || props.CT === "OML") {
-  //   for (let i = 0; i < armature.children.length; i++) {
-  //     let modelName = armature.children[i].name;
-  //     // イカボーイ
-  //     if (characterType === "IML" && headGear.indexOf("EF") > -1) {
-  //       armature.children[675].visible = true;
-  //       armature.children[674].visible = false;
-  //     } else {
-  //       armature.children[675].visible = false;
-  //       armature.children[674].visible = true;
-  //     }
-  //     // オクトボーイ
-  //     if (characterType === "OML" && headGear.indexOf("EF") > -1) {
-  //       armature.children[894].visible = true;
-  //       armature.children[893].visible = false;
-  //     } else {
-  //       armature.children[894].visible = false;
-  //       armature.children[893].visible = true;
-  //     }
-  //     // 目
-  //     else if (
-  //       modelName.indexOf(`${props.CT}_Eye`) > -1
-  //     ) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-      
-  //     else if (
-  //       modelName.indexOf(`${props.CT}_Eyelid_Outer_Fill`) > -1
-  //     ) {
-  //       gltf.scene.children[0].children[i].visible = false;
-  //     }
-  //     else if (
-  //       modelName.indexOf(`${props.CT}_Eyelid_Outer`) > -1
-  //     ) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //       gltf.scene.children[0].children[i].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  //     }
-      
-  //     // 髪型
-  //     else if (modelName.indexOf(`${props.CT}_${props.hairStyle}`) > -1 && modelName.indexOf(`${headGearType}`) > -1) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // OMLでStateに該当する髪型がない時の処理
-  //     else if (
-  //       props.CT === "OML" &&
-  //       modelName.indexOf("OML_Hair_0") > -1 &&
-  //       modelName.indexOf(`${headGearType}`) > -1 &&
-  //       props.hairStyle !== "Hair_0" &&
-  //       props.hairStyle !== "Hair_1"
-  //     ) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // ボトムス
-  //     else if (modelName.indexOf(`Male_${props.bottoms}`) > -1) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // アタマギア
-  //     else if (
-  //       modelName.indexOf(`${props.headGear}`) > -1) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // フクギア
-  //     else if (
-  //       modelName.indexOf(`Male_Clt_${props.clothesGear}`) > -1 || 
-  //       modelName.indexOf(`All_Clt_${props.clothesGear}`) > -1
-  //     ) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // クツギア
-  //     else if (
-  //       modelName.indexOf(`Shs_${props.shoesGear}`) > -1) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     else {
-  //       gltf.scene.children[0].children[i].visible = false;
-  //     }
-  //   }
-  // }
-
-
-  // // 髪型
-  // let hairStyle = props.hairStyle;
-  // // インクの色
-  // let teamColor = props.teamColor;
-  // // 目の色
-  // let eyeColor = props.eyeColor
-  // // ボトムス
-  // let bottoms = props.bottoms;
-
   
-  
-  // if (props.CT === "IFML" || props.CT === "OFML") {
-   
-  //   for (let i = 0; i < gltf.scene.children[0].children.length; i++) {
-  //     let modelName = gltf.scene.children[0].children[i].name;
-  //     //キャラクター本体
-  //     if (modelName.indexOf(`${props.CT}_M_Body_EarFolded`) > -1) {
-  //       if (props.headGear.indexOf("EF") > -1) {
-  //         gltf.scene.children[0].children[i].visible = true;
-  //         // 肌の色を設定
-  //         // gltf.scene.children[0].children[i].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  //       } else {
-  //         gltf.scene.children[0].children[i].visible = false;
-  //       }
-  //     } 
-  //     else if (modelName.indexOf(`${props.CT}_M_Body`) > -1) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // 目
-  //     else if (
-  //       modelName.indexOf(`${props.CT}_Eye`) > -1
-  //     ) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // 髪型
-  //     else if (modelName.indexOf(`${props.CT}_${props.hairStyle}`) > -1 && modelName.indexOf(`${headGearType}`) > -1) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // OFMLでStateに該当する髪型がない時の処理
-  //     else if (
-  //       props.CT === "OFML" &&
-  //       modelName.indexOf("OFML_Hair_0") > -1 &&
-  //       modelName.indexOf(`${headGearType}`) > -1 &&
-  //       props.hairStyle !== "Hair_0" &&
-  //       props.hairStyle !== "Hair_1"
-  //     ) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // ボトムス
-  //     else if (modelName.indexOf(`Female_${props.bottoms}`) > -1) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // アタマギア
-  //     else if (modelName.indexOf(`Hed_${props.headGear}`) > -1) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // フクギア
-  //     else if (
-  //       modelName.indexOf(`Female_Clt_${props.clothesGear}`) > -1 || 
-  //       modelName.indexOf(`All_Clt_${props.clothesGear}`) > -1
-  //     ) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // クツギア
-  //     else if (modelName.indexOf(`Shs_${props.shoesGear}`) > -1) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     else {
-  //       gltf.scene.children[0].children[i].visible = false;
-  //     }
-  //   }
-  // } else if (props.CT === "IML" || props.CT === "OML") {
-  //   for (let i = 0; i < gltf.scene.children[0].children.length; i++) {
-  //     let modelName = gltf.scene.children[0].children[i].name;
-  //     //キャラクター本体
-  //     if (modelName.indexOf(`${props.CT}_M_Body_EarFolded`) > -1) {
-  //       if (props.headGear.indexOf("EF") > -1) {
-  //         gltf.scene.children[0].children[i].visible = true;
-  //         // 肌の色を設定
-  //         gltf.scene.children[0].children[i].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  //         console.log("eee")
-  //       } else {
-  //         gltf.scene.children[0].children[i].visible = false;
-  //       }
-  //     } 
-  //     else if (modelName.indexOf(`${props.CT}_M_Body`) > -1) {
-  //       if (props.headGear.indexOf("EF") === -1) {
-  //         gltf.scene.children[0].children[i].visible = true;
-  //         // 肌の色を設定
-  //         gltf.scene.children[0].children[i].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  //       } else {
-  //         gltf.scene.children[0].children[i].visible = false;
-  //       }
-  //     }
-  //     // 目
-  //     else if (
-  //       modelName.indexOf(`${props.CT}_Eye`) > -1
-  //     ) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-      
-  //     else if (
-  //       modelName.indexOf(`${props.CT}_Eyelid_Outer_Fill`) > -1
-  //     ) {
-  //       gltf.scene.children[0].children[i].visible = false;
-  //     }
-  //     else if (
-  //       modelName.indexOf(`${props.CT}_Eyelid_Outer`) > -1
-  //     ) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //       gltf.scene.children[0].children[i].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  //     }
-      
-  //     // 髪型
-  //     else if (modelName.indexOf(`${props.CT}_${props.hairStyle}`) > -1 && modelName.indexOf(`${headGearType}`) > -1) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // OMLでStateに該当する髪型がない時の処理
-  //     else if (
-  //       props.CT === "OML" &&
-  //       modelName.indexOf("OML_Hair_0") > -1 &&
-  //       modelName.indexOf(`${headGearType}`) > -1 &&
-  //       props.hairStyle !== "Hair_0" &&
-  //       props.hairStyle !== "Hair_1"
-  //     ) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // ボトムス
-  //     else if (modelName.indexOf(`Male_${props.bottoms}`) > -1) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // アタマギア
-  //     else if (
-  //       modelName.indexOf(`${props.headGear}`) > -1) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // フクギア
-  //     else if (
-  //       modelName.indexOf(`Male_Clt_${props.clothesGear}`) > -1 || 
-  //       modelName.indexOf(`All_Clt_${props.clothesGear}`) > -1
-  //     ) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     // クツギア
-  //     else if (
-  //       modelName.indexOf(`Shs_${props.shoesGear}`) > -1) {
-  //       gltf.scene.children[0].children[i].visible = true;
-  //     }
-  //     else {
-  //       gltf.scene.children[0].children[i].visible = false;
-  //     }
-  //   }
-  // }
-
-  // if (props.CT)
-
-  // if (props.headGear.indexOf("EF") > -1) {
-
-  // }
-  // // 
-  // armature.children[599].visible = 
-  // armature.children[600].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-
-  // armature.children[674].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[675].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-
-  // armature.children[834].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[835].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-
-  // armature.children[893].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // armature.children[894].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // gltf.scene.children[0].children[594].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // gltf.scene.children[0].children[595].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // gltf.scene.children[0].children[596].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // gltf.scene.children[0].children[597].material.color.setRGB(skinColor.r,skinColor.g,skinColor.b)
-  // console.log(gltf.scene.children[0].children[659].material.color)
   return (
       <primitive object={gltf.scene} />
   );

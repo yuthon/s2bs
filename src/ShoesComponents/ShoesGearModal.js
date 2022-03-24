@@ -212,7 +212,7 @@ const gears = [
     {name:"シーホース イエロー",path:SeaHorse_Yellow,id:"Seahorse_Yellow",brand:"アイロニック"},
     {name:"シーホース ブラックレザー",path:SeaHorse_BlackLeather,id:"Seahorse_BlackLeather",brand:"アイロニック"},
     // {name:"デカロニックチョコレート",path:DekaronicChocolate,id:"DekaronicChocolate",brand:"アイロニック"},
-    {name:"デカロニックブラック",path:DekaronicBlack,id:"DekaronikkuBlack",brand:"アイロニック"},
+    {name:"デカロニックブラック",path:DekaronicBlack,id:"DekaronicBlack",brand:"アイロニック"},
     {name:"デカロノーレース ホワイト",path:DekaroNoLace_White,id:"DekaroNoLace_White",brand:"アイロニック"},
     {name:"シーホースHi ゴールド",path:SeaHorseHi_Gold,id:"SeahorseHi_Gold",brand:"アイロニック"},
     {name:"アナアキスパイダー6ホール",path:AnaakiSpider6Hole,id:"AnaakiSpider6Hole",brand:"アナアキ"},

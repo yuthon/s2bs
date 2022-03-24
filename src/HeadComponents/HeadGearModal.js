@@ -265,7 +265,7 @@ let gears = [
   {name:"ボンボンニット", path:BonBonKnit, id:"EF_KN_BonBonKnit", brand:"ジモン",default:quickSuperJump},
   {name:"センニュークロブチ", path:Sennyu$Kurobuchi, id:"BS_Sennyu-Kurobuchi", brand:"ジモン",default:swimSpeed},
   {name:"センニューボンボン", path:Sennyu$BonBon, id:"EF_KN_Sennyu-BonBon", brand:"ジモン",default:inkSaverSub},
-  {name:"フライトぼう", path:FlightBou, id:"EF_KN_FlightBou", brand:"ジモン",default:inkRes},
+  // {name:"フライトぼう", path:FlightBou, id:"EF_KN_FlightBou", brand:"ジモン",default:inkRes},
   {name:"スミガードゴーグル", path:SumiGuardGoggle, id:"BS_SumiGuardGoggle", brand:"タタキケンサキ",default:runSpeed},
   // {name:"フェイスバイザー", path:FaceVisor, id:"FaceVisor", brand:"タタキケンサキ",default:bombDefence},
   {name:"イカバケット", path:IkaBucket, id:"M0_IkaBucket", brand:"バトロイカ",default:specialSaver},
@@ -280,7 +280,7 @@ let gears = [
   {name:"バーニングブロイラー", path:BurningBroiler, id:"EF_M1_BurningBroiler", brand:"バトロイカ",default:runSpeed},
   {name:"ハッピーチンアナゴハット", path:HappyChinAnagoHat, id:"H1_HappyChinanagoHat", brand:"バトロイカ",default:mpu},
   {name:"フォーリマスク", path:Fo$riMask, id:"EF_BS_Fo-riMask", brand:"フォーリマ",default:mpu},
-  {name:"エンペラフックHDP", path:EnperaHookHDP, id:"EF_BS_EnperaHookHDP", brand:"フォーリマ",default:inkRes},
+  // {name:"エンペラフックHDP", path:EnperaHookHDP, id:"EF_BS_EnperaHookHDP", brand:"フォーリマ",default:inkRes},
   {name:"オーロラヘッドホン", path:AuroraHeadphone, id:"EF_HP_AuroraHeadphone", brand:"フォーリマ",default:inkSaverSub},
   {name:"スタジオヘッドホン", path:StudioHeadphone, id:"EF_HP_StudioHeadphone", brand:"フォーリマ",default:inkSaverMain},
   // {name:"スプラッシュゴーグル", path:SplashGoggle, id:"BS_SplashGoggle", brand:"フォーリマ",default:bombDefence},
@@ -295,7 +295,7 @@ let gears = [
   {name:"ステカセヘッドホン", path:SutekaseHeadphone, id:"EF_HP_SutekaseHeadphone", brand:"フォーリマ",default:inkRecovery},
   {name:"センニューゴーグル", path:Sennyu$Goggle, id:"HB_Sennyu-Goggle", brand:"フォーリマ",default:inkRes},
   {name:"センニューヘッドホン", path:Sennyu$Headphone, id:"EF_HP_Sennyu-Headphone", brand:"フォーリマ",default:inkSaverMain},
-  {name:"タコマスク", path:TakoMask, id:"BS_TakoMask", brand:"フォーリマ",default:tenacity},
+  // {name:"タコマスク", path:TakoMask, id:"BS_TakoMask", brand:"フォーリマ",default:tenacity},
   // {name:"デカメットアイシールド", path:DekaMetEyeshield, id:"M1_DekaMetEyeshield", brand:"フォーリマ",default:subPower},
   {name:"ナイトビジョン", path:NightVision, id:"EF_M1_NightVision", brand:"フォーリマ",default:swimSpeed},
   {name:"ノーズガードモトクロス", path:NoseGuardMotoCross, id:"EF_BS_NoseGuardMotoCross", brand:"フォーリマ",default:specialCharge},
@@ -310,8 +310,8 @@ let gears = [
   {name:"オシノビニット", path:OshinobiKnit, id:"KN_OshinobiKnit", brand:"ホタックス",default:swimSpeed},
   {name:"サイクルメット", path:CycleMet, id:"H1_CycleMet", brand:"ホタックス",default:inkRecovery},
   {name:"スケボーメット", path:Sukebo$Met, id:"M1_Sukebo-Met", brand:"ホタックス",default:specialSaver},
-  {name:"パッチハット", path:PatchHat, id:"M0_PatchHat", brand:"ホタックス",default:mpu},
-  {name:"イカノルディック", path:IkaNordic, id:"EF_KN_IkaNordic", brand:"ホタックス",default:comeback},
+  // {name:"パッチハット", path:PatchHat, id:"M0_PatchHat", brand:"ホタックス",default:mpu},
+  // {name:"イカノルディック", path:IkaNordic, id:"EF_KN_IkaNordic", brand:"ホタックス",default:comeback},
   {name:"クラゲーダーキャップ", path:KuragaderCap, id:"C1_KuragaderCap", brand:"ホタックス",default:inkSaverSub},
   {name:"チドリキャップ", path:ChidoriCap, id:"C1_ChidoriCap", brand:"ホタックス",default:openingGanbit},
   {name:"ドゥーラグキャップガサネ", path:DoRagCapGasane, id:"H3_DoRagCapGasane", brand:"ホタックス",default:mpu},
@@ -322,11 +322,11 @@ let gears = [
   {name:"フグベルハット", path:FuguBellHat, id:"H2_FuguBellHat", brand:"ホッコリー",default:inkRecovery},
   {name:"マスクドホッコリー", path:MaskedHokkori$, id:"BS_MaskedHokkori-", brand:"ホッコリー",default:runSpeed},
   {name:"ヤキフグ サンバイザー", path:Yakifugu_Sunvisor, id:"V3_Yakifugu_Sunvisor", brand:"ホッコリー",default:specialCharge},
-  {name:"ヤキフグビスケットバンダナ", path:YakifuguBiscuitBandana, id:"HB_YakifuguBiscuitBandana", brand:"ホッコリー",default:specialPower},
+  // {name:"ヤキフグビスケットバンダナ", path:YakifuguBiscuitBandana, id:"HB_YakifuguBiscuitBandana", brand:"ホッコリー",default:specialPower},
   {name:"リブニット", path:RibKnit, id:"KN_RibKnit", brand:"ホッコリー",default:inkRes},
-  {name:"フグハンチング", path:FuguHanching, id:"PT_C1_FuguHanching", brand:"ホッコリー",default:quickSuperJump},
+  // {name:"フグハンチング", path:FuguHanching, id:"PT_C1_FuguHanching", brand:"ホッコリー",default:quickSuperJump},
   {name:"フグベルベルハット", path:FuguBellBellHat, id:"H2_FuguBellBellHat", brand:"ホッコリー",default:qr},
-  {name:"オクタグラス", path:OctaGlass, id:"BS_OctaGlass", brand:"ホッコリー",default:lastDitchEffort},
+  // {name:"オクタグラス", path:OctaGlass, id:"BS_OctaGlass", brand:"ホッコリー",default:lastDitchEffort},
   {name:"サファリハット", path:SafariHat, id:"H1_SafariHat", brand:"ホッコリー",default:inkSaverMain},
   {name:"ヤコメッシュ", path:YakoMesh, id:"PT_C0_YakoMesh", brand:"ヤコ",default:bombDefence},
   {name:"ヤコバイザー", path:YakoVisor, id:"V2_YakoVisor", brand:"ヤコ",default:quickSuperJump},
@@ -352,12 +352,12 @@ let gears = [
   // {name:"メトロぼう", path:MetroBou, id:"MetroBou"},
   // {name:"スタジオオクトホン", path:StudioOctoHon, id:"StudioOctoHon"},
   // {name:"金のつまようじ", path:KinNoTumayoji, id:"KinNoTumayoji"},
-  {name:"アイアンマスカレイド", path:AianMaskarade, id:"V4_AianMaskaRade", brand:"クマサン商会",default:empty},
+  // {name:"アイアンマスカレイド", path:AianMaskarade, id:"V4_AianMaskaRade", brand:"クマサン商会",default:empty},
   // {name:"アセストップソシナ", path:AsesuTopSoshina, id:""},
   // {name:"オーシャンズヘルム", path:OceansHelm, id:"H2_OceansHelm", brand:"クマサン商会",default:empty},
   // {name:"ガーディアンアーミーハット", path:GuardianArmyHat, id:""},
   // {name:"スペボウ レプリカ", path:Supebou_Replica, id:"Supebou_Replica", brand:"クマサン商会",default:empty},
-  {name:"ゾネスティックスコープ", path:ZonesticScope, id:"BS_ZonesticScope", brand:"クマサン商会",default:empty},
+  // {name:"ゾネスティックスコープ", path:ZonesticScope, id:"BS_ZonesticScope", brand:"クマサン商会",default:empty},
   {name:"ダストブロッカー 2.5", path:DustBlocker_25, id:"BS_DustBlocker_25", brand:"クマサン商会",default:empty},
   {name:"ヘッドライトヘルム", path:HeadLightHelm, id:"H3_HeadLightHelm", brand:"クマサン商会",default:empty},
   {name:"マリリンハットウィズピンズ", path:MarilynHatWithPins, id:"H1_MarilynHatWithPins", brand:"クマサン商会",default:empty},
@@ -890,46 +890,6 @@ const HeadGearModal = (props) => {
                 />
                 <GearIcon 
                   gear={gearsArray[101]}
-                  setChosenGear={props.setChosenGear}
-                />
-                <GearIcon 
-                  gear={gearsArray[102]}
-                  setChosenGear={props.setChosenGear}
-                />
-                <GearIcon 
-                  gear={gearsArray[103]}
-                  setChosenGear={props.setChosenGear}
-                />
-                <GearIcon 
-                  gear={gearsArray[104]}
-                  setChosenGear={props.setChosenGear}
-                />
-                <GearIcon 
-                  gear={gearsArray[105]}
-                  setChosenGear={props.setChosenGear}
-                />
-                <GearIcon 
-                  gear={gearsArray[106]}
-                  setChosenGear={props.setChosenGear}
-                />
-                <GearIcon 
-                  gear={gearsArray[107]}
-                  setChosenGear={props.setChosenGear}
-                />
-                <GearIcon 
-                  gear={gearsArray[108]}
-                  setChosenGear={props.setChosenGear}
-                />
-                <GearIcon 
-                  gear={gearsArray[109]}
-                  setChosenGear={props.setChosenGear}
-                />
-                <GearIcon 
-                  gear={gearsArray[110]}
-                  setChosenGear={props.setChosenGear}
-                />
-                <GearIcon 
-                  gear={gearsArray[111]}
                   setChosenGear={props.setChosenGear}
                 />
             </div>

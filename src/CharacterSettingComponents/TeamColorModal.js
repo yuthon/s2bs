@@ -1,6 +1,4 @@
-// ClassNameのSCはSkinColorの略を示す
-
-const EyeColorModal = (props) => {
+const TeamColorModal = (props) => {
   //選択されているSCのボタンのクラス名を変更、別のSCが選択されていればクラス名を戻す
   const changeClassName = (SC) => {
     let target = document.getElementById(SC);
@@ -72,7 +70,8 @@ const EyeColorModal = (props) => {
             <svg
               className="SC-btn-svg SC-svg-0" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor({r:0.005,g:0.009,b:0.423});
+                props.setTeamColor({r:0.238,g:0.009,b:0.730});
+                props.setDarkColor({r:0.023,g:0.014,b:0.037});
                 btnSelected("SC-0")
               }}
               onMouseDown={()=>{
@@ -82,7 +81,7 @@ const EyeColorModal = (props) => {
               <path 
                 className="SC-btn-default"
                 d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="#0f18ae"
+                fill="#8618de"
                 stroke="none"
               />
               <path 
@@ -97,7 +96,8 @@ const EyeColorModal = (props) => {
             <svg
               className="SC-btn-svg SC-svg-1" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor({r:0.000303,g:0.413,b:0.184});
+                props.setTeamColor({r:0.973,g:0.011,b:0.246});
+                props.setDarkColor({r:0.068,g:0.007,b:0.026});
                 btnSelected("SC-1")
               }}
               onMouseDown={()=>{
@@ -107,7 +107,7 @@ const EyeColorModal = (props) => {
               <path 
                 className="SC-btn-default"
                 d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="#01ac77"
+                fill="#fc1b88"
                 stroke="none"
               />
               <path 
@@ -122,7 +122,8 @@ const EyeColorModal = (props) => {
             <svg
               className="SC-btn-svg SC-svg-2" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor({r:0.423,g:0.305,b:0.000304});
+                props.setTeamColor({r:1,g:0.181,b:0.047});
+                props.setDarkColor({r:0.053,g:0.016,b:0.012});
                 btnSelected("SC-2");
               }}
               onMouseDown={()=>{
@@ -132,7 +133,7 @@ const EyeColorModal = (props) => {
               <path 
                 className="SC-btn-default"
                 d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="#ae9601"
+                fill="#ff763d"
                 stroke="none"
               />
               <path 
@@ -147,7 +148,8 @@ const EyeColorModal = (props) => {
             <svg
               className="SC-btn-svg SC-svg-3" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor({r:0.839,g:0.191,b:0.010});
+                props.setTeamColor({r:0.004,g:0.672,b:0.165});
+                props.setDarkColor({r:0.018,g:0.028,b:0.015});
                 btnSelected("SC-3");
               }}
               onMouseDown={()=>{
@@ -157,7 +159,7 @@ const EyeColorModal = (props) => {
               <path 
                 className="SC-btn-default"
                 d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="#ec7919"
+                fill="#0ed671"
                 stroke="none"
               />
               <path 
@@ -172,7 +174,8 @@ const EyeColorModal = (props) => {
             <svg
               className="SC-btn-svg SC-svg-4" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor({r:0.694,g:0.010,b:0.012});
+                props.setTeamColor({r:0.024,g:0.452,b:0.855});
+                props.setDarkColor({r:0.01,g:0.018,b:0.021});
                 btnSelected("SC-4");
               }}
               onMouseDown={()=>{
@@ -182,7 +185,7 @@ const EyeColorModal = (props) => {
               <path 
                 className="SC-btn-default"
                 d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="#d91a1d"
+                fill="#2ba0ee"
                 stroke="none"
               />
               <path 
@@ -197,7 +200,8 @@ const EyeColorModal = (props) => {
             <svg
               className="SC-btn-svg SC-svg-5" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor({r:0.753,g:0.015,b:0.509});
+                props.setTeamColor({r:0.024,g:0.452,b:0.855});
+                props.setDarkColor({r:0.01,g:0.018,b:0.021});
                 btnSelected("SC-5");
               }}
               onMouseDown={()=>{
@@ -207,232 +211,7 @@ const EyeColorModal = (props) => {
               <path 
                 className="SC-btn-default"
                 d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="#e121bd"
-                stroke="none"
-              />
-              <path 
-                className="SC-btn-hover"
-                d="m 280 98 C 268 137 296 140 304 108 C 315 70 384 74 367 134 L 393 125 C 386 97 429 86 435 115 C 443 144 404 158 393 125 L 367 134 C 360 157 374 175 401 158 C 433 140 461 205 415 220 C 401 223 381 211 373 235 C 367 255 422 253 394 294 C 375 319 343 306 339 276 C 337 258 300 256 318 307 C 330 337 252 358 260 294 C 266 257 231 254 230 294 C 227 347 156 324 185 275 C 200 248 173 246 159 271 C 133 307 74 235 129 217 C 168 209 140 193 123 192 L 111 198 C 123 225 88 239 74 221 C 59 199 99 173 111 198 L 123 192 C 99 190 113 122 155 166 C 173 184 196 151 159 141 C 124 130 169 77 189 106 L 180 85 C 155 91 157 61 172 57 C 194 50 204 78 180 85 L 189 106 C 209 143 222 128 217 104 C 211 58 289 61 280 98"
-                fill="none"
-                stroke="none"
-              />
-            </svg>
-          </div>
-          <div className="SC-btn SC-6" id="SC-6">  
-            <svg
-              className="SC-btn-svg SC-svg-6" width="110" height="100" viewBox="60 80 380 230"
-              onClick={()=>{
-                props.setEyeColor({r:0.314,g:0.023,b:1});
-                btnSelected("SC-6");
-              }}
-              onMouseDown={()=>{
-                btnAnimate("SC-6");
-              }}
-            >
-              <path 
-                className="SC-btn-default"
-                d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="#982aff"
-                stroke="none"
-              />
-              <path 
-                className="SC-btn-hover"
-                d="m 280 98 C 268 137 296 140 304 108 C 315 70 384 74 367 134 L 393 125 C 386 97 429 86 435 115 C 443 144 404 158 393 125 L 367 134 C 360 157 374 175 401 158 C 433 140 461 205 415 220 C 401 223 381 211 373 235 C 367 255 422 253 394 294 C 375 319 343 306 339 276 C 337 258 300 256 318 307 C 330 337 252 358 260 294 C 266 257 231 254 230 294 C 227 347 156 324 185 275 C 200 248 173 246 159 271 C 133 307 74 235 129 217 C 168 209 140 193 123 192 L 111 198 C 123 225 88 239 74 221 C 59 199 99 173 111 198 L 123 192 C 99 190 113 122 155 166 C 173 184 196 151 159 141 C 124 130 169 77 189 106 L 180 85 C 155 91 157 61 172 57 C 194 50 204 78 180 85 L 189 106 C 209 143 222 128 217 104 C 211 58 289 61 280 98"
-                fill="none"
-                stroke="none"
-              />
-            </svg>
-          </div>
-          <div className="SC-btn SC-7" id="SC-7">  
-            <svg
-              className="SC-btn-svg SC-svg-7" width="110" height="100" viewBox="60 80 380 230"
-              onClick={()=>{
-                props.setEyeColor({r:0.023,g:0.025,b:0.025});
-                btnSelected("SC-7");
-              }}
-              onMouseDown={()=>{
-                btnAnimate("SC-7");
-              }}
-            >
-              <path 
-                className="SC-btn-default"
-                d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="#2a2c2c"
-                stroke="none"
-              />
-              <path 
-                className="SC-btn-hover"
-                d="m 280 98 C 268 137 296 140 304 108 C 315 70 384 74 367 134 L 393 125 C 386 97 429 86 435 115 C 443 144 404 158 393 125 L 367 134 C 360 157 374 175 401 158 C 433 140 461 205 415 220 C 401 223 381 211 373 235 C 367 255 422 253 394 294 C 375 319 343 306 339 276 C 337 258 300 256 318 307 C 330 337 252 358 260 294 C 266 257 231 254 230 294 C 227 347 156 324 185 275 C 200 248 173 246 159 271 C 133 307 74 235 129 217 C 168 209 140 193 123 192 L 111 198 C 123 225 88 239 74 221 C 59 199 99 173 111 198 L 123 192 C 99 190 113 122 155 166 C 173 184 196 151 159 141 C 124 130 169 77 189 106 L 180 85 C 155 91 157 61 172 57 C 194 50 204 78 180 85 L 189 106 C 209 143 222 128 217 104 C 211 58 289 61 280 98"
-                fill="none"
-                stroke="none"
-              />
-            </svg>
-          </div>
-          <div className="SC-btn SC-7" id="SC-7">  
-            <svg
-              className="SC-btn-svg SC-svg-7" width="110" height="100" viewBox="60 80 380 230"
-              onClick={()=>{
-                props.setEyeColor({r:0.539,g:0.552,b:0.539});
-                btnSelected("SC-7");
-              }}
-              onMouseDown={()=>{
-                btnAnimate("SC-7");
-              }}
-            >
-              <path 
-                className="SC-btn-default"
-                d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="#c2c4c2"
-                stroke="none"
-              />
-              <path 
-                className="SC-btn-hover"
-                d="m 280 98 C 268 137 296 140 304 108 C 315 70 384 74 367 134 L 393 125 C 386 97 429 86 435 115 C 443 144 404 158 393 125 L 367 134 C 360 157 374 175 401 158 C 433 140 461 205 415 220 C 401 223 381 211 373 235 C 367 255 422 253 394 294 C 375 319 343 306 339 276 C 337 258 300 256 318 307 C 330 337 252 358 260 294 C 266 257 231 254 230 294 C 227 347 156 324 185 275 C 200 248 173 246 159 271 C 133 307 74 235 129 217 C 168 209 140 193 123 192 L 111 198 C 123 225 88 239 74 221 C 59 199 99 173 111 198 L 123 192 C 99 190 113 122 155 166 C 173 184 196 151 159 141 C 124 130 169 77 189 106 L 180 85 C 155 91 157 61 172 57 C 194 50 204 78 180 85 L 189 106 C 209 143 222 128 217 104 C 211 58 289 61 280 98"
-                fill="none"
-                stroke="none"
-              />
-            </svg>
-          </div>
-          <div className="SC-btn SC-7" id="SC-7">  
-            <svg
-              className="SC-btn-svg SC-svg-7" width="110" height="100" viewBox="60 80 380 230"
-              onClick={()=>{
-                props.setEyeColor({r:0.175,g:0.287,b:0.095});
-                btnSelected("SC-7");
-              }}
-              onMouseDown={()=>{
-                btnAnimate("SC-7");
-              }}
-            >
-              <path 
-                className="SC-btn-default"
-                d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="#749257"
-                stroke="none"
-              />
-              <path 
-                className="SC-btn-hover"
-                d="m 280 98 C 268 137 296 140 304 108 C 315 70 384 74 367 134 L 393 125 C 386 97 429 86 435 115 C 443 144 404 158 393 125 L 367 134 C 360 157 374 175 401 158 C 433 140 461 205 415 220 C 401 223 381 211 373 235 C 367 255 422 253 394 294 C 375 319 343 306 339 276 C 337 258 300 256 318 307 C 330 337 252 358 260 294 C 266 257 231 254 230 294 C 227 347 156 324 185 275 C 200 248 173 246 159 271 C 133 307 74 235 129 217 C 168 209 140 193 123 192 L 111 198 C 123 225 88 239 74 221 C 59 199 99 173 111 198 L 123 192 C 99 190 113 122 155 166 C 173 184 196 151 159 141 C 124 130 169 77 189 106 L 180 85 C 155 91 157 61 172 57 C 194 50 204 78 180 85 L 189 106 C 209 143 222 128 217 104 C 211 58 289 61 280 98"
-                fill="none"
-                stroke="none"
-              />
-            </svg>
-          </div>
-          <div className="SC-btn SC-7" id="SC-7">  
-            <svg
-              className="SC-btn-svg SC-svg-7" width="110" height="100" viewBox="60 80 380 230"
-              onClick={()=>{
-                props.setEyeColor({r:0.220,g:0.352,b:0.136});
-                btnSelected("SC-7");
-              }}
-              onMouseDown={()=>{
-                btnAnimate("SC-7");
-              }}
-            >
-              <path 
-                className="SC-btn-default"
-                d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="#81a067"
-                stroke="none"
-              />
-              <path 
-                className="SC-btn-hover"
-                d="m 280 98 C 268 137 296 140 304 108 C 315 70 384 74 367 134 L 393 125 C 386 97 429 86 435 115 C 443 144 404 158 393 125 L 367 134 C 360 157 374 175 401 158 C 433 140 461 205 415 220 C 401 223 381 211 373 235 C 367 255 422 253 394 294 C 375 319 343 306 339 276 C 337 258 300 256 318 307 C 330 337 252 358 260 294 C 266 257 231 254 230 294 C 227 347 156 324 185 275 C 200 248 173 246 159 271 C 133 307 74 235 129 217 C 168 209 140 193 123 192 L 111 198 C 123 225 88 239 74 221 C 59 199 99 173 111 198 L 123 192 C 99 190 113 122 155 166 C 173 184 196 151 159 141 C 124 130 169 77 189 106 L 180 85 C 155 91 157 61 172 57 C 194 50 204 78 180 85 L 189 106 C 209 143 222 128 217 104 C 211 58 289 61 280 98"
-                fill="none"
-                stroke="none"
-              />
-            </svg>
-          </div>
-          <div className="SC-btn SC-7" id="SC-7">  
-            <svg
-              className="SC-btn-svg SC-svg-7" width="110" height="100" viewBox="60 80 380 230"
-              onClick={()=>{
-                props.setEyeColor({r:0.314,g:0.023,b:1});
-                btnSelected("SC-7");
-              }}
-              onMouseDown={()=>{
-                btnAnimate("SC-7");
-              }}
-            >
-              <path 
-                className="SC-btn-default"
-                d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="#81a067"
-                stroke="none"
-              />
-              <path 
-                className="SC-btn-hover"
-                d="m 280 98 C 268 137 296 140 304 108 C 315 70 384 74 367 134 L 393 125 C 386 97 429 86 435 115 C 443 144 404 158 393 125 L 367 134 C 360 157 374 175 401 158 C 433 140 461 205 415 220 C 401 223 381 211 373 235 C 367 255 422 253 394 294 C 375 319 343 306 339 276 C 337 258 300 256 318 307 C 330 337 252 358 260 294 C 266 257 231 254 230 294 C 227 347 156 324 185 275 C 200 248 173 246 159 271 C 133 307 74 235 129 217 C 168 209 140 193 123 192 L 111 198 C 123 225 88 239 74 221 C 59 199 99 173 111 198 L 123 192 C 99 190 113 122 155 166 C 173 184 196 151 159 141 C 124 130 169 77 189 106 L 180 85 C 155 91 157 61 172 57 C 194 50 204 78 180 85 L 189 106 C 209 143 222 128 217 104 C 211 58 289 61 280 98"
-                fill="none"
-                stroke="none"
-              />
-            </svg>
-          </div>
-          <div className="SC-btn SC-7" id="SC-7">  
-            <svg
-              className="SC-btn-svg SC-svg-7" width="110" height="100" viewBox="60 80 380 230"
-              onClick={()=>{
-                props.setEyeColor({r:0.150,g:0.144,b:0.076});
-                btnSelected("SC-7");
-              }}
-              onMouseDown={()=>{
-                btnAnimate("SC-7");
-              }}
-            >
-              <path 
-                className="SC-btn-default"
-                d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="#6c6a4e"
-                stroke="none"
-              />
-              <path 
-                className="SC-btn-hover"
-                d="m 280 98 C 268 137 296 140 304 108 C 315 70 384 74 367 134 L 393 125 C 386 97 429 86 435 115 C 443 144 404 158 393 125 L 367 134 C 360 157 374 175 401 158 C 433 140 461 205 415 220 C 401 223 381 211 373 235 C 367 255 422 253 394 294 C 375 319 343 306 339 276 C 337 258 300 256 318 307 C 330 337 252 358 260 294 C 266 257 231 254 230 294 C 227 347 156 324 185 275 C 200 248 173 246 159 271 C 133 307 74 235 129 217 C 168 209 140 193 123 192 L 111 198 C 123 225 88 239 74 221 C 59 199 99 173 111 198 L 123 192 C 99 190 113 122 155 166 C 173 184 196 151 159 141 C 124 130 169 77 189 106 L 180 85 C 155 91 157 61 172 57 C 194 50 204 78 180 85 L 189 106 C 209 143 222 128 217 104 C 211 58 289 61 280 98"
-                fill="none"
-                stroke="none"
-              />
-            </svg>
-          </div>
-          <div className="SC-btn SC-7" id="SC-7">  
-            <svg
-              className="SC-btn-svg SC-svg-7" width="110" height="100" viewBox="60 80 380 230"
-              onClick={()=>{
-                props.setEyeColor({r:0.120,g:0.044,b:0.042});
-                btnSelected("SC-7");
-              }}
-              onMouseDown={()=>{
-                btnAnimate("SC-7");
-              }}
-            >
-              <path 
-                className="SC-btn-default"
-                d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="#613b3a"
-                stroke="none"
-              />
-              <path 
-                className="SC-btn-hover"
-                d="m 280 98 C 268 137 296 140 304 108 C 315 70 384 74 367 134 L 393 125 C 386 97 429 86 435 115 C 443 144 404 158 393 125 L 367 134 C 360 157 374 175 401 158 C 433 140 461 205 415 220 C 401 223 381 211 373 235 C 367 255 422 253 394 294 C 375 319 343 306 339 276 C 337 258 300 256 318 307 C 330 337 252 358 260 294 C 266 257 231 254 230 294 C 227 347 156 324 185 275 C 200 248 173 246 159 271 C 133 307 74 235 129 217 C 168 209 140 193 123 192 L 111 198 C 123 225 88 239 74 221 C 59 199 99 173 111 198 L 123 192 C 99 190 113 122 155 166 C 173 184 196 151 159 141 C 124 130 169 77 189 106 L 180 85 C 155 91 157 61 172 57 C 194 50 204 78 180 85 L 189 106 C 209 143 222 128 217 104 C 211 58 289 61 280 98"
-                fill="none"
-                stroke="none"
-              />
-            </svg>
-          </div>
-          <div className="SC-btn SC-7" id="SC-7">  
-            <svg
-              className="SC-btn-svg SC-svg-7" width="110" height="100" viewBox="60 80 380 230"
-              onClick={()=>{
-                props.setEyeColor({r:0.175,g:0.202,b:0.337});
-                btnSelected("SC-7");
-              }}
-              onMouseDown={()=>{
-                btnAnimate("SC-7");
-              }}
-            >
-              <path 
-                className="SC-btn-default"
-                d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="#747c9d"
+                fill="#ffb23d"
                 stroke="none"
               />
               <path 
@@ -469,7 +248,7 @@ const EyeColorModal = (props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default EyeColorModal;
+export default TeamColorModal;

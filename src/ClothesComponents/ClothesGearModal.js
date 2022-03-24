@@ -557,7 +557,7 @@ const gears = [
     // {name:"ヒーローフーディー レプリカ",path:HeroHoodie_Replica,id:"HeroHoodie_Replica",brand:"アタリメイド"},
     // {name:"オクトガサネ",path:OctoGasane,id:"OctoGasane",brand:"アタリメイド"},
     // {name:"センニュースーツ",path:Sennyu$Suit,id:"Sennyu-Suit",brand:"アタリメイド"},
-    {name:"タコT",path:TakoT,id:"TakoT",brand:"アタリメイド"},
+    {name:"タコT",path:TakoT,id:"TacoT",brand:"アタリメイド"},
     {name:"BBシャツ プレミアム",path:BBshirt_Premium,id:"BBShirt_Premium",brand:"クマサン商会"},
     {name:"アカシックコート",path:AkashicCoat,id:"AkashicCoat",brand:"クマサン商会"},
     {name:"アゲアゲ・10・プラーXXL",path:AgeAge$10$Pura$XXL,id:"Ageage・10・Pura-XXL",brand:"クマサン商会"},
