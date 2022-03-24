@@ -52,7 +52,7 @@ const Main = () => {
   //選択されたクツギアを管理
   const [shoesGear, setShoesGear] = useState({name:"キャンバス ホワイト",path:Canvas_White,id:"Canvas_White",brand:"クラーゲス"});
   //キャラ設定モーダルを管理
-  const [characterType, passCharacterType] = useState("IML");
+  const [characterType, setCharacterType] = useState("IML");
   const [skinColor, passSkinColor] = useState({r:1,g:0.638,b:0.604});
   const [hairStyle, passHairStyle] = useState("Hair_0");
   const [eyeColor, setEyeColor] = useState("#1617ff");
@@ -85,7 +85,8 @@ const Main = () => {
         setChosenGear={setShoesGear}
       />
       <CharacterTypeModal
-        passCharacterType={passCharacterType}
+        characterType={characterType}
+        setCharacterType={setCharacterType}
         characterType={characterType}
       />
       <SkinColorModal
