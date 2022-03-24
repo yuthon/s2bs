@@ -690,93 +690,50 @@ footer {
 /*}*/
 
 /*SCボタン*/
-#SC-0,
-#SC-1,
-#SC-2,
-#SC-3,
-#SC-4,
-#SC-5,
-#SC-6 {
+.color-btn,
+.selected {
   margin-left: auto;
   margin-right: auto;
   height: 110px;
   width: 120px;
 }
 
-.SC-btn-svg {
+.color-btn-svg {
   cursor: pointer;
 }
 
-.SC-btn-svg:hover,
-#SC-0.selected .SC-btn-svg,
-#SC-1.selected .SC-btn-svg,
-#SC-2.selected .SC-btn-svg,
-#SC-3.selected .SC-btn-svg,
-#SC-4.selected .SC-btn-svg,
-#SC-5.selected .SC-btn-svg,
-#SC-6.selected .SC-btn-svg {
+.color-btn-svg:hover,
+.selected .color-btn-svg {
   transition-duration: 0.1s;
   transform: scale(1.05, 1.05);
 }
-
-.SC-btn-svg:hover .SC-btn-default {
-  fill: none;
+/* 初期状態で非表示 */
+.color-btn-hover {
+  display: none;
 }
-
-.SC-svg-0:hover .SC-btn-hover,
-.SC-svg-0:active .SC-btn-default,
-#SC-0.selected .SC-btn-svg .SC-btn-hover {
-  fill: #fddfdb;
+/* 選択された状態で非表示 */
+.selected .color-btn-svg .color-btn-default {
+  display: none;
 }
-
-.SC-svg-1:hover .SC-btn-hover,
-.SC-svg-1:active .SC-btn-default,
-#SC-1.selected .SC-btn-svg .SC-btn-hover {
-  fill: #ffcabb;
+/* 選択された状態で表示 */
+.selected .color-btn-svg .color-btn-hover {
+  display: block;
 }
-
-.SC-svg-2:hover .SC-btn-hover,
-.SC-svg-2:active .SC-btn-default,
-#SC-2.selected .SC-btn-svg .SC-btn-hover {
-  fill: #ffc29e;
+/* ホバーしたとき非表示 */
+.color-btn .color-btn-svg:hover .color-btn-default {
+  display: none;
 }
-
-.SC-svg-3:hover .SC-btn-hover,
-.SC-svg-3:active .SC-btn-default,
-#SC-3.selected .SC-btn-svg .SC-btn-hover {
-  fill: #f58d70;
+/* ホバーしたとき表示 */
+.color-btn .color-btn-svg:hover .color-btn-hover {
+  display: block;
 }
-
-.SC-svg-4:hover .SC-btn-hover,
-.SC-svg-4:active .SC-btn-default,
-#SC-4.selected .SC-btn-svg .SC-btn-hover {
-  fill: #b44f37;
+/* マウスボタンを押し込んでいるとき表示 */
+.color-btn .color-btn-svg:active .color-btn-default {
+  display: block;
 }
-
-.SC-svg-5:hover .SC-btn-hover,
-.SC-svg-5:active .SC-btn-default,
-#SC-5.selected .SC-btn-svg .SC-btn-hover {
-  fill: #592a20;
-}
-
-.SC-svg-6:hover .SC-btn-hover,
-.SC-svg-6:active .SC-btn-default,
-#SC-6.selected .SC-btn-svg .SC-btn-hover {
-  fill: #331110;
-}
-
-.SC-btn-svg:active .SC-btn-hover {
-  fill: none;
-}
-
-#SC-0.selected .SC-btn-svg .SC-btn-default,
-#SC-1.selected .SC-btn-svg .SC-btn-default,
-#SC-2.selected .SC-btn-svg .SC-btn-default,
-#SC-3.selected .SC-btn-svg .SC-btn-default,
-#SC-4.selected .SC-btn-svg .SC-btn-default,
-#SC-5.selected .SC-btn-svg .SC-btn-default,
-#SC-6.selected .SC-btn-svg .SC-btn-default {
-  fill: none;
+/* マウスボタンを押し込んでいるとき非表示 */
+.color-btn .color-btn-svg:active .color-btn-hover {
+  display: none;
 }
 
 /*

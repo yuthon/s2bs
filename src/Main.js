@@ -53,9 +53,9 @@ const Main = () => {
   const [shoesGear, setShoesGear] = useState({name:"キャンバス ホワイト",path:Canvas_White,id:"Canvas_White",brand:"クラーゲス"});
   //キャラ設定モーダルを管理
   const [characterType, setCharacterType] = useState("IML");
-  const [skinColor, setSkinColor] = useState("SC-0");
+  const [skinColor, setSkinColor] = useState("color-0");
   const [hairStyle, passHairStyle] = useState("Hair_0");
-  const [eyeColor, setEyeColor] = useState("#1617ff");
+  const [eyeColor, setEyeColor] = useState("color-0");
   const [isMLBottomsModalOpen, controlMLBottomsModal] = useState(false);
   const [isFMLBottomsModalOpen, controlFMLBottomsModal] = useState(false);
   const [bottoms, passBottoms] = useState("Btm_0");
@@ -117,6 +117,7 @@ const Main = () => {
       />
       <EyeColorModal 
         setEyeColor={setEyeColor}
+        eyeColor={eyeColor}
       />
       <div className="row" id="main">  
         <div className="col-sm-6 col-md-4 col-lg-4 col-xxl-6" id="three-section">

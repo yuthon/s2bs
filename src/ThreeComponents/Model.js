@@ -85,27 +85,60 @@ const Model = (props) => {
   // 髪型
   let hairStyle = props.hairStyle;
   // 肌の色
-  
+
   const SkinColor = function(skinColor) {
-    if (skinColor === "SC-0") {
+    if (skinColor === "color-0") {
       return {r:1,g:0.638,b:0.604}
-    } else if (skinColor === "SC-1") {
+    } else if (skinColor === "color-1") {
       return {r:1,g:0.423,b:0.381}
-    } else if (skinColor === "SC-2") {
+    } else if (skinColor === "color-2") {
       return {r:1,g:0.413,b:0.246}
-    } else if (skinColor === "SC-3") {
+    } else if (skinColor === "color-3") {
       return {r:1,g:0.283,b:0.198}
-    } else if (skinColor === "SC-4") {
+    } else if (skinColor === "color-4") {
       return {r:0.651,g:0.144,b:0.082}
-    } else if (skinColor === "SC-5") {
+    } else if (skinColor === "color-5") {
       return {r:0.107,g:0.016,b:0}
-    } else if (skinColor === "SC-6") {
+    } else if (skinColor === "color-6") {
       return {r:0.024,g:0.005,b:0}
     }
   }
 
   let skinColor = SkinColor(props.skinColor);
+  // 目の色
+  const EyeColor = function(eyeColor) {
+    if (eyeColor === "color-0") {
+      return {r:0.005,g:0.009,b:0.423}
+    } else if (eyeColor === "color-1") {
+      return {r:0.000303,g:0.413,b:0.184}
+    } else if (eyeColor === "color-2") {
+      return {r:0.423,g:0.305,b:0.000304}
+    } else if (eyeColor === "color-3") {
+      return {r:0.839,g:0.191,b:0.010}
+    } else if (eyeColor === "color-4") {
+      return {r:0.694,g:0.010,b:0.012}
+    } else if (eyeColor === "color-5") {
+      return {r:0.753,g:0.015,b:0.509}
+    } else if (eyeColor === "color-6") {
+      return {r:0.314,g:0.023,b:1}
+    } else if (eyeColor === "color-7") {
+      return {r:0.023,g:0.025,b:0.025}
+    } else if (eyeColor === "color-8") {
+      return {r:0.539,g:0.552,b:0.539}
+    } else if (eyeColor === "color-9") {
+      return {r:0.175,g:0.287,b:0.095}
+    } else if (eyeColor === "color-10") {
+      return {r:0.220,g:0.352,b:0.136}
+    } else if (eyeColor === "color-11") {
+      return {r:0.314,g:0.023,b:1}
+    } else if (eyeColor === "color-12") {
+      return {r:0.150,g:0.144,b:0.076}
+    } else if (eyeColor === "color-13") {
+      return {r:0.120,g:0.044,b:0.042}
+    }
+  }
 
+  let eyeColor = EyeColor(props.eyeColor);
   // ボトムス
   let bottoms = props.bottoms
 
