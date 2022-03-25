@@ -12,12 +12,6 @@ import ShoesGearModal from './ShoesComponents/ShoesGearModal';
 import CharacterTypeModal from './CharacterSettingComponents/CharacterTypeModal';
 import SkinColorModal from './CharacterSettingComponents/SkinColorModal';
 import TeamColorModal from './CharacterSettingComponents/TeamColorModal';
-import IFMLHairStyleModal from './CharacterSettingComponents/IFMLHairStyleModal';
-import IMLHairStyleModal from './CharacterSettingComponents/IMLHairStyleModal';
-import OFMLHairStyleModal from './CharacterSettingComponents/OFMLHairStyleModal';
-import OMLHairStyleModal from './CharacterSettingComponents/OMLHairStyleModal';
-import MLBottomsModal from './CharacterSettingComponents/MLBottomsModal';
-import FMLBottomsModal from './CharacterSettingComponents/FMLBottomsModal';
 import EyeColorModal from './CharacterSettingComponents/EyeColorModal';
 import HairStyleModal from './CharacterSettingComponents/HairStyleModal';
 import BottomsModal from './CharacterSettingComponents/BottomsModal';
@@ -58,8 +52,6 @@ const Main = () => {
   const [skinColor, setSkinColor] = useState("color_0");
   const [hairStyle, setHairStyle] = useState("Hair_0");
   const [eyeColor, setEyeColor] = useState("color_0");
-  const [isMLBottomsModalOpen, controlMLBottomsModal] = useState(false);
-  const [isFMLBottomsModalOpen, controlFMLBottomsModal] = useState(false);
   const [bottoms, setBottoms] = useState("Btm_0");
   const [teamColor, setTeamColor] = useState("color_5");
   
@@ -98,24 +90,6 @@ const Main = () => {
         setTeamColor={setTeamColor}
         characterType={characterType}
         teamColor={teamColor}
-      />
-      <IFMLHairStyleModal
-        passHairStyle={setHairStyle}
-      />
-      <IMLHairStyleModal
-        passHairStyle={setHairStyle}
-      />
-      <OFMLHairStyleModal
-        passHairStyle={setHairStyle}
-      />
-      <OMLHairStyleModal
-        passHairStyle={setHairStyle}
-      />
-      <MLBottomsModal
-        passBottoms={setBottoms}
-      />
-      <FMLBottomsModal
-        passBottoms={setBottoms}
       />
       <EyeColorModal 
         setEyeColor={setEyeColor}
