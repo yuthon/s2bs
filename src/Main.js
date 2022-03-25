@@ -1,3 +1,4 @@
+import { Html, useProgress } from '@react-three/drei'
 // ヘッダー画像
 import HeaderImg from './images/nc113873.png';
 import Footer from './Footer';
@@ -34,9 +35,17 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 extend({ OrbitControls });
 
 
+
 // const HeadGearModal = React.lazy(() => import('./HeadComponents/HeadGearModal'))
 // const ClothesGearModal = React.lazy(() => import('./ClothesComponents/ClothesGearModal'))
 // const ShoesGearModal = React.lazy(() => import('./ShoesComponents/ShoesGearModal'))
+
+function Loader() {
+  const { progress } = useProgress()
+  return <Html center>
+           {progress} % loaded
+         </Html>
+}
 
 const Main = () => {
   //ブキの名前とその他の情報を管理
@@ -131,7 +140,7 @@ const Main = () => {
                 intensity={0.7} />
               <Orbit />
               <axesHelper args={[5]} />
-              <Suspense fallback={null}>
+              <Suspense fallback={<Loader />}>
                 <Model
                   headGear={headGear.id}
                   clothesGear={clothesGear.id}

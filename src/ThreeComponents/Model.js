@@ -19,7 +19,7 @@ const Model = (props) => {
   gltf.scene.traverse( function(object) {
     object.frustumCulled = false;
   });
-  
+
   let mixer;
   if (gltf.animations.length) {
     mixer = new THREE.AnimationMixer(gltf.scene);
