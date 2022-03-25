@@ -15,7 +15,7 @@ const Model = (props) => {
       loader.setDRACOLoader(dracoLoader);
     }
   );
-  
+
   gltf.scene.traverse( function(object) {
     object.frustumCulled = false;
   });

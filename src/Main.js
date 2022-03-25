@@ -40,11 +40,17 @@ extend({ OrbitControls });
 // const ClothesGearModal = React.lazy(() => import('./ClothesComponents/ClothesGearModal'))
 // const ShoesGearModal = React.lazy(() => import('./ShoesComponents/ShoesGearModal'))
 
-function Loader() {
+const Loader= () => {
   const { progress } = useProgress()
-  return <Html center>
-           {progress} % loaded
-         </Html>
+  return (
+    <Html center>
+      <div className="font-type2" id="loader-content">
+        <h2>3Dモデルをロード中…</h2>
+        <h2>{Math.floor(progress * 10) /10}％</h2>
+        <h3>※この処理には時間がかかる場合があります</h3>
+      </div>
+    </Html>
+  )
 }
 
 const Main = () => {
@@ -118,10 +124,11 @@ const Main = () => {
         <div className="col-sm-6 col-md-4 col-lg-4 col-xxl-6" id="three-section">
           <div id="canvas-container">
             <div id="character-btn">
-              <button type="button" className="btn btn-dark font-type1" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
+              <button type="button" className="btn btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
                 キャラクターの設定
               </button>
             </div>
+            
             <Canvas
               style={{ background: '#f0f0e0' }}
               camera={{ position: [0, 11, 17] }}
@@ -139,7 +146,6 @@ const Main = () => {
                 position={[0, 11, -20]}
                 intensity={0.7} />
               <Orbit />
-              <axesHelper args={[5]} />
               <Suspense fallback={<Loader />}>
                 <Model
                   headGear={headGear.id}
