@@ -20,6 +20,7 @@ import MLBottomsModal from './CharacterSettingComponents/MLBottomsModal';
 import FMLBottomsModal from './CharacterSettingComponents/FMLBottomsModal';
 import EyeColorModal from './CharacterSettingComponents/EyeColorModal';
 import HairStyleModal from './CharacterSettingComponents/HairStyleModal';
+import BottomsModal from './CharacterSettingComponents/BottomsModal';
 
 //初期表示用の画像
 import WakabaIkaT from './images/gear/Clt_FST001.png';
@@ -59,7 +60,7 @@ const Main = () => {
   const [eyeColor, setEyeColor] = useState("color_0");
   const [isMLBottomsModalOpen, controlMLBottomsModal] = useState(false);
   const [isFMLBottomsModalOpen, controlFMLBottomsModal] = useState(false);
-  const [bottoms, passBottoms] = useState("Btm_0");
+  const [bottoms, setBottoms] = useState("Btm_0");
   const [teamColor, setTeamColor] = useState("color_0");
   
   return(
@@ -111,10 +112,10 @@ const Main = () => {
         passHairStyle={setHairStyle}
       />
       <MLBottomsModal
-        passBottoms={passBottoms}
+        passBottoms={setBottoms}
       />
       <FMLBottomsModal
-        passBottoms={passBottoms}
+        passBottoms={setBottoms}
       />
       <EyeColorModal 
         setEyeColor={setEyeColor}
@@ -124,6 +125,11 @@ const Main = () => {
         characterType={characterType}
         setHairStyle={setHairStyle}
         hairStyle={hairStyle}
+      />
+      <BottomsModal
+        bottoms={bottoms}
+        setBottoms={setBottoms}
+        characterType={characterType}
       />
       <div className="row" id="main">  
         <div className="col-sm-6 col-md-4 col-lg-4 col-xxl-6" id="three-section">

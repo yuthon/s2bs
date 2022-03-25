@@ -914,6 +914,15 @@ HSボタン
 /*
 Btmボタン
 */
+.ML-Btm-btn,
+.ML-Btm-selected,
+.FML-Btm-btn,
+.FML-Btm-selected {
+  width: 130px;
+  height: 150px;
+  margin: auto;
+}
+
 .Btm-btn-svg {
   cursor: pointer;
 }
@@ -923,71 +932,23 @@ Btmボタン
   transform: rotate(-15deg) scale(1.1, 1.1);
 }
 
-.FML-Btm-btn .Btm-btn-svg:hover .Btm-btn-color {
+.Btm-btn-svg:active {
+  transition: 0.1s;
+  transform: rotate(-15deg) scale(1, 1);
+}
+
+.FML-Btm-btn .Btm-btn-svg:hover .Btm-btn-color,
+.FML-Btm-selected .Btm-btn-svg .Btm-btn-color {
   fill: #0cd900;
 }
 
-#FML-Btm-0.rotate .Btm-btn-svg:hover,
-#FML-Btm-1.rotate .Btm-btn-svg:hover,
-#FML-Btm-2.rotate .Btm-btn-svg:hover,
-#FML-Btm-3.rotate .Btm-btn-svg:hover,
-#FML-Btm-4.rotate .Btm-btn-svg:hover {
-  transition: 0.03s;
-  transform: rotate(-15deg);
-}
-
-#FML-Btm-0.rotate .Btm-btn-svg:hover .Btm-btn-color,
-#FML-Btm-0.selected .Btm-btn-svg .Btm-btn-color,
-#FML-Btm-1.rotate .Btm-btn-svg:hover .Btm-btn-color,
-#FML-Btm-1.selected .Btm-btn-svg .Btm-btn-color,
-#FML-Btm-2.rotate .Btm-btn-svg:hover .Btm-btn-color,
-#FML-Btm-2.selected .Btm-btn-svg .Btm-btn-color,
-#FML-Btm-3.rotate .Btm-btn-svg:hover .Btm-btn-color,
-#FML-Btm-3.selected .Btm-btn-svg .Btm-btn-color,
-#FML-Btm-4.rotate .Btm-btn-svg:hover .Btm-btn-color,
-#FML-Btm-4.selected .Btm-btn-svg .Btm-btn-color {
-  fill: #0cd900;
-}
-
-#FML-Btm-0.selected .Btm-btn-svg,
-#FML-Btm-1.selected .Btm-btn-svg,
-#FML-Btm-2.selected .Btm-btn-svg,
-#FML-Btm-3.selected .Btm-btn-svg,
-#FML-Btm-4.selected .Btm-btn-svg {
-  transform: rotate(-15deg) scale(1.1, 1.1);
-}
-
-.ML-Btm-btn .Btm-btn-svg:hover .Btm-btn-color {
+.ML-Btm-btn .Btm-btn-svg:hover .Btm-btn-color,
+.ML-Btm-selected .Btm-btn-svg .Btm-btn-color {
   fill: #ff00b3;
 }
 
-#ML-Btm-0.rotate .Btm-btn-svg:hover,
-#ML-Btm-1.rotate .Btm-btn-svg:hover,
-#ML-Btm-2.rotate .Btm-btn-svg:hover,
-#ML-Btm-3.rotate .Btm-btn-svg:hover,
-#ML-Btm-4.rotate .Btm-btn-svg:hover {
-  transition: 0.03s;
-  transform: rotate(-15deg);
-}
-
-#ML-Btm-0.rotate .Btm-btn-svg:hover .Btm-btn-color,
-#ML-Btm-0.selected .Btm-btn-svg .Btm-btn-color,
-#ML-Btm-1.rotate .Btm-btn-svg:hover .Btm-btn-color,
-#ML-Btm-1.selected .Btm-btn-svg .Btm-btn-color,
-#ML-Btm-2.rotate .Btm-btn-svg:hover .Btm-btn-color,
-#ML-Btm-2.selected .Btm-btn-svg .Btm-btn-color,
-#ML-Btm-3.rotate .Btm-btn-svg:hover .Btm-btn-color,
-#ML-Btm-3.selected .Btm-btn-svg .Btm-btn-color,
-#ML-Btm-4.rotate .Btm-btn-svg:hover .Btm-btn-color,
-#ML-Btm-4.selected .Btm-btn-svg .Btm-btn-color {
-  fill: #ff00b3;
-}
-
-#ML-Btm-0.selected .Btm-btn-svg,
-#ML-Btm-1.selected .Btm-btn-svg,
-#ML-Btm-2.selected .Btm-btn-svg,
-#ML-Btm-3.selected .Btm-btn-svg,
-#ML-Btm-4.selected .Btm-btn-svg {
+.FML-Btm-selected .Btm-btn-svg,
+.ML-Btm-selected .Btm-btn-svg {
   transform: rotate(-15deg) scale(1.1, 1.1);
 }
 
