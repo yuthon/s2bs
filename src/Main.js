@@ -54,14 +54,13 @@ const Main = () => {
   const [shoesGear, setShoesGear] = useState({name:"キャンバス ホワイト",path:Canvas_White,id:"Canvas_White",brand:"クラーゲス"});
   //キャラ設定モーダルを管理
   const [characterType, setCharacterType] = useState("IFML");
-  const [skinColor, setSkinColor] = useState("color-0");
+  const [skinColor, setSkinColor] = useState("color_0");
   const [hairStyle, setHairStyle] = useState("Hair_0");
-  const [eyeColor, setEyeColor] = useState("color-0");
+  const [eyeColor, setEyeColor] = useState("color_0");
   const [isMLBottomsModalOpen, controlMLBottomsModal] = useState(false);
   const [isFMLBottomsModalOpen, controlFMLBottomsModal] = useState(false);
   const [bottoms, passBottoms] = useState("Btm_0");
-  const [teamColor, setTeamColor] = useState("ffb23d");
-  const [darkColor, setDarkColor] = useState(null)
+  const [teamColor, setTeamColor] = useState("color_0");
   
   return(
     <>
@@ -96,7 +95,8 @@ const Main = () => {
       />
       <TeamColorModal
         setTeamColor={setTeamColor}
-        setDarkColor={setDarkColor}
+        characterType={characterType}
+        teamColor={teamColor}
       />
       <IFMLHairStyleModal
         passHairStyle={setHairStyle}
@@ -162,7 +162,6 @@ const Main = () => {
                   hairStyle={hairStyle}
                   bottoms={bottoms}
                   teamColor={teamColor}
-                  darkColor={darkColor}  
                 />
               </Suspense>
             </Canvas>

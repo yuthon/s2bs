@@ -650,7 +650,7 @@ const HairStyleModal = (props) => {
             <button type="button" className="btn-lg btn-dark font-type1 mx-auto" data-bs-dismiss="modal" aria-hidden="Close">
               とじる
             </button>
-            <button type="button" className="btn-lg btn-dark font-type1 me-auto" data-bs-toggle="modal" data-bs-target="#hairStyleModal" data-bs-dismiss="modal">
+            <button type="button" className="btn-lg btn-dark font-type1 me-auto" data-bs-toggle="modal" data-bs-target="#TeamColorModal" data-bs-dismiss="modal">
               つぎへ
             </button>
           </div>

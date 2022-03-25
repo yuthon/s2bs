@@ -14,42 +14,42 @@ const SkinColorModal = (props) => {
   
   useEffect(()=>{
     //選択されている色のボタンのクラス名を変更
-    if (props.skinColor === "color-0") {
+    if (props.skinColor === "color_0") {
       SC0Ref.current.className = "selected"
-    } else if (props.skinColor === "color-1") {
+    } else if (props.skinColor === "color_1") {
       SC1Ref.current.className = "selected"
-    } else if (props.skinColor === "color-2") {
+    } else if (props.skinColor === "color_2") {
       SC2Ref.current.className = "selected"
-    } else if (props.skinColor === "color-3") {
+    } else if (props.skinColor === "color_3") {
       SC3Ref.current.className = "selected"
-    } else if (props.skinColor === "color-4") {
+    } else if (props.skinColor === "color_4") {
       SC4Ref.current.className = "selected"
-    } else if (props.skinColor === "color-5") {
+    } else if (props.skinColor === "color_5") {
       SC5Ref.current.className = "selected"
-    } else if (props.skinColor === "color-6") {
+    } else if (props.skinColor === "color_6") {
       SC6Ref.current.className = "selected"
     }
 
     // 別の色が選択されていればクラス名を戻す
-    if (SC0Ref.current.className === "selected" && props.skinColor !== "color-0") {
+    if (SC0Ref.current.className === "selected" && props.skinColor !== "color_0") {
       SC0Ref.current.className = "color-btn" 
     }
-    if (SC1Ref.current.className === "selected" && props.skinColor !== "color-1") {
+    if (SC1Ref.current.className === "selected" && props.skinColor !== "color_1") {
       SC1Ref.current.className = "color-btn" 
     }
-    if (SC2Ref.current.className === "selected" && props.skinColor !== "color-2") {
+    if (SC2Ref.current.className === "selected" && props.skinColor !== "color_2") {
       SC2Ref.current.className = "color-btn" 
     }
-    if (SC3Ref.current.className === "selected" && props.skinColor !== "color-3") {
+    if (SC3Ref.current.className === "selected" && props.skinColor !== "color_3") {
       SC3Ref.current.className = "color-btn" 
     }
-    if (SC4Ref.current.className === "selected" && props.skinColor !== "color-4") {
+    if (SC4Ref.current.className === "selected" && props.skinColor !== "color_4") {
       SC4Ref.current.className = "color-btn" 
     }
-    if (SC5Ref.current.className === "selected" && props.skinColor !== "color-5") {
+    if (SC5Ref.current.className === "selected" && props.skinColor !== "color_5") {
       SC5Ref.current.className = "color-btn" 
     }
-    if (SC6Ref.current.className === "selected" && props.skinColor !== "color-6") {
+    if (SC6Ref.current.className === "selected" && props.skinColor !== "color_6") {
       SC6Ref.current.className = "color-btn" 
     }
   })
@@ -67,7 +67,7 @@ const SkinColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setSkinColor("color-0");
+                props.setSkinColor("color_0");
               }}
             >
               <path 
@@ -88,7 +88,7 @@ const SkinColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setSkinColor("color-1");
+                props.setSkinColor("color_1");
               }}
             >
               <path 
@@ -109,7 +109,7 @@ const SkinColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setSkinColor("color-2");
+                props.setSkinColor("color_2");
               }}
             >
               <path 
@@ -130,7 +130,7 @@ const SkinColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setSkinColor("color-3");
+                props.setSkinColor("color_3");
               }}
             >
               <path 
@@ -151,7 +151,7 @@ const SkinColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setSkinColor("color-4");
+                props.setSkinColor("color_4");
               }}
             >
               <path 
@@ -172,7 +172,7 @@ const SkinColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setSkinColor("color-5");
+                props.setSkinColor("color_5");
               }}
             >
               <path 
@@ -193,7 +193,7 @@ const SkinColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setSkinColor("color-6");
+                props.setSkinColor("color_6");
               }}
             >
               <path 

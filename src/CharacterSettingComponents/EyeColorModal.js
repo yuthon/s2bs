@@ -19,77 +19,77 @@ const EyeColorModal = (props) => {
   
   useEffect(()=>{
     //選択されている色のボタンのクラス名を変更
-    if (props.eyeColor === "color-0") {
+    if (props.eyeColor === "color_0") {
       EC0Ref.current.className = "selected"
-    } else if (props.eyeColor === "color-1") {
+    } else if (props.eyeColor === "color_1") {
       EC1Ref.current.className = "selected"
-    } else if (props.eyeColor === "color-2") {
+    } else if (props.eyeColor === "color_2") {
       EC2Ref.current.className = "selected"
-    } else if (props.eyeColor === "color-3") {
+    } else if (props.eyeColor === "color_3") {
       EC3Ref.current.className = "selected"
-    } else if (props.eyeColor === "color-4") {
+    } else if (props.eyeColor === "color_4") {
       EC4Ref.current.className = "selected"
-    } else if (props.eyeColor === "color-5") {
+    } else if (props.eyeColor === "color_5") {
       EC5Ref.current.className = "selected"
-    } else if (props.eyeColor === "color-6") {
+    } else if (props.eyeColor === "color_6") {
       EC6Ref.current.className = "selected"
-    } else if (props.eyeColor === "color-7") {
+    } else if (props.eyeColor === "color_7") {
       EC7Ref.current.className = "selected"
-    } else if (props.eyeColor === "color-8") {
+    } else if (props.eyeColor === "color_8") {
       EC8Ref.current.className = "selected"
-    } else if (props.eyeColor === "color-9") {
+    } else if (props.eyeColor === "color_9") {
       EC9Ref.current.className = "selected"
-    } else if (props.eyeColor === "color-10") {
+    } else if (props.eyeColor === "color_10") {
       EC10Ref.current.className = "selected"
-    } else if (props.eyeColor === "color-11") {
+    } else if (props.eyeColor === "color_11") {
       EC11Ref.current.className = "selected"
-    } else if (props.eyeColor === "color-12") {
+    } else if (props.eyeColor === "color_12") {
       EC12Ref.current.className = "selected"
-    } else if (props.eyeColor === "color-13") {
+    } else if (props.eyeColor === "color_13") {
       EC13Ref.current.className = "selected"
     } 
 
     // 別の色が選択されていればクラス名を戻す
-    if (EC0Ref.current.className === "selected" && props.eyeColor !== "color-0") {
+    if (EC0Ref.current.className === "selected" && props.eyeColor !== "color_0") {
       EC0Ref.current.className = "color-btn" 
     }
-    if (EC1Ref.current.className === "selected" && props.eyeColor !== "color-1") {
+    if (EC1Ref.current.className === "selected" && props.eyeColor !== "color_1") {
       EC1Ref.current.className = "color-btn" 
     }
-    if (EC2Ref.current.className === "selected" && props.eyeColor !== "color-2") {
+    if (EC2Ref.current.className === "selected" && props.eyeColor !== "color_2") {
       EC2Ref.current.className = "color-btn" 
     }
-    if (EC3Ref.current.className === "selected" && props.eyeColor !== "color-3") {
+    if (EC3Ref.current.className === "selected" && props.eyeColor !== "color_3") {
       EC3Ref.current.className = "color-btn" 
     }
-    if (EC4Ref.current.className === "selected" && props.eyeColor !== "color-4") {
+    if (EC4Ref.current.className === "selected" && props.eyeColor !== "color_4") {
       EC4Ref.current.className = "color-btn" 
     }
-    if (EC5Ref.current.className === "selected" && props.eyeColor !== "color-5") {
+    if (EC5Ref.current.className === "selected" && props.eyeColor !== "color_5") {
       EC5Ref.current.className = "color-btn"
     }
-    if (EC6Ref.current.className === "selected" && props.eyeColor !== "color-6") {
+    if (EC6Ref.current.className === "selected" && props.eyeColor !== "color_6") {
       EC6Ref.current.className = "color-btn" 
     }
-    if (EC7Ref.current.className === "selected" && props.eyeColor !== "color-7") {
+    if (EC7Ref.current.className === "selected" && props.eyeColor !== "color_7") {
       EC7Ref.current.className = "color-btn" 
     }
-    if (EC8Ref.current.className === "selected" && props.eyeColor !== "color-8") {
+    if (EC8Ref.current.className === "selected" && props.eyeColor !== "color_8") {
       EC8Ref.current.className = "color-btn" 
     }
-    if (EC9Ref.current.className === "selected" && props.eyeColor !== "color-9") {
+    if (EC9Ref.current.className === "selected" && props.eyeColor !== "color_9") {
       EC9Ref.current.className = "color-btn" 
     }
-    if (EC10Ref.current.className === "selected" && props.eyeColor !== "color-10") {
+    if (EC10Ref.current.className === "selected" && props.eyeColor !== "color_10") {
       EC10Ref.current.className = "color-btn" 
     }
-    if (EC11Ref.current.className === "selected" && props.eyeColor !== "color-11") {
+    if (EC11Ref.current.className === "selected" && props.eyeColor !== "color_11") {
       EC11Ref.current.className = "color-btn" 
     }
-    if (EC12Ref.current.className === "selected" && props.eyeColor !== "color-12") {
+    if (EC12Ref.current.className === "selected" && props.eyeColor !== "color_12") {
       EC12Ref.current.className = "color-btn" 
     }
-    if (EC13Ref.current.className === "selected" && props.eyeColor !== "color-13") {
+    if (EC13Ref.current.className === "selected" && props.eyeColor !== "color_13") {
       EC13Ref.current.className = "color-btn" 
     }
   })
@@ -107,7 +107,7 @@ const EyeColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor("color-0");
+                props.setEyeColor("color_0");
               }}
             >
               <path 
@@ -128,7 +128,7 @@ const EyeColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor("color-1");
+                props.setEyeColor("color_1");
               }}
             >
               <path 
@@ -149,7 +149,7 @@ const EyeColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor("color-2");
+                props.setEyeColor("color_2");
               }}
             >
               <path 
@@ -170,7 +170,7 @@ const EyeColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor("color-3");
+                props.setEyeColor("color_3");
               }}
             >
               <path 
@@ -191,7 +191,7 @@ const EyeColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor("color-4");
+                props.setEyeColor("color_4");
               }}
             >
               <path 
@@ -212,7 +212,7 @@ const EyeColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor("color-5");
+                props.setEyeColor("color_5");
               }}
             >
               <path 
@@ -233,7 +233,7 @@ const EyeColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor("color-6");
+                props.setEyeColor("color_6");
               }}
             >
               <path 
@@ -254,7 +254,7 @@ const EyeColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor("color-7");
+                props.setEyeColor("color_7");
               }}
             >
               <path 
@@ -275,7 +275,7 @@ const EyeColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor("color-8");
+                props.setEyeColor("color_8");
               }}
             >
               <path 
@@ -296,7 +296,7 @@ const EyeColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor("color-9");
+                props.setEyeColor("color_9");
               }}
             >
               <path 
@@ -317,7 +317,7 @@ const EyeColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor("color-10");
+                props.setEyeColor("color_10");
               }}
             >
               <path 
@@ -338,13 +338,13 @@ const EyeColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor("color-11");
+                props.setEyeColor("color_11");
               }}
             >
               <path 
                 className="color-btn-default"
                 d="m 144 150 C 182 89 227 131 275 97 C 350 52 497 162 413 244 C 384 270 392 306 330 301 C 260 290 267 312 228 306 C 109 287 112 202 144 150"
-                fill="6c6a4e"
+                fill="#6c6a4e"
                 stroke="none"
               />
               <path 
@@ -359,7 +359,7 @@ const EyeColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor("color-12");
+                props.setEyeColor("color_12");
               }}
             >
               <path 
@@ -380,7 +380,7 @@ const EyeColorModal = (props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setEyeColor("color-13");
+                props.setEyeColor("color_13");
               }}
             >
               <path 
