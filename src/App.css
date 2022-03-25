@@ -839,6 +839,11 @@ HSボタン
   height: 140px;
 }
 
+.OML-HS-svg {
+  width: 110px;
+  height: 150px;
+}
+
 .HS-btn-svg:hover {
   transition: 0.1s;
   transform: rotate(-15deg) scale(1.1, 1.1);
@@ -910,40 +915,6 @@ HSボタン
   transition: 0.03s;
   transform: rotate(-15deg);
 } */
-
-.OML-HS-btn .HS-btn-svg:hover .HS-btn-hair {
-  fill: #ff00b3;
-}
-
-.OML-HS-0 .HS-btn-svg:hover .HS-btn-suc,
-#OML-HS-0.rotate .HS-btn-svg:hover .HS-btn-suc,
-#OML-HS-0.selected .HS-btn-svg .HS-btn-suc {
-  fill: #fecddd;
-}
-
-.OML-HS-0 .HS-btn-svg:hover .HS-btn-geso,
-#OML-HS-0.rotate .HS-btn-svg:hover .HS-btn-geso,
-#OML-HS-0.selected .HS-btn-svg .HS-btn-geso {
-  fill: #ffa1d2;
-}
-
-#OML-HS-0.rotate .HS-btn-svg:hover,
-#OML-HS-1.rotate .HS-btn-svg:hover {
-  transition: 0.03s;
-  transform: rotate(-15deg);
-}
-
-#OML-HS-0.rotate .HS-btn-svg:hover .HS-btn-hair,
-#OML-HS-0.selected .HS-btn-svg .HS-btn-hair,
-#OML-HS-1.rotate .HS-btn-svg:hover .HS-btn-hair,
-#OML-HS-1.selected .HS-btn-svg .HS-btn-hair {
-  fill: #ff00b3;
-}
-
-#OML-HS-0.selected .HS-btn-svg,
-#OML-HS-1.selected .HS-btn-svg {
-  transform: rotate(-15deg) scale(1.1, 1.1);
-}
 
 /*
 Btmボタン

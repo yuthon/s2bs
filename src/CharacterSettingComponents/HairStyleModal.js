@@ -112,6 +112,28 @@ const HairStyleModal = (props) => {
     if (OFMLHair1Ref.current.className === "HS-selected" && props.hairStyle!== "Hair_1") {
       OFMLHair1Ref.current.className = "HS-btn"
     }
+  }　else if (props.characterType === "OML") {
+    //選択されているヘアスタイルのボタンのクラス名を変更
+    if (props.hairStyle === "Hair_0") {
+      OMLHair0Ref.current.className = "HS-ML-selected"
+    } else if (props.hairStyle === "Hair_1") {
+      OMLHair1Ref.current.className = "HS-ML-selected"
+    } else if (props.hairStyle === "Hair_2") {
+      OMLHair0Ref.current.className = "HS-ML-selected"
+    } else if (props.hairStyle === "Hair_3") {
+      OMLHair0Ref.current.className = "HS-ML-selected"
+    } else if (props.hairStyle === "Hair_4") {
+      OMLHair0Ref.current.className = "HS-ML-selected"
+    } else if (props.hairStyle === "Hair_5") {
+      OMLHair0Ref.current.className = "HS-ML-selected"
+    }
+    // 別のヘアスタイルが選択されていればクラス名を戻す
+    if (OMLHair0Ref.current.className === "HS-ML-selected" && props.hairStyle!== "Hair_0") {
+      OMLHair0Ref.current.className = "HS-ML-btn"
+    }
+    if (OMLHair1Ref.current.className === "HS-ML-selected" && props.hairStyle!== "Hair_1") {
+      OMLHair1Ref.current.className = "HS-ML-btn"
+    }
   }
   })
 
@@ -120,7 +142,7 @@ const HairStyleModal = (props) => {
         <>
         <div className="HS-btn" ref={IFMLHair0Ref}>  
             <svg
-              className="HS-btn-svg HS-svg" width="110" height="180" viewBox="0 10 240 310"
+              className="HS-btn-svg HS-svg" viewBox="0 10 240 310"
               onClick={()=>{
                 props.setHairStyle("Hair_0");
               }}
@@ -142,7 +164,7 @@ const HairStyleModal = (props) => {
           </div>
           <div className="HS-btn" ref={IFMLHair1Ref}>  
             <svg
-              className="HS-btn-svg HS-svg" width="110" height="180" viewBox="0 10 240 310"
+              className="HS-btn-svg HS-svg" viewBox="0 10 240 310"
               onClick={()=>{
                 props.setHairStyle("Hair_1");
               }}
@@ -163,7 +185,7 @@ const HairStyleModal = (props) => {
           </div>
           <div className="HS-btn" ref={IFMLHair2Ref}>  
             <svg
-              className="HS-btn-svg HS-svg" width="110" height="180" viewBox="0 10 240 310"
+              className="HS-btn-svg HS-svg" viewBox="0 10 240 310"
               onClick={()=>{
                 props.setHairStyle("Hair_2");
               }}
@@ -190,7 +212,7 @@ const HairStyleModal = (props) => {
           </div>
           <div className="HS-btn" ref={IFMLHair3Ref}>  
             <svg
-              className="HS-btn-svg HS-svg" width="110" height="180" viewBox="0 40 240 310"
+              className="HS-btn-svg HS-svg" viewBox="0 40 240 310"
               onClick={()=>{
                 props.setHairStyle("Hair_3");
               }}
@@ -290,7 +312,7 @@ const HairStyleModal = (props) => {
         <>
         <div className="HS-ML-btn" ref={IMLHair0Ref}>  
             <svg
-              className="HS-btn-svg HS-svg" width="110" height="180" viewBox="0 -10 240 310"
+              className="HS-btn-svg HS-svg" viewBox="0 -10 240 310"
               onClick={()=>{
                 props.setHairStyle("Hair_0");
               }}
@@ -317,7 +339,7 @@ const HairStyleModal = (props) => {
           </div>
           <div className="HS-ML-btn" ref={IMLHair1Ref}>  
             <svg
-              className="HS-btn-svg HS-svg" width="110" height="180" viewBox="0 -10 240 310"
+              className="HS-btn-svg HS-svg" viewBox="0 -10 240 310"
               onClick={()=>{
                 props.setHairStyle("Hair_1");
               }}
@@ -338,7 +360,7 @@ const HairStyleModal = (props) => {
           </div>
           <div className="HS-ML-btn" ref={IMLHair2Ref}>  
             <svg
-              className="HS-btn-svg HS-svg" width="110" height="180" viewBox="0 -10 240 310"
+              className="HS-btn-svg HS-svg" viewBox="0 -10 240 310"
               onClick={()=>{
                 props.setHairStyle("Hair_2");
               }}
@@ -365,7 +387,7 @@ const HairStyleModal = (props) => {
           </div>
           <div className="HS-ML-btn" ref={IMLHair3Ref}>  
             <svg
-              className="HS-btn-svg HS-svg" width="110" height="180" viewBox="0 -10 240 310"
+              className="HS-btn-svg HS-svg" viewBox="0 -10 240 310"
               onClick={()=>{
                 props.setHairStyle("Hair_3");
               }}
@@ -392,7 +414,7 @@ const HairStyleModal = (props) => {
           </div>
           <div className="HS-ML-btn" ref={IMLHair4Ref}>  
             <svg
-              className="HS-btn-svg HS-svg" width="110" height="180" viewBox="0 -10 240 310"
+              className="HS-btn-svg HS-svg" viewBox="0 -10 240 310"
               onClick={()=>{
                 props.setHairStyle("Hair_4");
               }}
@@ -426,7 +448,7 @@ const HairStyleModal = (props) => {
           </div>
           <div className="HS-ML-btn" ref={IMLHair5Ref}>  
             <svg
-              className="HS-btn-svg HS-svg" width="110" height="180" viewBox="0 -10 240 310"
+              className="HS-btn-svg HS-svg" viewBox="0 -10 240 310"
               onClick={()=>{
                 props.setHairStyle("Hair_5");
               }}
@@ -509,7 +531,7 @@ const HairStyleModal = (props) => {
           </div>
           <div className="HS-btn" ref={OFMLHair1Ref}>  
             <svg
-              className="HS-btn-svg OFML-HS-svg" viewBox="20 0 210 250"
+              className="HS-btn-svg OFML-HS-svg" viewBox="20 20 200 250"
               onClick={()=>{
                 props.setHairStyle("Hair_1");
               }}
@@ -549,6 +571,65 @@ const HairStyleModal = (props) => {
           </>
       )
     } else if (props.characterType === "OML") {
+      hairStyleModal = (
+        <>
+        <div className="HS-ML-btn" ref={OMLHair0Ref}>  
+            <svg
+              className="HS-btn-svg OML-HS-svg" viewBox="20 0 210 300"
+              onClick={()=>{
+                props.setHairStyle("Hair_0");
+              }}
+            >
+              <path 
+                className="HS-btn-face"
+                d="M 64 159 C 51 173 35 183 24 192 C 6 212 34 234 67 227 C 93 258 168 253 180 223 C 238 224 231 189 216 181 C 205 174 191 169 177 148 C 144 122 90 122 64 159"
+                fill="white"
+                stroke="none"
+              />
+              <path 
+                className="HS-btn-geso"
+                d="M 57 198 C 4 57 234 71 188 194 C 188 174 174 135 160 144 C 140 153 104 153 85 148 C 70 140 60 172 57 198"
+                fill="#bdf0ce"
+                stroke="none"
+              />
+              <path 
+                className="HS-btn-hair"
+                d="M 90 100 C 87 86 90 80 97 75 C 80 57 141 50 132 69 C 145 71 182 110 130 157 C 79 196 45 141 84 134 C 60 158 111 163 107 114 C 106 103 101 98 90 100"
+                fill="#0cd900"
+                stroke="none"
+              />
+              
+              <path 
+                className="HS-btn-suc"
+                d="M 124 140 C 113 135 118 112 135 118 C 149 124 138 146 124 140 L 132 103 C 118 103 107 86 126 78 C 140 73 157 100 132 103"
+                fill="#effcf2"
+                stroke="none"
+              />
+            </svg>
+          </div>
+          <div className="HS-ML-btn" ref={OMLHair1Ref}>  
+            <svg
+              className="HS-btn-svg OML-HS-svg" viewBox="15 20 220 250"
+              onClick={()=>{
+                props.setHairStyle("Hair_1");
+              }}
+            >
+              <path 
+                className="HS-btn-face"
+                d="M 64 159 C 51 173 35 183 24 192 C 6 212 34 234 67 227 C 93 258 168 253 180 223 C 238 224 231 189 216 181 C 205 174 191 169 177 148 C 144 122 90 122 64 159"
+                fill="white"
+                stroke="none"
+              />
+              <path 
+                className="HS-btn-hair"
+                d="M 72 210 C 59 200 59 180 59 167 L 48 173 C 9 128 31 77 91 59 C 156 39 258 89 200 171 L 190 164 C 191 180 190 198 178 206 C 183 180 184 140 153 137 C 131 135 135 143 110 138 C 71 132 68 173 72 210"
+                fill="#0cd900"
+                stroke="none"
+              />
+            </svg>
+          </div>
+        </>
+      )
     }
   
   return (
