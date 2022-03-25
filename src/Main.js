@@ -19,6 +19,7 @@ import OMLHairStyleModal from './CharacterSettingComponents/OMLHairStyleModal';
 import MLBottomsModal from './CharacterSettingComponents/MLBottomsModal';
 import FMLBottomsModal from './CharacterSettingComponents/FMLBottomsModal';
 import EyeColorModal from './CharacterSettingComponents/EyeColorModal';
+import HairStyleModal from './CharacterSettingComponents/HairStyleModal';
 
 //初期表示用の画像
 import WakabaIkaT from './images/gear/Clt_FST001.png';
@@ -52,9 +53,9 @@ const Main = () => {
   //選択されたクツギアを管理
   const [shoesGear, setShoesGear] = useState({name:"キャンバス ホワイト",path:Canvas_White,id:"Canvas_White",brand:"クラーゲス"});
   //キャラ設定モーダルを管理
-  const [characterType, setCharacterType] = useState("IML");
+  const [characterType, setCharacterType] = useState("IFML");
   const [skinColor, setSkinColor] = useState("color-0");
-  const [hairStyle, passHairStyle] = useState("Hair_0");
+  const [hairStyle, setHairStyle] = useState("Hair_0");
   const [eyeColor, setEyeColor] = useState("color-0");
   const [isMLBottomsModalOpen, controlMLBottomsModal] = useState(false);
   const [isFMLBottomsModalOpen, controlFMLBottomsModal] = useState(false);
@@ -98,16 +99,16 @@ const Main = () => {
         setDarkColor={setDarkColor}
       />
       <IFMLHairStyleModal
-        passHairStyle={passHairStyle}
+        passHairStyle={setHairStyle}
       />
       <IMLHairStyleModal
-        passHairStyle={passHairStyle}
+        passHairStyle={setHairStyle}
       />
       <OFMLHairStyleModal
-        passHairStyle={passHairStyle}
+        passHairStyle={setHairStyle}
       />
       <OMLHairStyleModal
-        passHairStyle={passHairStyle}
+        passHairStyle={setHairStyle}
       />
       <MLBottomsModal
         passBottoms={passBottoms}
@@ -118,6 +119,11 @@ const Main = () => {
       <EyeColorModal 
         setEyeColor={setEyeColor}
         eyeColor={eyeColor}
+      />
+      <HairStyleModal 
+        characterType={characterType}
+        setHairStyle={setHairStyle}
+        hairStyle={hairStyle}
       />
       <div className="row" id="main">  
         <div className="col-sm-6 col-md-4 col-lg-4 col-xxl-6" id="three-section">
