@@ -61,7 +61,7 @@ const Main = () => {
   const [isMLBottomsModalOpen, controlMLBottomsModal] = useState(false);
   const [isFMLBottomsModalOpen, controlFMLBottomsModal] = useState(false);
   const [bottoms, setBottoms] = useState("Btm_0");
-  const [teamColor, setTeamColor] = useState("color_0");
+  const [teamColor, setTeamColor] = useState("color_5");
   
   return(
     <>

@@ -153,7 +153,7 @@ const Model = (props) => {
     } else if (teamColor === "color_4") {
       return {r:0.024,g:0.452,b:0.855}
     } else if (teamColor === "color_5") {
-      return {r:0.024,g:0.452,b:0.855}
+      return {r:1,g:0.445,b:0.047}
     }
   }
   const DarkColor = function(teamColor) {
@@ -168,12 +168,13 @@ const Model = (props) => {
     } else if (teamColor === "color_4") {
       return {r:0.01,g:0.018,b:0.021}
     } else if (teamColor === "color_5") {
-      return {r:0.01,g:0.018,b:0.021}
+      return {r:0.195,g:0.053,b:0.007}
     }
   }
 
   let teamColor = TeamColor(props.teamColor);
   let darkColor = DarkColor(props.teamColor);
+
   // ボトムス
   let bottoms = props.bottoms
 
@@ -256,10 +257,31 @@ const Model = (props) => {
         // モデル名にALLが設定されている場合
         if (headGearType.indexOf("V") > -1 && modelName.indexOf("VALL") > -1) {
           model.visible = true;
+          // 髪色を変更
+          if (modelName.indexOf("TeamColor") > -1) {
+            model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+          }
+          if (modelName.indexOf("Dark") > -1) {
+            model.material.color.setRGB(darkColor.r, darkColor.g, darkColor.b)
+          }
         } else if (headGearType.indexOf("H") > -1 && modelName.indexOf("HALL") > -1) {
           model.visible = true;
+          // 髪色を変更
+          if (modelName.indexOf("TeamColor") > -1) {
+            model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+          }
+          if (modelName.indexOf("Dark") > -1) {
+            model.material.color.setRGB(darkColor.r, darkColor.g, darkColor.b)
+          }
         } else if (modelName.indexOf(headGearType) > -1) {
           model.visible = true;
+          // 髪色を変更
+          if (modelName.indexOf("TeamColor") > -1) {
+            model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+          }
+          if (modelName.indexOf("Dark") > -1) {
+            model.material.color.setRGB(darkColor.r, darkColor.g, darkColor.b)
+          }
         } else {
           model.visible = false;
         }
@@ -286,8 +308,19 @@ const Model = (props) => {
       // 目周辺
       else if (modelName.indexOf("IML_Eye") > -1) {
         model.visible = true;
-        if (modelName.indexOf("IML_Eyelid_Outer") > -1) {
-          // 肌の色
+        // 目の色
+        if (modelName.indexOf("Eye_Color") > -1) {
+          model.visible = true;
+          model.material.color.setRGB(eyeColor.r, eyeColor.g, eyeColor.b);
+        }
+        // 眉の色
+        else if (modelName.indexOf("Eyebrow") > -1) {
+          model.visible = true;
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b);
+        }
+        // 目の周りの肌の色
+        else if (modelName.indexOf("Eyelid_Outer") > -1) {
+          model.visible = true;
           model.material.color.setRGB(skinColor.r,skinColor.g,skinColor.b);
         }
       }
@@ -330,14 +363,42 @@ const Model = (props) => {
         // PT（ポニーテール）が設定されている場合
         if (headGear.indexOf("PT") > -1 && modelName.indexOf("PT") > -1) {
           model.visible = true;
+          // 髪色を変更
+          if (modelName.indexOf("TeamColor") > -1) {
+            model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+          }
+          if (modelName.indexOf("Dark") > -1) {
+            model.material.color.setRGB(darkColor.r, darkColor.g, darkColor.b)
+          }
         }
         // モデル名にALLが設定されている場合
         else if (headGearType.indexOf("V") > -1 && modelName.indexOf("VALL") > -1) {
           model.visible = true;
+          // 髪色を変更
+          if (modelName.indexOf("TeamColor") > -1) {
+            model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+          }
+          if (modelName.indexOf("Dark") > -1) {
+            model.material.color.setRGB(darkColor.r, darkColor.g, darkColor.b)
+          }
         } else if (headGearType.indexOf("H") > -1 && modelName.indexOf("HALL") > -1) {
           model.visible = true;
+          // 髪色を変更
+          if (modelName.indexOf("TeamColor") > -1) {
+            model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+          }
+          if (modelName.indexOf("Dark") > -1) {
+            model.material.color.setRGB(darkColor.r, darkColor.g, darkColor.b)
+          }
         } else if (modelName.indexOf(headGearType) > -1) {
           model.visible = true;
+          // 髪色を変更
+          if (modelName.indexOf("TeamColor") > -1) {
+            model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+          }
+          if (modelName.indexOf("Dark") > -1) {
+            model.material.color.setRGB(darkColor.r, darkColor.g, darkColor.b)
+          }
         } else {
           model.visible = false;
         }
@@ -364,8 +425,19 @@ const Model = (props) => {
       // 目周辺
       else if (modelName.indexOf("IFML_Eye") > -1) {
         model.visible = true;
-        if (modelName.indexOf("IFML_Eyelid_Outer") > -1) {
-          // 肌の色
+        // 目の色
+        if (modelName.indexOf("Eye_Color") > -1) {
+          model.visible = true;
+          model.material.color.setRGB(eyeColor.r, eyeColor.g, eyeColor.b);
+        }
+        // 眉の色
+        else if (modelName.indexOf("Eyebrow") > -1) {
+          model.visible = true;
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b);
+        }
+        // 目の周りの肌の色
+        else if (modelName.indexOf("Eyelid_Outer") > -1) {
+          model.visible = true;
           model.material.color.setRGB(skinColor.r,skinColor.g,skinColor.b);
         }
       }
@@ -412,14 +484,42 @@ const Model = (props) => {
         // PT（ポニーテール）が設定されている場合
         if (headGear.indexOf("PT") > -1 && modelName.indexOf("PT") > -1) {
           model.visible = true;
+          // 髪色を変更
+          if (modelName.indexOf("TeamColor") > -1) {
+            model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+          }
+          if (modelName.indexOf("Dark") > -1) {
+            model.material.color.setRGB(darkColor.r, darkColor.g, darkColor.b)
+          }
         }
         // モデル名にALLが設定されている場合
         else if (headGearType.indexOf("V") > -1 && modelName.indexOf("VALL") > -1) {
           model.visible = true;
+          // 髪色を変更
+          if (modelName.indexOf("TeamColor") > -1) {
+            model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+          }
+          if (modelName.indexOf("Dark") > -1) {
+            model.material.color.setRGB(darkColor.r, darkColor.g, darkColor.b)
+          }
         } else if (headGearType.indexOf("H") > -1 && modelName.indexOf("HALL") > -1) {
           model.visible = true;
+          // 髪色を変更
+          if (modelName.indexOf("TeamColor") > -1) {
+            model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+          }
+          if (modelName.indexOf("Dark") > -1) {
+            model.material.color.setRGB(darkColor.r, darkColor.g, darkColor.b)
+          }
         } else if (modelName.indexOf(headGearType) > -1) {
           model.visible = true;
+          // 髪色を変更
+          if (modelName.indexOf("TeamColor") > -1) {
+            model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+          }
+          if (modelName.indexOf("Dark") > -1) {
+            model.material.color.setRGB(darkColor.r, darkColor.g, darkColor.b)
+          }
         } else {
           model.visible = false;
         }
@@ -446,8 +546,19 @@ const Model = (props) => {
       // 目周辺
       else if (modelName.indexOf("OFML_Eye") > -1) {
         model.visible = true;
-        if (modelName.indexOf("OFML_Eyelid_Outer") > -1) {
-          // 肌の色
+        // 目の色
+        if (modelName.indexOf("Eye_Color") > -1) {
+          model.visible = true;
+          model.material.color.setRGB(eyeColor.r, eyeColor.g, eyeColor.b);
+        }
+        // 眉の色
+        else if (modelName.indexOf("Eyebrow") > -1) {
+          model.visible = true;
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b);
+        }
+        // 目の周りの肌の色
+        else if (modelName.indexOf("Eyelid_Outer") > -1) {
+          model.visible = true;
           model.material.color.setRGB(skinColor.r,skinColor.g,skinColor.b);
         }
       }
@@ -501,10 +612,31 @@ const Model = (props) => {
         // モデル名にALLが設定されている場合
         if (headGearType.indexOf("V") > -1 && modelName.indexOf("VALL") > -1) {
           model.visible = true;
+          // 髪色を変更
+          if (modelName.indexOf("TeamColor") > -1) {
+            model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+          }
+          if (modelName.indexOf("Dark") > -1) {
+            model.material.color.setRGB(darkColor.r, darkColor.g, darkColor.b)
+          }
         } else if (headGearType.indexOf("H") > -1 && modelName.indexOf("HALL") > -1) {
           model.visible = true;
+          // 髪色を変更
+          if (modelName.indexOf("TeamColor") > -1) {
+            model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+          }
+          if (modelName.indexOf("Dark") > -1) {
+            model.material.color.setRGB(darkColor.r, darkColor.g, darkColor.b)
+          }
         } else if (modelName.indexOf(headGearType) > -1) {
           model.visible = true;
+          // 髪色を変更
+          if (modelName.indexOf("TeamColor") > -1) {
+            model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+          }
+          if (modelName.indexOf("Dark") > -1) {
+            model.material.color.setRGB(darkColor.r, darkColor.g, darkColor.b)
+          }
         } else {
           model.visible = false;
         }
@@ -531,13 +663,21 @@ const Model = (props) => {
       // 目周辺
       else if (modelName.indexOf("OML_Eye") > -1) {
         model.visible = true;
-        if (modelName.indexOf("OML_Eyelid_Outer") > -1) {
-          // 肌の色
+        // 目の色
+        if (modelName.indexOf("Eye_Color") > -1) {
+          model.visible = true;
+          model.material.color.setRGB(eyeColor.r, eyeColor.g, eyeColor.b);
+        }
+        // 眉の色
+        else if (modelName.indexOf("Eyebrow") > -1) {
+          model.visible = true;
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b);
+        }
+        // 目の周りの肌の色
+        else if (modelName.indexOf("Eyelid_Outer") > -1) {
+          model.visible = true;
           model.material.color.setRGB(skinColor.r,skinColor.g,skinColor.b);
         }
-      }
-      else if (modelName.indexOf("OML_Hed_C0_EzokkoMesh") > -1) {
-        model.visible = true;
       }
       else {
         model.visible = false;
