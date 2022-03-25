@@ -819,7 +819,9 @@ CTボタン
 HSボタン
 */
 .HS-btn,
-.HS-selected {
+.HS-selected,
+.HS-ML-btn,
+.HS-ML-selected {
   width: 140px;
   height: 200px;
   margin-left: auto;
@@ -830,6 +832,11 @@ HSボタン
   width: 120px;
   height: 170px;
   cursor: pointer;
+}
+
+.OFML-HS-svg {
+  width: 130px;
+  height: 140px;
 }
 
 .HS-btn-svg:hover {
@@ -855,10 +862,13 @@ HSボタン
 }
 
 .HS-btn .HS-btn-svg:hover .HS-btn-geso-0,
+.HS-btn .HS-btn-svg:hover .HS-btn-geso,
 .HS-selected .HS-btn-svg:hover .HS-btn-geso-0,
 .HS-selected .HS-btn-svg .HS-btn-geso-0,
 .HS-selected .HS-btn-svg:hover .HS-btn-geso,
-.HS-selected .HS-btn-svg .HS-btn-geso {
+.HS-selected .HS-btn-svg .HS-btn-geso,
+.HS-btn .HS-btn-svg:hover .HS-btn-suc,
+.HS-selected .HS-btn-svg .HS-btn-suc {
   fill: #cff4db;
 }
 
@@ -874,45 +884,6 @@ HSボタン
 
 .OFML-HS-btn .HS-btn-svg:hover .HS-btn-hair {
   fill: #ffb23d;
-}
-
-.OFML-HS-0 .HS-btn-svg:hover .HS-btn-geso,
-#OFML-HS-0.rotate .HS-btn-svg:hover .HS-btn-geso,
-#OFML-HS-0.selected .HS-btn-svg .HS-btn-geso,
-.OFML-HS-0 .HS-btn-svg:hover .HS-btn-suc,
-#OFML-HS-0.rotate .HS-btn-svg:hover .HS-btn-suc,
-#OFML-HS-0.selected .HS-btn-svg .HS-btn-suc,
-.OFML-HS-1 .HS-btn-svg:hover .HS-btn-geso,
-#OFML-HS-1.rotate .HS-btn-svg:hover .HS-btn-geso,
-#OFML-HS-1.selected .HS-btn-svg .HS-btn-geso,
-.OFML-HS-1 .HS-btn-svg:hover .HS-btn-suc,
-#OFML-HS-1.rotate .HS-btn-svg:hover .HS-btn-suc,
-#OFML-HS-1.selected .HS-btn-svg .HS-btn-suc {
-  fill: #cff4db;
-}
-
-.OFML-HS-1 .HS-btn-svg:hover .HS-btn-hairband,
-#OFML-HS-1.rotate .HS-btn-svg:hover .HS-btn-hairband,
-#OFML-HS-1.selected .HS-btn-svg .HS-btn-hairband {
-  fill: #66e569;
-}
-
-#OFML-HS-0.rotate .HS-btn-svg:hover,
-#OFML-HS-1.rotate .HS-btn-svg:hover {
-  transition: 0.03s;
-  transform: rotate(-15deg);
-}
-
-#OFML-HS-0.rotate .HS-btn-svg:hover .HS-btn-hair,
-#OFML-HS-0.selected .HS-btn-svg .HS-btn-hair,
-#OFML-HS-1.rotate .HS-btn-svg:hover .HS-btn-hair,
-#OFML-HS-1.selected .HS-btn-svg .HS-btn-hair {
-  fill: #ffb23d;
-}
-
-#OFML-HS-0.selected .HS-btn-svg,
-#OFML-HS-1.selected .HS-btn-svg {
-  transform: rotate(-15deg) scale(1.1, 1.1);
 }
 
 .HS-ML-btn .HS-btn-svg:hover .HS-btn-hair,

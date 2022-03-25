@@ -15,17 +15,8 @@ const HairStyleModal = (props) => {
   const IFMLHair5Ref = useRef();
   const OFMLHair0Ref = useRef();
   const OFMLHair1Ref = useRef();
-  const OFMLHair2Ref = useRef();
-  const OFMLHair3Ref = useRef();
-  const OFMLHair4Ref = useRef();
-  const OFMLHair5Ref = useRef();
   const OMLHair0Ref = useRef();
   const OMLHair1Ref = useRef();
-  const OMLHair2Ref = useRef();
-  const OMLHair3Ref = useRef();
-  const OMLHair4Ref = useRef();
-  const OMLHair5Ref = useRef();
-  
   
 
   let hairStyleModal;
@@ -98,6 +89,28 @@ const HairStyleModal = (props) => {
     }
     if (IMLHair5Ref.current.className === "HS-ML-selected" && props.hairStyle!== "Hair_5") {
       IMLHair5Ref.current.className = "HS-ML-btn"
+    }
+  } else if (props.characterType === "OFML") {
+    //選択されているヘアスタイルのボタンのクラス名を変更
+    if (props.hairStyle === "Hair_0") {
+      OFMLHair0Ref.current.className = "HS-selected"
+    } else if (props.hairStyle === "Hair_1") {
+      OFMLHair1Ref.current.className = "HS-selected"
+    } else if (props.hairStyle === "Hair_2") {
+      OFMLHair0Ref.current.className = "HS-selected"
+    } else if (props.hairStyle === "Hair_3") {
+      OFMLHair0Ref.current.className = "HS-selected"
+    } else if (props.hairStyle === "Hair_4") {
+      OFMLHair0Ref.current.className = "HS-selected"
+    } else if (props.hairStyle === "Hair_5") {
+      OFMLHair0Ref.current.className = "HS-selected"
+    }
+    // 別のヘアスタイルが選択されていればクラス名を戻す
+    if (OFMLHair0Ref.current.className === "HS-selected" && props.hairStyle!== "Hair_0") {
+      OFMLHair0Ref.current.className = "HS-btn"
+    }
+    if (OFMLHair1Ref.current.className === "HS-selected" && props.hairStyle!== "Hair_1") {
+      OFMLHair1Ref.current.className = "HS-btn"
     }
   }
   })
@@ -405,7 +418,7 @@ const HairStyleModal = (props) => {
               <path 
                 className="HS-btn-hair-1"
                 d="M 92 134 C 92 134 97 123 105 116 C 109 119 115 125 117 128 C 119 124 126 113 129 108 C 132 112 140 126 141 129 C 144 124 149 118 153 114 C 156 117 161 123 167 137 L 165 148 C 153 139 142 137 127 141 C 114 134 100 138 92 144 L 92 134"
-                fill="#ffb84d"
+                fill="#0cd000"
                 stroke="none"
               />
               
@@ -447,6 +460,94 @@ const HairStyleModal = (props) => {
         </>
       )
     } else if (props.characterType === "OFML") {
+      hairStyleModal=(
+        <>
+        <div className="HS-btn" ref={OFMLHair0Ref}>  
+            <svg
+              className="HS-btn-svg OFML-HS-svg" viewBox="20 0 210 300"
+              onClick={()=>{
+                props.setHairStyle("Hair_0");
+              }}
+            >
+              <path 
+                className="HS-btn-face"
+                d="M 64 159 C 51 173 35 183 24 192 C 6 212 35 233 69 229 C 93 258 168 253 182 220 C 235 224 231 189 216 181 C 205 174 193 167 177 148 C 144 122 90 122 64 159"
+                fill="white"
+                stroke="none"
+              />
+              <path 
+                className="HS-btn-hair"
+                d="M 33 277 C 35 294 78 291 61 249 C 53 227 36 204 39 181 L 34 184 L 33 173 C 15 188 13 117 34 130 C 38 119 42 112 49 105 C 21 103 90 60 82 83 C 104 85 106 78 117 80 C 107 58 181 68 163 85 C 172 88 180 93 186 101 C 199 75 236 144 211 145 C 223 196 203 216 200 252 C 197 277 224 285 232 270 C 225 300 159 278 182 219 C 218 133 135 80 93 148 C 56 146 63 208 74 220 C 116 269 30 315 33 277 M 119 83"
+                fill="#ff00b3"
+                stroke="none"
+              />
+              <path 
+                className="HS-btn-geso"
+                d="M 33 277 C 18 312 100 301 94 242 C 90 239 84 234 81 230 C 90 295 31 302 33 277 L 166 236 C 169 295 238 303 232 270 C 215 300 171 268 182 220 C 179 225 171 233 166 236"
+                fill="#ffd2e7"
+                stroke="none"
+              />
+              <path 
+                className="HS-btn-geso"
+                d="M 93 148 C 116 90 215 115 187 203 C 185 152 158 120 93 148"
+                fill="#ffd2e7"
+                stroke="none"
+              />
+              <path 
+                className="HS-btn-suc"
+                d="M 122 75 C 123 66 162 71 160 78 C 157 88 122 82 122 75 L 195 102 C 205 99 222 132 213 136 C 204 140 190 103 195 102"
+                fill="#ffe9f1"
+                stroke="none"
+              />
+              <path 
+                className="HS-btn-suc"
+                d="M 28 134 C 37 133 37 169 28 169 C 20 169 20 133 28 134"
+                fill="#ffe9f1"
+                stroke="none"
+              />
+            </svg>
+          </div>
+          <div className="HS-btn" ref={OFMLHair1Ref}>  
+            <svg
+              className="HS-btn-svg OFML-HS-svg" viewBox="20 0 210 250"
+              onClick={()=>{
+                props.setHairStyle("Hair_1");
+              }}
+            >
+              <path 
+                className="HS-btn-face"
+                d="M 64 159 C 51 173 35 183 24 192 C 6 212 35 233 69 229 C 93 258 168 253 182 220 C 235 224 231 189 216 181 C 205 174 193 167 177 148 C 144 122 90 122 64 159"
+                fill="white"
+                stroke="none"
+              />
+              <path 
+                className="HS-btn-hair"
+                d="M 55 248 C 52 225 40 232 50 190 C 52 178 47 168 50 158 C 31 160 55 113 65 126 C 70 119 77 113 87 112 C 87 109 89 105 92 103 C 70 70 90 40 118 55 C 121 46 133 33 148 39 C 153 31 179 53 170 62 C 169 80 168 104 182 112 C 172 119 163 99 139 86 L 137 91 C 143 94 151 99 153 103 C 163 102 171 112 174 117 C 185 110 206 144 195 148 C 201 166 188 179 198 197 C 205 211 196 221 197 244 C 162 231 199 204 177 164 C 167 142 153 145 151 134 C 154 156 89 153 89 137 C 87 153 69 157 64 174 C 56 211 84 235 55 248"
+                fill="#ff00b3"
+                stroke="none"
+              />
+              <path 
+                className="HS-btn-suc"
+                d="M 102 98 C 101 90 139 91 138 97 C 137 106 103 106 102 98 L 152 42 C 156 37 172 51 166 59 C 162 64 149 46 152 42"
+                fill="#ffe9f1"
+                stroke="none"
+              />
+              <path 
+                className="HS-btn-geso"
+                d="M 136 85 C 156 58 157 105 175 113 C 168 112 165 105 153 103 C 151 98 144 88 136 85"
+                fill="#ffd2e7"
+                stroke="none"
+              />
+              <path 
+                className="HS-btn-hairband"
+                d="M 104 92 C 102 71 146 80 138 92 C 128 89 115 88 104 92"
+                fill="#ff70cc"
+                stroke="none"
+              />
+            </svg>
+          </div>
+          </>
+      )
     } else if (props.characterType === "OML") {
     }
   
