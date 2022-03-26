@@ -79,7 +79,7 @@ const Main = () => {
         <img className="header-image" src={HeaderImg} alt=""/>
       </div>
     </header>
-    <div className="container-xl px-sm-0 px-lg-auto">
+    <div className="container-xl px-0">
       <HeadGearModal
         chosenGear={headGear}
         setChosenGear={setHeadGear}
@@ -131,7 +131,7 @@ const Main = () => {
             
             <Canvas
               style={{ background: '#f0f0e0' }}
-              camera={{ position: [0, 11, 17] }}
+              camera={{ position: [0, 9, 12] }}
             >
               <ambientLight
                 color={0xffffff}

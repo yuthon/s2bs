@@ -165,8 +165,8 @@ footer {
 /* 3dモデルの表示領域 */
 
 #main {
-  position: relative;
-  margin: 0rem;
+  /* position: relative;
+  margin: 0rem; */
   /* width: 100%; */
   /* height: calc(100vh - 6.25rem); */
 }
