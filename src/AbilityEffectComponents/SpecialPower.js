@@ -74,18 +74,24 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">  
-          <p className="ae-text-single">180ダメージの範囲</p>
-          <p className="ae-text-single">70ダメージの範囲</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">180ダメージの範囲</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{hitbox180} ％</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-        </div>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{hitbox180} ％</p>
-          <p className="ae-effect">{hitbox70} ％</p>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">70ダメージの範囲</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{hitbox70} ％</p>
+          </div>
         </div>
       </div>
     );
@@ -99,18 +105,24 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">  
-          <p className="ae-text-single">ロックオンの範囲</p>
-          <p className="ae-text-single">着弾点の塗り範囲</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">ロックオンの範囲</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{circleRadiusPercent} ％</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-        </div>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{circleRadiusPercent} ％</p>
-          <p className="ae-effect">{paintRadiusPercent} ％</p>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">着弾点の塗り範囲</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{paintRadiusPercent} ％</p>
+          </div>
         </div>
       </div>
     );
@@ -124,18 +136,24 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">  
-          <p className="ae-text-single">アーマー発動から有効化までの時間</p>
-          <p className="ae-text-single">アーマー持続時間</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">発動から有効化までの時間</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-3 px-0 m-auto">
+            <p className="ae-effect">{armorActivationFrames} F</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-        </div>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{armorActivationFrames} F</p>
-          <p className="ae-effect">{durationFrames} F</p>
+        <div className="ae-part row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">持続時間</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-3 px-0 m-auto">
+            <p className="ae-effect">{durationFrames} F</p>
+          </div>
         </div>
       </div>
     );
@@ -147,11 +165,11 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">ボムピッチャー持続時間</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">ボムピッチャーの持続時間</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
+        <p className="col-2 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{durationFrames} F</p>
         </div>
@@ -165,11 +183,11 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">ボムピッチャー持続時間</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">ボムピッチャーの持続時間</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
+        <p className="col-2 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{durationFrames} F</p>
         </div>
@@ -183,11 +201,11 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">ボムピッチャー持続時間</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">ボムピッチャーの持続時間</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
+        <p className="col-2 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{durationFrames} F</p>
         </div>
@@ -201,11 +219,11 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">ボムピッチャー持続時間</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">ボムピッチャーの持続時間</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
+        <p className="col-2 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{durationFrames} F</p>
         </div>
@@ -219,11 +237,11 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">ボムピッチャー持続時間</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">ボムピッチャーの持続時間</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
+        <p className="col-2 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{durationFrames} F</p>
         </div>
@@ -237,12 +255,12 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">ハイパープレッサー持続時間</p>
+      <div className="ae-part row">
+        <div className="col-7 px-0 m-auto">  
+          <p className="ae-text">ハイパープレッサーの持続時間</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
-        <div className="col-4 px-0 m-auto">
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-3 px-0 m-auto">
           <p className="ae-effect">{durationFrames} F</p>
         </div>
       </div>
@@ -255,11 +273,11 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">アメフラシ持続時間</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">アメフラシの持続時間</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
+        <p className="col-2 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{durationFrames} F</p>
         </div>
@@ -273,14 +291,14 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
+      <div className="ae-part row">
+        <div className="col-7 px-0 m-auto">
           <p className="ae-text-first">ナイスダマチャージ時間</p>
           <p className="ae-text-second">（味方と自分のナイスなし）</p>
         </div>
-        <p className="col-2 ae-colon-double">:</p>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect-double">{chargeSpeedFrames} F</p>
+        <p className="col-2 ae-colon">:</p>
+        <div className="col-3 px-0 m-auto">
+          <p className="ae-effect">{chargeSpeedFrames} F</p>
         </div>
       </div>
     );
@@ -292,18 +310,24 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">  
-          <p className="ae-text-single">55ダメージ爆風の範囲</p>
-          <p className="ae-text-single">スフィアの耐久値</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">55ダメージ爆風の範囲</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{explosionRadius} DU</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-        </div>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{explosionRadius} DU</p>
-          <p className="ae-effect">{ballerHealth}</p>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">スフィアの耐久値</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{ballerHealth} ダメージ分</p>
+          </div>
         </div>
       </div>
     );
@@ -317,21 +341,34 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-7 px-0 m-auto">  
-          <p className="ae-text-single">ジェットパックの持続時間</p>
-          <p className="ae-text-single">着弾点の塗り半径</p>
-          <p className="ae-text-single">爆風範囲（50ダメージ{'&'}30ダメージ）</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">ジェットパックの持続時間</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-3 px-0 m-auto">
+            <p className="ae-effect">{durationFrames} F</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
+        <div className="ae-part row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">着弾点の塗り半径</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-3 px-0 m-auto">
+            <p className="ae-effect">{paintRadius} DU</p>
+          </div>
         </div>
-        <div className="col-3 px-0 m-auto">
-          <p className="ae-effect">{durationFrames} F</p>
-          <p className="ae-effect">{paintRadius} DU</p>
-          <p className="ae-effect">{blastRadius} ％</p>
+        <div className="ae-part row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text-first">爆風によるダメージの範囲</p>
+            <p className="ae-text-second">（50ダメージ{'&'}30ダメージ）</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-3 px-0 m-auto">
+            <p className="ae-effect">{blastRadius} ％</p>
+          </div>
         </div>
       </div>
     );
@@ -344,21 +381,33 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">  
-          <p className="ae-text-single">爆発の塗り範囲</p>
-          <p className="ae-text-single">バブルの大きさ</p>
-          <p className="ae-text-single">爆風の範囲</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">爆発の塗り範囲</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-3 px-0 m-auto">
+            <p className="ae-effect">{paintRadius} DU</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
+        <div className="ae-part row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">バブルの大きさ</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-3 px-0 m-auto">
+            <p className="ae-effect">{bubbleSize} ％</p>
+          </div>
         </div>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{paintRadius} DU</p>
-          <p className="ae-effect">{bubbleSize} ％</p>
-          <p className="ae-effect">{blastRadius} ％</p>
+        <div className="ae-part row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">爆風によるダメージの範囲</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-3 px-0 m-auto">
+            <p className="ae-effect">{blastRadius} ％</p>
+          </div>
         </div>
       </div>
     );
@@ -370,11 +419,11 @@ const SpecialPower = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">ウルトラハンコ持続時間</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">ウルトラハンコの持続時間</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
+        <p className="col-2 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{durationFrames} F</p>
         </div>
@@ -383,13 +432,13 @@ const SpecialPower = (props) => {
   }
   
   return (
-    <div className="ae-card border row">
-        <div className="col-lg-2 px-0 my-auto">
-          <div className="ability-icon ap-ability-icon">
-            <img className="ap-ability-img" src={specialPowerImg} alt=""/>
-          </div>
+    <div className="ae-card border d-flex">
+      <div className="ap-icon-area">
+        <div className="ability-icon ap-ability-icon">
+          <img className="ap-ability-img" src={specialPowerImg} alt=""/>
         </div>
-        {element}
+      </div>
+      {element}
     </div>
   );
 };

@@ -189,13 +189,13 @@ const MainPowerUp = (props) => {
     }
     damageInPercent = Math.floor(damage / 38 *100000) / 1000;
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">1発のダメージ</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage}</p>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
+          <p className="ae-effect">{damage} ダメージ</p>
         </div>
       </div>
     );
@@ -207,13 +207,13 @@ const MainPowerUp = (props) => {
     }
     damageInPercent = Math.floor(damage / Splash[0].DMG *100000) / 1000;
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">1発のダメージ</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage}</p>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
+          <p className="ae-effect">{damage} ダメージ</p>
         </div>
       </div>
     );
@@ -224,12 +224,12 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">塗り範囲</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">塗り範囲</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
-        <div className="col-4 px-0 m-auto">
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
           <p className="ae-effect">{paintRadius} ％</p>
         </div>
       </div>
@@ -241,12 +241,12 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">塗り範囲</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">塗り範囲</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
-        <div className="col-4 px-0 m-auto">
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
           <p className="ae-effect">{paintRadius} ％</p>
         </div>
       </div>
@@ -261,18 +261,24 @@ const MainPowerUp = (props) => {
     rngInPercent = Math.floor(rng / SplatterShot[0].DR * 10000) / 100;
     rngJumpInPercent = Math.floor(rngJump / SplatterShot[0].DRJ * 10000) / 100;
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">  
-          <p className="ae-text-single">弾の拡散（歩き撃ち）</p>
-          <p className="ae-text-single">弾の拡散（ジャンプ撃ち）</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">弾の拡散（歩き撃ち）</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{rngInPercent} ％</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-        </div>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{rngInPercent} ％</p>
-          <p className="ae-effect">{rngJumpInPercent} ％</p>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">弾の拡散（ジャンプ撃ち）</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{rngJumpInPercent} ％</p>
+          </div>
         </div>
       </div>
     );
@@ -286,18 +292,24 @@ const MainPowerUp = (props) => {
     rngInPercent = Math.floor(rng / Gal52[0].DR * 100000) / 1000;
     rngJumpInPercent = Math.floor(rngJump / Gal52[0].DRJ * 100000) / 1000;
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">  
-          <p className="ae-text-single">弾の拡散（歩き撃ち）</p>
-          <p className="ae-text-single">弾の拡散（ジャンプ撃ち）</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">弾の拡散（歩き撃ち）</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{rngInPercent} ％</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-        </div>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{rngInPercent} ％</p>
-          <p className="ae-effect">{rngJumpInPercent} ％</p>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">弾の拡散（ジャンプ撃ち）</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{rngJumpInPercent} ％</p>
+          </div>
         </div>
       </div>
     );
@@ -310,18 +322,24 @@ const MainPowerUp = (props) => {
     }
     rngInPercent = Math.floor(rng / Nzap[0].DR * 100000) / 1000;
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">  
-          <p className="ae-text-single">弾の拡散（歩き撃ち）</p>
-          <p className="ae-text-single">塗り範囲</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">弾の拡散（歩き撃ち）</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{rngInPercent} ％</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-        </div>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{rngInPercent} ％</p>
-          <p className="ae-effect">{paintRadius} ％</p>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">塗り範囲</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{paintRadius} ％</p>
+          </div>
         </div>
       </div>
     );
@@ -333,13 +351,13 @@ const MainPowerUp = (props) => {
     }
     damageInPercent = Math.floor(damage / Pro[0].DMG *100000) / 1000;
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">1発のダメージ</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage}</p>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
+          <p className="ae-effect">{damage} ダメージ</p>
         </div>
       </div>
     );
@@ -352,18 +370,24 @@ const MainPowerUp = (props) => {
     }
     rngInPercent = Math.floor(rng / Jet[0].DR * 100000) / 1000;
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">弾の拡散（歩き撃ち）</p>
-          <p className="ae-text-single">弾の初速と射程</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">弾の拡散（歩き撃ち）</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{rngInPercent} ％</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-        </div>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{rngInPercent} ％</p>
-          <p className="ae-effect">{initVelocityRate}％</p>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">弾の初速と射程</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{initVelocityRate} ％</p>
+          </div>
         </div>
       </div>
     );
@@ -375,13 +399,13 @@ const MainPowerUp = (props) => {
     }
     damageInPercent = Math.floor(damage / Gal96[0].DMG *100000) / 1000;
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">1発のダメージ</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage}</p>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
+          <p className="ae-effect">{damage} ダメージ</p>
         </div>
       </div>
     );
@@ -393,18 +417,24 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">塗り範囲</p>
-          <p className="ae-text-single">爆風全体に対する70ダメージ爆風の大きさ</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">塗り範囲</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{paintRadius} ％</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-        </div>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{paintRadius} ％</p>
-          <p className="ae-effect">{explosionHitbox} ％</p>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">爆風全体に対する70ダメージ爆風の大きさ</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{explosionHitbox} ％</p>
+          </div>
         </div>
       </div>
     );
@@ -416,15 +446,15 @@ const MainPowerUp = (props) => {
     }
     rngJumpInPercent = Math.floor(rngJump / Blaster[0].DRJ * 10000) / 100;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>弾の拡散（ジャンプ撃ち）</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">弾の拡散（ジャンプ撃ち）</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{rngJumpInPercent} ％</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{rngJumpInPercent}％</p>
-      </div></>
     );
     } else if (name.indexOf("ロングブラスター") > -1) {
     for (let i=0; i < 40; i++) {
@@ -434,15 +464,15 @@ const MainPowerUp = (props) => {
     }
     rngJumpInPercent = Math.floor(rngJump / Range[0].DRJ * 10000) / 100;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>弾の拡散（ジャンプ撃ち）</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">弾の拡散（ジャンプ撃ち）</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{rngJumpInPercent} ％</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{rngJumpInPercent}％</p>
-      </div></>
     );
   } else if (name.indexOf("クラッシュブラスター") > -1) {
     for (let i=0; i < 40; i++) {
@@ -452,15 +482,15 @@ const MainPowerUp = (props) => {
     }
     rngJumpInPercent = Math.floor(rngJump / Clash[0].DRJ * 10000) / 100;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>弾の拡散（ジャンプ撃ち）</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">弾の拡散（ジャンプ撃ち）</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{rngJumpInPercent} ％</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{rngJumpInPercent}％</p>
-      </div></>
     );
   } else if (name.indexOf("ラピッドブラスター") > -1) {
     for (let i=0; i < 40; i++) {
@@ -471,18 +501,26 @@ const MainPowerUp = (props) => {
     }
     rngJumpInPercent = Math.floor(rngJump / Rapid[0].DRJ * 10000) / 100;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>弾の拡散（ジャンプ撃ち）</p>
-        <p>爆風の範囲</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">弾の拡散（ジャンプ撃ち）</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{rngJumpInPercent}％</p>
+          </div>
+        </div>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">爆風の範囲</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{explosionHitbox}％</p>
+          </div>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{rngJumpInPercent}％</p>
-        <p>{explosionHitbox}％</p>
-      </div></>
     );
   } else if (name.indexOf("Rブラスター") > -1) {
     for (let i=0; i < 40; i++) {
@@ -493,18 +531,26 @@ const MainPowerUp = (props) => {
     }
     rngJumpInPercent = Math.floor(rngJump / RapidPro[0].DRJ * 10000) / 100;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>弾の拡散（ジャンプ撃ち）</p>
-        <p>爆風の範囲</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">弾の拡散（ジャンプ撃ち）</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{rngJumpInPercent}％</p>
+          </div>
+        </div>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">爆風の範囲</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{explosionHitbox}％</p>
+          </div>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{rngJumpInPercent}％</p>
-        <p>{explosionHitbox}％</p>
-      </div></>
     );
   } else if (name.indexOf("L-3") > -1) {
     for (let i=0; i < 40; i++) {
@@ -514,15 +560,15 @@ const MainPowerUp = (props) => {
     }
     damageInPercent = Math.floor(damage / L3[0].DMG *100000) / 1000;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>1発のダメージ</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
+          <p className="ae-effect">{damage} ダメージ</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}</p>
-      </div></>
     );
   } else if (name.indexOf("H-3") > -1) {
     for (let i=0; i < 40; i++) {
@@ -532,15 +578,15 @@ const MainPowerUp = (props) => {
     }
     damageInPercent = Math.floor(damage / H3[0].DMG *100000) / 1000;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>1発のダメージ</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
+          <p className="ae-effect">{damage} ダメージ</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}</p>
-      </div></>
     );
   } else if (name.indexOf("ボトルカイザー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -550,15 +596,15 @@ const MainPowerUp = (props) => {
     }
     damageInPercent = Math.floor(damage / Squeezer[0].DMG *100000) / 1000;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>1発のダメージ</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
+          <p className="ae-effect">{damage} ダメージ</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}</p>
-      </div></>
     );
   } else if (name.indexOf("スプラローラー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -567,15 +613,15 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>ダメージ</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{damage} %</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}％</p>
-      </div></>
     );
   } else if (name.indexOf("カーボン") > -1) {
     for (let i=0; i < 40; i++) {
@@ -584,15 +630,15 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>ダメージ</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{damage} %</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}％</p>
-      </div></>
     );
   } else if (name.indexOf("ヴァリアブルローラー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -601,15 +647,15 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>ダメージ</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{damage} %</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}％</p>
-      </div></>
     );
   } else if (name.indexOf("ダイナモローラー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -618,15 +664,15 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>ダメージ</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{damage} %</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}％</p>
-      </div></>
     );
   } else if (name.indexOf("ホクサイ") > -1) {
     for (let i=0; i < 40; i++) {
@@ -636,18 +682,26 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>塗り進みのインクの太さ</p>
-        <p>塗り進みの移動速度</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">塗り進みのインクの太さ</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{inkTrailWidth} ％</p>
+          </div>
+        </div>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">塗り進みの移動速度</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{movementSpeed} ％</p>
+          </div>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{inkTrailWidth}％</p>
-        <p>{movementSpeed}％</p>
-      </div></>
     );
   } else if (name.indexOf("パブロ") > -1) {
     for (let i=0; i < 40; i++) {
@@ -657,18 +711,26 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>塗り進みのインクの太さ</p>
-        <p>塗り進みの移動速度</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">塗り進みのインクの太さ</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{inkTrailWidth} ％</p>
+          </div>
+        </div>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">塗り進みの移動速度</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{movementSpeed} ％</p>
+          </div>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{inkTrailWidth}％</p>
-        <p>{movementSpeed}％</p>
-      </div></>
     );
   } else if (name.indexOf("スプラチャージャー") > -1 || name.indexOf("スプラスコープ") > -1) {
     for (let i=0; i < 40; i++) {
@@ -678,15 +740,15 @@ const MainPowerUp = (props) => {
     }
     damageInPercent = Math.floor(damage / Charger[0].DMG *100000) / 1000;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>1発のダメージ（フルチャージ）</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">ダメージ（フルチャージ）</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{damage} ダメージ</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}</p>
-      </div></>
     );
   } else if (name.indexOf("スクイックリン") > -1) {
     for (let i=0; i < 40; i++) {
@@ -696,18 +758,26 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>塗りの太さ</p>
-        <p>射程</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">塗りの太さ</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{paintRadius}％</p>
+          </div>
+        </div>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">射程</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{range}％</p>
+          </div>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{paintRadius}％</p>
-        <p>{range}％</p>
-      </div></>
     );
   } else if (name.indexOf("リッター") > -1 || name.indexOf("4Kスコープ") > -1) {
     for (let i=0; i < 40; i++) {
@@ -717,18 +787,26 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>塗りの太さ</p>
-        <p>射程</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">塗りの太さ</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{paintRadius}％</p>
+          </div>
+        </div>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">射程</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{range}％</p>
+          </div>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{paintRadius}％</p>
-        <p>{range}％</p>
-      </div></>
     );
   } else if (name.indexOf("竹") > -1) {
     for (let i=0; i < 40; i++) {
@@ -738,15 +816,15 @@ const MainPowerUp = (props) => {
     }
     damageInPercent = Math.floor(damage / Bamboo[0].DMG *100000) / 1000;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>1発のダメージ（フルチャージ）</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">ダメージ（フルチャージ）</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{damage} ダメージ</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}</p>
-      </div></>
     );
   } else if (name.indexOf("ソイチューバー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -756,15 +834,15 @@ const MainPowerUp = (props) => {
     }
     damageInPercent = Math.floor(damage / Gootuber[0].DMG *100000) / 1000;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>1発のダメージ（フルチャージ）</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">ダメージ（フルチャージ）</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{damage} ダメージ</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}</p>
-      </div></>
     );
   } else if (name.indexOf("バケットスロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -775,15 +853,15 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>ダメージの減衰無しで撃てる範囲</p>
+      <div className="ae-part row">
+        <div className="col-7 px-0 m-auto">  
+          <p className="ae-text">ダメージの減衰無しで撃てる範囲</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-3 px-0 m-auto">
+          <p className="ae-effect">{fullDamageHeight} ％</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{fullDamageHeight}％</p>
-      </div></>
     );
   } else if (name.indexOf("ヒッセン") > -1) {
     for (let i=0; i < 40; i++) {
@@ -792,15 +870,15 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>塗り範囲</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">塗り範囲</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{inkCoverage} ％</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{inkCoverage}％</p>
-      </div></>
     );
   } else if (name.indexOf("スクリュー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -809,15 +887,15 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>塗り範囲</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">塗り範囲</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{inkCoverage} ％</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{inkCoverage}％</p>
-      </div></>
     );
   } else if (name.indexOf("オーバーフロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -826,15 +904,15 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>塗り範囲</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">塗り範囲</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{inkCoverage} ％</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{inkCoverage}％</p>
-      </div></>
     );
   } else if (name.indexOf("エクスプロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -843,15 +921,15 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>塗り範囲</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">塗り範囲</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
+          <p className="ae-effect">{inkCoverage} ％</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{inkCoverage}％</p>
-      </div></>
     );
     } else if (name.indexOf("スプラスピナー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -861,15 +939,15 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>フルチャージの弾数</p>
+      <div className="ae-part row">
+        <div className="col-7 px-0 m-auto">  
+          <p className="ae-text">フルチャージの弾数</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-3 px-0 m-auto">
+          <p className="ae-effect">{bullets} 発</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{bullets}発</p>
-      </div></>
     );
   } else if (name.indexOf("バレルスピナー") > -1 || name.indexOf("ヒーロースピナー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -879,15 +957,15 @@ const MainPowerUp = (props) => {
       }
     }
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>フルチャージの弾数</p>
+      <div className="ae-part row">
+        <div className="col-7 px-0 m-auto">  
+          <p className="ae-text">フルチャージの弾数</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-3 px-0 m-auto">
+          <p className="ae-effect">{bullets} 発</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{bullets}発</p>
-      </div></>
     );
   } else if (name.indexOf("ハイドラント") > -1) {
     for (let i=0; i < 40; i++) {
@@ -899,18 +977,26 @@ const MainPowerUp = (props) => {
     damageInPercent = Math.floor(damage / Hydra[0].DMG *100000) / 1000;
     damageFarInPercent = Math.floor(damageFar / Hydra[0].DMGFAR *100000) / 1000;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>ダメージ（チャージ1周目）</p>
-        <p>ダメージ（チャージ2周目）</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">ダメージ（チャージ1周目）</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{damage} ダメージ</p>
+          </div>
+        </div>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">ダメージ（チャージ2周目）</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{damageFar} ダメージ</p>
+          </div>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}</p>
-        <p>{damageFar}</p>
-      </div></>
     );
   } else if (name.indexOf("クーゲルシュライバー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -920,15 +1006,15 @@ const MainPowerUp = (props) => {
     }
     damageInPercent = Math.floor(damage / Ballpoint[0].DMG *100000) / 1000;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>1発のダメージ</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
+          <p className="ae-effect">{damage} ダメージ</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}</p>
-      </div></>
     );
   } else if (name.indexOf("ノーチラス") > -1) {
     for (let i=0; i < 40; i++) {
@@ -956,15 +1042,15 @@ const MainPowerUp = (props) => {
     }
     damageInPercent = Math.floor(damage / Dapples[0].DMG *100000) / 1000;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>1発のダメージ</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
+          <p className="ae-effect">{damage} ダメージ</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}</p>
-      </div></>
     );
   } else if (name.indexOf("マニューバー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -974,15 +1060,15 @@ const MainPowerUp = (props) => {
     }
     damageInPercent = Math.floor(damage / Dualies[0].DMG *100000) / 1000;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>1発のダメージ</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
+          <p className="ae-effect">{damage} ダメージ</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}</p>
-      </div></>
     );
   } else if (name.indexOf("ケルビン") > -1) {
     for (let i=0; i < 40; i++) {
@@ -994,18 +1080,26 @@ const MainPowerUp = (props) => {
     damageInPercent = Math.floor(damage / Glooga[0].DMG0 *100000) / 1000;
     damageFarInPercent = Math.floor(damageFar / Glooga[0].DMG1 *100000) / 1000;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>1発のダメージ（歩き撃ち）</p>
-        <p>1発のダメージ（スライド後）</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-5 px-0 m-auto">
+            <p className="ae-text">ダメージ（歩き撃ち）</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-5 px-0 m-auto">
+            <p className="ae-effect">{damage} ダメージ</p>
+          </div>
+        </div>
+        <div className="ae-part row">
+          <div className="col-5 px-0 m-auto">
+            <p className="ae-text">ダメージ（スライド後）</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-5 px-0 m-auto">
+            <p className="ae-effect">{damageFar} ダメージ</p>
+          </div>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}</p>
-        <p>{damageFar}</p>
-      </div></>
     );
   } else if (name.indexOf("デュアル") > -1) {
     for (let i=0; i < 40; i++) {
@@ -1015,15 +1109,15 @@ const MainPowerUp = (props) => {
     }
     damageInPercent = Math.floor(damage / DualieSquelchers[0].DMG *100000) / 1000;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>1発のダメージ</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
+          <p className="ae-effect">{damage} ダメージ</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}</p>
-      </div></>
     );
   } else if (name.indexOf("クアッドホッパー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -1033,17 +1127,17 @@ const MainPowerUp = (props) => {
     }
     damageInPercent = Math.floor(damage / Tetras[0].DMG *100000) / 1000;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>1発のダメージ</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">ダメージ</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
+          <p className="ae-effect">{damage} ダメージ</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{damage}</p>
-      </div></>
     );
-  } else if (name.indexOf("パラシェルター") > -1) {
+  } else if (name.indexOf("パラシェルター") > -1 || name.indexOf("ヒーローシェルター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Brella[i].AP === abilityPoint) {
         recorveryFrame = Brella[i].RT;
@@ -1051,15 +1145,15 @@ const MainPowerUp = (props) => {
     }
     recorverySecond = Math.floor(recorveryFrame / 60 * 1000) / 1000;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>傘が割れたときの復活時間</p>
+      <div className="ae-part row">
+        <div className="col-7 px-0 m-auto">  
+          <p className="ae-text">傘が割れたときの復活時間</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-3 px-0 m-auto">
+          <p className="ae-effect">{recorveryFrame} F</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{recorveryFrame}F</p>
-      </div></>
     );
   } else if (name.indexOf("キャンピングシェルター") > -1) {
     for (let i=0; i < 40; i++) {
@@ -1069,15 +1163,15 @@ const MainPowerUp = (props) => {
     }
     extraHP = Math.floor(hp - Tent[0].HP);
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>パージした傘の耐久値</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">パージした傘の耐久値</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
+          <p className="ae-effect">{hp} ダメージ分</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{hp}</p>
-      </div></>
     );
   } else if (name.indexOf("スパイガジェット") > -1) {
     for (let i=0; i < 40; i++) {
@@ -1087,21 +1181,21 @@ const MainPowerUp = (props) => {
     }
     recorverySecond = Math.floor(recorveryFrame / 60 * 1000) / 1000;
     element = (
-      <><div className="ae-text-xxl ability-effect">
-        <p>傘が割れたときの復活時間</p>
+      <div className="ae-part row">
+        <div className="col-7 px-0 m-auto">  
+          <p className="ae-text">傘が割れたときの復活時間</p>
+        </div>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-3 px-0 m-auto">
+          <p className="ae-effect">{recorveryFrame} F</p>
+        </div>
       </div>
-      <div className="ae-colon-lg ability-effect">
-        <p>:</p>
-      </div>
-      <div className="ae-effect ability-effect">
-        <p>{recorveryFrame}F</p>
-      </div></>
     );
   }
   
   return (
-    <div className="ae-card border row">
-      <div className="col-lg-2 px-0 my-auto">
+    <div className="ae-card border d-flex">
+      <div className="ap-icon-area">  
         <div className="ability-icon ap-ability-icon">
           <img className="ap-ability-img" src={mpuImg} alt=""/>
         </div>

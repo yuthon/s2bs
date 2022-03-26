@@ -63,8 +63,8 @@ const AbilityComponents = (props) => {
         setSubAbilityImagePath0={setSubAbilityImagePath0}
         setSubAbilityName1={setSubAbilityName1}
         setSubAbilityImagePath1={setSubAbilityImagePath1}
-        setSubAbilityName1={setSubAbilityName2}
-        setSubAbilityImagePath1={setSubAbilityImagePath2}
+        setSubAbilityName2={setSubAbilityName2}
+        setSubAbilityImagePath2={setSubAbilityImagePath2}
       />
       <Clothes
         clothesImagePath={props.clothesImagePath}

@@ -79,7 +79,7 @@ const Main = () => {
         <img className="header-image" src={HeaderImg} alt=""/>
       </div>
     </header>
-    <div className="container-xl px-0">
+    <div className="container-xl">
       <HeadGearModal
         chosenGear={headGear}
         setChosenGear={setHeadGear}

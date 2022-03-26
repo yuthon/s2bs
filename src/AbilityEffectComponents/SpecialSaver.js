@@ -92,17 +92,17 @@ const SpecialSaver = (props) => {
   lostPercent = (1000000 - remainingPercent * 10000) / 10000;
   
   return (
-    <div className="ae-card border row">
-      <div className="col-lg-2 px-0 my-auto">
+    <div className="ae-card border d-flex">
+      <div className="ap-icon-area">
         <div className="ability-icon ap-ability-icon">
           <img className="ap-ability-img" src={specialSaverImg} alt=""/>
         </div>
       </div>
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">スペシャル減少量</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">スペシャル減少量</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
+        <p className="col-2 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{lostPercent} ％</p>
         </div>

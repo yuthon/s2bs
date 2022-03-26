@@ -65,27 +65,39 @@ const BombDefenceUp = (props) => {
     }
   }
   return (
-    <div className="ae-card border row">
-      <div className="col-lg-2 px-0 my-auto">
+    <div className="ae-card border d-flex">
+      <div className="ap-icon-area">
         <div className="ability-icon ap-ability-icon">
           <img className="ap-ability-img" src={bombDefenceUpImg} alt=""/>
         </div>
       </div>
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">  
-          <p className="ae-text-single">敵センサーの持続時間</p>
-          <p className="ae-text-single">敵スペシャルの爆風ダメージ</p>
-          <p className="ae-text-single">敵のボムの爆風ダメージ</p>
+      <div className="d-flex flex-column">  
+        <div className="ae-part row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">敵センサーの持続時間</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-3 px-0 m-auto">
+            <p className="ae-effect">{markingDuration} ％</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
+        <div className="ae-part row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">敵スペシャルの爆風ダメージ</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-3 px-0 m-auto">
+            <p className="ae-effect">{specialDamage} ％</p>
+          </div>
         </div>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{markingDuration} ％</p>
-          <p className="ae-effect">{specialDamage} ％</p>
-          <p className="ae-effect">{farHitSubDamage} ％</p>
+        <div className="ae-part row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">敵のボムの爆風ダメージ</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-3 px-0 m-auto">
+            <p className="ae-effect">{farHitSubDamage} ％</p>
+          </div>
         </div>
       </div>
     </div>

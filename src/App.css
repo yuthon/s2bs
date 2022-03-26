@@ -964,7 +964,7 @@ Btmボタン
 .ae-card {
   border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 5px;
+  padding: 5px 0px;
   position: relative;
   width: 324px;
   margin-right: 0rem;
@@ -972,20 +972,21 @@ Btmボタン
 }
 
 .ae-part {
-  padding: 0rem;
+  width: 284px;
+  margin: auto 0px;
 }
 
-.ability-effect p {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: white;
-}
 /* ギアパワーのアイコン */
 .ap-ability-icon {
   width: 40px;
   height: 40px;
   position: relative;
 }
+.ap-icon-area {
+  width: 40px;
+  margin: auto 4px;
+}
+
 /* ギアパワーの画像 */
 .ap-ability-img {
   width: 34px;
@@ -996,157 +997,32 @@ Btmボタン
 }
 
 /* 1行のみの場合 */
-.ae-text-single {
+.ae-text {
   text-align: right;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 /* １つの効果を2行で書く場合の1行目 */
 .ae-text-first {
-  margin-top: 0.5rem;
+  margin-top: 6px;
   margin-bottom: 0rem;
   text-align: right;
 }
 /* １つの効果を2行で書く場合の2行目 */
 .ae-text-second {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  text-align: right;
+}
+
+.ae-colon {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.ae-effect {
   margin-top: 0rem;
-  margin-bottom: 0.5rem;
-  text-align: right;
-}
-
-.ae-colon-single {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.ae-colon-double {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.ae-effect {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.ae-effect-double {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  text-align: left;
-}
-
-.ae-colon-second {
-  position: absolute;
-  right: 14rem;
-  top: 20px;
-}
-
-.ae-effect-second {
-  position: absolute;
-  top: 24px;
-  left: 22rem;
-}
-
-.ae-text-sm {
-  width: 140px;
-  text-align: right;
-}
-
-.ae-text-md {
-  width: 180px;
-  text-align: right;
-}
-
-.ae-text-lg {
-  width: 200px;
-  text-align: right;
-}
-
-.ae-text-lg2 {
-  width: 205px;
-  text-align: right;
-}
-
-.ae-text-lg3 {
-  width: 230px;
-  text-align: right;
-}
-
-.ae-text-xl {
-  width: 290px;
-  text-align: right;
-}
-
-.ae-text-xxl {
-  width: 350px;
-  text-align: right;
-}
-
-.ae-text-qr {
-  width: 180px;
-  text-align: right;
-}
-
-.ae-text-armor {
-  width: 190px;
-  text-align: right;
-}
-
-.ae-colon-xsm {
-  width: 20px;
-}
-
-.ae-colon-sm {
-  width: 30px;
-}
-
-.ae-colon-md {
-  width: 50px;
-}
-
-.ae-colon-lg {
-  width: 70px;
-}
-
-.ae-colon-armor {
-  width: 30px;
-}
-
-.ae-effect {
-  text-align: left;
-}
-
-.ae-effect-xsm {
-  text-align: left;
-}
-
-.ae-effect-sm {
-  width: 100px;
-  text-align: left;
-}
-
-.ae-effect-md {
-  width: 110px;
-  text-align: left;
-}
-
-.ae-effect-lg {
-  width: 130px;
-  text-align: left;
-}
-
-.ae-effect-qr {
-  width: 120px;
-  text-align: left;
-}
-
-.ae-effect-armor {
-  width: 120px;
-  text-align: left;
-}
-
-.ae-effect-nozzle {
-  width: 110px;
+  margin-bottom: 0rem;
   text-align: left;
 }
 

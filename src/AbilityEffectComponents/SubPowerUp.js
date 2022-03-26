@@ -110,33 +110,40 @@ const SubPowerUp = (props) => {
     superJumpSecond = Math.floor(superJumpFrame / 60 * 100) / 100;
     onGroundSecond = Math.floor(onGroundFrame /60 * 100) / 100;
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-8 px-0 m-auto">  
-          <p className="ae-text-single">ビーコンへのスーパージャンプ時間</p>
-          <p className="ae-text-single">ボタン入力からビーコンへのジャンプ開始まで</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">ビーコンへのスーパージャンプ時間</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-3 px-0 m-auto">
+            <p className="ae-effect">{superJumpFrame} F</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-        </div>
-        <div className="col-2 px-0 m-auto">
-          <p className="ae-effect">{superJumpFrame} F</p>
-          <p className="ae-effect">{onGroundFrame} F</p>
+        <div className="ae-part row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text-first">ボタン入力からビーコンへの</p>
+            <p className="ae-text-second">ジャンプ開始まで</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-3 px-0 m-auto">
+            <p className="ae-effect">{onGroundFrame} F</p>
+          </div>
         </div>
       </div>
     );
-  } else if (name === "キューバンボム" || name === "ロボットボム" || name === "スプラッシュボム" || name === "クイックボム") {
+  } else if (name === "キューバンボム" || name === "ロボットボム" || name === "スプラッシュボム" || name === "クイックボム" || name === "ポイズンミスト") {
     for (let i=0; i<40; i++) {
       if (abilityPoint === BombsAndMist[i].AP) {
         bombRange = Math.floor(BombsAndMist[i].velocity / BombsAndMist[0].velocity * 10000) / 100;
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">投げられる距離</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">投げられる距離</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
+        <p className="col-2 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{bombRange} ％</p>
         </div>
@@ -150,18 +157,24 @@ const SubPowerUp = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">  
-          <p className="ae-text-single">カーリングボムの初速</p>
-          <p className="ae-text-single">カーリングボムの移動距離</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">カーリングボムの初速</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{velocity} DU/F</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-        </div>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{velocity} DU/F</p>
-          <p className="ae-effect">{bombRange} ％</p>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">カーリングボムの移動距離</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{bombRange} ％</p>
+          </div>
         </div>
       </div>
     );
@@ -175,18 +188,24 @@ const SubPowerUp = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">  
-          <p className="ae-text-single">最大出力の持続時間</p>
-          <p className="ae-text-single">中間出力の持続時間</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">最大出力の持続時間</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{firstPhaseFrame} F</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-        </div>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{firstPhaseFrame} F</p>
-          <p className="ae-effect">{secondPhaseFrame} F</p>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">中間出力の持続時間</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{secondPhaseFrame} F</p>
+          </div>
         </div>
       </div>
     );
@@ -199,18 +218,24 @@ const SubPowerUp = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">  
-          <p className="ae-text-single">投げられる距離</p>
-          <p className="ae-text-single">マーキング時間</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">投げられる距離</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{bombRange} ％</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-        </div>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{bombRange} ％</p>
-          <p className="ae-effect">{markingFrame} F</p>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">マーキング時間</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{markingFrame} F</p>
+          </div>
         </div>
       </div>
     );
@@ -223,18 +248,24 @@ const SubPowerUp = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">  
-          <p className="ae-text-single">爆風とマーキングの範囲</p>
-          <p className="ae-text-single">マーキング時間</p>
+      <div className="d-flex flex-column">
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">爆風とマーキングの範囲</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{explosionRadius} ％</p>
+          </div>
         </div>
-        <div className="col-2 m-auto">
-          <p className="ae-colon-single">:</p>
-          <p className="ae-colon-single">:</p>
-        </div>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{explosionRadius} ％</p>
-          <p className="ae-effect">{markingFrame} F</p>
+        <div className="ae-part row">
+          <div className="col-6 px-0 m-auto">
+            <p className="ae-text">マーキング時間</p>
+          </div>
+          <p className="col-2 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{markingFrame} F</p>
+          </div>
         </div>
       </div>
     );
@@ -245,11 +276,11 @@ const SubPowerUp = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">投げられる距離</p>
+      <div className="ae-part row">
+        <div className="col-6 px-0 m-auto">  
+          <p className="ae-text">投げられる距離</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
+        <p className="col-2 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{bombRange} ％</p>
         </div>
@@ -262,20 +293,20 @@ const SubPowerUp = (props) => {
       }
     }
     element = (
-      <div className="ae-part col-lg-10 row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text-single">シールドの耐久値</p>
+      <div className="ae-part row">
+        <div className="col-5 px-0 m-auto">  
+          <p className="ae-text">シールドの耐久値</p>
         </div>
-        <p className="col-2 ae-colon-single">:</p>
-        <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{wallHP}</p>
+        <p className="col-2 ae-colon px-0">:</p>
+        <div className="col-5 px-0 m-auto">
+          <p className="ae-effect">{wallHP} ダメージ分</p>
         </div>
       </div>
     );
   }
   return (
-    <div className="ae-card border row">
-      <div className="col-lg-2 px-0 my-auto">
+    <div className="ae-card border d-flex">
+      <div className="ap-icon-area">
         <div className="ability-icon ap-ability-icon">
           <img className="ap-ability-img" src={subPowerImg} alt=""/>
         </div>
