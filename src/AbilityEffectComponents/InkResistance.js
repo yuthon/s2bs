@@ -51,7 +51,75 @@ const InkResistance = (props) => {
   let damagePerSecond;
   let damageLimit;
   let runSpeed;
-  
+
+  // 一部のギアパワー効果によって発生する特殊なAPに対する処理
+  const irregularValues = function(array) {
+    if (abilityPoint === 40) {
+      return {
+        FBTD : Math.floor((array[30].FBTD + array[31].FBTD) / 2 * 100) /100,
+        DPF : Math.floor((array[30].DPF + array[31].DPF) / 2 * 100) /100,
+        DL : Math.floor((array[30].DL + array[31].DL) / 2 * 100) /100,
+        RS : Math.floor((array[30].RS + array[31].RS) / 2 * 100) /100
+      }
+    } else if (abilityPoint === 43) {
+      return {
+        FBTD : Math.floor((array[32].FBTD + array[33].FBTD) / 2 * 100) /100,
+        DPF : Math.floor((array[32].DPF + array[33].DPF) / 2 * 100) /100,
+        DL : Math.floor((array[32].DL + array[33].DL) / 2 * 100) /100,
+        RS : Math.floor((array[32].RS + array[33].RS) / 2 * 100) /100
+      }
+    } else if (abilityPoint === 46) {
+      return {
+        FBTD : Math.floor((array[34].FBTD + array[35].FBTD) / 2 * 100) /100,
+        DPF : Math.floor((array[34].DPF + array[35].DPF) / 2 * 100) /100,
+        DL : Math.floor((array[34].DL + array[35].DL) / 2 * 100) /100,
+        RS : Math.floor((array[34].RS + array[35].RS) / 2 * 100) /100
+      }
+    } else if (abilityPoint === 49) {
+      return {
+        FBTD : Math.floor(((array[37].FBTD - array[36].FBTD) / 3 + array[36].FBTD) * 100) /100,
+        DPF : Math.floor(((array[37].DPF - array[36].DPF) / 3 + array[36].DPF) * 100) /100,
+        DL : Math.floor(((array[37].DL - array[36].DL) / 3 + array[36].DL) * 100) /100,
+        RS : Math.floor(((array[37].RS - array[36].RS) / 3 + array[36].RS) * 100) /100
+      }
+    } else if (abilityPoint === 50) {
+      return {
+        FBTD : Math.floor(((array[37].FBTD - array[36].FBTD) / 3 * 2 + array[36].FBTD) * 100) /100,
+        DPF : Math.floor(((array[37].DPF - array[36].DPF) / 3 * 2 + array[36].DPF) * 100) /100,
+        DL : Math.floor(((array[37].DL - array[36].DL) / 3 * 2 + array[36].DL) * 100) /100,
+        RS : Math.floor(((array[37].RS - array[36].RS) / 3 * 2 + array[36].RS) * 100) /100
+      }
+    } else if (abilityPoint === 52) {
+      return {
+        FBTD : Math.floor(((array[38].FBTD - array[37].FBTD) / 3 + array[37].FBTD) * 100) /100,
+        DPF : Math.floor(((array[38].DPF - array[37].DPF) / 3 + array[37].DPF) * 100) /100,
+        DL : Math.floor(((array[38].DL - array[37].DL) / 3 + array[37].DL) * 100) /100,
+        RS : Math.floor(((array[38].RS - array[37].RS) / 3 + array[37].RS) * 100) /100
+      }
+    } else if (abilityPoint === 53) {
+      return {
+        FBTD : Math.floor(((array[38].FBTD - array[37].FBTD) / 3 * 2 + array[37].FBTD) * 100) /100,
+        DPF : Math.floor(((array[38].DPF - array[37].DPF) / 3 * 2 + array[37].DPF) * 100) /100,
+        DL : Math.floor(((array[38].DL - array[37].DL) / 3 * 2 + array[37].DL) * 100) /100,
+        RS : Math.floor(((array[38].RS - array[37].RS) / 3 * 2 + array[37].RS) * 100) /100
+      }
+    } else if (abilityPoint === 55) {
+      return {
+        FBTD : Math.floor(((array[39].FBTD - array[38].FBTD) / 3 + array[38].FBTD) * 100) /100,
+        DPF : Math.floor(((array[39].DPF - array[38].DPF) / 3 + array[38].DPF) * 100) /100,
+        DL : Math.floor(((array[39].DL - array[38].DL) / 3 + array[38].DL) * 100) /100,
+        RS : Math.floor(((array[39].RS - array[38].RS) / 3 + array[38].RS) * 100) /100
+      }
+    } else if (abilityPoint === 56) {
+      return {
+        FBTD : Math.floor(((array[39].FBTD - array[38].FBTD) / 3 * 2 + array[38].FBTD) * 100) /100,
+        DPF : Math.floor(((array[39].DPF - array[38].DPF) / 3 * 2 + array[38].DPF) * 100) /100,
+        DL : Math.floor(((array[39].DL - array[38].DL) / 3 * 2 + array[38].DL) * 100) /100,
+        RS : Math.floor(((array[39].RS - array[38].RS) / 3 * 2 + array[38].RS) * 100) /100
+      }
+    } 
+  }
+
   for (let i=0; i<40; i++) {
     if (abilityPoint === InkRes[i].AP) {
       framesBeforeTakingDamage = InkRes[i].FBTD;
@@ -62,7 +130,17 @@ const InkResistance = (props) => {
       runSpeed = Math.floor((0.96 - InkRes[i].RS) / 0.96 * 100);
     }
   }
+  // APが特殊な値をとる時
+  if (!damagePerFrame) {
+    framesBeforeTakingDamage = irregularValues(InkRes).FBTD;
+    secondsBeforeTakingDamage = Math.floor(framesBeforeTakingDamage / 60 * 1000) / 1000;
+    damagePerFrame = irregularValues(InkRes).DPF;
+    damagePerSecond = damagePerFrame * 60;
+    damageLimit = Math.floor(irregularValues(InkRes).DL * 10000) / 100;
+    runSpeed = Math.floor((0.96 - irregularValues(InkRes).RS) / 0.96 * 100);
+  }
   
+
   return (
     <div className="ae-card row">
       <div className="ap-icon-area col-1">  

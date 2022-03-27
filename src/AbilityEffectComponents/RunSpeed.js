@@ -122,48 +122,101 @@ const RunSpeed = (props) => {
     {AP:0,RS:0.84},{AP:3,RS:0.86028},{AP:6,RS:0.87954},{AP:9,RS:0.89778},{AP:10,RS:0.90363},{AP:12,RS:0.915},{AP:13,RS:0.92051},{AP:15,RS:0.93119},{AP:16,RS:0.93636},{AP:18,RS:0.94637},{AP:19,RS:0.9512},{AP:20,RS:0.95592},{AP:21,RS:0.96053},{AP:22,RS:0.96502},{AP:23,RS:0.9694},{AP:24,RS:0.97366},{AP:25,RS:0.97781},{AP:26,RS:0.98185},{AP:27,RS:0.98578},{AP:28,RS:0.98959},{AP:29,RS:0.99329},{AP:30,RS:0.99687},{AP:31,RS:1.00034},{AP:32,RS:1.0037},{AP:33,RS:1.00694},{AP:34,RS:1.01007},{AP:35,RS:1.01309},{AP:36,RS:1.016},{AP:37,RS:1.01879},{AP:38,RS:1.02147},{AP:39,RS:1.02403},{AP:41,RS:1.02882},{AP:42,RS:1.03104},{AP:44,RS:1.03515},{AP:45,RS:1.03703},{AP:47,RS:1.04046},{AP:48,RS:1.042},{AP:51,RS:1.04595},{AP:54,RS:1.04888},{AP:57,RS:1.05}
   ];
   let H3 = Gal52;
-  
+
+  // 一部のギアパワー効果によって発生する特殊なAPに対する処理
+  const irregularValues = function(array) {
+   if (abilityPoint === 40) {
+    return Math.floor((array[30].RS + array[31].RS) / 2 * 100) /100
+  } else if (abilityPoint === 43) {
+    return Math.floor((array[32].RS + array[33].RS) / 2 * 100) /100
+  } else if (abilityPoint === 46) {
+    return Math.floor((array[34].RS + array[35].RS) / 2 * 100) /100
+  } else if (abilityPoint === 49) {
+    return Math.floor(((array[37].RS - array[36].RS) / 3 + array[36].RS) * 100) /100
+  } else if (abilityPoint === 50) {
+    return Math.floor(((array[37].RS - array[36].RS) / 3 * 2 + array[36].RS) * 100) /100
+  } else if (abilityPoint === 52) {
+    return Math.floor(((array[38].RS - array[37].RS) / 3 + array[37].RS) * 100) /100
+  } else if (abilityPoint === 53) {
+    return Math.floor(((array[38].RS - array[37].RS) / 3 * 2 + array[37].RS) * 100) /100
+  } else if (abilityPoint === 55) {
+    return Math.floor(((array[39].RS - array[38].RS) / 3 + array[38].RS) * 100) /100
+  } else if (abilityPoint === 56) {
+    return Math.floor(((array[39].RS - array[38].RS) / 3 * 2 + array[38].RS) * 100) /100
+  } 
+  }
+
+  console.log(abilityPoint)
+
   if (weaponStatus.name.indexOf("ボールドマーカー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Sploosh[i].AP === abilityPoint) {
         runSpeedShooting = Math.floor(Sploosh[i].RS * 100) / 100;
       }
     }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Sploosh);
+    }
   } else if (weaponStatus.name.indexOf("シャープマーカー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Splash[i].AP === abilityPoint) {
-         runSpeedShooting = Math.floor(Splash[i].RS * 100) / 100;
+        runSpeedShooting = Math.floor(Splash[i].RS * 100) / 100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Splash);
     }
   } else if (weaponStatus.name.indexOf("わかば") > -1 || weaponStatus.name.indexOf("もみじ") > -1 || weaponStatus.name.indexOf("おちば") > -1) {
     for (let i=0; i < 40; i++) {
       if (Jr[i].AP === abilityPoint) {
-         runSpeedShooting = Math.floor(Jr[i].RS * 100) / 100;
+        runSpeedShooting = Math.floor(Jr[i].RS * 100) / 100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Jr);
     }
   } else if (weaponStatus.name.indexOf("プロモデラー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Aerospray[i].AP === abilityPoint) {
-         runSpeedShooting = Math.floor(Aerospray[i].RS * 100) / 100;
+        runSpeedShooting = Math.floor(Aerospray[i].RS * 100) / 100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Aerospray);
     }
   } else if (weaponStatus.name.indexOf("52ガロン") > -1) {
     for (let i=0; i < 40; i++) {
       if (Gal52[i].AP === abilityPoint) {
-         runSpeedShooting = Math.floor(Gal52[i].RS * 100) / 100;
+        runSpeedShooting = Math.floor(Gal52[i].RS * 100) / 100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Gal52);
     }
   } else if (weaponStatus.name.indexOf("N-ZAP") > -1) {
     for (let i=0; i < 40; i++) {
       if (Nzap[i].AP === abilityPoint) {
-         runSpeedShooting = Math.floor(Nzap[i].RS * 100) / 100;
+        runSpeedShooting = Math.floor(Nzap[i].RS * 100) / 100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Nzap);
     }
   } else if (weaponStatus.name.indexOf("プライムシューター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Pro[i].AP === abilityPoint) {
-         runSpeedShooting = Math.floor(Pro[i].RS * 100) / 100;
+        runSpeedShooting = Math.floor(Pro[i].RS * 100) / 100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Pro);
     }
   } else if (weaponStatus.name.indexOf("ジェットスイーパー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -171,17 +224,29 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(JetSquelcher[i].RS * 100) / 100;
       }
     }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(JetSquelcher);
+    }
   } else if (weaponStatus.name.indexOf("96ガロン") > -1) {
     for (let i=0; i < 40; i++) {
       if (Gal96[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Gal96[i].RS * 100) / 100;
       }
     }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Gal96);
+    }
+    // APが特殊な値をとる時
   } else if (weaponStatus.name.indexOf("ノヴァブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Luna[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Luna[i].RS * 100) / 100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Luna);
     }
   } else if (weaponStatus.name.indexOf("ホットブラスター") > -1 || weaponStatus.name.indexOf("ヒーローブラスター") > -1) {
     for (let i=0; i < 40; i++) {
@@ -189,11 +254,19 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Blaster[i].RS * 100) / 100;
       }
     }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Blaster);
+    }
   } else if (weaponStatus.name.indexOf("クラッシュブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Clash[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Clash[i].RS * 100) / 100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Clash);
     }
   } else if (weaponStatus.name.indexOf("スプラシューター") > -1 || weaponStatus.name.indexOf("ヒーローシューター") > -1 || weaponStatus.name.indexOf("オクタシューター") > -1) {
     for (let i=0; i < 40; i++) {
@@ -201,11 +274,19 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(SplatterShot[i].RS * 100) / 100;
       }
     }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(SplatterShot);
+    }
   } else if (weaponStatus.name.indexOf("ラピッドブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Rapid[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Rapid[i].RS * 100) / 100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Rapid);
     }
   } else if (weaponStatus.name.indexOf("ダイナモローラー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -213,11 +294,19 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Dynamo[i].RS * 100) / 100;
       }
     }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Dynamo);
+    }
   } else if (weaponStatus.name.indexOf("L-3") > -1) {
     for (let i=0; i < 40; i++) {
       if (L3[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(L3[i].RS * 100) / 100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(L3);
     }
   } else if (weaponStatus.name.indexOf("H-3") > -1) {
     for (let i=0; i < 40; i++) {
@@ -225,11 +314,19 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(H3[i].RS * 100) / 100;
       }
     }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(H3);
+    }
   } else if (weaponStatus.name.indexOf("Rブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (RapidPro[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(RapidPro[i].RS * 100) /100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(RapidPro);
     }
   } else if (weaponStatus.name.indexOf("ボトルカイザー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -237,11 +334,19 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Squeezer[i].RS * 100) /100;
       }
     }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Squeezer);
+    }
   } else if (weaponStatus.name.indexOf("スプラローラー") > -1) {
     for (let i=0; i < 40; i++) {
       if (SplatRoller[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(SplatRoller[i].RS * 100) /100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(SplatRoller);
     }
   } else if (weaponStatus.name.indexOf("カーボン") > -1) {
     for (let i=0; i < 40; i++) {
@@ -249,11 +354,19 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Carbon[i].RS * 100) /100;
       }
     }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Carbon);
+    }
   } else if (weaponStatus.name.indexOf("ロングブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Range[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Range[i].RS * 100) /100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Range);
     }
   } else if (weaponStatus.name.indexOf("ヴァリアブルローラー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -261,11 +374,19 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Flingza[i].RS * 100) /100;
       }
     }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Flingza);
+    }
   } else if (weaponStatus.name.indexOf("ホクサイ") > -1) {
     for (let i=0; i < 40; i++) {
       if (Octobrush[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Octobrush[i].RS * 100) / 100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Octobrush);
     }
   } else if (weaponStatus.name.indexOf("パブロ") > -1) {
     for (let i=0; i < 40; i++) {
@@ -273,11 +394,19 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Inkbrush[i].RS * 100) / 100;
       }
     }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Inkbrush);
+    }
   } else if (weaponStatus.name.indexOf("スプラチャージャー") > -1 || weaponStatus.name.indexOf("スプラスコープ") > -1) {
     for (let i=0; i < 40; i++) {
       if (Charger[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Charger[i].RS * 100) / 100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Charger);
     }
   } else if (weaponStatus.name.indexOf("スクイックリン") > -1) {
     for (let i=0; i < 40; i++) {
@@ -285,11 +414,19 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Squiffer[i].RS * 100) / 100;
       }
     }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Squiffer);
+    }
   } else if (weaponStatus.name.indexOf("リッター") > -1 || weaponStatus.name.indexOf("4Kスコープ") > -1) {
     for (let i=0; i < 40; i++) {
       if (Eliter[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Eliter[i].RS * 100) / 100;
       }
+    }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Eliter);
     }
   } else if (weaponStatus.name.indexOf("竹") > -1) {
     for (let i=0; i < 40; i++) {
@@ -297,11 +434,18 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Bamboo[i].RS * 100) / 100;
       }
     }
+    // APが特殊な値をとる時
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Bamboo);
+    }
   } else if (weaponStatus.name.indexOf("ソイチューバー") > -1) {
     for (let i=0; i < 40; i++) {
       if (GooTuber[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(GooTuber[i].RS * 100) / 100;
       }
+    }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(GooTuber);
     }
   } else if (weaponStatus.name.indexOf("バケットスロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -309,11 +453,17 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Slosher[i].RS * 100) / 100;
       }
     }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Slosher);
+    }
   } else if (weaponStatus.name.indexOf("ヒッセン") > -1) {
     for (let i=0; i < 40; i++) {
       if (Tri[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Tri[i].RS * 100) / 100;
       }
+    }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Tri);
     }
   } else if (weaponStatus.name.indexOf("スクリュー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -321,11 +471,17 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Machine[i].RS * 100) / 100;
       }
     }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Machine);
+    }
   } else if (weaponStatus.name.indexOf("オーバーフロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Blob[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Blob[i].RS * 100) / 100;
       }
+    }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Blob);
     }
   } else if (weaponStatus.name.indexOf("エクスプロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -333,11 +489,17 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Explo[i].RS * 100) / 100;
       }
     }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Explo);
+    }
   } else if (weaponStatus.name.indexOf("スプラスピナー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Mini[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Mini[i].RS * 100) / 100;
       }
+    }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Mini);
     }
   } else if (weaponStatus.name.indexOf("バレルスピナー") > -1 || weaponStatus.name.indexOf("ヒーロースピナー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -345,11 +507,17 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Heavy[i].RS * 100) / 100;
       }
     }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Heavy);
+    }
   } else if (weaponStatus.name.indexOf("ハイドラント") > -1) {
     for (let i=0; i < 40; i++) {
       if (Hydra[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Hydra[i].RS * 100) / 100;
       }
+    }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Hydra);
     }
   } else if (weaponStatus.name.indexOf("クーゲルシュライバー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -357,11 +525,17 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(BallPoint[i].RS * 100) / 100;
       }
     }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(BallPoint);
+    }
   } else if (weaponStatus.name.indexOf("ノーチラス") > -1) {
     for (let i=0; i < 40; i++) {
       if (Nautilus[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Nautilus[i].RS * 100) / 100;
       }
+    }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Nautilus);
     }
   } else if (weaponStatus.name.indexOf("スパッタリー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -369,11 +543,17 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Dapples[i].RS * 100) / 100;
       }
     }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Dapples);
+    }
   } else if (weaponStatus.name.indexOf("マニューバー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Dualies[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Dualies[i].RS * 100) / 100;
       }
+    }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Dualies);
     }
   } else if (weaponStatus.name.indexOf("ケルビン") > -1) {
     for (let i=0; i < 40; i++) {
@@ -381,11 +561,17 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Glooga[i].RS * 100) / 100;
       }
     }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Glooga);
+    }
   } else if (weaponStatus.name.indexOf("デュアル") > -1) {
     for (let i=0; i < 40; i++) {
       if (DualieSquelcher[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(DualieSquelcher[i].RS * 100) / 100;
       }
+    }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(DualieSquelcher);
     }
   } else if (weaponStatus.name.indexOf("クアッドホッパー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -393,11 +579,17 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Tetras[i].RS * 100) / 100;
       }
     }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Tetras);
+    }
   } else if (weaponStatus.name.indexOf("パラシェルター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Brella[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Brella[i].RS * 100) / 100;
       }
+    }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Brella);
     }
   } else if (weaponStatus.name.indexOf("キャンピングシェルター") > -1) {
     for (let i=0; i < 40; i++) {
@@ -405,11 +597,17 @@ const RunSpeed = (props) => {
          runSpeedShooting = Math.floor(Tenta[i].RS * 100) / 100;
       }
     }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Tenta);
+    }
   } else if (weaponStatus.name.indexOf("スパイガジェット") > -1) {
     for (let i=0; i < 40; i++) {
       if (Undercover[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Undercover[i].RS * 100) / 100;
       }
+    }
+    if (!runSpeedShooting) {
+      runSpeedShooting = irregularValues(Undercover);
     }
   }
   
@@ -418,7 +616,10 @@ const RunSpeed = (props) => {
     for (let i=0; i < 40; i++) {
       if (lightClass[i].AP === abilityPoint) {
         runSpeed = Math.floor(lightClass[i].RS * 100) / 100;
-      }
+      } 
+    }
+    if (!runSpeed) {
+      runSpeed = irregularValues(lightClass);
     }
   } else if (weaponStatus.weight === "middle") {
     for (let i=0; i < 40; i++) {
@@ -426,14 +627,19 @@ const RunSpeed = (props) => {
         runSpeed = Math.floor(middleClass[i].RS * 100) / 100;
       }
     }
+    if (!runSpeed) {
+      runSpeed = irregularValues(middleClass);
+    }
   } else if (weaponStatus.weight === "heavy") {
     for (let i=0; i < 40; i++) {
       if (heavyClass[i].AP === abilityPoint) {
         runSpeed = Math.floor(heavyClass[i].RS * 100) / 100;
       }
     }
+    if (!runSpeed) {
+      runSpeed = irregularValues(heavyClass);
+    }
   }
-  console.log(abilityPoint)
   return (
     <div className="ae-card row">
       <div className="ap-icon-area col-1">

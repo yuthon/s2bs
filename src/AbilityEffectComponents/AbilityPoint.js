@@ -314,11 +314,20 @@ const AbilityPoint = (props) => {
     }
     // 最終的に表示するJSX
     btnComeback = (
-      <div className="ae-card border d-flex align-items-center">
-        <div className="ability-icon ap-ability-icon">
-          <img className="ap-ability-img" src={ComebackImg} alt=""/>
+      <div className="ae-card row">
+        <div className="ap-icon-area col-2">
+          <div className="ability-icon ap-ability-icon">
+            <img className="ap-ability-img" src={ComebackImg} alt=""/>
+          </div>
         </div>
-        {toggleComeback}
+        <div className="ae-part col-10 row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">復活から20秒間、一部のギアパワーが上昇（メインインク効率・サブインク効率・インク回復力アップ・イカ移動速度・ヒト移動速度）</p>
+          </div>
+          <div className="col-5 m-auto">  
+            {toggleComeback}
+          </div>
+        </div>
       </div>
     );
   }
@@ -373,11 +382,20 @@ const AbilityPoint = (props) => {
     }
     // 最終的に表示するJSX
     btnOpeningGanbit = (
-      <div className="ae-card border d-flex align-items-center">
-        <div className="ability-icon ap-ability-icon">
-          <img className="ap-ability-img" src={OpeningGanbitImg} alt=""/>
+      <div className="ae-card row">
+        <div className="ap-icon-area col-2">
+          <div className="ability-icon ap-ability-icon">
+            <img className="ap-ability-img" src={OpeningGanbitImg} alt=""/>
+          </div>
         </div>
-        {toggleOpeningGanbit}
+        <div className="ae-part col-10 row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">バトル開始から30秒間、一部のギアパワーが上昇（イカ移動速度・ヒト移動速度・相手インク影響軽減）</p>
+          </div>
+          <div className="col-5 m-auto">  
+            {toggleOpeningGanbit}
+          </div>
+        </div>
       </div>
     );
   }
@@ -431,11 +449,20 @@ const AbilityPoint = (props) => {
     }
     // 最終的に表示するJSX
     btnLastDitchEffort = (
-      <div className="ae-card border d-flex align-items-center">
-        <div className="ability-icon ap-ability-icon">
-          <img className="ap-ability-img" src={LastDitchEffortImg} alt=""/>
+      <div className="ae-card row">
+        <div className="ap-icon-area col-2">
+          <div className="ability-icon ap-ability-icon">
+            <img className="ap-ability-img" src={LastDitchEffortImg} alt=""/>
+          </div>
         </div>
-        {toggleLastDitchEffort}
+        <div className="ae-part col-10 row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">試合時間が残り30秒、あるいは相手のオブジェクトのカウントが30になると一部のギアパワーが上昇（メインインク効率・サブインク効率・インク回復力アップ）</p>
+          </div>
+          <div className="col-5 m-auto">  
+            {toggleLastDitchEffort}
+          </div>
+        </div>
       </div>
     );
   }
@@ -489,11 +516,20 @@ const AbilityPoint = (props) => {
     }
     // 最終的に表示するJSX
     btnDropRoller = (
-      <div className="ae-card border d-flex align-items-center">
-        <div className="ability-icon ap-ability-icon">
-          <img className="ap-ability-img" src={DropRollerImg} alt=""/>
+      <div className="ae-card row">
+        <div className="ap-icon-area col-2">
+          <div className="ability-icon ap-ability-icon">
+            <img className="ap-ability-img" src={DropRollerImg} alt=""/>
+          </div>
         </div>
-        {toggleDropRoller}
+        <div className="ae-part col-10 row">
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">受け身術を発動してから3秒間、一部のギアパワーが上昇する（イカ移動速度・ヒト移動速度・インク影響軽減）</p>
+          </div>
+          <div className="col-5 m-auto">  
+            {toggleDropRoller}
+          </div>
+        </div>
       </div>
     );
   }
