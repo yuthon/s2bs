@@ -36,7 +36,7 @@ const SubSlot5 = (props) => {
       }}
     >
       <div className="tooltip-top-arrow">
-        <p className="slot-tooltip font-type2">クリックでギアパワーを変更</p>
+        <p className="slot-tooltip-right font-type2">クリックでギアパワーを変更</p>
       </div>
       <img className="subslot-img" src={props.imagePath} alt=""/>
     </div>

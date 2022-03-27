@@ -31,7 +31,7 @@ const MainSlot0 = (props) => {
   return(
     <div className="ability-icon main-slot" onClick={()=>{openGearModal()}}>
       <div className="tooltip-top-arrow">
-        <p className="slot-tooltip font-type2">クリックでギアパワーを変更</p>
+        <p className="slot-tooltip-left font-type2">クリックでギアパワーを変更</p>
       </div>
       <img className="mainslot-img" src={props.imagePath} alt=""/>
     </div>

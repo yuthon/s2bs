@@ -1,5 +1,6 @@
 const Footer = () => {
   return (
+    <div id="footer-height">
     <footer className="font-type2 fixed-bottom">
       <span className="about footer-content" data-bs-toggle="modal" data-bs-target="#aboutModal">
         <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 512 512">
@@ -49,6 +50,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </div>
   ) 
 }
 
