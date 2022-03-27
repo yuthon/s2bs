@@ -122,8 +122,7 @@ const Main = () => {
         characterType={characterType}
       />
       <div className="row m-0 p-0" id="main">  
-        <div className="col-sm-6 col-md-4 col-lg-5 col-xl-5 col-xxl-6" id="three-section">
-          <div id="canvas-container">
+        <div className="col-sm-7 col-md-8 col-lg-5 col-xl-5 col-xxl-6" id="three-section">
             <div id="character-btn">
               <button type="button" className="btn btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
                 キャラクターの設定
@@ -161,7 +160,6 @@ const Main = () => {
                 />
               </Suspense>
             </Canvas>
-          </div>
         </div>
         <AbilityComponents 
           headImagePath={headGear.path}

@@ -28,6 +28,11 @@
     overflow-y: auto;
     overflow-x: hidden;
   }
+  #three-section {
+    padding: 0rem;
+    position: relative;
+    height: calc(100vh - 6.25rem);
+  }
 }
 
 @media (min-width: 1080px) {
@@ -101,17 +106,78 @@
     bottom: 4px;
     left: 53px;
   }
-  /* 真ん中のサブスロット */
   .subslot-mid {
     position: absolute;
     bottom: 4px;
     left: 97px;
   }
-  /* 一番右のサブスロット */
   .subslot-right {
     position: absolute;
     bottom: 4px;
     left: 141px;
+  }
+}
+@media (max-width: 991.8px) {
+  .gear-card {
+    height: 205px;
+    width: 200px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .gear-header {
+    width: 200px;
+    height: 2.55rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    color: white;
+    font-size: 1.75rem;
+    margin: 0px;
+  }
+  .main-slot {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+  }
+  .subslot-left {
+    position: absolute;
+    bottom: 4px;
+    left: 59px;
+  }
+  /* 真ん中のサブスロット */
+  .subslot-mid {
+    position: absolute;
+    bottom: 4px;
+    left: 107px;
+  }
+  /* 一番右のサブスロット */
+  .subslot-right {
+    position: absolute;
+    bottom: 4px;
+    left: 154px;
+  }
+  /* アビリティ効果部分 */
+  #ae-section {
+    width: 95vw;
+    margin-left: calc(-95vw + 100%);
+  }
+  /* ギア部分 */
+  /* #gear-components {
+    height: 100vh;
+  } */
+  #three-section {
+    padding: 0rem;
+    position: relative;
+    height: calc(615px + 4rem);
+  }
+}
+@media (max-width: 575.8px) {
+  /* アビリティ効果部分 */
+  #ae-section {
+    width: 100%;
+    margin: auto;
   }
 }
 
@@ -272,16 +338,11 @@ footer {
   /* height: calc(100vh - 6.25rem); */
 }
 
-#three-section {
+/* #three-section {
   padding: 0rem;
-  /* width: 38%; */
   position: relative;
-}
-
-#canvas-container {
-  width: 100%;
   height: calc(100vh - 6.25rem);
-}
+} */
 
 #gear-and-ability {
   height: 100vh;
@@ -296,9 +357,7 @@ footer {
 }
 
 /* #ae-section {
-  height: calc(100vh - 1rem - 6.25rem - 205px);
-  overflow-y: auto;
-  overflow-x: hidden;
+  z-index: 11;
 } */
 
 .font-type1 {

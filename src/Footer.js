@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="font-type2">
+    <footer className="font-type2 fixed-bottom">
       <span className="about footer-content" data-bs-toggle="modal" data-bs-target="#aboutModal">
         <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 512 512">
           {/* <!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
