@@ -171,11 +171,12 @@
 }
 /* サイト名 */
 .header-name {
+  width: 17rem;
   font-size: 2rem;
   color: white;
 }
 .header-title {
-  width: 27rem;
+  width: 22rem;
   margin-left: auto;
   margin-right: auto;
   padding-top: 0.5rem;
@@ -1058,6 +1059,10 @@ Btmボタン
 /*AEのスタイル*/
 /*  */
 
+#ae-display-area {
+  border-radius: 30px;
+}
+
 .ae-card {
   border-bottom: dotted 3px #dee2e6;
 
@@ -1163,10 +1168,6 @@ Btmボタン
   box-shadow: none;
 }
 
-/* .ae-container {
-  height: 100%;
-} */
-
 #character-btn {
   position: absolute;
   top: 20px;
@@ -1207,14 +1208,6 @@ Btmボタン
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
-/* .img-sub-sp {
-  position: absolute;
-  top: 4px;
-  left: 8px;
-  width: 40px;
-  height: 40px;
-} */
 
 /*  */
 /* ツールチップ */

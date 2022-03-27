@@ -556,7 +556,7 @@ const AbilityPoint = (props) => {
   
   
   return(
-      <div className="d-flex flex-column gray-stripe">
+      <div className="d-flex flex-column gray-stripe" id="ae-display-area">
         <p id="ae-header">ギアパワー効果</p>
         <div className="special-ability">
           {btnComeback}

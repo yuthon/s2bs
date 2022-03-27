@@ -1209,7 +1209,7 @@ const MainPowerUp = (props) => {
   }
   
   return (
-    <div className="ae-card row">
+    <div className="ae-card row border-0">
       <div className="ap-icon-area col-1">  
         <div className="ability-icon ap-ability-icon">
           <img className="ap-ability-img" src={mpuImg} alt=""/>
