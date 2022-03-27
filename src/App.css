@@ -30,6 +30,94 @@
   }
 }
 
+@media (min-width: 1080px) {
+  .gear-card {
+    height: 205px;
+    width: 200px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .gear-header {
+    width: 200px;
+    height: 2.55rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    color: white;
+    font-size: 1.75rem;
+    margin: 0px;
+  }
+  .main-slot {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+  }
+  .subslot-left {
+    position: absolute;
+    bottom: 4px;
+    left: 59px;
+  }
+  /* 真ん中のサブスロット */
+  .subslot-mid {
+    position: absolute;
+    bottom: 4px;
+    left: 107px;
+  }
+  /* 一番右のサブスロット */
+  .subslot-right {
+    position: absolute;
+    bottom: 4px;
+    left: 154px;
+  }
+}
+@media (max-width: 1079.8px) {
+  .gear-card {
+    height: 205px;
+    width: 184px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .gear-header {
+    width: 184px;
+    height: 2.55rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    color: white;
+    font-size: 1.75rem;
+    margin: 0px;
+  }
+  .main-slot {
+    position: absolute;
+    bottom: 4px;
+    left: 2px;
+  }
+  .subslot-left {
+    position: absolute;
+    bottom: 4px;
+    left: 53px;
+  }
+  /* 真ん中のサブスロット */
+  .subslot-mid {
+    position: absolute;
+    bottom: 4px;
+    left: 97px;
+  }
+  /* 一番右のサブスロット */
+  .subslot-right {
+    position: absolute;
+    bottom: 4px;
+    left: 141px;
+  }
+}
+
+/* #main {
+  width: 100%;
+} */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -162,6 +250,18 @@ footer {
   );
 }
 
+/* アビリティ関連に使うストライプ模様 */
+
+.gray-stripe {
+  background: repeating-linear-gradient(
+    45deg,
+    #808080,
+    #808080 20px,
+    #6b6b6b 20px,
+    #6b6b6b 40px
+  );
+}
+
 /* 3dモデルの表示領域 */
 
 #main {
@@ -213,18 +313,18 @@ footer {
 /*  */
 
 /* アタマ　フク　クツで共通の大きさ */
-.gear-card {
+/* .gear-card {
   height: 205px;
   width: 200px;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-}
+} */
 
 /* ギア表示のヘッダー部分 */
 
-.gear-header {
+/* .gear-header {
   width: 200px;
   height: 2.55rem;
   background-color: rgba(0, 0, 0, 0.7);
@@ -233,7 +333,7 @@ footer {
   color: white;
   font-size: 1.75rem;
   margin: 0px;
-}
+} */
 /* ギア画像の大きさ */
 .gear-img {
   width: 110px;
@@ -258,31 +358,28 @@ footer {
 
 /* スロットの位置と大きさ調整 */
 .main-slot {
-  position: absolute;
-  bottom: 4px;
-  left: 4px;
   height: 48px;
   width: 48px;
   cursor: pointer;
 }
 /* 一番左のサブスロット */
-.subslot-left {
+/* .subslot-left {
   position: absolute;
   bottom: 4px;
   left: 59px;
-}
+} */
 /* 真ん中のサブスロット */
-.subslot-mid {
+/* .subslot-mid {
   position: absolute;
   bottom: 4px;
   left: 107px;
-}
+} */
 /* 一番右のサブスロット */
-.subslot-right {
+/* .subslot-right {
   position: absolute;
   bottom: 4px;
   left: 154px;
-}
+} */
 
 /*ギアアビリティを表示するときのスタイルをスロット、アイコン共に指定*/
 .ability-icon {
@@ -962,18 +1059,28 @@ Btmボタン
 /*  */
 
 .ae-card {
-  border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.6);
+  border-bottom: dotted 3px #dee2e6;
+
   padding: 5px 0px;
   position: relative;
-  width: 324px;
-  margin-right: 0rem;
-  margin-left: 0rem;
+  width: 97%;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* ヘッダー */
+#ae-header {
+  height: 2.55rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  color: white;
+  font-size: 1.75rem;
+  margin: 0px;
 }
 
 .ae-part {
-  width: 284px;
   margin: auto 0px;
+  padding: 0px;
 }
 
 /* ギアパワーのアイコン */
@@ -981,10 +1088,12 @@ Btmボタン
   width: 40px;
   height: 40px;
   position: relative;
+  position: absolute;
+  top: 3px;
+  left: 0px;
 }
 .ap-icon-area {
-  width: 40px;
-  margin: auto 4px;
+  margin-top: ;
 }
 
 /* ギアパワーの画像 */
@@ -999,9 +1108,10 @@ Btmボタン
 /* 1行のみの場合 */
 .ae-text {
   text-align: right;
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
+
 /* １つの効果を2行で書く場合の1行目 */
 .ae-text-first {
   margin-top: 6px;

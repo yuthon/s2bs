@@ -65,19 +65,19 @@ const BombDefenceUp = (props) => {
     }
   }
   return (
-    <div className="ae-card border d-flex">
-      <div className="ap-icon-area">
+    <div className="ae-card row">
+      <div className="ap-icon-area col-1">
         <div className="ability-icon ap-ability-icon">
           <img className="ap-ability-img" src={bombDefenceUpImg} alt=""/>
         </div>
       </div>
-      <div className="d-flex flex-column">  
+      <div className="d-flex flex-column col-11 px-0">  
         <div className="ae-part row">
           <div className="col-7 px-0 m-auto">
             <p className="ae-text">敵センサーの持続時間</p>
           </div>
-          <p className="col-2 ae-colon">:</p>
-          <div className="col-3 px-0 m-auto">
+          <p className="col-1 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
             <p className="ae-effect">{markingDuration} ％</p>
           </div>
         </div>
@@ -85,17 +85,17 @@ const BombDefenceUp = (props) => {
           <div className="col-7 px-0 m-auto">
             <p className="ae-text">敵スペシャルの爆風ダメージ</p>
           </div>
-          <p className="col-2 ae-colon">:</p>
-          <div className="col-3 px-0 m-auto">
+          <p className="col-1 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
             <p className="ae-effect">{specialDamage} ％</p>
           </div>
         </div>
         <div className="ae-part row">
           <div className="col-7 px-0 m-auto">
-            <p className="ae-text">敵のボムの爆風ダメージ</p>
+            <p className="ae-text">敵ボムの爆風ダメージ</p>
           </div>
-          <p className="col-2 ae-colon">:</p>
-          <div className="col-3 px-0 m-auto">
+          <p className="col-1 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
             <p className="ae-effect">{farHitSubDamage} ％</p>
           </div>
         </div>

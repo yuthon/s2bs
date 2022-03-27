@@ -64,46 +64,46 @@ const InkResistance = (props) => {
   }
   
   return (
-    <div className="ae-card border d-flex">
-      <div className="ap-icon-area">  
+    <div className="ae-card row">
+      <div className="ap-icon-area col-1">  
         <div className="ability-icon ap-ability-icon">
           <img className="ap-ability-img" src={InkResImg} alt=""/>
         </div>
       </div>
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column col-11 px-0">
         <div className="ae-part row">
-          <div className="col-5 px-0 m-auto">
+          <div className="col-7 px-0 m-auto">
             <p className="ae-text">敵インクを踏んでからダメージを受けるまで</p>
           </div>
-          <p className="col-2 ae-colon">:</p>
-          <div className="col-5 px-0 m-auto">
-            <p className="ae-effect">{framesBeforeTakingDamage} F</p>
+          <p className="col-1 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{framesBeforeTakingDamage} F （{secondsBeforeTakingDamage} 秒）</p>
           </div>
         </div>
         <div className="ae-part row">
-          <div className="col-5 px-0 m-auto">
-            <p className="ae-text">敵インクからのダメージ</p>
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">敵インクから受けるダメージ</p>
           </div>
-          <p className="col-2 ae-colon">:</p>
-          <div className="col-5 px-0 m-auto">
-            <p className="ae-effect">{damagePerFrame} ダメージ/F</p>
+          <p className="col-1 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{damagePerFrame} ダメージ/F （{damagePerSecond} ダメージ/秒）</p>
           </div>
         </div>
         <div className="ae-part row">
-          <div className="col-5 px-0 m-auto">
-            <p className="ae-text">敵インクからのダメージの上限</p>
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">敵インクから受けるダメージの上限</p>
           </div>
-          <p className="col-2 ae-colon">:</p>
-          <div className="col-5 px-0 m-auto">
+          <p className="col-1 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
             <p className="ae-effect">{damageLimit} ダメージ</p>
           </div>
         </div>
         <div className="ae-part row">
-          <div className="col-5 px-0 m-auto">
-            <p className="ae-text">敵インク上でのヒト速度の低減率</p>
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">敵インクを踏んでいるときのヒト移動速度の低減率</p>
           </div>
-          <p className="col-2 ae-colon">:</p>
-          <div className="col-5 px-0 m-auto">
+          <p className="col-1 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
             <p className="ae-effect">{runSpeed} ％減</p>
           </div>
         </div>

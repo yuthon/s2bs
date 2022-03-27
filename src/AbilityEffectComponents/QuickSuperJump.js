@@ -23,29 +23,29 @@ const QuickSuperJump = (props) => {
     }
   }
   return (
-    <div className="ae-card border d-flex">
-      <div className="ap-icon-area">
+    <div className="ae-card row">
+      <div className="col-1 ap-icon-area">
         <div className="ability-icon ap-ability-icon">
           <img className="ap-ability-img" src={quickSuperJumpImg} alt=""/>
         </div>
       </div>
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column col-11 px-0">
         <div className="ae-part row">
           <div className="col-7 px-0 m-auto">
-            <p className="ae-text">スーパージャンプ時間</p>
+            <p className="ae-text">スーパージャンプ全体の時間</p>
           </div>
-          <p className="col-2 ae-colon">:</p>
-          <div className="col-3 px-0 m-auto">
-            <p className="ae-effect">{superJumpFrame} F</p>
+          <p className="col-1 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{superJumpFrame} F （{superJumpSecond} 秒）</p>
           </div>
         </div>
         <div className="ae-part row">
           <div className="col-7 px-0 m-auto">
             <p className="ae-text">ボタン入力からジャンプ開始まで</p>
           </div>
-          <p className="col-2 ae-colon">:</p>
-          <div className="col-3 px-0 m-auto">
-            <p className="ae-effect">{onGroundFrame} F</p>
+          <p className="col-1 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{onGroundFrame} F （{onGroundSecond} 秒）</p>
           </div>
         </div>
       </div>

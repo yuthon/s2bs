@@ -435,27 +435,27 @@ const RunSpeed = (props) => {
   }
   console.log(abilityPoint)
   return (
-    <div className="ae-card border d-flex">
-      <div className="ap-icon-area">
+    <div className="ae-card row">
+      <div className="ap-icon-area col-1">
         <div className="ability-icon ap-ability-icon">
           <img className="ap-ability-img" src={runSpeedImg} alt=""/>
         </div>
       </div>
-      <div className="ae-part col-lg-10 row">
+      <div className="col-11 d-flex flex-column px-0">
         <div className="ae-part row">
-          <div className="col-6 px-0 m-auto">
+          <div className="col-7 px-0 m-auto">
             <p className="ae-text">ヒト移動速度</p>
           </div>
-          <p className="col-2 ae-colon">:</p>
+          <p className="col-1 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
             <p className="ae-effect">{runSpeed} DU/F</p>
           </div>
         </div>
         <div className="ae-part row">
-          <div className="col-6 px-0 m-auto">
-            <p className="ae-text">ヒト移動速度（射撃中</p>
+          <div className="col-7 px-0 m-auto">
+            <p className="ae-text">ヒト移動速度（射撃中）</p>
           </div>
-          <p className="col-2 ae-colon">:</p>
+          <p className="col-1 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
             <p className="ae-effect">{runSpeedShooting} DU/F</p>
           </div>

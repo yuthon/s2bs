@@ -13,6 +13,7 @@ const Orbit = () => {
       args={[camera, gl.domElement]}
       target={[0, 6, 0]}
       enablePan={false}
+      enableZoom={false}
     />
   );
 };

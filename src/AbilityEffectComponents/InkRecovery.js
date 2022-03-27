@@ -101,31 +101,29 @@ const InkRecovery = (props) => {
   }
   
   return (
-    <div className="ae-card border d-flex">
-      <div className="ap-icon-area">
+    <div className="ae-card row">
+      <div className="ap-icon-area col-1">
         <div className="ability-icon ap-ability-icon">
           <img className="ap-ability-img" src={inkRecoveryImg} alt=""/>
         </div>
       </div>
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column col-11 px-0">
         <div className="ae-part row">
           <div className="col-7 px-0 m-auto">
-            <p className="ae-text-first">インクタンク100%までの時間</p>
-            <p className="ae-text-second">（自インク内でイカ状態）</p>
+            <p className="ae-text">インクタンク100%までの時間（自インク内でイカ状態）</p>
           </div>
-          <p className="col-2 ae-colon">:</p>
-          <div className="col-3 px-0 m-auto">
-            <p className="ae-effect">{secondInInk} 秒</p>
+          <p className="col-1 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{frameInInk} F （{secondInInk} 秒）</p>
           </div>
         </div>
         <div className="ae-part row">
           <div className="col-7 px-0 m-auto">
-            <p className="ae-text-first">インクタンク100%までの時間</p>
-            <p className="ae-text-second">（ヒト状態）</p>
+            <p className="ae-text">インクタンク100%までの時間（ヒト状態）</p>
           </div>
-          <p className="col-2 ae-colon">:</p>
-          <div className="col-3 px-0 m-auto">
-            <p className="ae-effect">{secondStanding} 秒</p>
+          <p className="col-1 ae-colon">:</p>
+          <div className="col-4 px-0 m-auto">
+            <p className="ae-effect">{frameStanding} F （{secondStanding} 秒）</p>
           </div>
         </div>
       </div>

@@ -176,18 +176,18 @@ const InkSaverSub = (props) => {
     inkConsumption = Math.floor(inkConsumption*100000) / 1000;
   }
   return (
-    <div className="ae-card border d-flex">
-      <div className="ap-icon-area">  
+    <div className="ae-card row">
+      <div className="ap-icon-area col-1">  
         <div className="ability-icon ap-ability-icon">
           <img className="ap-ability-img" src={inkSaverSubImg} alt=""/>
         </div>
       </div>
-      <div className="ae-part row">
+      <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
           <p className="ae-text">サブウェポンのインク消費量</p>
         </div>
-        <p className="col-2 ae-colon px-0">:</p>
-        <div className="col-3 px-0 m-auto">
+        <p className="col-1 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{inkConsumption} ％</p>
         </div>
       </div>

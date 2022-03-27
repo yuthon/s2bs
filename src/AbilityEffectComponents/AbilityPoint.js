@@ -520,7 +520,8 @@ const AbilityPoint = (props) => {
   
   
   return(
-      <div className="d-flex flex-wrap">  
+      <div className="d-flex flex-column gray-stripe">
+        <p id="ae-header">ギアパワー効果</p>
         <div className="special-ability">
           {btnComeback}
           {btnOpeningGanbit}

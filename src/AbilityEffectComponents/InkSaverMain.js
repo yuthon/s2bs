@@ -394,19 +394,19 @@ const InkSaverMain = (props) => {
       <>
       <div className="ae-part row">
         <div className="col-7 px-0 m-auto">
-          <p className="ae-text">1振りのインク消費量（横振り）</p>
+          <p className="ae-text">1振りごとのインク消費量（横振り）</p>
         </div>
-        <p className="col-2 ae-colon">:</p>
-        <div className="col-3 px-0 m-auto">
+        <p className="col-1 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{inkConsumption} ％</p>
         </div>
       </div>
       <div className="ae-part row">
         <div className="col-7 px-0 m-auto">
-          <p className="ae-text">1振りのインク消費量（縦振り）</p>
+          <p className="ae-text">1振りごとのインク消費量（縦振り）</p>
         </div>
-        <p className="col-2 ae-colon">:</p>
-        <div className="col-3 px-0 m-auto">
+        <p className="col-1 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{bullets} 振り</p>
         </div>
       </div>
@@ -414,8 +414,8 @@ const InkSaverMain = (props) => {
         <div className="col-7 px-0 m-auto">
           <p className="ae-text">インク満タン時の弾数 （縦振り）</p>
         </div>
-        <p className="col-2 ae-colon">:</p>
-        <div className="col-3 px-0 m-auto">
+        <p className="col-1 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{inkConsumption * 1.5} ％</p>
         </div>
       </div>
@@ -423,8 +423,8 @@ const InkSaverMain = (props) => {
         <div className="col-7 px-0 m-auto">
           <p className="ae-text">インク満タン時の弾数 （横振り）</p>
         </div>
-        <p className="col-2 ae-colon">:</p>
-        <div className="col-3 px-0 m-auto">
+        <p className="col-1 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{Math.floor(bullets / 1.5)} 振り</p>
         </div>
       </div>
@@ -686,19 +686,19 @@ const InkSaverMain = (props) => {
     element = (
       <>
       <div className="ae-part row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text">1発のインク消費量</p>
+        <div className="col-7 px-0 m-auto">
+          <p className="ae-text">1発ごとのインク消費量</p>
         </div>
-        <p className="col-2 ae-colon">:</p>
+        <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{inkConsumption} ％</p>
         </div>
       </div>
       <div className="ae-part row">
-        <div className="col-6 px-0 m-auto">
+        <div className="col-7 px-0 m-auto">
           <p className="ae-text">インク満タン時の弾数</p>
         </div>
-        <p className="col-2 ae-colon">:</p>
+        <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{bullets} 発</p>
         </div>
@@ -709,19 +709,19 @@ const InkSaverMain = (props) => {
     element = (
       <>
       <div className="ae-part row">
-        <div className="col-6 px-0 m-auto">
-          <p className="ae-text">1発のインク消費量</p>
+        <div className="col-7 px-0 m-auto">
+          <p className="ae-text">1発ごとのインク消費量</p>
         </div>
-        <p className="col-2 ae-colon">:</p>
+        <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{inkConsumption} ％</p>
         </div>
       </div>
       <div className="ae-part row">
-        <div className="col-6 px-0 m-auto">
+        <div className="col-7 px-0 m-auto">
           <p className="ae-text">インク満タン時の弾数</p>
         </div>
-        <p className="col-2 ae-colon">:</p>
+        <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{bullets} 振り</p>
         </div>
@@ -732,20 +732,20 @@ const InkSaverMain = (props) => {
     element = (
       <>
       <div className="ae-part row">
-        <div className="col-8 px-0 m-auto">
+        <div className="col-7 px-0 m-auto">
           <p className="ae-text">1発（フルチャージ）のインク消費量</p>
         </div>
-        <p className="col-2 ae-colon">:</p>
-        <div className="col-2 px-0 m-auto">
+        <p className="col-1 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{inkConsumption} ％</p>
         </div>
       </div>
       <div className="ae-part row">
-        <div className="col-8 px-0 m-auto">
+        <div className="col-7 px-0 m-auto">
           <p className="ae-text">インク満タン時の弾数</p>
         </div>
-        <p className="col-2 ae-colon">:</p>
-        <div className="col-2 px-0 m-auto">
+        <p className="col-1 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{bullets} 発</p>
         </div>
       </div>
@@ -755,20 +755,20 @@ const InkSaverMain = (props) => {
     element = (
       <>
       <div className="ae-part row">
-        <div className="col-5 px-0 m-auto">
-          <p className="ae-text">1発のインク消費量</p>
+        <div className="col-7 px-0 m-auto">
+          <p className="ae-text">1発ごとのインク消費量</p>
         </div>
-        <p className="col-2 ae-colon">:</p>
-        <div className="col-5 px-0 m-auto">
+        <p className="col-1 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{inkConsumption} ％</p>
         </div>
       </div>
       <div className="ae-part row">
-        <div className="col-5 px-0 m-auto">
+        <div className="col-7 px-0 m-auto">
           <p className="ae-text">インク満タン時の弾数</p>
         </div>
-        <p className="col-2 ae-colon">:</p>
-        <div className="col-5 px-0 m-auto">
+        <p className="col-1 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{bullets} 発（{Math.floor(bullets / 3)}トリガー）</p>
         </div>
       </div>
@@ -781,17 +781,17 @@ const InkSaverMain = (props) => {
         <div className="col-7 px-0 m-auto">
           <p className="ae-text">フルチャージ1回のインク消費量</p>
         </div>
-        <p className="col-2 ae-colon">:</p>
-        <div className="col-3 px-0 m-auto">
+        <p className="col-1 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{inkConsumption} ％</p>
         </div>
       </div>
       <div className="ae-part row">
         <div className="col-7 px-0 m-auto">
-          <p className="ae-text">フルチャージで射撃可能な回数</p>
+          <p className="ae-text">インク満タン時にフルチャージで射撃可能な回数</p>
         </div>
-        <p className="col-2 ae-colon">:</p>
-        <div className="col-3 px-0 m-auto">
+        <p className="col-1 ae-colon px-0">:</p>
+        <div className="col-4 px-0 m-auto">
           <p className="ae-effect">{bullets} 回</p>
         </div>
       </div>
@@ -799,13 +799,13 @@ const InkSaverMain = (props) => {
     );
   } 
   return (
-    <div className="ae-card border d-flex">
-      <div className="ap-icon-area">
+    <div className="ae-card row">
+      <div className="col-1 ap-icon-area">
         <div className="ability-icon ap-ability-icon">
           <img className="ap-ability-img" src={inkSaverMainImg} alt=""/>
         </div>
       </div>
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column col-11 px-0">
         {element}
       </div>
     </div>
