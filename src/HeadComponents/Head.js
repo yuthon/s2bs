@@ -3,10 +3,6 @@ import MainSlot0 from '../SlotComponents/MainSlot0';
 import SubSlot0 from '../SlotComponents/SubSlot0';
 import SubSlot1 from '../SlotComponents/SubSlot1';
 import SubSlot2 from '../SlotComponents/SubSlot2';
-import SubSlotModal0 from '../SlotComponents/SubSlotModal0';
-import SubSlotModal1 from '../SlotComponents/SubSlotModal1';
-import SubSlotModal2 from '../SlotComponents/SubSlotModal2';
-import MainSlotModal0 from '../SlotComponents/MainSlotModal0';
 
 const Head = (props) => {
   return(
@@ -17,30 +13,22 @@ const Head = (props) => {
       />
       <MainSlot0
         imagePath={props.mainAbilityImagePath}
-      />
-      <MainSlotModal0
         setImagePath={props.setMainAbilityImagePath}
         setAbilityName={props.setMainAbilityName}
       />
       <SubSlot0
         imagePath={props.subAbilityImagePath0}
-      />
-      <SubSlotModal0
         setAbilityName={props.setSubAbilityName0}
         setImagePath={props.setSubAbilityImagePath0}
       />
       <SubSlot1
         //アビリティの画像のpathを受け取る
         imagePath={props.subAbilityImagePath1}
-      />
-      <SubSlotModal1
         setAbilityName={props.setSubAbilityName1}
         setImagePath={props.setSubAbilityImagePath1}
       />
       <SubSlot2
         imagePath={props.subAbilityImagePath2}
-      />
-      <SubSlotModal2
         setAbilityName={props.setSubAbilityName2}
         setImagePath={props.setSubAbilityImagePath2}
       />

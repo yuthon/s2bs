@@ -1,3 +1,4 @@
+import SubSlotModal0 from '../SlotComponents/SubSlotModal0';
 
 const SubSlot0 = (props) => {
   // モーダルを表示する関数
@@ -29,16 +30,22 @@ const SubSlot0 = (props) => {
   }
 
   return(
-    <div
-      className="ability-icon sub-slot subslot-left"
-      onClick={()=>{
-        openGearModal();
-      }}
-    >
-      <div className="tooltip-top-arrow">
-        <p className="slot-tooltip font-type2">クリックでギアパワーを変更</p>
+    <div className="subSlotModal-wrapper-left">
+      <div
+        className="ability-icon sub-slot subslot-left"
+        onClick={()=>{
+          openGearModal();
+        }}
+      >
+        <div className="tooltip-top-arrow">
+          <p className="slot-tooltip font-type2">クリックでギアパワーを変更</p>
+        </div>
+        <img className="subslot-img" src={props.imagePath} alt=""/>
       </div>
-      <img className="subslot-img" src={props.imagePath} alt=""/>
+      <SubSlotModal0
+        setAbilityName={props.setAbilityName}
+        setImagePath={props.setImagePath}
+      />
     </div>
   );
 };

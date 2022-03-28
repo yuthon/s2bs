@@ -1,3 +1,4 @@
+import MainSlotModal1 from '../SlotComponents/MainSlotModal1';
 
 const MainSlot1 = (props) => {
   // モーダルを表示する関数
@@ -29,11 +30,17 @@ const MainSlot1 = (props) => {
   }
 
   return(
-    <div className="ability-icon main-slot" onClick={()=>{openGearModal()}}>
-      <div className="tooltip-top-arrow">
-        <p className="slot-tooltip-left font-type2">クリックでギアパワーを変更</p>
+    <div className="mainSlotModal-wrapper">
+      <div className="ability-icon main-slot" onClick={()=>{openGearModal()}}>
+        <div className="tooltip-top-arrow">
+          <p className="slot-tooltip-left font-type2">クリックでギアパワーを変更</p>
+        </div>
+        <img className="mainslot-img" src={props.imagePath} alt=""/>
       </div>
-      <img className="mainslot-img" src={props.imagePath} alt=""/>
+      <MainSlotModal1
+        setImagePath={props.setImagePath}
+        setAbilityName={props.setAbilityName}
+      />
     </div>
     );
   };

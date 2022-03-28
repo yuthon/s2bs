@@ -25,7 +25,7 @@ const MainSlotModal2 = (props) => {
   }
   
   return (
-    <div className="ability-modal mainSlotModal-upper" id="mainSlotModal2">
+    <div className="ability-modal mainSlotModal" id="mainSlotModal2">
           <svg className="modal-close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" onClick={()=>{closeGearModal()}}>
           {/* <!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
             <path 
@@ -34,6 +34,16 @@ const MainSlotModal2 = (props) => {
             />
           </svg>
           <div className="ability-list d-flex flex-wrap">
+            <div
+              className="ability-icon ability"
+              onClick={()=>{
+                props.setImagePath(empty);
+                props.setAbilityName("empty");
+                }
+              }
+            >
+              <img className="abilitymodal-img" src={empty} alt="スロットを空にする"/>
+            </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
@@ -203,16 +213,6 @@ const MainSlotModal2 = (props) => {
               }
             >
               <img className="abilitymodal-img" src={dropRoller} alt= "受け身"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setImagePath(empty);
-                props.setAbilityName("empty");
-                }
-              }
-            >
-              <img className="abilitymodal-img" src={empty} alt="スロットを空にする"/>
             </div>
           </div>
           
