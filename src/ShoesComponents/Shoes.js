@@ -3,11 +3,20 @@ import MainSlot2 from '../SlotComponents/MainSlot2';
 import SubSlot6 from '../SlotComponents/SubSlot6';
 import SubSlot7 from '../SlotComponents/SubSlot7';
 import SubSlot8 from '../SlotComponents/SubSlot8';
-import SubSlotModal6 from '../SlotComponents/SubSlotModal6';
-import SubSlotModal7 from '../SlotComponents/SubSlotModal7';
-import SubSlotModal8 from '../SlotComponents/SubSlotModal8';
+import empty from '../images/ability/empty.png';
 
 const Shoes = (props) => {
+  const resetAbility = function() {
+    props.setMainAbilityImagePath(empty);
+    props.setMainAbilityName("empty");
+    props.setSubAbilityName6("empty");
+    props.setSubAbilityImagePath6(empty);
+    props.setSubAbilityName7("empty");
+    props.setSubAbilityImagePath7(empty);
+    props.setSubAbilityName8("empty");
+    props.setSubAbilityImagePath8(empty);
+  }
+  
   return(
     <div className="gear-card shoes-stripe my-3" id="shoesgear-card">
       <p className="gear-header font-type1">クツ</p>
@@ -21,26 +30,29 @@ const Shoes = (props) => {
       />
       <SubSlot6
         imagePath={props.subAbilityImagePath6}
-      />
-      <SubSlotModal6
         setAbilityName={props.setSubAbilityName6}
         setImagePath={props.setSubAbilityImagePath6}
       />
       <SubSlot7
         imagePath={props.subAbilityImagePath7}
-      />
-      <SubSlotModal7
         setAbilityName={props.setSubAbilityName7}
         setImagePath={props.setSubAbilityImagePath7}
       />
       <SubSlot8
         imagePath={props.subAbilityImagePath8}
-      />
-      <SubSlotModal8
         setAbilityName={props.setSubAbilityName8}
         setImagePath={props.setSubAbilityImagePath8}
       />
-      <div style={{height:"30px"}}></div>
+      <div className="ability-reset">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onClick={()=>{resetAbility();}}>
+          {/* <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
+          <path
+            d="M480 256c0 123.4-100.5 223.9-223.9 223.9c-48.84 0-95.17-15.58-134.2-44.86c-14.12-10.59-16.97-30.66-6.375-44.81c10.59-14.12 30.62-16.94 44.81-6.375c27.84 20.91 61 31.94 95.88 31.94C344.3 415.8 416 344.1 416 256s-71.69-159.8-159.8-159.8c-37.46 0-73.09 13.49-101.3 36.64l45.12 45.14c17.01 17.02 4.955 46.1-19.1 46.1H35.17C24.58 224.1 16 215.5 16 204.9V59.04c0-24.04 29.07-36.08 46.07-19.07l47.6 47.63C149.9 52.71 201.5 32.11 256.1 32.11C379.5 32.11 480 132.6 480 256z"
+            fill="white"
+          />
+        </svg>
+        <p className="ability-reset-tooltip font-type2">ギアパワーをリセット</p>
+      </div>
     </div>
   );
 };

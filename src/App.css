@@ -89,22 +89,10 @@
 
 @media (min-width: 1080px) {
   .gear-card {
-    height: 205px;
     width: 200px;
-    border-radius: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
   }
   .gear-header {
     width: 200px;
-    height: 2.55rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    color: white;
-    font-size: 1.75rem;
-    margin: 0px;
   }
   .mainSlotModal-wrapper {
     position: absolute;
@@ -129,22 +117,10 @@
 }
 @media (max-width: 1079.8px) {
   .gear-card {
-    height: 205px;
     width: 184px;
-    border-radius: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
   }
   .gear-header {
     width: 184px;
-    height: 2.55rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    color: white;
-    font-size: 1.75rem;
-    margin: 0px;
   }
   .mainSlotModal-wrapper {
     position: absolute;
@@ -169,22 +145,10 @@
 }
 @media (max-width: 991.8px) {
   .gear-card {
-    height: 205px;
     width: 200px;
-    border-radius: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
   }
   .gear-header {
     width: 200px;
-    height: 2.55rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    color: white;
-    font-size: 1.75rem;
-    margin: 0px;
   }
   /* アビリティ効果部分 */
   #ae-section {
@@ -478,19 +442,18 @@ footer {
 /*  */
 
 /* アタマ　フク　クツで共通の大きさ */
-/* .gear-card {
+/* widthはレスポンシブ対応 */
+.gear-card {
   height: 205px;
-  width: 200px;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-} */
+}
 
 /* ギア表示のヘッダー部分 */
-
-/* .gear-header {
-  width: 200px;
+/* widthはレスポンシブ対応 */
+.gear-header {
   height: 2.55rem;
   background-color: rgba(0, 0, 0, 0.7);
   border-top-left-radius: 30px;
@@ -498,7 +461,59 @@ footer {
   color: white;
   font-size: 1.75rem;
   margin: 0px;
-} */
+}
+
+/* ギアパワーのリセットスイッチ */
+.ability-reset {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 55px;
+  right: 5px;
+  cursor: pointer;
+}
+/* ホバーしたとき拡大と回転 */
+.ability-reset:hover svg {
+  transition: 0.1s;
+  transform: rotate(15deg) scale(1.2, 1.2);
+}
+/* クリックで回転 */
+.ability-reset:active svg {
+  transition: 0.1s;
+  transform: rotate(-15deg) scale(1.2, 1.2);
+}
+/* ツールチップ */
+.ability-reset-tooltip {
+  width: 7rem;
+  height: 1.8rem;
+  display: none;
+  position: absolute;
+  bottom: -1rem;
+  right: 2.5rem;
+  z-index: 2;
+  padding: 0.3em 0.5em;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0.3em;
+  font-size: 0.9rem;
+}
+/* ツールチップの矢印 */
+.ability-reset-tooltip:after {
+  border-top: 0.3rem solid transparent;
+  border-bottom: 0.3rem solid transparent;
+  border-left: 0.4rem solid rgba(0, 0, 0, 0.8);
+  content: '';
+  display: block;
+  width: 0.5rem;
+  position: absolute;
+  top: 0.6rem;
+  right: -0.4rem;
+}
+/*　ホバーしたときツールチップを表示 */
+.ability-reset:hover .ability-reset-tooltip {
+  display: block;
+}
+
 /* ギア画像の大きさ */
 .gear-img {
   width: 110px;
@@ -921,55 +936,6 @@ footer {
   fill: #fff;
 }
 
-/* 
-.modal-close-btn svg {
-  opacity: 0.6;
-}
-
-.modal-close-btn:hover {
-  transition: 0.001s;
-  transform: scale(1.6, 1.6);
-} */
-
-/*とじるボタン*/
-.close-btn-svg {
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-.close-btn-svg:hover {
-  transition-duration: 0.1s;
-  transform: scale(1.05, 1.05);
-}
-
-.close-btn-svg:hover .close-btn-default {
-  fill: none;
-}
-
-.close-btn-svg:hover .close-btn-hover {
-  fill: #d9dc20;
-}
-
-/*とじるボタンのsvg内のテキスト要素*/
-.svg-text-default {
-  font-size: 150px;
-  font-weight: bold;
-  user-select: none;
-}
-
-.svg-text-hover {
-  user-select: none;
-}
-
-.close-btn-svg:hover .svg-text-hover {
-  fill: white;
-  font-size: 190px;
-  font-weight: bold;
-}
-.close-btn-svg:hover .svg-text-default {
-  fill: none;
-}
-
 /*skincolorボタンのスタイル*/
 /*.skincolor-btn {*/
 /*  width: 100px;*/
@@ -1358,7 +1324,7 @@ Btmボタン
   right: 10px;
   z-index: 1;
 }
-
+/* ブキの表示部分 */
 #weapon-card {
   width: 100%;
   height: 170px;
@@ -1371,13 +1337,18 @@ Btmボタン
   );
   border-radius: 30px;
   padding-top: 7px;
+  position: relative;
 }
-
+/* ブキ表示部分のフッター */
 #weapon-footer {
   width: 100%;
+  height: 2rem;
   background-color: rgba(0, 0, 0, 0.8);
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  position: absolute;
+  bottom: 0px;
+  padding-top: 0.25rem;
 }
 
 .weapon-sub-sp {

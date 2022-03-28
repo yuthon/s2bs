@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import SubSlotModal0 from '../SlotComponents/SubSlotModal0';
 
 const SubSlot0 = (props) => {
@@ -28,6 +29,7 @@ const SubSlot0 = (props) => {
     target10.style.display = "none";
     target11.style.display = "none";
   }
+  
 
   return(
     <div className="subSlotModal-wrapper-left">
