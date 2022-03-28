@@ -15,13 +15,7 @@
   }
 }
 /* bootstrapで実現不可能なレスポンシブ対応を手書き */
-/* @media (max-width: 991.98px) {
-  #ae-section {
-    height: 100%;
-    width: 180%;
-    margin-left: -100%;
-  }
-} */
+
 @media (min-width: 992px) {
   #ae-section {
     height: calc(100vh - 2rem - 6.25rem - 205px);
@@ -545,25 +539,6 @@ footer {
   width: 48px;
 }
 
-/* 一番左のサブスロット */
-/* .subslot-left {
-  position: absolute;
-  bottom: 4px;
-  left: 59px;
-} */
-/* 真ん中のサブスロット */
-/* .subslot-mid {
-  position: absolute;
-  bottom: 4px;
-  left: 107px;
-} */
-/* 一番右のサブスロット */
-/* .subslot-right {
-  position: absolute;
-  bottom: 4px;
-  left: 154px;
-} */
-
 /*ギアアビリティを表示するときのスタイルをスロット、アイコン共に指定*/
 .ability-icon {
   border-radius: 50%;
@@ -825,14 +800,6 @@ footer {
   width: 30px;
   height: 30px;
 }
-
-/* .brand {
-  color: white;
-  width: 100px;
-  height: 35px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 13px;
-} */
 
 .brand-ability {
   width: 50px;
@@ -1319,9 +1286,6 @@ Btmボタン
   top: 5px;
   left: 0px;
 }
-.ap-icon-area {
-  margin-top: ;
-}
 
 /* ギアパワーの画像 */
 .ap-ability-img {
@@ -1597,14 +1561,6 @@ Btmボタン
 /*  */
 /* アビリティモーダル関連 */
 /*  */
-/* メインスロットモーダル */
-/* .mainSlotModal {
-  height: 280px;
-  position: absolute;
-  left: -125px;
-  top: 72px;
-  z-index: 5;
-} */
 
 /* モーダル上部の矢印 */
 .mainSlotModal:before {
@@ -1683,23 +1639,3 @@ Btmボタン
   top: 1px;
   left: 1px;
 }
-/* サブスロットモーダルの矢印部分 */
-/* #subSlotModal-arrow {
-  border-right: 10px solid transparent;
-  border-bottom: 20px solid #6b6b6b;
-  border-left: 10px solid transparent;
-  position: absolute;
-  top: -20px;
-  left: 140px;
-  z-index: 6;
-}
-
-#subSlotModal-arrow-down {
-  border-right: 10px solid transparent;
-  border-top: 20px solid #6b6b6b;
-  border-left: 10px solid transparent;
-  position: absolute;
-  bottom: -20px;
-  left: 110px;
-  z-index: 6;
-} */
