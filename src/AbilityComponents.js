@@ -49,7 +49,7 @@ const AbilityComponents = (props) => {
   const [subAbilityName8, setSubAbilityName8] = useState(null);
   
   return (
-    <div className="col-sm-5 col-md-4 col-lg-7 col-xl-7 col-xxl-6 px-0" id="gaer-and-ability">
+    <>
       <div className="px-0 d-flex flex-md-row flex-wrap" id="gear-components">
       <Head
         headImagePath={props.headImagePath}
@@ -120,7 +120,7 @@ const AbilityComponents = (props) => {
         subAbilityName8={subAbilityName8} 
       />
     </div>
-    </div>
+    </>
   );
 }
 

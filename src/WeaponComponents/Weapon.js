@@ -6,8 +6,9 @@ const Weapon = (props) => {
     <div className="mb-2 d-flex" id="weapon-container">
       <div id="weapon-card">
         <div className="row">
-          <div className="btn btn-sm col-5" data-bs-toggle="modal" data-bs-target="#weaponModal">
-              <img src={props.weaponStatus.path} alt=""/>
+          <div className="col-5" data-bs-toggle="modal" data-bs-target="#weaponModal" id="weaponModal-trigger">
+            <img src={props.weaponStatus.path} alt=""/>
+            <p className="weaponModal-tooltip font-type2">クリックでブキを変更</p>
           </div>
           <div className="col-7 py-2">
             <div className="weapon-sub-sp row">

@@ -111,7 +111,6 @@ const SwimSpeed = (props) => {
       }
     }
   }
-  console.log(abilityPoint)
   return (
     <div className="ae-card row">
       <div className="ap-icon-area col-1">

@@ -449,18 +449,16 @@ const HeadGearModal = (props) => {
               </div>
             </div>
           </div>
-          <div className="px-0 px-lg-5 row gears-display-area">
-            <div className="col-4">
-              <div
-                className="chosen-gear-icon"
-              >
+          <div className="px-1 px-sm-0 px-lg-3 d-flex gears-display-area">
+            <div className="chosen-gear d-flex flex-column">
+            <p className="chosenGear-text h5">選択中のギア</p>
+            <p className="chosenGear-name font-type1">{props.chosenGear.name}</p>
+              <div className="chosen-gear-icon">
                 <img className="chosen-gear-icon-img" src={props.chosenGear.path} alt=""/>
                 <img className="brand-img" src={brandDependency(props.chosenGear.brand).brandImgPath} alt=""/>
-                <div className="head-stripe gear-icon-footer">  
-                  <div className="ability-icon default-ability">
-                    <img className="default-ability-img" src={props.chosenGear.default} alt=""/>
-                  </div>
+                <div className="head-stripe gear-icon-footer">
                   <div className="brand-ability">
+                    <p className="fav-ability-tooltip">つきやすいギアパワー</p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 384 512">
                       {/* Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
                       <path 
@@ -471,6 +469,7 @@ const HeadGearModal = (props) => {
                     <img className="img-gear-icon-ability" src={brandDependency(props.chosenGear.brand).favoredAbility} alt=""/>
                   </div>
                   <div className="brand-ability">
+                    <p className="fav-ability-tooltip">つきにくいギアパワー</p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 384 512">
                       {/* Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
                       <path
@@ -483,7 +482,7 @@ const HeadGearModal = (props) => {
                 </div>
               </div>
             </div>
-            <div className="col-8 d-flex flex-wrap gearicons-section head-stripe">
+            <div className="d-flex flex-wrap gearicons-section head-stripe">
                 <GearIcon
                   gear={gearsArray[0]}
                   setChosenGear={props.setChosenGear}
@@ -893,6 +892,9 @@ const HeadGearModal = (props) => {
                   setChosenGear={props.setChosenGear}
                 />
             </div>
+          </div>
+          <div className="modal-footer py-0">
+            <button type="button" className="btn btn-lg btn-secondary m-auto" onClick={()=>{closeGearModal()}}>とじる</button>
           </div>
         </div>
   );

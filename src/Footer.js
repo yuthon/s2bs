@@ -31,9 +31,11 @@ const Footer = () => {
         </svg>
         Twitter
       </a>
-      <div className="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+      
+    </footer>
+    <div className="modal fade" id="aboutModal" tabIndex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered">
-          <div className="modal-content bg-secondary text-white">
+          <div className="modal-content bg-secondary text-white font-type2">
             <div className="modal-header">
               <h4 className="modal-title" id="exampleModalLabel">当ページについて</h4>
             </div>
@@ -49,7 +51,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
     </div>
   ) 
 }

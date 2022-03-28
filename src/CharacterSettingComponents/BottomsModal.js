@@ -48,8 +48,6 @@ const BottomsModal = (props) => {
       //選択されているボトムスのボタンのクラス名を変更
       if (props.bottoms === "Btm_0") {
         FMLBtm0Ref.current.className = "FML-Btm-selected"
-        console.log("ex")
-        console.log(FMLBtm0Ref.current)
       } else if (props.bottoms === "Btm_1") {
         FMLBtm1Ref.current.className = "FML-Btm-selected"
       } else if (props.bottoms === "Btm_2") {

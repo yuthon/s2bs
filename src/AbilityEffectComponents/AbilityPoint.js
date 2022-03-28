@@ -37,8 +37,6 @@ const AbilityPoint = (props) => {
   const mainAbilityName = [
     props.mainAbilityName0, props.mainAbilityName1, props.mainAbilityName2,
     ];
-  console.log("hello")
-  console.log(subAbilityName)
   //メイン効率
   
   let inkSaverMainAP = 0;
@@ -51,10 +49,6 @@ const AbilityPoint = (props) => {
       inkSaverMainAP = inkSaverMainAP + 10
     }
   }
-  if (inkSaverMainAP !== 0) {
-        console.log("inkSaverMain");
-        console.log(inkSaverMainAP);
-      }
   //サブ効率
   let inkSaverSubAP = 0;
   
@@ -66,10 +60,6 @@ const AbilityPoint = (props) => {
       inkSaverSubAP = inkSaverSubAP + 10;
     }
   }
-  if (inkSaverSubAP !== 0) {
-        console.log("inkSaverSub");
-        console.log(inkSaverSubAP);
-      }
   //インク回復
   let inkRecoveryAP = 0;
   
@@ -81,10 +71,6 @@ const AbilityPoint = (props) => {
       inkRecoveryAP = inkRecoveryAP + 10;
     }
   }
-  if (inkRecoveryAP !== 0) {
-        console.log("inkRecovery");
-        console.log(inkRecoveryAP);
-      }
   //ヒト速度
   let runSpeedAP = 0;
   
@@ -96,10 +82,6 @@ const AbilityPoint = (props) => {
       runSpeedAP = runSpeedAP + 10;
     }
   }
-  if (runSpeedAP !== 0) {
-        console.log("runSpeed");
-        console.log(runSpeedAP);
-      }
   //イカ速度
   let swimSpeedAP = 0;
   
@@ -111,10 +93,6 @@ const AbilityPoint = (props) => {
       swimSpeedAP = swimSpeedAP + 10;
     }
   }
-  if (swimSpeedAP !== 0) {
-        console.log("swimSpeed");
-        console.log(swimSpeedAP);
-      }
   //スぺ増
   let specialChargeAP = 0;
   
@@ -126,10 +104,6 @@ const AbilityPoint = (props) => {
       specialChargeAP = specialChargeAP + 10;
     }
   }
-  if (specialChargeAP !== 0) {
-        console.log("specialCharge");
-        console.log(specialChargeAP);
-      }
   //スぺ減
   let specialSaverAP = 0;
   
@@ -141,10 +115,6 @@ const AbilityPoint = (props) => {
       specialSaverAP = specialSaverAP + 10;
     }
   }
-  if (specialSaverAP !== 0) {
-        console.log("specialSaver");
-        console.log(specialSaverAP);
-      }
   //スぺ性
   let specialPowerAP = 0;
   
@@ -156,10 +126,6 @@ const AbilityPoint = (props) => {
       specialPowerAP = specialPowerAP + 10;
     }
   }
-  if (specialPowerAP !== 0) {
-        console.log("specialPower");
-        console.log(specialPowerAP);
-      }
   //復活短縮
   let qrAP = 0;
   
@@ -171,10 +137,6 @@ const AbilityPoint = (props) => {
       qrAP = qrAP + 10;
     }
   }
-  if (qrAP !== 0) {
-        console.log("qr");
-        console.log(qrAP);
-      }
   //スパ短
   let quickSuperJumpAP = 0;
   
@@ -186,10 +148,6 @@ const AbilityPoint = (props) => {
       quickSuperJumpAP = quickSuperJumpAP + 10;
     }
   }
-  if (quickSuperJumpAP !== 0) {
-        console.log("quickSuperJump");
-        console.log(quickSuperJumpAP);
-      }
   //サブ性能
   let subPowerAP = 0;
   
@@ -201,10 +159,6 @@ const AbilityPoint = (props) => {
       subPowerAP = subPowerAP + 10;
     }
   }
-  if (subPowerAP !== 0) {
-        console.log("subPower");
-        console.log(subPowerAP);
-      }
   //インク影響軽減
   let inkResAP = 0;
   
@@ -216,10 +170,6 @@ const AbilityPoint = (props) => {
       inkResAP = inkResAP + 10;
     }
   }
-  if (inkResAP !== 0) {
-        console.log("inkRes");
-        console.log(inkResAP);
-      }
   //爆減
   let bombDefenceAP = 0;
   
@@ -231,10 +181,6 @@ const AbilityPoint = (props) => {
       bombDefenceAP = bombDefenceAP + 10;
     }
   }
-  if (bombDefenceAP !== 0) {
-        console.log("bombDefence");
-        console.log(bombDefenceAP);
-      }
   //メイン性能
   let mpuAP = 0;
   
@@ -246,10 +192,6 @@ const AbilityPoint = (props) => {
       mpuAP = mpuAP + 10;
     }
   }
-  if (mpuAP !== 0) {
-        console.log("mpu");
-        console.log(mpuAP);
-      }
       
   // ボタンのonoffを切り替える関数
   const btnToggle = function(ability) {

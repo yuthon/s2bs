@@ -81,18 +81,8 @@ const Main = () => {
       </div>
     </header>
     <div className="container-xl">
-      <HeadGearModal
-        chosenGear={headGear}
-        setChosenGear={setHeadGear}
-      />
-      <ClothesGearModal
-        chosenGear={clothesGear}
-        setChosenGear={setClothesGear}
-      />
-      <ShoesGearModal
-        chosenGear={shoesGear}
-        setChosenGear={setShoesGear}
-      />
+      
+      
       <CharacterTypeModal
         characterType={characterType}
         setCharacterType={setCharacterType}
@@ -161,11 +151,25 @@ const Main = () => {
               </Suspense>
             </Canvas>
         </div>
-        <AbilityComponents 
-          headImagePath={headGear.path}
-          clothesImagePath={clothesGear.path}
-          shoesImagePath={shoesGear.path}
-        />
+        <div className="col-sm-5 col-md-4 col-lg-7 col-xl-7 col-xxl-6 px-0" id="gear-and-ability">
+          <AbilityComponents 
+            headImagePath={headGear.path}
+            clothesImagePath={clothesGear.path}
+            shoesImagePath={shoesGear.path}
+          />
+          <HeadGearModal
+            chosenGear={headGear}
+            setChosenGear={setHeadGear}
+          />
+          <ClothesGearModal
+            chosenGear={clothesGear}
+            setChosenGear={setClothesGear}
+          />
+          <ShoesGearModal
+            chosenGear={shoesGear}
+            setChosenGear={setShoesGear}
+          />
+        </div>
       </div>
     </div>
     <Footer />

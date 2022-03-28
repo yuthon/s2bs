@@ -146,7 +146,6 @@ const RunSpeed = (props) => {
   } 
   }
 
-  console.log(abilityPoint)
 
   if (weaponStatus.name.indexOf("ボールドマーカー") > -1) {
     for (let i=0; i < 40; i++) {

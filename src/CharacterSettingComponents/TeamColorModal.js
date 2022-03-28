@@ -24,7 +24,6 @@ const TeamColorModal = (props) => {
       color5Ref.current.className = "selected"
     }
 
-    console.log(props.teamColor)
     // 別の色が選択されていればクラス名を戻す
     if (color0Ref.current.className === "selected" && props.teamColor !== "color_0") {
       color0Ref.current.className = "color-btn" 

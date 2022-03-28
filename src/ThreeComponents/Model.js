@@ -60,19 +60,10 @@ const Model = (props) => {
     }
   });
   
-  console.log(mixer);
   
   //モデルの配列は読み込まれるごとにランダムなので、nameで整列しておく
   gltf.scene.children[0].children.sort((a, b) => (a.name > b.name) ? 1 : -1);
-  //どのオブジェクトを非表示にするか確認するため、整列した配列を出力
-  console.log(gltf.scene);
   
-  // 透明のマテリアルのdepthWriteを書き換え
-  // for (let i = 0; i < gltf.scene.children[0].children.length - 1; i++) {
-  //   if (gltf.scene.children[0].children[i].material.transparent) {
-  //     gltf.scene.children[0].children[i].material.depthWrite = true;
-  //   }
-  // }
 
   // モデル
   let armature = gltf.scene.children[0];
@@ -698,15 +689,6 @@ const Model = (props) => {
           }
         }
       }
-    }
-  }
-
-  for (let i = 0; i < armature.children.length; i++) {
-    let model = armature.children[i];
-    let modelName = model.name
-    if (model.visible) {
-      console.log(modelName);
-      
     }
   }
   
