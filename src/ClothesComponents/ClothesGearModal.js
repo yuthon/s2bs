@@ -576,7 +576,7 @@ const gears = [
 const gearsSortedByName = gears.slice().sort((a, b) => (a.name > b.name) ? 1 : -1);
 
 
-const ClothesGearModal = (props) => {
+const ClothesGearModal = React.memo((props) => {
   // 表示する配列の管理
   const [gearsArray, setArray] = useState(gears);
 
@@ -1594,6 +1594,6 @@ const ClothesGearModal = (props) => {
           </div>
         </div>
   );
-};
+});
 
 export default ClothesGearModal; 

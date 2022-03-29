@@ -1,7 +1,7 @@
 // ClassNameのSCはSkinColorの略を示す
-import { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 
-const SkinColorModal = (props) => {
+const SkinColorModal = React.memo((props) => {
   
   const SC0Ref = useRef();
   const SC1Ref = useRef();
@@ -226,6 +226,6 @@ const SkinColorModal = (props) => {
       </div>
     </div>
   );
-};
+});
 
 export default SkinColorModal;

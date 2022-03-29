@@ -1,6 +1,7 @@
+import React from 'react';
 import MainSlotModal0 from '../SlotComponents/MainSlotModal0';
 
-const MainSlot0 = (props) => {
+const MainSlot0 = React.memo((props) => {
   // モーダルを表示する関数
   const openGearModal = function() {
     let target0 = document.getElementById("mainSlotModal0");
@@ -43,6 +44,6 @@ const MainSlot0 = (props) => {
       />
     </div>
   );
-};
+});
 
 export default MainSlot0;

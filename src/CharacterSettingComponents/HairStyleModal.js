@@ -1,6 +1,6 @@
-import { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 
-const HairStyleModal = (props) => {
+const HairStyleModal = React.memo((props) => {
   const IMLHair0Ref = useRef();
   const IMLHair1Ref = useRef();
   const IMLHair2Ref = useRef();
@@ -658,6 +658,6 @@ const HairStyleModal = (props) => {
       </div>
     </div>
   )
-}
+});
 
 export default HairStyleModal;

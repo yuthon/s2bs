@@ -1,6 +1,7 @@
+import React from 'react';
 import subPowerImg from '../images/ability/SubPU.png';
 
-const SubPowerUp = (props) => {
+const SubPowerUp = React.memo((props) => {
   let name = props.weaponStatus.sub;
   let abilityPoint = props.SPUabilityPoint;
   let element;
@@ -313,6 +314,6 @@ const SubPowerUp = (props) => {
       {element}
     </div>
   );
-};
+});
 
 export default SubPowerUp;

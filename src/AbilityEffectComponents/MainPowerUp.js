@@ -1,6 +1,7 @@
+import React from 'react';
 import mpuImg from '../images/ability/MPU.png';
 
-const MainPowerUp = (props) => {
+const MainPowerUp = React.memo((props) => {
   let abilityPoint = props.abilityPoint;
   let name = props.weaponStatus.name;
   
@@ -1218,6 +1219,6 @@ const MainPowerUp = (props) => {
       {element}
     </div>
   );
-}
+});
 
 export default MainPowerUp;

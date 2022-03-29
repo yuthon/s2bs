@@ -1,6 +1,6 @@
-import { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 
-const BottomsModal = (props) => {
+const BottomsModal = React.memo((props) => {
   const FMLBtm0Ref = useRef();
   const FMLBtm1Ref = useRef();
   const FMLBtm2Ref = useRef();
@@ -422,6 +422,6 @@ const BottomsModal = (props) => {
       </div>
     </div>
   )
-}
+});
 
 export default BottomsModal;

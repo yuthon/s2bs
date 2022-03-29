@@ -6,7 +6,7 @@ const InkRecovery = (props) => {
   let secondInInk;
   let frameStanding;
   let secondStanding;
-  let recoveryInInk = [
+  const recoveryInInk = [
     {AP:0, frame:180, second:3},
     {AP:3, frame:174, second:2.9},
     {AP:6, frame:169, second:2.82},

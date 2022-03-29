@@ -1,6 +1,7 @@
+import React from 'react';
 import specialPowerImg from '../images/ability/SpecialPU.png';
 
-const SpecialPower = (props) => {
+const SpecialPower = React.memo((props) => {
   let element;
   let abilityPoint = props.abilityPoint;
   let name = props.weaponStatus.special;
@@ -441,6 +442,6 @@ const SpecialPower = (props) => {
       {element}
     </div>
   );
-};
+});
 
 export default SpecialPower;

@@ -1,6 +1,6 @@
-import { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 
-const TeamColorModal = (props) => {
+const TeamColorModal = React.memo((props) => {
   const color0Ref = useRef();
   const color1Ref = useRef();
   const color2Ref = useRef();
@@ -197,6 +197,6 @@ const TeamColorModal = (props) => {
       </div>
     </div>
   )
-}
+});
 
 export default TeamColorModal;

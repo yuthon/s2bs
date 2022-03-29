@@ -47,7 +47,6 @@ const Model = (props) => {
   }
   
   
-  
   useFrame((state, delta) => {
     mixer?.update(delta);
   });

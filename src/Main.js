@@ -36,9 +36,7 @@ extend({ OrbitControls });
 
 
 
-// const HeadGearModal = React.lazy(() => import('./HeadComponents/HeadGearModal'))
-// const ClothesGearModal = React.lazy(() => import('./ClothesComponents/ClothesGearModal'))
-// const ShoesGearModal = React.lazy(() => import('./ShoesComponents/ShoesGearModal'))
+
 
 const Loader= () => {
   const { progress } = useProgress()
@@ -55,8 +53,6 @@ const Loader= () => {
 }
 
 const Main = () => {
-  //ブキの名前とその他の情報を管理
-  const [weaponStatus, passWeaponStatus] = useState({name:"わかばシューター", sub:"SplatBomb", special:"Armor", sp:180, weight:"light", path:Jr_0});
   //選択されたアタマギアを管理
   const [headGear, setHeadGear] = useState({name:"ヘッドバンド ホワイト", path:Headband_White, id:"HB_Headband_White", brand:"バトロイカ",default:inkRecovery});
   //選択されたフクギアを管理

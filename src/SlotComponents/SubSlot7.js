@@ -1,6 +1,7 @@
+import React from 'react';
 import SubSlotModal7 from '../SlotComponents/SubSlotModal7';
 
-const SubSlot7 = (props) => {
+const SubSlot7 = React.memo((props) => {
   // モーダルを表示する関数
   const openGearModal = function() {
     let target0 = document.getElementById("mainSlotModal0");
@@ -48,6 +49,6 @@ const SubSlot7 = (props) => {
       />
     </div>
   );
-};
+});
 
 export default SubSlot7;

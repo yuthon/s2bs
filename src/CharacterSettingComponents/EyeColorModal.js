@@ -1,7 +1,7 @@
 // ClassNameのECはEyeColorの略を示す
-import { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 
-const EyeColorModal = (props) => {
+const EyeColorModal = React.memo((props) => {
   const EC0Ref = useRef();
   const EC1Ref = useRef();
   const EC2Ref = useRef();
@@ -413,6 +413,6 @@ const EyeColorModal = (props) => {
       </div>
     </div>
   );
-};
+});
 
 export default EyeColorModal;

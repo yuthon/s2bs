@@ -1,9 +1,9 @@
 
 // CTはcharacterTypeの略
-import { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 
-const CharacterSettingModal = (props) => {
+const CharacterSettingModal = React.memo((props) => {
 
   const IFMLRef = useRef();
   const IMLRef = useRef();
@@ -150,6 +150,6 @@ const CharacterSettingModal = (props) => {
       </div>
     </div>
   )
-}
+});
 
 export default CharacterSettingModal;
