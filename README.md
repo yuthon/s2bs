@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# スプラ 2 ギアプランナー
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+プレイヤーが必要としつつも公式には公開されていないギアパワーの詳細な効果の確認と、ギアの見た目を考えることを同時に行えるページとなっています。
+
+## [リンク] :
 
 ## Available Scripts
 
