@@ -317,9 +317,6 @@ const WeaponModal = React.memo((props) => {
   const weaponSortedBySub = weaponStatus.slice().sort((a, b) => (a.sub > b.sub) ? 1 : -1);
   const weaponSortedBySpe = weaponStatus.slice().sort((a, b) => (a.special > b.special) ? 1 : -1);
   
-  
-  
-  
   // 表示する配列
   const [weaponArray, setArray] = useState(weaponStatus);
   
@@ -339,7 +336,6 @@ const WeaponModal = React.memo((props) => {
     }
   };
 
-  console.log("I have been rendered")
 
   return (
     <div className="modal fade" id="weaponModal" tabIndex="-1" aria-labelledby="weaponModalLabel" aria-hidden="true">

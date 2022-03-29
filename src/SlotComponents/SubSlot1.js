@@ -30,7 +30,6 @@ const SubSlot1 = React.memo((props) => {
     target11.style.display = "none";
   }
 
-  console.log("rendered!!!!!")
 
   return(
     <div className="subSlotModal-wrapper-mid">
