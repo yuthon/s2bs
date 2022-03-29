@@ -8,10 +8,10 @@ import { useFrame, useLoader } from '@react-three/fiber';
 const Model = (props) => {
   const gltf = useLoader(
     GLTFLoader,
-    'splModel049.glb',
+    process.env.PUBLIC_URL + '/splModel049.glb',
     loader => {
       const dracoLoader = new DRACOLoader();
-      dracoLoader.setDecoderPath("/draco-gltf/");
+      dracoLoader.setDecoderPath(process.env.PUBLIC_URL + "/draco-gltf/");
       loader.setDRACOLoader(dracoLoader);
     }
   );
