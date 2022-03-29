@@ -4,16 +4,6 @@
   position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 /* bootstrapで実現不可能なレスポンシブ対応を手書き */
 
 @media (min-width: 992px) {
@@ -153,10 +143,6 @@
     width: 95vw;
     margin-left: calc(-95vw + 100%);
   }
-  /* ギア部分 */
-  /* #gear-components {
-    height: 100vh;
-  } */
   #three-section {
     padding: 0rem;
     position: relative;

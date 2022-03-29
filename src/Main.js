@@ -21,7 +21,6 @@ import BottomsModal from './CharacterSettingComponents/BottomsModal';
 import WakabaIkaT from './images/gear/Clt_FST001.png';
 import Canvas_White from './images/gear/Shs_FST000.png';
 import Headband_White from './images/gear/Hed_FST000.png';
-import Jr_0 from './images/weapon/Splattershot Jr.png';
 import inkRecovery from './images/ability/REC.png';
 
 import { useState } from 'react';
