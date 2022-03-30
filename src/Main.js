@@ -4,7 +4,7 @@ import HeaderImg from './images/nc113873.png';
 import Footer from './Footer';
 // アビリティ関連のコンポーネント
 import AbilityComponents from './AbilityComponents';
-
+import CharacterControlModal from './CharacterControlModal';
 //ギア選択のモーダル
 import HeadGearModal from './HeadComponents/HeadGearModal';
 import ClothesGearModal from './ClothesComponents/ClothesGearModal';
@@ -23,7 +23,7 @@ import Canvas_White from './images/gear/Shs_FST000.png';
 import Headband_White from './images/gear/Hed_FST000.png';
 import inkRecovery from './images/ability/REC.png';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 // 3dモデル
 import Model from './ThreeComponents/Model';
 import Orbit from './ThreeComponents/Orbit';
@@ -32,7 +32,6 @@ import { Canvas, extend } from '@react-three/fiber';
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 extend({ OrbitControls });
-
 
 
 
@@ -65,6 +64,9 @@ const Main = () => {
   const [eyeColor, setEyeColor] = useState("color_0");
   const [bottoms, setBottoms] = useState("Btm_0");
   const [teamColor, setTeamColor] = useState("color_5");
+  // キャラクターの操作
+  const [isZoomEnabled, setZoomState] = useState(false)
+  const [isRotateEnabled, setRotateState] = useState(false)
   
   return(
     <>
@@ -77,7 +79,12 @@ const Main = () => {
     </header>
     <div className="container-xl">
       
-      
+      <CharacterControlModal 
+        isRotateEnabled={isRotateEnabled}
+        isZoomEnabled={isZoomEnabled}
+        setZoomState={setZoomState}
+        setRotateState={setRotateState}
+      />
       <CharacterTypeModal
         characterType={characterType}
         setCharacterType={setCharacterType}
@@ -108,11 +115,12 @@ const Main = () => {
       />
       <div className="row m-0 p-0" id="main">  
         <div className="col-sm-7 col-md-8 col-lg-5 col-xl-5 col-xxl-6" id="three-section">
-            <div id="character-btn">
-              <button type="button" className="btn btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
-                キャラクターの設定
-              </button>
-            </div>
+            <button type="button" id="character-btn" className="btn btn-lg btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
+              キャラクターの設定
+            </button>
+            <button type="button" id="control-btn" className="btn btn-lg btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterControlModal">
+              キャラクターの操作
+            </button>
             
             <Canvas
               style={{ background: '#f0f0e0' }}
@@ -126,11 +134,20 @@ const Main = () => {
                 intensity={0.6} />
               <pointLight
                 position={[0, 11, 20]}
-                intensity={0.7} />
+                intensity={0.2} />
+              <pointLight
+                position={[0, 4, 12]}
+                intensity={0.6} />
+              <pointLight
+                position={[0, 4, -12]}
+                intensity={0.6} />
               <pointLight
                 position={[0, 11, -20]}
-                intensity={0.7} />
-              <Orbit />
+                intensity={0.3} />
+              <Orbit 
+                isZoomEnabled={isZoomEnabled}
+                isRotateEnabled={isRotateEnabled}
+              />
               <Suspense fallback={<Loader />}>
                 <Model
                   headGear={headGear.id}

@@ -18,7 +18,7 @@ const Shoes = (props) => {
   }
   
   return(
-    <div className="gear-card shoes-stripe my-3" id="shoesgear-card">
+    <div className="gear-card shoes-stripe my-2" id="shoesgear-card">
       <p className="gear-header font-type1">クツ</p>
       <ShoesGear
         imagePath={props.shoesImagePath}

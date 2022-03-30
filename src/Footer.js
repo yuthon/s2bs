@@ -38,6 +38,7 @@ const Footer = () => {
           <div className="modal-content bg-secondary text-white font-type2">
             <div className="modal-header">
               <h4 className="modal-title" id="exampleModalLabel">当ページについて</h4>
+              <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body text-start">
               <p>「スプラトゥーン2」は任天堂株式会社の商標かつ著作物であり、当ページは任天堂株式会社とは一切関係のない非公式のものです。</p>

@@ -452,7 +452,7 @@ const gears = [
     {name:"イカイエローVガサネ",path:IkaYellowVGasane,id:"IkaYellowVGasane",brand:"バトロイカ"},
     {name:"イカグリーンV コラボ",path:IkaGreenV_Collabo,id:"IkaGreenV_Collabo",brand:"バトロイカ"},
     {name:"イカブラックV",path:IkaBlackV,id:"IkaBlackV",brand:"バトロイカ"},
-    {name:"イカホワイトV",path:IkaWhite,id:"IkaWhiteV",brand:"バトロイカ"},
+    // {name:"イカホワイトV",path:IkaWhite,id:"IkaWhiteV",brand:"バトロイカ"},
     {name:"イカリスウェット",path:IkariSweat,id:"IkariSweat",brand:"バトロイカ"},
     {name:"イカレッドV コラボ",path:IkaRedV_Collabo,id:"IkaRedV_Collabo",brand:"バトロイカ"},
     {name:"ガチガサネ",path:GatiGasane,id:"GatiGasane",brand:"バトロイカ"},
@@ -1581,10 +1581,6 @@ const ClothesGearModal = React.memo((props) => {
             />
             <GearIcon
               gear={gearsArray[221]}
-              setChosenGear={props.setChosenGear}
-            />
-            <GearIcon
-              gear={gearsArray[222]}
               setChosenGear={props.setChosenGear}
             />
           </div>

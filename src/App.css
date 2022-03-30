@@ -8,7 +8,7 @@
 
 @media (min-width: 992px) {
   #ae-section {
-    height: calc(100vh - 2rem - 6.25rem - 205px);
+    height: calc(100vh - 2rem - 5.25rem - 205px);
     overflow-y: auto;
     overflow-x: hidden;
   }
@@ -472,6 +472,7 @@ footer {
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0.3rem;
   font-size: 0.9rem;
+  user-select: none;
 }
 /* ツールチップの矢印 */
 .ability-reset-tooltip:after {
@@ -504,6 +505,7 @@ footer {
   height: 110px;
   margin: auto;
   cursor: pointer;
+  user-select: none;
 }
 
 /*スロット部分の高さ指定*/
@@ -547,12 +549,6 @@ footer {
 }
 
 /* サブスロットのsvgの位置調整 */
-.subslot-tooltip {
-  position: absolute;
-  z-index: 5;
-  top: -6px;
-  left: -6px;
-}
 
 /*サブスロットの大きさ調整*/
 .sub-slot {
@@ -633,6 +629,7 @@ footer {
   left: -70%;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
+  user-select: none;
 }
 /* ツールチップの矢印 */
 .fav-ability-tooltip:after {
@@ -875,6 +872,7 @@ footer {
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0.3em;
   font-size: 0.9rem;
+  user-select: none;
 }
 
 .weapon-icon-tooltip-arrow {
@@ -901,7 +899,7 @@ footer {
   position: relative;
   width: 40px;
   height: 20px;
-  margin-left: 20px;
+  margin-top: 2px;
 }
 
 .switch-base {
@@ -1237,6 +1235,11 @@ Btmボタン
 #ae-display-area {
   border-radius: 30px;
 }
+#ae-display-area p {
+  text-shadow: 0.25px 0.25px 0 #000, -0.25px -0.25px 0 #000,
+    -0.25px 0.25px 0 #000, 0.25px -0.25px 0 #000, 0px 0.25px 0 #000,
+    0-0.25px 0 #000, -0.25px 0 0 #000, 0.25px 0 0 #000;
+}
 
 .ae-card {
   border-bottom: dotted 3px #dee2e6;
@@ -1249,12 +1252,12 @@ Btmボタン
 }
 /* ヘッダー */
 #ae-header {
-  height: 2.55rem;
+  height: 2.25rem;
   background-color: rgba(0, 0, 0, 0.7);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   color: white;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin: 0px;
 }
 
@@ -1346,13 +1349,19 @@ Btmボタン
   right: 10px;
   z-index: 1;
 }
+#control-btn {
+  position: absolute;
+  top: 5rem;
+  right: 10px;
+  z-index: 1;
+}
 
 /*  */
 /* ブキの表示部分 */
 /*  */
 #weapon-card {
   width: 100%;
-  height: 170px;
+  height: 148px;
   background: repeating-linear-gradient(
     45deg,
     #dbe826,
@@ -1361,7 +1370,6 @@ Btmボタン
     #c4d412 40px
   );
   border-radius: 30px;
-  padding-top: 7px;
   position: relative;
 }
 /* ブキ表示部分のフッター */
@@ -1393,6 +1401,7 @@ Btmボタン
   bottom: -0.5rem;
   left: 20%;
   display: none;
+  user-select: none;
 }
 
 /* サブとスペシャルの背景 */
@@ -1427,6 +1436,7 @@ Btmボタン
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0.3em;
   font-size: 0.9rem;
+  user-select: none;
 }
 
 .gear-tooltip:after {
@@ -1459,6 +1469,7 @@ Btmボタン
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0.3em;
   font-size: 0.9rem;
+  user-select: none;
 }
 /* 右のサブスロットのツールチップ */
 .slot-tooltip-right {
@@ -1473,6 +1484,7 @@ Btmボタン
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0.3em;
   font-size: 0.9rem;
+  user-select: none;
 }
 /* メインスロットのツールチップ */
 .slot-tooltip-left {
@@ -1487,6 +1499,7 @@ Btmボタン
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0.3em;
   font-size: 0.9rem;
+  user-select: none;
 }
 
 /* 上側に表示する場合だとフォントサイズ変更の際に左右の表示位置が*/
@@ -1518,6 +1531,7 @@ Btmボタン
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0.3em;
   font-size: 0.9rem;
+  user-select: none;
 }
 
 .gear-icon:hover .gear-icon-tooltip-arrow,

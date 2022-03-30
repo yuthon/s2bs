@@ -342,7 +342,10 @@ const WeaponModal = React.memo((props) => {
       <div className="modal-dialog modal-lg">
         <div className="modal-content wpModalbg text-white bg-secondary">
           <div className="modal-header">
-            <h5 className="modal-title" id="weaponModalLabel">ブキを選択</h5>
+            <div className="d-flex">
+              <h3 className="modal-title" id="weaponModalLabel">ブキを選択</h3>
+              <h5 className="my-auto ms-3">※キャラクターのモデルには反映されません</h5>
+            </div>
             <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div className="container pt-2 pb-1">
@@ -367,6 +370,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[0]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -389,6 +393,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[1]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -411,6 +416,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[2]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -433,6 +439,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[3]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -455,6 +462,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[4]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -477,6 +485,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[5]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -499,6 +508,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[6]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -521,6 +531,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[7]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -543,6 +554,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[8]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -565,6 +577,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[9]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -587,6 +600,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[10]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -609,6 +623,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[11]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -631,6 +646,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[12]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -653,6 +669,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[13]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -675,6 +692,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[14]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -697,6 +715,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[15]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -719,6 +738,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[16]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -741,6 +761,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[17]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -763,6 +784,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[18]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -785,6 +807,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[19]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -807,6 +830,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[20]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -829,6 +853,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[21]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -851,6 +876,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[22]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -873,6 +899,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[23]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -895,6 +922,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[24]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -917,6 +945,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[25]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -939,6 +968,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[26]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -962,6 +992,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[27]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -985,6 +1016,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[28]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1008,6 +1040,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[29]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1031,6 +1064,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[30]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1054,6 +1088,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[31]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1077,6 +1112,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[32]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1100,6 +1136,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[33]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1123,6 +1160,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[34]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1146,6 +1184,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[35]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1169,6 +1208,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[36]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1192,6 +1232,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[37]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1215,6 +1256,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[38]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1238,6 +1280,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[39]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1261,6 +1304,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[40]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1284,6 +1328,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[41]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1307,6 +1352,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[42]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1330,6 +1376,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[43]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1353,6 +1400,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[44]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1376,6 +1424,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[45]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1399,6 +1448,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[46]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1422,6 +1472,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[47]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1445,6 +1496,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[48]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1468,6 +1520,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[49]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1491,6 +1544,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[50]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1514,6 +1568,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[51]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1537,6 +1592,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[52]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1560,6 +1616,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[53]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1583,6 +1640,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[54]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1606,6 +1664,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[55]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1629,6 +1688,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[56]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1652,6 +1712,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[57]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1675,6 +1736,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[58]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1698,6 +1760,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[59]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1721,6 +1784,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[60]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1744,6 +1808,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[61]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1767,6 +1832,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[62]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1790,6 +1856,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[63]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1813,6 +1880,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[64]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1836,6 +1904,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[65]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1859,6 +1928,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[66]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1882,6 +1952,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[67]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1905,6 +1976,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[68]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1928,6 +2000,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[69]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1951,6 +2024,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[70]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1974,6 +2048,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[71]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -1997,6 +2072,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[72]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2020,6 +2096,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[73]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2043,6 +2120,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[74]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2066,6 +2144,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[75]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2089,6 +2168,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[76]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2112,6 +2192,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[77]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2135,6 +2216,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[78]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2158,6 +2240,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[79]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2181,6 +2264,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[80]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2204,6 +2288,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[81]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2227,6 +2312,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[82]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2250,6 +2336,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[83]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2273,6 +2360,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[84]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2296,6 +2384,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[85]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2319,6 +2408,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[86]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2342,6 +2432,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[87]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2365,6 +2456,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[88]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2388,6 +2480,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[89]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2411,6 +2504,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[90]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2434,6 +2528,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[91]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2457,6 +2552,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[92]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2480,6 +2576,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[93]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2503,6 +2600,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[94]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2526,6 +2624,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[95]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2549,6 +2648,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[96]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2572,6 +2672,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[97]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2595,6 +2696,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[98]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2618,6 +2720,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[99]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2641,6 +2744,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[100]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2664,6 +2768,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[101]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2687,6 +2792,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[102]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2710,6 +2816,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[103]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2733,6 +2840,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[104]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2756,6 +2864,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[105]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2779,6 +2888,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[106]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2802,6 +2912,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[107]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2825,6 +2936,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[108]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2848,6 +2960,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[109]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2871,6 +2984,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[110]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2894,6 +3008,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[111]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2917,6 +3032,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[112]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2940,6 +3056,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[113]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2963,6 +3080,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[114]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -2986,6 +3104,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[115]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3009,6 +3128,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[116]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3032,6 +3152,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[117]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3055,6 +3176,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[118]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3078,6 +3200,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[119]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3101,6 +3224,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[120]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3124,6 +3248,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[121]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3147,6 +3272,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[122]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3170,6 +3296,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[123]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3193,6 +3320,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[124]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3216,6 +3344,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[125]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3239,6 +3368,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[126]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3262,6 +3392,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[127]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3285,6 +3416,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[128]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3308,6 +3440,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[129]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3331,6 +3464,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[130]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3354,6 +3488,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[131]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3377,6 +3512,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[132]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3400,6 +3536,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[133]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3423,6 +3560,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[134]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3446,6 +3584,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[135]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3469,6 +3608,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[136]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3492,6 +3632,7 @@ const WeaponModal = React.memo((props) => {
                 props.weaponStatus(weaponArray[137]);
                 }
               }
+              data-bs-dismiss="modal"
             >
               <div className="weapon-icon-tooltip-arrow">
                 <div className="tooltip-container">
@@ -3515,6 +3656,7 @@ const WeaponModal = React.memo((props) => {
                   props.weaponStatus(weaponArray[138]);
                   }
                 }
+                data-bs-dismiss="modal"
               >
                 <div className="weapon-icon-tooltip-arrow">
                   <div className="tooltip-container">

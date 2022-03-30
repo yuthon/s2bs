@@ -18,7 +18,7 @@ const Head = (props) => {
   }
   
   return(
-    <div className="gear-card head-stripe my-3" id="headgear-card">
+    <div className="gear-card head-stripe my-2" id="headgear-card">
       <p className="gear-header font-type1">アタマ</p>
       <HeadGear
         passImagePath={props.headImagePath}
