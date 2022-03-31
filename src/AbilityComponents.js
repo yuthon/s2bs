@@ -73,7 +73,7 @@ const AbilityComponents = (props) => {
     </div>
     <div className="font-type2 text-white" id="ae-section">
       <WeaponModal
-        weaponStatus={setWeaponStatus} 
+        setWeaponStatus={setWeaponStatus} 
       />
       <Weapon
         weaponStatus={weaponStatus} 

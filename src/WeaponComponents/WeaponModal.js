@@ -370,7 +370,7 @@ const WeaponModal = React.memo((props) => {
                 key={index}
                 className="weapon-icon"
                 onClick={()=>{
-                  props.weaponStatus(weapon);
+                  props.setWeaponStatus(weapon);
                   }
                 }
                 data-bs-dismiss="modal"

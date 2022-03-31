@@ -147,10 +147,10 @@ import Layered_White from '../images/gear/Clt_TLY000.png';
 import WakabaIkaT from '../images/gear/Clt_FST001.png';
 import IkaYellowVGasane from '../images/gear/Clt_TLY013.png';
 import IkaGreenV_Collabo from '../images/gear/Clt_TES045.png';
-import IkaBlackV from '../images/gear/Clt_TES044.png';
-// import IkaWhiteV from '../images/gear/Clt_TES035.png';
-import IkariSweat from '../images/gear/Clt_SWT006.png';
 import IkaRedV_Collabo from '../images/gear/Clt_TES044.png';
+import IkaBlackV from '../images/gear/Clt_TES030.png';
+import IkaWhiteV from '../images/gear/Clt_TES035.png';
+import IkariSweat from '../images/gear/Clt_SWT006.png';
 import GatiGasane from '../images/gear/Clt_TLY005.png';
 import GatiBlack from '../images/gear/Clt_TES023.png';
 import GatiWhite from '../images/gear/Clt_TES022.png';
@@ -452,7 +452,7 @@ const gears = [
     {name:"イカイエローVガサネ",path:IkaYellowVGasane,id:"IkaYellowVGasane",brand:"バトロイカ"},
     {name:"イカグリーンV コラボ",path:IkaGreenV_Collabo,id:"IkaGreenV_Collabo",brand:"バトロイカ"},
     {name:"イカブラックV",path:IkaBlackV,id:"IkaBlackV",brand:"バトロイカ"},
-    // {name:"イカホワイトV",path:IkaWhite,id:"IkaWhiteV",brand:"バトロイカ"},
+    {name:"イカホワイトV",path:IkaWhiteV,id:"IkaWhiteV",brand:"バトロイカ"},
     {name:"イカリスウェット",path:IkariSweat,id:"IkariSweat",brand:"バトロイカ"},
     {name:"イカレッドV コラボ",path:IkaRedV_Collabo,id:"IkaRedV_Collabo",brand:"バトロイカ"},
     {name:"ガチガサネ",path:GatiGasane,id:"GatiGasane",brand:"バトロイカ"},
