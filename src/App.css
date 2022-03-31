@@ -390,6 +390,15 @@ footer {
     #6b6b6b 40px
   );
 }
+.gray-stripe-dense {
+  background: repeating-linear-gradient(
+    45deg,
+    #333333,
+    #333333 20px,
+    #4d4d4d 20px,
+    #4d4d4d 40px
+  );
+}
 
 /* 3dモデルの表示領域 */
 
@@ -1234,11 +1243,6 @@ Btmボタン
 
 #ae-display-area {
   border-radius: 30px;
-}
-#ae-display-area p {
-  text-shadow: 0.25px 0.25px 0 #000, -0.25px -0.25px 0 #000,
-    -0.25px 0.25px 0 #000, 0.25px -0.25px 0 #000, 0px 0.25px 0 #000,
-    0-0.25px 0 #000, -0.25px 0 0 #000, 0.25px 0 0 #000;
 }
 
 .ae-card {
