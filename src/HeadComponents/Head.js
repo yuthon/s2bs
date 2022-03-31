@@ -16,17 +16,18 @@ const Head = (props) => {
     props.setSubAbilityName2("empty");
     props.setSubAbilityImagePath2(empty);
   }
-  
+
+
   return(
     <div className="gear-card head-stripe my-2" id="headgear-card">
       <p className="gear-header font-type1">アタマ</p>
       <HeadGear
-        passImagePath={props.headImagePath}
+        imagePath={props.headGear.path}
       />
       <MainSlot0
-        imagePath={props.mainAbilityImagePath}
-        setImagePath={props.setMainAbilityImagePath}
-        setAbilityName={props.setMainAbilityName}
+        setAbility={props.setMainAbility}
+        ability={props.mainAbility}
+        gearName={props.headGear.name}
       />
       <SubSlot0
         imagePath={props.subAbilityImagePath0}

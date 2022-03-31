@@ -1515,6 +1515,46 @@ Btmボタン
   top: -0.85rem;
   left: 37%;
 }
+/* ギアとギアパワーの組み合わせが存在しない時の警告ツールチップ */
+.slot-tooltip-warning {
+  width: 215px;
+  height: 4.5rem;
+  position: absolute;
+  top: -5.25rem;
+  left: -15px;
+  z-index: 2;
+  padding: 0rem 0.5rem 0.2rem 0.5rem;
+  color: #ffffff;
+  background: #dd293b;
+  border-radius: 0.3em;
+  font-size: 0.9rem;
+  user-select: none;
+  margin: 0px;
+  /* display: none; */
+}
+.slot-tooltip-warning:after {
+  width: 0.8rem;
+  display: block;
+  z-index: 2;
+  border-top: 0.7rem solid #dd293b;
+  border-right: 0.38rem solid transparent;
+  border-left: 0.38rem solid transparent;
+  position: absolute;
+  bottom: -0.7rem;
+  left: 30px;
+  content: '';
+}
+/* ツールチップを閉じるボタン */
+.tooltip-close-btn {
+  width: 20px;
+  height: 20px;
+  margin-left: 180px;
+  cursor: pointer;
+}
+/* 閉じるボタンのホバーしたとき */
+.tooltip-close-btn:hover path {
+  fill: #fff;
+}
 
 .ability-icon:hover .slot-tooltip,
 .ability-icon:hover .tooltip-top-arrow {

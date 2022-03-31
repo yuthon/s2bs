@@ -21,12 +21,12 @@ const Clothes = (props) => {
     <div className="gear-card clothes-stripe my-auto" id="clothesgear-card">
       <p className="gear-header font-type1">フク</p>
       <ClothesGear
-        imagePath={props.clothesImagePath}
+        imagePath={props.clothesGear.path}
       />
       <MainSlot1
-        imagePath={props.mainAbilityImagePath}
-        setImagePath={props.setMainAbilityImagePath}
-        setAbilityName={props.setMainAbilityName}
+        setAbility={props.setMainAbility}
+        ability={props.mainAbility}
+        gearName={props.clothesGear.name}
       />
       <SubSlot3
         imagePath={props.subAbilityImagePath3}

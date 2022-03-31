@@ -77,7 +77,7 @@ const Main = () => {
         <img className="header-image" src={HeaderImg} alt=""/>
       </div>
     </header>
-    <div className="container-xl">
+    <div className="container-xxl">
       
       <CharacterControlModal 
         isRotateEnabled={isRotateEnabled}
@@ -124,7 +124,7 @@ const Main = () => {
             
             <Canvas
               style={{ background: '#f0f0e0' }}
-              camera={{ position: [0, 9, 12] }}
+              camera={{ position: [0, 9, 13] }}
             >
               <ambientLight
                 color={0xffffff}
@@ -165,9 +165,9 @@ const Main = () => {
         </div>
         <div className="col-sm-5 col-md-4 col-lg-7 col-xl-7 col-xxl-6 px-0" id="gear-and-ability">
           <AbilityComponents 
-            headImagePath={headGear.path}
-            clothesImagePath={clothesGear.path}
-            shoesImagePath={shoesGear.path}
+            headGear={headGear}
+            clothesGear={clothesGear}
+            shoesGear={shoesGear}
           />
           <HeadGearModal
             chosenGear={headGear}

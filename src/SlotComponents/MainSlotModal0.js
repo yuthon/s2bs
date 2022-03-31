@@ -38,18 +38,16 @@ const MainSlotModal0 = (props) => {
           <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(empty);
-                props.setAbilityName("empty");
+                props.setAbility({name:"empty", path:empty});
                 }
               }
             >
-              <img className="abilitymodal-img" src={empty} alt="スロットを空にする"/>
+              <img className="abilitymodal-img" src={empty} alt=""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(inkSaverMain);
-                props.setAbilityName("inkSaverMain");
+                props.setAbility({name:"インク効率アップ(メイン)", path:inkSaverMain});
                 }
               }
             >
@@ -58,88 +56,79 @@ const MainSlotModal0 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(inkSaverSub);
-                props.setAbilityName("inkSaverSub");
+                props.setAbility({name:"インク効率アップ(サブ)", path:inkSaverSub});
                 }
               }
             >
-              <img className="abilitymodal-img" src={inkSaverSub} alt= "インク効率アップ（サブ）"/>
+              <img className="abilitymodal-img" src={inkSaverSub} alt= ""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(inkRecorvery);
-                props.setAbilityName("inkRecorvery");
+                props.setAbility({name:"インク回復力アップ", path:inkRecorvery});
                 }
               }
             >
-              <img className="abilitymodal-img" src={inkRecorvery} alt= "インク回復アップ"/>
+              <img className="abilitymodal-img" src={inkRecorvery} alt= ""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(runSpeed);
-                props.setAbilityName("runSpeed");
+                props.setAbility({name:"ヒト移動速度アップ", path:runSpeed});
                 }
               }
             >
-              <img className="abilitymodal-img" src={runSpeed} alt= "ヒト移動速度アップ"/>
+              <img className="abilitymodal-img" src={runSpeed} alt= ""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(swimSpeed);
-                props.setAbilityName("swimSpeed");
+                props.setAbility({name:"イカダッシュ速度アップ", path:swimSpeed});
                 }
               }
             >
-              <img className="abilitymodal-img" src={swimSpeed} alt= "イカ移動速度アップ"/>
+              <img className="abilitymodal-img" src={swimSpeed} alt= ""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(specialCharge);
-                props.setAbilityName("specialCharge");
+                props.setAbility({name:"スペシャル増加量アップ", path:specialCharge});
                 }
               }
             >
-              <img className="abilitymodal-img" src={specialCharge} alt= "スペシャル増加アップ"/>
+              <img className="abilitymodal-img" src={specialCharge} alt= ""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(specialSaver);
-                props.setAbilityName("specialSaver");
+                props.setAbility({name:"スペシャル減少量ダウン", path:specialSaver});
                 }
               }
             >
-              <img className="abilitymodal-img" src={specialSaver} alt= "スペシャル減少量ダウン"/>
+              <img className="abilitymodal-img" src={specialSaver} alt= ""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(specialPower);
-                props.setAbilityName("specialPower");
+                props.setAbility({name:"スペシャル性能アップ", path:specialPower});
                 }
               }
             >
-              <img className="abilitymodal-img" src={specialPower} alt= "スペシャル性能アップ"/>
+              <img className="abilitymodal-img" src={specialPower} alt= ""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(qr);
-                props.setAbilityName("qr");
+                props.setAbility({name:"復活時間短縮", path:qr});
                 }
               }
             >
-              <img className="abilitymodal-img" src={qr} alt= "復活時間短縮"/>
+              <img className="abilitymodal-img" src={qr} alt= ""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(quickSuperJump);
-                props.setAbilityName("quickSuperJump");
+                props.setAbility({name:"スーパージャンプ時間短縮", path:quickSuperJump});
                 }
               }
             >
@@ -148,82 +137,74 @@ const MainSlotModal0 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(subPower);
-                props.setAbilityName("subPower");
+                props.setAbility({name:"サブ性能アップ", path:subPower});
                 }
               }
             >
-              <img className="abilitymodal-img" src={subPower} alt= "サブ性能アップ"/>
+              <img className="abilitymodal-img" src={subPower} alt= ""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(inkRes);
-                props.setAbilityName("inkRes");
+                props.setAbility({name:"相手インク影響軽減", path:inkRes});
                 }
               }
             >
-              <img className="abilitymodal-img" src={inkRes} alt= "相手インク影響軽減"/>
+              <img className="abilitymodal-img" src={inkRes} alt= ""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(bombDefence);
-                props.setAbilityName("bombDefence");
+                props.setAbility({name:"爆風ダメージ軽減・改", path:bombDefence});
                 }
               }
             >
-              <img className="abilitymodal-img" src={bombDefence} alt= "爆風軽減"/>
+              <img className="abilitymodal-img" src={bombDefence} alt= ""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(mpu);
-                props.setAbilityName("mpu");
+                props.setAbility({name:"メイン性能アップ", path:mpu});
                 }
               }
             >
-              <img className="abilitymodal-img" src={mpu} alt= "メイン性能アップ"/>
+              <img className="abilitymodal-img" src={mpu} alt= ""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(openingGanbit);
-                props.setAbilityName("openingGanbit");
+                props.setAbility({name:"スタートダッシュ", path:openingGanbit});
                 }
               }
             >
-              <img className="abilitymodal-img" src={openingGanbit} alt= "スタートダッシュ"/>
+              <img className="abilitymodal-img" src={openingGanbit} alt= ""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(lde);
-                props.setAbilityName("lde");
+                props.setAbility({name:"ラストスパート", path:lde});
                 }
               }
             >
-              <img className="abilitymodal-img" src={lde} alt= "ラストスパート"/>
+              <img className="abilitymodal-img" src={lde} alt= ""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(tenacity);
-                props.setAbilityName("tenacity");
+                props.setAbility({name:"逆境強化", path:tenacity});
                 }
               }
             >
-              <img className="abilitymodal-img" src={tenacity} alt= "逆境"/>
+              <img className="abilitymodal-img" src={tenacity} alt= ""/>
             </div>
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setImagePath(comeback);
-                props.setAbilityName("comeback");
+                props.setAbility({name:"カムバック", path:comeback});
                 }
               }
             >
-              <img className="abilitymodal-img" src={comeback} alt= "カムバック"/>
+              <img className="abilitymodal-img" src={comeback} alt= ""/>
             </div>
           </div>
           </div>

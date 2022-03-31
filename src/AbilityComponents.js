@@ -19,14 +19,10 @@ import InkArmor from './images/subSP/Wsp_InkArmor.png';
 const AbilityComponents = (props) => {
   //ブキの名前とその他の情報を管理
   const [weaponStatus, setWeaponStatus] = useState({name:"わかばシューター", sub:"スプラッシュボム", special:"インクアーマー", sp:180, weight:"light", path:Jr_0, pathSub:SplatBomb,pathSpecial:InkArmor});
-  //メインスロットのアビリティの画像のpathを管理
-  const [mainAbilityImagePath0, setMainAbilityImagePath0] = useState(empty);
-  const [mainAbilityImagePath1, setMainAbilityImagePath1] = useState(empty);
-  const [mainAbilityImagePath2, setMainAbilityImagePath2] = useState(empty);
-  //メインスロットのアビリティの名前を管理
-  const [mainAbilityName0, setMainAbilityName0] = useState(null);
-  const [mainAbilityName1, setMainAbilityName1] = useState(null);
-  const [mainAbilityName2, setMainAbilityName2] = useState(null);
+  // メインスロットのギアパワーを管理
+  const [mainAbility0, setMainAbility0] = useState({name:"empty",path:empty});
+  const [mainAbility1, setMainAbility1] = useState({name:"empty",path:empty});
+  const [mainAbility2, setMainAbility2] = useState({name:"empty",path:empty});
   //サブスロットモーダルで選択されたアビリティの画像のパスを管理
   const [subAbilityImagePath0, setSubAbilityImagePath0] = useState(empty);
   const [subAbilityImagePath1, setSubAbilityImagePath1] = useState(empty);
@@ -52,13 +48,12 @@ const AbilityComponents = (props) => {
     <>
       <div className="px-0 d-flex flex-md-row flex-wrap" id="gear-components">
       <Head
-        headImagePath={props.headImagePath}
+        headGear={props.headGear}
         subAbilityImagePath0={subAbilityImagePath0}
         subAbilityImagePath1={subAbilityImagePath1}
         subAbilityImagePath2={subAbilityImagePath2}
-        mainAbilityImagePath={mainAbilityImagePath0}
-        setMainAbilityImagePath={setMainAbilityImagePath0}
-        setMainAbilityName={setMainAbilityName0}
+        mainAbility={mainAbility0}
+        setMainAbility={setMainAbility0}
         setSubAbilityName0={setSubAbilityName0}
         setSubAbilityImagePath0={setSubAbilityImagePath0}
         setSubAbilityName1={setSubAbilityName1}
@@ -67,13 +62,12 @@ const AbilityComponents = (props) => {
         setSubAbilityImagePath2={setSubAbilityImagePath2}
       />
       <Clothes
-        clothesImagePath={props.clothesImagePath}
+        clothesGear={props.clothesGear}
         subAbilityImagePath3={subAbilityImagePath3}
         subAbilityImagePath4={subAbilityImagePath4}
         subAbilityImagePath5={subAbilityImagePath5}
-        mainAbilityImagePath={mainAbilityImagePath1}
-        setMainAbilityImagePath={setMainAbilityImagePath1}
-        setMainAbilityName={setMainAbilityName1}
+        mainAbility={mainAbility1}
+        setMainAbility={setMainAbility1}
         setSubAbilityName3={setSubAbilityName3}
         setSubAbilityImagePath3={setSubAbilityImagePath3}
         setSubAbilityName4={setSubAbilityName4}
@@ -82,13 +76,12 @@ const AbilityComponents = (props) => {
         setSubAbilityImagePath5={setSubAbilityImagePath5}
       />
       <Shoes
-        shoesImagePath={props.shoesImagePath}
+        shoesGear={props.shoesGear}
         subAbilityImagePath6={subAbilityImagePath6}
         subAbilityImagePath7={subAbilityImagePath7}
         subAbilityImagePath8={subAbilityImagePath8}
-        mainAbilityImagePath={mainAbilityImagePath2}
-        setMainAbilityImagePath={setMainAbilityImagePath2}
-        setMainAbilityName={setMainAbilityName2}
+        mainAbility={mainAbility2}
+        setMainAbility={setMainAbility2}
         setSubAbilityName6={setSubAbilityName6}
         setSubAbilityImagePath6={setSubAbilityImagePath6}
         setSubAbilityName7={setSubAbilityName7}
@@ -106,9 +99,9 @@ const AbilityComponents = (props) => {
       />
       <AbilityPoint
         weaponStatus={weaponStatus}
-        mainAbilityName0={mainAbilityName0}
-        mainAbilityName1={mainAbilityName1}
-        mainAbilityName2={mainAbilityName2}
+        mainAbilityName0={mainAbility0.name}
+        mainAbilityName1={mainAbility1.name}
+        mainAbilityName2={mainAbility2.name}
         subAbilityName0={subAbilityName0}
         subAbilityName1={subAbilityName1}
         subAbilityName2={subAbilityName2}
