@@ -35,19 +35,19 @@ const Footer = () => {
     </footer>
     <div className="modal fade" id="aboutModal" tabIndex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered">
-          <div className="modal-content bg-secondary text-white font-type2">
+          <div className="modal-content bg-dark text-white font-type2">
             <div className="modal-header">
               <h4 className="modal-title" id="exampleModalLabel">当ページについて</h4>
               <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body text-start">
               <p>「スプラトゥーン2」は任天堂株式会社の商標かつ著作物であり、当ページは任天堂株式会社とは一切関係のない非公式のものです。</p>
-              <p>制作に当たって<a className="text-white" href="https://leanny.github.io/">Leanさんの収集したデータ</a>を参考にしています。</p>
+              <p>制作に当たり第三者の収集したデータや独自に検証した結果を参考にしていますが、小数点数に対する処理の仕方の違いなどによって実際のゲーム内の数値とは異なる場合があることをご了承ください。</p><p>ギアパワー効果などのデータ : <a className="text-white" href="https://leanny.github.io/">Leanさんの収集したデータ</a></p>
               <p>使用している3Dモデルの素材は<a className="text-white" href="https://www.models-resource.com/nintendo_switch/splatoon2/">こちらのサイト</a>で配布されています。</p>
               <p>何かご連絡の際は、お手数ですが<a className="text-white" href="https://twitter.com/PP5rtm">Twitter</a>の方までお願いいたします。</p>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-secondary m-auto" data-bs-dismiss="modal">とじる</button>
+              <button type="button" className="btn btn-dark m-auto" data-bs-dismiss="modal">とじる</button>
             </div>
           </div>
         </div>
