@@ -42,10 +42,10 @@ const AbilityPoint = (props) => {
   let inkSaverMainAP = 0;
   
   for (let i = 0; i < 9; i++) {
-    if (subAbilityName[i] === "inkSaverMain") {
+    if (subAbilityName[i] === "インク効率アップ(メイン)") {
       inkSaverMainAP = inkSaverMainAP + 3
     }
-    if (mainAbilityName[i] === "inkSaverMain") {
+    if (mainAbilityName[i] === "インク効率アップ(メイン)") {
       inkSaverMainAP = inkSaverMainAP + 10
     }
   }
@@ -53,10 +53,10 @@ const AbilityPoint = (props) => {
   let inkSaverSubAP = 0;
   
   for (let i = 0; i < 9; i++) {
-    if (subAbilityName[i] === "inkSaverSub") {
+    if (subAbilityName[i] === "インク効率アップ(サブ)") {
       inkSaverSubAP = inkSaverSubAP + 3;
     }
-    if (mainAbilityName[i] === "inkSaverSub") {
+    if (mainAbilityName[i] === "インク効率アップ(サブ)") {
       inkSaverSubAP = inkSaverSubAP + 10;
     }
   }
@@ -64,10 +64,10 @@ const AbilityPoint = (props) => {
   let inkRecoveryAP = 0;
   
   for (let i = 0; i < 9; i++) {
-    if (subAbilityName[i] === "inkRecovery") {
+    if (subAbilityName[i] === "インク回復力アップ") {
       inkRecoveryAP = inkRecoveryAP + 3;
     }
-    if (mainAbilityName[i] === "inkRecovery") {
+    if (mainAbilityName[i] === "インク回復力アップ") {
       inkRecoveryAP = inkRecoveryAP + 10;
     }
   }
@@ -75,10 +75,10 @@ const AbilityPoint = (props) => {
   let runSpeedAP = 0;
   
   for (let i = 0; i < 9; i++) {
-    if (subAbilityName[i] === "runSpeed") {
+    if (subAbilityName[i] === "ヒト移動速度アップ") {
       runSpeedAP = runSpeedAP + 3;
     }
-    if (mainAbilityName[i] === "runSpeed") {
+    if (mainAbilityName[i] === "ヒト移動速度アップ") {
       runSpeedAP = runSpeedAP + 10;
     }
   }
@@ -86,10 +86,10 @@ const AbilityPoint = (props) => {
   let swimSpeedAP = 0;
   
   for (let i = 0; i < 9; i++) {
-    if (subAbilityName[i] === "swimSpeed") {
+    if (subAbilityName[i] === "イカダッシュ速度アップ") {
       swimSpeedAP = swimSpeedAP + 3;
     }
-    if (mainAbilityName[i] === "swimSpeed") {
+    if (mainAbilityName[i] === "イカダッシュ速度アップ") {
       swimSpeedAP = swimSpeedAP + 10;
     }
   }
@@ -97,10 +97,10 @@ const AbilityPoint = (props) => {
   let specialChargeAP = 0;
   
   for (let i = 0; i < 9; i++) {
-    if (subAbilityName[i] === "specialCharge") {
+    if (subAbilityName[i] === "スペシャル増加量アップ") {
       specialChargeAP = specialChargeAP + 3;
     }
-    if (mainAbilityName[i] === "specialCharge") {
+    if (mainAbilityName[i] === "スペシャル増加量アップ") {
       specialChargeAP = specialChargeAP + 10;
     }
   }
@@ -108,10 +108,10 @@ const AbilityPoint = (props) => {
   let specialSaverAP = 0;
   
   for (let i = 0; i < 9; i++) {
-    if (subAbilityName[i] === "specialSaver") {
+    if (subAbilityName[i] === "スペシャル減少量ダウン") {
       specialSaverAP = specialSaverAP + 3;
     }
-    if (mainAbilityName[i] === "specialSaver") {
+    if (mainAbilityName[i] === "スペシャル減少量ダウン") {
       specialSaverAP = specialSaverAP + 10;
     }
   }
@@ -119,10 +119,10 @@ const AbilityPoint = (props) => {
   let specialPowerAP = 0;
   
   for (let i = 0; i < 9; i++) {
-    if (subAbilityName[i] === "specialPower") {
+    if (subAbilityName[i] === "スペシャル性能アップ") {
       specialPowerAP = specialPowerAP + 3;
     }
-    if (mainAbilityName[i] === "specialPower") {
+    if (mainAbilityName[i] === "スペシャル性能アップ") {
       specialPowerAP = specialPowerAP + 10;
     }
   }
@@ -130,10 +130,10 @@ const AbilityPoint = (props) => {
   let qrAP = 0;
   
   for (let i = 0; i < 9; i++) {
-    if (subAbilityName[i] === "qr") {
+    if (subAbilityName[i] === "復活時間短縮") {
       qrAP = qrAP + 3;
     }
-    if (mainAbilityName[i] === "qr") {
+    if (mainAbilityName[i] === "復活時間短縮") {
       qrAP = qrAP + 10;
     }
   }
@@ -141,10 +141,10 @@ const AbilityPoint = (props) => {
   let quickSuperJumpAP = 0;
   
   for (let i = 0; i < 9; i++) {
-    if (subAbilityName[i] === "quickSuperJump") {
+    if (subAbilityName[i] === "スーパージャンプ時間短縮") {
       quickSuperJumpAP = quickSuperJumpAP + 3;
     }
-    if (mainAbilityName[i] === "quickSuperJump") {
+    if (mainAbilityName[i] === "スーパージャンプ時間短縮") {
       quickSuperJumpAP = quickSuperJumpAP + 10;
     }
   }
@@ -152,10 +152,10 @@ const AbilityPoint = (props) => {
   let subPowerAP = 0;
   
   for (let i = 0; i < 9; i++) {
-    if (subAbilityName[i] === "subPower") {
+    if (subAbilityName[i] === "サブ性能アップ") {
       subPowerAP = subPowerAP + 3;
     }
-    if (mainAbilityName[i] === "subPower") {
+    if (mainAbilityName[i] === "サブ性能アップ") {
       subPowerAP = subPowerAP + 10;
     }
   }
@@ -163,10 +163,10 @@ const AbilityPoint = (props) => {
   let inkResAP = 0;
   
   for (let i = 0; i < 9; i++) {
-    if (subAbilityName[i] === "inkRes") {
+    if (subAbilityName[i] === "相手インク影響軽減") {
       inkResAP = inkResAP + 3;
     }
-    if (mainAbilityName[i] === "inkRes") {
+    if (mainAbilityName[i] === "相手インク影響軽減") {
       inkResAP = inkResAP + 10;
     }
   }
@@ -174,10 +174,10 @@ const AbilityPoint = (props) => {
   let bombDefenceAP = 0;
   
   for (let i = 0; i < 9; i++) {
-    if (subAbilityName[i] === "bombDefence") {
+    if (subAbilityName[i] === "爆風ダメージ軽減・改") {
       bombDefenceAP = bombDefenceAP + 3;
     }
-    if (mainAbilityName[i] === "bombDefence") {
+    if (mainAbilityName[i] === "爆風ダメージ軽減・改") {
       bombDefenceAP = bombDefenceAP + 10;
     }
   }
@@ -185,10 +185,10 @@ const AbilityPoint = (props) => {
   let mpuAP = 0;
   
   for (let i = 0; i < 9; i++) {
-    if (subAbilityName[i] === "mpu") {
+    if (subAbilityName[i] === "メイン性能アップ") {
       mpuAP = mpuAP + 3;
     }
-    if (mainAbilityName[i] === "mpu") {
+    if (mainAbilityName[i] === "メイン性能アップ") {
       mpuAP = mpuAP + 10;
     }
   }

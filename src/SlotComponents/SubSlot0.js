@@ -45,8 +45,7 @@ const SubSlot0 = React.memo((props) => {
         <img className="subslot-img" src={props.imagePath} alt=""/>
       </div>
       <SubSlotModal0
-        setAbilityName={props.setAbilityName}
-        setImagePath={props.setImagePath}
+        setAbility={props.setAbility}
       />
     </div>
   );

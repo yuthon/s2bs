@@ -2,7 +2,7 @@ import empty from '../images/ability/empty.png';
 import specialCharge from '../images/ability/SCU.png';
 import inkSaverMain from '../images/ability/ISMain.png';
 import inkSaverSub from '../images/ability/ISSub.png';
-import inkRecorvery from '../images/ability/REC.png';
+import inkRecovery from '../images/ability/REC.png';
 import runSpeed from '../images/ability/RSU.png';
 import swimSpeed from '../images/ability/SSU.png';
 import specialSaver from '../images/ability/SS.png';
@@ -35,7 +35,7 @@ const MainSlotModal0 = (props) => {
             />
           </svg>
           <div className="ability-list d-flex flex-wrap">
-          <div
+            <div
               className="ability-icon ability"
               onClick={()=>{
                 props.setAbility({name:"empty", path:empty});
@@ -65,11 +65,11 @@ const MainSlotModal0 = (props) => {
             <div
               className="ability-icon ability"
               onClick={()=>{
-                props.setAbility({name:"インク回復力アップ", path:inkRecorvery});
+                props.setAbility({name:"インク回復力アップ", path:inkRecovery});
                 }
               }
             >
-              <img className="abilitymodal-img" src={inkRecorvery} alt= ""/>
+              <img className="abilitymodal-img" src={inkRecovery} alt= ""/>
             </div>
             <div
               className="ability-icon ability"

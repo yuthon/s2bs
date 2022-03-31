@@ -7,14 +7,10 @@ import empty from '../images/ability/empty.png';
 
 const Shoes = (props) => {
   const resetAbility = function() {
-    props.setMainAbilityImagePath(empty);
-    props.setMainAbilityName("empty");
-    props.setSubAbilityName6("empty");
-    props.setSubAbilityImagePath6(empty);
-    props.setSubAbilityName7("empty");
-    props.setSubAbilityImagePath7(empty);
-    props.setSubAbilityName8("empty");
-    props.setSubAbilityImagePath8(empty);
+    props.setMainAbility({name:"empty", path:empty});
+    props.setSubAbility0({name:"empty", path:empty});
+    props.setSubAbility1({name:"empty", path:empty});
+    props.setSubAbility2({name:"empty", path:empty});
   }
   
   return(
@@ -29,19 +25,16 @@ const Shoes = (props) => {
         gearName={props.shoesGear.name}
       />
       <SubSlot6
-        imagePath={props.subAbilityImagePath6}
-        setAbilityName={props.setSubAbilityName6}
-        setImagePath={props.setSubAbilityImagePath6}
+        imagePath={props.subAbility6.path}
+        setAbility={props.setSubAbility6}
       />
       <SubSlot7
-        imagePath={props.subAbilityImagePath7}
-        setAbilityName={props.setSubAbilityName7}
-        setImagePath={props.setSubAbilityImagePath7}
+        imagePath={props.subAbility7.path}
+        setAbility={props.setSubAbility7}
       />
       <SubSlot8
-        imagePath={props.subAbilityImagePath8}
-        setAbilityName={props.setSubAbilityName8}
-        setImagePath={props.setSubAbilityImagePath8}
+        imagePath={props.subAbility8.path}
+        setAbility={props.setSubAbility8}
       />
       <div className="ability-reset">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onClick={()=>{resetAbility();}}>

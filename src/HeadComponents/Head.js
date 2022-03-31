@@ -7,14 +7,10 @@ import empty from '../images/ability/empty.png';
 
 const Head = (props) => {
   const resetAbility = function() {
-    props.setMainAbilityImagePath(empty);
-    props.setMainAbilityName("empty");
-    props.setSubAbilityName0("empty");
-    props.setSubAbilityImagePath0(empty);
-    props.setSubAbilityName1("empty");
-    props.setSubAbilityImagePath1(empty);
-    props.setSubAbilityName2("empty");
-    props.setSubAbilityImagePath2(empty);
+    props.setMainAbility({name:"empty", path:empty});
+    props.setSubAbility0({name:"empty", path:empty});
+    props.setSubAbility1({name:"empty", path:empty});
+    props.setSubAbility2({name:"empty", path:empty});
   }
 
 
@@ -30,20 +26,16 @@ const Head = (props) => {
         gearName={props.headGear.name}
       />
       <SubSlot0
-        imagePath={props.subAbilityImagePath0}
-        setAbilityName={props.setSubAbilityName0}
-        setImagePath={props.setSubAbilityImagePath0}
+        imagePath={props.subAbility0.path}
+        setAbility={props.setSubAbility0}
       />
       <SubSlot1
-        //アビリティの画像のpathを受け取る
-        imagePath={props.subAbilityImagePath1}
-        setAbilityName={props.setSubAbilityName1}
-        setImagePath={props.setSubAbilityImagePath1}
+        imagePath={props.subAbility1.path}
+        setAbility={props.setSubAbility1}
       />
       <SubSlot2
-        imagePath={props.subAbilityImagePath2}
-        setAbilityName={props.setSubAbilityName2}
-        setImagePath={props.setSubAbilityImagePath2}
+        imagePath={props.subAbility2.path}
+        setAbility={props.setSubAbility2}
       />
       <div className="ability-reset">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onClick={()=>{resetAbility();}}>
