@@ -325,6 +325,9 @@ footer {
 .twitter-link:hover {
   color: #dee2e6;
 }
+.twitter-link:hover svg path {
+  fill: #dee2e6;
+}
 .github-link {
   text-decoration: none;
   color: white;
@@ -332,6 +335,9 @@ footer {
 }
 .github-link:hover {
   color: #dee2e6;
+}
+.github-link:hover svg path {
+  fill: #dee2e6;
 }
 .about {
   cursor: pointer;
@@ -341,6 +347,9 @@ footer {
 }
 .about:hover {
   color: #dee2e6;
+}
+.about:hover svg path {
+  fill: #dee2e6;
 }
 #aboutModal p {
   font-size: 1.25rem;
