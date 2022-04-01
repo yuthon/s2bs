@@ -18,6 +18,14 @@
     position: relative;
     height: calc(100vh - 6.25rem);
   }
+  #canvas-cover {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: calc(100vh - 6.25rem);
+    z-index: 10;
+  }
   .ability-modal {
     width: 320px;
   }
@@ -1364,13 +1372,13 @@ Btmボタン
   position: absolute;
   top: 20px;
   right: 10px;
-  z-index: 1;
+  z-index: 11;
 }
 #control-btn {
   position: absolute;
   top: 5rem;
   right: 10px;
-  z-index: 1;
+  z-index: 11;
 }
 
 /*  */

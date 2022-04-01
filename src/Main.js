@@ -68,6 +68,18 @@ const Main = () => {
   const [isZoomEnabled, setZoomState] = useState(false)
   const [isRotateEnabled, setRotateState] = useState(false)
   
+
+  const coverRef = useRef();
+  // キャラクターの操作が有効化されているとき、キャンバスのカバーをなくす
+  useEffect(()=>{
+    if (isZoomEnabled || isRotateEnabled) {
+      coverRef.current.style.display="none"
+    } else {
+      coverRef.current.style.display="block"
+    }
+  })
+
+
   return(
     <>
     <header className="" id="header">
@@ -78,7 +90,6 @@ const Main = () => {
       </div>
     </header>
     <div className="container-xxl">
-      
       <CharacterControlModal 
         isRotateEnabled={isRotateEnabled}
         isZoomEnabled={isZoomEnabled}
@@ -115,53 +126,54 @@ const Main = () => {
       />
       <div className="row m-0 p-0" id="main">  
         <div className="col-sm-7 col-md-8 col-lg-5 col-xl-5 col-xxl-6" id="three-section">
-            <button type="button" id="character-btn" className="btn btn-lg btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
-              キャラクターの設定
-            </button>
-            <button type="button" id="control-btn" className="btn btn-lg btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterControlModal">
-              キャラクターの操作
-            </button>
-            
-            <Canvas
-              style={{ background: '#f0f0e0' }}
-              camera={{ position: [0, 9, 13] }}
-            >
-              <ambientLight
-                color={0xffffff}
-                intensity={0.8} />
-              <directionalLight
-                color={0xffffff}
-                intensity={0.6} />
-              <pointLight
-                position={[0, 11, 20]}
-                intensity={0.2} />
-              <pointLight
-                position={[0, 4, 12]}
-                intensity={0.6} />
-              <pointLight
-                position={[0, 4, -12]}
-                intensity={0.6} />
-              <pointLight
-                position={[0, 11, -20]}
-                intensity={0.3} />
-              <Orbit 
-                isZoomEnabled={isZoomEnabled}
-                isRotateEnabled={isRotateEnabled}
+          <button type="button" id="character-btn" className="btn btn-lg btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
+            キャラクターの設定
+          </button>
+          <button type="button" id="control-btn" className="btn btn-lg btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterControlModal">
+            <p className="mb-1">キャラクターの</p>
+            <p className="my-0">回転 / ズーム</p>
+          </button>
+          <div ref={coverRef} id="canvas-cover"></div>
+          <Canvas
+            style={{ background: '#f0f0e0' }}
+            camera={{ position: [0, 9, 13] }}
+          >
+            <ambientLight
+              color={0xffffff}
+              intensity={0.8} />
+            <directionalLight
+              color={0xffffff}
+              intensity={0.6} />
+            <pointLight
+              position={[0, 11, 20]}
+              intensity={0.2} />
+            <pointLight
+              position={[0, 4, 12]}
+              intensity={0.6} />
+            <pointLight
+              position={[0, 4, -12]}
+              intensity={0.6} />
+            <pointLight
+              position={[0, 11, -20]}
+              intensity={0.3} />
+            <Orbit 
+              isZoomEnabled={isZoomEnabled}
+              isRotateEnabled={isRotateEnabled}
+            />
+            <Suspense fallback={<Loader />}>
+              <Model
+                headGear={headGear.id}
+                clothesGear={clothesGear.id}
+                shoesGear={shoesGear.id}
+                characterType={characterType}
+                skinColor={skinColor}
+                eyeColor={eyeColor}
+                hairStyle={hairStyle}
+                bottoms={bottoms}
+                teamColor={teamColor}
               />
-              <Suspense fallback={<Loader />}>
-                <Model
-                  headGear={headGear.id}
-                  clothesGear={clothesGear.id}
-                  shoesGear={shoesGear.id}
-                  characterType={characterType}
-                  skinColor={skinColor}
-                  eyeColor={eyeColor}
-                  hairStyle={hairStyle}
-                  bottoms={bottoms}
-                  teamColor={teamColor}
-                />
-              </Suspense>
-            </Canvas>
+            </Suspense>
+          </Canvas>
         </div>
         <div className="col-sm-5 col-md-4 col-lg-7 col-xl-7 col-xxl-6 px-0" id="gear-and-ability">
           <AbilityComponents 
