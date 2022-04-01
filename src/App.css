@@ -1024,17 +1024,10 @@ footer {
   fill: #fff;
 }
 
-/*skincolorボタンのスタイル*/
-/*.skincolor-btn {*/
-/*  width: 100px;*/
-/*  height:70px;*/
-/*}*/
-
 /*SCボタン*/
 .color-btn,
 .selected {
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   height: 110px;
   width: 120px;
 }
@@ -1084,8 +1077,7 @@ CTボタン
 .CT-selected {
   width: 240px;
   height: 165px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 .CT-btn-svg {
@@ -1165,8 +1157,7 @@ HSボタン
 .HS-ML-selected {
   width: 140px;
   height: 200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 .HS-btn-svg {

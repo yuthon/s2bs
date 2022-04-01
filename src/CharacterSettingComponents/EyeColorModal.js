@@ -96,13 +96,13 @@ const EyeColorModal = React.memo((props) => {
 
   return (
     <div className="modal fade" id="eyeColorModal" tabIndex="-1" aria-labelledby="SkinColorModalLabel" aria-hidden="true">
-      <div className="modal-dialog modal-md modal-dialog-centered">
+      <div className="modal-dialog modal-lg modal-dialog-centered">
         <div className="modal-content font-type1 bg-secondary text-white">  
           <div className="modal-header">
             <h5 className="modal-title" id="weaponModalLabel">目の色を選択 (3/6)</h5>
             <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div className="d-flex flex-wrap">
+          <div className="d-flex flex-wrap px-5" style={{height: "400px"}}>
           <div className="color-btn" ref={EC0Ref}>
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"

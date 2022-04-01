@@ -407,7 +407,7 @@ const BottomsModal = React.memo((props) => {
             <h5 className="modal-title" id="weaponModalLabel">ボトムスを選択 (6/6)</h5>
             <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div className="d-flex flex-wrap pt-3">
+          <div className="d-flex flex-wrap py-4 px-3" style={{height: "400px"}}>
             {modalContent}
           </div>
           <div className="toggle-between-modal">

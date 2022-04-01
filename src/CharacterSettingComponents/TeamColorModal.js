@@ -54,7 +54,7 @@ const TeamColorModal = React.memo((props) => {
             <h5 className="modal-title" id="weaponModalLabel">インクの色を選択 (5/6)</h5>
             <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div className="d-flex flex-wrap pt-3">  
+          <div className="d-flex flex-wrap px-4 py-4" style={{height: "400px"}}>  
             <div className="color-btn" ref={color0Ref}>  
               <svg
                 className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"

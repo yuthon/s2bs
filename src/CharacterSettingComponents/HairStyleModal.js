@@ -640,7 +640,7 @@ const HairStyleModal = React.memo((props) => {
             <h5 className="modal-title" id="weaponModalLabel">ヘアスタイルを選択 (4/6)</h5>
             <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div className="d-flex flex-wrap">
+          <div className="d-flex flex-wrap" style={{height: "400px"}}>
             {hairStyleModal}
           </div>
           <div className="toggle-between-modal">

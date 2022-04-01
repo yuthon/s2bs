@@ -126,10 +126,10 @@ const Main = () => {
       />
       <div className="row m-0 p-0" id="main">  
         <div className="col-sm-7 col-md-8 col-lg-5 col-xl-5 col-xxl-6" id="three-section">
-          <button type="button" id="character-btn" className="btn btn-lg btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
+          <button type="button" id="character-btn" className="btn btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
             キャラクターの設定
           </button>
-          <button type="button" id="control-btn" className="btn btn-lg btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterControlModal">
+          <button type="button" id="control-btn" className="btn btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterControlModal">
             <p className="mb-1">キャラクターの</p>
             <p className="my-0">回転 / ズーム</p>
           </button>
