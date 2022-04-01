@@ -454,8 +454,13 @@ const HeadGearModal = React.memo((props) => {
             <p className="chosenGear-text h5">選択中のギア</p>
             <p className="chosenGear-name font-type1">{props.chosenGear.name}</p>
               <div className="chosen-gear-icon">
+                <div className="brand-img-container">
+                  <img className="brand-img" src={brandDependency(props.chosenGear.brand).brandImgPath} alt=""/>
+                  <div className="brand-tooltip-container text-start">
+                    <span className="brand-tooltip">{props.chosenGear.brand}</span>
+                  </div>
+                </div>
                 <img className="chosen-gear-icon-img" src={props.chosenGear.path} alt=""/>
-                <img className="brand-img" src={brandDependency(props.chosenGear.brand).brandImgPath} alt=""/>
                 <div className="head-stripe gear-icon-footer">
                   <div className="brand-ability">
                     <p className="fav-ability-tooltip">つきやすいギアパワー</p>
