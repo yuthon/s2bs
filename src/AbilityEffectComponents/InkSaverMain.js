@@ -802,7 +802,7 @@ const InkSaverMain = React.memo((props) => {
     <div className="ae-card row">
       <div className="col-1 ap-icon-area">
         <div className="ability-icon ap-ability-icon">
-          <p className="ability-detail-tooltip">インク効率アップ(メイン) : メインウェポンの消費インク量が少なくなります。</p>
+          <p className="ability-detail-tooltip" style={{width: "26rem"}}>インク効率アップ(メイン) : メインウェポンの消費インク量が少なくなります。</p>
           <img className="ap-ability-img" src={inkSaverMainImg} alt=""/>
         </div>
       </div>

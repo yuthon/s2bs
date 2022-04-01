@@ -1686,6 +1686,7 @@ Btmボタン
   );
   display: none;
   padding-left: 10px;
+  z-index: 12;
 }
 
 /* アビリティアイコンの大きさ */
@@ -1760,12 +1761,28 @@ Btmボタン
   z-index: 7;
   font-size: 1rem;
   user-select: none;
-  width: 20rem;
+  position: absolute;
+  top: -2.9rem;
+  left: -8px;
+}
+/* ツールチップが２行のとき */
+.ability-detail-tooltip-2 {
+  padding: 0.4rem 0.8rem 0.4rem 0.4rem;
+  display: none;
+  margin: 0rem;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 0.25rem;
+  color: #fff;
+  z-index: 7;
+  font-size: 1rem;
+  user-select: none;
   position: absolute;
   top: -4.5rem;
-  left: -10px;
+  left: -8px;
+  text-align: right;
 }
-.ability-detail-tooltip:after {
+.ability-detail-tooltip:after,
+.ability-detail-tooltip-2:after {
   position: absolute;
   bottom: -0.5rem;
   left: 20px;
@@ -1777,6 +1794,7 @@ Btmボタン
   width: 0.8rem;
 }
 
-.ap-ability-icon:hover .ability-detail-tooltip {
+.ap-ability-icon:hover .ability-detail-tooltip,
+.ap-ability-icon:hover .ability-detail-tooltip-2 {
   display: block;
 }

@@ -145,7 +145,7 @@ const InkResistance = (props) => {
     <div className="ae-card row">
       <div className="ap-icon-area col-1">  
         <div className="ability-icon ap-ability-icon">
-          <p className="ability-detail-tooltip">相手インク影響軽減 : 相手のインクをふんだ時のダメージや移動速度の減少が少なくなります。</p>
+          <p className="ability-detail-tooltip-2" style={{width: "20rem" }}>相手インク影響軽減 : 相手のインクをふんだ時のダメージや移動速度の減少が少なくなります。</p>
           <img className="ap-ability-img" src={InkResImg} alt=""/>
         </div>
       </div>

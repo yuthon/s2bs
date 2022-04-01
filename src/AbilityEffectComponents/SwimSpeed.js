@@ -115,7 +115,7 @@ const SwimSpeed = (props) => {
     <div className="ae-card row">
       <div className="ap-icon-area col-1">
         <div className="ability-icon ap-ability-icon">
-          <p className="ability-detail-tooltip">イカダッシュ速度アップ : イカダッシュ時の移動速度がアップします。</p>
+          <p className="ability-detail-tooltip" style={{width: "23rem" }}>イカダッシュ速度アップ : イカダッシュ時の移動速度がアップします。</p>
           <img className="ap-ability-img" src={swimSpeedImg} alt=""/>
         </div>
       </div>
