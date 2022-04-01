@@ -23,7 +23,7 @@ const subSlotModal5 = (props) => {
   }
 
   return (
-    <div className="ability-modal subSlotModal-right" id="subSlotModal5">
+    <div className="ability-modal subSlotModal-right font-type2" id="subSlotModal5">
       <svg className="modal-close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" onClick={()=>{closeGearModal()}}>
           {/* <!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
         <path 
@@ -32,13 +32,16 @@ const subSlotModal5 = (props) => {
         />
       </svg>
       <div className="ability-list d-flex flex-wrap">
-        <div
+      <div
           className="ability-icon ability"
           onClick={()=>{
             props.setAbility({name:"empty", path:empty});
             }
           }
         >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">スロットを空にする</span>
+          </div>
           <img className="abilitymodal-img" src={empty} alt=""/>
         </div>
         <div
@@ -48,6 +51,9 @@ const subSlotModal5 = (props) => {
             }
           }
         >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">インク効率アップ(メイン)</span>
+          </div>
           <img className="abilitymodal-img" src = {inkSaverMain} alt=""/>
         </div>
         <div
@@ -57,6 +63,9 @@ const subSlotModal5 = (props) => {
             }
           }
         >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">インク効率アップ(サブ)</span>
+          </div>
           <img className="abilitymodal-img" src={inkSaverSub} alt= ""/>
         </div>
         <div
@@ -66,6 +75,9 @@ const subSlotModal5 = (props) => {
             }
           }
         >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">インク回復力アップ</span>
+          </div>
           <img className="abilitymodal-img" src={inkRecovery} alt= ""/>
         </div>
         <div
@@ -75,6 +87,9 @@ const subSlotModal5 = (props) => {
             }
           }
         >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">ヒト移動速度アップ</span>
+          </div>
           <img className="abilitymodal-img" src={runSpeed} alt= ""/>
         </div>
         <div
@@ -84,6 +99,9 @@ const subSlotModal5 = (props) => {
             }
           }
         >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">イカダッシュ速度アップ</span>
+          </div>
           <img className="abilitymodal-img" src={swimSpeed} alt= ""/>
         </div>
         <div
@@ -93,6 +111,9 @@ const subSlotModal5 = (props) => {
             }
           }
         >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">スペシャル増加量アップ</span>
+          </div>
           <img className="abilitymodal-img" src={specialCharge} alt= ""/>
         </div>
         <div
@@ -102,6 +123,9 @@ const subSlotModal5 = (props) => {
             }
           }
         >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">スペシャル減少量ダウン</span>
+          </div>
           <img className="abilitymodal-img" src={specialSaver} alt= ""/>
         </div>
         <div
@@ -111,6 +135,9 @@ const subSlotModal5 = (props) => {
             }
           }
         >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">スペシャル性能アップ</span>
+          </div>
           <img className="abilitymodal-img" src={specialPower} alt= ""/>
         </div>
         <div
@@ -120,6 +147,9 @@ const subSlotModal5 = (props) => {
             }
           }
         >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">復活時間短縮</span>
+          </div>
           <img className="abilitymodal-img" src={qr} alt= ""/>
         </div>
         <div
@@ -129,6 +159,9 @@ const subSlotModal5 = (props) => {
             }
           }
         >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">スーパージャンプ時間短縮</span>
+          </div>
           <img className="abilitymodal-img" src={quickSuperJump} alt= "スーパージャンプ時間短縮"/>
         </div>
         <div
@@ -138,6 +171,9 @@ const subSlotModal5 = (props) => {
             }
           }
         >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">サブ性能アップ</span>
+          </div>
           <img className="abilitymodal-img" src={subPower} alt= ""/>
         </div>
         <div
@@ -147,6 +183,9 @@ const subSlotModal5 = (props) => {
             }
           }
         >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">相手インク影響軽減</span>
+          </div>
           <img className="abilitymodal-img" src={inkRes} alt= ""/>
         </div>
         <div
@@ -156,6 +195,9 @@ const subSlotModal5 = (props) => {
             }
           }
         >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">爆風ダメージ軽減・改</span>
+          </div>
           <img className="abilitymodal-img" src={bombDefence} alt= ""/>
         </div>
         <div
@@ -165,9 +207,13 @@ const subSlotModal5 = (props) => {
             }
           }
         >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">メイン性能アップ</span>
+          </div>
           <img className="abilitymodal-img" src={mpu} alt= ""/>
         </div>
       </div>
+      <button type="button" className="btn btn-dark m-auto OK-btn" onClick={()=>{closeGearModal()}}><p>OK</p></button>
     </div>
   );
 };

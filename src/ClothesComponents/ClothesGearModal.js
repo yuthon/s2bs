@@ -701,7 +701,7 @@ const ClothesGearModal = React.memo((props) => {
           </div>
           </div>
           <div className="modal-footer py-0">
-            <button type="button" className="btn btn-lg btn-secondary m-auto" onClick={()=>{closeGearModal()}}>とじる</button>
+            <button type="button" className="btn btn-lg btn-dark m-auto OK-btn" onClick={()=>{closeGearModal()}}><p>OK</p></button>
           </div>
         </div>
   );
