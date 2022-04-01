@@ -178,8 +178,11 @@ const Main = () => {
         <div className="col-sm-5 col-md-4 col-lg-7 col-xl-7 col-xxl-6 px-0" id="gear-and-ability">
           <AbilityComponents 
             headGear={headGear}
+            setHeadGear={setHeadGear}
             clothesGear={clothesGear}
+            setClothesGear={setClothesGear}
             shoesGear={shoesGear}
+            setShoesGear={setShoesGear}
           />
           <HeadGearModal
             chosenGear={headGear}

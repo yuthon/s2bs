@@ -1798,3 +1798,55 @@ Btmボタン
 .ap-ability-icon:hover .ability-detail-tooltip-2 {
   display: block;
 }
+
+/* ギアのリセットボタン */
+.gear-reset {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 40px;
+  right: 5px;
+  cursor: pointer;
+}
+/* ホバーしたとき拡大と回転 */
+.gear-reset:hover svg {
+  transition: 0.1s;
+  transform: rotate(15deg) scale(1.2, 1.2);
+}
+/* クリックで回転 */
+.gear-reset:active svg {
+  transition: 0.1s;
+  transform: rotate(-15deg) scale(1.2, 1.2);
+}
+/* ツールチップ */
+.gear-reset-tooltip {
+  width: 5rem;
+  height: 1.8rem;
+  display: none;
+  position: absolute;
+  bottom: -18px;
+  right: 33px;
+  z-index: 2;
+  padding: 0.2rem 0.3rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  user-select: none;
+}
+/* ツールチップの矢印 */
+.gear-reset-tooltip:after {
+  border-top: 0.3rem solid transparent;
+  border-bottom: 0.3rem solid transparent;
+  border-left: 0.4rem solid rgba(0, 0, 0, 0.8);
+  content: '';
+  display: block;
+  width: 0.5rem;
+  position: absolute;
+  top: 0.6rem;
+  right: -0.4rem;
+}
+/*　ホバーしたときツールチップを表示 */
+.gear-reset:hover .gear-reset-tooltip {
+  display: block;
+}

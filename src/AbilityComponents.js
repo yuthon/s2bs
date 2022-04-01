@@ -39,6 +39,7 @@ const AbilityComponents = (props) => {
       <div className="px-0 d-flex flex-md-row flex-wrap" id="gear-components">
       <Head
         headGear={props.headGear}
+        setHeadGear={props.setHeadGear}
         mainAbility={mainAbility0}
         setMainAbility={setMainAbility0}
         subAbility0={subAbility0}
@@ -50,6 +51,7 @@ const AbilityComponents = (props) => {
       />
       <Clothes
         clothesGear={props.clothesGear}
+        setClothesGear={props.setClothesGear}
         mainAbility={mainAbility1}
         setMainAbility={setMainAbility1}
         subAbility3={subAbility3}
@@ -61,6 +63,7 @@ const AbilityComponents = (props) => {
       />
       <Shoes
         shoesGear={props.shoesGear}
+        setShoesGear={props.setShoesGear}
         mainAbility={mainAbility2}
         setMainAbility={setMainAbility2}
         subAbility6={subAbility6}
