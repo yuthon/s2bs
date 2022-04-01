@@ -37,7 +37,7 @@ const QuickRespawn = (props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{respawnFrames + 150} F （{respawnSeconds} 秒）</p>
+          <p className="ae-effect">{respawnFrames + 150} F （{respawnSeconds + 2.5} 秒）</p>
         </div>
       </div>
     </div>

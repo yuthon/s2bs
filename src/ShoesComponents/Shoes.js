@@ -8,9 +8,9 @@ import empty from '../images/ability/empty.png';
 const Shoes = (props) => {
   const resetAbility = function() {
     props.setMainAbility({name:"empty", path:empty});
-    props.setSubAbility0({name:"empty", path:empty});
-    props.setSubAbility1({name:"empty", path:empty});
-    props.setSubAbility2({name:"empty", path:empty});
+    props.setSubAbility6({name:"empty", path:empty});
+    props.setSubAbility7({name:"empty", path:empty});
+    props.setSubAbility8({name:"empty", path:empty});
   }
   
   return(

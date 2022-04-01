@@ -610,7 +610,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
       </div>
     );
-  } else if (name.indexOf("スプラローラー") > -1) {
+  } else if (name.indexOf("スプラローラー") > -1 || name.indexOf("ヒーローローラー") > -1) {
     for (let i=0; i < 40; i++) {
       if (SplatRoller[i].AP === abilityPoint) {
         damage = Math.floor(SplatRoller[i].DMG * 100000) / 1000;
@@ -678,7 +678,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
       </div>
     );
-  } else if (name.indexOf("ホクサイ") > -1) {
+  } else if (name.indexOf("ホクサイ") > -1 || name.indexOf("ヒーローブラシ") > -1) {
     for (let i=0; i < 40; i++) {
       if (Octobrush[i].AP === abilityPoint) {
         inkTrailWidth = Math.floor(Octobrush[i].ITW * 100000) / 1000;
@@ -736,7 +736,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
       </div>
     );
-  } else if (name.indexOf("スプラチャージャー") > -1 || name.indexOf("スプラスコープ") > -1) {
+  } else if (name.indexOf("スプラチャージャー") > -1 || name.indexOf("スプラスコープ") > -1 || name.indexOf("ヒーローチャージャー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Charger[i].AP === abilityPoint) {
         damage = Charger[i].DMG;
