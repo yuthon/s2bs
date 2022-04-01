@@ -313,7 +313,7 @@ const WeaponModal = React.memo((props) => {
     ];
   
   // 名前順に整列した配列を新たに定義
-  const weaponSortedByName = weaponStatus.slice().sort((a, b) => (a.name > b.name) ? 1 : -1);
+  const weaponSortedByName = weaponStatus.slice().sort((a, b) => a.name.localeCompare(b.name, "ja"));
   const weaponSortedBySub = weaponStatus.slice().sort((a, b) => (a.sub > b.sub) ? 1 : -1);
   const weaponSortedBySpe = weaponStatus.slice().sort((a, b) => (a.special > b.special) ? 1 : -1);
   
@@ -393,7 +393,7 @@ const WeaponModal = React.memo((props) => {
             )}
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-secondary m-auto" data-bs-dismiss="modal">とじる</button>
+            <button type="button" className="btn btn-lg btn-dark m-auto OK-btn m-auto" data-bs-dismiss="modal">とじる</button>
           </div>
         </div>
       </div>

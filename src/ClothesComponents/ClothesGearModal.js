@@ -573,7 +573,7 @@ const gears = [
 
 
 // 名前順に整列した配列を新たに定義
-const gearsSortedByName = gears.slice().sort((a, b) => (a.name > b.name) ? 1 : -1);
+const gearsSortedByName = gears.slice().sort((a, b) => a.name.localeCompare(b.name, "ja"));
 
 
 const ClothesGearModal = React.memo((props) => {
@@ -699,7 +699,7 @@ const ClothesGearModal = React.memo((props) => {
               </div>
             </div>
           </div>
-          <div className="col-8 d-flex flex-wrap gearicons-section clothes-stripe">
+          <div className="d-flex flex-wrap gearicons-section clothes-stripe">
             {gearsArray.map(
                 (gear, index) => <GearIcon key={index} gear={gear} setChosenGear={props.setChosenGear}/>
               )}
