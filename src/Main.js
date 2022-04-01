@@ -39,7 +39,7 @@ extend({ OrbitControls });
 const Loader= () => {
   const { progress } = useProgress()
   return (
-    <Html center>
+    <Html center zIndexRange={[5, 0]}>
       <div className="font-type2" id="loader-content">
         <h2>3Dモデルをロード中…</h2>
         <h2>{Math.floor(progress * 10) /10}％</h2>
