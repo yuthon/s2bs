@@ -96,6 +96,7 @@ const SpecialSaver = React.memo((props) => {
     <div className="ae-card row">
       <div className="ap-icon-area col-1">
         <div className="ability-icon ap-ability-icon">
+          <p className="ability-detail-tooltip">スペシャル減少量ダウン : プレイヤーがやられた時のスペシャルゲージの減少量が少なくなります。</p>
           <img className="ap-ability-img" src={specialSaverImg} alt=""/>
         </div>
       </div>

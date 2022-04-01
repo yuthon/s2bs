@@ -1213,6 +1213,7 @@ const MainPowerUp = React.memo((props) => {
     <div className="ae-card row border-0">
       <div className="ap-icon-area col-1">  
         <div className="ability-icon ap-ability-icon">
+          <p className="ability-detail-tooltip">メイン性能アップ : メインウェポンの性能がアップします。具体的な効果はブキによって異なります。</p>
           <img className="ap-ability-img" src={mpuImg} alt=""/>
         </div>
       </div>

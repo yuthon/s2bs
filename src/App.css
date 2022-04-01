@@ -1748,3 +1748,35 @@ Btmボタン
   letter-spacing: 0.15rem;
   margin-bottom: 0px;
 }
+
+/* ギアパワー効果のツールチップ */
+.ability-detail-tooltip {
+  padding: 0.4rem 0.5rem;
+  display: none;
+  margin: 0rem;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 0.25rem;
+  color: #fff;
+  z-index: 7;
+  font-size: 1rem;
+  user-select: none;
+  width: 20rem;
+  position: absolute;
+  top: -4.5rem;
+  left: -10px;
+}
+.ability-detail-tooltip:after {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 20px;
+  display: block;
+  content: '';
+  border-top: 0.5rem solid rgba(0, 0, 0, 0.9);
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid transparent;
+  width: 0.8rem;
+}
+
+.ap-ability-icon:hover .ability-detail-tooltip {
+  display: block;
+}

@@ -68,6 +68,7 @@ const BombDefenceUp = (props) => {
     <div className="ae-card row">
       <div className="ap-icon-area col-1">
         <div className="ability-icon ap-ability-icon">
+          <p className="ability-detail-tooltip">爆風ダメージ軽減・改 : メインウエポン以外の爆発で受けるダメージと、位置を発見してくる攻撃の効果を軽減します。</p>
           <img className="ap-ability-img" src={bombDefenceUpImg} alt=""/>
         </div>
       </div>

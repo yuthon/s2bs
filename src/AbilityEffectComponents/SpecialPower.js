@@ -436,6 +436,7 @@ const SpecialPower = React.memo((props) => {
     <div className="ae-card row">
       <div className="ap-icon-area col-1">
         <div className="ability-icon ap-ability-icon">
+          <p className="ability-detail-tooltip">スペシャル性能アップ :	スペシャルウェポンの性能がアップします。</p>
           <img className="ap-ability-img" src={specialPowerImg} alt=""/>
         </div>
       </div>

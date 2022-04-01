@@ -28,6 +28,7 @@ const QuickRespawn = (props) => {
     <div className="ae-card row">
       <div className="ap-icon-area col-1">  
         <div className="ability-icon ap-ability-icon">
+          <p className="ability-detail-tooltip">復活時間短縮 : 相手を一人も倒せないまま連続でやられた時、復活時間が短くなります。</p>
           <img className="ap-ability-img" src={qrImg} alt=""/>
         </div>
       </div>

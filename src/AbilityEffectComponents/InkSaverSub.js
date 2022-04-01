@@ -179,6 +179,7 @@ const InkSaverSub = (props) => {
     <div className="ae-card row">
       <div className="ap-icon-area col-1">  
         <div className="ability-icon ap-ability-icon">
+          <p className="ability-detail-tooltip">インク効率アップ(サブ) : サブウェポンの消費インク量が少なくなります。</p>
           <img className="ap-ability-img" src={inkSaverSubImg} alt=""/>
         </div>
       </div>

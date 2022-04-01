@@ -85,6 +85,7 @@ const SpecialChargeUp = React.memo((props) => {
     <div className="ae-card row">
       <div className="ap-icon-area col-1">
         <div className="ability-icon ap-ability-icon">
+          <p className="ability-detail-tooltip">スペシャル増加量アップ : スペシャルゲージの増加量がアップします。</p>
           <img className="ap-ability-img" src={specialChargeImg} alt=""/>
         </div>
       </div>

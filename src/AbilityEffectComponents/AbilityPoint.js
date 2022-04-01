@@ -206,7 +206,7 @@ const AbilityPoint = (props) => {
   // カムバック
   let btnComeback;
   let toggleComeback;
-  if (mainAbilityName[0] === "comeback") {
+  if (mainAbilityName[0] === "カムバック") {
     if (isComebackActive) {
       // ONの時の切り替えスイッチのJSX
       toggleComeback = (
@@ -264,7 +264,7 @@ const AbilityPoint = (props) => {
         </div>
         <div className="ae-part col-10 row">
           <div className="col-7 px-0 m-auto">
-            <p className="ae-text">復活から20秒間、一部のギアパワーが上昇（メインインク効率・サブインク効率・インク回復力アップ・イカ移動速度・ヒト移動速度）</p>
+            <p className="ae-text">プレイヤーがやられて復帰した後の20秒間、一部の能力が上昇 : インク効率アップ(メイン)・インク効率アップ(サブ)・インク回復力アップ・イカ移動速度・ヒト移動速度</p>
           </div>
           <div className="col-5 m-auto">  
             {toggleComeback}
@@ -332,7 +332,7 @@ const AbilityPoint = (props) => {
         </div>
         <div className="ae-part col-10 row">
           <div className="col-7 px-0 m-auto">
-            <p className="ae-text">バトル開始から30秒間、一部のギアパワーが上昇（イカ移動速度・ヒト移動速度・相手インク影響軽減）</p>
+            <p className="ae-text">バトル開始から30秒間、一部の能力がかなり上昇（イカ移動速度・ヒト移動速度・相手インク影響軽減）</p>
           </div>
           <div className="col-5 m-auto">  
             {toggleOpeningGanbit}
@@ -399,7 +399,7 @@ const AbilityPoint = (props) => {
         </div>
         <div className="ae-part col-10 row">
           <div className="col-7 px-0 m-auto">
-            <p className="ae-text">試合時間が残り30秒、あるいは相手のオブジェクトのカウントが30になると一部のギアパワーが上昇（メインインク効率・サブインク効率・インク回復力アップ）</p>
+            <p className="ae-text">試合時間が残り30秒、あるいは相手のオブジェクトのカウントが30になると一部の能力がかなり上昇（メインインク効率・サブインク効率・インク回復力アップ）</p>
           </div>
           <div className="col-5 m-auto">  
             {toggleLastDitchEffort}
