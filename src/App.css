@@ -9,7 +9,7 @@
 
 @media (min-width: 992px) {
   #ae-section {
-    height: calc(100vh - 2rem - 5.25rem - 205px);
+    height: calc(100vh - 2rem - 5.25rem - 12.8125rem);
     overflow-y: auto;
     overflow-x: hidden;
   }
@@ -421,16 +421,6 @@ footer {
   );
 }
 
-/* 3dモデルの表示領域 */
-
-#weapon-container {
-  padding-left: 0px;
-}
-
-/* #ae-section {
-  z-index: 11;
-} */
-
 .font-type1 {
   font-family: splType01;
 }
@@ -450,7 +440,7 @@ footer {
 /* アタマ　フク　クツで共通の大きさ */
 /* widthはレスポンシブ対応 */
 .gear-card {
-  height: 205px;
+  height: 12.8125rem;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -523,11 +513,18 @@ footer {
 
 /* ギア画像の大きさ */
 .gear-img {
+  width: 130px;
+  height: 110px;
+  position: absolute;
+  bottom: 3.45rem;
+  left: 34px;
+  cursor: pointer;
+}
+
+.gear-img img {
   width: 110px;
   height: 110px;
-  position: relative;
   margin: auto;
-  cursor: pointer;
 }
 
 .head-tooltip {
@@ -1075,20 +1072,18 @@ CTボタン
 */
 .CT-btn,
 .CT-selected {
-  width: 240px;
-  height: 165px;
+  width: 15rem;
+  height: 10.4rem;
   margin: auto;
 }
 
 .CT-btn-svg {
-  width: 235px;
-  height: 155px;
+  width: 14.7rem;
+  height: 9.7rem;
 }
 
 /*ボタン内のテキスト*/
 .CT-text-default {
-  font-size: 10rem;
-  font-weight: bold;
   user-select: none;
 }
 
@@ -1098,8 +1093,6 @@ CTボタン
 
 .CT-btn-svg:hover .CT-text-hover {
   fill: white;
-  font-size: 12rem;
-  font-weight: bold;
 }
 /*CTボタンのアニメーション*/
 .CT-btn-svg {
@@ -1145,8 +1138,6 @@ CTボタン
 
 .CT-selected .CT-btn-svg .CT-text-hover {
   fill: white;
-  font-size: 13rem;
-  font-weight: bold;
 }
 /*
 HSボタン
@@ -1319,28 +1310,28 @@ Btmボタン
 
 /* ギアパワーのアイコン */
 .ap-ability-icon {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   position: relative;
   position: absolute;
-  top: 5px;
-  left: 0px;
+  top: 0.3125rem;
+  left: 0rem;
 }
 
 /* ギアパワーの画像 */
 .ap-ability-img {
-  width: 34px;
-  height: 34px;
+  width: 2.15rem;
+  height: 2.15rem;
   position: absolute;
-  top: 2px;
-  left: 2px;
+  top: 0.125rem;
+  left: 0.125rem;
 }
 
 /* 1行のみの場合 */
 .ae-text {
   text-align: right;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* １つの効果を2行で書く場合の1行目 */
@@ -1412,7 +1403,7 @@ Btmボタン
 /*  */
 #weapon-card {
   width: 100%;
-  height: 148px;
+  height: 9.25rem;
   background: repeating-linear-gradient(
     45deg,
     #dbe826,
@@ -1459,28 +1450,46 @@ Btmボタン
 .weapon-sub-sp {
   position: relative;
   width: 100%;
-  height: 48px;
+  height: 3rem;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 13px;
 }
 /* サブとスペシャルの文字 */
 .weapon-sub-sp p {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: auto;
+}
+/* サブとスペシャルの画像 */
+.weapon-sub-sp img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 0.25rem;
 }
 
 /*  */
 /* ツールチップ */
 /*  */
 
+/* ツールチップの位置固定のためのdiv要素 */
+.gear-tooltip-container {
+  position: relative;
+}
+
+/* 左右の表示位置固定のため矢印を別に用意して固定 */
+.gear-tooltip-arrow {
+  display: none;
+  width: 0.5rem;
+  border-left: 0.3rem solid transparent;
+  border-right: 0.3rem solid transparent;
+  border-top: 0.4rem solid rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 25px;
+  left: 60px;
+}
+
 /* ギア表示部分のツールチップ */
 .gear-tooltip {
   width: 7rem;
   height: 1.8rem;
-  display: none;
-  position: absolute;
-  bottom: 4.25rem;
-  left: 0rem;
   z-index: 2;
   padding: 0.3em 0.5em;
   color: #ffffff;
@@ -1488,9 +1497,13 @@ Btmボタン
   border-radius: 0.3em;
   font-size: 0.9rem;
   user-select: none;
+  margin: 0rem;
+  position: absolute;
+  bottom: 0.4rem;
+  left: -3.4rem;
 }
 
-.gear-tooltip:after {
+/* .gear-tooltip:after {
   width: 0.5rem;
   content: '';
   display: block;
@@ -1500,9 +1513,9 @@ Btmボタン
   border-left: 0.3rem solid transparent;
   border-right: 0.3rem solid transparent;
   border-top: 0.5rem solid rgba(0, 0, 0, 0.8);
-}
+} */
 
-.gear-img:hover .gear-tooltip {
+.gear-img:hover .gear-tooltip-arrow {
   display: block;
 }
 
@@ -1830,7 +1843,7 @@ Btmボタン
   width: 25px;
   height: 25px;
   position: absolute;
-  top: 40px;
+  top: 2.5rem;
   right: 5px;
   cursor: pointer;
 }
