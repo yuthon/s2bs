@@ -2,6 +2,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 import * as THREE from 'three';
 import { useFrame, useLoader } from '@react-three/fiber';
+import { isWebGL2Available } from '@react-three/drei';
 
 
 
@@ -484,6 +485,16 @@ const Model = (props) => {
         model.visible = false;
       }
     }
+    // PTの時の処理
+    if (hairStyle === "Hair_4" && headGear.indexOf("PT") > -1)  {
+      for (let i = 0; i < armature.children.length; i++) {
+        let model = armature.children[i];
+        let modelName = model.name
+        if (model.visible && modelName.indexOf("IFML_Hair_4") > -1 && modelName.indexOf(headGearType) > -1) {
+          model.visible = false;
+        }
+      }
+    }
   }
   if (characterType === "OFML") {
     // 髪型が2種類のみのため、Stateの値が合致しない場合はHair0に入れ替える
@@ -627,6 +638,16 @@ const Model = (props) => {
       }
       else {
         model.visible = false;
+      }
+    }
+    // PTの時の処理
+    if (hairStyle === "Hair_1" && headGear.indexOf("PT") > -1)  {
+      for (let i = 0; i < armature.children.length; i++) {
+        let model = armature.children[i];
+        let modelName = model.name
+        if (model.visible && modelName.indexOf("OFML_Hair_1") > -1 && modelName.indexOf(headGearType) > -1) {
+          model.visible = false;
+        }
       }
     }
   }
@@ -777,15 +798,17 @@ const Model = (props) => {
       else {
         model.visible = false;
       }
-
+      // アフロの時の処理
       if (hairStyle === "Hair_1") {
         for (let i = 0; i < armature.children.length; i++) {
           let model = armature.children[i];
           let modelName = model.name
+          // アフロが表示されている
           if (model.visible && modelName.indexOf(headGear) > -1 && modelName.indexOf("OML") > -1) {
             for (let n = 0; n < armature.children.length; n++) {
               let model = armature.children[n];
               let modelName = model.name
+              // アフロ用のアタマギアのモデルを残して他を非表示
               if (model.visible && modelName.indexOf(headGear) > -1 && modelName.indexOf("OML") === -1){
                 model.visible = false;
               }
@@ -796,6 +819,16 @@ const Model = (props) => {
     }
   }
   
+  // デバック用　表示されているモデルの名前を出力する
+  // for (let i = 0; i < armature.children.length; i++) {
+  //   // モデル
+  //   let model = armature.children[i];
+  //   // モデル名
+  //   let modelName = model.name;
+  //   if(model.visible) {
+  //     console.log(modelName)
+  //   }
+  // }
   return (
       <primitive object={gltf.scene} />
   );

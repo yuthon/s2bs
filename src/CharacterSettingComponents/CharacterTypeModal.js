@@ -44,7 +44,7 @@ const CharacterSettingModal = React.memo((props) => {
             <h5 className="modal-title" id="weaponModalLabel">キャラクタータイプを選択 (1/6)</h5>
             <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div className="container-fluid d-flex flex-wrap px-0">
+          <div className="container-fluid d-flex flex-wrap px-0" style={{height: "25rem"}}>
             <div className="CT-btn" id="IFML" ref={IFMLRef}>
               <svg 
                 className="CT-btn-svg" viewBox="-500 -142 2300 1300"
