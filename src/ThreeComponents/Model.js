@@ -122,11 +122,11 @@ const Model = (props) => {
     } else if (eyeColor === "color_10") {
       return {r:0.220,g:0.352,b:0.136}
     } else if (eyeColor === "color_11") {
-      return {r:0.314,g:0.023,b:1}
-    } else if (eyeColor === "color_12") {
       return {r:0.150,g:0.144,b:0.076}
-    } else if (eyeColor === "color_13") {
+    } else if (eyeColor === "color_12") {
       return {r:0.120,g:0.044,b:0.042}
+    } else if (eyeColor === "color_13") {
+      return {r:0.175,g:0.202,b:0.337}
     }
   }
 
