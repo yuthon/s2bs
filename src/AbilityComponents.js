@@ -19,105 +19,82 @@ import InkArmor from './images/subSP/Wsp_InkArmor.png';
 const AbilityComponents = (props) => {
   //ブキの名前とその他の情報を管理
   const [weaponStatus, setWeaponStatus] = useState({name:"わかばシューター", sub:"スプラッシュボム", special:"インクアーマー", sp:180, weight:"light", path:Jr_0, pathSub:SplatBomb,pathSpecial:InkArmor});
-  //メインスロットのアビリティの画像のpathを管理
-  const [mainAbilityImagePath0, setMainAbilityImagePath0] = useState(empty);
-  const [mainAbilityImagePath1, setMainAbilityImagePath1] = useState(empty);
-  const [mainAbilityImagePath2, setMainAbilityImagePath2] = useState(empty);
-  //メインスロットのアビリティの名前を管理
-  const [mainAbilityName0, setMainAbilityName0] = useState(null);
-  const [mainAbilityName1, setMainAbilityName1] = useState(null);
-  const [mainAbilityName2, setMainAbilityName2] = useState(null);
-  //サブスロットモーダルで選択されたアビリティの画像のパスを管理
-  const [subAbilityImagePath0, setSubAbilityImagePath0] = useState(empty);
-  const [subAbilityImagePath1, setSubAbilityImagePath1] = useState(empty);
-  const [subAbilityImagePath2, setSubAbilityImagePath2] = useState(empty);
-  const [subAbilityImagePath3, setSubAbilityImagePath3] = useState(empty);
-  const [subAbilityImagePath4, setSubAbilityImagePath4] = useState(empty);
-  const [subAbilityImagePath5, setSubAbilityImagePath5] = useState(empty);
-  const [subAbilityImagePath6, setSubAbilityImagePath6] = useState(empty);
-  const [subAbilityImagePath7, setSubAbilityImagePath7] = useState(empty);
-  const [subAbilityImagePath8, setSubAbilityImagePath8] = useState(empty);
-  //サブスロットモーダルで選択されたアビリティの名前を管理
-  const [subAbilityName0, setSubAbilityName0] = useState(null);
-  const [subAbilityName1, setSubAbilityName1] = useState(null);
-  const [subAbilityName2, setSubAbilityName2] = useState(null);
-  const [subAbilityName3, setSubAbilityName3] = useState(null);
-  const [subAbilityName4, setSubAbilityName4] = useState(null);
-  const [subAbilityName5, setSubAbilityName5] = useState(null);
-  const [subAbilityName6, setSubAbilityName6] = useState(null);
-  const [subAbilityName7, setSubAbilityName7] = useState(null);
-  const [subAbilityName8, setSubAbilityName8] = useState(null);
+  // メインスロットのギアパワーを管理
+  const [mainAbility0, setMainAbility0] = useState({name:"empty",path:empty});
+  const [mainAbility1, setMainAbility1] = useState({name:"empty",path:empty});
+  const [mainAbility2, setMainAbility2] = useState({name:"empty",path:empty});
+  // サブスロットのギアパワーを管理
+  const [subAbility0,setSubAbility0] = useState({name:"empty",path:empty});
+  const [subAbility1,setSubAbility1] = useState({name:"empty",path:empty});
+  const [subAbility2,setSubAbility2] = useState({name:"empty",path:empty});
+  const [subAbility3,setSubAbility3] = useState({name:"empty",path:empty});
+  const [subAbility4,setSubAbility4] = useState({name:"empty",path:empty});
+  const [subAbility5,setSubAbility5] = useState({name:"empty",path:empty});
+  const [subAbility6,setSubAbility6] = useState({name:"empty",path:empty});
+  const [subAbility7,setSubAbility7] = useState({name:"empty",path:empty});
+  const [subAbility8,setSubAbility8] = useState({name:"empty",path:empty});
   
   return (
     <>
       <div className="px-0 d-flex flex-md-row flex-wrap" id="gear-components">
       <Head
-        headImagePath={props.headImagePath}
-        subAbilityImagePath0={subAbilityImagePath0}
-        subAbilityImagePath1={subAbilityImagePath1}
-        subAbilityImagePath2={subAbilityImagePath2}
-        mainAbilityImagePath={mainAbilityImagePath0}
-        setMainAbilityImagePath={setMainAbilityImagePath0}
-        setMainAbilityName={setMainAbilityName0}
-        setSubAbilityName0={setSubAbilityName0}
-        setSubAbilityImagePath0={setSubAbilityImagePath0}
-        setSubAbilityName1={setSubAbilityName1}
-        setSubAbilityImagePath1={setSubAbilityImagePath1}
-        setSubAbilityName2={setSubAbilityName2}
-        setSubAbilityImagePath2={setSubAbilityImagePath2}
+        headGear={props.headGear}
+        setHeadGear={props.setHeadGear}
+        mainAbility={mainAbility0}
+        setMainAbility={setMainAbility0}
+        subAbility0={subAbility0}
+        setSubAbility0={setSubAbility0}
+        subAbility1={subAbility1}
+        setSubAbility1={setSubAbility1}
+        subAbility2={subAbility2}
+        setSubAbility2={setSubAbility2}
       />
       <Clothes
-        clothesImagePath={props.clothesImagePath}
-        subAbilityImagePath3={subAbilityImagePath3}
-        subAbilityImagePath4={subAbilityImagePath4}
-        subAbilityImagePath5={subAbilityImagePath5}
-        mainAbilityImagePath={mainAbilityImagePath1}
-        setMainAbilityImagePath={setMainAbilityImagePath1}
-        setMainAbilityName={setMainAbilityName1}
-        setSubAbilityName3={setSubAbilityName3}
-        setSubAbilityImagePath3={setSubAbilityImagePath3}
-        setSubAbilityName4={setSubAbilityName4}
-        setSubAbilityImagePath4={setSubAbilityImagePath4}
-        setSubAbilityName5={setSubAbilityName5}
-        setSubAbilityImagePath5={setSubAbilityImagePath5}
+        clothesGear={props.clothesGear}
+        setClothesGear={props.setClothesGear}
+        mainAbility={mainAbility1}
+        setMainAbility={setMainAbility1}
+        subAbility3={subAbility3}
+        setSubAbility3={setSubAbility3}
+        subAbility4={subAbility4}
+        setSubAbility4={setSubAbility4}
+        subAbility5={subAbility5}
+        setSubAbility5={setSubAbility5}
       />
       <Shoes
-        shoesImagePath={props.shoesImagePath}
-        subAbilityImagePath6={subAbilityImagePath6}
-        subAbilityImagePath7={subAbilityImagePath7}
-        subAbilityImagePath8={subAbilityImagePath8}
-        mainAbilityImagePath={mainAbilityImagePath2}
-        setMainAbilityImagePath={setMainAbilityImagePath2}
-        setMainAbilityName={setMainAbilityName2}
-        setSubAbilityName6={setSubAbilityName6}
-        setSubAbilityImagePath6={setSubAbilityImagePath6}
-        setSubAbilityName7={setSubAbilityName7}
-        setSubAbilityImagePath7={setSubAbilityImagePath7}
-        setSubAbilityName8={setSubAbilityName8}
-        setSubAbilityImagePath8={setSubAbilityImagePath8}
+        shoesGear={props.shoesGear}
+        setShoesGear={props.setShoesGear}
+        mainAbility={mainAbility2}
+        setMainAbility={setMainAbility2}
+        subAbility6={subAbility6}
+        setSubAbility6={setSubAbility6}
+        subAbility7={subAbility7}
+        setSubAbility7={setSubAbility7}
+        subAbility8={subAbility8}
+        setSubAbility8={setSubAbility8}
       />
     </div>
     <div className="font-type2 text-white" id="ae-section">
       <WeaponModal
-        weaponStatus={setWeaponStatus} 
+        setWeaponStatus={setWeaponStatus} 
       />
       <Weapon
         weaponStatus={weaponStatus} 
       />
       <AbilityPoint
         weaponStatus={weaponStatus}
-        mainAbilityName0={mainAbilityName0}
-        mainAbilityName1={mainAbilityName1}
-        mainAbilityName2={mainAbilityName2}
-        subAbilityName0={subAbilityName0}
-        subAbilityName1={subAbilityName1}
-        subAbilityName2={subAbilityName2}
-        subAbilityName3={subAbilityName3}
-        subAbilityName4={subAbilityName4}
-        subAbilityName5={subAbilityName5}
-        subAbilityName6={subAbilityName6}
-        subAbilityName7={subAbilityName7}
-        subAbilityName8={subAbilityName8} 
+        mainAbilityName0={mainAbility0.name}
+        mainAbilityName1={mainAbility1.name}
+        mainAbilityName2={mainAbility2.name}
+        subAbilityName0={subAbility0.name}
+        subAbilityName1={subAbility1.name}
+        subAbilityName2={subAbility2.name}
+        subAbilityName3={subAbility3.name}
+        subAbilityName4={subAbility4.name}
+        subAbilityName5={subAbility5.name}
+        subAbilityName6={subAbility6.name}
+        subAbilityName7={subAbility7.name}
+        subAbilityName8={subAbility8.name} 
       />
     </div>
     </>

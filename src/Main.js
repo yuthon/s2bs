@@ -4,7 +4,7 @@ import HeaderImg from './images/nc113873.png';
 import Footer from './Footer';
 // アビリティ関連のコンポーネント
 import AbilityComponents from './AbilityComponents';
-
+import CharacterControlModal from './CharacterControlModal';
 //ギア選択のモーダル
 import HeadGearModal from './HeadComponents/HeadGearModal';
 import ClothesGearModal from './ClothesComponents/ClothesGearModal';
@@ -23,7 +23,7 @@ import Canvas_White from './images/gear/Shs_FST000.png';
 import Headband_White from './images/gear/Hed_FST000.png';
 import inkRecovery from './images/ability/REC.png';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 // 3dモデル
 import Model from './ThreeComponents/Model';
 import Orbit from './ThreeComponents/Orbit';
@@ -36,11 +36,10 @@ extend({ OrbitControls });
 
 
 
-
 const Loader= () => {
   const { progress } = useProgress()
   return (
-    <Html center>
+    <Html center zIndexRange={[5, 0]}>
       <div className="font-type2" id="loader-content">
         <h2>3Dモデルをロード中…</h2>
         <h2>{Math.floor(progress * 10) /10}％</h2>
@@ -65,7 +64,22 @@ const Main = () => {
   const [eyeColor, setEyeColor] = useState("color_0");
   const [bottoms, setBottoms] = useState("Btm_0");
   const [teamColor, setTeamColor] = useState("color_5");
+  // キャラクターの操作
+  const [isZoomEnabled, setZoomState] = useState(false)
+  const [isRotateEnabled, setRotateState] = useState(false)
   
+
+  const coverRef = useRef();
+  // キャラクターの操作が有効化されているとき、キャンバスのカバーをなくす
+  useEffect(()=>{
+    if (isZoomEnabled || isRotateEnabled) {
+      coverRef.current.style.display="none"
+    } else {
+      coverRef.current.style.display="block"
+    }
+  })
+
+
   return(
     <>
     <header className="" id="header">
@@ -75,9 +89,13 @@ const Main = () => {
         <img className="header-image" src={HeaderImg} alt=""/>
       </div>
     </header>
-    <div className="container-xl">
-      
-      
+    <div className="container-xxl">
+      <CharacterControlModal 
+        isRotateEnabled={isRotateEnabled}
+        isZoomEnabled={isZoomEnabled}
+        setZoomState={setZoomState}
+        setRotateState={setRotateState}
+      />
       <CharacterTypeModal
         characterType={characterType}
         setCharacterType={setCharacterType}
@@ -108,49 +126,63 @@ const Main = () => {
       />
       <div className="row m-0 p-0" id="main">  
         <div className="col-sm-7 col-md-8 col-lg-5 col-xl-5 col-xxl-6" id="three-section">
-            <div id="character-btn">
-              <button type="button" className="btn btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
-                キャラクターの設定
-              </button>
-            </div>
-            
-            <Canvas
-              style={{ background: '#f0f0e0' }}
-              camera={{ position: [0, 9, 12] }}
-            >
-              <ambientLight
-                color={0xffffff}
-                intensity={0.8} />
-              <directionalLight
-                color={0xffffff}
-                intensity={0.6} />
-              <pointLight
-                position={[0, 11, 20]}
-                intensity={0.7} />
-              <pointLight
-                position={[0, 11, -20]}
-                intensity={0.7} />
-              <Orbit />
-              <Suspense fallback={<Loader />}>
-                <Model
-                  headGear={headGear.id}
-                  clothesGear={clothesGear.id}
-                  shoesGear={shoesGear.id}
-                  characterType={characterType}
-                  skinColor={skinColor}
-                  eyeColor={eyeColor}
-                  hairStyle={hairStyle}
-                  bottoms={bottoms}
-                  teamColor={teamColor}
-                />
-              </Suspense>
-            </Canvas>
+          <button type="button" id="character-btn" className="btn btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
+            キャラクターの設定
+          </button>
+          <button type="button" id="control-btn" className="btn btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterControlModal">
+            <p className="mb-1">キャラクターの</p>
+            <p className="my-0">回転 / ズーム</p>
+          </button>
+          <div ref={coverRef} id="canvas-cover"></div>
+          <Canvas
+            style={{ background: '#f0f0e0' }}
+            camera={{ position: [0, 9, 13] }}
+          >
+            <ambientLight
+              color={0xffffff}
+              intensity={0.8} />
+            <directionalLight
+              color={0xffffff}
+              intensity={0.6} />
+            <pointLight
+              position={[0, 11, 20]}
+              intensity={0.2} />
+            <pointLight
+              position={[0, 4, 12]}
+              intensity={0.6} />
+            <pointLight
+              position={[0, 4, -12]}
+              intensity={0.6} />
+            <pointLight
+              position={[0, 11, -20]}
+              intensity={0.3} />
+            <Orbit 
+              isZoomEnabled={isZoomEnabled}
+              isRotateEnabled={isRotateEnabled}
+            />
+            <Suspense fallback={<Loader />}>
+              <Model
+                headGear={headGear.id}
+                clothesGear={clothesGear.id}
+                shoesGear={shoesGear.id}
+                characterType={characterType}
+                skinColor={skinColor}
+                eyeColor={eyeColor}
+                hairStyle={hairStyle}
+                bottoms={bottoms}
+                teamColor={teamColor}
+              />
+            </Suspense>
+          </Canvas>
         </div>
         <div className="col-sm-5 col-md-4 col-lg-7 col-xl-7 col-xxl-6 px-0" id="gear-and-ability">
           <AbilityComponents 
-            headImagePath={headGear.path}
-            clothesImagePath={clothesGear.path}
-            shoesImagePath={shoesGear.path}
+            headGear={headGear}
+            setHeadGear={setHeadGear}
+            clothesGear={clothesGear}
+            setClothesGear={setClothesGear}
+            shoesGear={shoesGear}
+            setShoesGear={setShoesGear}
           />
           <HeadGearModal
             chosenGear={headGear}

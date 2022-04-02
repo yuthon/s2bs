@@ -308,6 +308,7 @@ const SubPowerUp = React.memo((props) => {
     <div className="ae-card row">
       <div className="col-1 ap-icon-area">
         <div className="ability-icon ap-ability-icon">
+          <p className="ability-detail-tooltip" style={{width: "18rem" }}>サブ性能アップ : サブウェポンの性能がアップします。</p>
           <img className="ap-ability-img" src={subPowerImg} alt=""/>
         </div>
       </div>

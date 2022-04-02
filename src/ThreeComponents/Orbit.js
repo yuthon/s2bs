@@ -1,9 +1,9 @@
-import { useFrame, useThree, extend } from '@react-three/fiber';
+import { useFrame, useThree, extend, applyProps } from '@react-three/fiber';
 import { useRef } from 'react';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 extend({ OrbitControls });
 
-const Orbit = () => {
+const Orbit = (props) => {
   const { camera, gl } = useThree();
   const controls = useRef();
   useFrame((state) => controls.current.update());
@@ -13,7 +13,8 @@ const Orbit = () => {
       args={[camera, gl.domElement]}
       target={[0, 6, 0]}
       enablePan={false}
-      enableZoom={false}
+      enableZoom={props.isZoomEnabled}
+      enableRotate={props.isRotateEnabled}
     />
   );
 };

@@ -2,6 +2,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 import * as THREE from 'three';
 import { useFrame, useLoader } from '@react-three/fiber';
+import { isWebGL2Available } from '@react-three/drei';
 
 
 
@@ -19,6 +20,7 @@ const Model = (props) => {
   gltf.scene.traverse( function(object) {
     object.frustumCulled = false;
   });
+
 
   let mixer;
   if (gltf.animations.length) {
@@ -224,23 +226,43 @@ const Model = (props) => {
       // ボーイ限定
       if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") > -1 && modelName.indexOf("OML") === -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // 性別不問
       else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") === -1 && modelName.indexOf("OML") === -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // フクギア
       // ボーイ限定
       else if (modelName.indexOf(clothesGear) > -1 && modelName.indexOf("Male") > -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // 性別不問
       else if (modelName.indexOf(clothesGear) > -1 && modelName.indexOf("All") > -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // クツギアは全て性別不問
       else if (modelName.indexOf(shoesGear) > -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // 髪型
       else if (modelName.indexOf(`IML_${hairStyle}`)> -1) {
@@ -279,6 +301,10 @@ const Model = (props) => {
       // ボトムス
       else if (modelName.indexOf(`Male_${bottoms}`)> -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // カラダ
       else if (modelName.indexOf("IML_M_Body")> -1) {
@@ -330,23 +356,43 @@ const Model = (props) => {
       // ガール限定
       if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") > -1 && modelName.indexOf("OML") === -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // 性別不問
       else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") === -1 && modelName.indexOf("OML") === -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // フクギア
       // ガール限定
       else if (modelName.indexOf(clothesGear) > -1 && modelName.indexOf("Female") > -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // 性別不問
       else if (modelName.indexOf(clothesGear) > -1 && modelName.indexOf("All") > -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // クツギアは全て性別不問
       else if (modelName.indexOf(shoesGear) > -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // 髪型
       else if (modelName.indexOf(`IFML_${hairStyle}`)> -1) {
@@ -396,6 +442,10 @@ const Model = (props) => {
       // ボトムス
       else if (modelName.indexOf(`Female_${bottoms}`)> -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // カラダ
       else if (modelName.indexOf("IFML_M_Body")> -1) {
@@ -435,6 +485,16 @@ const Model = (props) => {
         model.visible = false;
       }
     }
+    // PTの時の処理
+    if (hairStyle === "Hair_4" && headGear.indexOf("PT") > -1)  {
+      for (let i = 0; i < armature.children.length; i++) {
+        let model = armature.children[i];
+        let modelName = model.name
+        if (model.visible && modelName.indexOf("IFML_Hair_4") > -1 && modelName.indexOf(headGearType) > -1) {
+          model.visible = false;
+        }
+      }
+    }
   }
   if (characterType === "OFML") {
     // 髪型が2種類のみのため、Stateの値が合致しない場合はHair0に入れ替える
@@ -451,23 +511,43 @@ const Model = (props) => {
       // ガール限定
       if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") > -1 && modelName.indexOf("OML") === -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // 性別不問
       else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") === -1 && modelName.indexOf("OML") === -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // フクギア
       // ガール限定
       else if (modelName.indexOf(clothesGear) > -1 && modelName.indexOf("Female") > -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // 性別不問
       else if (modelName.indexOf(clothesGear) > -1 && modelName.indexOf("All") > -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // クツギアは全て性別不問
       else if (modelName.indexOf(shoesGear) > -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // 髪型
       else if (modelName.indexOf(`OFML_${hairStyle}`)> -1) {
@@ -517,6 +597,10 @@ const Model = (props) => {
       // ボトムス
       else if (modelName.indexOf(`Female_${bottoms}`)> -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // カラダ
       else if (modelName.indexOf("OFML_M_Body")> -1) {
@@ -556,6 +640,16 @@ const Model = (props) => {
         model.visible = false;
       }
     }
+    // PTの時の処理
+    if (hairStyle === "Hair_1" && headGear.indexOf("PT") > -1)  {
+      for (let i = 0; i < armature.children.length; i++) {
+        let model = armature.children[i];
+        let modelName = model.name
+        if (model.visible && modelName.indexOf("OFML_Hair_1") > -1 && modelName.indexOf(headGearType) > -1) {
+          model.visible = false;
+        }
+      }
+    }
   }
   if (characterType === "OML") {
     // 髪型が2種類のみのため、Stateの値が合致しない場合はHair0に入れ替える
@@ -571,31 +665,59 @@ const Model = (props) => {
       // ボーイ限定
       if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") > -1 && modelName.indexOf("OML") === -1 && hairStyle === "Hair_0") {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // 性別不問
       else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") === -1 && modelName.indexOf("OML") === -1 && hairStyle === "Hair_0") {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Male") > -1 && hairStyle === "Hair_1") {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // 性別不問
       else if (modelName.indexOf(headGear) > -1 && modelName.indexOf("Female") === -1 && hairStyle === "Hair_1") {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       
       // フクギア
       // ボーイ限定
       else if (modelName.indexOf(clothesGear) > -1 && modelName.indexOf("Male") > -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // 性別不問
       else if (modelName.indexOf(clothesGear) > -1 && modelName.indexOf("All") > -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // クツギアは全て性別不問
       else if (modelName.indexOf(shoesGear) > -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // 髪型
       else if (modelName.indexOf(`OML_${hairStyle}`)> -1) {
@@ -634,6 +756,10 @@ const Model = (props) => {
       // ボトムス
       else if (modelName.indexOf(`Male_${bottoms}`)> -1) {
         model.visible = true;
+        // 色を変更
+        if (modelName.indexOf("TeamColor") > -1) {
+          model.material.color.setRGB(teamColor.r, teamColor.g, teamColor.b)
+        }
       }
       // カラダ
       else if (modelName.indexOf("OML_M_Body")> -1) {
@@ -672,15 +798,17 @@ const Model = (props) => {
       else {
         model.visible = false;
       }
-
+      // アフロの時の処理
       if (hairStyle === "Hair_1") {
         for (let i = 0; i < armature.children.length; i++) {
           let model = armature.children[i];
           let modelName = model.name
+          // アフロが表示されている
           if (model.visible && modelName.indexOf(headGear) > -1 && modelName.indexOf("OML") > -1) {
             for (let n = 0; n < armature.children.length; n++) {
               let model = armature.children[n];
               let modelName = model.name
+              // アフロ用のアタマギアのモデルを残して他を非表示
               if (model.visible && modelName.indexOf(headGear) > -1 && modelName.indexOf("OML") === -1){
                 model.visible = false;
               }
@@ -691,6 +819,16 @@ const Model = (props) => {
     }
   }
   
+  // デバック用　表示されているモデルの名前を出力する
+  // for (let i = 0; i < armature.children.length; i++) {
+  //   // モデル
+  //   let model = armature.children[i];
+  //   // モデル名
+  //   let modelName = model.name;
+  //   if(model.visible) {
+  //     console.log(modelName)
+  //   }
+  // }
   return (
       <primitive object={gltf.scene} />
   );

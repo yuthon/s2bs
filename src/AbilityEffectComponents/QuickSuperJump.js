@@ -26,6 +26,7 @@ const QuickSuperJump = (props) => {
     <div className="ae-card row">
       <div className="col-1 ap-icon-area">
         <div className="ability-icon ap-ability-icon">
+          <p className="ability-detail-tooltip" style={{width: "22rem" }}>スーパージャンプ時間短縮 : スーパージャンプの時間が短くなります。</p>
           <img className="ap-ability-img" src={quickSuperJumpImg} alt=""/>
         </div>
       </div>

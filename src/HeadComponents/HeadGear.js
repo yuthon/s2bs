@@ -8,8 +8,12 @@ const HeadGear = (props) => {
   
   return (
     <div className="gear-img" onClick={()=>{openHeadGearModal()}}>
-      <p className="gear-tooltip font-type2">クリックでギアを変更</p>
-      <img className="gear-img" src={props.passImagePath} alt=""/>
+      <div className="gear-tooltip-arrow">
+        <div className="gear-tooltip-container">
+          <p className="gear-tooltip font-type2">クリックでギアを変更</p>
+        </div>
+      </div>
+      <img src={props.imagePath} alt=""/>
     </div>
   );
 };

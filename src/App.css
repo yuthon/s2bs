@@ -2,13 +2,14 @@
   text-align: center;
   background-color: #f0f0e0;
   position: relative;
+  overflow-x: hidden;
 }
 
 /* bootstrapで実現不可能なレスポンシブ対応を手書き */
 
 @media (min-width: 992px) {
   #ae-section {
-    height: calc(100vh - 2rem - 6.25rem - 205px);
+    height: calc(100vh - 2rem - 5.25rem - 12.8125rem);
     overflow-y: auto;
     overflow-x: hidden;
   }
@@ -17,11 +18,19 @@
     position: relative;
     height: calc(100vh - 6.25rem);
   }
+  #canvas-cover {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: calc(100vh - 6.25rem);
+    z-index: 10;
+  }
   .ability-modal {
     width: 320px;
   }
   .mainSlotModal {
-    height: 280px;
+    height: calc(280px + 2rem);
     position: absolute;
     left: -125px;
     top: 72px;
@@ -37,19 +46,19 @@
   }
   /* サブスロットモーダル */
   .subSlotModal-left {
-    height: 220px;
+    height: calc(210px + 2.6rem);
     left: -180px;
     top: 64px;
     position: absolute;
   }
   .subSlotModal-mid {
-    height: 220px;
+    height: calc(210px + 2.6rem);
     left: -226px;
     top: 64px;
     position: absolute;
   }
   .subSlotModal-right {
-    height: 220px;
+    height: calc(210px + 2.6rem);
     left: -272px;
     top: 64px;
     position: absolute;
@@ -172,11 +181,14 @@
     width: 200px;
   }
   .mainSlotModal {
-    height: 455px;
+    height: calc(450px + 2.6rem);
     position: absolute;
     left: -6px;
     top: 72px;
     z-index: 5;
+  }
+  #mainSlotModal2 {
+    height: calc(390px + 2.6rem);
   }
   .mainSlotModal:before {
     position: absolute;
@@ -188,19 +200,19 @@
   }
   /* サブスロットモーダル */
   .subSlotModal-left {
-    height: 340px;
+    height: calc(330px + 2.6rem);
     left: -60px;
     top: 64px;
     position: absolute;
   }
   .subSlotModal-mid {
-    height: 340px;
+    height: calc(330px + 2.6rem);
     left: -106px;
     top: 64px;
     position: absolute;
   }
   .subSlotModal-right {
-    height: 340px;
+    height: calc(330px + 2.6rem);
     left: -152px;
     top: 64px;
     position: absolute;
@@ -325,6 +337,9 @@ footer {
 .twitter-link:hover {
   color: #dee2e6;
 }
+.twitter-link:hover svg path {
+  fill: #dee2e6;
+}
 .github-link {
   text-decoration: none;
   color: white;
@@ -332,6 +347,9 @@ footer {
 }
 .github-link:hover {
   color: #dee2e6;
+}
+.github-link:hover svg path {
+  fill: #dee2e6;
 }
 .about {
   cursor: pointer;
@@ -341,6 +359,9 @@ footer {
 }
 .about:hover {
   color: #dee2e6;
+}
+.about:hover svg path {
+  fill: #dee2e6;
 }
 #aboutModal p {
   font-size: 1.25rem;
@@ -390,16 +411,15 @@ footer {
     #6b6b6b 40px
   );
 }
-
-/* 3dモデルの表示領域 */
-
-#weapon-container {
-  padding-left: 0px;
+.gray-stripe-dense {
+  background: repeating-linear-gradient(
+    45deg,
+    #333333,
+    #333333 20px,
+    #4d4d4d 20px,
+    #4d4d4d 40px
+  );
 }
-
-/* #ae-section {
-  z-index: 11;
-} */
 
 .font-type1 {
   font-family: splType01;
@@ -420,7 +440,7 @@ footer {
 /* アタマ　フク　クツで共通の大きさ */
 /* widthはレスポンシブ対応 */
 .gear-card {
-  height: 205px;
+  height: 12.8125rem;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -472,6 +492,7 @@ footer {
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0.3rem;
   font-size: 0.9rem;
+  user-select: none;
 }
 /* ツールチップの矢印 */
 .ability-reset-tooltip:after {
@@ -492,11 +513,18 @@ footer {
 
 /* ギア画像の大きさ */
 .gear-img {
+  width: 130px;
+  height: 110px;
+  position: absolute;
+  bottom: 3.45rem;
+  left: 34px;
+  cursor: pointer;
+}
+
+.gear-img img {
   width: 110px;
   height: 110px;
-  position: relative;
   margin: auto;
-  cursor: pointer;
 }
 
 .head-tooltip {
@@ -504,6 +532,7 @@ footer {
   height: 110px;
   margin: auto;
   cursor: pointer;
+  user-select: none;
 }
 
 /*スロット部分の高さ指定*/
@@ -547,12 +576,6 @@ footer {
 }
 
 /* サブスロットのsvgの位置調整 */
-.subslot-tooltip {
-  position: absolute;
-  z-index: 5;
-  top: -6px;
-  left: -6px;
-}
 
 /*サブスロットの大きさ調整*/
 .sub-slot {
@@ -633,6 +656,7 @@ footer {
   left: -70%;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
+  user-select: none;
 }
 /* ツールチップの矢印 */
 .fav-ability-tooltip:after {
@@ -769,9 +793,44 @@ footer {
 .brand-img {
   width: 40px;
   height: 40px;
+}
+.brand-img-container {
+  width: 40px;
+  height: 40px;
   position: absolute;
   top: 0px;
-  left: 3px;
+  left: 0px;
+}
+
+.brand-tooltip-container {
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  width: 140px;
+  padding-left: 0.5rem;
+  padding-top: 5px;
+  display: none;
+}
+
+.brand-tooltip {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0.25rem;
+  padding: 0.2rem 0.4rem;
+}
+.brand-tooltip:after {
+  display: block;
+  width: 0.4rem;
+  border-top: 0.25rem solid transparent;
+  border-bottom: 0.25rem solid transparent;
+  border-right: 0.4rem solid rgba(0, 0, 0, 0.8);
+  content: '';
+  position: absolute;
+  top: 0.8rem;
+  left: 0.1rem;
+}
+
+.brand-img-container:hover .brand-tooltip-container {
+  display: block;
 }
 
 .brand-img-small {
@@ -875,6 +934,7 @@ footer {
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0.3em;
   font-size: 0.9rem;
+  user-select: none;
 }
 
 .weapon-icon-tooltip-arrow {
@@ -901,7 +961,7 @@ footer {
   position: relative;
   width: 40px;
   height: 20px;
-  margin-left: 20px;
+  margin-top: 2px;
 }
 
 .switch-base {
@@ -961,17 +1021,10 @@ footer {
   fill: #fff;
 }
 
-/*skincolorボタンのスタイル*/
-/*.skincolor-btn {*/
-/*  width: 100px;*/
-/*  height:70px;*/
-/*}*/
-
 /*SCボタン*/
 .color-btn,
 .selected {
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   height: 110px;
   width: 120px;
 }
@@ -1019,21 +1072,18 @@ CTボタン
 */
 .CT-btn,
 .CT-selected {
-  width: 240px;
-  height: 165px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 15rem;
+  height: 10.4rem;
+  margin: auto;
 }
 
 .CT-btn-svg {
-  width: 235px;
-  height: 155px;
+  width: 14.7rem;
+  height: 9.7rem;
 }
 
 /*ボタン内のテキスト*/
 .CT-text-default {
-  font-size: 10rem;
-  font-weight: bold;
   user-select: none;
 }
 
@@ -1043,8 +1093,6 @@ CTボタン
 
 .CT-btn-svg:hover .CT-text-hover {
   fill: white;
-  font-size: 12rem;
-  font-weight: bold;
 }
 /*CTボタンのアニメーション*/
 .CT-btn-svg {
@@ -1090,8 +1138,6 @@ CTボタン
 
 .CT-selected .CT-btn-svg .CT-text-hover {
   fill: white;
-  font-size: 13rem;
-  font-weight: bold;
 }
 /*
 HSボタン
@@ -1102,8 +1148,7 @@ HSボタン
 .HS-ML-selected {
   width: 140px;
   height: 200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 .HS-btn-svg {
@@ -1249,12 +1294,12 @@ Btmボタン
 }
 /* ヘッダー */
 #ae-header {
-  height: 2.55rem;
+  height: 2.25rem;
   background-color: rgba(0, 0, 0, 0.7);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   color: white;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin: 0px;
 }
 
@@ -1265,28 +1310,28 @@ Btmボタン
 
 /* ギアパワーのアイコン */
 .ap-ability-icon {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   position: relative;
   position: absolute;
-  top: 5px;
-  left: 0px;
+  top: 0.3125rem;
+  left: 0rem;
 }
 
 /* ギアパワーの画像 */
 .ap-ability-img {
-  width: 34px;
-  height: 34px;
+  width: 2.15rem;
+  height: 2.15rem;
   position: absolute;
-  top: 2px;
-  left: 2px;
+  top: 0.125rem;
+  left: 0.125rem;
 }
 
 /* 1行のみの場合 */
 .ae-text {
   text-align: right;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* １つの効果を2行で書く場合の1行目 */
@@ -1344,7 +1389,13 @@ Btmボタン
   position: absolute;
   top: 20px;
   right: 10px;
-  z-index: 1;
+  z-index: 11;
+}
+#control-btn {
+  position: absolute;
+  top: 5rem;
+  right: 10px;
+  z-index: 11;
 }
 
 /*  */
@@ -1352,7 +1403,7 @@ Btmボタン
 /*  */
 #weapon-card {
   width: 100%;
-  height: 170px;
+  height: 9.25rem;
   background: repeating-linear-gradient(
     45deg,
     #dbe826,
@@ -1361,7 +1412,6 @@ Btmボタン
     #c4d412 40px
   );
   border-radius: 30px;
-  padding-top: 7px;
   position: relative;
 }
 /* ブキ表示部分のフッター */
@@ -1393,43 +1443,67 @@ Btmボタン
   bottom: -0.5rem;
   left: 20%;
   display: none;
+  user-select: none;
 }
 
 /* サブとスペシャルの背景 */
 .weapon-sub-sp {
   position: relative;
   width: 100%;
-  height: 48px;
+  height: 3rem;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 13px;
 }
 /* サブとスペシャルの文字 */
 .weapon-sub-sp p {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: auto;
+}
+/* サブとスペシャルの画像 */
+.weapon-sub-sp img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 0.25rem;
 }
 
 /*  */
 /* ツールチップ */
 /*  */
 
+/* ツールチップの位置固定のためのdiv要素 */
+.gear-tooltip-container {
+  position: relative;
+}
+
+/* 左右の表示位置固定のため矢印を別に用意して固定 */
+.gear-tooltip-arrow {
+  display: none;
+  width: 0.5rem;
+  border-left: 0.3rem solid transparent;
+  border-right: 0.3rem solid transparent;
+  border-top: 0.4rem solid rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 25px;
+  left: 60px;
+}
+
 /* ギア表示部分のツールチップ */
 .gear-tooltip {
   width: 7rem;
   height: 1.8rem;
-  display: none;
-  position: absolute;
-  bottom: 4.25rem;
-  left: 0rem;
   z-index: 2;
   padding: 0.3em 0.5em;
   color: #ffffff;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0.3em;
   font-size: 0.9rem;
+  user-select: none;
+  margin: 0rem;
+  position: absolute;
+  bottom: 0.4rem;
+  left: -3.4rem;
 }
 
-.gear-tooltip:after {
+/* .gear-tooltip:after {
   width: 0.5rem;
   content: '';
   display: block;
@@ -1439,9 +1513,9 @@ Btmボタン
   border-left: 0.3rem solid transparent;
   border-right: 0.3rem solid transparent;
   border-top: 0.5rem solid rgba(0, 0, 0, 0.8);
-}
+} */
 
-.gear-img:hover .gear-tooltip {
+.gear-img:hover .gear-tooltip-arrow {
   display: block;
 }
 
@@ -1459,6 +1533,7 @@ Btmボタン
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0.3em;
   font-size: 0.9rem;
+  user-select: none;
 }
 /* 右のサブスロットのツールチップ */
 .slot-tooltip-right {
@@ -1473,6 +1548,7 @@ Btmボタン
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0.3em;
   font-size: 0.9rem;
+  user-select: none;
 }
 /* メインスロットのツールチップ */
 .slot-tooltip-left {
@@ -1487,6 +1563,7 @@ Btmボタン
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0.3em;
   font-size: 0.9rem;
+  user-select: none;
 }
 
 /* 上側に表示する場合だとフォントサイズ変更の際に左右の表示位置が*/
@@ -1501,6 +1578,46 @@ Btmボタン
   position: absolute;
   top: -0.85rem;
   left: 37%;
+}
+/* ギアとギアパワーの組み合わせが存在しない時の警告ツールチップ */
+.slot-tooltip-warning {
+  width: 215px;
+  height: 4.5rem;
+  position: absolute;
+  top: -5.25rem;
+  left: -15px;
+  z-index: 2;
+  padding: 0rem 0.5rem 0.2rem 0.5rem;
+  color: #ffffff;
+  background: #dd293b;
+  border-radius: 0.3em;
+  font-size: 0.9rem;
+  user-select: none;
+  margin: 0px;
+  /* display: none; */
+}
+.slot-tooltip-warning:after {
+  width: 0.8rem;
+  display: block;
+  z-index: 2;
+  border-top: 0.7rem solid #dd293b;
+  border-right: 0.38rem solid transparent;
+  border-left: 0.38rem solid transparent;
+  position: absolute;
+  bottom: -0.7rem;
+  left: 30px;
+  content: '';
+}
+/* ツールチップを閉じるボタン */
+.tooltip-close-btn {
+  width: 20px;
+  height: 20px;
+  margin-left: 180px;
+  cursor: pointer;
+}
+/* 閉じるボタンのホバーしたとき */
+.tooltip-close-btn:hover path {
+  fill: #fff;
 }
 
 .ability-icon:hover .slot-tooltip,
@@ -1518,6 +1635,7 @@ Btmボタン
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0.3em;
   font-size: 0.9rem;
+  user-select: none;
 }
 
 .gear-icon:hover .gear-icon-tooltip-arrow,
@@ -1607,7 +1725,9 @@ Btmボタン
   );
   display: none;
   padding-left: 10px;
+  z-index: 12;
 }
+
 /* アビリティアイコンの大きさ */
 
 .ability {
@@ -1624,4 +1744,198 @@ Btmボタン
   position: absolute;
   top: 1px;
   left: 1px;
+}
+/* ギアパワーのツールチップ */
+/* 位置固定用のdiv */
+
+.ability-tooltip-container {
+  position: absolute;
+  top: -2.25rem;
+  left: -78px;
+  width: 210px;
+  display: none;
+}
+/* ツールチップ本体 */
+.ability-tooltip {
+  padding: 0.2rem 0.5rem;
+  margin: 0rem;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0.25rem;
+  color: #fff;
+  z-index: 7;
+  font-size: 0.95rem;
+  user-select: none;
+}
+.ability-tooltip:after {
+  position: absolute;
+  bottom: -0.4rem;
+  left: 46%;
+  display: block;
+  content: '';
+  border-top: 0.4rem solid rgba(0, 0, 0, 0.8);
+  border-left: 0.3rem solid transparent;
+  border-right: 0.3rem solid transparent;
+  width: 0.6rem;
+}
+/* ホバーしたときに表示 */
+.ability:hover .ability-tooltip-container {
+  display: block;
+}
+
+/* ギアモーダルなどのOKボタン */
+.OK-btn p {
+  transform: scale(1.2, 1);
+  letter-spacing: 0.15rem;
+  margin-bottom: 0px;
+}
+
+/* ギアパワー効果のツールチップ */
+.ability-detail-tooltip {
+  padding: 0.4rem 0.5rem;
+  display: none;
+  margin: 0rem;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 0.25rem;
+  color: #fff;
+  z-index: 7;
+  font-size: 1rem;
+  user-select: none;
+  position: absolute;
+  top: -2.9rem;
+  left: -8px;
+}
+/* ツールチップが２行のとき */
+.ability-detail-tooltip-2 {
+  padding: 0.4rem 0.8rem 0.4rem 0.4rem;
+  display: none;
+  margin: 0rem;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 0.25rem;
+  color: #fff;
+  z-index: 7;
+  font-size: 1rem;
+  user-select: none;
+  position: absolute;
+  top: -4.5rem;
+  left: -8px;
+  text-align: right;
+}
+.ability-detail-tooltip:after,
+.ability-detail-tooltip-2:after {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 20px;
+  display: block;
+  content: '';
+  border-top: 0.5rem solid rgba(0, 0, 0, 0.9);
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid transparent;
+  width: 0.8rem;
+}
+
+.ap-ability-icon:hover .ability-detail-tooltip,
+.ap-ability-icon:hover .ability-detail-tooltip-2 {
+  display: block;
+}
+
+/* ギアのリセットボタン */
+.gear-reset {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 2.5rem;
+  right: 5px;
+  cursor: pointer;
+}
+/* ホバーしたとき拡大と回転 */
+.gear-reset:hover svg {
+  transition: 0.1s;
+  transform: rotate(15deg) scale(1.2, 1.2);
+}
+/* クリックで回転 */
+.gear-reset:active svg {
+  transition: 0.1s;
+  transform: rotate(-15deg) scale(1.2, 1.2);
+}
+/* ツールチップ */
+.gear-reset-tooltip {
+  width: 5rem;
+  height: 1.8rem;
+  display: none;
+  position: absolute;
+  bottom: -18px;
+  right: 33px;
+  z-index: 2;
+  padding: 0.2rem 0.3rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  user-select: none;
+}
+/* ツールチップの矢印 */
+.gear-reset-tooltip:after {
+  border-top: 0.3rem solid transparent;
+  border-bottom: 0.3rem solid transparent;
+  border-left: 0.4rem solid rgba(0, 0, 0, 0.8);
+  content: '';
+  display: block;
+  width: 0.5rem;
+  position: absolute;
+  top: 0.6rem;
+  right: -0.4rem;
+}
+/*　ホバーしたときツールチップを表示 */
+.gear-reset:hover .gear-reset-tooltip {
+  display: block;
+}
+
+.toggle-between-modal {
+  width: 100%;
+  height: 2rem;
+}
+
+.caret {
+  width: 2rem;
+  height: 2rem;
+}
+
+.caret-active {
+  cursor: pointer;
+}
+
+.caret-inactive path {
+  fill: none;
+  stroke: #dee2e6;
+  stroke-width: 20;
+}
+
+.caret-active:hover path {
+  fill: white;
+}
+
+.page-active {
+  height: 0.75rem;
+  width: 0.75rem;
+  background: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0rem 0.25rem 0rem 0.25rem;
+  vertical-align: middle;
+}
+
+.page-inactive {
+  height: 0.75rem;
+  width: 0.75rem;
+  border: 2px solid #dee2e6;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0rem 0.25rem 0rem 0.25rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.page-inactive:hover {
+  background: white;
+  border: 0px;
 }

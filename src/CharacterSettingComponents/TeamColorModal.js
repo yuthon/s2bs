@@ -47,14 +47,14 @@ const TeamColorModal = React.memo((props) => {
 
   
   return (
-    <div className="modal fade" id="TeamColorModal" tabIndex="-1" aria-labelledby="SkinColorModalLabel" aria-hidden="true">
+    <div className="modal fade" id="teamColorModal" tabIndex="-1" aria-labelledby="SkinColorModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-md modal-dialog-centered">
         <div className="modal-content font-type1 bg-secondary text-white">  
           <div className="modal-header">
-            <h5 className="modal-title" id="weaponModalLabel">インクの色を選択</h5>
+            <h5 className="modal-title" id="weaponModalLabel">インクの色を選択 (5/6)</h5>
             <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div className="d-flex flex-wrap pt-3">  
+          <div className="d-flex flex-wrap px-4 py-4" style={{height: "400px"}}>  
             <div className="color-btn" ref={color0Ref}>  
               <svg
                 className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
@@ -182,15 +182,31 @@ const TeamColorModal = React.memo((props) => {
               </svg>
             </div>
           </div>
-          <div className="modal-footer">
-            <button type="button" className="btn-lg btn-dark font-type1 ms-auto" data-bs-toggle="modal" data-bs-target="#hairStyleModal" data-bs-dismiss="modal">
-              もどる
-            </button>
-            <button type="button" className="btn-lg btn-dark font-type1 mx-auto" data-bs-dismiss="modal" aria-hidden="Close">
-              とじる
-            </button>
-            <button type="button" className="btn-lg btn-dark font-type1 me-auto" data-bs-toggle="modal" data-bs-target="#BottomsModal" data-bs-dismiss="modal">
-              つぎへ
+          <div className="toggle-between-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" className="caret caret-active" viewBox="0 0 256 512" data-bs-toggle="modal" data-bs-target="#hairStyleModal" data-bs-dismiss="modal">
+              {/* <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
+              <path
+                d="M137.4 406.6l-128-127.1C3.125 272.4 0 264.2 0 255.1s3.125-16.38 9.375-22.63l128-127.1c9.156-9.156 22.91-11.9 34.88-6.943S192 115.1 192 128v255.1c0 12.94-7.781 24.62-19.75 29.58S146.5 415.8 137.4 406.6z"
+                fill="#dee2e6"
+              />
+            </svg>
+              <div className="page-inactive" data-bs-toggle="modal" data-bs-target="#characterTypeModal" data-bs-dismiss="modal"></div>
+              <div className="page-inactive" data-bs-toggle="modal" data-bs-target="#skinColorModal" data-bs-dismiss="modal"></div>
+              <div className="page-inactive" data-bs-toggle="modal" data-bs-target="#eyeColorModal" data-bs-dismiss="modal"></div>
+              <div className="page-inactive" data-bs-toggle="modal" data-bs-target="#hairStyleModal" data-bs-dismiss="modal"></div>
+              <div className="page-active"></div>
+              <div className="page-inactive" data-bs-toggle="modal" data-bs-target="#bottomsModal" data-bs-dismiss="modal"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" className="caret caret-active" viewBox="0 0 256 512" data-bs-toggle="modal" data-bs-target="#bottomsModal" data-bs-dismiss="modal">
+              {/* <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
+              <path
+                d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z"
+                fill="#dee2e6"
+              />
+            </svg>
+          </div>
+          <div className="modal-footer py-0">
+            <button type="button" className="btn btn-dark font-type1 mx-auto" data-bs-dismiss="modal" aria-hidden="Close">
+              OK
             </button>
           </div>
         </div>

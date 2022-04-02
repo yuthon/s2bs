@@ -23,7 +23,7 @@ const subSlotModal4 = (props) => {
   }
 
   return (
-    <div className="ability-modal subSlotModal-mid" id="subSlotModal4">
+    <div className="ability-modal subSlotModal-mid font-type2" id="subSlotModal4">
         <svg className="modal-close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" onClick={()=>{closeGearModal()}}>
           {/* <!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
           <path 
@@ -32,158 +32,189 @@ const subSlotModal4 = (props) => {
           />
         </svg>
           <div className="ability-list d-flex flex-wrap">
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setAbilityName("empty");
-                props.setImagePath(empty);
-                }
-              }
-            >
-              <img className="abilitymodal-img" src={empty} alt="スロットを空にする"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setAbilityName("inkSaverMain");
-                props.setImagePath(inkSaverMain);
-                }
-              }
-            >
-              <img className="abilitymodal-img" src = {inkSaverMain} alt="インク効率アップ（メイン）"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setAbilityName("inkSaverSub");
-                props.setImagePath(inkSaverSub);
-                }
-              }
-            >
-              <img className="abilitymodal-img" src = {inkSaverSub} alt="インク効率アップ（サブ）"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setAbilityName("inkRecovery");
-                props.setImagePath(inkRecovery);
-                }
-              }
-            >
-              <img className="abilitymodal-img" src = {inkRecovery} alt="インク回復アップ"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setAbilityName("runSpeed");
-                props.setImagePath(runSpeed);
-                }
-              }
-            >
-              <img className="abilitymodal-img" src = {runSpeed} alt="ヒト移動速度アップ"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setAbilityName("swimSpeed");
-                props.setImagePath(swimSpeed);
-                }
-              }
-            >
-              <img className="abilitymodal-img" src = {swimSpeed} alt="イカ移動速度アップ"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setAbilityName("specialCharge");
-                props.setImagePath(specialCharge);
-                }
-              }
-            >
-              <img className="abilitymodal-img" src = {specialCharge} alt="スペシャル増加アップ"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setAbilityName("specialSaver");
-                props.setImagePath(specialSaver);
-                }
-              }
-            >
-              <img className="abilitymodal-img" src = {specialSaver} alt="スペシャル減少量ダウン"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setAbilityName("specialPower");
-                props.setImagePath(specialPower);
-                }
-              }
-            >
-              <img className="abilitymodal-img" src = {specialPower} alt="スペシャル性能アップ"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setAbilityName("qr");
-                props.setImagePath(qr);
-                }
-              }
-            >
-              <img className="abilitymodal-img" src = {qr} alt="復活時間短縮"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setAbilityName("quickSuperJump");
-                props.setImagePath(quickSuperJump);
-                }
-              }
-            >
-              <img className="abilitymodal-img" src = {quickSuperJump} alt="スーパージャンプ時間短縮"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setAbilityName("subPower");
-                props.setImagePath(subPower);
-                }
-              }
-            >
-              <img className="abilitymodal-img" src = {subPower} alt="サブ性能アップ"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setAbilityName("inkRes");
-                props.setImagePath(inkRes);
-                }
-              }
-            >
-              <img className="abilitymodal-img" src = {inkRes} alt="相手インク影響軽減"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setAbilityName("bombDefence");
-                props.setImagePath(bombDefence);
-                }
-              }
-            >
-              <img className="abilitymodal-img" src = {bombDefence} alt="爆風軽減"/>
-            </div>
-            <div
-              className="ability-icon ability"
-              onClick={()=>{
-                props.setAbilityName("mpu");
-                props.setImagePath(mpu);
-                }
-              }
-            >
-              <img className="abilitymodal-img" src = {mpu} alt="メイン性能アップ"/>
-            </div>
+          <div
+          className="ability-icon ability"
+          onClick={()=>{
+            props.setAbility({name:"empty", path:empty});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">スロットを空にする</span>
           </div>
+          <img className="abilitymodal-img" src={empty} alt=""/>
         </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            props.setAbility({name:"インク効率アップ(メイン)", path:inkSaverMain});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">インク効率アップ(メイン)</span>
+          </div>
+          <img className="abilitymodal-img" src = {inkSaverMain} alt=""/>
+        </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            props.setAbility({name:"インク効率アップ(サブ)", path:inkSaverSub});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">インク効率アップ(サブ)</span>
+          </div>
+          <img className="abilitymodal-img" src={inkSaverSub} alt= ""/>
+        </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            props.setAbility({name:"インク回復力アップ", path:inkRecovery});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">インク回復力アップ</span>
+          </div>
+          <img className="abilitymodal-img" src={inkRecovery} alt= ""/>
+        </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            props.setAbility({name:"ヒト移動速度アップ", path:runSpeed});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">ヒト移動速度アップ</span>
+          </div>
+          <img className="abilitymodal-img" src={runSpeed} alt= ""/>
+        </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            props.setAbility({name:"イカダッシュ速度アップ", path:swimSpeed});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">イカダッシュ速度アップ</span>
+          </div>
+          <img className="abilitymodal-img" src={swimSpeed} alt= ""/>
+        </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            props.setAbility({name:"スペシャル増加量アップ", path:specialCharge});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">スペシャル増加量アップ</span>
+          </div>
+          <img className="abilitymodal-img" src={specialCharge} alt= ""/>
+        </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            props.setAbility({name:"スペシャル減少量ダウン", path:specialSaver});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">スペシャル減少量ダウン</span>
+          </div>
+          <img className="abilitymodal-img" src={specialSaver} alt= ""/>
+        </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            props.setAbility({name:"スペシャル性能アップ", path:specialPower});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">スペシャル性能アップ</span>
+          </div>
+          <img className="abilitymodal-img" src={specialPower} alt= ""/>
+        </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            props.setAbility({name:"復活時間短縮", path:qr});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">復活時間短縮</span>
+          </div>
+          <img className="abilitymodal-img" src={qr} alt= ""/>
+        </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            props.setAbility({name:"スーパージャンプ時間短縮", path:quickSuperJump});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">スーパージャンプ時間短縮</span>
+          </div>
+          <img className="abilitymodal-img" src={quickSuperJump} alt= "スーパージャンプ時間短縮"/>
+        </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            props.setAbility({name:"サブ性能アップ", path:subPower});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">サブ性能アップ</span>
+          </div>
+          <img className="abilitymodal-img" src={subPower} alt= ""/>
+        </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            props.setAbility({name:"相手インク影響軽減", path:inkRes});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">相手インク影響軽減</span>
+          </div>
+          <img className="abilitymodal-img" src={inkRes} alt= ""/>
+        </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            props.setAbility({name:"爆風ダメージ軽減・改", path:bombDefence});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">爆風ダメージ軽減・改</span>
+          </div>
+          <img className="abilitymodal-img" src={bombDefence} alt= ""/>
+        </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            props.setAbility({name:"メイン性能アップ", path:mpu});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">メイン性能アップ</span>
+          </div>
+          <img className="abilitymodal-img" src={mpu} alt= ""/>
+        </div>
+      </div>
+      <button type="button" className="btn btn-dark m-auto OK-btn" onClick={()=>{closeGearModal()}}><p>OK</p></button>
+    </div>
   );
 };
 

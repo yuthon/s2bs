@@ -104,6 +104,7 @@ const InkRecovery = (props) => {
     <div className="ae-card row">
       <div className="ap-icon-area col-1">
         <div className="ability-icon ap-ability-icon">
+          <p className="ability-detail-tooltip" style={{width: "20.5rem" }}>インク回復力アップ : インクタンク回復速度がアップします。</p>
           <img className="ap-ability-img" src={inkRecoveryImg} alt=""/>
         </div>
       </div>
