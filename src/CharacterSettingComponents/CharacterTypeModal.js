@@ -64,8 +64,8 @@ const CharacterSettingModal = React.memo((props) => {
                   fill="none"
                   stroke="none"
                 />
-                <text className="CT-text-default" font-size="160" x="370" y="520" fill="white">イカガール</text>
-                <text className="CT-text-hover" font-size="200" x="280" y="540" fill="none">イカガール</text>
+                <text className="CT-text-default" fontSize="160" x="370" y="520" fill="white">イカガール</text>
+                <text className="CT-text-hover" fontSize="200" x="280" y="540" fill="none">イカガール</text>
               </svg>
             </div>
             <div className="CT-btn" id="IML" ref={IMLRef}>
@@ -87,8 +87,8 @@ const CharacterSettingModal = React.memo((props) => {
                   fill="none"
                   stroke="none"
                 />
-                <text className="CT-text-default" font-size="160" x="370" y="520" fill="white">イカボーイ</text>
-                <text className="CT-text-hover" font-size="200" x="280" y="540" fill="none">イカボーイ</text>
+                <text className="CT-text-default" fontSize="160" x="370" y="520" fill="white">イカボーイ</text>
+                <text className="CT-text-hover" fontSize="200" x="280" y="540" fill="none">イカボーイ</text>
               </svg>
             </div>
             <div className="CT-btn" id="OFML" ref={OFMLRef}>
@@ -110,8 +110,8 @@ const CharacterSettingModal = React.memo((props) => {
                   fill="none"
                   stroke="none"
                 />
-                <text className="CT-text-default" font-size="160" x="370" y="520" fill="white">タコガール</text>
-                <text className="CT-text-hover" font-size="200" x="280" y="540" fill="none">タコガール</text>
+                <text className="CT-text-default" fontSize="160" x="370" y="520" fill="white">タコガール</text>
+                <text className="CT-text-hover" fontSize="200" x="280" y="540" fill="none">タコガール</text>
               </svg>
             </div>
             <div className="CT-btn" id="OML" ref={OMLRef}>
@@ -133,8 +133,8 @@ const CharacterSettingModal = React.memo((props) => {
                   fill="none"
                   stroke="none"
                 />
-                <text className="CT-text-default" font-size="160" x="370" y="520" fill="white">タコボーイ</text>
-                <text className="CT-text-hover" font-size="200"x="280" y="540" fill="none">タコボーイ</text>
+                <text className="CT-text-default" fontSize="160" x="370" y="520" fill="white">タコボーイ</text>
+                <text className="CT-text-hover" fontSize="200"x="280" y="540" fill="none">タコボーイ</text>
               </svg>
             </div>
           </div>
