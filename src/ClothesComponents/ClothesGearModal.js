@@ -1,7 +1,6 @@
 import { memo, useState, useRef } from 'react';
 import GearIcon from '../GearIcon';
-import { gears } from './clothesData';
-import { gearsSortedByName } from './clothesData';
+import { gears, gearsSortedByName } from './clothesData';
 // ブランドの画像
 import Batoroika from '../images/brands/B00.png';
 import Aironic from '../images/brands/B01.png';
