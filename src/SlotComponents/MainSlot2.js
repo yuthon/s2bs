@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import MainSlotModal2 from '../SlotComponents/MainSlotModal2';
-import { ShoesGearInfo } from '../ShoesComponents/ShoesGearInfo';
+import { shoesAbilityData } from '../ShoesComponents/shoesAbilityData';
 
 const MainSlot2 = React.memo((props) => {
   // モーダルを表示する関数
@@ -39,11 +39,11 @@ const MainSlot2 = React.memo((props) => {
     if (abilityName === "empty") {
       warningRef.current.style.display="none"
     } else {
-      for (let i=0; i < ShoesGearInfo.length; i++) {
+      for (let i=0; i < shoesAbilityData.length; i++) {
         // 名前が一致するギアを検索
-        if (ShoesGearInfo[i].name === gearName) {
+        if (shoesAbilityData[i].name === gearName) {
           // ギアが見つかったら選択されているギアパワーが配列に含まれるか調べる
-          if (ShoesGearInfo[i].abilityArray.includes(abilityName)) {
+          if (shoesAbilityData[i].abilityArray.includes(abilityName)) {
             warningRef.current.style.display="none"
           } else {
             warningRef.current.style.display="block"

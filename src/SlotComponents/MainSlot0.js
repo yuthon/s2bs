@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import MainSlotModal0 from '../SlotComponents/MainSlotModal0';
-import { HeadGearInfo } from '../HeadComponents/HaedGearInfo';
+import { headAbilityData } from '../HeadComponents/headAbilityData';
 
 const MainSlot0 = React.memo((props) => {
   // モーダルを表示する関数
@@ -33,17 +33,17 @@ const MainSlot0 = React.memo((props) => {
   
   const warningRef = useRef();
 
-  // propsで受け取ったギアの名前とギアパワーの名前から、HeadGearInfoの配列を検索する
+  // propsで受け取ったギアの名前とギアパワーの名前から、headAbilityDataの配列を検索する
   const checkCombination = function(gearName, abilityName) {
     // ギアスロットが空のときはツールチップを表示しない
     if (abilityName === "empty") {
       warningRef.current.style.display="none"
     } else {
-      for (let i=0; i < HeadGearInfo.length; i++) {
+      for (let i=0; i < headAbilityData.length; i++) {
         // 名前が一致するギアを検索
-        if (HeadGearInfo[i].name === gearName) {
+        if (headAbilityData[i].name === gearName) {
           // ギアが見つかったら選択されているギアパワーが配列に含まれるか調べる
-          if (HeadGearInfo[i].abilityArray.includes(abilityName)) {
+          if (headAbilityData[i].abilityArray.includes(abilityName)) {
             warningRef.current.style.display="none"
           } else {
             warningRef.current.style.display="block"

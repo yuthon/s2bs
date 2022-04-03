@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import MainSlotModal1 from '../SlotComponents/MainSlotModal1';
-import { ClothesGearInfo } from '../ClothesComponents/ClothesGearInfo';
+import { clothesAbilityData } from '../ClothesComponents/clothesAbilityData';
 
 const MainSlot1 = React.memo((props) => {
   // モーダルを表示する関数
@@ -39,11 +39,11 @@ const MainSlot1 = React.memo((props) => {
     if (abilityName === "empty") {
       warningRef.current.style.display="none"
     } else {
-      for (let i=0; i < ClothesGearInfo.length; i++) {
+      for (let i=0; i < clothesAbilityData.length; i++) {
         // 名前が一致するギアを検索
-        if (ClothesGearInfo[i].name === gearName) {
+        if (clothesAbilityData[i].name === gearName) {
           // ギアが見つかったら選択されているギアパワーが配列に含まれるか調べる
-          if (ClothesGearInfo[i].abilityArray.includes(abilityName)) {
+          if (clothesAbilityData[i].abilityArray.includes(abilityName)) {
             warningRef.current.style.display="none"
           } else {
             warningRef.current.style.display="block"
