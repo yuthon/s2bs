@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { memo, useState, useRef } from 'react';
 import GearIcon from '../GearIcon';
 //ギアの画像をインポート
 // アイロニック
@@ -575,8 +575,7 @@ const gears = [
 // 名前順に整列した配列を新たに定義
 const gearsSortedByName = gears.slice().sort((a, b) => a.name.localeCompare(b.name, "ja"));
 
-
-const ClothesGearModal = React.memo((props) => {
+const ClothesGearModal = memo((props) => {
   // 表示する配列の管理
   const [gearsArray, setArray] = useState(gears);
 
@@ -631,7 +630,6 @@ const ClothesGearModal = React.memo((props) => {
     }
   }
 
-  let target;
 
   const closeGearModal = function() {
     modalRef.current.style.display = "none"
