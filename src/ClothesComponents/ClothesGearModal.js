@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect} from 'react';
+import React, { useState, useRef } from 'react';
 import GearIcon from '../GearIcon';
 //ギアの画像をインポート
 // アイロニック
@@ -581,6 +581,7 @@ const ClothesGearModal = React.memo((props) => {
   const [gearsArray, setArray] = useState(gears);
 
   const selectBoxRef = useRef();
+  const modalRef = useRef();
 
   const selectBox = function() {
     let target = selectBoxRef.current;
@@ -633,82 +634,81 @@ const ClothesGearModal = React.memo((props) => {
   let target;
 
   const closeGearModal = function() {
-    target = document.getElementById("clothesGearModal")
-    target.style.display = "none"
+    modalRef.current.style.display = "none"
   }
 
   return (
-    <div className="gear-modal bg-secondary font-type2 text-white" id="clothesGearModal">
-          <div className="modal-header">
-            <h5 className="modal-title" id="weaponModalLabel">ギアを選択</h5>
-            <button type="button" className="btn-close btn-close-white" onClick={()=>{closeGearModal()}}></button>
+    <div className="gear-modal bg-secondary font-type2 text-white" ref= {modalRef} id="clothesGearModal">
+      <div className="modal-header">
+        <h5 className="modal-title" id="weaponModalLabel">ギアを選択</h5>
+        <button type="button" className="btn-close btn-close-white" onClick={()=>{closeGearModal()}}></button>
+      </div>
+      <div className="container pt-2 pb-1">
+        <div className="d-flex align-items-center">
+          <div className="select-index">  
+            <span className="align-middle">並び替え :</span>
           </div>
-          <div className="container pt-2 pb-1">
-            <div className="d-flex align-items-center">
-              <div className="select-index">  
-                <span className="align-middle">並び替え :</span>
-              </div>
-              <div className="selectbox">  
-                <select
-                  className="form-select"
-                  aria-label="sort"
-                  ref = {selectBoxRef}
-                  onChange={()=>{selectBox();}}
-                >
-                  <option value="brand" defaultValue>ブランド</option>
-                  <option value="name">名前</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div className="px-1 px-sm-0 px-lg-3 d-flex gears-display-area">
-            <div className="chosen-gear d-flex flex-column">
-            <p className="chosenGear-text h5">選択中のギア</p>
-            <p className="chosenGear-name font-type1">{props.chosenGear.name}</p>
-            <div className="chosen-gear-icon">
-              <div className="brand-img-container">
-                <img className="brand-img" src={brandDependency(props.chosenGear.brand).brandImgPath} alt=""/>
-                <div className="brand-tooltip-container text-start">
-                  <span className="brand-tooltip">{props.chosenGear.brand}</span>
-                </div>
-              </div>
-              <img className="chosen-gear-icon-img" src={props.chosenGear.path} alt=""/>
-              <div className="clothes-stripe gear-icon-footer">
-                <div className="brand-ability">
-                  <p className="fav-ability-tooltip">つきやすいギアパワー</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 384 512">
-                    {/* Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
-                    <path 
-                      d="M54.63 246.6L192 109.3l137.4 137.4C335.6 252.9 343.8 256 352 256s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25l-160-160c-12.5-12.5-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25S42.13 259.1 54.63 246.6zM214.6 233.4c-12.5-12.5-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25s32.75 12.5 45.25 0L192 301.3l137.4 137.4C335.6 444.9 343.8 448 352 448s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25L214.6 233.4z"
-                      fill="#dfff00"
-                    />
-                  </svg>
-                  <img className="img-gear-icon-ability" src={brandDependency(props.chosenGear.brand).favoredAbility} alt=""/>
-                </div>
-                <div className="brand-ability">
-                  <p className="fav-ability-tooltip">つきにくいギアパワー</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 384 512">
-                    {/* Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
-                    <path
-                      d="M169.4 278.6C175.6 284.9 183.8 288 192 288s16.38-3.125 22.62-9.375l160-160c12.5-12.5 12.5-32.75 0-45.25s-32.75-12.5-45.25 0L192 210.8L54.63 73.38c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L169.4 278.6zM329.4 265.4L192 402.8L54.63 265.4c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25l160 160C175.6 476.9 183.8 480 192 480s16.38-3.125 22.62-9.375l160-160c12.5-12.5 12.5-32.75 0-45.25S341.9 252.9 329.4 265.4z"
-                      fill="#ff0000"
-                    />
-                  </svg>
-                  <img className="img-gear-icon-ability" src={brandDependency(props.chosenGear.brand).unfavoredAbility} alt=""/>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="d-flex flex-wrap gearicons-section clothes-stripe">
-            {gearsArray.map(
-                (gear, index) => <GearIcon key={index} gear={gear} setChosenGear={props.setChosenGear}/>
-              )}
-          </div>
-          </div>
-          <div className="modal-footer py-0">
-            <button type="button" className="btn btn-lg btn-dark m-auto OK-btn" onClick={()=>{closeGearModal()}}><p>OK</p></button>
+          <div className="selectbox">  
+            <select
+              className="form-select"
+              aria-label="sort"
+              ref = {selectBoxRef}
+              onChange={()=>{selectBox();}}
+            >
+              <option value="brand" defaultValue>ブランド</option>
+              <option value="name">名前</option>
+            </select>
           </div>
         </div>
+      </div>
+      <div className="px-1 px-sm-0 px-lg-3 d-flex gears-display-area">
+        <div className="chosen-gear d-flex flex-column">
+        <p className="chosenGear-text h5">選択中のギア</p>
+        <p className="chosenGear-name font-type1">{props.chosenGear.name}</p>
+        <div className="chosen-gear-icon">
+          <div className="brand-img-container">
+            <img className="brand-img" src={brandDependency(props.chosenGear.brand).brandImgPath} alt=""/>
+            <div className="brand-tooltip-container text-start">
+              <span className="brand-tooltip">{props.chosenGear.brand}</span>
+            </div>
+          </div>
+          <img className="chosen-gear-icon-img" src={props.chosenGear.path} alt=""/>
+          <div className="clothes-stripe gear-icon-footer">
+            <div className="brand-ability">
+              <p className="fav-ability-tooltip">つきやすいギアパワー</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 384 512">
+                {/* Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
+                <path 
+                  d="M54.63 246.6L192 109.3l137.4 137.4C335.6 252.9 343.8 256 352 256s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25l-160-160c-12.5-12.5-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25S42.13 259.1 54.63 246.6zM214.6 233.4c-12.5-12.5-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25s32.75 12.5 45.25 0L192 301.3l137.4 137.4C335.6 444.9 343.8 448 352 448s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25L214.6 233.4z"
+                  fill="#dfff00"
+                />
+              </svg>
+              <img className="img-gear-icon-ability" src={brandDependency(props.chosenGear.brand).favoredAbility} alt=""/>
+            </div>
+            <div className="brand-ability">
+              <p className="fav-ability-tooltip">つきにくいギアパワー</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 384 512">
+                {/* Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
+                <path
+                  d="M169.4 278.6C175.6 284.9 183.8 288 192 288s16.38-3.125 22.62-9.375l160-160c12.5-12.5 12.5-32.75 0-45.25s-32.75-12.5-45.25 0L192 210.8L54.63 73.38c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L169.4 278.6zM329.4 265.4L192 402.8L54.63 265.4c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25l160 160C175.6 476.9 183.8 480 192 480s16.38-3.125 22.62-9.375l160-160c12.5-12.5 12.5-32.75 0-45.25S341.9 252.9 329.4 265.4z"
+                  fill="#ff0000"
+                />
+              </svg>
+              <img className="img-gear-icon-ability" src={brandDependency(props.chosenGear.brand).unfavoredAbility} alt=""/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="d-flex flex-wrap gearicons-section clothes-stripe">
+        {gearsArray.map(
+            (gear, index) => <GearIcon key={index} gear={gear} setChosenGear={props.setChosenGear}/>
+          )}
+      </div>
+      </div>
+      <div className="modal-footer py-0">
+        <button type="button" className="btn btn-lg btn-dark m-auto OK-btn" onClick={()=>{closeGearModal()}}><p>OK</p></button>
+      </div>
+    </div>
   );
 });
 
