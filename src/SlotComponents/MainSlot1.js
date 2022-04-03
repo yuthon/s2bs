@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import MainSlotModal1 from '../SlotComponents/MainSlotModal1';
-import { clothesAbilityData } from '../ClothesComponents/ClothesAbilityData';
+import { clothesAbilityData } from '../ClothesComponents/clothesAbilityData';
 
 const MainSlot1 = React.memo((props) => {
   // モーダルを表示する関数
