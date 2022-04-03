@@ -1,4 +1,4 @@
-import React, { useState,useRef } from 'react';
+import { memo, useState,useRef } from 'react';
 import GearIcon from '../GearIcon';
 import SeaHorse_White from '../images/gear/Shs_SLO003.png';
 import SeaHorseHi_Zombie from '../images/gear/Shs_SHI001.png';
@@ -372,7 +372,7 @@ const gears = [
 // 名前順に整列した配列を新たに定義
   const gearsSortedByName = gears.slice().sort((a, b) => a.name.localeCompare(b.name, "ja"));
 
-const ShoesGearModal = React.memo((props) => {
+const ShoesGearModal = memo((props) => {
   // 表示する配列の管理
   const [gearsArray, setArray] = useState(gears);
   

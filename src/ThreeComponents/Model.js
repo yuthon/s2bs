@@ -2,7 +2,6 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 import * as THREE from 'three';
 import { useFrame, useLoader } from '@react-three/fiber';
-import { isWebGL2Available } from '@react-three/drei';
 
 
 
@@ -50,7 +49,7 @@ const Model = (props) => {
   
   
   useFrame((state, delta) => {
-    mixer?.update(delta);
+    mixer.update(delta);
   });
   
   gltf.scene.traverse(child => {
@@ -77,7 +76,6 @@ const Model = (props) => {
   // 髪型
   let hairStyle = props.hairStyle;
   // 肌の色
-
   const SkinColor = function(skinColor) {
     if (skinColor === "color_0") {
       return {r:1,g:0.638,b:0.604}

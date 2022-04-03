@@ -1,4 +1,4 @@
-import React, { useState, useRef}from 'react';
+import { memo, useState, useRef, useMemo }from 'react';
 import GearIcon from '../GearIcon';
 
 // 変数名の$は-の代用
@@ -367,11 +367,19 @@ let gears = [
 // 名前順に整列した配列を新たに定義
 const gearsSortedByName = gears.slice().sort((a, b) => a.name.localeCompare(b.name, "ja"));
 
-const HeadGearModal = React.memo((props) => {
+const HeadGearModal = memo((props) => {
   // 表示する配列の管理
   const [gearsArray, setArray] = useState(gears);
 
   const selectBoxRef = useRef();
+
+
+
+  const elements = useMemo(()=>{
+    return gearsArray.map(
+      (gear, index) => <GearIcon key={index} gear={gear} setChosenGear={props.setChosenGear}/>
+    )
+  }, [gearsArray]);
 
   const selectBox = function() {
     let target = selectBoxRef.current;
@@ -488,9 +496,7 @@ const HeadGearModal = React.memo((props) => {
               </div>
             </div>
             <div className="d-flex flex-wrap gearicons-section head-stripe">
-              {gearsArray.map(
-                (gear, index) => <GearIcon key={index} gear={gear} setChosenGear={props.setChosenGear}/>
-              )}
+              {elements}
             </div>
           </div>
           <div className="modal-footer py-0">
