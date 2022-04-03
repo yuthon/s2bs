@@ -1,7 +1,7 @@
-import React, { useState, useRef } from 'react';
+import { memo, useState, useRef } from 'react';
 import { weaponStatus, weaponSortedByName, weaponSortedBySub, weaponSortedBySpe } from './weaponData';
 
-const WeaponModal = React.memo((props) => {
+const WeaponModal = memo((props) => {
   // 表示する配列
   const [weaponArray, setArray] = useState(weaponStatus);
   
