@@ -1,4 +1,9 @@
+import { useRef, useEffect, useState } from 'react';
+
 import { Html, useProgress } from '@react-three/drei'
+
+import CharacterControlModal from '../CharacterControlModal';
+
 
 import Model from './Model';
 import Orbit from './Orbit';
@@ -8,6 +13,8 @@ import { Canvas, extend } from '@react-three/fiber';
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 extend({ OrbitControls });
+
+
 
 const Loader= () => {
   const { progress } = useProgress()
@@ -24,7 +31,37 @@ const Loader= () => {
 }
 
 const Scene = (props) => {
+  
+  // キャラクターの操作
+  const [isZoomEnabled, setZoomState] = useState(false);
+  const [isRotateEnabled, setRotateState] = useState(false);
+
+  const coverRef = useRef();
+  // キャラクターの操作が有効化されているとき、キャンバスのカバーをなくす
+  useEffect(()=>{
+    if (isZoomEnabled || isRotateEnabled) {
+      coverRef.current.style.display="none"
+    } else {
+      coverRef.current.style.display="block"
+    }
+  })
+  
   return (
+    <>
+    <CharacterControlModal 
+      isRotateEnabled={isRotateEnabled}
+      isZoomEnabled={isZoomEnabled}
+      setZoomState={setZoomState}
+      setRotateState={setRotateState}
+    />
+    <button type="button" id="character-btn" className="btn btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
+      キャラクターの設定
+    </button>
+    <button type="button" id="control-btn" className="btn btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterControlModal">
+      <p className="mb-1">キャラクターの</p>
+      <p className="my-0">回転 / ズーム</p>
+    </button>
+    <div ref={coverRef} id="canvas-cover"></div>
     <Canvas
       style={{ background: '#f0f0e0' }}
       camera={{ position: [0, 9, 13] }}
@@ -48,8 +85,8 @@ const Scene = (props) => {
         position={[0, 11, -20]}
         intensity={0.3} />
       <Orbit 
-        isZoomEnabled={props.isZoomEnabled}
-        isRotateEnabled={props.isRotateEnabled}
+        isZoomEnabled={props.ZoomEnabled}
+        isRotateEnabled={props.RotateEnabled}
       />
       <Suspense fallback={<Loader />}>
         <Model
@@ -65,6 +102,7 @@ const Scene = (props) => {
         />
       </Suspense>
     </Canvas>
+    </>
   )
 }
 
