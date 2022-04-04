@@ -2,6 +2,7 @@ import { Html, useProgress } from '@react-three/drei'
 // ヘッダー画像
 import HeaderImg from './images/nc113873.png';
 import Footer from './Footer';
+import Scene from './ThreeComponents/Scene';
 // アビリティ関連のコンポーネント
 import AbilityComponents from './AbilityComponents';
 import CharacterControlModal from './CharacterControlModal';
@@ -24,31 +25,6 @@ import Headband_White from './images/gear/Hed_FST000.png';
 import inkRecovery from './images/ability/REC.png';
 
 import { useState, useRef, useEffect } from 'react';
-// 3dモデル
-import Model from './ThreeComponents/Model';
-import Orbit from './ThreeComponents/Orbit';
-import React, { Suspense } from 'react';
-import { Canvas, extend } from '@react-three/fiber';
-
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-extend({ OrbitControls });
-
-
-
-
-const Loader= () => {
-  const { progress } = useProgress()
-  return (
-    <Html center zIndexRange={[5, 0]}>
-      <div className="font-type2" id="loader-content">
-        <h2>3Dモデルをロード中…</h2>
-        <h2>{Math.floor(progress * 10) /10}％</h2>
-        <h4>※この処理には時間がかかる場合があります</h4>
-        <h4>※モデルのロード中はページ内の動作が重くなることがあります</h4>
-      </div>
-    </Html>
-  )
-}
 
 const Main = () => {
   //選択されたアタマギアを管理
@@ -65,9 +41,8 @@ const Main = () => {
   const [bottoms, setBottoms] = useState("Btm_0");
   const [teamColor, setTeamColor] = useState("color_5");
   // キャラクターの操作
-  const [isZoomEnabled, setZoomState] = useState(false)
-  const [isRotateEnabled, setRotateState] = useState(false)
-  
+  const [isZoomEnabled, setZoomState] = useState(false);
+  const [isRotateEnabled, setRotateState] = useState(false);
 
   const coverRef = useRef();
   // キャラクターの操作が有効化されているとき、キャンバスのカバーをなくす
@@ -78,7 +53,6 @@ const Main = () => {
       coverRef.current.style.display="block"
     }
   })
-
 
   return(
     <>
@@ -99,7 +73,6 @@ const Main = () => {
       <CharacterTypeModal
         characterType={characterType}
         setCharacterType={setCharacterType}
-        characterType={characterType}
       />
       <SkinColorModal
         setSkinColor={setSkinColor}
@@ -134,46 +107,19 @@ const Main = () => {
             <p className="my-0">回転 / ズーム</p>
           </button>
           <div ref={coverRef} id="canvas-cover"></div>
-          <Canvas
-            style={{ background: '#f0f0e0' }}
-            camera={{ position: [0, 9, 13] }}
-          >
-            <ambientLight
-              color={0xffffff}
-              intensity={0.8} />
-            <directionalLight
-              color={0xffffff}
-              intensity={0.6} />
-            <pointLight
-              position={[0, 11, 20]}
-              intensity={0.2} />
-            <pointLight
-              position={[0, 4, 12]}
-              intensity={0.6} />
-            <pointLight
-              position={[0, 4, -12]}
-              intensity={0.6} />
-            <pointLight
-              position={[0, 11, -20]}
-              intensity={0.3} />
-            <Orbit 
+            <Scene 
               isZoomEnabled={isZoomEnabled}
               isRotateEnabled={isRotateEnabled}
+              headGear={headGear.id}
+              clothesGear={clothesGear.id}
+              shoesGear={shoesGear.id}
+              characterType={characterType}
+              skinColor={skinColor}
+              eyeColor={eyeColor}
+              hairStyle={hairStyle}
+              bottoms={bottoms}
+              teamColor={teamColor}
             />
-            <Suspense fallback={<Loader />}>
-              <Model
-                headGear={headGear.id}
-                clothesGear={clothesGear.id}
-                shoesGear={shoesGear.id}
-                characterType={characterType}
-                skinColor={skinColor}
-                eyeColor={eyeColor}
-                hairStyle={hairStyle}
-                bottoms={bottoms}
-                teamColor={teamColor}
-              />
-            </Suspense>
-          </Canvas>
         </div>
         <div className="col-sm-5 col-md-4 col-lg-7 col-xl-7 col-xxl-6 px-0" id="gear-and-ability">
           <AbilityComponents 
