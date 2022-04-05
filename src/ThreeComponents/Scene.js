@@ -52,19 +52,19 @@ const Scene = (props) => {
 
   if (isModelDisplayed) {
     buttons = (
-      <div className="row m-0" id="btn-row">
+      <div className="row m-0 font-type2" id="btn-row">
         <div className="col-4 px-0">
-          <button type="button" id="hideModel-btn" className="btn btn-dark font-type1" onClick={()=>{toggleModelDisplay(false)}}>
+          <button type="button" id="hideModel-btn" className="btn btn-dark" onClick={()=>{toggleModelDisplay(false)}}>
             3Dモデルを非表示
           </button>
         </div>
         <div className="col-4 px-0">
-          <button type="button" id="character-btn" className="btn btn-dark font-type1" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
+          <button type="button" id="character-btn" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
             キャラクターの設定
           </button>
         </div>
         <div className="col-4 px-0">
-          <button type="button" id="control-btn" className="btn btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterControlModal">
+          <button type="button" id="control-btn" className="btn btn-dark text-nowrap" data-bs-toggle="modal" data-bs-target="#characterControlModal">
             <p className="mb-1">キャラクターの</p>
             <p className="my-0">回転 / ズーム</p>
           </button>
@@ -73,11 +73,11 @@ const Scene = (props) => {
     )
   } else {
     buttons = (
-      <div id="displayBtn-section">
-      <button type="button" id="displayModel-btn" className="btn btn-lg btn-dark font-type1 text-nowrap" onClick={()=>{toggleModelDisplay(true)}}>
+      <div className="font-type2" id="displayBtn-section">
+      <button type="button" className="btn btn-lg btn-dark text-nowrap" onClick={()=>{toggleModelDisplay(true)}}>
         3Dモデルを表示
       </button>
-      <h4 className="font-type2" id="display-warning">※3Dモデルを表示する場合にCPUやGPU、メモリの性能が不足しているとページ全体の動作が重くなります</h4>
+      <h4 id="display-warning">※3Dモデルを表示する場合にCPUやGPU、メモリの性能が不足しているとページ全体の動作が重くなります</h4>
       </div>
     )
   }
