@@ -1393,18 +1393,42 @@ Btmボタン
   box-shadow: none;
 }
 
-#character-btn {
+
+#displayBtn-section {
   position: absolute;
-  top: 20px;
-  right: 10px;
+  top: 45%;
+  left: 0px;
+  margin-top: 5px;
+  z-index: 30;
+  width: 100%;
+}
+
+#display-warning {
+  width: 70%;
+  margin: 50px auto 0px auto;
+}
+#btn-row {
+  position: absolute;
   z-index: 11;
+  width: 100%;
+}
+#character-btn {
+  margin: 5px 5px 0px 5px;
 }
 #control-btn {
-  position: absolute;
-  top: 5rem;
-  right: 10px;
-  z-index: 11;
+  margin-top: 5px;
 }
+#hideModel-btn {
+  margin-top: 5px;
+}
+#displayModel-btn {
+  /* position: absolute;
+  top: 50%;
+  left: 34%;
+  margin-top: 5px;
+  z-index: 30; */
+}
+
 
 /*  */
 /* ブキの表示部分 */
@@ -1947,3 +1971,4 @@ Btmボタン
   background: white;
   border: 0px;
 }
+

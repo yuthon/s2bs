@@ -35,6 +35,8 @@ const Scene = (props) => {
   // キャラクターの操作
   const [isZoomEnabled, setZoomState] = useState(false);
   const [isRotateEnabled, setRotateState] = useState(false);
+  // モデルの表示/非表示
+  const [isModelDisplayed, toggleModelDisplay] = useState(false);
 
   const coverRef = useRef();
   // キャラクターの操作が有効化されているとき、キャンバスのカバーをなくす
@@ -46,6 +48,57 @@ const Scene = (props) => {
     }
   })
   
+  let buttons;
+
+  if (isModelDisplayed) {
+    buttons = (
+      <div className="row m-0" id="btn-row">
+        <div className="col-4 px-0">
+          <button type="button" id="hideModel-btn" className="btn btn-dark font-type1" onClick={()=>{toggleModelDisplay(false)}}>
+            3Dモデルを非表示
+          </button>
+        </div>
+        <div className="col-4 px-0">
+          <button type="button" id="character-btn" className="btn btn-dark font-type1" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
+            キャラクターの設定
+          </button>
+        </div>
+        <div className="col-4 px-0">
+          <button type="button" id="control-btn" className="btn btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterControlModal">
+            <p className="mb-1">キャラクターの</p>
+            <p className="my-0">回転 / ズーム</p>
+          </button>
+        </div>
+      </div>
+    )
+  } else {
+    buttons = (
+      <div id="displayBtn-section">
+      <button type="button" id="displayModel-btn" className="btn btn-lg btn-dark font-type1 text-nowrap" onClick={()=>{toggleModelDisplay(true)}}>
+        3Dモデルを表示
+      </button>
+      <h4 className="font-type2" id="display-warning">※3Dモデルを表示する場合にCPUやGPU、メモリの性能が不足しているとページ全体の動作が重くなります</h4>
+      </div>
+    )
+  }
+
+  let model;
+
+  if (isModelDisplayed) {
+    model = 
+      <Model
+        headGear={props.headGear}
+        clothesGear={props.clothesGear}
+        shoesGear={props.shoesGear}
+        characterType={props.characterType}
+        skinColor={props.skinColor}
+        eyeColor={props.eyeColor}
+        hairStyle={props.hairStyle}
+        bottoms={props.bottoms}
+        teamColor={props.teamColor}
+      />
+  };
+
   return (
     <>
     <CharacterControlModal 
@@ -54,13 +107,7 @@ const Scene = (props) => {
       setZoomState={setZoomState}
       setRotateState={setRotateState}
     />
-    <button type="button" id="character-btn" className="btn btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
-      キャラクターの設定
-    </button>
-    <button type="button" id="control-btn" className="btn btn-dark font-type1 text-nowrap" data-bs-toggle="modal" data-bs-target="#characterControlModal">
-      <p className="mb-1">キャラクターの</p>
-      <p className="my-0">回転 / ズーム</p>
-    </button>
+    {buttons}
     <div ref={coverRef} id="canvas-cover"></div>
     <Canvas
       style={{ background: '#f0f0e0' }}
@@ -89,17 +136,7 @@ const Scene = (props) => {
         isRotateEnabled={props.RotateEnabled}
       />
       <Suspense fallback={<Loader />}>
-        <Model
-          headGear={props.headGear}
-          clothesGear={props.clothesGear}
-          shoesGear={props.shoesGear}
-          characterType={props.characterType}
-          skinColor={props.skinColor}
-          eyeColor={props.eyeColor}
-          hairStyle={props.hairStyle}
-          bottoms={props.bottoms}
-          teamColor={props.teamColor}
-        />
+        {model}
       </Suspense>
     </Canvas>
     </>
