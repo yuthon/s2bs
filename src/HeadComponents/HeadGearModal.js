@@ -51,7 +51,7 @@ const HeadGearModal = memo((props) => {
     return gearsArray.map(
       (gear, index) => <GearIcon key={index} gear={gear} setChosenGear={props.setChosenGear}/>
     )
-  }, [gearsArray]);
+  }, [gearsArray, props.setChosenGear]);
 
   const selectBox = function() {
     let target = selectBoxRef.current;
