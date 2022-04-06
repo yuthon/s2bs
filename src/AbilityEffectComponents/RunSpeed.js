@@ -447,7 +447,7 @@ const RunSpeed = React.memo((props) => {
     if (!runSpeedShooting) {
       runSpeedShooting = irregularValues(GooTuber);
     }
-  } else if (weaponStatus.name.indexOf("バケットスロッシャー") > -1) {
+  } else if (weaponStatus.name.indexOf("バケットスロッシャー") > -1 || weaponStatus.name.indexOf("ヒーロースロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Slosher[i].AP === abilityPoint) {
          runSpeedShooting = Math.floor(Slosher[i].RS * 100) / 100;

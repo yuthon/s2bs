@@ -848,7 +848,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
       </div>
     );
-  } else if (name.indexOf("バケットスロッシャー") > -1) {
+  } else if (name.indexOf("バケットスロッシャー") > -1 || name.indexOf("ヒーロースロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Slosher[i].AP === abilityPoint) {
         damageHeightStart = Math.floor(Slosher[i].height / Slosher[0].height * 100000) / 1000;
@@ -859,7 +859,7 @@ const MainPowerUp = React.memo((props) => {
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
-          <p className="ae-text">高低差によるダメージの減衰無しで撃てる範囲</p>
+          <p className="ae-text">高低差によってダメージが減衰しない範囲</p>
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
