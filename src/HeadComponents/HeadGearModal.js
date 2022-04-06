@@ -42,17 +42,17 @@ import empty from '../images/ability/empty.png';
 const HeadGearModal = memo((props) => {
   // 表示する配列の管理
   const [gearsArray, setArray] = useState(gears);
-
+  // SelectBox要素のref
   const selectBoxRef = useRef();
 
-
-
-  const elements = useMemo(()=>{
+  // SelectBoxで変更が行われない限り再レンダーの必要がないためギアアイコンをメモ化
+  const memoizedIcons = useMemo(()=>{
     return gearsArray.map(
       (gear, index) => <GearIcon key={index} gear={gear} setChosenGear={props.setChosenGear}/>
     )
   }, [gearsArray, props.setChosenGear]);
 
+  // SelectBoxで並び替え法を指定しなおしたとき用の関数
   const selectBox = function() {
     let target = selectBoxRef.current;
     if (target.value === "brand") {
@@ -100,6 +100,7 @@ const HeadGearModal = memo((props) => {
     }
   }
 
+  // モーダルを閉じる関数
   const closeGearModal = function() {
     let target = document.getElementById("headGearModal")
     target.style.display = "none"
@@ -168,7 +169,7 @@ const HeadGearModal = memo((props) => {
               </div>
             </div>
             <div className="d-flex flex-wrap gearicons-section head-stripe">
-              {elements}
+              {memoizedIcons}
             </div>
           </div>
           <div className="modal-footer py-0">
