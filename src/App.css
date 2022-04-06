@@ -813,7 +813,7 @@ footer {
   top: 0px;
   left: 40px;
   width: 140px;
-  padding-left: 0.5rem;
+  padding-left: 0.4rem;
   padding-top: 5px;
   display: none;
 }
@@ -832,7 +832,7 @@ footer {
   content: '';
   position: absolute;
   top: 0.8rem;
-  left: 0.1rem;
+  left: 0rem;
 }
 
 .brand-img-container:hover .brand-tooltip-container {
