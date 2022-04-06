@@ -47,22 +47,6 @@ const HeadGearModal = memo((props) => {
   // モーダルの開閉のためのref
   const modalRef = useRef();
 
-  // SelectBoxで変更が行われない限り再レンダーの必要がないためギアアイコンをメモ化
-  const memoizedIcons = useMemo(()=>{
-    return gearsArray.map(
-      (gear, index) => <GearIcon key={index} gear={gear} setChosenGear={props.setChosenGear}/>
-    )
-  }, [gearsArray, props.setChosenGear]);
-
-  // SelectBoxで並び替え法を指定しなおしたとき用の関数
-  const selectBox = function() {
-    let target = selectBoxRef.current;
-    if (target.value === "brand") {
-      setArray(gears);
-    } else if (target.value === "name") {
-      setArray(gearsSortedByName);
-    }
-  };
   // ブランド名に応じてブランドロゴ、つきにくいギアパワー、つきにくいギアパワーの画像のpathをそれぞれ返す
   const brandDependency = (brand) => {
     if (brand === "バトロイカ") {
@@ -101,6 +85,23 @@ const HeadGearModal = memo((props) => {
       return {brandImgPath:Atarimeido, favoredAbility:empty, unfavoredAbility:empty}
     }
   }
+  // SelectBoxで変更が行われない限り再レンダーの必要がないためギアアイコンをメモ化
+  const memoizedIcons = useMemo(()=>{
+    return gearsArray.map(
+      (gear, index) => <GearIcon key={index} gear={gear} setChosenGear={props.setChosenGear} brandImgPath={brandDependency(gear.brand).brandImgPath}/>
+    )
+  }, [gearsArray, props.setChosenGear]);
+
+  // SelectBoxで並び替え法を指定しなおしたとき用の関数
+  const selectBox = function() {
+    let target = selectBoxRef.current;
+    if (target.value === "brand") {
+      setArray(gears);
+    } else if (target.value === "name") {
+      setArray(gearsSortedByName);
+    }
+  };
+  
 
   // モーダルを閉じる関数
   const closeModal = function() {

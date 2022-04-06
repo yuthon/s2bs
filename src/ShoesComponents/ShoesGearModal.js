@@ -57,13 +57,6 @@ const ShoesGearModal = memo((props) => {
     }
   };
   
-  // SelectBoxで変更が行われない限り再レンダーの必要がないためギアアイコンをメモ化
-  const memoizedIcons = useMemo(()=>{
-    return gearsArray.map(
-      (gear, index) => <GearIcon key={index} gear={gear} setChosenGear={props.setChosenGear}/>
-    )
-  }, [gearsArray, props.setChosenGear]);
-
   // ブランド名に応じてブランドロゴ、つきにくいギアパワー、つきにくいギアパワーの画像のpathをそれぞれ返す
   const brandDependency = (brand) => {
     if (brand === "バトロイカ") {
@@ -103,6 +96,15 @@ const ShoesGearModal = memo((props) => {
     }
   }
 
+
+  // SelectBoxで変更が行われない限り再レンダーの必要がないためギアアイコンをメモ化
+  const memoizedIcons = useMemo(()=>{
+    return gearsArray.map(
+      (gear, index) => <GearIcon key={index} gear={gear} setChosenGear={props.setChosenGear} brandImgPath={brandDependency(gear.brand).brandImgPath}/>
+    )
+  }, [gearsArray, props.setChosenGear]);
+
+  
   // モーダルを閉じる関数
   const closeModal = function() {
     modalRef.current.style.display = "none"
