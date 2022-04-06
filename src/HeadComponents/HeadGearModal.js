@@ -44,6 +44,8 @@ const HeadGearModal = memo((props) => {
   const [gearsArray, setArray] = useState(gears);
   // SelectBox要素のref
   const selectBoxRef = useRef();
+  // モーダルの開閉のためのref
+  const modalRef = useRef();
 
   // SelectBoxで変更が行われない限り再レンダーの必要がないためギアアイコンをメモ化
   const memoizedIcons = useMemo(()=>{
@@ -101,16 +103,15 @@ const HeadGearModal = memo((props) => {
   }
 
   // モーダルを閉じる関数
-  const closeGearModal = function() {
-    let target = document.getElementById("headGearModal")
-    target.style.display = "none"
+  const closeModal = function() {
+    modalRef.current.style.display = "none"
   }
 
   return (
-      <div className="gear-modal bg-secondary font-type2 text-white" id="headGearModal">
+      <div className="gear-modal bg-secondary font-type2 text-white" ref={modalRef} id="headGearModal">
           <div className="modal-header">
             <h5 className="modal-title" id="weaponModalLabel">ギアを選択</h5>
-            <button type="button" className="btn-close btn-close-white" onClick={()=>{closeGearModal()}}></button>
+            <button type="button" className="btn-close btn-close-white" onClick={()=>{closeModal()}}></button>
           </div>
           <div className="container pt-2 pb-1">
             <div className="d-flex align-items-center">
@@ -173,7 +174,7 @@ const HeadGearModal = memo((props) => {
             </div>
           </div>
           <div className="modal-footer py-0">
-            <button type="button" className="btn btn-lg btn-dark m-auto OK-btn" onClick={()=>{closeGearModal()}}><p>OK</p></button>
+            <button type="button" className="btn btn-lg btn-dark m-auto OK-btn" onClick={()=>{closeModal()}}><p>OK</p></button>
           </div>
         </div>
   );
