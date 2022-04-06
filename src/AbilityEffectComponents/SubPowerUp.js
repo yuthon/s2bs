@@ -5,7 +5,6 @@ const SubPowerUp = React.memo((props) => {
   let name = props.weaponStatus.sub;
   let abilityPoint = props.SPUabilityPoint;
   let element;
-  let subWeaponImg = props.weaponStatus.pathSub
   
   // ビーコン
   let superJumpFrame;
@@ -50,10 +49,6 @@ const SubPowerUp = React.memo((props) => {
   let firstPhaseSecond;
   let secondPhaseFrame;
   let secondPhaseSecond;
-  // ポイズンミスト
-  const ToxicMist = [
-    {AP:0,velocity:11.2},{AP:3,velocity:11.74079},{AP:6,velocity:12.25437},{AP:9,velocity:12.74073},{AP:10,velocity:12.8968},{AP:12,velocity:13.19987},{AP:13,velocity:13.34687},{AP:15,velocity:13.6318},{AP:16,velocity:13.76973},{AP:18,velocity:14.03651},{AP:19,velocity:14.16537},{AP:20,velocity:14.2912},{AP:21,velocity:14.41401},{AP:22,velocity:14.53379},{AP:23,velocity:14.65055},{AP:24,velocity:14.76429},{AP:25,velocity:14.875},{AP:26,velocity:14.98269},{AP:27,velocity:15.08735},{AP:28,velocity:15.18899},{AP:29,velocity:15.28761},{AP:30,velocity:15.3832},{AP:31,velocity:15.47577},{AP:32,velocity:15.56531},{AP:33,velocity:15.65183},{AP:34,velocity:15.73533},{AP:35,velocity:15.8158},{AP:36,velocity:15.89325},{AP:37,velocity:15.96767},{AP:38,velocity:16.03907},{AP:39,velocity:16.10745},{AP:41,velocity:16.23513},{AP:42,velocity:16.29443},{AP:44,velocity:16.40397},{AP:45,velocity:16.4542},{AP:47,velocity:16.54559},{AP:48,velocity:16.58675},{AP:51,velocity:16.69209},{AP:54,velocity:16.77021},{AP:57,velocity:16.8}
-  ];
   // ポイントセンサー
   const PointSencorVelocity = [
     {AP:0,velocity:13.8},{AP:3,velocity:14.37819},{AP:6,velocity:14.86456},{AP:9,velocity:15.30585},{AP:10,velocity:15.44473},{AP:12,velocity:15.71138},{AP:13,velocity:15.83944},{AP:15,velocity:16.08556},{AP:16,velocity:16.2038},{AP:18,velocity:16.43098},{AP:19,velocity:16.54004},{AP:20,velocity:16.64616},{AP:21,velocity:16.74936},{AP:22,velocity:16.8497},{AP:23,velocity:16.94721},{AP:24,velocity:17.04192},{AP:25,velocity:17.13387},{AP:26,velocity:17.22307},{AP:27,velocity:17.30956},{AP:28,velocity:17.39337},{AP:29,velocity:17.4745},{AP:30,velocity:17.55299},{AP:31,velocity:17.62884},{AP:32,velocity:17.70209},{AP:33,velocity:17.77274},{AP:34,velocity:17.8408},{AP:35,velocity:17.90631},{AP:36,velocity:17.96925},{AP:37,velocity:18.02966},{AP:38,velocity:18.08753},{AP:39,velocity:18.14289},{AP:41,velocity:18.24608},{AP:42,velocity:18.29393},{AP:44,velocity:18.38219},{AP:45,velocity:18.42262},{AP:47,velocity:18.49607},{AP:48,velocity:18.52912},{AP:51,velocity:18.6136},{AP:54,velocity:18.67616},{AP:57,velocity:18.7}

@@ -6,8 +6,6 @@ const InkSaverMain = React.memo((props) => {
   let abilityPoint = props.abilityPoint;
   let weaponStatus = props.weaponStatus;
   let inkConsumption;
-  let inkConsumptionMin;
-  let inkConsumptionMax;
   let bullets;
   let weaponType;
   let element;

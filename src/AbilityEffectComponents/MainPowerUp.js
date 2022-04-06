@@ -159,9 +159,9 @@ const MainPowerUp = React.memo((props) => {
   ];
   
   let damage;
-  let damageInPercent;
+  // let damageInPercent;
   let damageFar;
-  let damageFarInPercent;
+  // let damageFarInPercent;
   let rng;
   let rngInPercent;
   let rngJump;
@@ -177,13 +177,13 @@ const MainPowerUp = React.memo((props) => {
   let recorverySecond;
   let hp;
   let element;
-  let damageHeightStart;
-  let damageHeightFinish;
+  // let damageHeightStart;
+  // let damageHeightFinish;
   let fullDamageHeight
-  let shootingFrame;
+  // let shootingFrame;
   let bullets;
   let extraBullets
-  let extraHP;
+  // let extraHP;
   
   if (name.indexOf("ボールドマーカー") > -1) {
     for (let i=0; i < 40; i++) {
@@ -191,7 +191,7 @@ const MainPowerUp = React.memo((props) => {
         damage = Sploosh[i].DMG;
       }
     }
-    damageInPercent = Math.floor(damage / 38 *100000) / 1000;
+    // damageInPercent = Math.floor(damage / 38 *100000) / 1000;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -209,7 +209,7 @@ const MainPowerUp = React.memo((props) => {
         damage = Splash[i].DMG;
       }
     }
-    damageInPercent = Math.floor(damage / Splash[0].DMG *100000) / 1000;
+    // damageInPercent = Math.floor(damage / Splash[0].DMG *100000) / 1000;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -353,7 +353,7 @@ const MainPowerUp = React.memo((props) => {
         damage = Pro[i].DMG;
       }
     }
-    damageInPercent = Math.floor(damage / Pro[0].DMG *100000) / 1000;
+    // damageInPercent = Math.floor(damage / Pro[0].DMG *100000) / 1000;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -401,7 +401,7 @@ const MainPowerUp = React.memo((props) => {
         damage = Gal96[i].DMG;
       }
     }
-    damageInPercent = Math.floor(damage / Gal96[0].DMG *100000) / 1000;
+    // damageInPercent = Math.floor(damage / Gal96[0].DMG *100000) / 1000;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -562,7 +562,7 @@ const MainPowerUp = React.memo((props) => {
         damage = L3[i].DMG;
       }
     }
-    damageInPercent = Math.floor(damage / L3[0].DMG *100000) / 1000;
+    // damageInPercent = Math.floor(damage / L3[0].DMG *100000) / 1000;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -580,7 +580,7 @@ const MainPowerUp = React.memo((props) => {
         damage = H3[i].DMG;
       }
     }
-    damageInPercent = Math.floor(damage / H3[0].DMG *100000) / 1000;
+    // damageInPercent = Math.floor(damage / H3[0].DMG *100000) / 1000;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -598,7 +598,7 @@ const MainPowerUp = React.memo((props) => {
         damage = Squeezer[i].DMG;
       }
     }
-    damageInPercent = Math.floor(damage / Squeezer[0].DMG *100000) / 1000;
+    // damageInPercent = Math.floor(damage / Squeezer[0].DMG *100000) / 1000;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -742,7 +742,7 @@ const MainPowerUp = React.memo((props) => {
         damage = Charger[i].DMG;
       }
     }
-    damageInPercent = Math.floor(damage / Charger[0].DMG *100000) / 1000;
+    // damageInPercent = Math.floor(damage / Charger[0].DMG *100000) / 1000;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -818,7 +818,7 @@ const MainPowerUp = React.memo((props) => {
         damage = Bamboo[i].DMG;
       }
     }
-    damageInPercent = Math.floor(damage / Bamboo[0].DMG *100000) / 1000;
+    // damageInPercent = Math.floor(damage / Bamboo[0].DMG *100000) / 1000;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -836,7 +836,7 @@ const MainPowerUp = React.memo((props) => {
         damage = Gootuber[i].DMG;
       }
     }
-    damageInPercent = Math.floor(damage / Gootuber[0].DMG *100000) / 1000;
+    // damageInPercent = Math.floor(damage / Gootuber[0].DMG *100000) / 1000;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -851,8 +851,8 @@ const MainPowerUp = React.memo((props) => {
   } else if (name.indexOf("バケットスロッシャー") > -1 || name.indexOf("ヒーロースロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Slosher[i].AP === abilityPoint) {
-        damageHeightStart = Math.floor(Slosher[i].height / Slosher[0].height * 100000) / 1000;
-        damageHeightFinish = Math.floor(Slosher[i].heightDown / Slosher[0].heightDown * 100000) / 1000;
+        // damageHeightStart = Math.floor(Slosher[i].height / Slosher[0].height * 100000) / 1000;
+        // damageHeightFinish = Math.floor(Slosher[i].heightDown / Slosher[0].heightDown * 100000) / 1000;
         fullDamageHeight = Math.floor(Slosher[i].height / Slosher[0].height * 100000) / 1000;
       }
     }
@@ -978,8 +978,8 @@ const MainPowerUp = React.memo((props) => {
         damageFar = Hydra[i].DMGFAR;
       }
     }
-    damageInPercent = Math.floor(damage / Hydra[0].DMG *100000) / 1000;
-    damageFarInPercent = Math.floor(damageFar / Hydra[0].DMGFAR *100000) / 1000;
+    // damageInPercent = Math.floor(damage / Hydra[0].DMG *100000) / 1000;
+    // damageFarInPercent = Math.floor(damageFar / Hydra[0].DMGFAR *100000) / 1000;
     element = (
       <div className="d-flex flex-column col-11 px-0">
         <div className="ae-part row">
@@ -1009,7 +1009,7 @@ const MainPowerUp = React.memo((props) => {
         damageFar = BallpointFar[i].DMG;
       }
     }
-    damageInPercent = Math.floor(damage / Ballpoint[0].DMG *100000) / 1000;
+    // damageInPercent = Math.floor(damage / Ballpoint[0].DMG *100000) / 1000;
     element = (
       <div className="d-flex flex-column col-11 px-0">
         <div className="ae-part row">
@@ -1056,7 +1056,7 @@ const MainPowerUp = React.memo((props) => {
         damage = Dapples[i].DMG;
       }
     }
-    damageInPercent = Math.floor(damage / Dapples[0].DMG *100000) / 1000;
+    // damageInPercent = Math.floor(damage / Dapples[0].DMG *100000) / 1000;
     element = (
       <div className="ae-part row col-11">
         <div className="col-7 px-0 m-auto">  
@@ -1074,7 +1074,7 @@ const MainPowerUp = React.memo((props) => {
         damage = Dualies[i].DMG;
       }
     }
-    damageInPercent = Math.floor(damage / Dualies[0].DMG *100000) / 1000;
+    // damageInPercent = Math.floor(damage / Dualies[0].DMG *100000) / 1000;
     element = (
       <div className="ae-part row col-11">
         <div className="col-7 px-0 m-auto">  
@@ -1093,8 +1093,8 @@ const MainPowerUp = React.memo((props) => {
         damageFar = Glooga[i].DMG1;
       }
     }
-    damageInPercent = Math.floor(damage / Glooga[0].DMG0 *100000) / 1000;
-    damageFarInPercent = Math.floor(damageFar / Glooga[0].DMG1 *100000) / 1000;
+    // damageInPercent = Math.floor(damage / Glooga[0].DMG0 *100000) / 1000;
+    // damageFarInPercent = Math.floor(damageFar / Glooga[0].DMG1 *100000) / 1000;
     element = (
       <div className="d-flex flex-column col-11 px-0">
         <div className="ae-part row">
@@ -1123,7 +1123,7 @@ const MainPowerUp = React.memo((props) => {
         damage = DualieSquelchers[i].DMG;
       }
     }
-    damageInPercent = Math.floor(damage / DualieSquelchers[0].DMG *100000) / 1000;
+    // damageInPercent = Math.floor(damage / DualieSquelchers[0].DMG *100000) / 1000;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -1141,7 +1141,7 @@ const MainPowerUp = React.memo((props) => {
         damage = Tetras[i].DMG;
       }
     }
-    damageInPercent = Math.floor(damage / Tetras[0].DMG *100000) / 1000;
+    // damageInPercent = Math.floor(damage / Tetras[0].DMG *100000) / 1000;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -1177,7 +1177,7 @@ const MainPowerUp = React.memo((props) => {
         hp = Tent[i].HP
       }
     }
-    extraHP = Math.floor(hp - Tent[0].HP);
+    // extraHP = Math.floor(hp - Tent[0].HP);
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  

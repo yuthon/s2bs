@@ -48,19 +48,19 @@ const BombDefenceUp = (props) => {
   
   
   let markingDuration;
-  let thermalInkSillhoutteFar;
-  let thermalInkSillhoutteClose;
+  // let thermalInkSillhoutteFar;
+  // let thermalInkSillhoutteClose;
   let specialDamage;
-  let closeHitSubDamageMultiplier;
+  // let closeHitSubDamageMultiplier;
   let farHitSubDamage;
   
   for (let i=0; i<40; i++) {
     if (abilityPoint === bombDefence[i].AP) {
       markingDuration = Math.floor(bombDefence[i].MDM * 10000) / 100;
-      thermalInkSillhoutteClose = bombDefence[i].TISC
-      thermalInkSillhoutteFar = bombDefence[i].TISF
+      // thermalInkSillhoutteClose = bombDefence[i].TISC
+      // thermalInkSillhoutteFar = bombDefence[i].TISF
       specialDamage = Math.floor(bombDefence[i].SDM * 10000) / 100;
-      closeHitSubDamageMultiplier = bombDefence[i].CHSDM
+      // closeHitSubDamageMultiplier = bombDefence[i].CHSDM
       farHitSubDamage = Math.floor(bombDefence[i].FHSDM * 10000) / 100;
     }
   }

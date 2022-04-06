@@ -9,7 +9,7 @@ const SpecialPower = React.memo((props) => {
   let durationSeconds;
   let paintRadius;
   let paintRadiusPercent;
-  let circleRadius;
+  // let circleRadius;
   let circleRadiusPercent;
   let armorActivationFrames;
   let armorActivationSeconds;
@@ -17,7 +17,7 @@ const SpecialPower = React.memo((props) => {
   let hitbox70;
   let explosionRadius;
   let chargeSpeedFrames;
-  let chargeSpeedSeconds;
+  // let chargeSpeedSeconds;
   let ballerHealth;
   let blastRadius;
   let bubbleSize;
@@ -101,7 +101,7 @@ const SpecialPower = React.memo((props) => {
       if (abilityPoint === Missiles[i].AP) {
         paintRadius = Missiles[i].PR;
         paintRadiusPercent = Math.floor(Missiles[i].PR / Missiles[0].PR * 10000) / 100;
-        circleRadius = Missiles[i].CR;
+        // circleRadius = Missiles[i].CR;
         circleRadiusPercent = Math.floor(Missiles[i].CR / Missiles[0].CR * 10000) / 100;
       }
     }
@@ -288,7 +288,7 @@ const SpecialPower = React.memo((props) => {
     for (let i=0; i<40; i++) {
       if (abilityPoint === BooyahBomb[i].AP) {
         chargeSpeedFrames = Math.floor(1 / BooyahBomb[i].CS * 100) / 100;
-        chargeSpeedSeconds = Math.floor(chargeSpeedFrames / 60 * 100) / 100;
+        // chargeSpeedSeconds = Math.floor(chargeSpeedFrames / 60 * 100) / 100;
       }
     }
     element = (

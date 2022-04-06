@@ -15,7 +15,6 @@ import inkSaverSubImg from '../images/ability/ISSub.png';
 
 const InkSaverSub = (props) => {
   let subWeaponName = props.weaponStatus.sub;
-  let subWeaponImg;
   let abilityPoint = props.abilityPoint;
   let inkConsumption
   const Beakon = [

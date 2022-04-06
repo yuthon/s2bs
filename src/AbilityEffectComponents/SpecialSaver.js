@@ -3,7 +3,6 @@ import specialSaverImg from '../images/ability/SS.png';
 
 const SpecialSaver = React.memo((props) => {
   let remainingPercent;
-  let remainingPoints;
   let abilityPoint = props.abilityPoint;
   let sp = props.weaponStatus.sp;
   let abilityName = props.abilityName;
