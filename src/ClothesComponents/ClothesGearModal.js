@@ -1,4 +1,4 @@
-import { memo, useState, useRef } from 'react';
+import { memo, useState, useRef, useMemo } from 'react';
 import GearIcon from '../GearIcon';
 import { gears, gearsSortedByName } from './clothesData';
 // ブランドの画像
@@ -46,10 +46,19 @@ import empty from '../images/ability/empty.png';
 const ClothesGearModal = memo((props) => {
   // 表示する配列の管理
   const [gearsArray, setArray] = useState(gears);
-
+  // SelectBox要素のref
   const selectBoxRef = useRef();
+  // モーダルの開閉のためのref
   const modalRef = useRef();
 
+  // SelectBoxで変更が行われない限り再レンダーの必要がないためギアアイコンをメモ化
+  const memoizedIcons = useMemo(()=>{
+    return gearsArray.map(
+      (gear, index) => <GearIcon key={index} gear={gear} setChosenGear={props.setChosenGear}/>
+    )
+  }, [gearsArray, props.setChosenGear]);
+
+  // SelectBoxで並び替え法を指定しなおしたとき用の関数
   const selectBox = function() {
     let target = selectBoxRef.current;
     if (target.value === "brand") {
@@ -98,8 +107,8 @@ const ClothesGearModal = memo((props) => {
     }
   }
 
-
-  const closeGearModal = function() {
+  // モーダルを閉じる関数
+  const closeModal = function() {
     modalRef.current.style.display = "none"
   }
 
@@ -107,7 +116,7 @@ const ClothesGearModal = memo((props) => {
     <div className="gear-modal bg-secondary font-type2 text-white" ref= {modalRef} id="clothesGearModal">
       <div className="modal-header">
         <h5 className="modal-title" id="weaponModalLabel">ギアを選択</h5>
-        <button type="button" className="btn-close btn-close-white" onClick={()=>{closeGearModal()}}></button>
+        <button type="button" className="btn-close btn-close-white" onClick={()=>{closeModal()}}></button>
       </div>
       <div className="container pt-2 pb-1">
         <div className="d-flex align-items-center">
@@ -166,13 +175,11 @@ const ClothesGearModal = memo((props) => {
         </div>
       </div>
       <div className="d-flex flex-wrap gearicons-section clothes-stripe">
-        {gearsArray.map(
-            (gear, index) => <GearIcon key={index} gear={gear} setChosenGear={props.setChosenGear}/>
-          )}
+        {memoizedIcons}
       </div>
       </div>
       <div className="modal-footer py-0">
-        <button type="button" className="btn btn-lg btn-dark m-auto OK-btn" onClick={()=>{closeGearModal()}}><p>OK</p></button>
+        <button type="button" className="btn btn-lg btn-dark m-auto OK-btn" onClick={()=>{closeModal()}}><p>OK</p></button>
       </div>
     </div>
   );
