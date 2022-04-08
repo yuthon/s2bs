@@ -12,14 +12,20 @@ const CharacterSettingModal = React.memo((props) => {
   
   useEffect(()=>{
     //選択されているキャラクタータイプのボタンのクラス名を変更
-    if (props.characterType === "IFML") {
-      IFMLRef.current.className = "CT-selected"
-    } else if (props.characterType === "IML") {
-      IMLRef.current.className = "CT-selected"
-    } else if (props.characterType === "OFML") {
-      OFMLRef.current.className = "CT-selected"
-    } else if (props.characterType === "OML") {
-      OMLRef.current.className = "CT-selected"
+    // eslint-disable-next-line default-case
+    switch (props.characterType) {
+      case "IFML":
+        IFMLRef.current.className = "CT-selected";
+        break;
+      case "IML":
+        IMLRef.current.className = "CT-selected";
+        break;
+      case "OFML":
+        OFMLRef.current.className = "CT-selected";
+        break
+      case"OML":
+        OMLRef.current.className = "CT-selected";
+        break
     }
     // 別のキャラクタータイプが選択されていればクラス名を戻す
     if (IFMLRef.current.className === "CT-selected" && props.characterType !== "IFML") {
