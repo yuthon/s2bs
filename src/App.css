@@ -1564,11 +1564,7 @@ Btmボタン
 }
 /* メインスロットのツールチップ */
 .slot-tooltip-left {
-  width: 8.8rem;
-  height: 1.8rem;
-  position: absolute;
-  top: -2.2rem;
-  left: -3rem;
+  display: inline-block;
   z-index: 2;
   padding: 0.3em 0.5em;
   color: #ffffff;
@@ -1576,6 +1572,28 @@ Btmボタン
   border-radius: 0.3em;
   font-size: 0.9rem;
   user-select: none;
+}
+
+.slot-tooltip-container {
+  width: 8.8rem;
+  height: 1.8rem;
+  position: absolute;
+  top: -2.4rem;
+  left: -30px;
+  display: none;
+}
+
+.slot-tooltip-left:after {
+  width: 0.5rem;
+  display: block;
+  content: '';
+  z-index: 2;
+  border-top: 0.4rem solid rgba(0, 0, 0, 0.8);
+  border-right: 0.3rem solid transparent;
+  border-left: 0.3rem solid transparent;
+  position: absolute;
+  bottom: -0.4rem;
+  left: 48px;
 }
 
 /* 上側に表示する場合だとフォントサイズ変更の際に左右の表示位置が*/
@@ -1632,8 +1650,7 @@ Btmボタン
   fill: #fff;
 }
 
-.ability-icon:hover .slot-tooltip,
-.ability-icon:hover .tooltip-top-arrow {
+.ability-icon:hover .slot-tooltip-container {
   display: block;
 }
 

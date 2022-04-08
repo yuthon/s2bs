@@ -75,7 +75,7 @@ const MainSlot0 = React.memo((props) => {
         <p className="font-type2">このギアとメインギアパワーの組み合わせは存在しないようです</p>
       </div>
       <div className="ability-icon main-slot" onClick={()=>{openGearModal()}}>
-        <div className="tooltip-top-arrow">
+        <div className="slot-tooltip-container">
           <p className="slot-tooltip-left font-type2">クリックでギアパワーを変更</p>
         </div>
         <img className="mainslot-img" src={props.ability.path} alt=""/>
