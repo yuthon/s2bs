@@ -421,7 +421,7 @@ const EyeColorModal = React.memo((props) => {
             </svg>
           </div>
           <div className="modal-footer py-0">
-            <button type="button" className="btn btn-dark font-type1 mx-auto" data-bs-dismiss="modal" aria-hidden="Close">
+            <button type="button" className="btn btn-dark font-type1 mx-auto" data-bs-dismiss="modal">
               OK
             </button>
           </div>

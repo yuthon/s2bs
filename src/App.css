@@ -1639,8 +1639,7 @@ Btmボタン
 
 /* ギアモーダル内のツールチップ */
 .gear-icon-tooltip {
-  height: 1.8rem;
-  display: none;
+  display: inline-block;
   z-index: 6;
   padding: 0.2rem 0.4rem;
   color: #ffffff;
@@ -1648,29 +1647,32 @@ Btmボタン
   border-radius: 0.3em;
   font-size: 0.9rem;
   user-select: none;
+  margin: 0rem;
 }
 
-.gear-icon:hover .gear-icon-tooltip-arrow,
-.gear-icon:hover .gear-icon-tooltip {
-  display: inline;
+
+.gear-icon:hover .tooltip-container {
+  display: block;
 }
 
 .tooltip-container {
+  display: none;
   position: absolute;
-  top: -2rem;
-  left: -100px;
+  top: -2.15rem;
+  left: -40px;
   width: 200px;
 }
 
-.gear-icon-tooltip-arrow {
+.gear-icon-tooltip:after {
   width: 0.5rem;
-  display: none;
+  display: block;
+  content: '';
   z-index: 2;
   border-top: 0.4rem solid rgba(0, 0, 0, 0.8);
   border-right: 0.3rem solid transparent;
   border-left: 0.3rem solid transparent;
   position: absolute;
-  top: -0.55rem;
+  bottom: -0.4rem;
   left: 47%;
 }
 

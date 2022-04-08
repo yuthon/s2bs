@@ -9,10 +9,8 @@ const GearIcon = (props) => {
         }
       }
     > 
-      <div className="gear-icon-tooltip-arrow">
-        <div className="tooltip-container">
-          <span className="gear-icon-tooltip font-type2">{props.gear.name}</span>
-        </div>
+      <div className="tooltip-container">
+        <p className="gear-icon-tooltip font-type2">{props.gear.name}</p>
       </div>
       <img className="brand-img-small" src={props.brandImgPath} alt=""/>
       <img className="gear-icon-img" src={props.gear.path} alt=""/>
