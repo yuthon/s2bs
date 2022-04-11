@@ -1,4 +1,4 @@
-
+import LanguageSelector from './languages/LanguageSelector';
 // ヘッダー画像
 import HeaderImg from './images/nc113873.png';
 import Footer from './Footer';
@@ -51,6 +51,7 @@ const Main = () => {
       </div>
     </header>
     <div className="container-xxl">
+      <LanguageSelector />
       <CharacterTypeModal
         characterType={characterType}
         setCharacterType={setCharacterType}
