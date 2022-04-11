@@ -1532,13 +1532,10 @@ Btmボタン
 }
 
 /* メインスロットとサブスロットのツールチップ */
-.slot-tooltip {
-  width: 8.8rem;
-  height: 1.8rem;
+.slot-tooltip,
+.slot-tooltip-mid {
+  display: inline-block;
   /* display: none; */
-  position: absolute;
-  top: -2.2rem;
-  left: -4.35rem;
   z-index: 2;
   padding: 0.3em 0.5em;
   color: #ffffff;
@@ -1574,13 +1571,34 @@ Btmボタン
   user-select: none;
 }
 
-.slot-tooltip-container {
+.slot-tooltip-left-container {
   width: 8.8rem;
   height: 1.8rem;
   position: absolute;
   top: -2.4rem;
   left: -30px;
   display: none;
+  z-index: 32;
+}
+.slot-tooltip-mid-container {
+  width: 8.8rem;
+  height: 1.8rem;
+  position: absolute;
+  top: -2.4rem;
+  left: -90px;
+  display: none;
+  z-index: 32;
+}
+
+
+.slot-tooltip-container {
+  width: 8.8rem;
+  height: 1.8rem;
+  position: absolute;
+  top: -2.4rem;
+  left: -50px;
+  display: none;
+  z-index: 32;
 }
 
 .slot-tooltip-left:after {
@@ -1594,6 +1612,31 @@ Btmボタン
   position: absolute;
   bottom: -0.4rem;
   left: 48px;
+}
+
+.slot-tooltip:after {
+  width: 0.5rem;
+  display: block;
+  content: '';
+  z-index: 2;
+  border-top: 0.4rem solid rgba(0, 0, 0, 0.8);
+  border-right: 0.3rem solid transparent;
+  border-left: 0.3rem solid transparent;
+  position: absolute;
+  bottom: -0.4rem;
+  left: 65px;
+}
+.slot-tooltip-mid:after {
+  width: 0.5rem;
+  display: block;
+  content: '';
+  z-index: 2;
+  border-top: 0.4rem solid rgba(0, 0, 0, 0.8);
+  border-right: 0.3rem solid transparent;
+  border-left: 0.3rem solid transparent;
+  position: absolute;
+  bottom: -0.4rem;
+  left: 105px;
 }
 
 /* 上側に表示する場合だとフォントサイズ変更の際に左右の表示位置が*/
@@ -1650,7 +1693,10 @@ Btmボタン
   fill: #fff;
 }
 
-.ability-icon:hover .slot-tooltip-container {
+.ability-icon:hover .slot-tooltip-left-container,
+.ability-icon:hover .slot-tooltip-mid-container,
+.ability-icon:hover .slot-tooltip-container
+ {
   display: block;
 }
 

@@ -39,8 +39,8 @@ const SubSlot1 = React.memo((props) => {
           openGearModal();
         }}
       >
-        <div className="tooltip-top-arrow">
-          <p className="slot-tooltip font-type2">クリックでギアパワーを変更</p>
+        <div className="slot-tooltip-mid-container">
+          <p className="slot-tooltip-mid font-type2">クリックでギアパワーを変更</p>
         </div>
         <img className="subslot-img" src={props.imagePath} alt=""/>
       </div>
