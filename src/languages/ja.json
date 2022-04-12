@@ -9,5 +9,14 @@
   "footerText6": "こちらのサイトで配布されています。",
   "footerText7": "何かご連絡の際は、お手数ですが",
   "footerText8": "の方までお願いいたします。",
-  "modalClose": "とじる"
+  "modalClose": "とじる",
+  "loaderText1": "3Dモデルをロード中…",
+  "loaderText2": "※この処理には時間がかかる場合があります",
+  "loaderText3": "※モデルのロード中はページ内の動作が重くなることがあります",
+  "sceneText1": "3Dモデルを非表示",
+  "sceneText2": "キャラクターの設定",
+  "sceneText3": "キャラクターの",
+  "sceneText4": "回転 / ズーム",
+  "sceneText5": "3Dモデルを表示",
+  "sceneText6": "※3Dモデルを表示する場合にCPUやGPU、メモリの性能が不足しているとページ全体の動作が重くなります"
 }

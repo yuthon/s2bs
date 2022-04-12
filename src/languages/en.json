@@ -9,5 +9,15 @@
   "footerText6": "models-resource.com",
   "footerText7": "Please reach me out on ",
   "footerText8": " if you'd like to contact. ※We haven't fully adapted English Translation. We apologize for inconvenience.",
-  "modalClose": "Close"
+  "modalClose": "Close",
+  "loaderText1": "Loading a 3D model...",
+  "loaderText2": "※This might take a while",
+  "loaderText3": "※The page might slow down while loading",
+  "sceneText1": "hide the model",
+  "sceneText2": "Character Setting",
+  "sceneText3": "Character Control",
+  "sceneText4": "Spin/Zoom",
+  "sceneText5": "Display the model",
+  "sceneText6": "※The page might slow down if CPU, GPU, or memory's performance is insufficient"
+
 }
