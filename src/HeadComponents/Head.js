@@ -1,4 +1,5 @@
 import HeadGear from './HeadGear';
+import { Text } from '../languages/Text';
 import MainSlot0 from '../SlotComponents/MainSlot0';
 import SubSlot0 from '../SlotComponents/SubSlot0';
 import SubSlot1 from '../SlotComponents/SubSlot1';
@@ -20,7 +21,7 @@ const Head = (props) => {
 
   return(
     <div className="gear-card head-stripe my-2" id="headgear-card">
-      <p className="gear-header font-type1">アタマ</p>
+      <p className="gear-header font-type1"><Text tid="head"/></p>
       <div className="gear-reset">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onClick={()=>{resetGear();}}>
           {/* <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
@@ -29,7 +30,7 @@ const Head = (props) => {
             fill="white"
           />
         </svg>
-        <p className="gear-reset-tooltip font-type2">ギアをリセット</p>
+        <p className="gear-reset-tooltip font-type2"><Text tid="gearReset"/></p>
       </div>
       <HeadGear
         imagePath={props.headGear.path}
@@ -59,7 +60,7 @@ const Head = (props) => {
             fill="white"
           />
         </svg>
-        <p className="ability-reset-tooltip font-type2">ギアパワーをリセット</p>
+        <p className="ability-reset-tooltip font-type2"><Text tid="abilityReset"/></p>
       </div>
     </div>
   );

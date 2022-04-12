@@ -1,5 +1,6 @@
 import React from 'react';
 import SubSlotModal0 from '../SlotComponents/SubSlotModal0';
+import { Text } from '../languages/Text';
 
 const SubSlot0 = React.memo((props) => {
   // モーダルを表示する関数
@@ -40,7 +41,7 @@ const SubSlot0 = React.memo((props) => {
         }}
       >
         <div className="slot-tooltip-container">
-          <p className="slot-tooltip font-type2">クリックでギアパワーを変更</p>
+          <p className="slot-tooltip font-type2"><Text tid="changeAbility"/></p>
         </div>
         <img className="subslot-img" src={props.imagePath} alt=""/>
       </div>

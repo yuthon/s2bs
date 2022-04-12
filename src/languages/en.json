@@ -18,6 +18,12 @@
   "sceneText3": "Character Control",
   "sceneText4": "Spin/Zoom",
   "sceneText5": "Display the model",
-  "sceneText6": "※The page might slow down if CPU, GPU, or memory's performance is insufficient"
+  "sceneText6": "※The page might slow down if CPU, GPU, or memory's performance is insufficient",
+  "head":"Head",
+  "gearReset":"Clear Gear",
+  "abilityReset":"Clear abilities",
+  "changeAbility":"Change Ability",
+  "changeGear":"Change Gear",
+  "warningText":"Selected Gear with the selected Ability doesn't seem to exist"
 
 }

@@ -18,5 +18,11 @@
   "sceneText3": "キャラクターの",
   "sceneText4": "回転 / ズーム",
   "sceneText5": "3Dモデルを表示",
-  "sceneText6": "※3Dモデルを表示する場合にCPUやGPU、メモリの性能が不足しているとページ全体の動作が重くなります"
+  "sceneText6": "※3Dモデルを表示する場合にCPUやGPU、メモリの性能が不足しているとページ全体の動作が重くなります",
+  "head":"アタマ",
+  "gearReset":"ギアをリセット",
+  "abilityReset":"ギアパワーをリセット",
+  "changeAbility":"クリックでギアパワーを変更",
+  "changeGear":"クリックでギアを変更",
+  "warningText":"このギアとメインギアパワーの組み合わせは存在しないようです"
 }

@@ -1,3 +1,4 @@
+import { Text } from "../languages/Text";
 
 const HeadGear = (props) => {
   let target;
@@ -10,7 +11,7 @@ const HeadGear = (props) => {
     <div className="gear-img" onClick={()=>{openHeadGearModal()}}>
       <div className="gear-tooltip-arrow">
         <div className="gear-tooltip-container">
-          <p className="gear-tooltip font-type2">クリックでギアを変更</p>
+          <p className="gear-tooltip font-type2"><Text tid="changeGear"/></p>
         </div>
       </div>
       <img src={props.imagePath} alt=""/>
