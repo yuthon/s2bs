@@ -1,4 +1,13 @@
 {
   "titleHeader": "BuildSimulater",
-  "footerAbout": "About This Page"
+  "footerAbout": "About This Page",
+  "footerText1": "Splatoon2 and all related copyrights/assets used on this page are the property of Nintendo.",
+  "footerText2": "We refered to data collected by third parties and ourselves, so please understand that the data shown on this page may differ from the actual in-game figures.",
+  "footerText3": "Ability Effect Data : ",
+  "footerText4": "Data collected by Lean",
+  "footerText5": "3D models are from ",
+  "footerText6": "models-resource.com",
+  "footerText7": "Please reach me out on ",
+  "footerText8": " if you'd like to contact. ※We haven't fully adapted English Translation. We apologize for inconvenience.",
+  "modalClose": "Close"
 }
