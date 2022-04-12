@@ -25,6 +25,7 @@
   "changeAbility":"クリックでギアパワーを変更",
   "changeGear":"クリックでギアを変更",
   "warningText":"このギアとメインギアパワーの組み合わせは存在しないようです",
-  "clothes":"フク"
-
+  "clothes":"フク",
+  "shoes":"クツ",
+  "changeWeapon":"クリックでブキを変更"
 }

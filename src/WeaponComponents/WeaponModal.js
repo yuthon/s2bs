@@ -60,10 +60,8 @@ const WeaponModal = memo((props) => {
                 }
                 data-bs-dismiss="modal"
               >
-                <div className="weapon-icon-tooltip-arrow">
-                  <div className="tooltip-container">
-                    <span className="weapon-icon-tooltip font-type2">{weapon.name}</span>
-                  </div>
+                <div className="weapon-tooltip-container">
+                  <p className="weapon-icon-tooltip font-type2">{weapon.name}</p>
                 </div>
                 <img src = {weapon.path} className="img-weapon" alt=""/>
                 <div className="row align-items-center justify-content-around sub-sp-bg">

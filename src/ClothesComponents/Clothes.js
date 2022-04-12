@@ -30,7 +30,7 @@ const Clothes = (props) => {
             fill="white"
           />
         </svg>
-        <p className="gear-reset-tooltip font-type2"><Text tid="changeGear"/></p>
+        <p className="gear-reset-tooltip font-type2"><Text tid="gearReset"/></p>
       </div>
       <ClothesGear
         imagePath={props.clothesGear.path}
@@ -60,7 +60,7 @@ const Clothes = (props) => {
             fill="white"
           />
         </svg>
-        <p className="ability-reset-tooltip font-type2"><Text tid="changeAbility"/></p>
+        <p className="ability-reset-tooltip font-type2"><Text tid="abilityReset"/></p>
       </div>
     </div>
   );

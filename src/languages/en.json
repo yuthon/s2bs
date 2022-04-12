@@ -25,5 +25,7 @@
   "changeAbility":"Change Ability",
   "changeGear":"Change Gear",
   "warningText":"Selected Gear with the selected Ability doesn't seem to exist",
-  "clothes":"Clothes"
+  "clothes":"Clothes",
+  "shoes":"Shoes",
+  "changeWeapon":"Change Weapon"
 }

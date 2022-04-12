@@ -1,4 +1,4 @@
-
+import { Text } from "../languages/Text";
 
 const Weapon = (props) => {
 
@@ -7,7 +7,7 @@ const Weapon = (props) => {
       <div className="row">
         <div className="col-5" data-bs-toggle="modal" data-bs-target="#weaponModal" id="weaponModal-trigger">
           <img style={{width:"8rem", height:"8rem"}} src={props.weaponStatus.path} alt=""/>
-          <p className="weaponModal-tooltip font-type2">クリックでブキを変更</p>
+          <p className="weaponModal-tooltip font-type2"><Text tid="changeWeapon"/></p>
         </div>
         <div className="col-7 py-2">
           <div className="weapon-sub-sp row">
