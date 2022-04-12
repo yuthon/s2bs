@@ -968,9 +968,17 @@ footer {
 /* ブキモーダル */
 
 /* ブキモーダルのツールチップ */
+.weapon-icon-tooltip-container {
+  display: none;
+  position: absolute;
+  top: -2.15rem;
+  left: -25px;
+  width: 200px;
+}
+
 .weapon-icon-tooltip {
   height: 1.8rem;
-  display: none;
+  display: inline-block;
   z-index: 2;
   padding: 0.2rem 0.4rem;
   color: #ffffff;
@@ -978,23 +986,25 @@ footer {
   border-radius: 0.3em;
   font-size: 0.9rem;
   user-select: none;
+  margin: 0px;
 }
 
-.weapon-icon-tooltip-arrow {
+.weapon-icon-tooltip:after {
   width: 0.5rem;
-  display: none;
+  content: "";
+  display: block;
   z-index: 2;
   border-top: 0.4rem solid rgba(0, 0, 0, 0.8);
   border-right: 0.3rem solid transparent;
   border-left: 0.3rem solid transparent;
   position: absolute;
-  top: -0.55rem;
+  bottom: -0.4rem;
   left: 47%;
 }
 
-.weapon-icon:hover .weapon-icon-tooltip-arrow,
-.weapon-icon:hover .weapon-icon-tooltip {
-  display: inline;
+
+.weapon-icon:hover .weapon-icon-tooltip-container {
+  display: block;
 }
 
 /*ギアパワーのスイッチ*/
