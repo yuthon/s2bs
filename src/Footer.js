@@ -1,3 +1,5 @@
+import { Text } from "./languages/Text";
+
 const Footer = () => {
   return (
     <div id="footer-height">
@@ -10,7 +12,7 @@ const Footer = () => {
             fill="white"  
           />
         </svg>
-        当ページについて</span>
+        <Text tid="footerAbout"/></span>
       <a className="github-link footer-content" href="https://github.com/yuthon/s2bs" target="_blank" rel="noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 496 512">
         {/* <!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
