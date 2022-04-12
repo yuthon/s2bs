@@ -323,6 +323,43 @@
   margin-right: auto;
   padding-top: 0.5rem;
 }
+/* 言語の選択 */
+#lang-selector {
+  position: absolute;
+  top: 0.85rem;
+  right: 10px;
+  border-radius: 8px;
+}
+
+#lang-selector:hover {
+  background: rgb(107, 107, 107);
+}
+
+#lang-selector svg {
+  z-index: 1;
+}
+
+#lang-selector button{
+  position: relative;
+  height: 35px;
+  width: 50px;
+  background-color: transparent;
+  z-index: 2;
+  color: transparent;
+  border-radius: 8px;
+  border: none;
+  outline: 0px;
+}
+
+#lang-selector select:active{
+  border: none;
+}
+
+#lang-selector option {
+  background: #000;
+  color: white;
+}
+
 /*  */
 /* フッター */
 /*  */

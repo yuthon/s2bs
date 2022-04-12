@@ -49,9 +49,9 @@ const Main = () => {
         <p className="font-type1 header-name">スプラ2ギアプランナー</p>
         <img className="header-image" src={HeaderImg} alt=""/>
       </div>
+      <LanguageSelector />
     </header>
     <div className="container-xxl">
-      <LanguageSelector />
       <CharacterTypeModal
         characterType={characterType}
         setCharacterType={setCharacterType}
