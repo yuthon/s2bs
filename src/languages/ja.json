@@ -24,5 +24,7 @@
   "abilityReset":"ギアパワーをリセット",
   "changeAbility":"クリックでギアパワーを変更",
   "changeGear":"クリックでギアを変更",
-  "warningText":"このギアとメインギアパワーの組み合わせは存在しないようです"
+  "warningText":"このギアとメインギアパワーの組み合わせは存在しないようです",
+  "clothes":"フク"
+
 }
