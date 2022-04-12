@@ -11,7 +11,7 @@ const Footer = () => {
           />
         </svg>
         当ページについて</span>
-      <a className="github-link footer-content" href="https://github.com/yuthon/s2bs" target="_blank" rel="noopener">
+      <a className="github-link footer-content" href="https://github.com/yuthon/s2bs" target="_blank" rel="noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 496 512">
         {/* <!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
           <path 
@@ -21,7 +21,7 @@ const Footer = () => {
         </svg>
         GitHub
       </a>
-      <a className="twitter-link footer-content" href="https://twitter.com/PP5rtm" target="_blank" rel="noopener">
+      <a className="twitter-link footer-content" href="https://twitter.com/PP5rtm" target="_blank" rel="noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 512 512">
           {/* <!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
           <path 
@@ -42,9 +42,9 @@ const Footer = () => {
             </div>
             <div className="modal-body text-start">
               <p>「スプラトゥーン2」は任天堂株式会社の商標かつ著作物であり、当ページは任天堂株式会社とは一切関係のない非公式のものです。</p>
-              <p>制作に当たり第三者の収集したデータや独自に検証した結果を参考にしていますが、小数点数に対する処理の仕方の違いなどによって実際のゲーム内の数値とは異なる場合があることをご了承ください。</p><p>ギアパワー効果などのデータ : <a className="text-white" href="https://leanny.github.io/" target="_blank" rel="noopener">Leanさんの収集したデータ</a></p>
-              <p>使用している3Dモデルの素材は<a className="text-white" href="https://www.models-resource.com/nintendo_switch/splatoon2/" target="_blank" rel="noopener">こちらのサイト</a>で配布されています。</p>
-              <p>何かご連絡の際は、お手数ですが<a className="text-white" href="https://twitter.com/PP5rtm" target="_blank" rel="noopener">Twitter</a>の方までお願いいたします。</p>
+              <p>制作に当たり第三者の収集したデータや独自に検証した結果を参考にしていますが、小数点数に対する処理の仕方の違いなどによって実際のゲーム内の数値とは異なる場合があることをご了承ください。</p><p>ギアパワー効果などのデータ : <a className="text-white" href="https://leanny.github.io/" target="_blank" rel="noopener noreferrer">Leanさんの収集したデータ</a></p>
+              <p>使用している3Dモデルの素材は<a className="text-white" href="https://www.models-resource.com/nintendo_switch/splatoon2/" target="_blank" rel="noopener noreferrer">こちらのサイト</a>で配布されています。</p>
+              <p>何かご連絡の際は、お手数ですが<a className="text-white" href="https://twitter.com/PP5rtm" target="_blank" rel="noopener noreferrer">Twitter</a>の方までお願いいたします。</p>
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-dark m-auto" data-bs-dismiss="modal">とじる</button>
