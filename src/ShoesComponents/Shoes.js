@@ -1,4 +1,5 @@
 import ShoesGear from './ShoesGear';
+import { Text } from '../languages/Text';
 import MainSlot2 from '../SlotComponents/MainSlot2';
 import SubSlot6 from '../SlotComponents/SubSlot6';
 import SubSlot7 from '../SlotComponents/SubSlot7';
@@ -20,7 +21,7 @@ const Shoes = (props) => {
 
   return(
     <div className="gear-card shoes-stripe my-2" id="shoesgear-card">
-      <p className="gear-header font-type1">クツ</p>
+      <p className="gear-header font-type1"><Text tid="shoes"/></p>
       <div className="gear-reset">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onClick={()=>{resetGear();}}>
           {/* <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
@@ -29,7 +30,7 @@ const Shoes = (props) => {
             fill="white"
           />
         </svg>
-        <p className="gear-reset-tooltip font-type2">ギアをリセット</p>
+        <p className="gear-reset-tooltip font-type2"><Text tid="gearReset"/></p>
       </div>
       <ShoesGear
         imagePath={props.shoesGear.path}
@@ -59,7 +60,7 @@ const Shoes = (props) => {
             fill="white"
           />
         </svg>
-        <p className="ability-reset-tooltip font-type2">ギアパワーをリセット</p>
+        <p className="ability-reset-tooltip font-type2"><Text tid="abilityReset"/></p>
       </div>
     </div>
   );

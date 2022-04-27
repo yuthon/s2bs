@@ -1,4 +1,5 @@
-
+import LanguageSelector from './languages/LanguageSelector';
+import { Text } from './languages/Text';
 // ヘッダー画像
 import HeaderImg from './images/nc113873.png';
 import Footer from './Footer';
@@ -46,9 +47,10 @@ const Main = () => {
     <header className="" id="header">
       <div className="d-flex header-title">
         <img className="header-image" src={HeaderImg} alt=""/>
-        <p className="font-type1 header-name">スプラ2ギアプランナー</p>
+        <p className="font-type1 header-name"><Text tid="titleHeader"/></p>
         <img className="header-image" src={HeaderImg} alt=""/>
       </div>
+      <LanguageSelector />
     </header>
     <div className="container-xxl">
       <CharacterTypeModal

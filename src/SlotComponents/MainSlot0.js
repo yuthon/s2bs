@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import MainSlotModal0 from '../SlotComponents/MainSlotModal0';
 import { headAbilityData } from '../HeadComponents/headAbilityData';
+import { Text } from '../languages/Text';
 
 const MainSlot0 = React.memo((props) => {
   // モーダルを表示する関数
@@ -72,11 +73,11 @@ const MainSlot0 = React.memo((props) => {
             fill="#ebebeb"
           />
         </svg>
-        <p className="font-type2">このギアとメインギアパワーの組み合わせは存在しないようです</p>
+        <p className="font-type2"><Text tid="warningText"/></p>
       </div>
       <div className="ability-icon main-slot" onClick={()=>{openGearModal()}}>
         <div className="slot-tooltip-left-container">
-          <p className="slot-tooltip-left font-type2">クリックでギアパワーを変更</p>
+          <p className="slot-tooltip-left font-type2"><Text tid="changeAbility"/></p>
         </div>
         <img className="mainslot-img" src={props.ability.path} alt=""/>
       </div>
