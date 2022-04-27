@@ -26,6 +26,12 @@
     height: calc(100vh - 6.25rem);
     z-index: 10;
   }
+  .header-title {
+    width: 22rem;
+  }
+  .header-name {
+    font-size: 2rem;
+  }
   .ability-modal {
     width: 320px;
   }
@@ -147,6 +153,9 @@
   .gear-header {
     width: 200px;
   }
+  .header-name {
+    font-size: 2rem;
+  }
   /* アビリティ効果部分 */
   #ae-section {
     width: 95vw;
@@ -203,6 +212,9 @@
     top: -20px;
     left: 20px;
   }
+  .header-title {
+    width: 22rem;
+  }
   .modal-close-btn {
     margin: 2px 0px 0px 152px;
   }
@@ -256,6 +268,13 @@
   .gear-modal {
     width: 100%;
     margin: auto;
+  }
+  .header-name {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+  }
+  .header-title {
+    width: 16rem;
   }
 }
 
@@ -314,11 +333,9 @@
 /* サイト名 */
 .header-name {
   width: 17rem;
-  font-size: 2rem;
   color: white;
 }
 .header-title {
-  width: 22rem;
   margin-left: auto;
   margin-right: auto;
   padding-top: 0.5rem;

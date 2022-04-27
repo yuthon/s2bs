@@ -9,7 +9,13 @@ export const LanguageContext = createContext({
 
 // 
 export function LanguageProvider({ children }) {
-  const defaultLanguage = window.localStorage.getItem("rcml-lang");
+  let defaultLanguage;
+  if (window.navigator.language.indexOf("en") > -1) {
+    defaultLanguage = "en";
+  } else if (window.navigator.language.indexOf("ja") > -1) {
+    defaultLanguage = "ja";
+  };
+  console.log(defaultLanguage)
   const [userLanguage, setUserLanguage] = useState(defaultLanguage || "en");
 
   const provider = {
