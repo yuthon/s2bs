@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import MainSlotModal1 from '../SlotComponents/MainSlotModal1';
+import { Text } from '../languages/Text';
 import { clothesAbilityData } from '../ClothesComponents/clothesAbilityData';
 
 const MainSlot1 = React.memo((props) => {
@@ -72,11 +73,11 @@ const MainSlot1 = React.memo((props) => {
             fill="#ebebeb"
           />
         </svg>
-        <p className="font-type2">このギアとメインギアパワーの組み合わせは存在しないようです</p>
+        <p className="font-type2"><Text tid="warningText"/></p>
       </div>
       <div className="ability-icon main-slot" onClick={()=>{openGearModal()}}>
         <div className="slot-tooltip-left-container">
-          <p className="slot-tooltip-left font-type2">クリックでギアパワーを変更</p>
+          <p className="slot-tooltip-left font-type2"><Text tid="changeAbility"/></p>
         </div>
         <img className="mainslot-img" src={props.ability.path} alt=""/>
       </div>

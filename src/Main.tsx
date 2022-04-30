@@ -1,4 +1,6 @@
-
+import React from 'react';
+import LanguageSelector from './languages/LanguageSelector';
+import { Text } from './languages/Text';
 // ヘッダー画像
 import HeaderImg from './images/nc113873.png';
 import Footer from './Footer';
@@ -25,20 +27,42 @@ import inkRecovery from './images/ability/REC.png';
 
 import { useState } from 'react';
 
+type headGearType = {
+  name: string,
+  path: string,
+  id: string,
+  brand: string,
+  default: string,
+}
+
+type clothesGearType = {
+  name: string,
+  path: string,
+  id: string,
+  brand: string,
+}
+
+type shoesGearType = {
+  name: string,
+  path: string,
+  id: string,
+  brand: string,
+}
+
 const Main = () => {
   //選択されたアタマギアを管理
-  const [headGear, setHeadGear] = useState({name:"ヘッドバンド ホワイト", path:Headband_White, id:"HB_Headband_White", brand:"バトロイカ",default:inkRecovery});
+  const [headGear, setHeadGear]: [headGearType, React.Dispatch<React.SetStateAction<headGearType>>] = useState({name:"ヘッドバンド ホワイト", path:Headband_White, id:"HB_Headband_White", brand:"バトロイカ",default:inkRecovery});
   //選択されたフクギアを管理
-  const [clothesGear, setClothesGear] = useState({name:"わかばイカT",path:WakabaIkaT,id:"WakabaIkaT",brand:"バトロイカ"});
+  const [clothesGear, setClothesGear]: [clothesGearType, React.Dispatch<React.SetStateAction<clothesGearType>>] = useState({name:"わかばイカT",path:WakabaIkaT,id:"WakabaIkaT",brand:"バトロイカ"});
   //選択されたクツギアを管理
-  const [shoesGear, setShoesGear] = useState({name:"キャンバス ホワイト",path:Canvas_White,id:"Canvas_White",brand:"クラーゲス"});
+  const [shoesGear, setShoesGear]: [shoesGearType, React.Dispatch<React.SetStateAction<shoesGearType>>] = useState({name:"キャンバス ホワイト",path:Canvas_White,id:"Canvas_White",brand:"クラーゲス"});
   //キャラ設定モーダルを管理
-  const [characterType, setCharacterType] = useState("IFML");
-  const [skinColor, setSkinColor] = useState("color_0");
-  const [hairStyle, setHairStyle] = useState("Hair_0");
-  const [eyeColor, setEyeColor] = useState("color_0");
-  const [bottoms, setBottoms] = useState("Btm_0");
-  const [teamColor, setTeamColor] = useState("color_5");
+  const [characterType, setCharacterType]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("IFML");
+  const [skinColor, setSkinColor]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("color_0");
+  const [hairStyle, setHairStyle]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("Hair_0");
+  const [eyeColor, setEyeColor]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("color_0");
+  const [bottoms, setBottoms]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("Btm_0");
+  const [teamColor, setTeamColor]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("color_5");
 
 
   return(
@@ -46,9 +70,10 @@ const Main = () => {
     <header className="" id="header">
       <div className="d-flex header-title">
         <img className="header-image" src={HeaderImg} alt=""/>
-        <p className="font-type1 header-name">スプラ2ギアプランナー</p>
+        <p className="font-type1 header-name"><Text tid="titleHeader"/></p>
         <img className="header-image" src={HeaderImg} alt=""/>
       </div>
+      <LanguageSelector />
     </header>
     <div className="container-xxl">
       <CharacterTypeModal
@@ -103,15 +128,15 @@ const Main = () => {
           />
           <HeadGearModal
             chosenGear={headGear}
-            setChosenGear={setHeadGear}
+            setGear={setHeadGear}
           />
           <ClothesGearModal
             chosenGear={clothesGear}
-            setChosenGear={setClothesGear}
+            setGear={setClothesGear}
           />
           <ShoesGearModal
             chosenGear={shoesGear}
-            setChosenGear={setShoesGear}
+            setGear={setShoesGear}
           />
         </div>
       </div>

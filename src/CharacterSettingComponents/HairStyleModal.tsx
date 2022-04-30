@@ -1,150 +1,155 @@
-import React, { useRef, useEffect } from 'react';
+import React, { FC, ReactElement, useRef, useEffect } from 'react';
 
-const HairStyleModal = React.memo((props) => {
-  const IMLHair0Ref = useRef();
-  const IMLHair1Ref = useRef();
-  const IMLHair2Ref = useRef();
-  const IMLHair3Ref = useRef();
-  const IMLHair4Ref = useRef();
-  const IMLHair5Ref = useRef();
-  const IFMLHair0Ref = useRef();
-  const IFMLHair1Ref = useRef();
-  const IFMLHair2Ref = useRef();
-  const IFMLHair3Ref = useRef();
-  const IFMLHair4Ref = useRef();
-  const IFMLHair5Ref = useRef();
-  const OFMLHair0Ref = useRef();
-  const OFMLHair1Ref = useRef();
-  const OMLHair0Ref = useRef();
-  const OMLHair1Ref = useRef();
+type HairStyleModalProps = {
+  characterType: string,
+  setHairStyle: React.Dispatch<React.SetStateAction<string>>,
+  hairStyle: string,
+}
+
+const HairStyleModal: FC<HairStyleModalProps> = React.memo(({characterType, setHairStyle, hairStyle}): ReactElement => {
+  const IMLHair0Ref = useRef<HTMLDivElement>(null!);
+  const IMLHair1Ref = useRef<HTMLDivElement>(null!);
+  const IMLHair2Ref = useRef<HTMLDivElement>(null!);
+  const IMLHair3Ref = useRef<HTMLDivElement>(null!);
+  const IMLHair4Ref = useRef<HTMLDivElement>(null!);
+  const IMLHair5Ref = useRef<HTMLDivElement>(null!);
+  const IFMLHair0Ref = useRef<HTMLDivElement>(null!);
+  const IFMLHair1Ref = useRef<HTMLDivElement>(null!);
+  const IFMLHair2Ref = useRef<HTMLDivElement>(null!);
+  const IFMLHair3Ref = useRef<HTMLDivElement>(null!);
+  const IFMLHair4Ref = useRef<HTMLDivElement>(null!);
+  const IFMLHair5Ref = useRef<HTMLDivElement>(null!);
+  const OFMLHair0Ref = useRef<HTMLDivElement>(null!);
+  const OFMLHair1Ref = useRef<HTMLDivElement>(null!);
+  const OMLHair0Ref = useRef<HTMLDivElement>(null!);
+  const OMLHair1Ref = useRef<HTMLDivElement>(null!);
   
-
   let hairStyleModal;
 
   useEffect(()=>{
-    if (props.characterType === "IFML") {
+    if (characterType === "IFML") {
     //選択されているヘアスタイルのボタンのクラス名を変更
-    if (props.hairStyle === "Hair_0") {
+    if (hairStyle === "Hair_0") {
       IFMLHair0Ref.current.className = "HS-selected"
-    } else if (props.hairStyle === "Hair_1") {
+    } else if (hairStyle === "Hair_1") {
       IFMLHair1Ref.current.className = "HS-selected"
-    } else if (props.hairStyle === "Hair_2") {
+    } else if (hairStyle === "Hair_2") {
       IFMLHair2Ref.current.className = "HS-selected"
-    } else if (props.hairStyle === "Hair_3") {
+    } else if (hairStyle === "Hair_3") {
       IFMLHair3Ref.current.className = "HS-selected"
-    } else if (props.hairStyle === "Hair_4") {
+    } else if (hairStyle === "Hair_4") {
       IFMLHair4Ref.current.className = "HS-selected"
-    } else if (props.hairStyle === "Hair_5") {
+    } else if (hairStyle === "Hair_5") {
       IFMLHair5Ref.current.className = "HS-selected"
     }
     // 別のヘアスタイルが選択されていればクラス名を戻す
-    if (IFMLHair0Ref.current.className === "HS-selected" && props.hairStyle!== "Hair_0") {
+    if (IFMLHair0Ref.current.className === "HS-selected" && hairStyle!== "Hair_0") {
       IFMLHair0Ref.current.className = "HS-btn"
     }
-    if (IFMLHair1Ref.current.className === "HS-selected" && props.hairStyle!== "Hair_1") {
+    if (IFMLHair1Ref.current.className === "HS-selected" && hairStyle!== "Hair_1") {
       IFMLHair1Ref.current.className = "HS-btn"
     }
-    if (IFMLHair2Ref.current.className === "HS-selected" && props.hairStyle!== "Hair_2") {
+    if (IFMLHair2Ref.current.className === "HS-selected" && hairStyle!== "Hair_2") {
       IFMLHair2Ref.current.className = "HS-btn"
     }
-    if (IFMLHair3Ref.current.className === "HS-selected" && props.hairStyle!== "Hair_3") {
+    if (IFMLHair3Ref.current.className === "HS-selected" && hairStyle!== "Hair_3") {
       IFMLHair3Ref.current.className = "HS-btn"
     }
-    if (IFMLHair4Ref.current.className === "HS-selected" && props.hairStyle!== "Hair_4") {
+    if (IFMLHair4Ref.current.className === "HS-selected" && hairStyle!== "Hair_4") {
       IFMLHair4Ref.current.className = "HS-btn"
     }
-    if (IFMLHair5Ref.current.className === "HS-selected" && props.hairStyle!== "Hair_5") {
+    if (IFMLHair5Ref.current.className === "HS-selected" && hairStyle!== "Hair_5") {
       IFMLHair5Ref.current.className = "HS-btn"
     }
-  } else if (props.characterType === "IML") {
+  } else if (characterType === "IML") {
     //選択されているヘアスタイルのボタンのクラス名を変更
-    if (props.hairStyle === "Hair_0") {
+    if (hairStyle === "Hair_0") {
       IMLHair0Ref.current.className = "HS-ML-selected"
-    } else if (props.hairStyle === "Hair_1") {
+    } else if (hairStyle === "Hair_1") {
       IMLHair1Ref.current.className = "HS-ML-selected"
-    } else if (props.hairStyle === "Hair_2") {
+    } else if (hairStyle === "Hair_2") {
       IMLHair2Ref.current.className = "HS-ML-selected"
-    } else if (props.hairStyle === "Hair_3") {
+    } else if (hairStyle === "Hair_3") {
       IMLHair3Ref.current.className = "HS-ML-selected"
-    } else if (props.hairStyle === "Hair_4") {
+    } else if (hairStyle === "Hair_4") {
       IMLHair4Ref.current.className = "HS-ML-selected"
-    } else if (props.hairStyle === "Hair_5") {
+    } else if (hairStyle === "Hair_5") {
       IMLHair5Ref.current.className = "HS-ML-selected"
     }
     // 別のヘアスタイルが選択されていればクラス名を戻す
-    if (IMLHair0Ref.current.className === "HS-ML-selected" && props.hairStyle!== "Hair_0") {
+    if (IMLHair0Ref.current.className === "HS-ML-selected" && hairStyle!== "Hair_0") {
       IMLHair0Ref.current.className = "HS-ML-btn"
     }
-    if (IMLHair1Ref.current.className === "HS-ML-selected" && props.hairStyle!== "Hair_1") {
+    if (IMLHair1Ref.current.className === "HS-ML-selected" && hairStyle!== "Hair_1") {
       IMLHair1Ref.current.className = "HS-ML-btn"
     }
-    if (IMLHair2Ref.current.className === "HS-ML-selected" && props.hairStyle!== "Hair_2") {
+    if (IMLHair2Ref.current.className === "HS-ML-selected" && hairStyle!== "Hair_2") {
       IMLHair2Ref.current.className = "HS-ML-btn"
     }
-    if (IMLHair3Ref.current.className === "HS-ML-selected" && props.hairStyle!== "Hair_3") {
+    if (IMLHair3Ref.current.className === "HS-ML-selected" && hairStyle!== "Hair_3") {
       IMLHair3Ref.current.className = "HS-ML-btn"
     }
-    if (IMLHair4Ref.current.className === "HS-ML-selected" && props.hairStyle!== "Hair_4") {
+    if (IMLHair4Ref.current.className === "HS-ML-selected" && hairStyle!== "Hair_4") {
       IMLHair4Ref.current.className = "HS-ML-btn"
     }
-    if (IMLHair5Ref.current.className === "HS-ML-selected" && props.hairStyle!== "Hair_5") {
+    if (IMLHair5Ref.current.className === "HS-ML-selected" && hairStyle!== "Hair_5") {
       IMLHair5Ref.current.className = "HS-ML-btn"
     }
-  } else if (props.characterType === "OFML") {
+  } else if (characterType === "OFML") {
     //選択されているヘアスタイルのボタンのクラス名を変更
-    if (props.hairStyle === "Hair_0") {
+    if (hairStyle === "Hair_0") {
       OFMLHair0Ref.current.className = "HS-selected"
-    } else if (props.hairStyle === "Hair_1") {
+    } else if (hairStyle === "Hair_1") {
       OFMLHair1Ref.current.className = "HS-selected"
-    } else if (props.hairStyle === "Hair_2") {
+    } else if (hairStyle === "Hair_2") {
       OFMLHair0Ref.current.className = "HS-selected"
-    } else if (props.hairStyle === "Hair_3") {
+    } else if (hairStyle === "Hair_3") {
       OFMLHair0Ref.current.className = "HS-selected"
-    } else if (props.hairStyle === "Hair_4") {
+    } else if (hairStyle === "Hair_4") {
       OFMLHair0Ref.current.className = "HS-selected"
-    } else if (props.hairStyle === "Hair_5") {
+    } else if (hairStyle === "Hair_5") {
       OFMLHair0Ref.current.className = "HS-selected"
     }
     // 別のヘアスタイルが選択されていればクラス名を戻す
-    if (OFMLHair0Ref.current.className === "HS-selected" && props.hairStyle!== "Hair_0") {
+    if (OFMLHair0Ref.current.className === "HS-selected" && hairStyle!== "Hair_0") {
       OFMLHair0Ref.current.className = "HS-btn"
     }
-    if (OFMLHair1Ref.current.className === "HS-selected" && props.hairStyle!== "Hair_1") {
+    if (OFMLHair1Ref.current.className === "HS-selected" && hairStyle!== "Hair_1") {
       OFMLHair1Ref.current.className = "HS-btn"
     }
-  }　else if (props.characterType === "OML") {
+  }　else if (characterType === "OML") {
     //選択されているヘアスタイルのボタンのクラス名を変更
-    if (props.hairStyle === "Hair_0") {
+    if (hairStyle === "Hair_0") {
       OMLHair0Ref.current.className = "HS-ML-selected"
-    } else if (props.hairStyle === "Hair_1") {
+    } else if (hairStyle === "Hair_1") {
       OMLHair1Ref.current.className = "HS-ML-selected"
-    } else if (props.hairStyle === "Hair_2") {
+    } else if (hairStyle === "Hair_2") {
       OMLHair0Ref.current.className = "HS-ML-selected"
-    } else if (props.hairStyle === "Hair_3") {
+    } else if (hairStyle === "Hair_3") {
       OMLHair0Ref.current.className = "HS-ML-selected"
-    } else if (props.hairStyle === "Hair_4") {
+    } else if (hairStyle === "Hair_4") {
       OMLHair0Ref.current.className = "HS-ML-selected"
-    } else if (props.hairStyle === "Hair_5") {
+    } else if (hairStyle === "Hair_5") {
       OMLHair0Ref.current.className = "HS-ML-selected"
     }
     // 別のヘアスタイルが選択されていればクラス名を戻す
-    if (OMLHair0Ref.current.className === "HS-ML-selected" && props.hairStyle!== "Hair_0") {
+    if (OMLHair0Ref.current.className === "HS-ML-selected" && hairStyle!== "Hair_0") {
       OMLHair0Ref.current.className = "HS-ML-btn"
     }
-    if (OMLHair1Ref.current.className === "HS-ML-selected" && props.hairStyle!== "Hair_1") {
+    if (OMLHair1Ref.current.className === "HS-ML-selected" && hairStyle!== "Hair_1") {
       OMLHair1Ref.current.className = "HS-ML-btn"
     }
   }
   })
 
-    if (props.characterType === "IFML") {
+    if (characterType === "IFML") {
       hairStyleModal = (
         <>
         <div className="HS-btn" ref={IFMLHair0Ref}>  
             <svg
               className="HS-btn-svg HS-svg" viewBox="0 10 240 310"
               onClick={()=>{
-                props.setHairStyle("Hair_0");
+                setHairStyle("Hair_0");
               }}
             >
               <path 
@@ -166,7 +171,7 @@ const HairStyleModal = React.memo((props) => {
             <svg
               className="HS-btn-svg HS-svg" viewBox="0 10 240 310"
               onClick={()=>{
-                props.setHairStyle("Hair_1");
+                setHairStyle("Hair_1");
               }}
             >
               <path 
@@ -187,7 +192,7 @@ const HairStyleModal = React.memo((props) => {
             <svg
               className="HS-btn-svg HS-svg" viewBox="0 10 240 310"
               onClick={()=>{
-                props.setHairStyle("Hair_2");
+                setHairStyle("Hair_2");
               }}
             >
               <path 
@@ -214,7 +219,7 @@ const HairStyleModal = React.memo((props) => {
             <svg
               className="HS-btn-svg HS-svg" viewBox="0 40 240 310"
               onClick={()=>{
-                props.setHairStyle("Hair_3");
+                setHairStyle("Hair_3");
               }}
             >
               <path 
@@ -248,7 +253,7 @@ const HairStyleModal = React.memo((props) => {
             <svg
               className="HS-btn-svg HS-svg" width="110" height="140" viewBox="20 30 200 330"
               onClick={()=>{
-                props.setHairStyle("Hair_4");
+                setHairStyle("Hair_4");
               }}
             >
               <path 
@@ -288,7 +293,7 @@ const HairStyleModal = React.memo((props) => {
             <svg
               className="HS-btn-svg HS-svg" width="110" height="140" viewBox="20 30 200 330"
               onClick={()=>{
-                props.setHairStyle("Hair_5");
+                setHairStyle("Hair_5");
               }}
             >
               <path 
@@ -307,14 +312,14 @@ const HairStyleModal = React.memo((props) => {
           </div>
           </>
       )
-    } else if (props.characterType === "IML") {
+    } else if (characterType === "IML") {
       hairStyleModal = (
         <>
         <div className="HS-ML-btn" ref={IMLHair0Ref}>  
             <svg
               className="HS-btn-svg HS-svg" viewBox="0 -10 240 310"
               onClick={()=>{
-                props.setHairStyle("Hair_0");
+                setHairStyle("Hair_0");
               }}
             >
               <path 
@@ -341,7 +346,7 @@ const HairStyleModal = React.memo((props) => {
             <svg
               className="HS-btn-svg HS-svg" viewBox="0 -10 240 310"
               onClick={()=>{
-                props.setHairStyle("Hair_1");
+                setHairStyle("Hair_1");
               }}
             >
               <path 
@@ -362,7 +367,7 @@ const HairStyleModal = React.memo((props) => {
             <svg
               className="HS-btn-svg HS-svg" viewBox="0 -10 240 310"
               onClick={()=>{
-                props.setHairStyle("Hair_2");
+                setHairStyle("Hair_2");
               }}
             >
               <path 
@@ -389,7 +394,7 @@ const HairStyleModal = React.memo((props) => {
             <svg
               className="HS-btn-svg HS-svg" viewBox="0 -10 240 310"
               onClick={()=>{
-                props.setHairStyle("Hair_3");
+                setHairStyle("Hair_3");
               }}
             >
               <path 
@@ -416,7 +421,7 @@ const HairStyleModal = React.memo((props) => {
             <svg
               className="HS-btn-svg HS-svg" viewBox="0 -10 240 310"
               onClick={()=>{
-                props.setHairStyle("Hair_4");
+                setHairStyle("Hair_4");
               }}
             >
               <path 
@@ -450,7 +455,7 @@ const HairStyleModal = React.memo((props) => {
             <svg
               className="HS-btn-svg HS-svg" viewBox="0 -10 240 310"
               onClick={()=>{
-                props.setHairStyle("Hair_5");
+                setHairStyle("Hair_5");
               }}
             >
               <path 
@@ -481,14 +486,14 @@ const HairStyleModal = React.memo((props) => {
           </div>
         </>
       )
-    } else if (props.characterType === "OFML") {
+    } else if (characterType === "OFML") {
       hairStyleModal=(
         <>
         <div className="HS-btn" ref={OFMLHair0Ref}>  
             <svg
               className="HS-btn-svg OFML-HS-svg" viewBox="20 0 210 300"
               onClick={()=>{
-                props.setHairStyle("Hair_0");
+                setHairStyle("Hair_0");
               }}
             >
               <path 
@@ -533,7 +538,7 @@ const HairStyleModal = React.memo((props) => {
             <svg
               className="HS-btn-svg OFML-HS-svg" viewBox="20 20 200 250"
               onClick={()=>{
-                props.setHairStyle("Hair_1");
+                setHairStyle("Hair_1");
               }}
             >
               <path 
@@ -570,14 +575,14 @@ const HairStyleModal = React.memo((props) => {
           </div>
           </>
       )
-    } else if (props.characterType === "OML") {
+    } else if (characterType === "OML") {
       hairStyleModal = (
         <>
         <div className="HS-ML-btn" ref={OMLHair0Ref}>  
             <svg
               className="HS-btn-svg OML-HS-svg" viewBox="20 0 210 300"
               onClick={()=>{
-                props.setHairStyle("Hair_0");
+                setHairStyle("Hair_0");
               }}
             >
               <path 
@@ -611,7 +616,7 @@ const HairStyleModal = React.memo((props) => {
             <svg
               className="HS-btn-svg OML-HS-svg" viewBox="15 20 220 250"
               onClick={()=>{
-                props.setHairStyle("Hair_1");
+                setHairStyle("Hair_1");
               }}
             >
               <path 
@@ -633,7 +638,7 @@ const HairStyleModal = React.memo((props) => {
     }
   
   return (
-    <div className="modal fade" id="hairStyleModal" tabIndex="-1" aria-labelledby="SkinColorModalLabel" aria-hidden="true">
+    <div className="modal fade" id="hairStyleModal" aria-labelledby="SkinColorModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-md modal-dialog-centered">
         <div className="modal-content font-type1 bg-secondary text-white">  
           <div className="modal-header">
@@ -666,7 +671,7 @@ const HairStyleModal = React.memo((props) => {
             </svg>
           </div>
           <div className="modal-footer py-0">
-            <button type="button" className="btn btn-dark font-type1 mx-auto" data-bs-dismiss="modal" aria-hidden="Close">
+            <button type="button" className="btn btn-dark font-type1 mx-auto" data-bs-dismiss="modal">
               OK
             </button>
           </div>

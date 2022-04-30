@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 
-import { Html, useProgress } from '@react-three/drei'
+import { useProgress } from '@react-three/drei'
+import { Text } from '../languages/Text';
 
 import CharacterControlModal from '../CharacterControlModal';
 
@@ -15,23 +16,24 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 extend({ OrbitControls });
 
 
-
-const Loader= () => {
-  const { progress } = useProgress()
-  return (
-    <Html center zIndexRange={[5, 0]}>
-      <div className="font-type2" id="loader-content">
-        <h2>3Dモデルをロード中…</h2>
-        <h2>{Math.floor(progress * 10) /10}％</h2>
-        <h4>※この処理には時間がかかる場合があります</h4>
-        <h4>※モデルのロード中はページ内の動作が重くなることがあります</h4>
-      </div>
-    </Html>
-  )
-}
-
 const Scene = (props) => {
   
+  const { progress } = useProgress()
+
+  let loader;
+
+  // モデルのロード中
+  if (progress > 0 && progress < 100) {
+    loader = (
+      <div className="font-type2" id="loader-content">
+        <h2><Text tid="loaderText1"/></h2>
+        <h2>{Math.floor(progress * 10) /10}％</h2>
+        <h4><Text tid="loaderText2"/></h4>
+        <h4><Text tid="loaderText3"/></h4>
+      </div> 
+    )
+  }
+
   // キャラクターの操作
   const [isZoomEnabled, setZoomState] = useState(false);
   const [isRotateEnabled, setRotateState] = useState(false);
@@ -55,18 +57,18 @@ const Scene = (props) => {
       <div className="row m-0 font-type2" id="btn-row">
         <div className="col-4 px-0">
           <button type="button" id="hideModel-btn" className="btn btn-dark" onClick={()=>{toggleModelDisplay(false)}}>
-            3Dモデルを非表示
+          <Text tid="sceneText1"/>
           </button>
         </div>
         <div className="col-4 px-0">
           <button type="button" id="character-btn" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#characterTypeModal">
-            キャラクターの設定
+          <Text tid="sceneText2"/>
           </button>
         </div>
         <div className="col-4 px-0">
           <button type="button" id="control-btn" className="btn btn-dark text-nowrap" data-bs-toggle="modal" data-bs-target="#characterControlModal">
-            <p className="mb-1">キャラクターの</p>
-            <p className="my-0">回転 / ズーム</p>
+            <p className="mb-1"><Text tid="sceneText3"/></p>
+            <p className="my-0"><Text tid="sceneText4"/></p>
           </button>
         </div>
       </div>
@@ -74,10 +76,10 @@ const Scene = (props) => {
   } else {
     buttons = (
       <div className="font-type2" id="displayBtn-section">
-      <button type="button" className="btn btn-lg btn-dark text-nowrap" onClick={()=>{toggleModelDisplay(true)}}>
-        3Dモデルを表示
-      </button>
-      <h4 id="display-warning">※3Dモデルを表示する場合にCPUやGPU、メモリの性能が不足しているとページ全体の動作が重くなります</h4>
+        <button type="button" className="btn btn-lg btn-dark text-nowrap" onClick={()=>{toggleModelDisplay(true)}}>
+        <Text tid="sceneText5"/>
+        </button>
+        <h4 id="display-warning"><Text tid="sceneText6"/></h4>
       </div>
     )
   }
@@ -108,6 +110,7 @@ const Scene = (props) => {
       setRotateState={setRotateState}
     />
     {buttons}
+    {loader}
     <div ref={coverRef} id="canvas-cover"></div>
     <Canvas
       style={{ background: '#f0f0e0' }}
@@ -135,7 +138,7 @@ const Scene = (props) => {
         isZoomEnabled={props.ZoomEnabled}
         isRotateEnabled={props.RotateEnabled}
       />
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={null}>
         {model}
       </Suspense>
     </Canvas>

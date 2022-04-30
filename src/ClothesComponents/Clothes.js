@@ -1,4 +1,5 @@
 import ClothesGear from './ClothesGear';
+import { Text } from '../languages/Text';
 import MainSlot1 from '../SlotComponents/MainSlot1';
 import SubSlot3 from '../SlotComponents/SubSlot3';
 import SubSlot4 from '../SlotComponents/SubSlot4';
@@ -20,7 +21,7 @@ const Clothes = (props) => {
 
   return(
     <div className="gear-card clothes-stripe my-auto" id="clothesgear-card">
-      <p className="gear-header font-type1">フク</p>
+      <p className="gear-header font-type1"><Text tid="clothes"/></p>
       <div className="gear-reset">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onClick={()=>{resetGear();}}>
           {/* <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
@@ -29,7 +30,7 @@ const Clothes = (props) => {
             fill="white"
           />
         </svg>
-        <p className="gear-reset-tooltip font-type2">ギアをリセット</p>
+        <p className="gear-reset-tooltip font-type2"><Text tid="gearReset"/></p>
       </div>
       <ClothesGear
         imagePath={props.clothesGear.path}
@@ -59,7 +60,7 @@ const Clothes = (props) => {
             fill="white"
           />
         </svg>
-        <p className="ability-reset-tooltip font-type2">ギアパワーをリセット</p>
+        <p className="ability-reset-tooltip font-type2"><Text tid="abilityReset"/></p>
       </div>
     </div>
   );

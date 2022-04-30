@@ -1,10 +1,13 @@
 import './App.css';
 import Main from './Main';
+import { LanguageProvider } from './languages/LanguageProvider';
 
 function App() {
   return (
     <div className="App">
-      <Main />
+      <LanguageProvider>
+        <Main />
+      </LanguageProvider>
     </div>
   );
 }

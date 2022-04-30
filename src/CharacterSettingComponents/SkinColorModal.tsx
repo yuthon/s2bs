@@ -1,61 +1,65 @@
 // ClassNameのSCはSkinColorの略を示す
-import React, { useRef, useEffect } from 'react';
+import React, { FC, ReactElement, useRef, useEffect } from 'react';
 
-const SkinColorModal = React.memo((props) => {
+type SkinColorModalProps = {
+  skinColor: string,
+  setSkinColor: React.Dispatch<React.SetStateAction<string>>
+}
+
+const SkinColorModal: FC<SkinColorModalProps> = React.memo(({setSkinColor, skinColor}): ReactElement => {
   
-  const SC0Ref = useRef();
-  const SC1Ref = useRef();
-  const SC2Ref = useRef();
-  const SC3Ref = useRef();
-  const SC4Ref = useRef();
-  const SC5Ref = useRef();
-  const SC6Ref = useRef();
-  
+  const SC0Ref = useRef<HTMLDivElement>(null!);
+  const SC1Ref = useRef<HTMLDivElement>(null!);
+  const SC2Ref = useRef<HTMLDivElement>(null!);
+  const SC3Ref = useRef<HTMLDivElement>(null!);
+  const SC4Ref = useRef<HTMLDivElement>(null!);
+  const SC5Ref = useRef<HTMLDivElement>(null!);
+  const SC6Ref = useRef<HTMLDivElement>(null!);
   
   useEffect(()=>{
     //選択されている色のボタンのクラス名を変更
-    if (props.skinColor === "color_0") {
+    if (skinColor === "color_0") {
       SC0Ref.current.className = "selected"
-    } else if (props.skinColor === "color_1") {
+    } else if (skinColor === "color_1") {
       SC1Ref.current.className = "selected"
-    } else if (props.skinColor === "color_2") {
+    } else if (skinColor === "color_2") {
       SC2Ref.current.className = "selected"
-    } else if (props.skinColor === "color_3") {
+    } else if (skinColor === "color_3") {
       SC3Ref.current.className = "selected"
-    } else if (props.skinColor === "color_4") {
+    } else if (skinColor === "color_4") {
       SC4Ref.current.className = "selected"
-    } else if (props.skinColor === "color_5") {
+    } else if (skinColor === "color_5") {
       SC5Ref.current.className = "selected"
-    } else if (props.skinColor === "color_6") {
+    } else if (skinColor === "color_6") {
       SC6Ref.current.className = "selected"
     }
 
     // 別の色が選択されていればクラス名を戻す
-    if (SC0Ref.current.className === "selected" && props.skinColor !== "color_0") {
+    if (SC0Ref.current.className === "selected" && skinColor !== "color_0") {
       SC0Ref.current.className = "color-btn" 
     }
-    if (SC1Ref.current.className === "selected" && props.skinColor !== "color_1") {
+    if (SC1Ref.current.className === "selected" && skinColor !== "color_1") {
       SC1Ref.current.className = "color-btn" 
     }
-    if (SC2Ref.current.className === "selected" && props.skinColor !== "color_2") {
+    if (SC2Ref.current.className === "selected" && skinColor !== "color_2") {
       SC2Ref.current.className = "color-btn" 
     }
-    if (SC3Ref.current.className === "selected" && props.skinColor !== "color_3") {
+    if (SC3Ref.current.className === "selected" && skinColor !== "color_3") {
       SC3Ref.current.className = "color-btn" 
     }
-    if (SC4Ref.current.className === "selected" && props.skinColor !== "color_4") {
+    if (SC4Ref.current.className === "selected" && skinColor !== "color_4") {
       SC4Ref.current.className = "color-btn" 
     }
-    if (SC5Ref.current.className === "selected" && props.skinColor !== "color_5") {
+    if (SC5Ref.current.className === "selected" && skinColor !== "color_5") {
       SC5Ref.current.className = "color-btn" 
     }
-    if (SC6Ref.current.className === "selected" && props.skinColor !== "color_6") {
+    if (SC6Ref.current.className === "selected" && skinColor !== "color_6") {
       SC6Ref.current.className = "color-btn" 
     }
   })
 
   return (
-    <div className="modal fade" id="skinColorModal" tabIndex="-1" aria-labelledby="SkinColorModalLabel" aria-hidden="true">
+    <div className="modal fade" id="skinColorModal" aria-labelledby="SkinColorModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-md modal-dialog-centered">
         <div className="modal-content font-type1 bg-secondary text-white">  
           <div className="modal-header">
@@ -67,7 +71,7 @@ const SkinColorModal = React.memo((props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setSkinColor("color_0");
+                setSkinColor("color_0");
               }}
             >
               <path 
@@ -88,7 +92,7 @@ const SkinColorModal = React.memo((props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setSkinColor("color_1");
+                setSkinColor("color_1");
               }}
             >
               <path 
@@ -109,7 +113,7 @@ const SkinColorModal = React.memo((props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setSkinColor("color_2");
+                setSkinColor("color_2");
               }}
             >
               <path 
@@ -130,7 +134,7 @@ const SkinColorModal = React.memo((props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setSkinColor("color_3");
+                setSkinColor("color_3");
               }}
             >
               <path 
@@ -151,7 +155,7 @@ const SkinColorModal = React.memo((props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setSkinColor("color_4");
+                setSkinColor("color_4");
               }}
             >
               <path 
@@ -172,7 +176,7 @@ const SkinColorModal = React.memo((props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setSkinColor("color_5");
+                setSkinColor("color_5");
               }}
             >
               <path 
@@ -193,7 +197,7 @@ const SkinColorModal = React.memo((props) => {
             <svg
               className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
               onClick={()=>{
-                props.setSkinColor("color_6");
+                setSkinColor("color_6");
               }}
             >
               <path 
@@ -234,7 +238,7 @@ const SkinColorModal = React.memo((props) => {
             </svg>
           </div>
           <div className="modal-footer py-0">
-            <button type="button" className="btn btn-dark font-type1 mx-auto" data-bs-dismiss="modal" aria-hidden="Close">
+            <button type="button" className="btn btn-dark font-type1 mx-auto" data-bs-dismiss="modal">
               OK
             </button>
           </div>

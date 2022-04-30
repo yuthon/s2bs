@@ -26,6 +26,12 @@
     height: calc(100vh - 6.25rem);
     z-index: 10;
   }
+  .header-title {
+    width: 22rem;
+  }
+  .header-name {
+    font-size: 2rem;
+  }
   .ability-modal {
     width: 320px;
   }
@@ -147,6 +153,9 @@
   .gear-header {
     width: 200px;
   }
+  .header-name {
+    font-size: 2rem;
+  }
   /* アビリティ効果部分 */
   #ae-section {
     width: 95vw;
@@ -203,6 +212,9 @@
     top: -20px;
     left: 20px;
   }
+  .header-title {
+    width: 22rem;
+  }
   .modal-close-btn {
     margin: 2px 0px 0px 152px;
   }
@@ -257,6 +269,13 @@
     width: 100%;
     margin: auto;
   }
+  .header-name {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+  }
+  .header-title {
+    width: 16rem;
+  }
 }
 
 
@@ -295,8 +314,12 @@
 }
 /* ローダー */
 #loader-content {
-  width: 250px;
-  height: 500px;
+  position: absolute;
+  top: 45%;
+  left: 0px;
+  margin-top: 5px;
+  z-index: 30;
+  width: 100%;
 }
 
 /* ヘッダー */
@@ -314,15 +337,50 @@
 /* サイト名 */
 .header-name {
   width: 17rem;
-  font-size: 2rem;
   color: white;
 }
 .header-title {
-  width: 22rem;
   margin-left: auto;
   margin-right: auto;
   padding-top: 0.5rem;
 }
+/* 言語の選択 */
+#lang-selector {
+  position: absolute;
+  top: 0.85rem;
+  right: 10px;
+  border-radius: 8px;
+}
+
+#lang-selector:hover {
+  background: rgb(107, 107, 107);
+}
+
+#lang-selector svg {
+  z-index: 1;
+}
+
+#lang-selector button{
+  position: relative;
+  height: 35px;
+  width: 50px;
+  background-color: transparent;
+  z-index: 2;
+  color: transparent;
+  border-radius: 8px;
+  border: none;
+  outline: 0px;
+}
+
+#lang-selector select:active{
+  border: none;
+}
+
+#lang-selector option {
+  background: #000;
+  color: white;
+}
+
 /*  */
 /* フッター */
 /*  */
@@ -931,9 +989,17 @@ footer {
 /* ブキモーダル */
 
 /* ブキモーダルのツールチップ */
+.weapon-icon-tooltip-container {
+  display: none;
+  position: absolute;
+  top: -2.15rem;
+  left: -25px;
+  width: 200px;
+}
+
 .weapon-icon-tooltip {
   height: 1.8rem;
-  display: none;
+  display: inline-block;
   z-index: 2;
   padding: 0.2rem 0.4rem;
   color: #ffffff;
@@ -941,23 +1007,25 @@ footer {
   border-radius: 0.3em;
   font-size: 0.9rem;
   user-select: none;
+  margin: 0px;
 }
 
-.weapon-icon-tooltip-arrow {
+.weapon-icon-tooltip:after {
   width: 0.5rem;
-  display: none;
+  content: "";
+  display: block;
   z-index: 2;
   border-top: 0.4rem solid rgba(0, 0, 0, 0.8);
   border-right: 0.3rem solid transparent;
   border-left: 0.3rem solid transparent;
   position: absolute;
-  top: -0.55rem;
+  bottom: -0.4rem;
   left: 47%;
 }
 
-.weapon-icon:hover .weapon-icon-tooltip-arrow,
-.weapon-icon:hover .weapon-icon-tooltip {
-  display: inline;
+
+.weapon-icon:hover .weapon-icon-tooltip-container {
+  display: block;
 }
 
 /*ギアパワーのスイッチ*/
