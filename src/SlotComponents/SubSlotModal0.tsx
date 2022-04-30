@@ -21,12 +21,11 @@ type SubSlotModalProps = {
 
 const SubSlotModal0: FC<SubSlotModalProps> = ({ setAbility }): ReactElement => {
   
-  const modalRef: React.RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null!);
 
   // モーダルを閉じる関数
   const closeGearModal = function(): void {
-    let target: HTMLElement | null = document.getElementById("subSlotModal0")
-    target!.style.display = "none"
+    modalRef.current.style.display = "none";
   }
 
   return (

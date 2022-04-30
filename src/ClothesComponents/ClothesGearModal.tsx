@@ -1,4 +1,4 @@
-import { memo, useState, useRef, useMemo } from 'react';
+import React, { FC, ReactElement, useRef, useMemo, useState } from 'react';
 import GearIcon from '../GearIcon';
 import { gears, gearsSortedByName } from './clothesData';
 // ブランドの画像
@@ -41,18 +41,28 @@ import empty from '../images/ability/empty.png';
 // import thermalInk from '../images/ability/TI.png';
 // import abilityDoubler from '../images/ability/AD.png';
 
+type ClothesGearModalProps = {
+  chosenGear: {name: string, path: string, id: string, brand: string},
+  setGear: React.Dispatch<React.SetStateAction<clothesGearType>>
+};
 
+type clothesGearType = {
+  name: string,
+  path: string,
+  id: string,
+  brand: string,
+};
 
-const ClothesGearModal = memo((props) => {
+const ClothesGearModal: FC<ClothesGearModalProps> = React.memo(({chosenGear, setGear}): ReactElement => {
   // 表示する配列の管理
   const [gearsArray, setArray] = useState(gears);
   // SelectBox要素のref
-  const selectBoxRef = useRef();
+  const selectBoxRef = useRef<HTMLSelectElement>(null!);
   // モーダルの開閉のためのref
-  const modalRef = useRef();
+  const modalRef = useRef<HTMLDivElement>(null!);
 
   // ブランド名に応じてブランドロゴ、つきにくいギアパワー、つきにくいギアパワーの画像のpathをそれぞれ返す
-  const brandDependency = (brand) => {
+  const brandDependency = (brand: string) => {
     if (brand === "バトロイカ") {
       return {brandImgPath:Batoroika, favoredAbility:inkRes, unfavoredAbility:inkSaverMain}
     } else if (brand === "アイロニック") {
@@ -94,9 +104,9 @@ const ClothesGearModal = memo((props) => {
   // SelectBoxで変更が行われない限り再レンダーの必要がないためギアアイコンをメモ化
   const memoizedIcons = useMemo(()=>{
     return gearsArray.map(
-      (gear, index) => <GearIcon key={index} gear={gear} setChosenGear={props.setChosenGear} brandImgPath={brandDependency(gear.brand).brandImgPath}/>
+      (gear, index) => <GearIcon key={index} gear={gear} setGear={setGear} brandImgPath={brandDependency(gear.brand)!.brandImgPath}/>
     )
-  }, [gearsArray, props.setChosenGear]);
+  }, [gearsArray, setGear]);
 
   // SelectBoxで並び替え法を指定しなおしたとき用の関数
   const selectBox = function() {
@@ -132,7 +142,7 @@ const ClothesGearModal = memo((props) => {
               ref = {selectBoxRef}
               onChange={()=>{selectBox();}}
             >
-              <option value="brand" defaultValue>ブランド</option>
+              <option value="brand">ブランド</option>
               <option value="name">名前</option>
             </select>
           </div>
@@ -141,15 +151,15 @@ const ClothesGearModal = memo((props) => {
       <div className="px-1 px-sm-0 px-lg-3 d-flex gears-display-area">
         <div className="chosen-gear d-flex flex-column">
         <p className="chosenGear-text h5">選択中のギア</p>
-        <p className="chosenGear-name font-type1">{props.chosenGear.name}</p>
+        <p className="chosenGear-name font-type1">{chosenGear.name}</p>
         <div className="chosen-gear-icon">
           <div className="brand-img-container">
-            <img className="brand-img" src={brandDependency(props.chosenGear.brand).brandImgPath} alt=""/>
+            <img className="brand-img" src={brandDependency(chosenGear.brand)!.brandImgPath} alt=""/>
             <div className="brand-tooltip-container text-start">
-              <span className="brand-tooltip">{props.chosenGear.brand}</span>
+              <span className="brand-tooltip">{chosenGear.brand}</span>
             </div>
           </div>
-          <img className="chosen-gear-icon-img" src={props.chosenGear.path} alt=""/>
+          <img className="chosen-gear-icon-img" src={chosenGear.path} alt=""/>
           <div className="clothes-stripe gear-icon-footer">
             <div className="brand-ability">
               <p className="fav-ability-tooltip">つきやすいギアパワー</p>
@@ -160,7 +170,7 @@ const ClothesGearModal = memo((props) => {
                   fill="#dfff00"
                 />
               </svg>
-              <img className="img-gear-icon-ability" src={brandDependency(props.chosenGear.brand).favoredAbility} alt=""/>
+              <img className="img-gear-icon-ability" src={brandDependency(chosenGear.brand)!.favoredAbility} alt=""/>
             </div>
             <div className="brand-ability">
               <p className="fav-ability-tooltip">つきにくいギアパワー</p>
@@ -171,7 +181,7 @@ const ClothesGearModal = memo((props) => {
                   fill="#ff0000"
                 />
               </svg>
-              <img className="img-gear-icon-ability" src={brandDependency(props.chosenGear.brand).unfavoredAbility} alt=""/>
+              <img className="img-gear-icon-ability" src={brandDependency(chosenGear.brand)!.unfavoredAbility} alt=""/>
             </div>
           </div>
         </div>
