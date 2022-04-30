@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 
-import { Html, useProgress } from '@react-three/drei'
+import { useProgress } from '@react-three/drei'
 import { Text } from '../languages/Text';
 
 import CharacterControlModal from '../CharacterControlModal';
@@ -16,23 +16,24 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 extend({ OrbitControls });
 
 
-
-const Loader= () => {
+const Scene = (props) => {
+  
   const { progress } = useProgress()
-  return (
-    <Html center zIndexRange={[5, 0]}>
+
+  let loader;
+
+  // モデルのロード中
+  if (progress > 0 && progress < 100) {
+    loader = (
       <div className="font-type2" id="loader-content">
         <h2><Text tid="loaderText1"/></h2>
         <h2>{Math.floor(progress * 10) /10}％</h2>
         <h4><Text tid="loaderText2"/></h4>
         <h4><Text tid="loaderText3"/></h4>
-      </div>
-    </Html>
-  )
-}
+      </div> 
+    )
+  }
 
-const Scene = (props) => {
-  
   // キャラクターの操作
   const [isZoomEnabled, setZoomState] = useState(false);
   const [isRotateEnabled, setRotateState] = useState(false);
@@ -75,10 +76,10 @@ const Scene = (props) => {
   } else {
     buttons = (
       <div className="font-type2" id="displayBtn-section">
-      <button type="button" className="btn btn-lg btn-dark text-nowrap" onClick={()=>{toggleModelDisplay(true)}}>
-      <Text tid="sceneText5"/>
-      </button>
-      <h4 id="display-warning"><Text tid="sceneText6"/></h4>
+        <button type="button" className="btn btn-lg btn-dark text-nowrap" onClick={()=>{toggleModelDisplay(true)}}>
+        <Text tid="sceneText5"/>
+        </button>
+        <h4 id="display-warning"><Text tid="sceneText6"/></h4>
       </div>
     )
   }
@@ -109,6 +110,7 @@ const Scene = (props) => {
       setRotateState={setRotateState}
     />
     {buttons}
+    {loader}
     <div ref={coverRef} id="canvas-cover"></div>
     <Canvas
       style={{ background: '#f0f0e0' }}
@@ -136,7 +138,7 @@ const Scene = (props) => {
         isZoomEnabled={props.ZoomEnabled}
         isRotateEnabled={props.RotateEnabled}
       />
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={null}>
         {model}
       </Suspense>
     </Canvas>

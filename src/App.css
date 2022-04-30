@@ -314,8 +314,12 @@
 }
 /* ローダー */
 #loader-content {
-  width: 250px;
-  height: 500px;
+  position: absolute;
+  top: 45%;
+  left: 0px;
+  margin-top: 5px;
+  z-index: 30;
+  width: 100%;
 }
 
 /* ヘッダー */
