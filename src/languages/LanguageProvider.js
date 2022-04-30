@@ -15,7 +15,7 @@ export function LanguageProvider({ children }) {
   } else if (window.navigator.language.indexOf("ja") > -1) {
     defaultLanguage = "ja";
   };
-  console.log(defaultLanguage)
+  
   const [userLanguage, setUserLanguage] = useState(defaultLanguage || "en");
 
   const provider = {

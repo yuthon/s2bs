@@ -1,53 +1,59 @@
-import React, { useRef, useEffect } from 'react';
+import React, { FC, ReactElement, useRef, useEffect } from 'react';
 
-const TeamColorModal = React.memo((props) => {
-  const color0Ref = useRef();
-  const color1Ref = useRef();
-  const color2Ref = useRef();
-  const color3Ref = useRef();
-  const color4Ref = useRef();
-  const color5Ref = useRef();
+type TeamColorModalProps = {
+  teamColor: string,
+  characterType: string,
+  setTeamColor: React.Dispatch<React.SetStateAction<string>>
+}
+
+const TeamColorModal: FC<TeamColorModalProps> = React.memo(({teamColor, characterType ,setTeamColor}): ReactElement => {
+  const color0Ref = useRef<HTMLDivElement>(null!);
+  const color1Ref = useRef<HTMLDivElement>(null!);
+  const color2Ref = useRef<HTMLDivElement>(null!);
+  const color3Ref = useRef<HTMLDivElement>(null!);
+  const color4Ref = useRef<HTMLDivElement>(null!);
+  const color5Ref = useRef<HTMLDivElement>(null!);
   
   useEffect(()=>{
     //選択されている色のボタンのクラス名を変更
-    if (props.teamColor === "color_0") {
+    if (teamColor === "color_0") {
       color0Ref.current.className = "selected"
-    } else if (props.teamColor === "color_1") {
+    } else if (teamColor === "color_1") {
       color1Ref.current.className = "selected"
-    } else if (props.teamColor === "color_2") {
+    } else if (teamColor === "color_2") {
       color2Ref.current.className = "selected"
-    } else if (props.teamColor === "color_3") {
+    } else if (teamColor === "color_3") {
       color3Ref.current.className = "selected"
-    } else if (props.teamColor === "color_4") {
+    } else if (teamColor === "color_4") {
       color4Ref.current.className = "selected"
-    } else if (props.teamColor === "color_5") {
+    } else if (teamColor === "color_5") {
       color5Ref.current.className = "selected"
     }
 
     // 別の色が選択されていればクラス名を戻す
-    if (color0Ref.current.className === "selected" && props.teamColor !== "color_0") {
+    if (color0Ref.current.className === "selected" && teamColor !== "color_0") {
       color0Ref.current.className = "color-btn" 
     }
-    if (color1Ref.current.className === "selected" && props.teamColor !== "color_1") {
+    if (color1Ref.current.className === "selected" && teamColor !== "color_1") {
       color1Ref.current.className = "color-btn" 
     }
-    if (color2Ref.current.className === "selected" && props.teamColor !== "color_2") {
+    if (color2Ref.current.className === "selected" && teamColor !== "color_2") {
       color2Ref.current.className = "color-btn" 
     }
-    if (color3Ref.current.className === "selected" && props.teamColor !== "color_3") {
+    if (color3Ref.current.className === "selected" && teamColor !== "color_3") {
       color3Ref.current.className = "color-btn" 
     }
-    if (color4Ref.current.className === "selected" && props.teamColor !== "color_4") {
+    if (color4Ref.current.className === "selected" && teamColor !== "color_4") {
       color4Ref.current.className = "color-btn" 
     }
-    if (color5Ref.current.className === "selected" && props.teamColor !== "color_5") {
+    if (color5Ref.current.className === "selected" && teamColor !== "color_5") {
       color5Ref.current.className = "color-btn"
     }
   })
 
   
   return (
-    <div className="modal fade" id="teamColorModal" tabIndex="-1" aria-labelledby="SkinColorModalLabel" aria-hidden="true">
+    <div className="modal fade" id="teamColorModal" aria-labelledby="SkinColorModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-md modal-dialog-centered">
         <div className="modal-content font-type1 bg-secondary text-white">  
           <div className="modal-header">
@@ -59,7 +65,7 @@ const TeamColorModal = React.memo((props) => {
               <svg
                 className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
                 onClick={()=>{
-                  props.setTeamColor("color_0");
+                  setTeamColor("color_0");
                 }}
               >
                 <path 
@@ -80,7 +86,7 @@ const TeamColorModal = React.memo((props) => {
               <svg
                 className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
                 onClick={()=>{
-                  props.setTeamColor("color_1");
+                  setTeamColor("color_1");
                 }}
               >
                 <path 
@@ -101,7 +107,7 @@ const TeamColorModal = React.memo((props) => {
               <svg
                 className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
                 onClick={()=>{
-                  props.setTeamColor("color_2");
+                  setTeamColor("color_2");
                 }}
               >
                 <path 
@@ -122,7 +128,7 @@ const TeamColorModal = React.memo((props) => {
               <svg
                 className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
                 onClick={()=>{
-                  props.setTeamColor("color_3");
+                  setTeamColor("color_3");
                 }}
               >
                 <path 
@@ -143,7 +149,7 @@ const TeamColorModal = React.memo((props) => {
               <svg
                 className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
                 onClick={()=>{
-                  props.setTeamColor("color_4");
+                  setTeamColor("color_4");
                 }}
               >
                 <path 
@@ -164,7 +170,7 @@ const TeamColorModal = React.memo((props) => {
               <svg
                 className="color-btn-svg" width="110" height="100" viewBox="60 80 380 230"
                 onClick={()=>{
-                  props.setTeamColor("color_5");
+                  setTeamColor("color_5");
                 }}
               >
                 <path 
@@ -205,7 +211,7 @@ const TeamColorModal = React.memo((props) => {
             </svg>
           </div>
           <div className="modal-footer py-0">
-            <button type="button" className="btn btn-dark font-type1 mx-auto" data-bs-dismiss="modal" aria-hidden="Close">
+            <button type="button" className="btn btn-dark font-type1 mx-auto" data-bs-dismiss="modal">
               OK
             </button>
           </div>

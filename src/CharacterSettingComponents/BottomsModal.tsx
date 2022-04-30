@@ -1,86 +1,92 @@
-import React, { useRef, useEffect } from 'react';
+import React, { FC, ReactElement, useRef, useEffect } from 'react';
 
-const BottomsModal = React.memo((props) => {
-  const FMLBtm0Ref = useRef();
-  const FMLBtm1Ref = useRef();
-  const FMLBtm2Ref = useRef();
-  const FMLBtm3Ref = useRef();
-  const FMLBtm4Ref = useRef();
-  const MLBtm0Ref = useRef();
-  const MLBtm1Ref = useRef();
-  const MLBtm2Ref = useRef();
-  const MLBtm3Ref = useRef();
-  const MLBtm4Ref = useRef();
+type BottomsModalProps = {
+  bottoms: string,
+  setBottoms: React.Dispatch<React.SetStateAction<string>>,
+  characterType: string
+}
 
-  
+const BottomsModal: FC<BottomsModalProps> = React.memo(({ bottoms, setBottoms, characterType }): ReactElement => {
+
+  const FMLBtm0Ref = useRef<HTMLDivElement>(null!);
+  const FMLBtm1Ref = useRef<HTMLDivElement>(null!);
+  const FMLBtm2Ref = useRef<HTMLDivElement>(null!);
+  const FMLBtm3Ref = useRef<HTMLDivElement>(null!);
+  const FMLBtm4Ref = useRef<HTMLDivElement>(null!);
+  const MLBtm0Ref = useRef<HTMLDivElement>(null!);
+  const MLBtm1Ref = useRef<HTMLDivElement>(null!);
+  const MLBtm2Ref = useRef<HTMLDivElement>(null!);
+  const MLBtm3Ref = useRef<HTMLDivElement>(null!);
+  const MLBtm4Ref = useRef<HTMLDivElement>(null!);
+
   let modalContent;
   
   useEffect(()=>{
     // キャラクターがボーイのとき　ボトムスはイカタコ共通
-    if (props.characterType === "IML" || props.characterType === "OML") {
+    if (characterType === "IML" || characterType === "OML") {
       //選択されているボトムスのボタンのクラス名を変更
-      if (props.bottoms === "Btm_0") {
+      if (bottoms === "Btm_0") {
         MLBtm0Ref.current.className = "ML-Btm-selected"
-      } else if (props.bottoms === "Btm_1") {
+      } else if (bottoms === "Btm_1") {
         MLBtm1Ref.current.className = "ML-Btm-selected"
-      } else if (props.bottoms === "Btm_2") {
+      } else if (bottoms === "Btm_2") {
         MLBtm2Ref.current.className = "ML-Btm-selected"
-      } else if (props.bottoms === "Btm_3") {
+      } else if (bottoms === "Btm_3") {
         MLBtm3Ref.current.className = "ML-Btm-selected"
-      } else if (props.bottoms === "Btm_4") {
+      } else if (bottoms === "Btm_4") {
         MLBtm4Ref.current.className = "ML-Btm-selected"
       }
       // 別のボトムスが選択されていればクラス名を戻す
-      if (MLBtm0Ref.current.className === "ML-Btm-selected" && props.bottoms !== "Btm_0") {
+      if (MLBtm0Ref.current.className === "ML-Btm-selected" && bottoms !== "Btm_0") {
         MLBtm0Ref.current.className = "ML-Btm-btn"
-      } else if (MLBtm1Ref.current.className === "ML-Btm-selected" && props.bottoms !== "Btm_1") {
+      } else if (MLBtm1Ref.current.className === "ML-Btm-selected" && bottoms !== "Btm_1") {
         MLBtm1Ref.current.className = "ML-Btm-btn"
-      } else if (MLBtm2Ref.current.className === "ML-Btm-selected" && props.bottoms !== "Btm_2") {
+      } else if (MLBtm2Ref.current.className === "ML-Btm-selected" && bottoms !== "Btm_2") {
         MLBtm2Ref.current.className = "ML-Btm-btn"
-      } else if (MLBtm3Ref.current.className === "ML-Btm-selected" && props.bottoms !== "Btm_3") {
+      } else if (MLBtm3Ref.current.className === "ML-Btm-selected" && bottoms !== "Btm_3") {
         MLBtm3Ref.current.className = "ML-Btm-btn"
-      } else if (MLBtm4Ref.current.className === "ML-Btm-selected" && props.bottoms !== "Btm_4") {
+      } else if (MLBtm4Ref.current.className === "ML-Btm-selected" && bottoms !== "Btm_4") {
         MLBtm4Ref.current.className = "ML-Btm-btn"
       }
     }
     // キャラクターがガールのとき　ボトムスはイカタコ共通
-    else if (props.characterType === "IFML" || props.characterType === "OFML") {
+    else if (characterType === "IFML" || characterType === "OFML") {
       //選択されているボトムスのボタンのクラス名を変更
-      if (props.bottoms === "Btm_0") {
+      if (bottoms === "Btm_0") {
         FMLBtm0Ref.current.className = "FML-Btm-selected"
-      } else if (props.bottoms === "Btm_1") {
+      } else if (bottoms === "Btm_1") {
         FMLBtm1Ref.current.className = "FML-Btm-selected"
-      } else if (props.bottoms === "Btm_2") {
+      } else if (bottoms === "Btm_2") {
         FMLBtm2Ref.current.className = "FML-Btm-selected"
-      } else if (props.bottoms === "Btm_3") {
+      } else if (bottoms === "Btm_3") {
         FMLBtm3Ref.current.className = "FML-Btm-selected"
-      } else if (props.bottoms === "Btm_4") {
+      } else if (bottoms === "Btm_4") {
         FMLBtm4Ref.current.className = "FML-Btm-selected"
       }
       // 別のボトムスが選択されていればクラス名を戻す
-      if (FMLBtm0Ref.current.className === "FML-Btm-selected" && props.bottoms !== "Btm_0") {
+      if (FMLBtm0Ref.current.className === "FML-Btm-selected" && bottoms !== "Btm_0") {
         FMLBtm0Ref.current.className = "FML-Btm-btn"
-      } else if (FMLBtm1Ref.current.className === "FML-Btm-selected" && props.bottoms !== "Btm_1") {
+      } else if (FMLBtm1Ref.current.className === "FML-Btm-selected" && bottoms !== "Btm_1") {
         FMLBtm1Ref.current.className = "FML-Btm-btn"
-      } else if (FMLBtm2Ref.current.className === "FML-Btm-selected" && props.bottoms !== "Btm_2") {
+      } else if (FMLBtm2Ref.current.className === "FML-Btm-selected" && bottoms !== "Btm_2") {
         FMLBtm2Ref.current.className = "FML-Btm-btn"
-      } else if (FMLBtm3Ref.current.className === "FML-Btm-selected" && props.bottoms !== "Btm_3") {
+      } else if (FMLBtm3Ref.current.className === "FML-Btm-selected" && bottoms !== "Btm_3") {
         FMLBtm3Ref.current.className = "FML-Btm-btn"
-      } else if (FMLBtm4Ref.current.className === "FML-Btm-selected" && props.bottoms !== "Btm_4") {
+      } else if (FMLBtm4Ref.current.className === "FML-Btm-selected" && bottoms !== "Btm_4") {
         FMLBtm4Ref.current.className = "FML-Btm-btn"
       }
     }
   })
 
   //　キャラクターがボーイである時のモーダルの中身
-  if (props.characterType === "IML" || props.characterType === "OML") {
+  if (characterType === "IML" || characterType === "OML") {
     modalContent = (
       <>
       <div className="ML-Btm-btn" ref={MLBtm0Ref}>
           <svg
             className="Btm-btn-svg Btm-svg" width="110" height="130" viewBox="20 0 210 300"
             onClick={()=>{
-              props.setBottoms("Btm_0");
+              setBottoms("Btm_0");
               }
             }
           >
@@ -102,7 +108,7 @@ const BottomsModal = React.memo((props) => {
           <svg
             className="Btm-btn-svg Btm-svg" width="110" height="130" viewBox="20 0 210 300"
             onClick={()=>{
-              props.setBottoms("Btm_1");
+              setBottoms("Btm_1");
               }
             }
           >
@@ -130,7 +136,7 @@ const BottomsModal = React.memo((props) => {
           <svg
             className="Btm-btn-svg Btm-svg" width="110" height="130" viewBox="20 0 210 300"
             onClick={()=>{
-              props.setBottoms("Btm_2");
+              setBottoms("Btm_2");
               }
             }
           >
@@ -182,7 +188,7 @@ const BottomsModal = React.memo((props) => {
           <svg
             className="Btm-btn-svg Btm-svg" width="110" height="130" viewBox="20 0 210 300"
             onClick={()=>{
-              props.setBottoms("Btm_3");
+              setBottoms("Btm_3");
               }
             }
           >
@@ -210,7 +216,7 @@ const BottomsModal = React.memo((props) => {
           <svg
             className="Btm-btn-svg Btm-svg" width="110" height="130" viewBox="20 0 210 300"
             onClick={()=>{
-              props.setBottoms("Btm_4");
+              setBottoms("Btm_4");
               }
             }
           >
@@ -248,13 +254,13 @@ const BottomsModal = React.memo((props) => {
         </div>
       </>
     )
-  } else if (props.characterType === "IFML" || props.characterType === "OFML") {
+  } else if (characterType === "IFML" || characterType === "OFML") {
     modalContent = (
       <>
       <div className="FML-Btm-btn" ref={FMLBtm0Ref}>  
         <svg
           className="Btm-btn-svg Btm-svg" width="110" height="130" viewBox="20 0 210 300"
-          onClick={()=>{props.setBottoms("Btm_0");}}
+          onClick={()=>{setBottoms("Btm_0");}}
         >
           <path 
             className="Btm-btn-base"
@@ -273,7 +279,7 @@ const BottomsModal = React.memo((props) => {
       <div className="FML-Btm-btn" ref={FMLBtm1Ref}>  
         <svg
           className="Btm-btn-svg Btm-svg" width="110" height="130" viewBox="20 0 210 300"
-          onClick={()=>{props.setBottoms("Btm_1");}}
+          onClick={()=>{setBottoms("Btm_1");}}
         >
           <path 
             className="Btm-btn-base"
@@ -310,7 +316,7 @@ const BottomsModal = React.memo((props) => {
       <div className="FML-Btm-btn" ref={FMLBtm2Ref}>  
         <svg
           className="Btm-btn-svg Btm-svg" width="110" height="130" viewBox="20 0 210 300"
-          onClick={()=>{props.setBottoms("Btm_2");}}
+          onClick={()=>{setBottoms("Btm_2");}}
         >
           <path 
             className="Btm-btn-color"
@@ -335,7 +341,7 @@ const BottomsModal = React.memo((props) => {
       <div className="FML-Btm-btn" ref={FMLBtm3Ref}>  
         <svg
           className="Btm-btn-svg Btm-svg" width="110" height="130" viewBox="20 0 210 300"
-          onClick={()=>{props.setBottoms("Btm_3");}}
+          onClick={()=>{setBottoms("Btm_3");}}
         >
           <path 
             className="Btm-btn-base"
@@ -360,7 +366,7 @@ const BottomsModal = React.memo((props) => {
       <div className="FML-Btm-btn" ref={FMLBtm4Ref}>  
         <svg
           className="Btm-btn-svg Btm-svg" width="110" height="130" viewBox="20 0 210 300"
-          onClick={()=>{props.setBottoms("Btm_4");}}
+          onClick={()=>{setBottoms("Btm_4");}}
         >
           <path 
             className="Btm-btn-base"
@@ -400,7 +406,7 @@ const BottomsModal = React.memo((props) => {
   }
 
   return (
-    <div className="modal fade" id="bottomsModal" tabIndex="-1" aria-labelledby="SkinColorModalLabel" aria-hidden="true">
+    <div className="modal fade" id="bottomsModal" aria-labelledby="SkinColorModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-md modal-dialog-centered">
         <div className="modal-content font-type1 bg-secondary text-white">  
           <div className="modal-header">
@@ -433,7 +439,7 @@ const BottomsModal = React.memo((props) => {
             </svg>
           </div>
           <div className="modal-footer py-0">
-            <button type="button" className="btn btn-dark font-type1 mx-auto" data-bs-dismiss="modal" aria-hidden="Close">
+            <button type="button" className="btn btn-dark font-type1 mx-auto" data-bs-dismiss="modal">
               OK
             </button>
           </div>

@@ -1,19 +1,22 @@
+import React, { FC, ReactElement, useRef, useEffect } from 'react';
 
 // CTはcharacterTypeの略
-import React, { useRef, useEffect } from 'react';
+type CharacterTypeModalProps = {
+  characterType: string,
+  setCharacterType: React.Dispatch<React.SetStateAction<string>>
+}
 
+const CharacterSettingModal: FC<CharacterTypeModalProps> = React.memo(({characterType, setCharacterType}): ReactElement => {
 
-const CharacterSettingModal = React.memo((props) => {
-
-  const IFMLRef = useRef();
-  const IMLRef = useRef();
-  const OFMLRef = useRef();
-  const OMLRef = useRef();
+  const IFMLRef = useRef<HTMLDivElement>(null!);
+  const IMLRef = useRef<HTMLDivElement>(null!);
+  const OFMLRef = useRef<HTMLDivElement>(null!);
+  const OMLRef = useRef<HTMLDivElement>(null!);
   
   useEffect(()=>{
     //選択されているキャラクタータイプのボタンのクラス名を変更
     // eslint-disable-next-line default-case
-    switch (props.characterType) {
+    switch (characterType) {
       case "IFML":
         IFMLRef.current.className = "CT-selected";
         break;
@@ -28,22 +31,22 @@ const CharacterSettingModal = React.memo((props) => {
         break
     }
     // 別のキャラクタータイプが選択されていればクラス名を戻す
-    if (IFMLRef.current.className === "CT-selected" && props.characterType !== "IFML") {
+    if (IFMLRef.current.className === "CT-selected" && characterType !== "IFML") {
       IFMLRef.current.className = "CT-btn"
     }
-    if (IMLRef.current.className === "CT-selected" && props.characterType !== "IML") {
+    if (IMLRef.current.className === "CT-selected" && characterType !== "IML") {
       IMLRef.current.className = "CT-btn"
     }
-    if (OFMLRef.current.className === "CT-selected" && props.characterType !== "OFML") {
+    if (OFMLRef.current.className === "CT-selected" && characterType !== "OFML") {
       OFMLRef.current.className = "CT-btn"
     }
-    if (OMLRef.current.className === "CT-selected" && props.characterType !== "OML") {
+    if (OMLRef.current.className === "CT-selected" && characterType !== "OML") {
       OMLRef.current.className = "CT-btn"
     }
   })
   
   return (
-    <div className="modal fade" id="characterTypeModal" aria-hidden="true" aria-labelledby="characterTypeModalToggleLabel" tabIndex="-1">
+    <div className="modal fade" id="characterTypeModal" aria-hidden="true" aria-labelledby="characterTypeModalToggleLabel">
       <div className="modal-dialog modal-md modal-dialog-centered ">
         <div className="modal-content font-type1 bg-secondary text-white">
           <div className="modal-header">
@@ -55,7 +58,7 @@ const CharacterSettingModal = React.memo((props) => {
               <svg 
                 className="CT-btn-svg" viewBox="-500 -142 2300 1300"
                 onClick={()=>{;
-                  props.setCharacterType("IFML");
+                  setCharacterType("IFML");
                 }}
               >
                 <path 
@@ -78,7 +81,7 @@ const CharacterSettingModal = React.memo((props) => {
               <svg 
                 className="CT-btn-svg" viewBox="-500 -142 2300 1300"
                 onClick={()=>{
-                  props.setCharacterType("IML");
+                  setCharacterType("IML");
                 }}
               >
                 <path 
@@ -101,7 +104,7 @@ const CharacterSettingModal = React.memo((props) => {
               <svg 
                 className="CT-btn-svg" viewBox="-500 -142 2300 1300"
                 onClick={()=>{
-                  props.setCharacterType("OFML");
+                  setCharacterType("OFML");
                 }}
               >
                 <path 
@@ -124,7 +127,7 @@ const CharacterSettingModal = React.memo((props) => {
               <svg 
                 className="CT-btn-svg" viewBox="-500 -142 2300 1300"
                 onClick={()=>{
-                  props.setCharacterType("OML");
+                  setCharacterType("OML");
                 }}
               >
                 <path 
