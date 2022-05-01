@@ -1,27 +1,54 @@
-import ClothesGear from './ClothesGear';
+import { FC, ReactElement } from 'react';
+import ShoesGear from './ShoesGear';
 import { Text } from '../languages/Text';
-import MainSlot1 from '../SlotComponents/MainSlot1';
-import SubSlot3 from '../SlotComponents/SubSlot3';
-import SubSlot4 from '../SlotComponents/SubSlot4';
-import SubSlot5 from '../SlotComponents/SubSlot5';
+import MainSlot2 from '../SlotComponents/MainSlot2';
+import SubSlot6 from '../SlotComponents/SubSlot6';
+import SubSlot7 from '../SlotComponents/SubSlot7';
+import SubSlot8 from '../SlotComponents/SubSlot8';
 import empty from '../images/ability/empty.png';
-import WakabaIkaT from '../images/gear/Clt_FST001.png';
+import Canvas_White from '../images/gear/Shs_FST000.png';
 
-const Clothes = (props) => {
+type GearType = {
+  name: string,
+  path: string,
+  id: string,
+  brand: string,
+  default: string,
+};
+
+type AbilityType = {
+  name: string,
+  path: string,
+};
+
+type ShoesProps = {
+  shoesGear: GearType,
+  setShoesGear: React.Dispatch<React.SetStateAction<GearType>>,
+  mainAbility: AbilityType,
+  setMainAbility: React.Dispatch<React.SetStateAction<AbilityType>>,
+  subAbility6: AbilityType,
+  setSubAbility6: React.Dispatch<React.SetStateAction<AbilityType>>,
+  subAbility7: AbilityType,
+  setSubAbility7: React.Dispatch<React.SetStateAction<AbilityType>>,
+  subAbility8: AbilityType,
+  setSubAbility8: React.Dispatch<React.SetStateAction<AbilityType>>,
+}
+
+const Shoes: FC<ShoesProps> = (props): ReactElement => {
   const resetAbility = function() {
     props.setMainAbility({name:"empty", path:empty});
-    props.setSubAbility3({name:"empty", path:empty});
-    props.setSubAbility4({name:"empty", path:empty});
-    props.setSubAbility5({name:"empty", path:empty});
+    props.setSubAbility6({name:"empty", path:empty});
+    props.setSubAbility7({name:"empty", path:empty});
+    props.setSubAbility8({name:"empty", path:empty});
   }
   
   const resetGear = function() {
-    props.setClothesGear({name:"わかばイカT",path:WakabaIkaT,id:"WakabaIkaT",brand:"バトロイカ"})
+    props.setShoesGear({name:"キャンバス ホワイト",path:Canvas_White,id:"Canvas_White",brand:"クラーゲス", default: ''})
   }
 
   return(
-    <div className="gear-card clothes-stripe my-auto" id="clothesgear-card">
-      <p className="gear-header font-type1"><Text tid="clothes"/></p>
+    <div className="gear-card shoes-stripe my-2" id="shoesgear-card">
+      <p className="gear-header font-type1"><Text tid="shoes"/></p>
       <div className="gear-reset">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onClick={()=>{resetGear();}}>
           {/* <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
@@ -32,25 +59,25 @@ const Clothes = (props) => {
         </svg>
         <p className="gear-reset-tooltip font-type2"><Text tid="gearReset"/></p>
       </div>
-      <ClothesGear
-        imagePath={props.clothesGear.path}
+      <ShoesGear
+        imagePath={props.shoesGear.path}
       />
-      <MainSlot1
+      <MainSlot2
         setAbility={props.setMainAbility}
         ability={props.mainAbility}
-        gearName={props.clothesGear.name}
+        gearName={props.shoesGear.name}
       />
-      <SubSlot3
-        imagePath={props.subAbility3.path}
-        setAbility={props.setSubAbility3}
+      <SubSlot6
+        imagePath={props.subAbility6.path}
+        setAbility={props.setSubAbility6}
       />
-      <SubSlot4
-        imagePath={props.subAbility4.path}
-        setAbility={props.setSubAbility4}
+      <SubSlot7
+        imagePath={props.subAbility7.path}
+        setAbility={props.setSubAbility7}
       />
-      <SubSlot5
-        imagePath={props.subAbility5.path}
-        setAbility={props.setSubAbility5}
+      <SubSlot8
+        imagePath={props.subAbility8.path}
+        setAbility={props.setSubAbility8}
       />
       <div className="ability-reset">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onClick={()=>{resetAbility();}}>
@@ -66,4 +93,4 @@ const Clothes = (props) => {
   );
 };
 
-export default Clothes;
+export default Shoes;
