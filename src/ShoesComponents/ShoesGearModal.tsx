@@ -38,16 +38,17 @@ import mpu from '../images/ability/MPU.png';
 import empty from '../images/ability/empty.png';
 
 type ShoesGearModalProps = {
-  chosenGear: {name: string, path: string, id: string, brand: string},
-  setGear: React.Dispatch<React.SetStateAction<shoesGearType>>
+  chosenGear: ShoesGearType,
+  setGear: React.Dispatch<React.SetStateAction<ShoesGearType>>
 };
 
-type shoesGearType = {
+type ShoesGearType = {
   name: string,
   path: string,
   id: string,
   brand: string,
-};
+  default: string,
+}
 
 const ShoesGearModal: FC<ShoesGearModalProps> = React.memo(({chosenGear, setGear}): ReactElement => {
   // 表示する配列の管理

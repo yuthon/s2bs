@@ -1,6 +1,7 @@
+import { ReactElement } from 'react';
 import { Text } from "./languages/Text";
 
-const Footer = () => {
+const Footer = (): ReactElement => {
   return (
     <div id="footer-height">
     <footer className="font-type2 fixed-bottom">
@@ -35,7 +36,7 @@ const Footer = () => {
       </a>
       
     </footer>
-    <div className="modal fade" id="aboutModal" tabIndex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div className="modal fade" id="aboutModal" aria-labelledby="aboutModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content bg-dark text-white font-type2">
             <div className="modal-header">
