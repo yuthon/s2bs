@@ -1,27 +1,55 @@
-import ShoesGear from './ShoesGear';
+import { FC, ReactElement } from 'react';
+import HeadGear from './HeadGear';
 import { Text } from '../languages/Text';
-import MainSlot2 from '../SlotComponents/MainSlot2';
-import SubSlot6 from '../SlotComponents/SubSlot6';
-import SubSlot7 from '../SlotComponents/SubSlot7';
-import SubSlot8 from '../SlotComponents/SubSlot8';
+import MainSlot0 from '../SlotComponents/MainSlot0';
+import SubSlot0 from '../SlotComponents/SubSlot0';
+import SubSlot1 from '../SlotComponents/SubSlot1';
+import SubSlot2 from '../SlotComponents/SubSlot2';
 import empty from '../images/ability/empty.png';
-import Canvas_White from '../images/gear/Shs_FST000.png';
+import Headband_White from '../images/gear/Hed_FST000.png';
+import inkRecovery from '../images/ability/REC.png';
 
-const Shoes = (props) => {
+type GearType = {
+  name: string,
+  path: string,
+  id: string,
+  brand: string,
+  default: string,
+};
+
+type AbilityType = {
+  name: string,
+  path: string,
+};
+
+type HeadProps = {
+  headGear: GearType,
+  setHeadGear: React.Dispatch<React.SetStateAction<GearType>>,
+  mainAbility: AbilityType,
+  setMainAbility: React.Dispatch<React.SetStateAction<AbilityType>>,
+  subAbility0: AbilityType,
+  setSubAbility0: React.Dispatch<React.SetStateAction<AbilityType>>,
+  subAbility1: AbilityType,
+  setSubAbility1: React.Dispatch<React.SetStateAction<AbilityType>>,
+  subAbility2: AbilityType,
+  setSubAbility2: React.Dispatch<React.SetStateAction<AbilityType>>,
+}
+
+const Head: FC<HeadProps> = (props): ReactElement => {
   const resetAbility = function() {
     props.setMainAbility({name:"empty", path:empty});
-    props.setSubAbility6({name:"empty", path:empty});
-    props.setSubAbility7({name:"empty", path:empty});
-    props.setSubAbility8({name:"empty", path:empty});
+    props.setSubAbility0({name:"empty", path:empty});
+    props.setSubAbility1({name:"empty", path:empty});
+    props.setSubAbility2({name:"empty", path:empty});
   }
-  
+
   const resetGear = function() {
-    props.setShoesGear({name:"キャンバス ホワイト",path:Canvas_White,id:"Canvas_White",brand:"クラーゲス"})
+    props.setHeadGear({name:"ヘッドバンド ホワイト", path:Headband_White, id:"HB_Headband_White", brand:"バトロイカ",default:inkRecovery})
   }
 
   return(
-    <div className="gear-card shoes-stripe my-2" id="shoesgear-card">
-      <p className="gear-header font-type1"><Text tid="shoes"/></p>
+    <div className="gear-card head-stripe my-2" id="headgear-card">
+      <p className="gear-header font-type1"><Text tid="head"/></p>
       <div className="gear-reset">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onClick={()=>{resetGear();}}>
           {/* <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
@@ -32,25 +60,25 @@ const Shoes = (props) => {
         </svg>
         <p className="gear-reset-tooltip font-type2"><Text tid="gearReset"/></p>
       </div>
-      <ShoesGear
-        imagePath={props.shoesGear.path}
+      <HeadGear
+        imagePath={props.headGear.path}
       />
-      <MainSlot2
+      <MainSlot0
         setAbility={props.setMainAbility}
         ability={props.mainAbility}
-        gearName={props.shoesGear.name}
+        gearName={props.headGear.name}
       />
-      <SubSlot6
-        imagePath={props.subAbility6.path}
-        setAbility={props.setSubAbility6}
+      <SubSlot0
+        imagePath={props.subAbility0.path}
+        setAbility={props.setSubAbility0}
       />
-      <SubSlot7
-        imagePath={props.subAbility7.path}
-        setAbility={props.setSubAbility7}
+      <SubSlot1
+        imagePath={props.subAbility1.path}
+        setAbility={props.setSubAbility1}
       />
-      <SubSlot8
-        imagePath={props.subAbility8.path}
-        setAbility={props.setSubAbility8}
+      <SubSlot2
+        imagePath={props.subAbility2.path}
+        setAbility={props.setSubAbility2}
       />
       <div className="ability-reset">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onClick={()=>{resetAbility();}}>
@@ -66,4 +94,4 @@ const Shoes = (props) => {
   );
 };
 
-export default Shoes;
+export default Head;

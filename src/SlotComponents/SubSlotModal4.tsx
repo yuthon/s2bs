@@ -1,3 +1,4 @@
+import { FC, ReactElement, useRef } from 'react';
 import empty from '../images/ability/empty.png';
 import inkSaverMain from '../images/ability/ISMain.png';
 import inkSaverSub from '../images/ability/ISSub.png';
@@ -14,28 +15,33 @@ import inkRes from '../images/ability/RES.png';
 import bombDefence from '../images/ability/BDU.png';
 import mpu from '../images/ability/MPU.png';
 
-const SubSlotModal1 = (props) => {
+type SubSlotModalProps = {
+  setAbility: Function,
+}
+
+const SubSlotModal4: FC<SubSlotModalProps> = ({ setAbility }): ReactElement => {
   
+  const modalRef = useRef<HTMLDivElement>(null!);
+
   // モーダルを閉じる関数
-  const closeGearModal = function() {
-    let target = document.getElementById("subSlotModal1")
-    target.style.display = "none"
+  const closeGearModal = function(): void {
+    modalRef.current.style.display = "none";
   }
 
   return (
-    <div className="ability-modal subSlotModal-mid font-type2" id="subSlotModal1">
-      <svg className="modal-close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" onClick={()=>{closeGearModal()}}>
+    <div className="ability-modal subSlotModal-mid font-type2" ref={modalRef} id="subSlotModal4">
+        <svg className="modal-close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" onClick={()=>{closeGearModal()}}>
           {/* <!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
-        <path 
-          d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
-          fill="#ebebeb"
-        />
-      </svg>
-      <div className="ability-list d-flex flex-wrap">
-      <div
+          <path 
+            d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+            fill="#ebebeb"
+          />
+        </svg>
+          <div className="ability-list d-flex flex-wrap">
+          <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"empty", path:empty});
+            setAbility({name:"empty", path:empty});
             }
           }
         >
@@ -47,7 +53,7 @@ const SubSlotModal1 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"インク効率アップ(メイン)", path:inkSaverMain});
+            setAbility({name:"インク効率アップ(メイン)", path:inkSaverMain});
             }
           }
         >
@@ -59,7 +65,7 @@ const SubSlotModal1 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"インク効率アップ(サブ)", path:inkSaverSub});
+            setAbility({name:"インク効率アップ(サブ)", path:inkSaverSub});
             }
           }
         >
@@ -71,7 +77,7 @@ const SubSlotModal1 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"インク回復力アップ", path:inkRecovery});
+            setAbility({name:"インク回復力アップ", path:inkRecovery});
             }
           }
         >
@@ -83,7 +89,7 @@ const SubSlotModal1 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"ヒト移動速度アップ", path:runSpeed});
+            setAbility({name:"ヒト移動速度アップ", path:runSpeed});
             }
           }
         >
@@ -95,7 +101,7 @@ const SubSlotModal1 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"イカダッシュ速度アップ", path:swimSpeed});
+            setAbility({name:"イカダッシュ速度アップ", path:swimSpeed});
             }
           }
         >
@@ -107,7 +113,7 @@ const SubSlotModal1 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"スペシャル増加量アップ", path:specialCharge});
+            setAbility({name:"スペシャル増加量アップ", path:specialCharge});
             }
           }
         >
@@ -119,7 +125,7 @@ const SubSlotModal1 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"スペシャル減少量ダウン", path:specialSaver});
+            setAbility({name:"スペシャル減少量ダウン", path:specialSaver});
             }
           }
         >
@@ -131,7 +137,7 @@ const SubSlotModal1 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"スペシャル性能アップ", path:specialPower});
+            setAbility({name:"スペシャル性能アップ", path:specialPower});
             }
           }
         >
@@ -143,7 +149,7 @@ const SubSlotModal1 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"復活時間短縮", path:qr});
+            setAbility({name:"復活時間短縮", path:qr});
             }
           }
         >
@@ -155,7 +161,7 @@ const SubSlotModal1 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"スーパージャンプ時間短縮", path:quickSuperJump});
+            setAbility({name:"スーパージャンプ時間短縮", path:quickSuperJump});
             }
           }
         >
@@ -167,7 +173,7 @@ const SubSlotModal1 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"サブ性能アップ", path:subPower});
+            setAbility({name:"サブ性能アップ", path:subPower});
             }
           }
         >
@@ -179,7 +185,7 @@ const SubSlotModal1 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"相手インク影響軽減", path:inkRes});
+            setAbility({name:"相手インク影響軽減", path:inkRes});
             }
           }
         >
@@ -191,7 +197,7 @@ const SubSlotModal1 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"爆風ダメージ軽減・改", path:bombDefence});
+            setAbility({name:"爆風ダメージ軽減・改", path:bombDefence});
             }
           }
         >
@@ -203,7 +209,7 @@ const SubSlotModal1 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"メイン性能アップ", path:mpu});
+            setAbility({name:"メイン性能アップ", path:mpu});
             }
           }
         >
@@ -218,4 +224,4 @@ const SubSlotModal1 = (props) => {
   );
 };
 
-export default SubSlotModal1;
+export default SubSlotModal4;

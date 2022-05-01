@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useRef } from 'react';
+import { FC, ReactElement, useRef } from 'react';
 import empty from '../images/ability/empty.png';
 import inkSaverMain from '../images/ability/ISMain.png';
 import inkSaverSub from '../images/ability/ISSub.png';

@@ -1,8 +1,9 @@
+import { FC, ReactElement, useRef } from 'react';
 import empty from '../images/ability/empty.png';
 import specialCharge from '../images/ability/SCU.png';
 import inkSaverMain from '../images/ability/ISMain.png';
 import inkSaverSub from '../images/ability/ISSub.png';
-import inkRecovery from '../images/ability/REC.png';
+import inkRecorvery from '../images/ability/REC.png';
 import runSpeed from '../images/ability/RSU.png';
 import swimSpeed from '../images/ability/SSU.png';
 import specialSaver from '../images/ability/SS.png';
@@ -13,19 +14,32 @@ import subPower from '../images/ability/SubPU.png';
 import inkRes from '../images/ability/RES.png';
 import bombDefence from '../images/ability/BDU.png';
 import mpu from '../images/ability/MPU.png';
-import stealthJump from '../images/ability/SJ.png';
-import objectShredder from '../images/ability/OS.png';
-import dropRoller from '../images/ability/DR.png';
+import ninjaSquid from '../images/ability/NS.png';
+import haunt from '../images/ability/Haunt.png';
+import respawnPunisher from '../images/ability/RP.png';
+import thermalInk from '../images/ability/TI.png';
+import abilityDoubler from '../images/ability/AD.png';
 
-const MainSlotModal2 = (props) => {
+type AbilityType = {
+  name: string,
+  path: string
+};
+
+type MainSlotModalProps = {
+  setAbility: React.Dispatch<React.SetStateAction<AbilityType>>
+}
+
+const MainSlotModal1: FC<MainSlotModalProps> = ({ setAbility }): ReactElement => {
   // モーダルを閉じる関数
-  const closeGearModal = function() {
-    let target = document.getElementById("mainSlotModal2")
-    target.style.display = "none"
+  const modalRef = useRef<HTMLDivElement>(null!);
+
+  // モーダルを閉じる関数
+  const closeGearModal = function(): void {
+    modalRef.current.style.display = "none";
   }
-  
+
   return (
-    <div className="ability-modal mainSlotModal font-type2" id="mainSlotModal2">
+    <div className="ability-modal mainSlotModal font-type2" ref={modalRef} id="mainSlotModal1">
       <svg className="modal-close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" onClick={()=>{closeGearModal()}}>
       {/* <!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
         <path 
@@ -37,7 +51,7 @@ const MainSlotModal2 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"empty", path:empty});
+            setAbility({name:"empty", path:empty});
             }
           }
         >
@@ -49,7 +63,7 @@ const MainSlotModal2 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"インク効率アップ(メイン)", path:inkSaverMain});
+            setAbility({name:"インク効率アップ(メイン)", path:inkSaverMain});
             }
           }
         >
@@ -61,7 +75,7 @@ const MainSlotModal2 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"インク効率アップ(サブ)", path:inkSaverSub});
+            setAbility({name:"インク効率アップ(サブ)", path:inkSaverSub});
             }
           }
         >
@@ -73,19 +87,19 @@ const MainSlotModal2 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"インク回復力アップ", path:inkRecovery});
+            setAbility({name:"インク回復力アップ", path:inkRecorvery});
             }
           }
         >
           <div className="ability-tooltip-container">
             <span className="ability-tooltip">インク回復力アップ</span>
           </div>
-          <img className="abilitymodal-img" src={inkRecovery} alt= ""/>
+          <img className="abilitymodal-img" src={inkRecorvery} alt= ""/>
         </div>
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"ヒト移動速度アップ", path:runSpeed});
+            setAbility({name:"ヒト移動速度アップ", path:runSpeed});
             }
           }
         >
@@ -97,7 +111,7 @@ const MainSlotModal2 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"イカダッシュ速度アップ", path:swimSpeed});
+            setAbility({name:"イカダッシュ速度アップ", path:swimSpeed});
             }
           }
         >
@@ -109,7 +123,7 @@ const MainSlotModal2 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"スペシャル増加量アップ", path:specialCharge});
+            setAbility({name:"スペシャル増加量アップ", path:specialCharge});
             }
           }
         >
@@ -121,7 +135,7 @@ const MainSlotModal2 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"スペシャル減少量ダウン", path:specialSaver});
+            setAbility({name:"スペシャル減少量ダウン", path:specialSaver});
             }
           }
         >
@@ -133,7 +147,7 @@ const MainSlotModal2 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"スペシャル性能アップ", path:specialPower});
+            setAbility({name:"スペシャル性能アップ", path:specialPower});
             }
           }
         >
@@ -145,7 +159,7 @@ const MainSlotModal2 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"復活時間短縮", path:qr});
+            setAbility({name:"復活時間短縮", path:qr});
             }
           }
         >
@@ -157,7 +171,7 @@ const MainSlotModal2 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"スーパージャンプ時間短縮", path:quickSuperJump});
+            setAbility({name:"スーパージャンプ時間短縮", path:quickSuperJump});
             }
           }
         >
@@ -169,7 +183,7 @@ const MainSlotModal2 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"サブ性能アップ", path:subPower});
+            setAbility({name:"サブ性能アップ", path:subPower});
             }
           }
         >
@@ -181,7 +195,7 @@ const MainSlotModal2 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"相手インク影響軽減", path:inkRes});
+            setAbility({name:"相手インク影響軽減", path:inkRes});
             }
           }
         >
@@ -193,7 +207,7 @@ const MainSlotModal2 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"爆風ダメージ軽減・改", path:bombDefence});
+            setAbility({name:"爆風ダメージ軽減・改", path:bombDefence});
             }
           }
         >
@@ -205,7 +219,7 @@ const MainSlotModal2 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"メイン性能アップ", path:mpu});
+            setAbility({name:"メイン性能アップ", path:mpu});
             }
           }
         >
@@ -217,38 +231,62 @@ const MainSlotModal2 = (props) => {
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"ステルスジャンプ", path:stealthJump});
+            setAbility({name:"イカニンジャ", path:ninjaSquid});
             }
           }
         >
           <div className="ability-tooltip-container">
-            <span className="ability-tooltip">ステルスジャンプ</span>
+            <span className="ability-tooltip">イカニンジャ</span>
           </div>
-          <img className="abilitymodal-img" src={stealthJump} alt= "ステルスジャンプ"/>
+          <img className="abilitymodal-img" src={ninjaSquid} alt= "イカニンジャ"/>
         </div>
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"対物攻撃力アップ", path:objectShredder});
+            setAbility({name:"リベンジ", path:haunt});
             }
           }
         >
           <div className="ability-tooltip-container">
-            <span className="ability-tooltip">対物攻撃力アップ</span>
+            <span className="ability-tooltip">リベンジ</span>
           </div>
-          <img className="abilitymodal-img" src={objectShredder} alt= "対物攻撃力アップ"/>
+          <img className="abilitymodal-img" src={haunt} alt= "リベンジ"/>
         </div>
         <div
           className="ability-icon ability"
           onClick={()=>{
-            props.setAbility({name:"受け身術", path:dropRoller});
+            setAbility({name:"復活ペナルティアップ", path:respawnPunisher});
             }
           }
         >
           <div className="ability-tooltip-container">
-            <span className="ability-tooltip">受け身術</span>
+            <span className="ability-tooltip">復活ペナルティアップ</span>
           </div>
-          <img className="abilitymodal-img" src={dropRoller} alt= "受け身"/>
+          <img className="abilitymodal-img" src={respawnPunisher} alt= "復活ペナルティアップ"/>
+        </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            setAbility({name:"サーマルインク", path:thermalInk});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">サーマルインク</span>
+          </div>
+          <img className="abilitymodal-img" src={thermalInk} alt= "サーマルインク"/>
+        </div>
+        <div
+          className="ability-icon ability"
+          onClick={()=>{
+            setAbility({name:"追加ギアパワー倍化", path:abilityDoubler});
+            }
+          }
+        >
+          <div className="ability-tooltip-container">
+            <span className="ability-tooltip">追加ギアパワー倍化</span>
+          </div>
+          <img className="abilitymodal-img" src={abilityDoubler} alt="追加ギアパワー倍化"/>
         </div>
       </div>
       <button type="button" className="btn btn-dark m-auto OK-btn" onClick={()=>{closeGearModal()}}><p>OK</p></button>
@@ -256,4 +294,4 @@ const MainSlotModal2 = (props) => {
   );
 };
 
-export default MainSlotModal2;
+export default MainSlotModal1;
