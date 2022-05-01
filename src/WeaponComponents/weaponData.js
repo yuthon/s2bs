@@ -207,7 +207,7 @@ export const weaponStatus = [
   {name:"ロングブラスターカスタム", sub:"カーリングボム", special:"バブルランチャー", sp:170, weight:"middle", path:Range_1, pathSub:CurlingBomb, pathSpecial:BubbleBlower},
   {name:"ロングブラスターネクロ", sub:"クイックボム", special:"マルチミサイル", sp:190, weight:"middle", path:Range_2, pathSub:BurstBomb, pathSpecial:TentaMissile},
   {name:"クラッシュブラスター", sub:"スプラッシュボム", special:"ハイパープレッサー", sp:180, weight:"light", path:ClashBlaster_0, pathSub:SplatBomb, pathSpecial:Stingray},
-  {name:"クラッシュブラスターネオ", sub:"カーリングボム", special:"マルチミサイル", p:180, weight:"light", path:ClashBlaster_1, pathSub:CurlingBomb, pathSpecial:TentaMissile},
+  {name:"クラッシュブラスターネオ", sub:"カーリングボム", special:"マルチミサイル", sp:180, weight:"light", path:ClashBlaster_1, pathSub:CurlingBomb, pathSpecial:TentaMissile},
   {name:"ラピッドブラスター", sub:"トラップ", special:"スプラッシュボムピッチャー", sp:200, weight:"middle", path:Rapid_0, pathSub:InkMine, pathSpecial:SplatRush},
   {name:"ラピッドブラスターデコ", sub:"キューバンボム", special:"ジェットパック", sp:190, weight:"middle", path:Rapid_1, pathSub:SuctionBomb, pathSpecial:Inkjet},
   {name:"ラピッドブラスターベッチュー", sub:"トーピード", special:"イカスフィア", sp:200, weight:"middle", path:Rapid_2, pathSub:Torpedo, pathSpecial:Baller},
@@ -311,5 +311,5 @@ export const weaponStatus = [
 
 // 名前順に整列した配列を新たに定義
 export const weaponSortedByName = weaponStatus.slice().sort((a, b) => a.name.localeCompare(b.name, "ja"));
-export const weaponSortedBySub = weaponStatus.slice().sort((a, b) => (a.sub > b.sub) ? 1 : -1);
-export const weaponSortedBySpe = weaponStatus.slice().sort((a, b) => (a.special > b.special) ? 1 : -1);
+export const weaponSortedBySub = weaponStatus.slice().sort((a, b) => a.sub.localeCompare(b.sub, "ja"));
+export const weaponSortedBySpe = weaponStatus.slice().sort((a, b) => a.special.localeCompare(b.special, "ja"));

@@ -1,36 +1,44 @@
-import React, {useEffect, useRef } from 'react';
+import React, { FC, ReactElement, useEffect, useRef } from 'react';
 
-const CharacterControlModal = React.memo((props) => {
-  const rotateBtnRef = useRef();
-  const zoomBtnRef = useRef();
+type CharacterControlModalProps = {
+  isRotateEnabled: boolean,
+  isZoomEnabled: boolean,
+  setZoomState: React.Dispatch<React.SetStateAction<boolean>>, 
+  setRotateState: React.Dispatch<React.SetStateAction<boolean>>, 
+}
+
+const CharacterControlModal: FC<CharacterControlModalProps> = React.memo(({ isRotateEnabled, isZoomEnabled, setZoomState, setRotateState }): ReactElement => {
+
+  const rotateBtnRef = useRef<HTMLDivElement>(null!);
+  const zoomBtnRef = useRef<HTMLDivElement>(null!);
   
-  const toggleRotate = function() {
+  const toggleRotate = function(): void {
     if (rotateBtnRef.current.className === "turned-on") {
       rotateBtnRef.current.className = "turned-off"
-      props.setRotateState(false);
+      setRotateState(false);
     } else if (rotateBtnRef.current.className === "turned-off") {
       rotateBtnRef.current.className = "turned-on"
-      props.setRotateState(true);
+      setRotateState(true);
     }
   }
-  const toggleZoom = function() {
+  const toggleZoom = function(): void {
     if (zoomBtnRef.current.className === "turned-on") {
       zoomBtnRef.current.className = "turned-off"
-      props.setZoomState(false);
+      setZoomState(false);
     } else if (zoomBtnRef.current.className === "turned-off") {
       zoomBtnRef.current.className = "turned-on"
-      props.setZoomState(true);
+      setZoomState(true);
     }
   }
 
   // propsの値に応じてスイッチの状態を変更
   useEffect(()=>{
-    if (props.isZoomEnabled) {
+    if (isZoomEnabled) {
       zoomBtnRef.current.className="turned-on"
     } else {
       zoomBtnRef.current.className="turned-off"
     }
-    if (props.isRotateEnabled) {
+    if (isRotateEnabled) {
       rotateBtnRef.current.className="turned-on"
     } else {
       rotateBtnRef.current.className="turned-off"
@@ -38,7 +46,7 @@ const CharacterControlModal = React.memo((props) => {
   })
 
   return (
-    <div className="modal fade" id="characterControlModal" tabIndex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div className="modal fade" id="characterControlModal" aria-labelledby="aboutModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content bg-secondary text-white font-type2">
           <div className="modal-header">
