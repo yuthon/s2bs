@@ -42,15 +42,16 @@ import empty from '../images/ability/empty.png';
 // import abilityDoubler from '../images/ability/AD.png';
 
 type ClothesGearModalProps = {
-  chosenGear: {name: string, path: string, id: string, brand: string},
-  setGear: React.Dispatch<React.SetStateAction<clothesGearType>>
+  chosenGear: ClothesGearType,
+  setGear: React.Dispatch<React.SetStateAction<ClothesGearType>>
 };
 
-type clothesGearType = {
+type ClothesGearType = {
   name: string,
   path: string,
   id: string,
   brand: string,
+  default: string
 };
 
 const ClothesGearModal: FC<ClothesGearModalProps> = React.memo(({chosenGear, setGear}): ReactElement => {

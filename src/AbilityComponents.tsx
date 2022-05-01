@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { FC, ReactElement, useState } from 'react';
 //ブキ
 import Weapon from './WeaponComponents/Weapon';
 import WeaponModal from './WeaponComponents/WeaponModal';
@@ -16,30 +16,63 @@ import Jr_0 from './images/weapon/Splattershot Jr.png';
 import SplatBomb from './images/subSP/Wsb_Bomb_Splat.png';
 import InkArmor from './images/subSP/Wsp_InkArmor.png';
 
-const AbilityComponents = (props) => {
+type WeaponType = {
+  name: string,
+  sub: string,
+  special: string,
+  sp: number,
+  weight: string,
+  path: string,
+  pathSub: string,
+  pathSpecial: string
+};
+
+type AbilityType = {
+  name: string,
+  path: string
+}
+
+type GearType = {
+  name: string,
+  path: string,
+  id: string,
+  brand: string,
+  default: string,
+}
+
+type AbilityComponentsProps = {
+  headGear: GearType,
+  setHeadGear: React.Dispatch<React.SetStateAction<GearType>>, 
+  clothesGear: GearType,
+  setClothesGear: React.Dispatch<React.SetStateAction<GearType>>, 
+  shoesGear: GearType, 
+  setShoesGear: React.Dispatch<React.SetStateAction<GearType>>,
+}
+
+const AbilityComponents: FC<AbilityComponentsProps> = ({ headGear, setHeadGear, clothesGear, setClothesGear, shoesGear, setShoesGear }): ReactElement => {
   //ブキの名前とその他の情報を管理
-  const [weaponStatus, setWeaponStatus] = useState({name:"わかばシューター", sub:"スプラッシュボム", special:"インクアーマー", sp:180, weight:"light", path:Jr_0, pathSub:SplatBomb,pathSpecial:InkArmor});
+  const [weaponStatus, setWeaponStatus] = useState<WeaponType>({name:"わかばシューター", sub:"スプラッシュボム", special:"インクアーマー", sp:180, weight:"light", path:Jr_0, pathSub:SplatBomb,pathSpecial:InkArmor});
   // メインスロットのギアパワーを管理
-  const [mainAbility0, setMainAbility0] = useState({name:"empty",path:empty});
-  const [mainAbility1, setMainAbility1] = useState({name:"empty",path:empty});
-  const [mainAbility2, setMainAbility2] = useState({name:"empty",path:empty});
+  const [mainAbility0, setMainAbility0] = useState<AbilityType>({name:"empty",path:empty});
+  const [mainAbility1, setMainAbility1] = useState<AbilityType>({name:"empty",path:empty});
+  const [mainAbility2, setMainAbility2] = useState<AbilityType>({name:"empty",path:empty});
   // サブスロットのギアパワーを管理
-  const [subAbility0,setSubAbility0] = useState({name:"empty",path:empty});
-  const [subAbility1,setSubAbility1] = useState({name:"empty",path:empty});
-  const [subAbility2,setSubAbility2] = useState({name:"empty",path:empty});
-  const [subAbility3,setSubAbility3] = useState({name:"empty",path:empty});
-  const [subAbility4,setSubAbility4] = useState({name:"empty",path:empty});
-  const [subAbility5,setSubAbility5] = useState({name:"empty",path:empty});
-  const [subAbility6,setSubAbility6] = useState({name:"empty",path:empty});
-  const [subAbility7,setSubAbility7] = useState({name:"empty",path:empty});
-  const [subAbility8,setSubAbility8] = useState({name:"empty",path:empty});
+  const [subAbility0,setSubAbility0] = useState<AbilityType>({name:"empty",path:empty});
+  const [subAbility1,setSubAbility1] = useState<AbilityType>({name:"empty",path:empty});
+  const [subAbility2,setSubAbility2] = useState<AbilityType>({name:"empty",path:empty});
+  const [subAbility3,setSubAbility3] = useState<AbilityType>({name:"empty",path:empty});
+  const [subAbility4,setSubAbility4] = useState<AbilityType>({name:"empty",path:empty});
+  const [subAbility5,setSubAbility5] = useState<AbilityType>({name:"empty",path:empty});
+  const [subAbility6,setSubAbility6] = useState<AbilityType>({name:"empty",path:empty});
+  const [subAbility7,setSubAbility7] = useState<AbilityType>({name:"empty",path:empty});
+  const [subAbility8,setSubAbility8] = useState<AbilityType>({name:"empty",path:empty});
   
   return (
     <>
       <div className="px-0 d-flex flex-md-row flex-wrap" id="gear-components">
       <Head
-        headGear={props.headGear}
-        setHeadGear={props.setHeadGear}
+        headGear={headGear}
+        setHeadGear={setHeadGear}
         mainAbility={mainAbility0}
         setMainAbility={setMainAbility0}
         subAbility0={subAbility0}
@@ -50,8 +83,8 @@ const AbilityComponents = (props) => {
         setSubAbility2={setSubAbility2}
       />
       <Clothes
-        clothesGear={props.clothesGear}
-        setClothesGear={props.setClothesGear}
+        clothesGear={clothesGear}
+        setClothesGear={setClothesGear}
         mainAbility={mainAbility1}
         setMainAbility={setMainAbility1}
         subAbility3={subAbility3}
@@ -62,8 +95,8 @@ const AbilityComponents = (props) => {
         setSubAbility5={setSubAbility5}
       />
       <Shoes
-        shoesGear={props.shoesGear}
-        setShoesGear={props.setShoesGear}
+        shoesGear={shoesGear}
+        setShoesGear={setShoesGear}
         mainAbility={mainAbility2}
         setMainAbility={setMainAbility2}
         subAbility6={subAbility6}
@@ -76,7 +109,7 @@ const AbilityComponents = (props) => {
     </div>
     <div className="font-type2 text-white" id="ae-section">
       <WeaponModal
-        setWeaponStatus={setWeaponStatus} 
+        setWeapon={setWeaponStatus} 
       />
       <Weapon
         weaponStatus={weaponStatus} 

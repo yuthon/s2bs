@@ -1,11 +1,26 @@
-import { memo, useState, useRef } from 'react';
+import React, { FC, ReactElement, useState, useRef } from 'react';
 import { weaponStatus, weaponSortedByName, weaponSortedBySub, weaponSortedBySpe } from './weaponData';
 
-const WeaponModal = memo((props) => {
+type WeaponType = {
+  name: string,
+  sub: string,
+  special: string,
+  sp: number,
+  weight: string,
+  path: string,
+  pathSub: string,
+  pathSpecial: string
+};
+
+type WeaponModalProps = {
+  setWeapon: React.Dispatch<React.SetStateAction<WeaponType>>,
+};
+
+const WeaponModal: FC<WeaponModalProps> = React.memo(({ setWeapon }): ReactElement => {
   // 表示する配列
   const [weaponArray, setArray] = useState(weaponStatus);
   
-  const ref = useRef();
+  const ref = useRef<HTMLSelectElement>(null!);
 
   // 選択された並び順に応じてstateを変更
   const selectBox = function() {
@@ -21,9 +36,8 @@ const WeaponModal = memo((props) => {
     }
   };
 
-
   return (
-    <div className="modal fade" id="weaponModal" tabIndex="-1" aria-labelledby="weaponModalLabel" aria-hidden="true">
+    <div className="modal fade" id="weaponModal" aria-labelledby="weaponModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-lg">
         <div className="modal-content wpModalbg text-white bg-secondary">
           <div className="modal-header">
@@ -40,7 +54,7 @@ const WeaponModal = memo((props) => {
               </div>
               <div className="selectbox">
                 <select className="form-select" ref = {ref} aria-label="sort" id="select-box" onChange={()=>{selectBox();}}>
-                    <option value="main" defaultValue>メインウェポン</option>
+                    <option value="main">メインウェポン</option>
                     <option value="sub">サブウェポン</option>
                     <option value="spe">スペシャルウェポン</option>
                     <option value="name">名前</option>
@@ -55,7 +69,7 @@ const WeaponModal = memo((props) => {
                 key={index}
                 className="weapon-icon"
                 onClick={()=>{
-                  props.setWeaponStatus(weapon);
+                  setWeapon(weapon);
                   }
                 }
                 data-bs-dismiss="modal"

@@ -27,7 +27,7 @@ import inkRecovery from './images/ability/REC.png';
 
 import { useState } from 'react';
 
-type headGearType = {
+type GearType = {
   name: string,
   path: string,
   id: string,
@@ -35,34 +35,20 @@ type headGearType = {
   default: string,
 }
 
-type clothesGearType = {
-  name: string,
-  path: string,
-  id: string,
-  brand: string,
-}
-
-type shoesGearType = {
-  name: string,
-  path: string,
-  id: string,
-  brand: string,
-}
-
 const Main = () => {
   //選択されたアタマギアを管理
-  const [headGear, setHeadGear]: [headGearType, React.Dispatch<React.SetStateAction<headGearType>>] = useState({name:"ヘッドバンド ホワイト", path:Headband_White, id:"HB_Headband_White", brand:"バトロイカ",default:inkRecovery});
+  const [headGear, setHeadGear] = useState<GearType>({name:"ヘッドバンド ホワイト", path:Headband_White, id:"HB_Headband_White", brand:"バトロイカ",default:inkRecovery});
   //選択されたフクギアを管理
-  const [clothesGear, setClothesGear]: [clothesGearType, React.Dispatch<React.SetStateAction<clothesGearType>>] = useState({name:"わかばイカT",path:WakabaIkaT,id:"WakabaIkaT",brand:"バトロイカ"});
+  const [clothesGear, setClothesGear] = useState<GearType>({name:"わかばイカT",path:WakabaIkaT,id:"WakabaIkaT",brand:"バトロイカ", default: ''});
   //選択されたクツギアを管理
-  const [shoesGear, setShoesGear]: [shoesGearType, React.Dispatch<React.SetStateAction<shoesGearType>>] = useState({name:"キャンバス ホワイト",path:Canvas_White,id:"Canvas_White",brand:"クラーゲス"});
+  const [shoesGear, setShoesGear] = useState<GearType>({name:"キャンバス ホワイト",path:Canvas_White,id:"Canvas_White",brand:"クラーゲス", default: ''});
   //キャラ設定モーダルを管理
-  const [characterType, setCharacterType]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("IFML");
-  const [skinColor, setSkinColor]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("color_0");
-  const [hairStyle, setHairStyle]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("Hair_0");
-  const [eyeColor, setEyeColor]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("color_0");
-  const [bottoms, setBottoms]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("Btm_0");
-  const [teamColor, setTeamColor]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("color_5");
+  const [characterType, setCharacterType] = useState<string>("IFML");
+  const [skinColor, setSkinColor] = useState<string>("color_0");
+  const [hairStyle, setHairStyle] = useState<string>("Hair_0");
+  const [eyeColor, setEyeColor] = useState<string>("color_0");
+  const [bottoms, setBottoms] = useState<string>("Btm_0");
+  const [teamColor, setTeamColor] = useState<string>("color_5");
 
 
   return(

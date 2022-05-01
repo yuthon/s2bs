@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import { FC, useRef, useEffect, useState } from 'react';
 
 import { useProgress } from '@react-three/drei'
 import { Text } from '../languages/Text';
@@ -15,8 +15,19 @@ import { Canvas, extend } from '@react-three/fiber';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 extend({ OrbitControls });
 
+type SceneProps = {
+  headGear: string,
+  clothesGear: string,
+  shoesGear: string,
+  characterType: string,
+  skinColor: string,
+  eyeColor: string,
+  hairStyle: string,
+  bottoms: string,
+  teamColor: string,
+}
 
-const Scene = (props) => {
+const Scene: FC<SceneProps> = ({ headGear, clothesGear, shoesGear, characterType, skinColor, eyeColor, hairStyle, bottoms, teamColor }) => {
   
   const { progress } = useProgress()
 
@@ -35,12 +46,12 @@ const Scene = (props) => {
   }
 
   // キャラクターの操作
-  const [isZoomEnabled, setZoomState] = useState(false);
-  const [isRotateEnabled, setRotateState] = useState(false);
+  const [isZoomEnabled, setZoomState] = useState<boolean>(false);
+  const [isRotateEnabled, setRotateState] = useState<boolean>(false);
   // モデルの表示/非表示
-  const [isModelDisplayed, toggleModelDisplay] = useState(false);
+  const [isModelDisplayed, toggleModelDisplay] = useState<boolean>(false);
 
-  const coverRef = useRef();
+  const coverRef = useRef<HTMLDivElement>(null!);
   // キャラクターの操作が有効化されているとき、キャンバスのカバーをなくす
   useEffect(()=>{
     if (isZoomEnabled || isRotateEnabled) {
@@ -89,15 +100,15 @@ const Scene = (props) => {
   if (isModelDisplayed) {
     model = 
       <Model
-        headGear={props.headGear}
-        clothesGear={props.clothesGear}
-        shoesGear={props.shoesGear}
-        characterType={props.characterType}
-        skinColor={props.skinColor}
-        eyeColor={props.eyeColor}
-        hairStyle={props.hairStyle}
-        bottoms={props.bottoms}
-        teamColor={props.teamColor}
+        headGear={headGear}
+        clothesGear={clothesGear}
+        shoesGear={shoesGear}
+        characterType={characterType}
+        skinColor={skinColor}
+        eyeColor={eyeColor}
+        hairStyle={hairStyle}
+        bottoms={bottoms}
+        teamColor={teamColor}
       />
   };
 
@@ -135,8 +146,8 @@ const Scene = (props) => {
         position={[0, 11, -20]}
         intensity={0.3} />
       <Orbit 
-        isZoomEnabled={props.ZoomEnabled}
-        isRotateEnabled={props.RotateEnabled}
+        isZoomEnabled={isZoomEnabled}
+        isRotateEnabled={isRotateEnabled}
       />
       <Suspense fallback={null}>
         {model}
