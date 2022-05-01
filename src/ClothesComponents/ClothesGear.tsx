@@ -1,10 +1,15 @@
+import { FC, ReactElement } from 'react';
 import { Text } from "../languages/Text";
 
-const ClothesGear = (props) => {
+type ClothesGearProps = {
+  imagePath: string,
+}
+
+const ClothesGear: FC<ClothesGearProps> = (props): ReactElement => {
   let target;
   const openClothesGearModal = function() {
     target = document.getElementById("clothesGearModal")
-    target.style.display = "block"
+    target!.style.display = "block"
   }
   
   return(

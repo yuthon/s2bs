@@ -1,8 +1,18 @@
-import React from 'react';
-import SubSlotModal8 from '../SlotComponents/SubSlotModal8';
+import React, { FC, ReactElement } from 'react';
+import SubSlotModal2 from './SubSlotModal2';
 import { Text } from '../languages/Text';
 
-const SubSlot8 = React.memo((props) => {
+type AbilityType = {
+  name: string,
+  path: string
+}
+
+type SubSlotProps = {
+  imagePath: string,
+  setAbility: React.Dispatch<React.SetStateAction<AbilityType>> 
+}
+
+const SubSlot2: FC<SubSlotProps> = React.memo(({ imagePath, setAbility }): ReactElement => {
   // モーダルを表示する関数
   const openGearModal = function() {
     let target0 = document.getElementById("mainSlotModal0");
@@ -17,18 +27,18 @@ const SubSlot8 = React.memo((props) => {
     let target9 = document.getElementById("subSlotModal6");
     let target10 = document.getElementById("subSlotModal7");
     let target11 = document.getElementById("subSlotModal8");
-    target0.style.display = "none";
-    target1.style.display = "none";
-    target2.style.display = "none";
-    target3.style.display = "none";
-    target4.style.display = "none";
-    target5.style.display = "none";
-    target6.style.display = "none";
-    target7.style.display = "none";
-    target8.style.display = "none";
-    target9.style.display = "none";
-    target10.style.display = "none";
-    target11.style.display = "block";
+    target0!.style.display = "none";
+    target1!.style.display = "none";
+    target2!.style.display = "none";
+    target3!.style.display = "none";
+    target4!.style.display = "none";
+    target5!.style.display = "block";
+    target6!.style.display = "none";
+    target7!.style.display = "none";
+    target8!.style.display = "none";
+    target9!.style.display = "none";
+    target10!.style.display = "none";
+    target11!.style.display = "none";
   }
 
   return(
@@ -42,13 +52,13 @@ const SubSlot8 = React.memo((props) => {
         <div className="slot-tooltip-mid-container">
           <p className="slot-tooltip-mid font-type2"><Text tid="changeAbility"/></p>
         </div>
-        <img className="subslot-img" src={props.imagePath} alt=""/>
+        <img className="subslot-img" src={imagePath} alt=""/>
       </div>
-      <SubSlotModal8
-        setAbility={props.setAbility}
+      <SubSlotModal2
+        setAbility={setAbility}
       />
     </div>
   );
 });
 
-export default SubSlot8;
+export default SubSlot2;

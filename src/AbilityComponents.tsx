@@ -30,7 +30,7 @@ type WeaponType = {
 type AbilityType = {
   name: string,
   path: string
-}
+};
 
 type GearType = {
   name: string,
@@ -38,16 +38,16 @@ type GearType = {
   id: string,
   brand: string,
   default: string,
-}
+};
 
 type AbilityComponentsProps = {
   headGear: GearType,
-  setHeadGear: React.Dispatch<React.SetStateAction<GearType>>, 
+  setHeadGear: React.Dispatch<React.SetStateAction<GearType>>,
   clothesGear: GearType,
   setClothesGear: React.Dispatch<React.SetStateAction<GearType>>, 
   shoesGear: GearType, 
   setShoesGear: React.Dispatch<React.SetStateAction<GearType>>,
-}
+};
 
 const AbilityComponents: FC<AbilityComponentsProps> = ({ headGear, setHeadGear, clothesGear, setClothesGear, shoesGear, setShoesGear }): ReactElement => {
   //ブキの名前とその他の情報を管理
@@ -112,7 +112,7 @@ const AbilityComponents: FC<AbilityComponentsProps> = ({ headGear, setHeadGear, 
         setWeapon={setWeaponStatus} 
       />
       <Weapon
-        weaponStatus={weaponStatus} 
+        weapon={weaponStatus}
       />
       <AbilityPoint
         weaponStatus={weaponStatus}

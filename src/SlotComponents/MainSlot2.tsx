@@ -1,9 +1,20 @@
-import React, { useEffect, useRef } from 'react';
-import MainSlotModal1 from '../SlotComponents/MainSlotModal1';
+import React, { FC, ReactElement, useEffect, useRef } from 'react';
+import MainSlotModal2 from './MainSlotModal2';
 import { Text } from '../languages/Text';
-import { clothesAbilityData } from '../ClothesComponents/clothesAbilityData';
+import { shoesAbilityData } from '../ShoesComponents/shoesAbilityData';
 
-const MainSlot1 = React.memo((props) => {
+type AbilityType = {
+  name: string,
+  path: string
+};
+
+type MainSlotProps = {
+  setAbility: React.Dispatch<React.SetStateAction<AbilityType>>,
+  ability: AbilityType,
+  gearName: string
+}
+
+const MainSlot2: FC<MainSlotProps> = React.memo(({ setAbility, ability, gearName }): ReactElement => {
   // モーダルを表示する関数
   const openGearModal = function() {
     let target0 = document.getElementById("mainSlotModal0");
@@ -18,33 +29,33 @@ const MainSlot1 = React.memo((props) => {
     let target9 = document.getElementById("subSlotModal6");
     let target10 = document.getElementById("subSlotModal7");
     let target11 = document.getElementById("subSlotModal8");
-    target0.style.display = "none";
-    target1.style.display = "block";
-    target2.style.display = "none";
-    target3.style.display = "none";
-    target4.style.display = "none";
-    target5.style.display = "none";
-    target6.style.display = "none";
-    target7.style.display = "none";
-    target8.style.display = "none";
-    target9.style.display = "none";
-    target10.style.display = "none";
-    target11.style.display = "none";
+    target0!.style.display = "none";
+    target1!.style.display = "none";
+    target2!.style.display = "block";
+    target3!.style.display = "none";
+    target4!.style.display = "none";
+    target5!.style.display = "none";
+    target6!.style.display = "none";
+    target7!.style.display = "none";
+    target8!.style.display = "none";
+    target9!.style.display = "none";
+    target10!.style.display = "none";
+    target11!.style.display = "none";
   }
 
-  const warningRef = useRef();
+  const warningRef = useRef<HTMLDivElement>(null!);
 
   // propsで受け取ったギアの名前とギアパワーの名前から、HeadGearInfoの配列を検索する
-  const checkCombination = function(gearName, abilityName) {
+  const checkCombination = function(gearName: string, abilityName: string) {
     // ギアスロットが空のときはツールチップを表示しない
     if (abilityName === "empty") {
       warningRef.current.style.display="none"
     } else {
-      for (let i=0; i < clothesAbilityData.length; i++) {
+      for (let i=0; i < shoesAbilityData.length; i++) {
         // 名前が一致するギアを検索
-        if (clothesAbilityData[i].name === gearName) {
+        if (shoesAbilityData[i].name === gearName) {
           // ギアが見つかったら選択されているギアパワーが配列に含まれるか調べる
-          if (clothesAbilityData[i].abilityArray.includes(abilityName)) {
+          if (shoesAbilityData[i].abilityArray.includes(abilityName)) {
             warningRef.current.style.display="none"
           } else {
             warningRef.current.style.display="block"
@@ -58,10 +69,11 @@ const MainSlot1 = React.memo((props) => {
   const closeTooltip = function() {
     warningRef.current.style.display = "none"
   }
-
+  // 再レンダーの度に実行
   useEffect(()=>{
-    checkCombination(props.gearName, props.ability.name);
+    checkCombination(gearName, ability.name);
   })
+
 
   return(
     <div className="mainSlotModal-wrapper">
@@ -79,13 +91,13 @@ const MainSlot1 = React.memo((props) => {
         <div className="slot-tooltip-left-container">
           <p className="slot-tooltip-left font-type2"><Text tid="changeAbility"/></p>
         </div>
-        <img className="mainslot-img" src={props.ability.path} alt=""/>
+        <img className="mainslot-img" src={ability.path} alt=""/>
       </div>
-      <MainSlotModal1
-        setAbility={props.setAbility}
+      <MainSlotModal2
+        setAbility={setAbility}
       />
     </div>
     );
   });
 
-export default MainSlot1;
+export default MainSlot2;

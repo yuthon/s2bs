@@ -1,10 +1,15 @@
+import { FC, ReactElement } from 'react';
 import { Text } from "../languages/Text";
 
-const HeadGear = (props) => {
+type HeadGearProps = {
+  imagePath: string,
+}
+
+const HeadGear: FC<HeadGearProps> = (props): ReactElement => {
   let target;
   const openHeadGearModal = function() {
     target = document.getElementById("headGearModal")
-    target.style.display = "block"
+    target!.style.display = "block"
   }
   
   return (
