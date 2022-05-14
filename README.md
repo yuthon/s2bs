@@ -2,7 +2,7 @@
 
 スプラトゥーン２をプレイしている人のためのツールです。プレイヤーが必要としつつも公式には公開されていないギアパワーの詳細な効果の確認を、ギアの見た目も考えながら行うことができます。
 
-### [リンク] : http://spl2gp.s3-website-ap-northeast-1.amazonaws.com
+### [リンク] : https://deploy.dkte3k022s2en.amplifyapp.com
 
 ![image](https://user-images.githubusercontent.com/87051431/161417158-5f80b6ba-c3e7-4d68-b55e-a37b4feaee74.png)
 
