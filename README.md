@@ -6,12 +6,11 @@
 
 ![image](https://user-images.githubusercontent.com/87051431/161417158-5f80b6ba-c3e7-4d68-b55e-a37b4feaee74.png)
 
-## 特に見ていただきたい点、こだわっている点
+## 使用言語、ライブラリ
+- ### TypeScript
+  - 最初はJavaScriptで開発しましたが後から書き換えました 
+- ### react-three@fiber
+  - 3Dモデルをreactに組み込むために使用 
 - ### React
-  - クラスコンポーネントを用いず、関数コンポーネントとHooksの組み合わせのみで開発している点
-  - react-three/fiberを採用し、3DモデルをJSXとして組み込んでいる点
-  - React.memo, useMemoを活用し動作の高速化に取り組んでいる点
-- ### デザイン
-  - 直感で操作しやすいようにUIをデザインしている点
-  - bootstrapを採用し、Grid Systemと自分で書いたメディアクエリを組み合わせて高度なレスポンシブ対応を実現している点
-  - rem指定とpx指定を適切に使い分け、ブラウザ側でのフォントサイズの変更にも柔軟に対応している点
+- ### bootstrap5
+  - デザイン、レスポンシブ対応に使用
