@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { FC, ReactElement } from 'react';
 import mpuImg from '../images/ability/MPU.png';
 
-const MainPowerUp = React.memo((props) => {
-  let abilityPoint = props.abilityPoint;
-  let name = props.weaponStatus.name;
-  
+type WeaponType = {
+  name: string,
+  sub: string,
+  special: string,
+  sp: number,
+  weight: string,
+  path: string,
+  pathSub: string,
+  pathSpecial: string
+};
+
+type MainPowerUpProps = {
+  abilityPoint: number,
+  weapon: WeaponType
+};
+
+const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }): ReactElement => {
+  let name: string = weapon.name;
   
   const Sploosh = [
     {AP:0,DMG:38},{AP:3,DMG:38.9},{AP:6,DMG:39.7},{AP:9,DMG:40.6},{AP:10,DMG:40.8},{AP:12,DMG:41.3},{AP:13,DMG:41.6},{AP:15,DMG:42.1},{AP:16,DMG:42.3},{AP:18,DMG:42.8},{AP:19,DMG:43},{AP:20,DMG:43.2},{AP:21,DMG:43.4},{AP:22,DMG:43.6},{AP:23,DMG:43.8},{AP:24,DMG:44},{AP:25,DMG:44.2},{AP:26,DMG:44.4},{AP:27,DMG:44.5},{AP:28,DMG:44.7},{AP:29,DMG:44.9},{AP:30,DMG:45},{AP:31,DMG:45.2},{AP:32,DMG:45.4},{AP:33,DMG:45.5},{AP:34,DMG:45.6},{AP:35,DMG:45.8},{AP:36,DMG:45.9},{AP:37,DMG:46},{AP:38,DMG:46.2},{AP:39,DMG:46.3},{AP:41,DMG:46.5},{AP:42,DMG:46.6},{AP:44,DMG:46.8},{AP:45,DMG:46.9},{AP:47,DMG:47},{AP:48,DMG:47.1},{AP:51,DMG:47.3},{AP:54,DMG:47.4},{AP:57,DMG:47.5} 
@@ -134,7 +148,7 @@ const MainPowerUp = React.memo((props) => {
     {AP:0,frame:156},{AP:3,frame:168},{AP:6,frame:174},{AP:9,frame:178},{AP:10,frame:180},{AP:12,frame:182},{AP:13,frame:183},{AP:15,frame:185},{AP:16,frame:186},{AP:18,frame:188},{AP:19,frame:189},{AP:20,frame:190},{AP:21,frame:190},{AP:22,frame:191},{AP:23,frame:192},{AP:24,frame:192},{AP:25,frame:193},{AP:26,frame:194},{AP:27,frame:194},{AP:28,frame:195},{AP:29,frame:195},{AP:30,frame:196},{AP:31,frame:196},{AP:32,frame:197},{AP:33,frame:197},{AP:34,frame:198},{AP:35,frame:198},{AP:36,frame:199},{AP:37,frame:199},{AP:38,frame:199},{AP:39,frame:200},{AP:41,frame:200},{AP:42,frame:201},{AP:44,frame:201},{AP:45,frame:202},{AP:47,frame:202},{AP:48,frame:202},{AP:51,frame:203},{AP:54,frame:203},{AP:57,frame:203}
   ];
   const Glooga = [
-    {AP:0,DMG0:36,DMG1:52.5},{AP:3,DMG0:36.6,DMG1:53.5},{AP:6,DMG0:37.3,DMG1:54.4},{AP:9,DMG0:37.9,DMG1:55.3},{AP:10,DMG0:38.1,DMG1:55.6},{AP:12,DMG0:38.5,DMG1:56.2},{AP:13,DMG0:38.7,DMG1:56.5},{AP:15,DMG0:39.1,DMG1:57},{AP:16,DMG0:39.3,DMG1:57.3},{AP:18,DMG0:39.6,DMG1:57.8},{AP:19,DMG0:39.8,DMG1:58},{AP:20,DMG0:39.9,DMG1:58.2},{AP:21,DMG0:40.1,DMG1:58.5},{AP:22,DMG0:40.2,DMG1:58.7},{AP:23,DMG0:40.4,DMG1:58.9},{AP:24,DMG0:40.5,DMG1:59.1},{AP:25,DMG0:40.7,DMG1:59.3},{AP:26,DMG0:40.8,DMG1:59.5},{AP:27,DMG0:40.9,DMG1:59.7},{AP:28,DMG0:41.1,DMG1:59.9},{AP:29,DMG0:41.2,DMG1:60.1},{AP:30,DMG0:41.3,DMG1:60.3},{AP:31,DMG0:41.4,DMG1:60.5},{AP:32,DMG0:41.6,DMG1:60.6},{AP:33,DMG0:41.7,DMG1:60.8},{AP:34,DMG0:41.8,DMG1:61},{AP:35,DMG00:41.9,DMG1:61.1},{AP:36,DMG0:42,DMG1:61.2},{AP:37,DMG0:42.1,DMG1:61.4},{AP:38,DMG0:42.2,DMG1:61.5},{AP:39,DMG0:42.3,DMG1:61.7},{AP:41,DMG0:42.4,DMG1:61.9},{AP:42,DMG0:42.5,DMG1:62},{AP:44,DMG0:42.6,DMG1:62.2},{AP:45,DMG0:42.7,DMG1:62.3},{AP:47,DMG0:42.8,DMG1:62.5},{AP:48,DMG0:42.9,DMG1:62.6},{AP:51,DMG0:43,DMG1:62.7},{AP:54,DMG0:43.1,DMG1:62.9},{AP:57,DMG0:43.2,DMG1:63}
+    {AP:0,DMG0:36,DMG1:52.5},{AP:3,DMG0:36.6,DMG1:53.5},{AP:6,DMG0:37.3,DMG1:54.4},{AP:9,DMG0:37.9,DMG1:55.3},{AP:10,DMG0:38.1,DMG1:55.6},{AP:12,DMG0:38.5,DMG1:56.2},{AP:13,DMG0:38.7,DMG1:56.5},{AP:15,DMG0:39.1,DMG1:57},{AP:16,DMG0:39.3,DMG1:57.3},{AP:18,DMG0:39.6,DMG1:57.8},{AP:19,DMG0:39.8,DMG1:58},{AP:20,DMG0:39.9,DMG1:58.2},{AP:21,DMG0:40.1,DMG1:58.5},{AP:22,DMG0:40.2,DMG1:58.7},{AP:23,DMG0:40.4,DMG1:58.9},{AP:24,DMG0:40.5,DMG1:59.1},{AP:25,DMG0:40.7,DMG1:59.3},{AP:26,DMG0:40.8,DMG1:59.5},{AP:27,DMG0:40.9,DMG1:59.7},{AP:28,DMG0:41.1,DMG1:59.9},{AP:29,DMG0:41.2,DMG1:60.1},{AP:30,DMG0:41.3,DMG1:60.3},{AP:31,DMG0:41.4,DMG1:60.5},{AP:32,DMG0:41.6,DMG1:60.6},{AP:33,DMG0:41.7,DMG1:60.8},{AP:34,DMG0:41.8,DMG1:61},{AP:35,DMG0:41.9,DMG1:61.1},{AP:36,DMG0:42,DMG1:61.2},{AP:37,DMG0:42.1,DMG1:61.4},{AP:38,DMG0:42.2,DMG1:61.5},{AP:39,DMG0:42.3,DMG1:61.7},{AP:41,DMG0:42.4,DMG1:61.9},{AP:42,DMG0:42.5,DMG1:62},{AP:44,DMG0:42.6,DMG1:62.2},{AP:45,DMG0:42.7,DMG1:62.3},{AP:47,DMG0:42.8,DMG1:62.5},{AP:48,DMG0:42.9,DMG1:62.6},{AP:51,DMG0:43,DMG1:62.7},{AP:54,DMG0:43.1,DMG1:62.9},{AP:57,DMG0:43.2,DMG1:63}
   ];
   const Dapples = [
     {AP:0,DMG:36},{AP:3,DMG:36.6},{AP:6,DMG:37.3},{AP:9,DMG:37.9},{AP:10,DMG:38.1},{AP:12,DMG:38.5},{AP:13,DMG:38.7},{AP:15,DMG:39.1},{AP:16,DMG:39.3},{AP:18,DMG:39.6},{AP:19,DMG:39.8},{AP:20,DMG:39.9},{AP:21,DMG:40.1},{AP:22,DMG:40.2},{AP:23,DMG:40.4},{AP:24,DMG:40.5},{AP:25,DMG:40.7},{AP:26,DMG:40.8},{AP:27,DMG:40.9},{AP:28,DMG:41.1},{AP:29,DMG:41.2},{AP:30,DMG:41.3},{AP:31,DMG:41.4},{AP:32,DMG:41.6},{AP:33,DMG:41.7},{AP:34,DMG:41.8},{AP:35,DMG:41.9},{AP:36,DMG:42},{AP:37,DMG:42.1},{AP:38,DMG:42.2},{AP:39,DMG:42.3},{AP:41,DMG:42.4},{AP:42,DMG:42.5},{AP:44,DMG:42.6},{AP:45,DMG:42.7},{AP:47,DMG:42.8},{AP:48,DMG:42.9},{AP:51,DMG:43},{AP:54,DMG:43.1},{AP:57,DMG:43.2} 
@@ -158,31 +172,31 @@ const MainPowerUp = React.memo((props) => {
     {AP:0,RT:270},{AP:3,RT:225},{AP:6,RT:210},{AP:9,RT:200},{AP:10,RT:197},{AP:12,RT:192},{AP:13,RT:190},{AP:15,RT:186},{AP:16,RT:184},{AP:18,RT:180},{AP:19,RT:178},{AP:20,RT:177},{AP:21,RT:175},{AP:22,RT:174},{AP:23,RT:172},{AP:24,RT:171},{AP:25,RT:170},{AP:26,RT:169},{AP:27,RT:167},{AP:28,RT:166},{AP:29,RT:165},{AP:30,RT:164},{AP:31,RT:163},{AP:32,RT:162},{AP:33,RT:161},{AP:34,RT:161},{AP:35,RT:160},{AP:36,RT:159},{AP:37,RT:158},{AP:38,RT:158},{AP:39,RT:157},{AP:41,RT:156},{AP:42,RT:155},{AP:44,RT:154},{AP:45,RT:154},{AP:47,RT:153},{AP:48,RT:152},{AP:51,RT:151},{AP:54,RT:151},{AP:57,RT:150}
   ];
   
-  let damage;
+  let damage: number;
   // let damageInPercent;
-  let damageFar;
+  let damageFar: number;
   // let damageFarInPercent;
-  let rng;
-  let rngInPercent;
-  let rngJump;
-  let rngJumpInPercent;
-  let paintRadius;
-  let explosionHitbox;
-  let initVelocityRate;
-  let inkTrailWidth;
-  let movementSpeed;
-  let range;
-  let inkCoverage;
-  let recorveryFrame;
-  let recorverySecond;
-  let hp;
-  let element;
+  let rng: number;
+  let rngInPercent: number;
+  let rngJump: number;
+  let rngJumpInPercent: number;
+  let paintRadius: number;
+  let explosionHitbox: number;
+  let initVelocityRate: number;
+  let inkTrailWidth: number;
+  let movementSpeed: number;
+  let range: number;
+  let inkCoverage: number;
+  let recorveryFrame: number;
+  let recorverySecond: number;
+  let hp: number;
+  let element: ReactElement;
   // let damageHeightStart;
   // let damageHeightFinish;
-  let fullDamageHeight
+  let fullDamageHeight: number;
   // let shootingFrame;
-  let bullets;
-  let extraBullets
+  let bullets: number;
+  let extraBullets: number;
   // let extraHP;
   
   if (name.indexOf("ボールドマーカー") > -1) {
@@ -199,7 +213,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ダメージ</p>
+          <p className="ae-effect">{damage!} ダメージ</p>
         </div>
       </div>
     );
@@ -217,7 +231,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ダメージ</p>
+          <p className="ae-effect">{damage!} ダメージ</p>
         </div>
       </div>
     );
@@ -234,7 +248,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{paintRadius} ％</p>
+          <p className="ae-effect">{paintRadius!} ％</p>
         </div>
       </div>
     );
@@ -251,7 +265,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{paintRadius} ％</p>
+          <p className="ae-effect">{paintRadius!} ％</p>
         </div>
       </div>
     );
@@ -262,8 +276,8 @@ const MainPowerUp = React.memo((props) => {
         rngJump = SplatterShot[i].DRJ;
       }
     }
-    rngInPercent = Math.floor(rng / SplatterShot[0].DR * 10000) / 100;
-    rngJumpInPercent = Math.floor(rngJump / SplatterShot[0].DRJ * 10000) / 100;
+    rngInPercent = Math.floor(rng! / SplatterShot[0].DR * 10000) / 100;
+    rngJumpInPercent = Math.floor(rngJump! / SplatterShot[0].DRJ * 10000) / 100;
     element = (
       <div className="d-flex flex-column col-11 px-0">
         <div className="ae-part row">
@@ -293,8 +307,8 @@ const MainPowerUp = React.memo((props) => {
         rngJump = Gal52[i].DRJ
       }
     }
-    rngInPercent = Math.floor(rng / Gal52[0].DR * 100000) / 1000;
-    rngJumpInPercent = Math.floor(rngJump / Gal52[0].DRJ * 100000) / 1000;
+    rngInPercent = Math.floor(rng! / Gal52[0].DR * 100000) / 1000;
+    rngJumpInPercent = Math.floor(rngJump! / Gal52[0].DRJ * 100000) / 1000;
     element = (
       <div className="d-flex flex-column col-11 px-0">
         <div className="ae-part row">
@@ -324,7 +338,7 @@ const MainPowerUp = React.memo((props) => {
         paintRadius = Math.floor(Nzap[i].PR / Nzap[0].PR * 100000) / 1000;
       }
     }
-    rngInPercent = Math.floor(rng / Nzap[0].DR * 100000) / 1000;
+    rngInPercent = Math.floor(rng! / Nzap[0].DR * 100000) / 1000;
     element = (
       <div className="d-flex flex-column col-11 px-0">
         <div className="ae-part row">
@@ -342,7 +356,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 ae-colon px-0">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{paintRadius} ％</p>
+            <p className="ae-effect">{paintRadius!} ％</p>
           </div>
         </div>
       </div>
@@ -361,7 +375,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ダメージ</p>
+          <p className="ae-effect">{damage!} ダメージ</p>
         </div>
       </div>
     );
@@ -372,7 +386,7 @@ const MainPowerUp = React.memo((props) => {
         initVelocityRate = Math.floor(Jet[i].IVR * 10000) / 100;
       }
     }
-    rngInPercent = Math.floor(rng / Jet[0].DR * 100000) / 1000;
+    rngInPercent = Math.floor(rng! / Jet[0].DR * 100000) / 1000;
     element = (
       <div className="d-flex flex-column col-11 px-0">
         <div className="ae-part row">
@@ -390,7 +404,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 ae-colon px-0">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{initVelocityRate} ％</p>
+            <p className="ae-effect">{initVelocityRate!} ％</p>
           </div>
         </div>
       </div>
@@ -409,7 +423,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ダメージ</p>
+          <p className="ae-effect">{damage!} ダメージ</p>
         </div>
       </div>
     );
@@ -428,7 +442,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 ae-colon px-0">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{paintRadius} ％</p>
+            <p className="ae-effect">{paintRadius!} ％</p>
           </div>
         </div>
         <div className="ae-part row">
@@ -437,7 +451,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 ae-colon px-0">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{explosionHitbox} ％</p>
+            <p className="ae-effect">{explosionHitbox!} ％</p>
           </div>
         </div>
       </div>
@@ -448,7 +462,7 @@ const MainPowerUp = React.memo((props) => {
         rngJump = Blaster[i].DRJ;
       }
     }
-    rngJumpInPercent = Math.floor(rngJump / Blaster[0].DRJ * 10000) / 100;
+    rngJumpInPercent = Math.floor(rngJump! / Blaster[0].DRJ * 10000) / 100;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -466,7 +480,7 @@ const MainPowerUp = React.memo((props) => {
         rngJump = Range[i].DRJ;
       }
     }
-    rngJumpInPercent = Math.floor(rngJump / Range[0].DRJ * 10000) / 100;
+    rngJumpInPercent = Math.floor(rngJump! / Range[0].DRJ * 10000) / 100;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -484,7 +498,7 @@ const MainPowerUp = React.memo((props) => {
         rngJump = Clash[i].DRJ;
       }
     }
-    rngJumpInPercent = Math.floor(rngJump / Clash[0].DRJ * 10000) / 100;
+    rngJumpInPercent = Math.floor(rngJump! / Clash[0].DRJ * 10000) / 100;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -503,7 +517,7 @@ const MainPowerUp = React.memo((props) => {
         explosionHitbox = Math.floor(Rapid[i].EH / Rapid[0].EH * 10000) / 100;
       }
     }
-    rngJumpInPercent = Math.floor(rngJump / Rapid[0].DRJ * 10000) / 100;
+    rngJumpInPercent = Math.floor(rngJump! / Rapid[0].DRJ * 10000) / 100;
     element = (
       <div className="d-flex flex-column col-11 px-0">
         <div className="ae-part row">
@@ -521,7 +535,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 px-0 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{explosionHitbox} ％</p>
+            <p className="ae-effect">{explosionHitbox!} ％</p>
           </div>
         </div>
       </div>
@@ -533,7 +547,7 @@ const MainPowerUp = React.memo((props) => {
         explosionHitbox = Math.floor(Rapid[i].EH / RapidPro[0].EH * 10000) / 100;
       }
     }
-    rngJumpInPercent = Math.floor(rngJump / RapidPro[0].DRJ * 10000) / 100;
+    rngJumpInPercent = Math.floor(rngJump! / RapidPro[0].DRJ * 10000) / 100;
     element = (
       <div className="d-flex flex-column col-11 px-0">
         <div className="ae-part row">
@@ -551,7 +565,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 px-0 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{explosionHitbox} ％</p>
+            <p className="ae-effect">{explosionHitbox!} ％</p>
           </div>
         </div>
       </div>
@@ -570,7 +584,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ダメージ</p>
+          <p className="ae-effect">{damage!} ダメージ</p>
         </div>
       </div>
     );
@@ -588,7 +602,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ダメージ</p>
+          <p className="ae-effect">{damage!} ダメージ</p>
         </div>
       </div>
     );
@@ -606,7 +620,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ダメージ</p>
+          <p className="ae-effect">{damage!} ダメージ</p>
         </div>
       </div>
     );
@@ -623,7 +637,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ％</p>
+          <p className="ae-effect">{damage!} ％</p>
         </div>
       </div>
     );
@@ -640,7 +654,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ％</p>
+          <p className="ae-effect">{damage!} ％</p>
         </div>
       </div>
     );
@@ -657,7 +671,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ％</p>
+          <p className="ae-effect">{damage!} ％</p>
         </div>
       </div>
     );
@@ -674,7 +688,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ％</p>
+          <p className="ae-effect">{damage!} ％</p>
         </div>
       </div>
     );
@@ -693,7 +707,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 px-0 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{inkTrailWidth} ％</p>
+            <p className="ae-effect">{inkTrailWidth!} ％</p>
           </div>
         </div>
         <div className="ae-part row">
@@ -702,7 +716,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 px-0 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{movementSpeed} ％</p>
+            <p className="ae-effect">{movementSpeed!} ％</p>
           </div>
         </div>
       </div>
@@ -722,7 +736,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 px-0 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{inkTrailWidth} ％</p>
+            <p className="ae-effect">{inkTrailWidth!} ％</p>
           </div>
         </div>
         <div className="ae-part row">
@@ -731,7 +745,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 px-0 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{movementSpeed} ％</p>
+            <p className="ae-effect">{movementSpeed!} ％</p>
           </div>
         </div>
       </div>
@@ -750,7 +764,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ダメージ</p>
+          <p className="ae-effect">{damage!} ダメージ</p>
         </div>
       </div>
     );
@@ -769,7 +783,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 px-0 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{paintRadius} ％</p>
+            <p className="ae-effect">{paintRadius!} ％</p>
           </div>
         </div>
         <div className="ae-part row">
@@ -778,7 +792,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 px-0 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{range} ％</p>
+            <p className="ae-effect">{range!} ％</p>
           </div>
         </div>
       </div>
@@ -798,7 +812,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 px-0 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{paintRadius} ％</p>
+            <p className="ae-effect">{paintRadius!} ％</p>
           </div>
         </div>
         <div className="ae-part row">
@@ -807,7 +821,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 px-0 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{range} ％</p>
+            <p className="ae-effect">{range!} ％</p>
           </div>
         </div>
       </div>
@@ -826,7 +840,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ダメージ</p>
+          <p className="ae-effect">{damage!} ダメージ</p>
         </div>
       </div>
     );
@@ -844,7 +858,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ダメージ</p>
+          <p className="ae-effect">{damage!} ダメージ</p>
         </div>
       </div>
     );
@@ -863,7 +877,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{fullDamageHeight} ％</p>
+          <p className="ae-effect">{fullDamageHeight!} ％</p>
         </div>
       </div>
     );
@@ -880,7 +894,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{inkCoverage} ％</p>
+          <p className="ae-effect">{inkCoverage!} ％</p>
         </div>
       </div>
     );
@@ -897,7 +911,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{inkCoverage} ％</p>
+          <p className="ae-effect">{inkCoverage!} ％</p>
         </div>
       </div>
     );
@@ -914,7 +928,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{inkCoverage} ％</p>
+          <p className="ae-effect">{inkCoverage!} ％</p>
         </div>
       </div>
     );
@@ -931,7 +945,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{inkCoverage} ％</p>
+          <p className="ae-effect">{inkCoverage!} ％</p>
         </div>
       </div>
     );
@@ -949,7 +963,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{bullets} 発 （＋{extraBullets}）</p>
+          <p className="ae-effect">{bullets!} 発 （＋{extraBullets!}）</p>
         </div>
       </div>
     );
@@ -967,7 +981,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{bullets} 発 （＋{extraBullets}）</p>
+          <p className="ae-effect">{bullets!} 発 （＋{extraBullets!}）</p>
         </div>
       </div>
     );
@@ -988,7 +1002,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{damage} ダメージ</p>
+            <p className="ae-effect">{damage!} ダメージ</p>
           </div>
         </div>
         <div className="ae-part row">
@@ -997,7 +1011,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{damageFar} ダメージ</p>
+            <p className="ae-effect">{damageFar!} ダメージ</p>
           </div>
         </div>
       </div>
@@ -1018,7 +1032,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{damage} ダメージ</p>
+            <p className="ae-effect">{damage!} ダメージ</p>
           </div>
         </div>
         <div className="ae-part row">
@@ -1027,7 +1041,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{damageFar} ダメージ</p>
+            <p className="ae-effect">{damageFar!} ダメージ</p>
           </div>
         </div>
       </div>
@@ -1046,7 +1060,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{bullets} 発 （＋{extraBullets}）</p>
+          <p className="ae-effect">{bullets!} 発 （＋{extraBullets!}）</p>
         </div>
       </div>
     );
@@ -1064,7 +1078,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ダメージ</p>
+          <p className="ae-effect">{damage!} ダメージ</p>
         </div>
       </div>
     );
@@ -1082,7 +1096,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ダメージ</p>
+          <p className="ae-effect">{damage!} ダメージ</p>
         </div>
       </div>
     );
@@ -1103,7 +1117,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 px-0 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{damage} ダメージ</p>
+            <p className="ae-effect">{damage!} ダメージ</p>
           </div>
         </div>
         <div className="ae-part row">
@@ -1112,7 +1126,7 @@ const MainPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 px-0 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{damageFar} ダメージ</p>
+            <p className="ae-effect">{damageFar!} ダメージ</p>
           </div>
         </div>
       </div>
@@ -1131,7 +1145,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ダメージ</p>
+          <p className="ae-effect">{damage!} ダメージ</p>
         </div>
       </div>
     );
@@ -1149,7 +1163,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{damage} ダメージ</p>
+          <p className="ae-effect">{damage!} ダメージ</p>
         </div>
       </div>
     );
@@ -1159,7 +1173,7 @@ const MainPowerUp = React.memo((props) => {
         recorveryFrame = Brella[i].RT;
       }
     }
-    recorverySecond = Math.floor(recorveryFrame / 60 * 1000) / 1000;
+    recorverySecond = Math.floor(recorveryFrame! / 60 * 1000) / 1000;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -1167,7 +1181,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{recorveryFrame} F （{recorverySecond} 秒）</p>
+          <p className="ae-effect">{recorveryFrame!} F （{recorverySecond} 秒）</p>
         </div>
       </div>
     );
@@ -1185,7 +1199,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{hp} ダメージ分</p>
+          <p className="ae-effect">{hp!} ダメージ分</p>
         </div>
       </div>
     );
@@ -1195,7 +1209,7 @@ const MainPowerUp = React.memo((props) => {
         recorveryFrame = Undercover[i].RT;
       }
     }
-    recorverySecond = Math.floor(recorveryFrame / 60 * 1000) / 1000;
+    recorverySecond = Math.floor(recorveryFrame! / 60 * 1000) / 1000;
     element = (
       <div className="ae-part col-11 row">
         <div className="col-7 px-0 m-auto">  
@@ -1203,7 +1217,7 @@ const MainPowerUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{recorveryFrame} F （{recorverySecond} 秒）</p>
+          <p className="ae-effect">{recorveryFrame!} F （{recorverySecond} 秒）</p>
         </div>
       </div>
     );
@@ -1217,7 +1231,7 @@ const MainPowerUp = React.memo((props) => {
           <img className="ap-ability-img" src={mpuImg} alt=""/>
         </div>
       </div>
-      {element}
+      {element!}
     </div>
   );
 });

@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { FC, ReactElement } from 'react';
 import inkSaverMainImg from '../images/ability/ISMain.png';
 
-const InkSaverMain = React.memo((props) => {
+type WeaponType = {
+  name: string,
+  sub: string,
+  special: string,
+  sp: number,
+  weight: string,
+  path: string,
+  pathSub: string,
+  pathSpecial: string
+};
+
+type InkSaverMainProps = {
+  abilityPoint: number,
+  weapon: WeaponType
+};
+
+const InkSaverMain: FC<InkSaverMainProps> = React.memo(({ abilityPoint, weapon}): ReactElement => {
   // 式を簡単に書くためにxに代入する
-  let abilityPoint = props.abilityPoint;
-  let weaponStatus = props.weaponStatus;
-  let inkConsumption;
-  let bullets;
-  let weaponType;
-  let element;
+  let inkConsumption: number;
+  let bullets: number;
+  let weaponType: string;
+  let element: ReactElement;
   const sploosh = [
     {AP:0,IC:0.008},{AP:3,IC:0.00765},{AP:6,IC:0.00732},{AP:9,IC:0.00701},{AP:10,IC:0.00691},{AP:12,IC:0.00671},{AP:13,IC:0.00662},{AP:15,IC:0.00644},{AP:16,IC:0.00635},{AP:18,IC:0.00618},{AP:19,IC:0.00609},{AP:20,IC:0.00601},{AP:21,IC:0.00593},{AP:22,IC:0.00586},{AP:23,IC:0.00578},{AP:24,IC:0.00571},{AP:25,IC:0.00564},{AP:26,IC:0.00557},{AP:27,IC:0.0055},{AP:28,IC:0.00544},{AP:29,IC:0.00537},{AP:30,IC:0.00531},{AP:31,IC:0.00525},{AP:32,IC:0.00519},{AP:33,IC:0.00514},{AP:34,IC:0.00508},{AP:35,IC:0.00503},{AP:36,IC:0.00498},{AP:37,IC:0.00494},{AP:38,IC:0.00489},{AP:39,IC:0.00485},{AP:41,IC:0.00476},{AP:42,IC:0.00473},{AP:44,IC:0.00465},{AP:45,IC:0.00462},{AP:47,IC:0.00456},{AP:48,IC:0.00454},{AP:51,IC:0.00447},{AP:54,IC:0.00442},{AP:57,IC:0.0044}
   ];
@@ -157,27 +171,27 @@ const InkSaverMain = React.memo((props) => {
     {AP:0,IC:0.04},{AP:3,IC:0.03826},{AP:6,IC:0.03661},{AP:9,IC:0.03505},{AP:10,IC:0.03455},{AP:12,IC:0.03357},{AP:13,IC:0.0331},{AP:15,IC:0.03218},{AP:16,IC:0.03174},{AP:18,IC:0.03088},{AP:19,IC:0.03047},{AP:20,IC:0.03006},{AP:21,IC:0.02967},{AP:22,IC:0.02928},{AP:23,IC:0.02891},{AP:24,IC:0.02854},{AP:25,IC:0.02819},{AP:26,IC:0.02784},{AP:27,IC:0.0275},{AP:28,IC:0.02718},{AP:29,IC:0.02686},{AP:30,IC:0.02655},{AP:31,IC:0.02626},{AP:32,IC:0.02597},{AP:33,IC:0.02569},{AP:34,IC:0.02542},{AP:35,IC:0.02516},{AP:36,IC:0.02491},{AP:37,IC:0.02468},{AP:38,IC:0.02445},{AP:39,IC:0.02423},{AP:41,IC:0.02382},{AP:42,IC:0.02363},{AP:44,IC:0.02327},{AP:45,IC:0.02311},{AP:47,IC:0.02282},{AP:48,IC:0.02269},{AP:51,IC:0.02235},{AP:54,IC:0.0221},{AP:57,IC:0.022}
   ];
   
-  if (weaponStatus.name.indexOf("ボールドマーカー") > -1) {
+  if (weapon.name.indexOf("ボールドマーカー") > -1) {
     for (let i=0; i < 40; i++) {
       if (sploosh[i].AP === abilityPoint) {
         inkConsumption = sploosh[i].IC;
       }
     }
     weaponType = "shooter";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*100000) / 1000;
-  } else if (weaponStatus.name.indexOf("シャープマーカー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
+  } else if (weapon.name.indexOf("シャープマーカー") > -1) {
     for (let i=0; i < 40; i++) {
       if (splash[i].AP === abilityPoint) {
         inkConsumption = splash[i].IC;
       }
     }
     weaponType = "shooter";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*100000) / 1000;
-  } else if (weaponStatus.name.indexOf("わかば") > -1 || weaponStatus.name.indexOf("もみじ") > -1 || weaponStatus.name.indexOf("おちば") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
+  } else if (weapon.name.indexOf("わかば") > -1 || weapon.name.indexOf("もみじ") > -1 || weapon.name.indexOf("おちば") > -1) {
     for (let i=0; i < 40; i++) {
       if (Jr[i].AP === abilityPoint) {
         inkConsumption = Jr[i].IC;
@@ -185,209 +199,209 @@ const InkSaverMain = React.memo((props) => {
     }
     weaponType = "shooter";
     // わかば系統はインク量が多いので1.1で計算
-    bullets = Math.floor(1.1 / inkConsumption);
+    bullets = Math.floor(1.1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("プロモデラー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("プロモデラー") > -1) {
     for (let i=0; i < 40; i++) {
       if (aerospray[i].AP === abilityPoint) {
         inkConsumption = aerospray[i].IC;
       }
     }
     weaponType = "shooter";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("52ガロン") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("52ガロン") > -1) {
     for (let i=0; i < 40; i++) {
       if (gal52[i].AP === abilityPoint) {
         inkConsumption = gal52[i].IC;
       }
     }
     weaponType = "shooter";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("N-ZAP") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("N-ZAP") > -1) {
     for (let i=0; i < 40; i++) {
       if (Nzap[i].AP === abilityPoint) {
         inkConsumption = Nzap[i].IC;
       }
     }
     weaponType = "shooter";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("プライムシューター") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("プライムシューター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Pro[i].AP === abilityPoint) {
         inkConsumption = Pro[i].IC;
       }
     }
     weaponType = "shooter";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("ジェットスイーパー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("ジェットスイーパー") > -1) {
     for (let i=0; i < 40; i++) {
       if (JetSquelcher[i].AP === abilityPoint) {
         inkConsumption = JetSquelcher[i].IC;
       }
     }
     weaponType = "shooter";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("96ガロン") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("96ガロン") > -1) {
     for (let i=0; i < 40; i++) {
       if (gal96[i].AP === abilityPoint) {
         inkConsumption = gal96[i].IC;
       }
     }
     weaponType = "shooter";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("ノヴァブラスター") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("ノヴァブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Luna[i].AP === abilityPoint) {
         inkConsumption = Luna[i].IC;
       }
     }
     weaponType = "blaster";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("ホットブラスター") > -1 || weaponStatus.name.indexOf("ヒーローブラスター") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("ホットブラスター") > -1 || weapon.name.indexOf("ヒーローブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Blaster[i].AP === abilityPoint) {
         inkConsumption = Blaster[i].IC;
       }
     }
     weaponType = "blaster";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("クラッシュブラスター") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("クラッシュブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (ClashBlaster[i].AP === abilityPoint) {
         inkConsumption = ClashBlaster[i].IC;
       }
     }
     weaponType = "blaster";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("スプラシューター") > -1 || weaponStatus.name.indexOf("ヒーローシューター") > -1 || weaponStatus.name.indexOf("オクタシューター") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("スプラシューター") > -1 || weapon.name.indexOf("ヒーローシューター") > -1 || weapon.name.indexOf("オクタシューター") > -1) {
     for (let i=0; i < 40; i++) {
       if (SplatterShot[i].AP === abilityPoint) {
         inkConsumption = SplatterShot[i].IC;
       }
     }
     weaponType = "shooter";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("ラピッドブラスター") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("ラピッドブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (RapidBlaster[i].AP === abilityPoint) {
         inkConsumption = RapidBlaster[i].IC;
       }
     }
     weaponType = "blaster";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("ダイナモローラー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("ダイナモローラー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Dynamo[i].AP === abilityPoint) {
         inkConsumption = Dynamo[i].IC;
       }
     }
     weaponType = "roller";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("L-3") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("L-3") > -1) {
     for (let i=0; i < 40; i++) {
       if (L3Nozzle[i].AP === abilityPoint) {
         inkConsumption = L3Nozzle[i].IC;
       }
     }
     weaponType = "nozzle";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("H-3") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("H-3") > -1) {
     for (let i=0; i < 40; i++) {
       if (H3Nozzle[i].AP === abilityPoint) {
         inkConsumption = H3Nozzle[i].IC;
       }
     }
     weaponType = "nozzle";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("Rブラスター") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("Rブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Rblaster[i].AP === abilityPoint) {
         inkConsumption = Rblaster[i].IC;
       }
     }
     weaponType = "blaster";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("ボトルカイザー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("ボトルカイザー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Squeezer[i].AP === abilityPoint) {
         inkConsumption = Squeezer[i].IC;
       }
     }
     weaponType = "shooter";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("スプラローラー") > -1 || weaponStatus.name.indexOf("ヒーローローラー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("スプラローラー") > -1 || weapon.name.indexOf("ヒーローローラー") > -1) {
     for (let i=0; i < 40; i++) {
       if (SplatRoller[i].AP === abilityPoint) {
         inkConsumption = SplatRoller[i].IC;
       }
     }
     weaponType = "roller";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("カーボン") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("カーボン") > -1) {
     for (let i=0; i < 40; i++) {
       if (Carbon[i].AP === abilityPoint) {
         inkConsumption = Carbon[i].IC;
       }
     }
     weaponType = "roller";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("ロングブラスター") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("ロングブラスター") > -1) {
     for (let i=0; i < 40; i++) {
       if (RangeBlaster[i].AP === abilityPoint) {
         inkConsumption = RangeBlaster[i].IC;
       }
     }
     weaponType = "blaster";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("ヴァリアブルローラー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("ヴァリアブルローラー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Flingza[i].AP === abilityPoint) {
         inkConsumption = Flingza[i].IC;
       }
     }
     weaponType = "special";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
     element = (
       <>
       <div className="ae-part row">
@@ -428,259 +442,259 @@ const InkSaverMain = React.memo((props) => {
       </div>
       </>
     );
-  } else if (weaponStatus.name.indexOf("ホクサイ") > -1 || weaponStatus.name.indexOf("ヒーローブラシ") > -1) {
+  } else if (weapon.name.indexOf("ホクサイ") > -1 || weapon.name.indexOf("ヒーローブラシ") > -1) {
     for (let i=0; i < 40; i++) {
       if (Octobrush[i].AP === abilityPoint) {
         inkConsumption = Octobrush[i].IC;
       }
     }
     weaponType = "brush";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("パブロ") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("パブロ") > -1) {
     for (let i=0; i < 40; i++) {
       if (Inkbrush[i].AP === abilityPoint) {
         inkConsumption = Inkbrush[i].IC;
       }
     }
     weaponType = "brush";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("スプラチャージャー") > -1 || weaponStatus.name.indexOf("スプラスコープ") > -1 || weaponStatus.name.indexOf("ヒーローチャージャー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("スプラチャージャー") > -1 || weapon.name.indexOf("スプラスコープ") > -1 || weapon.name.indexOf("ヒーローチャージャー") > -1) {
     for (let i=0; i < 40; i++) {
       if (ChargerMin[i].AP === abilityPoint) {
         inkConsumption = ChargerMax[i].IC;
       }
     }
     weaponType = "charger";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("スクイックリン") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("スクイックリン") > -1) {
     for (let i=0; i < 40; i++) {
       if (Squiffer[i].AP === abilityPoint) {
         inkConsumption = Squiffer[i].IC;
       }
     }
     weaponType = "charger";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("リッター") > -1 || weaponStatus.name.indexOf("4Kスコープ") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("リッター") > -1 || weapon.name.indexOf("4Kスコープ") > -1) {
     for (let i=0; i < 40; i++) {
       if (Eliter[i].AP === abilityPoint) {
         inkConsumption = Eliter[i].IC;
       }
     }
     weaponType = "charger";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("竹") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("竹") > -1) {
     for (let i=0; i < 40; i++) {
       if (Bamboo[i].AP === abilityPoint) {
         inkConsumption = Bamboo[i].IC;
       }
     }
     weaponType = "charger";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("ソイチューバー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("ソイチューバー") > -1) {
     for (let i=0; i < 40; i++) {
       if (GooTuber[i].AP === abilityPoint) {
         inkConsumption = GooTuber[i].IC;
       }
     }
     weaponType = "charger";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("バケットスロッシャー") > -1 || weaponStatus.name.indexOf("ヒーロースロッシャー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("バケットスロッシャー") > -1 || weapon.name.indexOf("ヒーロースロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Slosher[i].AP === abilityPoint) {
         inkConsumption = Slosher[i].IC;
       }
     }
     weaponType = "slosher";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("ヒッセン") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("ヒッセン") > -1) {
     for (let i=0; i < 40; i++) {
       if (Tri[i].AP === abilityPoint) {
         inkConsumption = Tri[i].IC;
       }
     }
     weaponType = "slosher";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("スクリュー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("スクリュー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Machine[i].AP === abilityPoint) {
         inkConsumption = Machine[i].IC;
       }
     }
     weaponType = "slosher";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("オーバーフロッシャー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("オーバーフロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Blob[i].AP === abilityPoint) {
         inkConsumption = Blob[i].IC;
       }
     }
     weaponType = "slosher";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("エクスプロッシャー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("エクスプロッシャー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Explo[i].AP === abilityPoint) {
         inkConsumption = Explo[i].IC;
       }
     }
     weaponType = "slosher";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("スプラスピナー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("スプラスピナー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Mini[i].AP === abilityPoint) {
         inkConsumption = Mini[i].IC;
       }
     }
     weaponType = "splatling";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("バレルスピナー") > -1 || weaponStatus.name.indexOf("ヒーロースピナー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("バレルスピナー") > -1 || weapon.name.indexOf("ヒーロースピナー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Heavy[i].AP === abilityPoint) {
         inkConsumption = Heavy[i].IC;
       }
     }
     weaponType = "splatling";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("ハイドラント") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("ハイドラント") > -1) {
     for (let i=0; i < 40; i++) {
       if (Hydra[i].AP === abilityPoint) {
         inkConsumption = Hydra[i].IC;
       }
     }
     weaponType = "splatling";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("クーゲルシュライバー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("クーゲルシュライバー") > -1) {
     for (let i=0; i < 40; i++) {
       if (BallPoint[i].AP === abilityPoint) {
         inkConsumption = BallPoint[i].IC;
       }
     }
     weaponType = "splatling";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("ノーチラス") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("ノーチラス") > -1) {
     for (let i=0; i < 40; i++) {
       if (Nautilus[i].AP === abilityPoint) {
         inkConsumption = Nautilus[i].IC;
       }
     }
     weaponType = "splatling";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("スパッタリー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("スパッタリー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Dapples[i].AP === abilityPoint) {
         inkConsumption = Dapples[i].IC;
       }
     }
     weaponType = "dualies";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("マニューバー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("マニューバー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Dualies[i].AP === abilityPoint) {
         inkConsumption = Dualies[i].IC;
       }
     }
     weaponType = "dualies";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("ケルビン") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("ケルビン") > -1) {
     for (let i=0; i < 40; i++) {
       if (Glooga[i].AP === abilityPoint) {
         inkConsumption = Glooga[i].IC;
       }
     }
     weaponType = "dualies";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("デュアル") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("デュアル") > -1) {
     for (let i=0; i < 40; i++) {
       if (DualieSquelcher[i].AP === abilityPoint) {
         inkConsumption = DualieSquelcher[i].IC;
       }
     }
     weaponType = "dualies";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("クアッドホッパー") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("クアッドホッパー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Tetras[i].AP === abilityPoint) {
         inkConsumption = Tetras[i].IC;
       }
     }
     weaponType = "dualies";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("パラシェルター") > -1 || weaponStatus.name.indexOf("ヒーローシェルター") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("パラシェルター") > -1 || weapon.name.indexOf("ヒーローシェルター") > -1) {
     for (let i=0; i < 40; i++) {
       if (SplatBrella[i].AP === abilityPoint) {
         inkConsumption = SplatBrella[i].IC;
       }
     }
     weaponType = "brella";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("キャンピングシェルター") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("キャンピングシェルター") > -1) {
     for (let i=0; i < 40; i++) {
       if (Tent[i].AP === abilityPoint) {
         inkConsumption = Tent[i].IC;
       }
     }
     weaponType = "brella";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
-  } else if (weaponStatus.name.indexOf("スパイガジェット") > -1) {
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
+  } else if (weapon.name.indexOf("スパイガジェット") > -1) {
     for (let i=0; i < 40; i++) {
       if (Undercover[i].AP === abilityPoint) {
         inkConsumption = Undercover[i].IC;
       }
     }
     weaponType = "brella";
-    bullets = Math.floor(1 / inkConsumption);
+    bullets = Math.floor(1 / inkConsumption!);
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*1000000) / 10000;
+    inkConsumption = Math.floor(inkConsumption!*1000000) / 10000;
   }
   // 武器種の判定
-  if (weaponType === "shooter" || weaponType === "blaster" || weaponType === "dualies" || weaponType === "brella") {
+  if (weaponType! === "shooter" || weaponType! === "blaster" || weaponType! === "dualies" || weaponType! === "brella") {
     element = (
       <>
       <div className="ae-part row">
@@ -689,7 +703,7 @@ const InkSaverMain = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{inkConsumption} ％</p>
+          <p className="ae-effect">{inkConsumption!} ％</p>
         </div>
       </div>
       <div className="ae-part row">
@@ -698,12 +712,12 @@ const InkSaverMain = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{bullets} 発</p>
+          <p className="ae-effect">{bullets!} 発</p>
         </div>
       </div>
       </>
     );
-  } else if (weaponType === "roller" || weaponType === "brush"  || weaponType === "slosher") {
+  } else if (weaponType! === "roller" || weaponType! === "brush"  || weaponType! === "slosher") {
     element = (
       <>
       <div className="ae-part row">
@@ -712,7 +726,7 @@ const InkSaverMain = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{inkConsumption} ％</p>
+          <p className="ae-effect">{inkConsumption!} ％</p>
         </div>
       </div>
       <div className="ae-part row">
@@ -721,12 +735,12 @@ const InkSaverMain = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{bullets} 振り</p>
+          <p className="ae-effect">{bullets!} 振り</p>
         </div>
       </div>
       </>
     );
-  } else if (weaponType === "charger") {
+  } else if (weaponType! === "charger") {
     element = (
       <>
       <div className="ae-part row">
@@ -735,7 +749,7 @@ const InkSaverMain = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{inkConsumption} ％</p>
+          <p className="ae-effect">{inkConsumption!} ％</p>
         </div>
       </div>
       <div className="ae-part row">
@@ -744,12 +758,12 @@ const InkSaverMain = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{bullets} 発</p>
+          <p className="ae-effect">{bullets!} 発</p>
         </div>
       </div>
       </>
     );
-  } else if (weaponType === "nozzle") {
+  } else if (weaponType! === "nozzle") {
     element = (
       <>
       <div className="ae-part row">
@@ -758,7 +772,7 @@ const InkSaverMain = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{inkConsumption} ％</p>
+          <p className="ae-effect">{inkConsumption!} ％</p>
         </div>
       </div>
       <div className="ae-part row">
@@ -767,12 +781,12 @@ const InkSaverMain = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{bullets} 発（{Math.floor(bullets / 3)}トリガー）</p>
+          <p className="ae-effect">{bullets!} 発（{Math.floor(bullets! / 3)}トリガー）</p>
         </div>
       </div>
       </>
     );
-  } else if (weaponType === "splatling") {
+  } else if (weaponType! === "splatling") {
     element = (
       <>
       <div className="ae-part row">
@@ -781,7 +795,7 @@ const InkSaverMain = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{inkConsumption} ％</p>
+          <p className="ae-effect">{inkConsumption!} ％</p>
         </div>
       </div>
       <div className="ae-part row">
@@ -790,7 +804,7 @@ const InkSaverMain = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{bullets} 回</p>
+          <p className="ae-effect">{bullets!} 回</p>
         </div>
       </div>
       </>
@@ -805,7 +819,7 @@ const InkSaverMain = React.memo((props) => {
         </div>
       </div>
       <div className="d-flex flex-column col-11 px-0">
-        {element}
+        {element!}
       </div>
     </div>
   );

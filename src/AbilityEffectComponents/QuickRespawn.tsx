@@ -1,10 +1,14 @@
+import { FC, ReactElement } from 'react';
 import qrImg from '../images/ability/QR.png';
 
-const QuickRespawn = (props) => {
-  let abilityPoint = props.abilityPoint;
-  let abilityName = props.abilityName;
-  let respawnFrames;
-  let respawnSeconds;
+type QuickRespawnProps = {
+  abilityPoint: number,
+  abilityName: string,
+};
+
+const QuickRespawn: FC<QuickRespawnProps> = ({ abilityPoint, abilityName }): ReactElement => {
+  let respawnFrames: number;
+  let respawnSeconds: number;
   
   const dyingTime = [
     {AP:0,frame:270,second:4.5},{AP:3,frame:253,second:4.22},{AP:6,frame:237,second:3.95},{AP:9,frame:221,second:3.68},{AP:10,frame:216,second:3.6},{AP:12,frame:206,second:3.43},{AP:13,frame:201,second:3.35},{AP:15,frame:192,second:3.2},{AP:16,frame:188,second:3.13},{AP:18,frame:179,second:2.98},{AP:19,frame:175,second:2.92},{AP:20,frame:171,second:2.85},{AP:21,frame:167,second:2.78},{AP:22,frame:163,second:2.72},{AP:23,frame:160,second:2.67},{AP:24,frame:156,second:2.6},{AP:25,frame:152,second:2.53},{AP:26,frame:149,second:2.48},{AP:27,frame:146,second:2.43},{AP:28,frame:142,second:2.37},{AP:29,frame:139,second:2.32},{AP:30,frame:136,second:2.27},{AP:31,frame:133,second:2.22},{AP:32,frame:130,second:2.17},{AP:33,frame:127,second:2.12},{AP:34,frame:125,second:2.08},{AP:35,frame:122,second:2.03},{AP:36,frame:120,second:2},{AP:37,frame:117,second:1.95},{AP:38,frame:115,second:1.92},{AP:39,frame:113,second:1.88},{AP:41,frame:109,second:1.82},{AP:42,frame:107,second:1.78},{AP:44,frame:103,second:1.72},{AP:45,frame:102,second:1.7},{AP:47,frame:99,second:1.65},{AP:48,frame:97,second:1.62},{AP:51,frame:94,second:1.57},{AP:54,frame:91,second:1.52},{AP:57,frame:90,second:1.5}
@@ -21,8 +25,8 @@ const QuickRespawn = (props) => {
   }
   // 復活ペナルティアップをつけている場合
   if (abilityName === "respawnPunisher") {
-    respawnFrames = respawnFrames + 68;
-    respawnSeconds = respawnSeconds + 1.13;
+    respawnFrames = respawnFrames! + 68;
+    respawnSeconds = respawnSeconds! + 1.13;
   }
   return (
     <div className="ae-card row">
@@ -38,7 +42,7 @@ const QuickRespawn = (props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{respawnFrames + 150} F （{respawnSeconds + 2.5} 秒）</p>
+          <p className="ae-effect">{respawnFrames! + 150} F （{respawnSeconds! + 2.5} 秒）</p>
         </div>
       </div>
     </div>

@@ -1,9 +1,22 @@
+import { FC, ReactElement } from 'react';
 import bombDefenceUpImg from '../images/ability/BDU.png';
 
-const BombDefenceUp = (props) => {
-  let abilityPoint = props.abilityPoint
-  
-  const bombDefence = [
+type BombDefenceUpProps= {
+  abilityPoint: number
+};
+
+type StatType = {
+  AP: number,
+  MDM: number,
+  TISF: number,
+  TISC: number,
+  SDM: number,
+  CHSDM: number,
+  FHSDM: number
+};
+
+const BombDefenceUp: FC<BombDefenceUpProps> = ({ abilityPoint }): ReactElement => {
+  const bombDefence: Array<StatType> = [
     {AP:0,MDM:1,TISF:170,TISC:130,SDM:1,CHSDM:1,FHSDM:1},
     {AP:3,MDM:0.9131,TISF:181.5884,TISC:141.5884,SDM:0.9662,CHSDM:0.9517,FHSDM:0.9614},
     {AP:6,MDM:0.8305,TISF:192.5936,TISC:152.5936,SDM:0.9341,CHSDM:0.9059,FHSDM:0.9247},
@@ -64,6 +77,7 @@ const BombDefenceUp = (props) => {
       farHitSubDamage = Math.floor(bombDefence[i].FHSDM * 10000) / 100;
     }
   }
+  
   return (
     <div className="ae-card row">
       <div className="ap-icon-area col-1">

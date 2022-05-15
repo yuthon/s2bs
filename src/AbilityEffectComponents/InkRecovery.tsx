@@ -1,7 +1,11 @@
+import { FC, ReactElement } from 'react';
 import inkRecoveryImg from '../images/ability/REC.png';
 
-const InkRecovery = (props) => {
-  let abilityPoint = props.abilityPoint
+type InkRecoveryProps = {
+  abilityPoint: number
+};
+
+const InkRecovery: FC<InkRecoveryProps> = ({ abilityPoint }): ReactElement => {
   let frameInInk;
   let secondInInk;
   let frameStanding;

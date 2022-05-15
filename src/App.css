@@ -1870,7 +1870,7 @@ Btmボタン
   );
   display: none;
   padding-left: 10px;
-  z-index: 12;
+  z-index: 30;
 }
 
 /* アビリティアイコンの大きさ */

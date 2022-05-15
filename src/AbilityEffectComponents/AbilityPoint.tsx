@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FC, ReactElement, useState } from 'react';
 // コンポーネント
 import InkSaverMain from './InkSaverMain';
 import InkSaverSub from './InkSaverSub';
@@ -28,26 +28,52 @@ import abilityDoubler from '../images/ability/AD.png';
 import stealthJump from '../images/ability/SJ.png';
 import objectShredder from '../images/ability/OS.png';
 
+type WeaponType = {
+  name: string,
+  sub: string,
+  special: string,
+  sp: number,
+  weight: string,
+  path: string,
+  pathSub: string,
+  pathSpecial: string
+};
 
-const AbilityPoint = (props) => {
+type AbilityPointProps = {
+  weapon: WeaponType,
+  mainAbilityName0: string,
+  mainAbilityName1: string,
+  mainAbilityName2: string,
+  subAbilityName0: string,
+  subAbilityName1: string,
+  subAbilityName2: string,
+  subAbilityName3: string,
+  subAbilityName4: string,
+  subAbilityName5: string,
+  subAbilityName6: string,
+  subAbilityName7: string,
+  subAbilityName8: string,
+};
+
+const AbilityPoint: FC<AbilityPointProps> = (props): ReactElement => {
   // 特殊な発動条件を持つギアパワーの発動のONOFFを管理
-  const [isComebackActive, Comeback] = useState(true);
-  const [isOpeningGanbitActive, OpeningGanbit] = useState(true);
-  const [isLastDitchEffortActive, LastDitchEffort] = useState(true);
-  const [isDropRollerActive, DropRoller] = useState(true);
+  const [isComebackActive, Comeback] = useState<boolean>(true);
+  const [isOpeningGanbitActive, OpeningGanbit] = useState<boolean>(true);
+  const [isLastDitchEffortActive, LastDitchEffort] = useState<boolean>(true);
+  const [isDropRollerActive, DropRoller] = useState<boolean>(true);
   
-  const subAbilityName = [
+  const subAbilityName: Array<string> = [
     props.subAbilityName0, props.subAbilityName1, props.subAbilityName2,
     props.subAbilityName3, props.subAbilityName4, props.subAbilityName5,
     props.subAbilityName6, props.subAbilityName7, props.subAbilityName8
     ];
     
-  const mainAbilityName = [
+  const mainAbilityName: Array<string> = [
     props.mainAbilityName0, props.mainAbilityName1, props.mainAbilityName2,
     ];
   //メイン効率
   
-  let inkSaverMainAP = 0;
+  let inkSaverMainAP: number = 0;
   
   for (let i = 0; i < 9; i++) {
     if (subAbilityName[i] === "インク効率アップ(メイン)") {
@@ -58,7 +84,7 @@ const AbilityPoint = (props) => {
     }
   }
   //サブ効率
-  let inkSaverSubAP = 0;
+  let inkSaverSubAP: number = 0;
   
   for (let i = 0; i < 9; i++) {
     if (subAbilityName[i] === "インク効率アップ(サブ)") {
@@ -69,7 +95,7 @@ const AbilityPoint = (props) => {
     }
   }
   //インク回復
-  let inkRecoveryAP = 0;
+  let inkRecoveryAP: number = 0;
   
   for (let i = 0; i < 9; i++) {
     if (subAbilityName[i] === "インク回復力アップ") {
@@ -80,7 +106,7 @@ const AbilityPoint = (props) => {
     }
   }
   //ヒト速度
-  let runSpeedAP = 0;
+  let runSpeedAP: number = 0;
   
   for (let i = 0; i < 9; i++) {
     if (subAbilityName[i] === "ヒト移動速度アップ") {
@@ -91,7 +117,7 @@ const AbilityPoint = (props) => {
     }
   }
   //イカ速度
-  let swimSpeedAP = 0;
+  let swimSpeedAP: number = 0;
   
   for (let i = 0; i < 9; i++) {
     if (subAbilityName[i] === "イカダッシュ速度アップ") {
@@ -102,7 +128,7 @@ const AbilityPoint = (props) => {
     }
   }
   //スぺ増
-  let specialChargeAP = 0;
+  let specialChargeAP: number = 0;
   
   for (let i = 0; i < 9; i++) {
     if (subAbilityName[i] === "スペシャル増加量アップ") {
@@ -113,7 +139,7 @@ const AbilityPoint = (props) => {
     }
   }
   //スぺ減
-  let specialSaverAP = 0;
+  let specialSaverAP: number = 0;
   
   for (let i = 0; i < 9; i++) {
     if (subAbilityName[i] === "スペシャル減少量ダウン") {
@@ -124,7 +150,7 @@ const AbilityPoint = (props) => {
     }
   }
   //スぺ性
-  let specialPowerAP = 0;
+  let specialPowerAP: number = 0;
   
   for (let i = 0; i < 9; i++) {
     if (subAbilityName[i] === "スペシャル性能アップ") {
@@ -135,7 +161,7 @@ const AbilityPoint = (props) => {
     }
   }
   //復活短縮
-  let qrAP = 0;
+  let qrAP: number = 0;
   
   for (let i = 0; i < 9; i++) {
     if (subAbilityName[i] === "復活時間短縮") {
@@ -146,7 +172,7 @@ const AbilityPoint = (props) => {
     }
   }
   //スパ短
-  let quickSuperJumpAP = 0;
+  let quickSuperJumpAP: number = 0;
   
   for (let i = 0; i < 9; i++) {
     if (subAbilityName[i] === "スーパージャンプ時間短縮") {
@@ -157,7 +183,7 @@ const AbilityPoint = (props) => {
     }
   }
   //サブ性能
-  let subPowerAP = 0;
+  let subPowerAP: number = 0;
   
   for (let i = 0; i < 9; i++) {
     if (subAbilityName[i] === "サブ性能アップ") {
@@ -168,7 +194,7 @@ const AbilityPoint = (props) => {
     }
   }
   //インク影響軽減
-  let inkResAP = 0;
+  let inkResAP: number = 0;
   
   for (let i = 0; i < 9; i++) {
     if (subAbilityName[i] === "相手インク影響軽減") {
@@ -179,7 +205,7 @@ const AbilityPoint = (props) => {
     }
   }
   //爆減
-  let bombDefenceAP = 0;
+  let bombDefenceAP: number = 0;
   
   for (let i = 0; i < 9; i++) {
     if (subAbilityName[i] === "爆風ダメージ軽減・改") {
@@ -190,7 +216,7 @@ const AbilityPoint = (props) => {
     }
   }
   //メイン性能
-  let mpuAP = 0;
+  let mpuAP: number = 0;
   
   for (let i = 0; i < 9; i++) {
     if (subAbilityName[i] === "メイン性能アップ") {
@@ -202,23 +228,22 @@ const AbilityPoint = (props) => {
   }
       
   // ボタンのonoffを切り替える関数
-  const btnToggle = function(ability) {
+  const btnToggle = function(ability: string) {
     let target = document.getElementById(`switch-${ability}`);
-    if (target.className === "turned-on") {
-      target.className = "turned-off";
+    if (target!.className === "turned-on") {
+      target!.className = "turned-off";
     } else {
-      target.className = "turned-on";
+      target!.className = "turned-on";
     }
   };
   
-
   // アタマのメインスロット
 
   // カムバック
-  let toggleComeback;
-  let mainAbility0Effect;
-  let toggleOpeningGanbit;
-  let toggleLastDitchEffort;
+  let toggleComeback: ReactElement;
+  let mainAbility0Effect: ReactElement;
+  let toggleOpeningGanbit: ReactElement;
+  let toggleLastDitchEffort: ReactElement;
 
   if (mainAbilityName[0] === "カムバック") {
     if (isComebackActive) {
@@ -529,10 +554,6 @@ const AbilityPoint = (props) => {
     )
     }
   
-  
-  
-  
-  
   // APの上限は57なので特殊ギアによってそれ以上になった場合は強制的に57にする
   if (inkSaverMainAP > 57) {
     inkSaverMainAP = 57;
@@ -556,7 +577,7 @@ const AbilityPoint = (props) => {
   
 
   // フクのメインスロット
-  let mainAbility1Effect;
+  let mainAbility1Effect: ReactElement;
 
   if (mainAbilityName[1] === "イカニンジャ") {
     mainAbility1Effect = (
@@ -628,74 +649,72 @@ const AbilityPoint = (props) => {
         </div>
       </div>
     )
-  }
-  
-  
+  } 
 
   return(
-      <div className="d-flex flex-column gray-stripe-dense" id="ae-display-area">
-        <p id="ae-header">ギアパワー効果</p>
-        <div className="special-ability">
-          {mainAbility0Effect}
-          {mainAbility1Effect}
-          {mainAbility2Effect}
-        </div>
-        <InkSaverMain 
-          abilityPoint={inkSaverMainAP}
-          weaponStatus={props.weaponStatus}
-        />
-        <InkSaverSub 
-          abilityPoint={inkSaverSubAP}
-          weaponStatus={props.weaponStatus}
-        />  
-        <InkRecovery 
-          abilityPoint={inkRecoveryAP}
-        />
-        <RunSpeed 
-          abilityPoint={runSpeedAP}
-          weaponStatus={props.weaponStatus}
-        /> 
-        <SwimSpeed
-          abilityPoint={swimSpeedAP}
-          weaponStatus={props.weaponStatus}
-          abilityName={mainAbilityName[1]}
-        />
-        <SpecialChargeUp 
-          abilityPoint={specialChargeAP}
-          weaponStatus={props.weaponStatus}
-        />
-        <SpecialSaver 
-          abilityPoint={specialSaverAP}
-          weaponStatus={props.weaponStatus}
-          abilityName={mainAbilityName[1]}
-        />
-        <SpecialPower
-          abilityPoint={specialPowerAP}
-          weaponStatus={props.weaponStatus}
-        />
-        <QuickRespawn 
-          abilityPoint={qrAP}
-          abilityName={mainAbilityName[1]}
-        />
-        <QuickSuperJump 
-          abilityPoint={quickSuperJumpAP}
-        />
-        <SubPowerUp 
-          SPUabilityPoint={subPowerAP}
-          QSJabilityPoint={quickSuperJumpAP}
-          weaponStatus={props.weaponStatus}
-        />
-        <BombDefenceUp 
-          abilityPoint={bombDefenceAP}
-        />
-        <InkResistance 
-          abilityPoint={inkResAP}
-        />
-        <MainPowerUp
-          abilityPoint={mpuAP}
-          weaponStatus={props.weaponStatus}
-        />
+    <div className="d-flex flex-column gray-stripe-dense" id="ae-display-area">
+      <p id="ae-header">ギアパワー効果</p>
+      <div className="special-ability">
+        {mainAbility0Effect!}
+        {mainAbility1Effect!}
+        {mainAbility2Effect}
       </div>
+      <InkSaverMain 
+        abilityPoint={inkSaverMainAP}
+        weapon={props.weapon}
+      />
+      <InkSaverSub 
+        abilityPoint={inkSaverSubAP}
+        weapon={props.weapon}
+      />  
+      <InkRecovery 
+        abilityPoint={inkRecoveryAP}
+      />
+      <RunSpeed 
+        abilityPoint={runSpeedAP}
+        weapon={props.weapon}
+      /> 
+      <SwimSpeed
+        abilityPoint={swimSpeedAP}
+        weapon={props.weapon}
+        abilityName={mainAbilityName[1]}
+      />
+      <SpecialChargeUp 
+        abilityPoint={specialChargeAP}
+        weapon={props.weapon}
+      />
+      <SpecialSaver 
+        abilityPoint={specialSaverAP}
+        weapon={props.weapon}
+        abilityName={mainAbilityName[1]}
+      />
+      <SpecialPower
+        abilityPoint={specialPowerAP}
+        weapon={props.weapon}
+      />
+      <QuickRespawn 
+        abilityPoint={qrAP}
+        abilityName={mainAbilityName[1]}
+      />
+      <QuickSuperJump 
+        abilityPoint={quickSuperJumpAP}
+      />
+      <SubPowerUp 
+        SPUabilityPoint={subPowerAP}
+        QSJabilityPoint={quickSuperJumpAP}
+        weapon={props.weapon}
+      />
+      <BombDefenceUp 
+        abilityPoint={bombDefenceAP}
+      />
+      <InkResistance 
+        abilityPoint={inkResAP}
+      />
+      <MainPowerUp
+        abilityPoint={mpuAP}
+        weapon={props.weapon}
+      />
+    </div>
   );
 };
 
