@@ -1,11 +1,15 @@
+import { FC, ReactElement } from 'react';
 import quickSuperJumpImg from '../images/ability/QSJ.png';
 
-const QuickSuperJump = (props) => {
-  let abilityPoint = props.abilityPoint;
-  let superJumpFrame;
-  let superJumpSecond;
-  let onGroundFrame;
-  let onGroundSecond;
+type QuickSuperJumpProps= {
+  abilityPoint: number;
+};
+
+const QuickSuperJump: FC<QuickSuperJumpProps> = ({ abilityPoint }): ReactElement => {
+  let superJumpFrame: number;
+  let superJumpSecond: number;
+  let onGroundFrame: number;
+  let onGroundSecond: number;
   
   const prepareTime = [
     {AP:0,frame:80,second:1.33},{AP:3,frame:58,second:0.97},{AP:6,frame:50,second:0.83},{AP:9,frame:45,second:0.75},{AP:10,frame:44,second:0.73},{AP:12,frame:41,second:0.68},{AP:13,frame:40,second:0.67},{AP:15,frame:38,second:0.63},{AP:16,frame:37,second:0.62},{AP:18,frame:35,second:0.58},{AP:19,frame:34,second:0.57},{AP:20,frame:34,second:0.57},{AP:21,frame:33,second:0.55},{AP:22,frame:32,second:0.53},{AP:23,frame:31,second:0.52},{AP:24,frame:31,second:0.52},{AP:25,frame:30,second:0.5},{AP:26,frame:30,second:0.5},{AP:27,frame:29,second:0.48},{AP:28,frame:28,second:0.47},{AP:29,frame:28,second:0.47},{AP:30,frame:27,second:0.45},{AP:31,frame:27,second:0.45},{AP:32,frame:26,second:0.43},{AP:33,frame:26,second:0.43},{AP:34,frame:26,second:0.43},{AP:35,frame:25,second:0.42},{AP:36,frame:25,second:0.42},{AP:37,frame:24,second:0.4},{AP:38,frame:24,second:0.4},{AP:39,frame:24,second:0.4},{AP:41,frame:23,second:0.38},{AP:42,frame:23,second:0.38},{AP:44,frame:22,second:0.37},{AP:45,frame:22,second:0.37},{AP:47,frame:22,second:0.37},{AP:48,frame:21,second:0.35},{AP:51,frame:21,second:0.35},{AP:54,frame:21,second:0.35},{AP:57,frame:20,second:0.33}
@@ -37,7 +41,7 @@ const QuickSuperJump = (props) => {
           </div>
           <p className="col-1 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{superJumpFrame} F （{superJumpSecond} 秒）</p>
+            <p className="ae-effect">{superJumpFrame!} F （{superJumpSecond!} 秒）</p>
           </div>
         </div>
         <div className="ae-part row">
@@ -46,7 +50,7 @@ const QuickSuperJump = (props) => {
           </div>
           <p className="col-1 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{onGroundFrame} F （{onGroundSecond} 秒）</p>
+            <p className="ae-effect">{onGroundFrame!} F （{onGroundSecond!} 秒）</p>
           </div>
         </div>
       </div>

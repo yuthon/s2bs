@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import LanguageSelector from './languages/LanguageSelector';
 import { Text } from './languages/Text';
 // ヘッダー画像
@@ -35,7 +35,7 @@ type GearType = {
   default: string,
 }
 
-const Main = () => {
+const Main = (): ReactElement => {
   //選択されたアタマギアを管理
   const [headGear, setHeadGear] = useState<GearType>({name:"ヘッドバンド ホワイト", path:Headband_White, id:"HB_Headband_White", brand:"バトロイカ",default:inkRecovery});
   //選択されたフクギアを管理

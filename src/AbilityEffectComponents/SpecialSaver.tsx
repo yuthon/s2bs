@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { FC, ReactElement } from 'react';
 import specialSaverImg from '../images/ability/SS.png';
+import { SpecialSaverProps } from '../Type';
 
-const SpecialSaver = React.memo((props) => {
-  let remainingPercent;
-  let abilityPoint = props.abilityPoint;
-  let sp = props.weaponStatus.sp;
-  let abilityName = props.abilityName;
-  let lostPercent;
+const SpecialSaver: FC<SpecialSaverProps> = React.memo(({ abilityPoint, weapon, abilityName }): ReactElement => {
+  let remainingPercent: number;
+  let sp: number = weapon.sp;
+  let lostPercent: number;
   
   const when150=[
     {AP:0,SP:75,RP:50},{AP:3,SP:89,RP:58.9296},{AP:6,SP:97,RP:64.6058},{AP:9,SP:104,RP:69.3165},{AP:10,SP:107,RP:70.7401},{AP:12,SP:111,RP:73.4104},{AP:13,SP:113,RP:74.6667},{AP:15,SP:116,RP:77.0394},{AP:16,SP:118,RP:78.1614},{AP:18,SP:121,RP:80.2878},{AP:19,SP:122,RP:81.2959},{AP:20,SP:124,RP:82.2692},{AP:21,SP:125,RP:83.2091},{AP:22,SP:127,RP:84.1168},{AP:23,SP:128,RP:84.9934},{AP:24,SP:129,RP:85.8398},{AP:25,SP:130,RP:86.657},{AP:26,SP:132,RP:87.4456},{AP:27,SP:133,RP:88.2064},{AP:28,SP:134,RP:88.9401},{AP:29,SP:135,RP:89.6472},{AP:30,SP:136,RP:90.3285},{AP:31,SP:137,RP:90.9842},{AP:32,SP:138,RP:91.615},{AP:33,SP:139,RP:92.2213},{AP:34,SP:140,RP:92.8035},{AP:35,SP:141,RP:93.3619},{AP:36,SP:141,RP:93.8969},{AP:37,SP:142,RP:94.4089},{AP:38,SP:143,RP:94.898},{AP:39,SP:144,RP:95.3647},{AP:41,SP:145,RP:96.2316},{AP:42,SP:145,RP:96.6323},{AP:44,SP:147,RP:97.3691},{AP:45,SP:147,RP:97.7056},{AP:47,SP:148,RP:98.3158},{AP:48,SP:148,RP:98.5897},{AP:51,SP:149,RP:99.2881},{AP:54,SP:150,RP:99.8038},{AP:57,SP:150,RP:100}
@@ -85,11 +84,11 @@ const SpecialSaver = React.memo((props) => {
   
   // 復活ペナルティアップをつけている場合
   if (abilityName === "respawnPunisher") {
-    remainingPercent = remainingPercent + 22.5;
+    remainingPercent = remainingPercent! + 22.5;
   }
   
   
-  lostPercent = (1000000 - remainingPercent * 10000) / 10000;
+  lostPercent = (1000000 - remainingPercent! * 10000) / 10000;
   
   return (
     <div className="ae-card row">
