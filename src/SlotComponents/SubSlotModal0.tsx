@@ -38,7 +38,7 @@ const SubSlotModal0: FC<SubSlotModalProps> = ({ setAbility }): ReactElement => {
         />
       </svg>
       <div className="ability-list d-flex flex-wrap">
-      <div
+        <div
           className="ability-icon ability"
           onClick={()=>{
             setAbility({name:"empty", path:empty});

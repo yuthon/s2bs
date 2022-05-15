@@ -1,3 +1,4 @@
+import { FC, ReactElement } from 'react';
 import inkSaverSubImg from '../images/ability/ISSub.png';
 // import CurlingBombImg from '../images/subSP/Wsb_Bomb_Curling.png';
 // import FizzyBombImg from '../images/subSP/Wsb_Bomb_Fizzy.png';
@@ -13,10 +14,25 @@ import inkSaverSubImg from '../images/ability/ISSub.png';
 // import SprinklerImg from '../images/subSP/Wsb_Sprinkler.png';
 // import InkMineImg from '../images/subSP/Wsb_InkMine.png';
 
-const InkSaverSub = (props) => {
-  let subWeaponName = props.weaponStatus.sub;
-  let abilityPoint = props.abilityPoint;
-  let inkConsumption
+type WeaponType = {
+  name: string,
+  sub: string,
+  special: string,
+  sp: number,
+  weight: string,
+  path: string,
+  pathSub: string,
+  pathSpecial: string
+};
+
+type InkSaverSubProps = {
+  abilityPoint: number,
+  weapon: WeaponType
+};
+
+const InkSaverSub: FC<InkSaverSubProps> = ({ weapon, abilityPoint }): ReactElement => {
+  let subWeaponName: string = weapon.sub;
+  let inkConsumption: number;
   const Beakon = [
     {AP:0,IC:0.75},{AP:3,IC:0.72103},{AP:6,IC:0.69352},{AP:9,IC:0.66746},{AP:10,IC:0.6591},{AP:12,IC:0.64286},{AP:13,IC:0.63499},{AP:15,IC:0.61973},{AP:16,IC:0.61234},{AP:18,IC:0.59804},{AP:19,IC:0.59114},{AP:20,IC:0.5844},{AP:21,IC:0.57782},{AP:22,IC:0.5714},{AP:23,IC:0.56515},{AP:24,IC:0.55906},{AP:25,IC:0.55313},{AP:26,IC:0.54736},{AP:27,IC:0.54175},{AP:28,IC:0.5363},{AP:29,IC:0.53102},{AP:30,IC:0.5259},{AP:31,IC:0.52094},{AP:32,IC:0.51614},{AP:33,IC:0.51151},{AP:34,IC:0.50704},{AP:35,IC:0.50272},{AP:36,IC:0.49858},{AP:37,IC:0.49459},{AP:38,IC:0.49076},{AP:39,IC:0.4871},{AP:41,IC:0.48026},{AP:42,IC:0.47708},{AP:44,IC:0.47122},{AP:45,IC:0.46853},{AP:47,IC:0.46363},{AP:48,IC:0.46142},{AP:51,IC:0.45578},{AP:54,IC:0.4516},{AP:57,IC:0.45}
   ];
@@ -64,7 +80,7 @@ const InkSaverSub = (props) => {
       }
     }
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*100000) / 1000;
+    inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
   } else if (subWeaponName.indexOf("トラップ") > -1) {
     for (let i=0; i < 40; i++) {
       if (InkMine[i].AP === abilityPoint) {
@@ -73,7 +89,7 @@ const InkSaverSub = (props) => {
       }
     }
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*100000) / 1000;
+     inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
   } else if (subWeaponName.indexOf("ポイズンミスト") > -1) {
     for (let i=0; i < 40; i++) {
       if (ToxicMist[i].AP === abilityPoint) {
@@ -82,7 +98,7 @@ const InkSaverSub = (props) => {
       }
     }
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*100000) / 1000;
+     inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
   } else if (subWeaponName.indexOf("ポイントセンサー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Sencor[i].AP === abilityPoint) {
@@ -91,7 +107,7 @@ const InkSaverSub = (props) => {
       }
     }
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*100000) / 1000;
+     inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
   } else if (subWeaponName.indexOf("キューバンボム") > -1) {
     for (let i=0; i < 40; i++) {
       if (SuctionBomb[i].AP === abilityPoint) {
@@ -100,7 +116,7 @@ const InkSaverSub = (props) => {
       }
     }
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*100000) / 1000;
+     inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
   } else if (subWeaponName.indexOf("クイックボム") > -1) {
     for (let i=0; i < 40; i++) {
       if (BurstBomb[i].AP === abilityPoint) {
@@ -109,7 +125,7 @@ const InkSaverSub = (props) => {
       }
     }
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*100000) / 1000;
+     inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
   } else if (subWeaponName.indexOf("スプラッシュボム") > -1) {
     for (let i=0; i < 40; i++) {
       if (SplatBomb[i].AP === abilityPoint) {
@@ -118,7 +134,7 @@ const InkSaverSub = (props) => {
       }
     }
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*100000) / 1000;
+     inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
   } else if (subWeaponName.indexOf("ロボットボム") > -1) {
     for (let i=0; i < 40; i++) {
       if (AutoBomb[i].AP === abilityPoint) {
@@ -127,7 +143,7 @@ const InkSaverSub = (props) => {
       }
     }
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*100000) / 1000;
+     inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
   } else if (subWeaponName.indexOf("スプリンクラー") > -1) {
     for (let i=0; i < 40; i++) {
       if (Sprinkler[i].AP === abilityPoint) {
@@ -136,7 +152,7 @@ const InkSaverSub = (props) => {
       }
     }
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*100000) / 1000;
+     inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
   } else if (subWeaponName.indexOf("タンサンボム") > -1) {
     for (let i=0; i < 40; i++) {
       if (FizzyBomb[i].AP === abilityPoint) {
@@ -145,7 +161,7 @@ const InkSaverSub = (props) => {
       }
     }
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*100000) / 1000;
+     inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
   } else if (subWeaponName.indexOf("カーリングボム") > -1) {
     for (let i=0; i < 40; i++) {
       if (CurlingBomb[i].AP === abilityPoint) {
@@ -154,7 +170,7 @@ const InkSaverSub = (props) => {
       }
     }
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*100000) / 1000;
+     inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
   } else if (subWeaponName.indexOf("トーピード") > -1) {
     for (let i=0; i < 40; i++) {
       if (Torpedo[i].AP === abilityPoint) {
@@ -163,7 +179,7 @@ const InkSaverSub = (props) => {
       }
     }
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*100000) / 1000;
+     inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
   } else if (subWeaponName.indexOf("スプラッシュシールド") > -1) {
     for (let i=0; i < 40; i++) {
       if (SplashWall[i].AP === abilityPoint) {
@@ -172,7 +188,7 @@ const InkSaverSub = (props) => {
       }
     }
     // 数値を％になおす
-    inkConsumption = Math.floor(inkConsumption*100000) / 1000;
+     inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
   }
   return (
     <div className="ae-card row">
@@ -188,8 +204,8 @@ const InkSaverSub = (props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{inkConsumption} ％</p>
-        </div>
+          <p className="ae-effect">{inkConsumption!} ％</p>
+        </div> 
       </div>
     </div>
   );

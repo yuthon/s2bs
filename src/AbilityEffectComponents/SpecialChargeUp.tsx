@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC, ReactElement } from 'react';
 import specialChargeImg from '../images/ability/SCU.png';
+import { SpecialChargeUpProps } from '../Type';
 
-const SpecialChargeUp = React.memo((props) => {
-  let specialPoints;
-  let abilityPoint = props.abilityPoint;
-  let sp = props.weaponStatus.sp
+const SpecialChargeUp: FC<SpecialChargeUpProps> = React.memo(({ abilityPoint, weapon }): ReactElement => {
+  let specialPoints: number;
+  let sp: number = weapon.sp;
   
   const points150 = [
     {AP:0,SP:150},{AP:3,SP:146},{AP:6,SP:142},{AP:9,SP:139},{AP:10,SP:138},{AP:12,SP:136},{AP:13,SP:135},{AP:15,SP:133},{AP:16,SP:132},{AP:18,SP:131},{AP:19,SP:130},{AP:20,SP:129},{AP:21,SP:128},{AP:22,SP:128},{AP:23,SP:127},{AP:24,SP:126},{AP:25,SP:126},{AP:26,SP:125},{AP:27,SP:125},{AP:28,SP:124},{AP:29,SP:124},{AP:30,SP:123},{AP:31,SP:123},{AP:32,SP:122},{AP:33,SP:122},{AP:34,SP:121},{AP:35,SP:121},{AP:36,SP:120},{AP:37,SP:120},{AP:38,SP:120},{AP:39,SP:119},{AP:41,SP:119},{AP:42,SP:118},{AP:44,SP:118},{AP:45,SP:118},{AP:47,SP:117},{AP:48,SP:117},{AP:51,SP:116},{AP:54,SP:116},{AP:57,SP:116}
@@ -95,7 +95,7 @@ const SpecialChargeUp = React.memo((props) => {
         </div>
         <p className="col-1 ae-colon px-0">:</p>
         <div className="col-4 px-0 m-auto">
-          <p className="ae-effect">{specialPoints} ポイント</p>
+          <p className="ae-effect">{specialPoints!} ポイント</p>
         </div>
       </div>
     </div>

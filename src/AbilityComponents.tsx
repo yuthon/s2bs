@@ -115,7 +115,7 @@ const AbilityComponents: FC<AbilityComponentsProps> = ({ headGear, setHeadGear, 
         weapon={weaponStatus}
       />
       <AbilityPoint
-        weaponStatus={weaponStatus}
+        weapon={weaponStatus}
         mainAbilityName0={mainAbility0.name}
         mainAbilityName1={mainAbility1.name}
         mainAbilityName2={mainAbility2.name}

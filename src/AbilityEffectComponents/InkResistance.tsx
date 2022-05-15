@@ -1,7 +1,20 @@
+import { FC, ReactElement } from 'react';
 import InkResImg from '../images/ability/RES.png';
 
-const InkResistance = (props) => {
-  const InkRes = [
+type InkResistanceProps = {
+  abilityPoint: number
+};
+
+type InkResStatType = {
+  AP: number,
+  FBTD: number,
+  DPF: number,
+  DL: number,
+  RS: number,
+};
+
+const InkResistance: FC<InkResistanceProps> = ({ abilityPoint }): ReactElement => {
+  const InkRes: Array<InkResStatType> = [
     {AP:0,FBTD:0,DPF:0.3,DL:0.4,RS:	0.24},
     {AP:3,FBTD:10,DPF:0.2,DL:0.3807,RS:0.3343},
     {AP:6,FBTD:15,DPF:0.2,DL:0.3623,RS:0.3942},
@@ -44,7 +57,6 @@ const InkResistance = (props) => {
     {AP:57,FBTD:39,DPF:0.1,DL:0.2,RS:0.768}
   ];
   
-  let abilityPoint = props.abilityPoint;
   let framesBeforeTakingDamage;
   let secondsBeforeTakingDamage;
   let damagePerFrame;
@@ -53,7 +65,7 @@ const InkResistance = (props) => {
   let runSpeed;
 
   // 一部のギアパワー効果によって発生する特殊なAPに対する処理
-  const irregularValues = function(array) {
+  const irregularValues = function(array: Array<InkResStatType>) {
     if (abilityPoint === 40) {
       return {
         FBTD : Math.floor((array[30].FBTD + array[31].FBTD) / 2 * 100) /100,
@@ -132,12 +144,12 @@ const InkResistance = (props) => {
   }
   // APが特殊な値をとる時
   if (!damagePerFrame) {
-    framesBeforeTakingDamage = irregularValues(InkRes).FBTD;
+    framesBeforeTakingDamage = irregularValues(InkRes)!.FBTD;
     secondsBeforeTakingDamage = Math.floor(framesBeforeTakingDamage / 60 * 1000) / 1000;
-    damagePerFrame = irregularValues(InkRes).DPF;
+    damagePerFrame = irregularValues(InkRes)!.DPF;
     damagePerSecond = damagePerFrame * 60;
-    damageLimit = Math.floor(irregularValues(InkRes).DL * 10000) / 100;
-    runSpeed = Math.floor((0.96 - irregularValues(InkRes).RS) / 0.96 * 100);
+    damageLimit = Math.floor(irregularValues(InkRes)!.DL * 10000) / 100;
+    runSpeed = Math.floor((0.96 - irregularValues(InkRes)!.RS) / 0.96 * 100);
   }
   
 

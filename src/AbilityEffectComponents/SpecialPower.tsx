@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC, ReactElement } from 'react';
 import specialPowerImg from '../images/ability/SpecialPU.png';
+import { SpecialChargeUpProps } from '../Type';
 
-const SpecialPower = React.memo((props) => {
+const SpecialPower: FC<SpecialChargeUpProps> = React.memo(({ abilityPoint, weapon }): ReactElement => {
   let element;
-  let abilityPoint = props.abilityPoint;
-  let name = props.weaponStatus.special;
+  let name = weapon.special;
   let durationFrames;
   let durationSeconds;
   let paintRadius;

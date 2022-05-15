@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { FC, ReactElement } from 'react';
 import subPowerImg from '../images/ability/SubPU.png';
+import { SubPowerUpProps } from '../Type';
 
-const SubPowerUp = React.memo((props) => {
-  let name = props.weaponStatus.sub;
-  let abilityPoint = props.SPUabilityPoint;
-  let element;
+const SubPowerUp: FC<SubPowerUpProps> = React.memo(({ SPUabilityPoint, QSJabilityPoint, weapon }) => {
+  let name: string = weapon.sub;
+  let abilityPoint: number = SPUabilityPoint;
+  let element: ReactElement;
   
   // ビーコン
-  let superJumpFrame;
-  let onGroundFrame;
-  let superJumpSecond;
-  let onGroundSecond;
-  
-  let QSJabilityPoint = props.QSJabilityPoint;
+  let superJumpFrame: number;
+  let onGroundFrame: number;
+  let superJumpSecond: number;
+  let onGroundSecond: number;
   
   const prepareTime = [
     {AP:0,frame:80},{AP:3,frame:55},{AP:6,frame:45},{AP:9,frame:40},{AP:10,frame:39},{AP:12,frame:36},{AP:13,frame:35},{AP:15,frame:33},{AP:16,frame:32},{AP:18,frame:30},{AP:19,frame:30},{AP:20,frame:29},{AP:21,frame:28},{AP:22,frame:28},{AP:23,frame:27},{AP:24,frame:26},{AP:25,frame:26},{AP:26,frame:26},{AP:27,frame:25},{AP:28,frame:25},{AP:29,frame:24},{AP:30,frame:24},{AP:31,frame:24},{AP:32,frame:23},{AP:33,frame:23},{AP:34,frame:23},{AP:35,frame:23},{AP:36,frame:23},{AP:37,frame:22},{AP:38,frame:22},{AP:39,frame:22},{AP:41,frame:22},{AP:42,frame:21},{AP:44,frame:21},{AP:45,frame:21},{AP:47,frame:21},{AP:48,frame:21},{AP:51,frame:21},{AP:54,frame:21},{AP:57,frame:20}
@@ -103,8 +102,8 @@ const SubPowerUp = React.memo((props) => {
         }
       }
     }
-    superJumpSecond = Math.floor(superJumpFrame / 60 * 100) / 100;
-    onGroundSecond = Math.floor(onGroundFrame /60 * 100) / 100;
+    superJumpSecond = Math.floor(superJumpFrame! / 60 * 100) / 100;
+    onGroundSecond = Math.floor(onGroundFrame! /60 * 100) / 100;
     element = (
       <div className="d-flex flex-column col-11 px-0">
         <div className="ae-part row">
@@ -113,7 +112,7 @@ const SubPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{superJumpFrame} F （{superJumpSecond} 秒）</p>
+            <p className="ae-effect">{superJumpFrame!} F （{superJumpSecond} 秒）</p>
           </div>
         </div>
         <div className="ae-part row">
@@ -122,7 +121,7 @@ const SubPowerUp = React.memo((props) => {
           </div>
           <p className="col-1 ae-colon">:</p>
           <div className="col-4 px-0 m-auto">
-            <p className="ae-effect">{onGroundFrame} F （{onGroundSecond} 秒）</p>
+            <p className="ae-effect">{onGroundFrame!} F （{onGroundSecond} 秒）</p>
           </div>
         </div>
       </div>
@@ -307,7 +306,7 @@ const SubPowerUp = React.memo((props) => {
           <img className="ap-ability-img" src={subPowerImg} alt=""/>
         </div>
       </div>
-      {element}
+      {element!}
     </div>
   );
 });
