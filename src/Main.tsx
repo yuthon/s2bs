@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 import LanguageSelector from './languages/LanguageSelector';
 import { Text } from './languages/Text';
 // ヘッダー画像
@@ -25,9 +25,7 @@ import Canvas_White from './images/gear/Shs_FST000.png';
 import Headband_White from './images/gear/Hed_FST000.png';
 import inkRecovery from './images/ability/REC.png';
 
-import { useState } from 'react';
-
-type GearType = {
+interface GearType {
   name: string,
   path: string,
   id: string,
@@ -42,7 +40,7 @@ const Main = (): ReactElement => {
   const [clothesGear, setClothesGear] = useState<GearType>({name:"わかばイカT",path:WakabaIkaT,id:"WakabaIkaT",brand:"バトロイカ", default: ''});
   //選択されたクツギアを管理
   const [shoesGear, setShoesGear] = useState<GearType>({name:"キャンバス ホワイト",path:Canvas_White,id:"Canvas_White",brand:"クラーゲス", default: ''});
-  //キャラ設定モーダルを管理
+  //キャラ設定に関する情報
   const [characterType, setCharacterType] = useState<string>("IFML");
   const [skinColor, setSkinColor] = useState<string>("color_0");
   const [hairStyle, setHairStyle] = useState<string>("Hair_0");
@@ -50,84 +48,83 @@ const Main = (): ReactElement => {
   const [bottoms, setBottoms] = useState<string>("Btm_0");
   const [teamColor, setTeamColor] = useState<string>("color_5");
 
-
   return(
     <>
-    <header className="" id="header">
-      <div className="d-flex header-title">
-        <img className="header-image" src={HeaderImg} alt=""/>
-        <p className="font-type1 header-name"><Text tid="titleHeader"/></p>
-        <img className="header-image" src={HeaderImg} alt=""/>
-      </div>
-      <LanguageSelector />
-    </header>
-    <div className="container-xxl">
-      <CharacterTypeModal
-        characterType={characterType}
-        setCharacterType={setCharacterType}
-      />
-      <SkinColorModal
-        setSkinColor={setSkinColor}
-        skinColor={skinColor}
-      />
-      <TeamColorModal
-        setTeamColor={setTeamColor}
-        characterType={characterType}
-        teamColor={teamColor}
-      />
-      <EyeColorModal 
-        setEyeColor={setEyeColor}
-        eyeColor={eyeColor}
-      />
-      <HairStyleModal 
-        characterType={characterType}
-        setHairStyle={setHairStyle}
-        hairStyle={hairStyle}
-      />
-      <BottomsModal
-        bottoms={bottoms}
-        setBottoms={setBottoms}
-        characterType={characterType}
-      />
-      <div className="row m-0 p-0" id="main">  
-        <div className="col-sm-7 col-md-8 col-lg-5 col-xl-5 col-xxl-6" id="three-section">
-          <Scene
-            headGear={headGear.id}
-            clothesGear={clothesGear.id}
-            shoesGear={shoesGear.id}
-            characterType={characterType}
-            skinColor={skinColor}
-            eyeColor={eyeColor}
-            hairStyle={hairStyle}
-            bottoms={bottoms}
-            teamColor={teamColor}
-          />
+      <header className="" id="header">
+        <div className="d-flex header-title">
+          <img className="header-image" src={HeaderImg} alt=""/>
+          <p className="font-type1 header-name"><Text tid="titleHeader"/></p>
+          <img className="header-image" src={HeaderImg} alt=""/>
         </div>
-        <div className="col-sm-5 col-md-4 col-lg-7 col-xl-7 col-xxl-6 px-0" id="gear-and-ability">
-          <AbilityComponents 
-            headGear={headGear}
-            setHeadGear={setHeadGear}
-            clothesGear={clothesGear}
-            setClothesGear={setClothesGear}
-            shoesGear={shoesGear}
-            setShoesGear={setShoesGear}
-          />
-          <HeadGearModal
-            chosenGear={headGear}
-            setGear={setHeadGear}
-          />
-          <ClothesGearModal
-            chosenGear={clothesGear}
-            setGear={setClothesGear}
-          />
-          <ShoesGearModal
-            chosenGear={shoesGear}
-            setGear={setShoesGear}
-          />
+        <LanguageSelector />
+      </header>
+      <div className="container-xxl">
+        <CharacterTypeModal
+          characterType={characterType}
+          setCharacterType={setCharacterType}
+        />
+        <SkinColorModal
+          setSkinColor={setSkinColor}
+          skinColor={skinColor}
+        />
+        <TeamColorModal
+          setTeamColor={setTeamColor}
+          characterType={characterType}
+          teamColor={teamColor}
+        />
+        <EyeColorModal 
+          setEyeColor={setEyeColor}
+          eyeColor={eyeColor}
+        />
+        <HairStyleModal 
+          characterType={characterType}
+          setHairStyle={setHairStyle}
+          hairStyle={hairStyle}
+        />
+        <BottomsModal
+          bottoms={bottoms}
+          setBottoms={setBottoms}
+          characterType={characterType}
+        />
+        <div className="row m-0 p-0" id="main">  
+          <div className="col-sm-7 col-md-8 col-lg-5 col-xl-5 col-xxl-6" id="three-section">
+            <Scene
+              headGear={headGear.id}
+              clothesGear={clothesGear.id}
+              shoesGear={shoesGear.id}
+              characterType={characterType}
+              skinColor={skinColor}
+              eyeColor={eyeColor}
+              hairStyle={hairStyle}
+              bottoms={bottoms}
+              teamColor={teamColor}
+            />
+          </div>
+          <div className="col-sm-5 col-md-4 col-lg-7 col-xl-7 col-xxl-6 px-0" id="gear-and-ability">
+            <AbilityComponents 
+              headGear={headGear}
+              setHeadGear={setHeadGear}
+              clothesGear={clothesGear}
+              setClothesGear={setClothesGear}
+              shoesGear={shoesGear}
+              setShoesGear={setShoesGear}
+            />
+            <HeadGearModal
+              chosenGear={headGear}
+              setGear={setHeadGear}
+            />
+            <ClothesGearModal
+              chosenGear={clothesGear}
+              setGear={setClothesGear}
+            />
+            <ShoesGearModal
+              chosenGear={shoesGear}
+              setGear={setShoesGear}
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </>
   );
 };

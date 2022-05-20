@@ -24,7 +24,7 @@ const Orbit: FC<OrbitProps> = (props) => {
   useFrame(() => controls.current?.update());
   const target: THREE.Vector3 = new THREE.Vector3(0,6,0);
   return (
-    <orbitControls 
+    <orbitControls
       ref={controls}
       args={[camera, gl.domElement]}
       target={target}
