@@ -1,17 +1,11 @@
 import { FC, useRef, useEffect, useState } from 'react';
-
 import { useProgress } from '@react-three/drei'
 import { Text } from '../languages/Text';
-
 import CharacterControlModal from '../CharacterControlModal';
-
-
 import Model from './Model';
 import Orbit from './Orbit';
-
 import { Suspense } from 'react';
 import { Canvas, extend } from '@react-three/fiber';
-
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 extend({ OrbitControls });
 

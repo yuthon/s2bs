@@ -27,19 +27,11 @@ import thermalInk from '../images/ability/TI.png';
 import abilityDoubler from '../images/ability/AD.png';
 import stealthJump from '../images/ability/SJ.png';
 import objectShredder from '../images/ability/OS.png';
+import { WeaponType } from '../Type'
+import { ToggleSwitch } from './toggleSwitch'
+import AeCard from './SpecialAeCard';
 
-type WeaponType = {
-  name: string,
-  sub: string,
-  special: string,
-  sp: number,
-  weight: string,
-  path: string,
-  pathSub: string,
-  pathSpecial: string
-};
-
-type AbilityPointProps = {
+interface AbilityPointProps {
   weapon: WeaponType,
   mainAbilityName0: string,
   mainAbilityName1: string,
@@ -57,22 +49,22 @@ type AbilityPointProps = {
 
 const AbilityPoint: FC<AbilityPointProps> = (props): ReactElement => {
   // 特殊な発動条件を持つギアパワーの発動のONOFFを管理
-  const [isComebackActive, Comeback] = useState<boolean>(true);
-  const [isOpeningGanbitActive, OpeningGanbit] = useState<boolean>(true);
-  const [isLastDitchEffortActive, LastDitchEffort] = useState<boolean>(true);
-  const [isDropRollerActive, DropRoller] = useState<boolean>(true);
+  const [isComebackActive, setIsComebackActive] = useState<boolean>(true);
+  const [isOpeningGanbitActive, setIsOpeningGanbitActive] = useState<boolean>(true);
+  const [isLastDitchEffortActive, setIsLastDitchEffortActive] = useState<boolean>(true);
+  const [isDropRollerActive, setIsDropRollerActive] = useState<boolean>(true);
   
   const subAbilityName: Array<string> = [
     props.subAbilityName0, props.subAbilityName1, props.subAbilityName2,
     props.subAbilityName3, props.subAbilityName4, props.subAbilityName5,
     props.subAbilityName6, props.subAbilityName7, props.subAbilityName8
-    ];
+  ];
     
   const mainAbilityName: Array<string> = [
     props.mainAbilityName0, props.mainAbilityName1, props.mainAbilityName2,
-    ];
+  ];
+
   //メイン効率
-  
   let inkSaverMainAP: number = 0;
   
   for (let i = 0; i < 9; i++) {
@@ -238,33 +230,21 @@ const AbilityPoint: FC<AbilityPointProps> = (props): ReactElement => {
   };
   
   // アタマのメインスロット
-
-  // カムバック
   let toggleComeback: ReactElement;
   let mainAbility0Effect: ReactElement;
   let toggleOpeningGanbit: ReactElement;
   let toggleLastDitchEffort: ReactElement;
 
   if (mainAbilityName[0] === "カムバック") {
+    toggleComeback = (
+      <ToggleSwitch 
+        abilityName='comeback'
+        btnToggle={btnToggle}
+        isActive={isComebackActive}
+        setIsActive={setIsComebackActive}
+      />
+    )
     if (isComebackActive) {
-      // ONの時の切り替えスイッチのJSX
-      toggleComeback = (
-        <div 
-          className="turned-on"
-          id="switch-comeback"
-          onClick={()=>{
-            btnToggle("comeback");
-            if (isComebackActive) {
-              Comeback(false);
-            } else {
-              Comeback(true);
-            }
-          }}
-        >
-          <div className="switch-base"></div>
-          <div id="switch-circle"></div>
-        </div>
-      )
       // APを加算
       inkSaverMainAP = inkSaverMainAP + 10;
       inkSaverSubAP = inkSaverSubAP + 10;
@@ -273,189 +253,81 @@ const AbilityPoint: FC<AbilityPointProps> = (props): ReactElement => {
       swimSpeedAP = swimSpeedAP + 10;
       specialChargeAP = specialChargeAP + 10;
       
-    } else {
-      // OFFの時の切り替えスイッチのJSX
-      toggleComeback = (
-        <div
-          className="turned-off"
-          id="switch-comeback"
-          onClick={() => {
-            btnToggle("comeback");
-            if (isComebackActive) {
-              Comeback(false);
-            } else {
-              Comeback(true);
-            }
-          } }
-        >
-          <div className="switch-base"></div>
-          <div id="switch-circle"></div>
-        </div>
-      );
     }
     // 最終的に表示するJSX
     mainAbility0Effect = (
-      <div className="ae-card row">
-        <div className="ap-icon-area col-2">
-          <div className="ability-icon ap-ability-icon">
-            <p className="ability-detail-tooltip" style={{width: "4.5rem" }}>カムバック</p>
-            <img className="ap-ability-img" src={ComebackImg} alt=""/>
-          </div>
-        </div>
-        <div className="ae-part col-10 row">
-          <div className="col-7 px-0 m-auto">
-            <p className="ae-text">プレイヤーがやられて復帰した後の20秒間、一部の能力が上昇 : インク効率アップ(メイン)・インク効率アップ(サブ)・インク回復力アップ・イカ移動速度・ヒト移動速度</p>
-          </div>
-          <div className="col-5 m-auto">  
-            {toggleComeback}
-          </div>
-        </div>
-      </div>
+      <AeCard
+        abilityName='カムバック'
+        imagePath={ComebackImg}
+        toggleSwitch={toggleComeback}
+        tooltipWidth='4.5rem'
+        aeText='プレイヤーがやられて復帰した後の20秒間、一部の能力が上昇 : インク効率アップ(メイン)・インク効率アップ(サブ)・インク回復力アップ・イカ移動速度・ヒト移動速度'
+      />
     );
   }
   // スタートダッシュ
   else if (mainAbilityName[0] === "スタートダッシュ") {
+    toggleOpeningGanbit = (
+      <ToggleSwitch 
+        abilityName='openingGanbit'
+        btnToggle={btnToggle}
+        isActive={isOpeningGanbitActive}
+        setIsActive={setIsOpeningGanbitActive}
+      />
+    )
     if (isOpeningGanbitActive) {
-      // ONの時の切り替えスイッチのJSX
-      toggleOpeningGanbit = (
-        <div 
-          className="turned-on"
-          id="switch-openingGanbit"
-          onClick={()=>{
-            btnToggle("openingGanbit");
-            if (isOpeningGanbitActive) {
-              OpeningGanbit(false);
-            } else {
-              OpeningGanbit(true);
-            }
-          }}
-        >
-          <div className="switch-base"></div>
-          <div id="switch-circle"></div>
-        </div>
-      );
       // APを加算
       runSpeedAP = runSpeedAP + 30;
       swimSpeedAP = swimSpeedAP + 30;
       inkResAP = inkResAP + 30;
-    } else {
-      // OFFの時の切り替えスイッチのJSX
-      toggleOpeningGanbit = (
-        <div 
-          className="turned-off"
-          id="switch-openingGanbit"
-          onClick={()=>{
-            btnToggle("openingGanbit");
-            if (isOpeningGanbitActive) {
-              OpeningGanbit(false);
-            } else {
-              OpeningGanbit(true);
-            }
-          }}
-        >
-          <div className="switch-base"></div>
-          <div id="switch-circle"></div>
-        </div>
-      )
     }
     // 最終的に表示するJSX
     mainAbility0Effect = (
-      <div className="ae-card row">
-        <div className="ap-icon-area col-2">
-          <div className="ability-icon ap-ability-icon">
-            <p className="ability-detail-tooltip" style={{width: "6.5rem" }}>スタートダッシュ</p>
-            <img className="ap-ability-img" src={OpeningGanbitImg} alt=""/>
-          </div>
-        </div>
-        <div className="ae-part col-10 row">
-          <div className="col-7 px-0 m-auto">
-            <p className="ae-text">バトル開始から30秒間、一部の能力がかなり上昇（イカ移動速度・ヒト移動速度・相手インク影響軽減）</p>
-          </div>
-          <div className="col-5 m-auto">  
-            {toggleOpeningGanbit}
-          </div>
-        </div>
-      </div>
+      <AeCard
+        abilityName='スタートダッシュ'
+        imagePath={OpeningGanbitImg}
+        toggleSwitch={toggleOpeningGanbit!}
+        tooltipWidth='6.5rem'
+        aeText='バトル開始から30秒間、一部の能力がかなり上昇（イカ移動速度・ヒト移動速度・相手インク影響軽減）'
+      />
     );
   }
   // ラストスパート
   else if (mainAbilityName[0] === "ラストスパート") {
+    toggleLastDitchEffort = (
+      <ToggleSwitch 
+        abilityName='lastDitchEffort'
+        btnToggle={btnToggle}
+        isActive={isLastDitchEffortActive}
+        setIsActive={setIsLastDitchEffortActive}
+      />
+    )
     if (isLastDitchEffortActive) {
-      // 切り替えスイッチのJSX
-      toggleLastDitchEffort = (
-        <div 
-          className="turned-on"
-          id="switch-lastDitchEffort"
-          onClick={()=>{
-            btnToggle("lastDitchEffort");
-            if (isLastDitchEffortActive) {
-              LastDitchEffort(false);
-            } else {
-              LastDitchEffort(true);
-            }
-          }}
-        >
-          <div className="switch-base"></div>
-          <div id="switch-circle"></div>
-        </div>
-      );
       // APを加算
       inkSaverMainAP = inkSaverMainAP + 24;
       inkSaverSubAP = inkSaverSubAP + 24;
       inkRecoveryAP = inkRecoveryAP + 24;
-    } else {
-      toggleLastDitchEffort = (
-        <div 
-          className="turned-off"
-          id="switch-lastDitchEffort"
-          onClick={()=>{
-            btnToggle("lastDitchEffort");
-            if (isLastDitchEffortActive) {
-              LastDitchEffort(false);
-            } else {
-              LastDitchEffort(true);
-            }
-          }}
-        >
-          <div className="switch-base"></div>
-          <div id="switch-circle"></div>
-        </div>
-      )
     }
     // 最終的に表示するJSX
     mainAbility0Effect = (
-      <div className="ae-card row">
-        <div className="ap-icon-area col-2">
-          <div className="ability-icon ap-ability-icon">
-            <p className="ability-detail-tooltip" style={{width: "6rem" }}>ラストスパート</p>
-            <img className="ap-ability-img" src={LastDitchEffortImg} alt=""/>
-          </div>
-        </div>
-        <div className="ae-part col-10 row">
-          <div className="col-7 px-0 m-auto">
-            <p className="ae-text">試合時間が残り30秒、あるいは相手のオブジェクトのカウントが30になると一部の能力がかなり上昇（メインインク効率・サブインク効率・インク回復力アップ）</p>
-          </div>
-          <div className="col-5 m-auto">  
-            {toggleLastDitchEffort}
-          </div>
-        </div>
-      </div>
+      <AeCard 
+        abilityName='ラストスパート'
+        imagePath={LastDitchEffortImg}
+        toggleSwitch={toggleLastDitchEffort!}
+        tooltipWidth='6rem'
+        aeText='試合時間が残り30秒、あるいは相手のオブジェクトのカウントが30になると一部の能力がかなり上昇（メインインク効率・サブインク効率・インク回復力アップ）'
+      />
     );
   }
   // 逆境が選択されているとき
   else if (mainAbilityName[0] === "逆境強化") {
     mainAbility0Effect = (
-      <div className="ae-card row">
-        <div className="ap-icon-area col-1">
-          <div className="ability-icon ap-ability-icon">
-            <p className="ability-detail-tooltip" style={{width: "4rem" }}>逆境強化</p>
-            <img className="ap-ability-img" src={Tenacity} alt=""/>
-          </div>
-        </div>
-        <div className="ae-part col-11">
-          <p className="ae-text text-center">自チームの人数が相手チームより少ない場合、少しずつスペシャルゲージが増える（1人の人数不利につき、2.16ポイント/秒）</p>
-        </div>
-      </div>
+      <AeCard 
+        abilityName='逆境強化'
+        imagePath={Tenacity}
+        tooltipWidth='4rem'
+        aeText='自チームの人数が相手チームより少ない場合、少しずつスペシャルゲージが増える（1人の人数不利につき、2.16ポイント/秒）'
+      />
     )
   }
   // クツのメインスロット
@@ -463,98 +335,101 @@ const AbilityPoint: FC<AbilityPointProps> = (props): ReactElement => {
   let toggleDropRoller;
 
   if (mainAbilityName[2] === "受け身術") {
+    toggleDropRoller = (
+      <ToggleSwitch 
+        abilityName='dropRoller'
+        btnToggle={btnToggle}
+        isActive={isDropRollerActive}
+        setIsActive={setIsDropRollerActive}
+      />
+    )
     if (isDropRollerActive) {
-      // 切り替えスイッチのJSX
-      toggleDropRoller = (
-        <div 
-          className="turned-on"
-          id="switch-dropRoller"
-          onClick={()=>{
-            btnToggle("dropRoller");
-            if (isDropRollerActive) {
-              DropRoller(false);
-            } else {
-              DropRoller(true);
-            }
-          }}
-        >
-          <div className="switch-base"></div>
-          <div id="switch-circle"></div>
-        </div>
-      );
       // APを加算
       runSpeedAP = runSpeedAP + 30;
       swimSpeedAP = swimSpeedAP + 30;
       inkResAP = inkResAP + 30;
-    } else {
-      toggleDropRoller = (
-        <div 
-          className="turned-off"
-          id="switch-dropRoller"
-          onClick={()=>{
-            btnToggle("dropRoller");
-            if (isDropRollerActive) {
-              DropRoller(false);
-            } else {
-              DropRoller(true);
-            }
-          }}
-        >
-          <div className="switch-base"></div>
-          <div id="switch-circle"></div>
-        </div>
-      )
     }
     // 最終的に表示するJSX
     mainAbility2Effect = (
-      <div className="ae-card row">
-        <div className="ap-icon-area col-2">
-          <div className="ability-icon ap-ability-icon">
-          <p className="ability-detail-tooltip" style={{width: "4rem" }}>受け身術</p>
-            <img className="ap-ability-img" src={DropRollerImg} alt=""/>
-          </div>
-        </div>
-        <div className="ae-part col-10 row">
-          <div className="col-7 px-0 m-auto">
-            <p className="ae-text">受け身術を発動してから3秒間、一部のギアパワーが上昇する（イカ移動速度・ヒト移動速度・インク影響軽減）</p>
-          </div>
-          <div className="col-5 m-auto">  
-            {toggleDropRoller}
-          </div>
-        </div>
-      </div>
+      <AeCard 
+        abilityName='受け身術'
+        imagePath={DropRollerImg}
+        toggleSwitch={toggleDropRoller!}
+        tooltipWidth='4rem'
+        aeText='受け身術を発動してから3秒間、一部のギアパワーが上昇する（イカ移動速度・ヒト移動速度・インク影響軽減）'
+      />
     );
   } else if (mainAbilityName[2] === "ステルスジャンプ") {
     mainAbility2Effect = (
-      <div className="ae-card row">
-        <div className="ap-icon-area col-1">
-          <div className="ability-icon ap-ability-icon">
-            <p className="ability-detail-tooltip" style={{width: "7rem" }}>ステルスジャンプ</p>
-            <img className="ap-ability-img" src={stealthJump} alt=""/>
-          </div>
-        </div>
-        <div className="ae-part col-11">
-          <p className="ae-text text-center">スーパージャンプの着地点を示すマーカーが、はなれた場所から見えなくなる</p>
-        </div>
-      </div>
+      <AeCard 
+        abilityName='ステルスジャンプ'
+        imagePath={stealthJump}
+        tooltipWidth='7rem'
+        aeText='スーパージャンプの着地点を示すマーカーが、はなれた場所から見えなくなる'
+      />
     )
   } else if (mainAbilityName[2] === "対物攻撃力アップ") {
     mainAbility2Effect = (
-      <div className="ae-card row">
-        <div className="ap-icon-area col-1">
-          <div className="ability-icon ap-ability-icon">
-            <p className="ability-detail-tooltip" style={{width: "7rem" }}>対物攻撃力アップ</p>
-            <img className="ap-ability-img" src={objectShredder} alt=""/>
-          </div>
-        </div>
-        <div className="ae-part col-11">
-          <p className="ae-text text-center">プレイヤー以外の物体に対して攻撃したときのダメージを増やす</p>
-        </div>
-      </div>
+      <AeCard 
+        abilityName='対物攻撃力アップ'
+        imagePath={objectShredder}
+        tooltipWidth='7rem'
+        aeText='プレイヤー以外の物体に対して攻撃したときのダメージを増やす'
+      />
     )
-    }
-  
-  // APの上限は57なので特殊ギアによってそれ以上になった場合は強制的に57にする
+  }
+ 
+  // フクのメインスロット
+  let mainAbility1Effect: ReactElement;
+
+  if (mainAbilityName[1] === "イカニンジャ") {
+    mainAbility1Effect = (
+      <AeCard 
+        abilityName='イカニンジャ'
+        imagePath={ninjaSquid}
+        tooltipWidth='5rem'
+        aeText='地面をイカダッシュした時にインクが飛び散らなくなるが、移動速度が少しダウンする'
+      />
+    )
+    } else if (mainAbilityName[1] === "リベンジ") {
+    mainAbility1Effect = (
+      <AeCard 
+        abilityName='リベンジ'
+        imagePath={haunt}
+        tooltipWidth='4rem'
+        aeText='復活したとき、直前に自分を倒した相手の位置が遠くから見えるようになる'
+      />
+    )
+  } else if (mainAbilityName[1] === "復活ペナルティアップ") {
+    mainAbility1Effect = (
+      <AeCard 
+        abilityName='復活ペナルティアップ'
+        imagePath={respawnPunisher}
+        tooltipWidth='8rem'
+        aeText='自プレイヤーと倒した相手のスペシャル減少量と復活時間が増える'
+      />
+    )
+  } else if (mainAbilityName[1] === "サーマルインク") {
+    mainAbility1Effect = (
+      <AeCard 
+        abilityName='サーマルインク'
+        imagePath={thermalInk}
+        tooltipWidth='6rem'
+        aeText='メインウェポンの弾を直接当てた相手が、しばらくの間、遠くから見えるようになる'
+      />
+    )
+  } else if (mainAbilityName[1] === "追加ギアパワー倍化") {
+    mainAbility1Effect = (
+      <AeCard 
+        abilityName='追加ギアパワー倍化'
+        imagePath={abilityDoubler}
+        tooltipWidth='6rem'
+        aeText='このギアについている追加ギアパワーを1つで2コ分の効果にする'
+      />
+    )
+  } 
+
+   // APの上限は57なので特殊ギアによってそれ以上になった場合は強制的に57にする
   if (inkSaverMainAP > 57) {
     inkSaverMainAP = 57;
   }
@@ -574,83 +449,6 @@ const AbilityPoint: FC<AbilityPointProps> = (props): ReactElement => {
     inkResAP = 57;
   }
   
-  
-
-  // フクのメインスロット
-  let mainAbility1Effect: ReactElement;
-
-  if (mainAbilityName[1] === "イカニンジャ") {
-    mainAbility1Effect = (
-      <div className="ae-card row">
-        <div className="ap-icon-area col-1">
-          <div className="ability-icon ap-ability-icon">
-            <p className="ability-detail-tooltip" style={{width: "5rem" }}>イカニンジャ</p>
-            <img className="ap-ability-img" src={ninjaSquid} alt=""/>
-          </div>
-        </div>
-        <div className="ae-part col-11">
-          <p className="ae-text text-center">地面をイカダッシュした時にインクが飛び散らなくなるが、移動速度が少しダウンする</p>
-        </div>
-      </div>
-    )
-    } else if (mainAbilityName[1] === "リベンジ") {
-    mainAbility1Effect = (
-      <div className="ae-card row">
-        <div className="ap-icon-area col-1">
-          <div className="ability-icon ap-ability-icon">
-            <p className="ability-detail-tooltip" style={{width: "4rem" }}>リベンジ</p>
-            <img className="ap-ability-img" src={haunt} alt=""/>
-          </div>
-        </div>
-        <div className="ae-part col-11">
-          <p className="ae-text text-center">復活したとき、直前に自分を倒した相手の位置が遠くから見えるようになる</p>
-        </div>
-      </div>
-    )
-  } else if (mainAbilityName[1] === "復活ペナルティアップ") {
-    mainAbility1Effect = (
-      <div className="ae-card row">
-        <div className="ap-icon-area col-1">
-          <div className="ability-icon ap-ability-icon">
-            <p className="ability-detail-tooltip" style={{width: "8rem" }}>復活ペナルティアップ</p>
-            <img className="ap-ability-img" src={respawnPunisher} alt=""/>
-          </div>
-        </div>
-        <div className="ae-part col-11">
-          <p className="ae-text text-center">自プレイヤーと倒した相手のスペシャル減少量と復活時間が増える</p>
-        </div>
-      </div>
-    )
-  } else if (mainAbilityName[1] === "サーマルインク") {
-    mainAbility1Effect = (
-      <div className="ae-card row">
-        <div className="ap-icon-area col-1">
-          <div className="ability-icon ap-ability-icon">
-            <p className="ability-detail-tooltip" style={{width: "6rem" }}>サーマルインク</p>
-            <img className="ap-ability-img" src={thermalInk} alt=""/>
-          </div>
-        </div>
-        <div className="ae-part col-11">
-          <p className="ae-text text-center">メインウェポンの弾を直接当てた相手が、しばらくの間、遠くから見えるようになる</p>
-        </div>
-      </div>
-    )
-  } else if (mainAbilityName[1] === "追加ギアパワー倍化") {
-    mainAbility1Effect = (
-      <div className="ae-card row">
-        <div className="ap-icon-area col-1">
-          <div className="ability-icon ap-ability-icon">
-            <p className="ability-detail-tooltip" style={{width: "8rem" }}>追加ギアパワー倍化</p>
-            <img className="ap-ability-img" src={abilityDoubler} alt=""/>
-          </div>
-        </div>
-        <div className="ae-part col-11">
-          <p className="ae-text text-center">このギアについている追加ギアパワーを1つで2コ分の効果にする</p>
-        </div>
-      </div>
-    )
-  } 
-
   return(
     <div className="d-flex flex-column gray-stripe-dense" id="ae-display-area">
       <p id="ae-header">ギアパワー効果</p>
