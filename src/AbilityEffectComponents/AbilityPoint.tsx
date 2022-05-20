@@ -29,7 +29,7 @@ import stealthJump from '../images/ability/SJ.png';
 import objectShredder from '../images/ability/OS.png';
 import { WeaponType } from '../Type'
 import { ToggleSwitch } from './toggleSwitch'
-import AeCard from './AeCard';
+import AeCard from './SpecialAeCard';
 
 interface AbilityPointProps {
   weapon: WeaponType,

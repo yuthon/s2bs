@@ -1,6 +1,6 @@
 import { FC, ReactElement } from 'react';
 import bombDefenceUpImg from '../images/ability/BDU.png';
-import { bombDefence } from './abilityEffect-data'
+import { bombDefence } from './ability-effect-data/abilityEffect-data'
 import AePart from './AePart';
 
 interface BombDefenceUpProps {

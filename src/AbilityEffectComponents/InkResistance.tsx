@@ -1,6 +1,6 @@
 import { FC, ReactElement } from 'react';
 import InkResImg from '../images/ability/RES.png';
-import { InkRes } from './abilityEffect-data';
+import { InkRes } from './ability-effect-data/abilityEffect-data';
 import AePart from './AePart';
 
 type InkResistanceProps = {

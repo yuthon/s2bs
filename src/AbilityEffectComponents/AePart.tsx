@@ -3,11 +3,12 @@ import { ReactElement, FC } from "react";
 interface AePartProps {
   aeText: string;
   aeEffect: string;
+  col?: string;
 }
 
 const AePart: FC<AePartProps> = (props): ReactElement => {
   return (
-    <div className="ae-part row">
+    <div className={`ae-part ${props.col} row`}>
       <div className="col-7 px-0 m-auto">
         <p className="ae-text">{props.aeText}</p>
       </div>

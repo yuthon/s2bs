@@ -1,6 +1,6 @@
 import { FC, ReactElement } from 'react';
 import inkRecoveryImg from '../images/ability/REC.png';
-import { recoveryInInk, recoveryStanding } from './abilityEffect-data';
+import { recoveryInInk, recoveryStanding } from './ability-effect-data/abilityEffect-data';
 import AePart from './AePart';
 
 type InkRecoveryProps = {

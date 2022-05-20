@@ -1,6 +1,6 @@
 import React, { FC, ReactElement } from 'react';
 import inkSaverMainImg from '../images/ability/ISMain.png';
-import { inkSaverMain } from './abilityEffect-data';
+import { inkSaverMain } from './ability-effect-data/abilityEffect-data';
 
 type WeaponType = {
   name: string,
