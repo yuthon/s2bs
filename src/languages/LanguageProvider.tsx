@@ -8,24 +8,25 @@ interface LanguageContextType {
 }
 
 interface LanguageProviderProps {
-  children: ReactElement
+  children: ReactElement;
 }
 
 // デフォルトの言語を元に言語のコンテキストを作る
 export const LanguageContext = createContext<LanguageContextType>(null!);
 
 const LanguageProvider: FC<LanguageProviderProps> = ({ children }): ReactElement => {
+  // 言語
   let defaultLanguage: string;
-
-  if (window.navigator.language.indexOf("ja") > -1) {
+  // ブラウザから言語を取得。日本語でなければ英語にする
+  if (window.navigator.language.includes("ja")) {
     defaultLanguage = "ja";
   } else {
     defaultLanguage = 'en';
   }
-  
+  // 言語情報を管理
   const [userLanguage, setUserLanguage] = useState<string>(defaultLanguage);
-
-  let dictionary = dictionaryList[userLanguage];
+  // 指定された言語のテキスト情報
+  let dictionary: {[key: string]: string} = dictionaryList[userLanguage];
 
   const provider = {
     userLanguage,

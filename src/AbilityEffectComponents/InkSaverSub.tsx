@@ -72,7 +72,7 @@ const InkSaverSub: FC<InkSaverSubProps> = ({ weapon, abilityPoint }): ReactEleme
   const SplashWall = [
     {AP:0,IC:0.6},{AP:3,IC:0.57972},{AP:6,IC:0.56046},{AP:9,IC:0.54222},{AP:10,IC:0.53637},{AP:12,IC:0.525},{AP:13,IC:0.51949},{AP:15,IC:0.50881},{AP:16,IC:0.50364},{AP:18,IC:0.49363},{AP:19,IC:0.4888},{AP:20,IC:0.48408},{AP:21,IC:0.47947},{AP:22,IC:0.47498},{AP:23,IC:0.4706},{AP:24,IC:0.46634},{AP:25,IC:0.46219},{AP:26,IC:0.45815},{AP:27,IC:0.45422},{AP:28,IC:0.45041},{AP:29,IC:0.44671},{AP:30,IC:0.44313},{AP:31,IC:0.43966},{AP:32,IC:0.4363},{AP:33,IC:0.43306},{AP:34,IC:0.42993},{AP:35,IC:0.42691},{AP:36,IC:0.424},{AP:37,IC:0.42121},{AP:38,IC:0.41853},{AP:39,IC:0.41597},{AP:41,IC:0.41118},{AP:42,IC:0.40896},{AP:44,IC:0.40485},{AP:45,IC:0.40297},{AP:47,IC:0.39954},{AP:48,IC:0.398},{AP:51,IC:0.39405},{AP:54,IC:0.39112},{AP:57,IC:0.39}
   ];
-  if (subWeaponName.indexOf("ジャンプビーコン") > -1) {
+  if (subWeaponName.includes("ジャンプビーコン")) {
     for (let i=0; i < 40; i++) {
       if (Beakon[i].AP === abilityPoint) {
         inkConsumption = Beakon[i].IC;
@@ -81,7 +81,7 @@ const InkSaverSub: FC<InkSaverSubProps> = ({ weapon, abilityPoint }): ReactEleme
     }
     // 数値を％になおす
     inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
-  } else if (subWeaponName.indexOf("トラップ") > -1) {
+  } else if (subWeaponName.includes("トラップ")) {
     for (let i=0; i < 40; i++) {
       if (InkMine[i].AP === abilityPoint) {
         inkConsumption = InkMine[i].IC;
@@ -90,7 +90,7 @@ const InkSaverSub: FC<InkSaverSubProps> = ({ weapon, abilityPoint }): ReactEleme
     }
     // 数値を％になおす
      inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
-  } else if (subWeaponName.indexOf("ポイズンミスト") > -1) {
+  } else if (subWeaponName.includes("ポイズンミスト")) {
     for (let i=0; i < 40; i++) {
       if (ToxicMist[i].AP === abilityPoint) {
         inkConsumption = ToxicMist[i].IC;
@@ -99,7 +99,7 @@ const InkSaverSub: FC<InkSaverSubProps> = ({ weapon, abilityPoint }): ReactEleme
     }
     // 数値を％になおす
      inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
-  } else if (subWeaponName.indexOf("ポイントセンサー") > -1) {
+  } else if (subWeaponName.includes("ポイントセンサー")) {
     for (let i=0; i < 40; i++) {
       if (Sencor[i].AP === abilityPoint) {
         inkConsumption = Sencor[i].IC;
@@ -108,7 +108,7 @@ const InkSaverSub: FC<InkSaverSubProps> = ({ weapon, abilityPoint }): ReactEleme
     }
     // 数値を％になおす
      inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
-  } else if (subWeaponName.indexOf("キューバンボム") > -1) {
+  } else if (subWeaponName.includes("キューバンボム")) {
     for (let i=0; i < 40; i++) {
       if (SuctionBomb[i].AP === abilityPoint) {
         inkConsumption = SuctionBomb[i].IC;
@@ -117,7 +117,7 @@ const InkSaverSub: FC<InkSaverSubProps> = ({ weapon, abilityPoint }): ReactEleme
     }
     // 数値を％になおす
      inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
-  } else if (subWeaponName.indexOf("クイックボム") > -1) {
+  } else if (subWeaponName.includes("クイックボム")) {
     for (let i=0; i < 40; i++) {
       if (BurstBomb[i].AP === abilityPoint) {
         inkConsumption = BurstBomb[i].IC;
@@ -126,7 +126,7 @@ const InkSaverSub: FC<InkSaverSubProps> = ({ weapon, abilityPoint }): ReactEleme
     }
     // 数値を％になおす
      inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
-  } else if (subWeaponName.indexOf("スプラッシュボム") > -1) {
+  } else if (subWeaponName.includes("スプラッシュボム")) {
     for (let i=0; i < 40; i++) {
       if (SplatBomb[i].AP === abilityPoint) {
         inkConsumption = SplatBomb[i].IC;
@@ -135,7 +135,7 @@ const InkSaverSub: FC<InkSaverSubProps> = ({ weapon, abilityPoint }): ReactEleme
     }
     // 数値を％になおす
      inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
-  } else if (subWeaponName.indexOf("ロボットボム") > -1) {
+  } else if (subWeaponName.includes("ロボットボム")) {
     for (let i=0; i < 40; i++) {
       if (AutoBomb[i].AP === abilityPoint) {
         inkConsumption = AutoBomb[i].IC;
@@ -144,7 +144,7 @@ const InkSaverSub: FC<InkSaverSubProps> = ({ weapon, abilityPoint }): ReactEleme
     }
     // 数値を％になおす
      inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
-  } else if (subWeaponName.indexOf("スプリンクラー") > -1) {
+  } else if (subWeaponName.includes("スプリンクラー")) {
     for (let i=0; i < 40; i++) {
       if (Sprinkler[i].AP === abilityPoint) {
         inkConsumption = Sprinkler[i].IC;
@@ -153,7 +153,7 @@ const InkSaverSub: FC<InkSaverSubProps> = ({ weapon, abilityPoint }): ReactEleme
     }
     // 数値を％になおす
      inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
-  } else if (subWeaponName.indexOf("タンサンボム") > -1) {
+  } else if (subWeaponName.includes("タンサンボム")) {
     for (let i=0; i < 40; i++) {
       if (FizzyBomb[i].AP === abilityPoint) {
         inkConsumption = FizzyBomb[i].IC;
@@ -162,7 +162,7 @@ const InkSaverSub: FC<InkSaverSubProps> = ({ weapon, abilityPoint }): ReactEleme
     }
     // 数値を％になおす
      inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
-  } else if (subWeaponName.indexOf("カーリングボム") > -1) {
+  } else if (subWeaponName.includes("カーリングボム")) {
     for (let i=0; i < 40; i++) {
       if (CurlingBomb[i].AP === abilityPoint) {
         inkConsumption = CurlingBomb[i].IC;
@@ -171,7 +171,7 @@ const InkSaverSub: FC<InkSaverSubProps> = ({ weapon, abilityPoint }): ReactEleme
     }
     // 数値を％になおす
      inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
-  } else if (subWeaponName.indexOf("トーピード") > -1) {
+  } else if (subWeaponName.includes("トーピード")) {
     for (let i=0; i < 40; i++) {
       if (Torpedo[i].AP === abilityPoint) {
         inkConsumption = Torpedo[i].IC;
@@ -180,7 +180,7 @@ const InkSaverSub: FC<InkSaverSubProps> = ({ weapon, abilityPoint }): ReactEleme
     }
     // 数値を％になおす
      inkConsumption = Math.floor(inkConsumption!*100000) / 1000;
-  } else if (subWeaponName.indexOf("スプラッシュシールド") > -1) {
+  } else if (subWeaponName.includes("スプラッシュシールド")) {
     for (let i=0; i < 40; i++) {
       if (SplashWall[i].AP === abilityPoint) {
         inkConsumption = SplashWall[i].IC;

@@ -199,7 +199,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
   let extraBullets: number;
   // let extraHP;
   
-  if (name.indexOf("ボールドマーカー") > -1) {
+  if (name.includes("ボールドマーカー")) {
     for (let i=0; i < 40; i++) {
       if (Sploosh[i].AP === abilityPoint) {
         damage = Sploosh[i].DMG;
@@ -217,7 +217,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("シャープマーカー") > -1) {
+  } else if (name.includes("シャープマーカー")) {
     for (let i=0; i < 40; i++) {
       if (Splash[i].AP === abilityPoint) {
         damage = Splash[i].DMG;
@@ -235,7 +235,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("わかば") > -1 || name.indexOf("もみじ") > -1 || name.indexOf("おちば") > -1) {
+  } else if (name.includes("わかば") || name.includes("もみじ") || name.includes("おちば")) {
     for (let i=0; i < 40; i++) {
       if (Jr[i].AP === abilityPoint) {
         paintRadius = Math.floor(Jr[i].PR / Jr[0].PR * 10000) / 100;
@@ -252,7 +252,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("プロモデラー") > -1) {
+  } else if (name.includes("プロモデラー")) {
     for (let i=0; i < 40; i++) {
       if (Aerospray[i].AP === abilityPoint) {
         paintRadius = Math.floor(Aerospray[i].PR / Aerospray[0].PR * 10000) / 100;
@@ -269,7 +269,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("スプラシューター") > -1 || name.indexOf("ヒーローシューター") > -1 || name.indexOf("オクタシューター") > -1) {
+  } else if (name.includes("スプラシューター") || name.includes("ヒーローシューター") || name.includes("オクタシューター")) {
     for (let i=0; i < 40; i++) {
       if (SplatterShot[i].AP === abilityPoint) {
         rng = SplatterShot[i].DR;
@@ -300,7 +300,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("52ガロン") > -1) {
+  } else if (name.includes("52ガロン")) {
     for (let i=0; i < 40; i++) {
       if (Gal52[i].AP === abilityPoint) {
         rng = Gal52[i].DR;
@@ -331,7 +331,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("N-ZAP") > -1) {
+  } else if (name.includes("N-ZAP")) {
     for (let i=0; i < 40; i++) {
       if (Nzap[i].AP === abilityPoint) {
         rng = Nzap[i].DR;
@@ -361,7 +361,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("プライムシューター") > -1) {
+  } else if (name.includes("プライムシューター")) {
     for (let i=0; i < 40; i++) {
       if (Pro[i].AP === abilityPoint) {
         damage = Pro[i].DMG;
@@ -379,7 +379,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("ジェットスイーパー") > -1) {
+  } else if (name.includes("ジェットスイーパー")) {
     for (let i=0; i < 40; i++) {
       if (Jet[i].AP === abilityPoint) {
         rng = Jet[i].DR;
@@ -409,7 +409,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("96ガロン") > -1) {
+  } else if (name.includes("96ガロン")) {
     for (let i=0; i < 40; i++) {
       if (Gal96[i].AP === abilityPoint) {
         damage = Gal96[i].DMG;
@@ -427,7 +427,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("ノヴァブラスター") > -1) {
+  } else if (name.includes("ノヴァブラスター")) {
     for (let i=0; i < 40; i++) {
       if (Luna[i].AP === abilityPoint) {
         paintRadius = Math.floor(Luna[i].PR / Luna[0].PR * 10000) / 100;
@@ -456,7 +456,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("ホットブラスター") > -1 || name.indexOf("ヒーローブラスター") > -1) {
+  } else if (name.includes("ホットブラスター") || name.includes("ヒーローブラスター")) {
     for (let i=0; i < 40; i++) {
       if (Blaster[i].AP === abilityPoint) {
         rngJump = Blaster[i].DRJ;
@@ -474,7 +474,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-    } else if (name.indexOf("ロングブラスター") > -1) {
+    } else if (name.includes("ロングブラスター")) {
     for (let i=0; i < 40; i++) {
       if (Range[i].AP === abilityPoint) {
         rngJump = Range[i].DRJ;
@@ -492,7 +492,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("クラッシュブラスター") > -1) {
+  } else if (name.includes("クラッシュブラスター")) {
     for (let i=0; i < 40; i++) {
       if (Clash[i].AP === abilityPoint) {
         rngJump = Clash[i].DRJ;
@@ -510,7 +510,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("ラピッドブラスター") > -1) {
+  } else if (name.includes("ラピッドブラスター")) {
     for (let i=0; i < 40; i++) {
       if (Rapid[i].AP === abilityPoint) {
         rngJump = Rapid[i].DRJ;
@@ -540,7 +540,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("Rブラスター") > -1) {
+  } else if (name.includes("Rブラスター")) {
     for (let i=0; i < 40; i++) {
       if (RapidPro[i].AP === abilityPoint) {
         rngJump = RapidPro[i].DRJ;
@@ -570,7 +570,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("L-3") > -1) {
+  } else if (name.includes("L-3")) {
     for (let i=0; i < 40; i++) {
       if (L3[i].AP === abilityPoint) {
         damage = L3[i].DMG;
@@ -588,7 +588,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("H-3") > -1) {
+  } else if (name.includes("H-3")) {
     for (let i=0; i < 40; i++) {
       if (H3[i].AP === abilityPoint) {
         damage = H3[i].DMG;
@@ -606,7 +606,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("ボトルカイザー") > -1) {
+  } else if (name.includes("ボトルカイザー")) {
     for (let i=0; i < 40; i++) {
       if (Squeezer[i].AP === abilityPoint) {
         damage = Squeezer[i].DMG;
@@ -624,7 +624,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("スプラローラー") > -1 || name.indexOf("ヒーローローラー") > -1) {
+  } else if (name.includes("スプラローラー") || name.includes("ヒーローローラー")) {
     for (let i=0; i < 40; i++) {
       if (SplatRoller[i].AP === abilityPoint) {
         damage = Math.floor(SplatRoller[i].DMG * 100000) / 1000;
@@ -641,7 +641,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("カーボン") > -1) {
+  } else if (name.includes("カーボン")) {
     for (let i=0; i < 40; i++) {
       if (Carbon[i].AP === abilityPoint) {
         damage = Math.floor(Carbon[i].DMG * 100000) / 1000;
@@ -658,7 +658,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("ヴァリアブルローラー") > -1) {
+  } else if (name.includes("ヴァリアブルローラー")) {
     for (let i=0; i < 40; i++) {
       if (Flingza[i].AP === abilityPoint) {
         damage = Math.floor(Flingza[i].DMG * 100000) / 1000;
@@ -675,7 +675,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("ダイナモローラー") > -1) {
+  } else if (name.includes("ダイナモローラー")) {
     for (let i=0; i < 40; i++) {
       if (Dynamo[i].AP === abilityPoint) {
         damage = Math.floor(Dynamo[i].DMG * 100000) / 1000;
@@ -692,7 +692,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("ホクサイ") > -1 || name.indexOf("ヒーローブラシ") > -1) {
+  } else if (name.includes("ホクサイ") || name.includes("ヒーローブラシ")) {
     for (let i=0; i < 40; i++) {
       if (Octobrush[i].AP === abilityPoint) {
         inkTrailWidth = Math.floor(Octobrush[i].ITW * 100000) / 1000;
@@ -721,7 +721,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("パブロ") > -1) {
+  } else if (name.includes("パブロ")) {
     for (let i=0; i < 40; i++) {
       if (Inkbrush[i].AP === abilityPoint) {
         inkTrailWidth = Math.floor(Inkbrush[i].ITW * 100000) / 1000;
@@ -750,7 +750,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("スプラチャージャー") > -1 || name.indexOf("スプラスコープ") > -1 || name.indexOf("ヒーローチャージャー") > -1) {
+  } else if (name.includes("スプラチャージャー") || name.includes("スプラスコープ") || name.includes("ヒーローチャージャー")) {
     for (let i=0; i < 40; i++) {
       if (Charger[i].AP === abilityPoint) {
         damage = Charger[i].DMG;
@@ -768,7 +768,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("スクイックリン") > -1) {
+  } else if (name.includes("スクイックリン")) {
     for (let i=0; i < 40; i++) {
       if (Squiffer[i].AP === abilityPoint) {
         paintRadius = Math.floor(Squiffer[i].IC / Squiffer[0].IC * 100000) / 1000;
@@ -797,7 +797,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("リッター") > -1 || name.indexOf("4Kスコープ") > -1) {
+  } else if (name.includes("リッター") || name.includes("4Kスコープ")) {
     for (let i=0; i < 40; i++) {
       if (Eliter[i].AP === abilityPoint) {
         paintRadius = Math.floor(Eliter[i].IC / Eliter[0].IC * 100000) / 1000;
@@ -826,7 +826,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("竹") > -1) {
+  } else if (name.includes("竹")) {
     for (let i=0; i < 40; i++) {
       if (Bamboo[i].AP === abilityPoint) {
         damage = Bamboo[i].DMG;
@@ -844,7 +844,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("ソイチューバー") > -1) {
+  } else if (name.includes("ソイチューバー")) {
     for (let i=0; i < 40; i++) {
       if (Gootuber[i].AP === abilityPoint) {
         damage = Gootuber[i].DMG;
@@ -862,7 +862,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("バケットスロッシャー") > -1 || name.indexOf("ヒーロースロッシャー") > -1) {
+  } else if (name.includes("バケットスロッシャー") || name.includes("ヒーロースロッシャー")) {
     for (let i=0; i < 40; i++) {
       if (Slosher[i].AP === abilityPoint) {
         // damageHeightStart = Math.floor(Slosher[i].height / Slosher[0].height * 100000) / 1000;
@@ -881,7 +881,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("ヒッセン") > -1) {
+  } else if (name.includes("ヒッセン")) {
     for (let i=0; i < 40; i++) {
       if (Tri[i].AP === abilityPoint) {
         inkCoverage = Math.floor(Tri[i].IC * 100000) / 1000;
@@ -898,7 +898,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("スクリュー") > -1) {
+  } else if (name.includes("スクリュー")) {
     for (let i=0; i < 40; i++) {
       if (Machine[i].AP === abilityPoint) {
         inkCoverage = Math.floor(Tri[i].IC * 100000) / 1000;
@@ -915,7 +915,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("オーバーフロッシャー") > -1) {
+  } else if (name.includes("オーバーフロッシャー")) {
     for (let i=0; i < 40; i++) {
       if (Blob[i].AP === abilityPoint) {
         inkCoverage = Math.floor(Tri[i].IC * 100000) / 1000;
@@ -932,7 +932,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("エクスプロッシャー") > -1) {
+  } else if (name.includes("エクスプロッシャー")) {
     for (let i=0; i < 40; i++) {
       if (Explosher[i].AP === abilityPoint) {
         inkCoverage = Math.floor(Explosher[i].PR * 10000) / 100;
@@ -949,7 +949,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-    } else if (name.indexOf("スプラスピナー") > -1) {
+    } else if (name.includes("スプラスピナー")) {
     for (let i=0; i < 40; i++) {
       if (Mini[i].AP === abilityPoint) {
         bullets = Math.floor(Mini[i].frame / (Mini[0].frame / 19));
@@ -967,7 +967,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("バレルスピナー") > -1 || name.indexOf("ヒーロースピナー") > -1) {
+  } else if (name.includes("バレルスピナー") || name.includes("ヒーロースピナー")) {
     for (let i=0; i < 40; i++) {
       if (Heavy[i].AP === abilityPoint) {
         bullets = Math.floor(Heavy[i].frame / (Heavy[0].frame / 37));
@@ -985,7 +985,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("ハイドラント") > -1) {
+  } else if (name.includes("ハイドラント")) {
     for (let i=0; i < 40; i++) {
       if (Hydra[i].AP === abilityPoint) {
         damage = Hydra[i].DMG;
@@ -1016,7 +1016,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("クーゲルシュライバー") > -1) {
+  } else if (name.includes("クーゲルシュライバー")) {
     for (let i=0; i < 40; i++) {
       if (Ballpoint[i].AP === abilityPoint) {
         damage = Ballpoint[i].DMG;
@@ -1046,7 +1046,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("ノーチラス") > -1) {
+  } else if (name.includes("ノーチラス")) {
     for (let i=0; i < 40; i++) {
       if (Nautilus[i].AP === abilityPoint) {
         bullets = Math.floor(Nautilus[i].frame / (Nautilus[0].frame / 27));
@@ -1064,7 +1064,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("スパッタリー") > -1) {
+  } else if (name.includes("スパッタリー")) {
     for (let i=0; i < 40; i++) {
       if (Dapples[i].AP === abilityPoint) {
         damage = Dapples[i].DMG;
@@ -1082,7 +1082,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("マニューバー") > -1) {
+  } else if (name.includes("マニューバー")) {
     for (let i=0; i < 40; i++) {
       if (Dualies[i].AP === abilityPoint) {
         damage = Dualies[i].DMG;
@@ -1100,7 +1100,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("ケルビン") > -1) {
+  } else if (name.includes("ケルビン")) {
     for (let i=0; i < 40; i++) {
       if (Glooga[i].AP === abilityPoint) {
         damage = Glooga[i].DMG0;
@@ -1131,7 +1131,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("デュアル") > -1) {
+  } else if (name.includes("デュアル")) {
     for (let i=0; i < 40; i++) {
       if (DualieSquelchers[i].AP === abilityPoint) {
         damage = DualieSquelchers[i].DMG;
@@ -1149,7 +1149,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("クアッドホッパー") > -1) {
+  } else if (name.includes("クアッドホッパー")) {
     for (let i=0; i < 40; i++) {
       if (Tetras[i].AP === abilityPoint) {
         damage = Tetras[i].DMG;
@@ -1167,7 +1167,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("パラシェルター") > -1 || name.indexOf("ヒーローシェルター") > -1) {
+  } else if (name.includes("パラシェルター") || name.includes("ヒーローシェルター")) {
     for (let i=0; i < 40; i++) {
       if (Brella[i].AP === abilityPoint) {
         recorveryFrame = Brella[i].RT;
@@ -1185,7 +1185,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("キャンピングシェルター") > -1) {
+  } else if (name.includes("キャンピングシェルター")) {
     for (let i=0; i < 40; i++) {
       if (Tent[i].AP === abilityPoint) {
         hp = Tent[i].HP
@@ -1203,7 +1203,7 @@ const MainPowerUp: FC<MainPowerUpProps> = React.memo(({ abilityPoint, weapon }):
         </div>
       </div>
     );
-  } else if (name.indexOf("スパイガジェット") > -1) {
+  } else if (name.includes("スパイガジェット")) {
     for (let i=0; i < 40; i++) {
       if (Undercover[i].AP === abilityPoint) {
         recorveryFrame = Undercover[i].RT;
